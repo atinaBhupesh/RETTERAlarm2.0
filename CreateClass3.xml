@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="function.A_testClassCreate"/>
+      
+      <methods>
+		  
+
+		  <include name=" sendMessageToManualAlarmUser"  />
+	<include name="sendMessageToOldApiAlarmUser"  />
+	<include name="sendMessageToNewApiAlarmUser"  />
+   
+	<include name="manualaByAttributeSingleStation"  />
+	<include name="manualAlarmByResourceMs"  />
+	<include name="manualAlarmByFirefighterMs"  />
+    <include name="manualaByAttributeMSLP"  />
+    <include name="manualAlarmByEscResourceSingleStation"  />
+    <include name="manualAlarmByEscResourceMs"  />
+    <include name="manualaByAttributeExtend1StStResource"  />
+  
+    <include name="manualAlarmByTemplate"  />
+    <include name="sendMessageToManualAlarmUser"  />
+
+
+      
+	</methods>
+      
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

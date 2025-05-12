@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Failed suite [Failed suite [Failed suite [Failed suite [Failed suite [Suite]]]]]]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)(failed)(failed)(failed)(failed)(failed)">
+    <classes>
+      <class name="function.A_testClassCreate">
+        <methods>
+          <include name="AfterTest"/>
+          <include name="manualaByAttributeExtend1StStResource"/>
+          <include name="BeforeSuite"/>
+          <include name="backToHomePage2"/>
+          <include name="BeforeTest"/>
+          <include name="backToHomePage"/>
+          <include name="logOut"/>
+          <include name="sendMessageToManualAlarmUser"/>
+          <include name="AfterSute"/>
+          <include name="createObject"/>
+        </methods>
+      </class> <!-- function.A_testClassCreate -->
+    </classes>
+  </test> <!-- Test(failed)(failed)(failed)(failed)(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [Failed suite [Failed suite [Failed suite [Failed suite [Suite]]]]]] -->
