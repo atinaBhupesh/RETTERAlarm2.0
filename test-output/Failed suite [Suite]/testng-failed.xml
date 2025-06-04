@@ -5,19 +5,14 @@
     <classes>
       <class name="function.A_testClassCreate">
         <methods>
-          <include name="manualaByAttributeMSLP"/>
-          <include name="manualAlarmByFirefighterMs"/>
-          <include name="logOut"/>
-          <include name="AfterSute"/>
-          <include name="sendMessageToNewApiAlarmUser"/>
           <include name="AfterTest"/>
-          <include name="sendMessageToOldApiAlarmUser"/>
+          <include name="manualaByAttributeExtend1StStResource"/>
           <include name="BeforeSuite"/>
-          <include name="manualaByAttributeSingleStation"/>
           <include name="backToHomePage2"/>
           <include name="BeforeTest"/>
           <include name="backToHomePage"/>
-          <include name="manualAlarmByResourceMs"/>
+          <include name="logOut"/>
+          <include name="AfterSute"/>
           <include name="createObject"/>
         </methods>
       </class> <!-- function.A_testClassCreate -->

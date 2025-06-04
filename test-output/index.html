@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">11 methods,   11 passed</span>
+                    <span class="method-stats">11 methods, 1 failed,   10 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="function.A_testClassCreate" class="method navigator-link" hash-for-method="manualaByAttributeExtend1StStResource">manualaByAttributeExtend1StStResource</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -124,11 +138,6 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="function.A_testClassCreate" class="method navigator-link" hash-for-method="manualAlarmByTemplate">manualAlarmByTemplate</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="function.A_testClassCreate" class="method navigator-link" hash-for-method="manualaByAttributeExtend1StStResource">manualaByAttributeExtend1StStResource</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -168,6 +177,49 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">function.A_testClassCreate</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="manualaByAttributeExtend1StStResource">
+                  </a> <!-- manualaByAttributeExtend1StStResource -->
+                  <span class="method-name">manualaByAttributeExtend1StStResource</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@placeholder=&quot;Select Firestation&quot;]&quot;}
+  (Session info: chrome=137.0.7151.56)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b1f186a2298ee012a5672a9b4e8e9140, findElement {value=//input[@placeholder=&quot;Select Firestation&quot;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.56, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\BHUPESH\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50344}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50344/devtoo..., se:cdpVersion: 137.0.7151.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b1f186a2298ee012a5672a9b4e8e9140
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy22.click(Unknown Source)
+	at function.F_manualAlarm.manualaByAttributeExtend1StStResource(F_manualAlarm.java:666)
+	at function.A_testClassCreate.manualaByAttributeExtend1StStResource(A_testClassCreate.java:179)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -207,13 +259,6 @@
                   <a name="manualAlarmByTemplate">
                   </a> <!-- manualAlarmByTemplate -->
                   <span class="method-name">manualAlarmByTemplate</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="manualaByAttributeExtend1StStResource">
-                  </a> <!-- manualaByAttributeExtend1StStResource -->
-                  <span class="method-name">manualaByAttributeExtend1StStResource</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -324,47 +369,47 @@ data.addRows(11);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'sendMessageToNewApiAlarmUser')
 data.setCell(0, 2, 'function.A_testClassCreate')
-data.setCell(0, 3, 70559);
+data.setCell(0, 3, 71070);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'manualaByAttributeExtend1StStResource')
+data.setCell(1, 1, 'manualAlarmByFirefighterMs')
 data.setCell(1, 2, 'function.A_testClassCreate')
-data.setCell(1, 3, 58551);
+data.setCell(1, 3, 50734);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'manualAlarmByFirefighterMs')
+data.setCell(2, 1, 'manualaByAttributeSingleStation')
 data.setCell(2, 2, 'function.A_testClassCreate')
-data.setCell(2, 3, 52215);
+data.setCell(2, 3, 48731);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'manualaByAttributeSingleStation')
+data.setCell(3, 1, 'manualaByAttributeExtend1StStResource')
 data.setCell(3, 2, 'function.A_testClassCreate')
-data.setCell(3, 3, 45342);
+data.setCell(3, 3, 44122);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'manualaByAttributeMSLP')
 data.setCell(4, 2, 'function.A_testClassCreate')
-data.setCell(4, 3, 38665);
+data.setCell(4, 3, 38655);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'sendMessageToOldApiAlarmUser')
 data.setCell(5, 2, 'function.A_testClassCreate')
-data.setCell(5, 3, 37007);
+data.setCell(5, 3, 37038);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'manualAlarmByResourceMs')
+data.setCell(6, 1, 'sendMessageToManualAlarmUser')
 data.setCell(6, 2, 'function.A_testClassCreate')
-data.setCell(6, 3, 31927);
+data.setCell(6, 3, 34523);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'sendMessageToManualAlarmUser')
+data.setCell(7, 1, 'manualAlarmByResourceMs')
 data.setCell(7, 2, 'function.A_testClassCreate')
-data.setCell(7, 3, 31862);
+data.setCell(7, 3, 32514);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'manualAlarmByTemplate')
+data.setCell(8, 1, 'manualAlarmByEscResourceSingleStation')
 data.setCell(8, 2, 'function.A_testClassCreate')
-data.setCell(8, 3, 31741);
+data.setCell(8, 3, 31638);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'manualAlarmByEscResourceSingleStation')
+data.setCell(9, 1, 'manualAlarmByTemplate')
 data.setCell(9, 2, 'function.A_testClassCreate')
-data.setCell(9, 3, 30305);
+data.setCell(9, 3, 31399);
 data.setCell(10, 0, 10)
 data.setCell(10, 1, 'manualAlarmByEscResourceMs')
 data.setCell(10, 2, 'function.A_testClassCreate')
-data.setCell(10, 3, 27760);
+data.setCell(10, 3, 27743);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -381,11 +426,11 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">manualAlarmByResourceMs</span>
+              <span class="reporter-method-name">manualAlarmByEscResourceMs</span>
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output"> </span>
-                <span class="reporter-method-output">The process of creating a manual alarm by resource is started.</span>
-                <span class="reporter-method-output">The process of creating a manual alarm by resource is complete.</span>
+                <span class="reporter-method-output">The process of creating a manual alarm by escaltion resource-multi station is started.</span>
+                <span class="reporter-method-output">The process of creating a manual alarm by escaltion resource-multi station is complete.</span>
                 <span class="reporter-method-output"> </span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
@@ -399,11 +444,47 @@ return data;
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
-              <span class="reporter-method-name">manualAlarmByEscResourceMs</span>
+              <span class="reporter-method-name">manualAlarmByResourceMs</span>
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output"> </span>
-                <span class="reporter-method-output">The process of creating a manual alarm by escaltion resource-multi station is started.</span>
-                <span class="reporter-method-output">The process of creating a manual alarm by escaltion resource-multi station is complete.</span>
+                <span class="reporter-method-output">The process of creating a manual alarm by resource is started.</span>
+                <span class="reporter-method-output">The process of creating a manual alarm by resource is complete.</span>
+                <span class="reporter-method-output"> </span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">manualaByAttributeMSLP</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"> </span>
+                <span class="reporter-method-output">The process of creating a low priority multi station manual alarm by attribute  is started.</span>
+                <span class="reporter-method-output">The process of creating a low priority multi station manual alarm by attribute is complete.</span>
+                <span class="reporter-method-output"> </span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">sendMessageToManualAlarmUser</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"> </span>
+                <span class="reporter-method-output">The process of send message to manual alarm user is started.</span>
+                <span class="reporter-method-output">The process of send message to manual alarm user is complete.</span>
+                <span class="reporter-method-output"> </span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">sendMessageToOldApiAlarmUser</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"> </span>
+                <span class="reporter-method-output">The process of send message to old api alarm user is started.</span>
+                <span class="reporter-method-output">The process of send message to old api alarm user is complete.</span>
+                <span class="reporter-method-output"> </span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">manualAlarmByTemplate</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"> </span>
+                <span class="reporter-method-output">The process of creating a manual alarm by template is started.</span>
+                <span class="reporter-method-output">The process of creating a manual alarm by template is complete.</span>
                 <span class="reporter-method-output"> </span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
@@ -417,11 +498,11 @@ return data;
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
-              <span class="reporter-method-name">manualaByAttributeExtend1StStResource</span>
+              <span class="reporter-method-name">manualaByAttributeSingleStation</span>
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output"> </span>
-                <span class="reporter-method-output">The process of creating a manual alarm by attribute st2 and extend to st1 by resource is started.</span>
-                <span class="reporter-method-output">The process of creating a manual alarm by attribute st2 and extend to st1 by resource is complete.</span>
+                <span class="reporter-method-output">The process of creating a manual alarm by attribute  is started.</span>
+                <span class="reporter-method-output">The process of creating a manual alarm by attribute is complete.</span>
                 <span class="reporter-method-output"> </span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
@@ -438,48 +519,10 @@ return data;
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
-              <span class="reporter-method-name">manualaByAttributeMSLP</span>
+              <span class="reporter-method-name">manualaByAttributeExtend1StStResource</span>
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output"> </span>
-                <span class="reporter-method-output">The process of creating a low priority multi station manual alarm by attribute  is started.</span>
-                <span class="reporter-method-output">The process of creating a low priority multi station manual alarm by attribute is complete.</span>
-                <span class="reporter-method-output"> </span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">sendMessageToOldApiAlarmUser</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output"> </span>
-                <span class="reporter-method-output">The process of send message to old api alarm user is started.</span>
-                <span class="reporter-method-output">The process of send message to old api alarm user is complete.</span>
-                <span class="reporter-method-output"> </span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">sendMessageToManualAlarmUser</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output"> </span>
-                <span class="reporter-method-output">The process of send message to manual alarm user is started.</span>
-                <span class="reporter-method-output">The process of send message to manual alarm user is complete.</span>
-                <span class="reporter-method-output"> </span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">manualAlarmByTemplate</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output"> </span>
-                <span class="reporter-method-output">The process of creating a manual alarm by template is started.</span>
-                <span class="reporter-method-output">The process of creating a manual alarm by template is complete.</span>
-                <span class="reporter-method-output"> </span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">manualaByAttributeSingleStation</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output"> </span>
-                <span class="reporter-method-output">The process of creating a manual alarm by attribute  is started.</span>
-                <span class="reporter-method-output">The process of creating a manual alarm by attribute is complete.</span>
-                <span class="reporter-method-output"> </span>
+                <span class="reporter-method-output">The process of creating a manual alarm by attribute st2 and extend to st1 by resource is started.</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -504,155 +547,157 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
                 <span class="method-name">BeforeTest</span>
-                <span class="method-start">8548 ms</span>
+                <span class="method-start">8380 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
                 <span class="method-name">createObject</span>
-                <span class="method-start">16140 ms</span>
+                <span class="method-start">16619 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">backToHomePage</span>
-                <span class="method-start">16164 ms</span>
+                <span class="method-start">16654 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">sendMessageToOldApiAlarmUser</span>
-                <span class="method-start">21744 ms</span>
+                <span class="method-start">22089 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">backToHomePage2</span>
-                <span class="method-start">58753 ms</span>
+                <span class="method-start">59132 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">backToHomePage</span>
-                <span class="method-start">80871 ms</span>
+                <span class="method-start">80058 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">sendMessageToNewApiAlarmUser</span>
-                <span class="method-start">86614 ms</span>
+                <span class="method-start">85450 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">backToHomePage2</span>
-                <span class="method-start">157177 ms</span>
+                <span class="method-start">156522 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">backToHomePage</span>
-                <span class="method-start">179060 ms</span>
+                <span class="method-start">178528 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">manualaByAttributeSingleStation</span>
-                <span class="method-start">184677 ms</span>
+                <span class="method-start">184391 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">backToHomePage2</span>
-                <span class="method-start">230023 ms</span>
+                <span class="method-start">233123 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">backToHomePage</span>
-                <span class="method-start">252294 ms</span>
+                <span class="method-start">254687 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">manualAlarmByResourceMs</span>
-                <span class="method-start">257924 ms</span>
+                <span class="method-start">260106 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">backToHomePage2</span>
-                <span class="method-start">289852 ms</span>
+                <span class="method-start">292621 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">backToHomePage</span>
-                <span class="method-start">311938 ms</span>
+                <span class="method-start">313741 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">manualAlarmByFirefighterMs</span>
-                <span class="method-start">317672 ms</span>
+                <span class="method-start">319125 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">backToHomePage2</span>
-                <span class="method-start">369890 ms</span>
+                <span class="method-start">369861 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">backToHomePage</span>
-                <span class="method-start">391903 ms</span>
+                <span class="method-start">390572 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">manualaByAttributeMSLP</span>
-                <span class="method-start">397539 ms</span>
+                <span class="method-start">396294 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">backToHomePage2</span>
-                <span class="method-start">436209 ms</span>
+                <span class="method-start">434949 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">backToHomePage</span>
-                <span class="method-start">457703 ms</span>
+                <span class="method-start">455805 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">manualAlarmByEscResourceSingleStation</span>
-                <span class="method-start">463372 ms</span>
+                <span class="method-start">461198 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">backToHomePage2</span>
-                <span class="method-start">493677 ms</span>
+                <span class="method-start">492837 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">backToHomePage</span>
-                <span class="method-start">515498 ms</span>
+                <span class="method-start">514095 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">manualAlarmByEscResourceMs</span>
-                <span class="method-start">521317 ms</span>
+                <span class="method-start">519669 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">backToHomePage2</span>
-                <span class="method-start">549078 ms</span>
+                <span class="method-start">547413 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">backToHomePage</span>
-                <span class="method-start">570814 ms</span>
+                <span class="method-start">568144 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">manualaByAttributeExtend1StStResource</span>
-                <span class="method-start">576507 ms</span>
+                <span class="method-start">573612 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">backToHomePage2</span>
-                <span class="method-start">635059 ms</span>
+                <span class="method-start">617736 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">backToHomePage</span>
-                <span class="method-start">657409 ms</span>
+                <span class="method-start">638283 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">manualAlarmByTemplate</span>
-                <span class="method-start">663147 ms</span>
+                <span class="method-start">643760 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">backToHomePage2</span>
-                <span class="method-start">694889 ms</span>
+                <span class="method-start">675164 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">backToHomePage</span>
-                <span class="method-start">716939 ms</span>
+                <span class="method-start">695893 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">sendMessageToManualAlarmUser</span>
-                <span class="method-start">722619 ms</span>
+                <span class="method-start">701373 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">backToHomePage2</span>
-                <span class="method-start">754484 ms</span>
+                <span class="method-start">735898 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">logOut</span>
-                <span class="method-start">776899 ms</span>
+                <span class="method-start">756811 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-test after">
                 <span class="method-name">AfterTest</span>
-                <span class="method-start">780570 ms</span>
+                <span class="method-start">760818 ms</span>
               </div> <!-- configuration-test after -->
               <div class="configuration-suite after">
                 <span class="method-name">AfterSute</span>
-                <span class="method-start">780834 ms</span>
+                <span class="method-start">761107 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

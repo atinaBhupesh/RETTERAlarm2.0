@@ -8,7 +8,7 @@
       <methods>
 		  
 
-		  <include name=" sendMessageToManualAlarmUser"  />
+	<include name=" sendMessageToManualAlarmUser"  />
 	<include name="sendMessageToOldApiAlarmUser"  />
 	<include name="sendMessageToNewApiAlarmUser"  />
    
@@ -21,6 +21,8 @@
     <include name="manualaByAttributeExtend1StStResource"  />
   
     <include name="manualAlarmByTemplate"  />
+    
+    
     <include name="sendMessageToManualAlarmUser"  />
 
 

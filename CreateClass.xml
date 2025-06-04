@@ -6,10 +6,16 @@
       <class name="function.A_testClassCreate"/>
       
       <methods>
-      
-    
+<include name="manualaByAttributeSingleStation"  />
+	<include name="manualAlarmByResourceMs"  />
+	<include name="manualAlarmByFirefighterMs"  />
+    <include name="manualaByAttributeMSLP"  />
+    <include name="manualAlarmByEscResourceSingleStation"  />
+    <include name="manualAlarmByEscResourceMs"  />
+    <include name="manualaByAttributeExtend1StStResource"  />
+  
+    <include name="manualAlarmByTemplate"  />
     <include name="sendMessageToManualAlarmUser"  />
-      
 	</methods>
       
     </classes>

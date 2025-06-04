@@ -121,7 +121,7 @@ public class F_manualAlarm extends b_baseClass{
 		@FindBy(xpath="//span[text()=\"Next\"]")private WebElement next1;
 		@FindBy(xpath="(//span[@class=\"dx-tab-text-span\"])[3]")private WebElement user$resource;
 		
-		@FindBy(xpath = "//input[@value=\"3138\"]")	private WebElement ADST06REsc;
+		@FindBy(xpath = "//input[@value=\"4625\"]")	private WebElement ADST06REsc;
 		 @FindBy(xpath="//div[@aria-label=\"Next\"]")private WebElement next001 ;
 		 
 		 
@@ -648,6 +648,7 @@ public class F_manualAlarm extends b_baseClass{
 		yesCreate.click();
 		Thread.sleep(500);
 		
+		System.out.println("Alarm created.");
 		
 		
 		titleSearch.click();
