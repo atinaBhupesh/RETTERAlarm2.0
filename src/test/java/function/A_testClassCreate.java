@@ -19,6 +19,7 @@ public class A_testClassCreate extends b_baseClass {
 	D_homePage hp;
 	F_manualAlarm ma;
 	E_timeClass tc;
+	G_resource mr;
 	
 
 	
@@ -49,6 +50,7 @@ public class A_testClassCreate extends b_baseClass {
 		
 		hp= new D_homePage(driver) ;
 		hp.langChange(driver);
+		mr = new G_resource(driver) ;
 		
 		
 		
@@ -88,6 +90,27 @@ public class A_testClassCreate extends b_baseClass {
 		Thread.sleep(2000);
 		
 	}
+	
+	
+	@Test 
+	public void createNewResource() throws Throwable
+		
+	{
+		Reporter.log(" ", true);
+		Reporter.log("The process of creating new resource is started.", true);
+		mr.commonResource( driver,  branchName);
+		mr.createNewResource( driver, St2N, St1N, gTodaysDate,  gtimeHHMMSS, St2V1, St1V1, st01FF1,st02FF1);
+		Reporter.log("The process of creating new resource is complete.", true);
+		Reporter.log(" ", true);
+		Thread.sleep(3000);
+		
+	}
+	
+	
+	
+	
+	
+	
 	
 	
 	
@@ -176,7 +199,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of creating a manual alarm by attribute st2 and extend to st1 by resource is started.", true);
 		ma.manualAlarmCommon( driver,  deptN, branchName );
-		ma.manualaByAttributeExtend1StStResource ( driver, St2N,  gTodaysDate,  gtimeHHMMSS, St2V1,   st02A1,  St1N,  branchName );
+		ma.manualaByAttributeExtend1StStResource (  driver, St2N,  gTodaysDate,  gtimeHHMMSS, St2V1,   st02A1,  St1N,  branchName, st01REsc  );
 		
 		
 		Reporter.log("The process of creating a manual alarm by attribute st2 and extend to st1 by resource is complete.", true);

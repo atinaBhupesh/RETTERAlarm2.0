@@ -19,6 +19,7 @@ public class A_testClassDelte extends b_baseClass {
 	D_homePage hp;
 	F_manualAlarm ma;
 	E_timeClass tc;
+	G_resource mr;
 	
 
 	
@@ -47,6 +48,7 @@ public class A_testClassDelte extends b_baseClass {
 		
 		hp= new D_homePage(driver) ;
 		hp.langChange(driver);
+		mr = new G_resource(driver) ;
 		
 		
 		
@@ -86,6 +88,25 @@ public class A_testClassDelte extends b_baseClass {
 		driver.navigate().refresh();
 		
 		Thread.sleep(2000);		
+	}
+	
+	
+
+	@Test 
+	public void deleteResource () throws Throwable
+		
+	{
+		Reporter.log(" ", true);
+		Reporter.log("The process of delete resource is started.", true);
+		mr.commonResource(driver, branchName);
+		mr.deleteResource(driver);
+		
+
+		ma.backToOld();
+		
+		Reporter.log(" ", true);
+		Thread.sleep(3000);
+		
 	}
 	
 	

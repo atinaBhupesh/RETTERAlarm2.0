@@ -24,6 +24,7 @@
     
     
     <include name="sendMessageToManualAlarmUser"  />
+    <include name="createNewResource"  />
 
 
       
