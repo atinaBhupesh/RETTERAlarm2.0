@@ -7,8 +7,8 @@
         <methods>
           <include name="AfterSute"/>
           <include name="createObject"/>
+          <include name="deleteAlarmTemplate"/>
           <include name="BeforeTest"/>
-          <include name="deleteManualAlarm"/>
           <include name="AfterTest"/>
           <include name="backToHomePage"/>
           <include name="BeforeSuite"/>

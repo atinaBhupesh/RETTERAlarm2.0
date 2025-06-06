@@ -27,11 +27,11 @@ public class b_baseClass {
 	String userName;
 	String password;
 	String deptN;
-	String St1N;
-	String St2N;
-	String St1V1;
-	String St1V2;
-	String St2V1;
+	String st01N;
+	String st02N;
+	String st01V1;
+	String st01V2;
+	String st02V1;
 	String st01A1;
 	String st01R1;
 	String st01R2;
@@ -40,7 +40,8 @@ public class b_baseClass {
 	String st02A1;
 	String st01REsc;
 	String st02REsc;
-	String st2t1;
+	String st02t1;
+	String st02R1;
 	
 	public void getDetailsFromUser()
 	{
@@ -183,20 +184,21 @@ public class b_baseClass {
 			userName = sheet.getRow(2).getCell(1).getStringCellValue();
 			password = "123456";
 			deptN = sheet.getRow(4).getCell(1).getStringCellValue();
-			St1N  = sheet.getRow(5).getCell(1).getStringCellValue();
-			St2N = sheet.getRow(6).getCell(1).getStringCellValue();
-			St1V1 = sheet.getRow(7).getCell(1).getStringCellValue();
-			St1V2 = sheet.getRow(8).getCell(1).getStringCellValue();
+			st01N  = sheet.getRow(5).getCell(1).getStringCellValue();
+			st02N = sheet.getRow(6).getCell(1).getStringCellValue();
+			st01V1 = sheet.getRow(7).getCell(1).getStringCellValue();
+			st01V2 = sheet.getRow(8).getCell(1).getStringCellValue();
 			st01A1 = sheet.getRow(9).getCell(1).getStringCellValue();
 			st01R1 = sheet.getRow(10).getCell(1).getStringCellValue();
 			st01R2 = sheet.getRow(11).getCell(1).getStringCellValue();
 			st01FF1 = sheet.getRow(12).getCell(1).getStringCellValue();
 			st02FF1 = sheet.getRow(13).getCell(1).getStringCellValue();
-			St2V1 = sheet.getRow(14).getCell(1).getStringCellValue();
+			st02V1 = sheet.getRow(14).getCell(1).getStringCellValue();
 			st02A1 = sheet.getRow(15).getCell(1).getStringCellValue();
 			st01REsc =  sheet.getRow(16).getCell(1).getStringCellValue();
 			st02REsc = sheet.getRow(17).getCell(1).getStringCellValue();
-			st2t1 = sheet.getRow(18).getCell(1).getStringCellValue();
+			st02t1 = sheet.getRow(18).getCell(1).getStringCellValue();
+			st02R1 = sheet.getRow(19).getCell(1).getStringCellValue();
 			
 
 			
@@ -209,20 +211,21 @@ public class b_baseClass {
 			driver.get(url);
 			userName = sheet.getRow(2).getCell(2).getStringCellValue();
 			password = "Qwerty@123";
-			St1N  = sheet.getRow(5).getCell(2).getStringCellValue();
-			St2N = sheet.getRow(6).getCell(2).getStringCellValue();
-			St1V1 = sheet.getRow(7).getCell(2).getStringCellValue();
-			St1V2 = sheet.getRow(8).getCell(2).getStringCellValue();
+			st01N  = sheet.getRow(5).getCell(2).getStringCellValue();
+			st02N = sheet.getRow(6).getCell(2).getStringCellValue();
+			st01V1 = sheet.getRow(7).getCell(2).getStringCellValue();
+			st01V2 = sheet.getRow(8).getCell(2).getStringCellValue();
 			st01A1 = sheet.getRow(9).getCell(2).getStringCellValue();
 			st01R1 = sheet.getRow(10).getCell(2).getStringCellValue();
 			st01R2 = sheet.getRow(11).getCell(2).getStringCellValue();
 			st01FF1 = sheet.getRow(12).getCell(2).getStringCellValue();
 			st02FF1 = sheet.getRow(13).getCell(2).getStringCellValue();
-			St2V1 = sheet.getRow(14).getCell(2).getStringCellValue();
+			st02V1 = sheet.getRow(14).getCell(2).getStringCellValue();
 			st02A1 = sheet.getRow(15).getCell(2).getStringCellValue();
 			st01REsc =  sheet.getRow(16).getCell(2).getStringCellValue();
 			st02REsc = sheet.getRow(17).getCell(2).getStringCellValue();
-			st2t1 = sheet.getRow(18).getCell(2).getStringCellValue();
+			st02t1 = sheet.getRow(18).getCell(2).getStringCellValue();
+			st02R1 = sheet.getRow(19).getCell(2).getStringCellValue();
 			
 		}
 		

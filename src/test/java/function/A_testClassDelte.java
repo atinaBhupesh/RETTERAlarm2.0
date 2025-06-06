@@ -20,6 +20,9 @@ public class A_testClassDelte extends b_baseClass {
 	F_manualAlarm ma;
 	E_timeClass tc;
 	G_resource mr;
+
+	H_alarmLoop al;
+	I_AlarmTemplate at;
 	
 
 	
@@ -49,7 +52,8 @@ public class A_testClassDelte extends b_baseClass {
 		hp= new D_homePage(driver) ;
 		hp.langChange(driver);
 		mr = new G_resource(driver) ;
-		
+		al  =new H_alarmLoop (driver) ;
+		at=new I_AlarmTemplate (driver);
 		
 		
 	
@@ -91,19 +95,59 @@ public class A_testClassDelte extends b_baseClass {
 	}
 	
 	
+	
+	
+	
+	
+
+	@Test 
+	public void deleteAlarmTemplate () throws Throwable
+		
+	{
+		Reporter.log(" ", true);
+		Reporter.log("The process of delete alarm template is started.", true);
+		at.commonAlarmTemplate(driver, branchName);
+		at.deleteAlarmTemplate(driver);
+		
+
+		ma.backToOld();
+		Reporter.log("The process of delete alarm template is complete.", true);
+		Reporter.log(" ", true);
+		Thread.sleep(3000);
+		
+	}
+
+	@Test 
+	public void deleteAlarmLoop () throws Throwable
+		
+	{
+		Reporter.log(" ", true);
+		Reporter.log("The process of delete resource is started.", true);
+		al.commonAlarmLoop(driver, branchName);
+		al.deleteAlarmLoop(driver);
+		
+
+		ma.backToOld();
+		Reporter.log("The process of delete alarm loop is complete.", true);
+		Reporter.log(" ", true);
+		Thread.sleep(3000);
+		
+	}
+	
+	
 
 	@Test 
 	public void deleteResource () throws Throwable
 		
 	{
 		Reporter.log(" ", true);
-		Reporter.log("The process of delete resource is started.", true);
+		Reporter.log("The process of delete alarm resource is started.", true);
 		mr.commonResource(driver, branchName);
 		mr.deleteResource(driver);
 		
 
 		ma.backToOld();
-		
+		Reporter.log("The process of delete alarm resource is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
 		

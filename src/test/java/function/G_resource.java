@@ -72,7 +72,7 @@ import org.openqa.selenium.support.PageFactory;
 	{
 		
 	manualAlarmModule.click();
-	Thread.sleep(500);
+	Thread.sleep(2000);
 	
 
 	if  (branchName.equals("1" ) )
@@ -172,7 +172,7 @@ import org.openqa.selenium.support.PageFactory;
 		 Thread.sleep(5000);
 		Actions act = new Actions(driver);
 		searchField.click();
-		act.sendKeys("BG_Resource").perform();
+		act.sendKeys("BG").perform();
 		Thread.sleep(5000);
 		
 		
@@ -212,10 +212,8 @@ import org.openqa.selenium.support.PageFactory;
 			     totalResourceCount += count;
 		    }
 		
-		System.out.println("The process has been completed.");
-		System.out.println();
-		
-		System.out.println("Total " + totalResourceCount + " resource deleted successfully.");
+		System.out.println("The iteration has been completed.");
+		System.out.println("Total >>>>>" + totalResourceCount + "<<<<< alarms deleted successfully.");
 		
 			    refreshFilter.click();
 			    Thread.sleep(2000);

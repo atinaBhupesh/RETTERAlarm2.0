@@ -8,39 +8,13 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Failed suite [Suite]</th></tr>
-<tr><td><a href="#t0">Test(failed)</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">134,784</td><td></td><td></td></tr>
+<tr><th colspan="8">Suite</th></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">203,041</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Failed suite [Suite]</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test(failed) &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">function.A_testClassCreate</td><td><a href="#m0">backToHomePage2</a></td><td rowspan="1">1749041942038</td><td rowspan="1">26586</td></tr><tr><th colspan="4">Test(failed) &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="3">function.A_testClassCreate</td><td><a href="#m1">AfterSute</a></td><td rowspan="1">1749041968670</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m2">AfterTest</a></td><td rowspan="1">1749041968632</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m3">logOut</a></td><td rowspan="1">1749041968628</td><td rowspan="1">0</td></tr><tr><th colspan="4">Test(failed) &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">function.A_testClassCreate</td><td><a href="#m4">manualAlarmByTemplate</a></td><td rowspan="1">1749041909794</td><td rowspan="1">32243</td></tr><tr class="passedeven"><td><a href="#m5">sendMessageToManualAlarmUser</a></td><td rowspan="1">1749041846569</td><td rowspan="1">36892</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">function.A_testClassCreate</td><td><a href="#m0">createNewAlarmTemplateByFirefighter</a></td><td rowspan="1">1749190213423</td><td rowspan="1">45041</td></tr><tr class="passedeven"><td><a href="#m1">manualAlarmByResourceMs</a></td><td rowspan="1">1749190153097</td><td rowspan="1">33666</td></tr><tr class="passedeven"><td><a href="#m2">manualAlarmByTemplate</a></td><td rowspan="1">1749190284319</td><td rowspan="1">31260</td></tr></tbody>
 </table>
-<h2>Test(failed)</h2><h3 id="m0">function.A_testClassCreate#backToHomePage2</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=137.0.7151.56)
-Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1054481400b9f0aa1f680b6383271e1b, clickElement {id=f.0104ECC213776390C9A16713426A3A43.d.9D3BCCE7688AF8B059F140C19B5ACCEB.e.49294}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.56, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\BHUPESH\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56523}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56523/devtoo..., se:cdpVersion: 137.0.7151.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (1054481400b9f0aa1f680b6383271e1b)] -&gt; xpath: //a[@href=&quot;http://live.retteralarm.de/admin/dashboard/index&quot;]]
-Session ID: 1054481400b9f0aa1f680b6383271e1b
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy22.click(Unknown Source)
-	at function.D_homePage.backToHomePage(D_homePage.java:44)
-	at function.A_testClassCreate.backToHomePage2(A_testClassCreate.java:316)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 40 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">function.A_testClassCreate#AfterSute</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">function.A_testClassCreate#AfterTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">function.A_testClassCreate#logOut</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">function.A_testClassCreate#manualAlarmByTemplate</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages"> <br/>The process of creating a manual alarm by template is started.<br/>The process of creating a manual alarm by template is complete.<br/> </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">function.A_testClassCreate#sendMessageToManualAlarmUser</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages"> <br/>The process of send message to manual alarm user is started.<br/>The process of send message to manual alarm user is complete.<br/> </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test</h2><h3 id="m0">function.A_testClassCreate#createNewAlarmTemplateByFirefighter</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages"> <br/>The process of creating new alarm template by fire fighter is started.<br/>The process of creating new alarm template by fire fighter is complete.<br/> </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">function.A_testClassCreate#manualAlarmByResourceMs</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages"> <br/>The process of creating a manual alarm by resource is started.<br/>The process of creating a manual alarm by resource is complete.<br/> </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">function.A_testClassCreate#manualAlarmByTemplate</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages"> <br/>The process of creating a manual alarm by template is started.<br/>The process of creating a manual alarm by template is complete.<br/> </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

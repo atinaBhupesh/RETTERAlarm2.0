@@ -11,9 +11,8 @@
           <include name="BeforeTest"/>
           <include name="logOut"/>
           <include name="backToHomePage"/>
+          <include name="manualAlarmByResourceMs"/>
           <include name="AfterSute"/>
-          <include name="sendMessageToManualAlarmUser"/>
-          <include name="manualAlarmByTemplate"/>
           <include name="createObject"/>
         </methods>
       </class> <!-- function.A_testClassCreate -->

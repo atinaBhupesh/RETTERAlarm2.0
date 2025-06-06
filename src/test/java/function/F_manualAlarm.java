@@ -506,6 +506,8 @@
 			act.sendKeys(st2t1).build().perform();
 			Thread.sleep(2000);
 			
+		
+			
 			act.sendKeys(Keys.ENTER).build().perform();
 			Thread.sleep(2000);
 			
@@ -1710,10 +1712,8 @@
 		        totalAlarms += count;
 		    }
 		
-		System.out.println("The process has been completed.");
-		System.out.println();
-		
-		System.out.println("Total " + totalAlarms + " alarms deleted successfully.");
+		System.out.println("The iteration has been completed.");
+		System.out.println("Total >>>>>" + totalAlarms + "<<<<< alarms deleted successfully.");
 		
 			    refreshFilter.click();
 			    Thread.sleep(2000);

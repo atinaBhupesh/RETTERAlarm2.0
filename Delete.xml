@@ -12,7 +12,8 @@
       
         <methods>
       
-      <include name="deleteResource"  />
+
+      <include name="deleteAlarmTemplate"  />
       
       
       

@@ -6,10 +6,10 @@
       <class name="function.A_testClassCreate"/>
       
       <methods>
+ <include name="manualAlarmByResourceMs"/>
+      <include name="createNewAlarmTemplateByFirefighter"  />
 
-<include name="createNewResource"  />
-	
-    
+        <include name="manualAlarmByTemplate"  />
 
   
 
