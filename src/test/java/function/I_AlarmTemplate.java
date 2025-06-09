@@ -76,7 +76,7 @@ public class I_AlarmTemplate extends b_baseClass {
 		@FindBy(xpath="(//span[@class=\"dx-checkbox-icon\"])[1]")private WebElement selectAll;
 		@FindBy(xpath="//i[@class=\"ri ri-delete-bin-6-line\"]")private WebElement deleteAll;
 		@FindBy(xpath="//span[text()=\"Yes, Delete\"]")private WebElement yesDelete;
-	@FindBy(xpath="//td[contains(text(),\"BG\")]")private List< WebElement> BGTemplateCount;
+	@FindBy(xpath="//td[contains(text(),\"BG_AT by\")]")private List< WebElement> BGTemplateCount;
 	// @FindBy(xpath="")private WebElement ;
 	// @FindBy(xpath="")private WebElement ;		
 	
@@ -652,7 +652,7 @@ public class I_AlarmTemplate extends b_baseClass {
 		    titleSearchField.click();
 		    Thread.sleep(500);
 		
-		    act.sendKeys("BG_AT").perform();
+		    act.sendKeys("BG_AT by").perform();
 	
 			Thread.sleep(500);
 			titleSearchFieldOk.click();
@@ -680,8 +680,7 @@ public class I_AlarmTemplate extends b_baseClass {
 				Thread.sleep(3000);
 				yesDelete.click();
 				Thread.sleep(3000);
-				refreshFilter.click();
-				Thread.sleep(2000);
+				
 		
 				 driver.navigate().refresh();
 			     Thread.sleep(3000);
@@ -693,7 +692,6 @@ public class I_AlarmTemplate extends b_baseClass {
 			System.out.println("The iteration has been completed.");
 			System.out.println("Total >>>>>" + totalTemplateCountCount + "<<<<< alarms deleted successfully.");
 		
-		System.out.println("Total " + totalTemplateCountCount + " alarm template  deleted successfully.");
 		
 			    refreshFilter.click();
 			    Thread.sleep(2000);

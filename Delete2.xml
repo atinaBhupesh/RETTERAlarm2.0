@@ -11,11 +11,11 @@
       
       
         <methods>
-      
+    
       <include name="deleteManualAlarm"  />
        <include name="deleteResource"  />
        <include name="deleteAlarmLoop"  />
-      <include name="deleteAlarmTemplate"  />
+        <include name="deleteAlarmTemplate"  />
       
       
       

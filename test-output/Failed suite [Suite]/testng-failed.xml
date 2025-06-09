@@ -6,16 +6,12 @@
       <class name="function.A_testClassCreate">
         <methods>
           <include name="AfterTest"/>
-          <include name="createNewAlarmLoop"/>
           <include name="BeforeSuite"/>
-          <include name="createNewResource"/>
           <include name="backToHomePage2"/>
           <include name="BeforeTest"/>
           <include name="logOut"/>
           <include name="backToHomePage"/>
-          <include name="manualAlarmByResourceMs"/>
           <include name="AfterSute"/>
-          <include name="sendMessageToManualAlarmUser"/>
           <include name="createObject"/>
           <include name="manualAlarmByTemplate"/>
         </methods>

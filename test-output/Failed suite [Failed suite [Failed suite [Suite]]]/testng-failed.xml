@@ -9,13 +9,11 @@
           <include name="BeforeSuite"/>
           <include name="backToHomePage2"/>
           <include name="BeforeTest"/>
-          <include name="backToHomePage"/>
           <include name="logOut"/>
-          <include name="manualAlarmByResourceMs"/>
-          <include name="sendMessageToManualAlarmUser"/>
+          <include name="backToHomePage"/>
           <include name="AfterSute"/>
-          <include name="manualAlarmByTemplate"/>
           <include name="createObject"/>
+          <include name="manualAlarmByTemplate"/>
         </methods>
       </class> <!-- function.A_testClassCreate -->
     </classes>
