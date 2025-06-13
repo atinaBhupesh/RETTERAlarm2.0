@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="14" passed="0" failed="3" skipped="11">
+<testng-results ignored="0" total="16" passed="16" failed="0" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[Well come to RETTERAlarm Live branch]]>
@@ -8,10 +8,61 @@
       <![CDATA[Logged in user-6039-DE-andrew-deptu-2]]>
     </line>
     <line>
+      <![CDATA[|*******************************************************|]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[The process of send message to old api alarm user is started.]]>
+    </line>
+    <line>
+      <![CDATA[The process of send message to old api alarm user is complete.]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[|*******************************************************|]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[The process of send message to new api alarm user is started.]]>
+    </line>
+    <line>
+      <![CDATA[image attached properly]]>
+    </line>
+    <line>
+      <![CDATA[pdf attached properly]]>
+    </line>
+    <line>
+      <![CDATA[word file attached properly]]>
+    </line>
+    <line>
+      <![CDATA[The process of send message to new api alarm user is complete.]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[|*******************************************************|]]>
+    </line>
+    <line>
       <![CDATA[ ]]>
     </line>
     <line>
       <![CDATA[The process of creating a manual alarm by attribute  is started.]]>
+    </line>
+    <line>
+      <![CDATA[The process of creating a manual alarm by attribute is complete.]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[|*******************************************************|]]>
     </line>
     <line>
       <![CDATA[ ]]>
@@ -20,115 +71,304 @@
       <![CDATA[The process of creating a manual alarm by resource is started.]]>
     </line>
     <line>
+      <![CDATA[The process of creating a manual alarm by resource is complete.]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[|*******************************************************|]]>
+    </line>
+    <line>
       <![CDATA[ ]]>
     </line>
     <line>
       <![CDATA[The process of creating a manual alarm by firefighter is started.]]>
     </line>
+    <line>
+      <![CDATA[The process of creating a manual alarm by firefighter is complete.]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[|*******************************************************|]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[The process of creating a low priority multi station manual alarm by attribute  is started.]]>
+    </line>
+    <line>
+      <![CDATA[The process of creating a low priority multi station manual alarm by attribute is complete.]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[|*******************************************************|]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[The process of creating a manual alarm by escaltion resource-single station is started.]]>
+    </line>
+    <line>
+      <![CDATA[The process of creating a manual alarm by escaltion resource-single station is complete.]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[|*******************************************************|]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[The process of creating a manual alarm by escaltion resource-multi station is started.]]>
+    </line>
+    <line>
+      <![CDATA[The process of creating a manual alarm by escaltion resource-multi station is complete.]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[|*******************************************************|]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[The process of creating a manual alarm by attribute st2 and extend to st1 by resource is started.]]>
+    </line>
+    <line>
+      <![CDATA[The process of creating a manual alarm by attribute st2 and extend to st1 by resource is complete.]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[|*******************************************************|]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[The process of creating a manual alarm by template is started.]]>
+    </line>
+    <line>
+      <![CDATA[The process of creating a manual alarm by template is complete.]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[|*******************************************************|]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[The process of send message to manual alarm user is started.]]>
+    </line>
+    <line>
+      <![CDATA[The process of send message to manual alarm user is complete.]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[|*******************************************************|]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[The process of creating new alarm resource is started.]]>
+    </line>
+    <line>
+      <![CDATA[The process of creating new alarm resource is complete.]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[|*******************************************************|]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[The process of creating new alarm loop is started.]]>
+    </line>
+    <line>
+      <![CDATA[The process of creating new alarm loop is is complete.]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[|*******************************************************|]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[The process of creating new alarm template by attribute is started.]]>
+    </line>
+    <line>
+      <![CDATA[The process of creating new alarm template by attribute is complete.]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[|*******************************************************|]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[The process of creating new alarm template by resource is started.]]>
+    </line>
+    <line>
+      <![CDATA[The process of creating new alarm template by resource is complete.]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[|*******************************************************|]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[The process of creating new alarm template by fire fighter is started.]]>
+    </line>
+    <line>
+      <![CDATA[The process of creating new alarm template by fire fighter is complete.]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[Logout sucessfully.]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[Refresh the URL before successfully closing the browser.]]>
+    </line>
+    <line>
+      <![CDATA[Browser close sucessfully.]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[Good to see you again.]]>
+    </line>
   </reporter-output>
-  <suite started-at="2025-06-09T18:13:18 IST" name="Suite" finished-at="2025-06-09T18:14:47 IST" duration-ms="89286">
+  <suite started-at="2025-06-13T11:29:21 IST" name="Suite" finished-at="2025-06-13T11:47:27 IST" duration-ms="1085475">
     <groups>
     </groups>
-    <test started-at="2025-06-09T18:13:18 IST" name="Test" finished-at="2025-06-09T18:14:47 IST" duration-ms="89286">
+    <test started-at="2025-06-13T11:29:21 IST" name="Test" finished-at="2025-06-13T11:47:27 IST" duration-ms="1085475">
       <class name="function.A_testClassCreate">
-        <test-method is-config="true" signature="BeforeSuite()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-09T18:13:11 IST" name="BeforeSuite" finished-at="2025-06-09T18:13:18 IST" duration-ms="6153" status="PASS">
+        <test-method is-config="true" signature="BeforeSuite()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:29:11 IST" name="BeforeSuite" finished-at="2025-06-13T11:29:21 IST" duration-ms="10322" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Well come to RETTERAlarm Live branch]]>
             </line>
           </reporter-output>
         </test-method> <!-- BeforeSuite -->
-        <test-method is-config="true" signature="BeforeTest()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-09T18:13:18 IST" name="BeforeTest" finished-at="2025-06-09T18:13:26 IST" duration-ms="8607" status="PASS">
+        <test-method is-config="true" signature="BeforeTest()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:29:21 IST" name="BeforeTest" finished-at="2025-06-13T11:29:29 IST" duration-ms="7625" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Logged in user-6039-DE-andrew-deptu-2]]>
             </line>
           </reporter-output>
         </test-method> <!-- BeforeTest -->
-        <test-method is-config="true" signature="createObject()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-09T18:13:26 IST" name="createObject" finished-at="2025-06-09T18:13:26 IST" duration-ms="11" status="PASS">
+        <test-method is-config="true" signature="createObject()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:29:29 IST" name="createObject" finished-at="2025-06-13T11:29:29 IST" duration-ms="13" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createObject -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-09T18:13:26 IST" name="backToHomePage" finished-at="2025-06-09T18:13:31 IST" duration-ms="5259" status="PASS">
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:29:29 IST" name="backToHomePage" finished-at="2025-06-13T11:29:35 IST" duration-ms="5608" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[|*******************************************************|]]>
+            </line>
           </reporter-output>
         </test-method> <!-- backToHomePage -->
-        <test-method signature="manualaByAttributeSingleStation()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-09T18:13:31 IST" name="manualaByAttributeSingleStation" finished-at="2025-06-09T18:13:42 IST" duration-ms="10804" status="FAIL">
-          <exception class="org.openqa.selenium.ElementNotInteractableException">
-            <message>
-              <![CDATA[element not interactable: Element is not currently visible and may not be manipulated
-  (Session info: chrome=137.0.7151.69)
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1277e9bec24dd1cddda204c0db8b1136, clickElement {id=f.50E5B2F617670F10CC63E471772D3387.d.52EAC8DC42633379C0C63A4BACC70ED2.e.35}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\BHUPESH\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51749}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51749/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (1277e9bec24dd1cddda204c0db8b1136)] -> xpath: //option[text()=" andrew department "]]
-Session ID: 1277e9bec24dd1cddda204c0db8b1136]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable: Element is not currently visible and may not be manipulated
-  (Session info: chrome=137.0.7151.69)
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1277e9bec24dd1cddda204c0db8b1136, clickElement {id=f.50E5B2F617670F10CC63E471772D3387.d.52EAC8DC42633379C0C63A4BACC70ED2.e.35}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\BHUPESH\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51749}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51749/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (1277e9bec24dd1cddda204c0db8b1136)] -> xpath: //option[text()=" andrew department "]]
-Session ID: 1277e9bec24dd1cddda204c0db8b1136
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at jdk.proxy2/jdk.proxy2.$Proxy22.click(Unknown Source)
-at function.F_manualAlarm.manualAlarmCommon(F_manualAlarm.java:190)
-at function.A_testClassCreate.manualaByAttributeSingleStation(A_testClassCreate.java:250)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+        <test-method signature="sendMessageToOldApiAlarmUser()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:29:35 IST" name="sendMessageToOldApiAlarmUser" finished-at="2025-06-13T11:30:11 IST" duration-ms="36280" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+            <line>
+              <![CDATA[The process of send message to old api alarm user is started.]]>
+            </line>
+            <line>
+              <![CDATA[The process of send message to old api alarm user is complete.]]>
+            </line>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- sendMessageToOldApiAlarmUser -->
+        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:30:11 IST" name="backToHomePage2" finished-at="2025-06-13T11:30:32 IST" duration-ms="20973" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- backToHomePage2 -->
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:30:32 IST" name="backToHomePage" finished-at="2025-06-13T11:30:37 IST" duration-ms="5377" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[|*******************************************************|]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- backToHomePage -->
+        <test-method signature="sendMessageToNewApiAlarmUser()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:30:37 IST" name="sendMessageToNewApiAlarmUser" finished-at="2025-06-13T11:31:49 IST" duration-ms="72179" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+            <line>
+              <![CDATA[The process of send message to new api alarm user is started.]]>
+            </line>
+            <line>
+              <![CDATA[image attached properly]]>
+            </line>
+            <line>
+              <![CDATA[pdf attached properly]]>
+            </line>
+            <line>
+              <![CDATA[word file attached properly]]>
+            </line>
+            <line>
+              <![CDATA[The process of send message to new api alarm user is complete.]]>
+            </line>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- sendMessageToNewApiAlarmUser -->
+        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:31:49 IST" name="backToHomePage2" finished-at="2025-06-13T11:32:10 IST" duration-ms="20902" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- backToHomePage2 -->
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:32:10 IST" name="backToHomePage" finished-at="2025-06-13T11:32:16 IST" duration-ms="5482" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[|*******************************************************|]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- backToHomePage -->
+        <test-method signature="manualaByAttributeSingleStation()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:32:16 IST" name="manualaByAttributeSingleStation" finished-at="2025-06-13T11:33:02 IST" duration-ms="45760" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[ ]]>
@@ -136,92 +376,26 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             <line>
               <![CDATA[The process of creating a manual alarm by attribute  is started.]]>
             </line>
+            <line>
+              <![CDATA[The process of creating a manual alarm by attribute is complete.]]>
+            </line>
+            <line>
+              <![CDATA[ ]]>
+            </line>
           </reporter-output>
         </test-method> <!-- manualaByAttributeSingleStation -->
-        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-09T18:13:42 IST" name="backToHomePage2" finished-at="2025-06-09T18:14:03 IST" duration-ms="20715" status="PASS">
+        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:33:02 IST" name="backToHomePage2" finished-at="2025-06-13T11:33:23 IST" duration-ms="21408" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backToHomePage2 -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-09T18:14:03 IST" name="backToHomePage" finished-at="2025-06-09T18:14:08 IST" duration-ms="5206" status="PASS">
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:33:23 IST" name="backToHomePage" finished-at="2025-06-13T11:33:29 IST" duration-ms="6342" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[|*******************************************************|]]>
+            </line>
           </reporter-output>
         </test-method> <!-- backToHomePage -->
-        <test-method signature="manualAlarmByResourceMs()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-09T18:14:08 IST" name="manualAlarmByResourceMs" finished-at="2025-06-09T18:14:16 IST" duration-ms="8022" status="FAIL">
-          <exception class="org.openqa.selenium.ElementNotInteractableException">
-            <message>
-              <![CDATA[element not interactable: Element is not currently visible and may not be manipulated
-  (Session info: chrome=137.0.7151.69)
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1277e9bec24dd1cddda204c0db8b1136, clickElement {id=f.50E5B2F617670F10CC63E471772D3387.d.9B8548C7E06AD80E0F45FA2205A4D57D.e.79}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\BHUPESH\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51749}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51749/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (1277e9bec24dd1cddda204c0db8b1136)] -> xpath: //option[text()=" andrew department "]]
-Session ID: 1277e9bec24dd1cddda204c0db8b1136]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable: Element is not currently visible and may not be manipulated
-  (Session info: chrome=137.0.7151.69)
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1277e9bec24dd1cddda204c0db8b1136, clickElement {id=f.50E5B2F617670F10CC63E471772D3387.d.9B8548C7E06AD80E0F45FA2205A4D57D.e.79}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\BHUPESH\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51749}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51749/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (1277e9bec24dd1cddda204c0db8b1136)] -> xpath: //option[text()=" andrew department "]]
-Session ID: 1277e9bec24dd1cddda204c0db8b1136
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at jdk.proxy2/jdk.proxy2.$Proxy22.click(Unknown Source)
-at function.F_manualAlarm.manualAlarmCommon(F_manualAlarm.java:190)
-at function.A_testClassCreate.manualAlarmByResourceMs(A_testClassCreate.java:284)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+        <test-method signature="manualAlarmByResourceMs()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:33:29 IST" name="manualAlarmByResourceMs" finished-at="2025-06-13T11:34:01 IST" duration-ms="31823" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[ ]]>
@@ -229,91 +403,26 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             <line>
               <![CDATA[The process of creating a manual alarm by resource is started.]]>
             </line>
+            <line>
+              <![CDATA[The process of creating a manual alarm by resource is complete.]]>
+            </line>
+            <line>
+              <![CDATA[ ]]>
+            </line>
           </reporter-output>
         </test-method> <!-- manualAlarmByResourceMs -->
-        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-09T18:14:16 IST" name="backToHomePage2" finished-at="2025-06-09T18:14:37 IST" duration-ms="20569" status="PASS">
+        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:34:01 IST" name="backToHomePage2" finished-at="2025-06-13T11:34:22 IST" duration-ms="21151" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backToHomePage2 -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-09T18:14:37 IST" name="backToHomePage" finished-at="2025-06-09T18:14:42 IST" duration-ms="5342" status="PASS">
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:34:22 IST" name="backToHomePage" finished-at="2025-06-13T11:34:29 IST" duration-ms="6281" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[|*******************************************************|]]>
+            </line>
           </reporter-output>
         </test-method> <!-- backToHomePage -->
-        <test-method signature="manualAlarmByFirefighterMs()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-09T18:14:42 IST" name="manualAlarmByFirefighterMs" finished-at="2025-06-09T18:14:47 IST" duration-ms="4631" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchSessionException">
-            <message>
-              <![CDATA[invalid session id: session deleted as the browser has closed the connection
-from disconnected: not connected to DevTools
-  (Session info: chrome=137.0.7151.69)
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1277e9bec24dd1cddda204c0db8b1136, findElement {using=xpath, value=//i[@class="dx-icon ri ri-settings-3-line"]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\BHUPESH\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51749}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51749/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1277e9bec24dd1cddda204c0db8b1136]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchSessionException: invalid session id: session deleted as the browser has closed the connection
-from disconnected: not connected to DevTools
-  (Session info: chrome=137.0.7151.69)
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1277e9bec24dd1cddda204c0db8b1136, findElement {using=xpath, value=//i[@class="dx-icon ri ri-settings-3-line"]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\BHUPESH\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51749}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51749/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1277e9bec24dd1cddda204c0db8b1136
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy22.click(Unknown Source)
-at function.F_manualAlarm.manualAlarmCommon(F_manualAlarm.java:178)
-at function.A_testClassCreate.manualAlarmByFirefighterMs(A_testClassCreate.java:353)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+        <test-method signature="manualAlarmByFirefighterMs()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:34:29 IST" name="manualAlarmByFirefighterMs" finished-at="2025-06-13T11:35:22 IST" duration-ms="53149" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[ ]]>
@@ -321,1054 +430,343 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             <line>
               <![CDATA[The process of creating a manual alarm by firefighter is started.]]>
             </line>
+            <line>
+              <![CDATA[The process of creating a manual alarm by firefighter is complete.]]>
+            </line>
+            <line>
+              <![CDATA[ ]]>
+            </line>
           </reporter-output>
         </test-method> <!-- manualAlarmByFirefighterMs -->
-        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-09T18:14:47 IST" name="backToHomePage2" finished-at="2025-06-09T18:14:47 IST" duration-ms="51" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchSessionException">
-            <message>
-              <![CDATA[invalid session id
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1277e9bec24dd1cddda204c0db8b1136, findElement {using=xpath, value=(//div[@class="dx-button-content"])[3]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\BHUPESH\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51749}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51749/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1277e9bec24dd1cddda204c0db8b1136]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchSessionException: invalid session id
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1277e9bec24dd1cddda204c0db8b1136, findElement {using=xpath, value=(//div[@class="dx-button-content"])[3]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\BHUPESH\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51749}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51749/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1277e9bec24dd1cddda204c0db8b1136
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy22.click(Unknown Source)
-at function.F_manualAlarm.backToOld(F_manualAlarm.java:1728)
-at function.A_testClassCreate.backToHomePage2(A_testClassCreate.java:380)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:35:22 IST" name="backToHomePage2" finished-at="2025-06-13T11:35:42 IST" duration-ms="20697" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backToHomePage2 -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-09T18:14:47 IST" name="backToHomePage" finished-at="2025-06-09T18:14:47 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:35:42 IST" name="backToHomePage" finished-at="2025-06-13T11:35:48 IST" duration-ms="5334" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[|*******************************************************|]]>
+            </line>
           </reporter-output>
         </test-method> <!-- backToHomePage -->
-        <test-method signature="manualaByAttributeMSLP()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-09T18:14:47 IST" name="manualaByAttributeMSLP" finished-at="2025-06-09T18:14:47 IST" duration-ms="0" status="SKIP">
-          <exception class="org.openqa.selenium.NoSuchSessionException">
-            <message>
-              <![CDATA[invalid session id
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1277e9bec24dd1cddda204c0db8b1136, findElement {using=xpath, value=(//div[@class="dx-button-content"])[3]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\BHUPESH\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51749}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51749/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1277e9bec24dd1cddda204c0db8b1136]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchSessionException: invalid session id
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1277e9bec24dd1cddda204c0db8b1136, findElement {using=xpath, value=(//div[@class="dx-button-content"])[3]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\BHUPESH\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51749}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51749/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1277e9bec24dd1cddda204c0db8b1136
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy22.click(Unknown Source)
-at function.F_manualAlarm.backToOld(F_manualAlarm.java:1728)
-at function.A_testClassCreate.backToHomePage2(A_testClassCreate.java:380)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+        <test-method signature="manualaByAttributeMSLP()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:35:48 IST" name="manualaByAttributeMSLP" finished-at="2025-06-13T11:36:29 IST" duration-ms="40866" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+            <line>
+              <![CDATA[The process of creating a low priority multi station manual alarm by attribute  is started.]]>
+            </line>
+            <line>
+              <![CDATA[The process of creating a low priority multi station manual alarm by attribute is complete.]]>
+            </line>
+            <line>
+              <![CDATA[ ]]>
+            </line>
           </reporter-output>
         </test-method> <!-- manualaByAttributeMSLP -->
-        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-09T18:14:47 IST" name="backToHomePage2" finished-at="2025-06-09T18:14:47 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:36:29 IST" name="backToHomePage2" finished-at="2025-06-13T11:36:50 IST" duration-ms="20945" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backToHomePage2 -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-09T18:14:47 IST" name="backToHomePage" finished-at="2025-06-09T18:14:47 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:36:50 IST" name="backToHomePage" finished-at="2025-06-13T11:36:55 IST" duration-ms="5388" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[|*******************************************************|]]>
+            </line>
           </reporter-output>
         </test-method> <!-- backToHomePage -->
-        <test-method signature="manualAlarmByEscResourceSingleStation()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-09T18:14:47 IST" name="manualAlarmByEscResourceSingleStation" finished-at="2025-06-09T18:14:47 IST" duration-ms="0" status="SKIP">
-          <exception class="org.openqa.selenium.NoSuchSessionException">
-            <message>
-              <![CDATA[invalid session id
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1277e9bec24dd1cddda204c0db8b1136, findElement {using=xpath, value=(//div[@class="dx-button-content"])[3]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\BHUPESH\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51749}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51749/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1277e9bec24dd1cddda204c0db8b1136]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchSessionException: invalid session id
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1277e9bec24dd1cddda204c0db8b1136, findElement {using=xpath, value=(//div[@class="dx-button-content"])[3]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\BHUPESH\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51749}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51749/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1277e9bec24dd1cddda204c0db8b1136
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy22.click(Unknown Source)
-at function.F_manualAlarm.backToOld(F_manualAlarm.java:1728)
-at function.A_testClassCreate.backToHomePage2(A_testClassCreate.java:380)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+        <test-method signature="manualAlarmByEscResourceSingleStation()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:36:55 IST" name="manualAlarmByEscResourceSingleStation" finished-at="2025-06-13T11:37:26 IST" duration-ms="30707" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+            <line>
+              <![CDATA[The process of creating a manual alarm by escaltion resource-single station is started.]]>
+            </line>
+            <line>
+              <![CDATA[The process of creating a manual alarm by escaltion resource-single station is complete.]]>
+            </line>
+            <line>
+              <![CDATA[ ]]>
+            </line>
           </reporter-output>
         </test-method> <!-- manualAlarmByEscResourceSingleStation -->
-        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-09T18:14:47 IST" name="backToHomePage2" finished-at="2025-06-09T18:14:47 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:37:26 IST" name="backToHomePage2" finished-at="2025-06-13T11:37:48 IST" duration-ms="22056" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backToHomePage2 -->
-        <test-method signature="manualAlarmByEscResourceMs()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-09T18:14:47 IST" name="manualAlarmByEscResourceMs" finished-at="2025-06-09T18:14:47 IST" duration-ms="0" status="SKIP">
-          <exception class="org.openqa.selenium.NoSuchSessionException">
-            <message>
-              <![CDATA[invalid session id
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1277e9bec24dd1cddda204c0db8b1136, findElement {using=xpath, value=(//div[@class="dx-button-content"])[3]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\BHUPESH\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51749}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51749/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1277e9bec24dd1cddda204c0db8b1136]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchSessionException: invalid session id
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1277e9bec24dd1cddda204c0db8b1136, findElement {using=xpath, value=(//div[@class="dx-button-content"])[3]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\BHUPESH\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51749}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51749/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1277e9bec24dd1cddda204c0db8b1136
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy22.click(Unknown Source)
-at function.F_manualAlarm.backToOld(F_manualAlarm.java:1728)
-at function.A_testClassCreate.backToHomePage2(A_testClassCreate.java:380)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:37:48 IST" name="backToHomePage" finished-at="2025-06-13T11:37:53 IST" duration-ms="5446" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[|*******************************************************|]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- backToHomePage -->
+        <test-method signature="manualAlarmByEscResourceMs()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:37:53 IST" name="manualAlarmByEscResourceMs" finished-at="2025-06-13T11:38:20 IST" duration-ms="27158" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+            <line>
+              <![CDATA[The process of creating a manual alarm by escaltion resource-multi station is started.]]>
+            </line>
+            <line>
+              <![CDATA[The process of creating a manual alarm by escaltion resource-multi station is complete.]]>
+            </line>
+            <line>
+              <![CDATA[ ]]>
+            </line>
           </reporter-output>
         </test-method> <!-- manualAlarmByEscResourceMs -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-09T18:14:47 IST" name="backToHomePage" finished-at="2025-06-09T18:14:47 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- backToHomePage -->
-        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-09T18:14:47 IST" name="backToHomePage2" finished-at="2025-06-09T18:14:47 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:38:20 IST" name="backToHomePage2" finished-at="2025-06-13T11:38:42 IST" duration-ms="21971" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backToHomePage2 -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-09T18:14:47 IST" name="backToHomePage" finished-at="2025-06-09T18:14:47 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:38:42 IST" name="backToHomePage" finished-at="2025-06-13T11:38:49 IST" duration-ms="6372" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[|*******************************************************|]]>
+            </line>
           </reporter-output>
         </test-method> <!-- backToHomePage -->
-        <test-method signature="manualaByAttributeExtend1StStResource()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-09T18:14:47 IST" name="manualaByAttributeExtend1StStResource" finished-at="2025-06-09T18:14:47 IST" duration-ms="0" status="SKIP">
-          <exception class="org.openqa.selenium.NoSuchSessionException">
-            <message>
-              <![CDATA[invalid session id
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1277e9bec24dd1cddda204c0db8b1136, findElement {using=xpath, value=(//div[@class="dx-button-content"])[3]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\BHUPESH\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51749}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51749/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1277e9bec24dd1cddda204c0db8b1136]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchSessionException: invalid session id
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1277e9bec24dd1cddda204c0db8b1136, findElement {using=xpath, value=(//div[@class="dx-button-content"])[3]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\BHUPESH\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51749}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51749/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1277e9bec24dd1cddda204c0db8b1136
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy22.click(Unknown Source)
-at function.F_manualAlarm.backToOld(F_manualAlarm.java:1728)
-at function.A_testClassCreate.backToHomePage2(A_testClassCreate.java:380)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+        <test-method signature="manualaByAttributeExtend1StStResource()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:38:49 IST" name="manualaByAttributeExtend1StStResource" finished-at="2025-06-13T11:39:47 IST" duration-ms="58705" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+            <line>
+              <![CDATA[The process of creating a manual alarm by attribute st2 and extend to st1 by resource is started.]]>
+            </line>
+            <line>
+              <![CDATA[The process of creating a manual alarm by attribute st2 and extend to st1 by resource is complete.]]>
+            </line>
+            <line>
+              <![CDATA[ ]]>
+            </line>
           </reporter-output>
         </test-method> <!-- manualaByAttributeExtend1StStResource -->
-        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-09T18:14:47 IST" name="backToHomePage2" finished-at="2025-06-09T18:14:47 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:39:47 IST" name="backToHomePage2" finished-at="2025-06-13T11:40:08 IST" duration-ms="20714" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backToHomePage2 -->
-        <test-method signature="manualAlarmByTemplate()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-09T18:14:47 IST" name="manualAlarmByTemplate" finished-at="2025-06-09T18:14:47 IST" duration-ms="0" status="SKIP">
-          <exception class="org.openqa.selenium.NoSuchSessionException">
-            <message>
-              <![CDATA[invalid session id
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1277e9bec24dd1cddda204c0db8b1136, findElement {using=xpath, value=(//div[@class="dx-button-content"])[3]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\BHUPESH\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51749}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51749/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1277e9bec24dd1cddda204c0db8b1136]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchSessionException: invalid session id
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1277e9bec24dd1cddda204c0db8b1136, findElement {using=xpath, value=(//div[@class="dx-button-content"])[3]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\BHUPESH\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51749}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51749/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1277e9bec24dd1cddda204c0db8b1136
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy22.click(Unknown Source)
-at function.F_manualAlarm.backToOld(F_manualAlarm.java:1728)
-at function.A_testClassCreate.backToHomePage2(A_testClassCreate.java:380)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:40:08 IST" name="backToHomePage" finished-at="2025-06-13T11:40:14 IST" duration-ms="5340" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[|*******************************************************|]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- backToHomePage -->
+        <test-method signature="manualAlarmByTemplate()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:40:14 IST" name="manualAlarmByTemplate" finished-at="2025-06-13T11:40:46 IST" duration-ms="32270" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+            <line>
+              <![CDATA[The process of creating a manual alarm by template is started.]]>
+            </line>
+            <line>
+              <![CDATA[The process of creating a manual alarm by template is complete.]]>
+            </line>
+            <line>
+              <![CDATA[ ]]>
+            </line>
           </reporter-output>
         </test-method> <!-- manualAlarmByTemplate -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-09T18:14:47 IST" name="backToHomePage" finished-at="2025-06-09T18:14:47 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- backToHomePage -->
-        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-09T18:14:47 IST" name="backToHomePage2" finished-at="2025-06-09T18:14:47 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:40:46 IST" name="backToHomePage2" finished-at="2025-06-13T11:41:07 IST" duration-ms="20917" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backToHomePage2 -->
-        <test-method signature="sendMessageToManualAlarmUser()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-09T18:14:47 IST" name="sendMessageToManualAlarmUser" finished-at="2025-06-09T18:14:47 IST" duration-ms="0" status="SKIP">
-          <exception class="org.openqa.selenium.NoSuchSessionException">
-            <message>
-              <![CDATA[invalid session id
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1277e9bec24dd1cddda204c0db8b1136, findElement {using=xpath, value=(//div[@class="dx-button-content"])[3]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\BHUPESH\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51749}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51749/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1277e9bec24dd1cddda204c0db8b1136]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchSessionException: invalid session id
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1277e9bec24dd1cddda204c0db8b1136, findElement {using=xpath, value=(//div[@class="dx-button-content"])[3]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\BHUPESH\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51749}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51749/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1277e9bec24dd1cddda204c0db8b1136
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy22.click(Unknown Source)
-at function.F_manualAlarm.backToOld(F_manualAlarm.java:1728)
-at function.A_testClassCreate.backToHomePage2(A_testClassCreate.java:380)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:41:07 IST" name="backToHomePage" finished-at="2025-06-13T11:41:12 IST" duration-ms="5391" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[|*******************************************************|]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- backToHomePage -->
+        <test-method signature="sendMessageToManualAlarmUser()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:41:12 IST" name="sendMessageToManualAlarmUser" finished-at="2025-06-13T11:41:48 IST" duration-ms="35504" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+            <line>
+              <![CDATA[The process of send message to manual alarm user is started.]]>
+            </line>
+            <line>
+              <![CDATA[The process of send message to manual alarm user is complete.]]>
+            </line>
+            <line>
+              <![CDATA[ ]]>
+            </line>
           </reporter-output>
         </test-method> <!-- sendMessageToManualAlarmUser -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-09T18:14:47 IST" name="backToHomePage" finished-at="2025-06-09T18:14:47 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- backToHomePage -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-09T18:14:47 IST" name="backToHomePage" finished-at="2025-06-09T18:14:47 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- backToHomePage -->
-        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-09T18:14:47 IST" name="backToHomePage2" finished-at="2025-06-09T18:14:47 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:41:48 IST" name="backToHomePage2" finished-at="2025-06-13T11:42:10 IST" duration-ms="22558" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backToHomePage2 -->
-        <test-method signature="createNewResource()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-09T18:14:47 IST" name="createNewResource" finished-at="2025-06-09T18:14:47 IST" duration-ms="0" status="SKIP">
-          <exception class="org.openqa.selenium.NoSuchSessionException">
-            <message>
-              <![CDATA[invalid session id
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1277e9bec24dd1cddda204c0db8b1136, findElement {using=xpath, value=(//div[@class="dx-button-content"])[3]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\BHUPESH\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51749}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51749/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1277e9bec24dd1cddda204c0db8b1136]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchSessionException: invalid session id
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1277e9bec24dd1cddda204c0db8b1136, findElement {using=xpath, value=(//div[@class="dx-button-content"])[3]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\BHUPESH\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51749}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51749/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1277e9bec24dd1cddda204c0db8b1136
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy22.click(Unknown Source)
-at function.F_manualAlarm.backToOld(F_manualAlarm.java:1728)
-at function.A_testClassCreate.backToHomePage2(A_testClassCreate.java:380)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:42:10 IST" name="backToHomePage" finished-at="2025-06-13T11:42:16 IST" duration-ms="5397" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[|*******************************************************|]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- backToHomePage -->
+        <test-method signature="createNewResource()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:42:16 IST" name="createNewResource" finished-at="2025-06-13T11:42:48 IST" duration-ms="32641" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+            <line>
+              <![CDATA[The process of creating new alarm resource is started.]]>
+            </line>
+            <line>
+              <![CDATA[The process of creating new alarm resource is complete.]]>
+            </line>
+            <line>
+              <![CDATA[ ]]>
+            </line>
           </reporter-output>
         </test-method> <!-- createNewResource -->
-        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-09T18:14:47 IST" name="backToHomePage2" finished-at="2025-06-09T18:14:47 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:42:48 IST" name="backToHomePage2" finished-at="2025-06-13T11:43:13 IST" duration-ms="24668" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backToHomePage2 -->
-        <test-method signature="createNewAlarmLoop()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-09T18:14:47 IST" name="createNewAlarmLoop" finished-at="2025-06-09T18:14:47 IST" duration-ms="0" status="SKIP">
-          <exception class="org.openqa.selenium.NoSuchSessionException">
-            <message>
-              <![CDATA[invalid session id
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1277e9bec24dd1cddda204c0db8b1136, findElement {using=xpath, value=(//div[@class="dx-button-content"])[3]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\BHUPESH\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51749}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51749/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1277e9bec24dd1cddda204c0db8b1136]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchSessionException: invalid session id
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1277e9bec24dd1cddda204c0db8b1136, findElement {using=xpath, value=(//div[@class="dx-button-content"])[3]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\BHUPESH\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51749}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51749/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1277e9bec24dd1cddda204c0db8b1136
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy22.click(Unknown Source)
-at function.F_manualAlarm.backToOld(F_manualAlarm.java:1728)
-at function.A_testClassCreate.backToHomePage2(A_testClassCreate.java:380)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:43:13 IST" name="backToHomePage" finished-at="2025-06-13T11:43:18 IST" duration-ms="5437" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[|*******************************************************|]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- backToHomePage -->
+        <test-method signature="createNewAlarmLoop()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:43:18 IST" name="createNewAlarmLoop" finished-at="2025-06-13T11:43:43 IST" duration-ms="24794" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+            <line>
+              <![CDATA[The process of creating new alarm loop is started.]]>
+            </line>
+            <line>
+              <![CDATA[The process of creating new alarm loop is is complete.]]>
+            </line>
+            <line>
+              <![CDATA[ ]]>
+            </line>
           </reporter-output>
         </test-method> <!-- createNewAlarmLoop -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-09T18:14:47 IST" name="backToHomePage" finished-at="2025-06-09T18:14:47 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- backToHomePage -->
-        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-09T18:14:47 IST" name="backToHomePage2" finished-at="2025-06-09T18:14:47 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:43:43 IST" name="backToHomePage2" finished-at="2025-06-13T11:44:04 IST" duration-ms="20848" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backToHomePage2 -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-09T18:14:47 IST" name="backToHomePage" finished-at="2025-06-09T18:14:47 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:44:04 IST" name="backToHomePage" finished-at="2025-06-13T11:44:09 IST" duration-ms="5455" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[|*******************************************************|]]>
+            </line>
           </reporter-output>
         </test-method> <!-- backToHomePage -->
-        <test-method signature="createNewAlarmTemplateByAttribute()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-09T18:14:47 IST" name="createNewAlarmTemplateByAttribute" finished-at="2025-06-09T18:14:47 IST" duration-ms="0" status="SKIP">
-          <exception class="org.openqa.selenium.NoSuchSessionException">
-            <message>
-              <![CDATA[invalid session id
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1277e9bec24dd1cddda204c0db8b1136, findElement {using=xpath, value=(//div[@class="dx-button-content"])[3]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\BHUPESH\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51749}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51749/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1277e9bec24dd1cddda204c0db8b1136]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchSessionException: invalid session id
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1277e9bec24dd1cddda204c0db8b1136, findElement {using=xpath, value=(//div[@class="dx-button-content"])[3]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\BHUPESH\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51749}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51749/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1277e9bec24dd1cddda204c0db8b1136
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy22.click(Unknown Source)
-at function.F_manualAlarm.backToOld(F_manualAlarm.java:1728)
-at function.A_testClassCreate.backToHomePage2(A_testClassCreate.java:380)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+        <test-method signature="createNewAlarmTemplateByAttribute()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:44:09 IST" name="createNewAlarmTemplateByAttribute" finished-at="2025-06-13T11:44:51 IST" duration-ms="41196" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+            <line>
+              <![CDATA[The process of creating new alarm template by attribute is started.]]>
+            </line>
+            <line>
+              <![CDATA[The process of creating new alarm template by attribute is complete.]]>
+            </line>
+            <line>
+              <![CDATA[ ]]>
+            </line>
           </reporter-output>
         </test-method> <!-- createNewAlarmTemplateByAttribute -->
-        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-09T18:14:47 IST" name="backToHomePage2" finished-at="2025-06-09T18:14:47 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:44:51 IST" name="backToHomePage2" finished-at="2025-06-13T11:45:12 IST" duration-ms="20979" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backToHomePage2 -->
-        <test-method signature="createNewAlarmTemplateByResource()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-09T18:14:47 IST" name="createNewAlarmTemplateByResource" finished-at="2025-06-09T18:14:47 IST" duration-ms="0" status="SKIP">
-          <exception class="org.openqa.selenium.NoSuchSessionException">
-            <message>
-              <![CDATA[invalid session id
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1277e9bec24dd1cddda204c0db8b1136, findElement {using=xpath, value=(//div[@class="dx-button-content"])[3]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\BHUPESH\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51749}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51749/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1277e9bec24dd1cddda204c0db8b1136]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchSessionException: invalid session id
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1277e9bec24dd1cddda204c0db8b1136, findElement {using=xpath, value=(//div[@class="dx-button-content"])[3]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\BHUPESH\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51749}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51749/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1277e9bec24dd1cddda204c0db8b1136
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy22.click(Unknown Source)
-at function.F_manualAlarm.backToOld(F_manualAlarm.java:1728)
-at function.A_testClassCreate.backToHomePage2(A_testClassCreate.java:380)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:45:12 IST" name="backToHomePage" finished-at="2025-06-13T11:45:17 IST" duration-ms="5339" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[|*******************************************************|]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- backToHomePage -->
+        <test-method signature="createNewAlarmTemplateByResource()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:45:17 IST" name="createNewAlarmTemplateByResource" finished-at="2025-06-13T11:45:51 IST" duration-ms="33642" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+            <line>
+              <![CDATA[The process of creating new alarm template by resource is started.]]>
+            </line>
+            <line>
+              <![CDATA[The process of creating new alarm template by resource is complete.]]>
+            </line>
+            <line>
+              <![CDATA[ ]]>
+            </line>
           </reporter-output>
         </test-method> <!-- createNewAlarmTemplateByResource -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-09T18:14:47 IST" name="backToHomePage" finished-at="2025-06-09T18:14:47 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- backToHomePage -->
-        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-09T18:14:47 IST" name="backToHomePage2" finished-at="2025-06-09T18:14:47 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:45:51 IST" name="backToHomePage2" finished-at="2025-06-13T11:46:11 IST" duration-ms="20785" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backToHomePage2 -->
-        <test-method signature="createNewAlarmTemplateByFirefighter()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-09T18:14:47 IST" name="createNewAlarmTemplateByFirefighter" finished-at="2025-06-09T18:14:47 IST" duration-ms="0" status="SKIP">
-          <exception class="org.openqa.selenium.NoSuchSessionException">
-            <message>
-              <![CDATA[invalid session id
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1277e9bec24dd1cddda204c0db8b1136, findElement {using=xpath, value=(//div[@class="dx-button-content"])[3]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\BHUPESH\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51749}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51749/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1277e9bec24dd1cddda204c0db8b1136]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchSessionException: invalid session id
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1277e9bec24dd1cddda204c0db8b1136, findElement {using=xpath, value=(//div[@class="dx-button-content"])[3]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\BHUPESH\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51749}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51749/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1277e9bec24dd1cddda204c0db8b1136
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy22.click(Unknown Source)
-at function.F_manualAlarm.backToOld(F_manualAlarm.java:1728)
-at function.A_testClassCreate.backToHomePage2(A_testClassCreate.java:380)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:46:11 IST" name="backToHomePage" finished-at="2025-06-13T11:46:17 IST" duration-ms="5367" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[|*******************************************************|]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- backToHomePage -->
+        <test-method signature="createNewAlarmTemplateByFirefighter()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:46:17 IST" name="createNewAlarmTemplateByFirefighter" finished-at="2025-06-13T11:47:02 IST" duration-ms="45357" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+            <line>
+              <![CDATA[The process of creating new alarm template by fire fighter is started.]]>
+            </line>
+            <line>
+              <![CDATA[The process of creating new alarm template by fire fighter is complete.]]>
+            </line>
+            <line>
+              <![CDATA[ ]]>
+            </line>
           </reporter-output>
         </test-method> <!-- createNewAlarmTemplateByFirefighter -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-09T18:14:47 IST" name="backToHomePage" finished-at="2025-06-09T18:14:47 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- backToHomePage -->
-        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-09T18:14:47 IST" name="backToHomePage2" finished-at="2025-06-09T18:14:47 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:47:02 IST" name="backToHomePage2" finished-at="2025-06-13T11:47:23 IST" duration-ms="20885" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backToHomePage2 -->
-        <test-method is-config="true" signature="logOut()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-09T18:14:47 IST" name="logOut" finished-at="2025-06-09T18:14:47 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="logOut()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:47:23 IST" name="logOut" finished-at="2025-06-13T11:47:27 IST" duration-ms="3667" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[Logout sucessfully.]]>
+            </line>
+            <line>
+              <![CDATA[ ]]>
+            </line>
           </reporter-output>
         </test-method> <!-- logOut -->
-        <test-method is-config="true" signature="AfterTest()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-09T18:14:47 IST" name="AfterTest" finished-at="2025-06-09T18:14:47 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="AfterTest()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:47:27 IST" name="AfterTest" finished-at="2025-06-13T11:47:27 IST" duration-ms="257" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[Refresh the URL before successfully closing the browser.]]>
+            </line>
           </reporter-output>
         </test-method> <!-- AfterTest -->
-        <test-method is-config="true" signature="AfterSute()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-09T18:14:47 IST" name="AfterSute" finished-at="2025-06-09T18:14:47 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="AfterSute()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-13T11:47:27 IST" name="AfterSute" finished-at="2025-06-13T11:47:27 IST" duration-ms="235" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[Browser close sucessfully.]]>
+            </line>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+            <line>
+              <![CDATA[Good to see you again.]]>
+            </line>
           </reporter-output>
         </test-method> <!-- AfterSute -->
       </class> <!-- function.A_testClassCreate -->

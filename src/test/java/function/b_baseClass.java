@@ -43,6 +43,9 @@ public class b_baseClass {
 	String st02t1;
 	String st02R1;
 	
+	
+	String proEnd ="|*******************************************************|";
+	
 	public void getDetailsFromUser()
 	{
 		Scanner scanner = new Scanner(System.in);

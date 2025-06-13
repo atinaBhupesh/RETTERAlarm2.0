@@ -696,8 +696,7 @@ public class I_AlarmTemplate extends b_baseClass {
 			    refreshFilter.click();
 			    Thread.sleep(2000);
 		
-			    System.out.println();
-			    Thread.sleep(2000);
+			 
 			}
 	
 	

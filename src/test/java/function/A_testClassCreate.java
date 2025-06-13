@@ -86,6 +86,7 @@ public class A_testClassCreate extends b_baseClass {
 	@BeforeMethod
 	public void backToHomePage () throws Throwable
 	{
+		Reporter.log(proEnd, true);
 		Thread.sleep(2000);
 	
 		driver.navigate().refresh();

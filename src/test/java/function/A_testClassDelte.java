@@ -169,6 +169,7 @@ public class A_testClassDelte extends b_baseClass {
 		Reporter.log("The process of delete manual alarm is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
+	
 		
 	}
 	
@@ -176,7 +177,7 @@ public class A_testClassDelte extends b_baseClass {
 	public void backToHomePage2 () throws Throwable
 	{
 
-		
+		Reporter.log(proEnd, true);
 		hp.backToHomePage(driver, branchName);
 	}
 	

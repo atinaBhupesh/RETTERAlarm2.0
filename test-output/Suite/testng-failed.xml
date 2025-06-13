@@ -13,6 +13,7 @@
           <include name="manualAlarmByFirefighterMs"/>
           <include name="logOut"/>
           <include name="AfterSute"/>
+          <include name="sendMessageToNewApiAlarmUser"/>
           <include name="manualAlarmByTemplate"/>
           <include name="AfterTest"/>
           <include name="manualaByAttributeExtend1StStResource"/>
