@@ -127,6 +127,7 @@
 		 
 			 @FindBy(xpath="//select[@class=\"form-select ng-pristine ng-valid ng-touched\"]")private WebElement selectDepartment;
 		 @FindBy(xpath="(//dx-button[@stylingmode=\"text\"])[4]")private WebElement alarmChat;
+			@FindBy(xpath="//dx-button[@stylingmode=\"text\"]")private List<WebElement> buttonCount ;
 		@FindBy(xpath = "//input[@placeholder=\"Write your message...\"]")private WebElement writemessageField;
 		@FindBy(xpath = "//button[@id=\"actionSendMessage\"]")private WebElement sendmessageButton;
 		@FindBy(xpath = "//input[@class=\"upload\"]")private WebElement attachFile;
@@ -147,7 +148,7 @@
 		@FindBy(xpath="//div[@aria-label=\"Save\"]")private WebElement saveExtendAlarm;
 		@FindBy(xpath="//div[@aria-label=\"Yes, Extend\"]")private WebElement yesExtendAlarm;
 		@FindBy(xpath="//div[@aria-label=\"Items per page: 100\"]")private WebElement itemPepage100;
-		// @FindBy(xpath="")private WebElement ;
+	
 		// @FindBy(xpath="")private WebElement ;
 		// @FindBy(xpath="")private WebElement ;
 		// @FindBy(xpath="")private WebElement ;
@@ -255,6 +256,11 @@
 		Thread.sleep(5000);
 		action.click();
 		Thread.sleep(1000);
+		
+int z=buttonCount.size();
+		
+		if (z==5)
+		{
 		alarmChat.click();
 		Thread.sleep(1000);
 		
@@ -293,8 +299,17 @@
 			
 			  refreshFilter.click();
 		      Thread.sleep(2000);
+		      
+		}
+		      else {
+					
+					
+					Thread.sleep(2000);
+					driver.navigate().refresh();
+					 Thread.sleep(2000);
+					 Reporter.log("Chat option not found.", true);
 			
-			
+		      }
 			
 		}
 		
@@ -311,6 +326,11 @@
 		Thread.sleep(5000);
 		action.click();
 		Thread.sleep(1000);
+		
+		int z=buttonCount.size();
+		
+		if (z==5) {
+		
 		alarmChat.click();
 		Thread.sleep(1000);
 		
@@ -351,13 +371,24 @@
 			
 			  refreshFilter.click();
 		      Thread.sleep(2000);
+		      
+		}
+		
+		
+		else {
+			
+			
+		Thread.sleep(2000);
+		 Reporter.log("Chat option not found.", true);
+	
+		
 			
 			
 		}
 		
 		
 		
-		
+		}
 		
 		
 		
@@ -376,6 +407,11 @@
 		Thread.sleep(5000);
 		action.click();
 		Thread.sleep(1000);
+		
+		int z=buttonCount.size();
+		
+		if (z==5) {
+
 		alarmChat.click();
 		Thread.sleep(1000);
 		
@@ -488,6 +524,15 @@
 			
 			  refreshFilter.click();
 		      Thread.sleep(2000);
+		}
+		
+		else {
+			
+			
+			Thread.sleep(2000);
+			Reporter.log("Chat option not found.", true);
+		}
+		
 		}
 		
 		public void manualAlarmByTemplate (WebDriver driver, String st2t1) throws Throwable
