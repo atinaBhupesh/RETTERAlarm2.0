@@ -23,7 +23,7 @@
 		
 		@FindBy(xpath = "//a[@href=\"https://admin.retteralarm.de/verify-user?returnUrl=/admin/alarm/list\"]")private WebElement manageAlarmL;
 		@FindBy(xpath = "//a[@href=\"http://admin.testing.retteralarm.de/verify-user?returnUrl=/admin/alarm/list\"]")private WebElement manageAlarmT;
-		@FindBy(xpath = "//a[@href=\"http://development.retteralarm.de/admin/Alarms/index\"]")	private WebElement manageAlarmD;
+		@FindBy(xpath = "//a[@href=\"https://admin.development.retteralarm.de/verify-user?returnUrl=/admin/alarm/list\"]")	private WebElement manageAlarmD;
 		
 		@FindBy(xpath="//i[@class=\"dx-icon ri ri-settings-3-line\"]")private WebElement setting;
 		@FindBy(xpath="//option[text()=\" andrew department \"]")private WebElement andrewDepartment ;

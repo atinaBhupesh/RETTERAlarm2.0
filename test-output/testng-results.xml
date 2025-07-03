@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="14" passed="14" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[Well come to RETTERAlarm Live branch]]>
@@ -8,31 +8,13 @@
       <![CDATA[Logged in user-6039-DE-andrew-deptu-2]]>
     </line>
     <line>
-      <![CDATA[|*******************************************************|]]>
-    </line>
-    <line>
       <![CDATA[ ]]>
     </line>
     <line>
-      <![CDATA[The process of creating a manual alarm by attribute  is started.]]>
+      <![CDATA[The process of delete manual alarm is started.]]>
     </line>
     <line>
-      <![CDATA[The process of creating a manual alarm by attribute is complete.]]>
-    </line>
-    <line>
-      <![CDATA[ ]]>
-    </line>
-    <line>
-      <![CDATA[|*******************************************************|]]>
-    </line>
-    <line>
-      <![CDATA[ ]]>
-    </line>
-    <line>
-      <![CDATA[The process of creating a manual alarm by resource is started.]]>
-    </line>
-    <line>
-      <![CDATA[The process of creating a manual alarm by resource is complete.]]>
+      <![CDATA[The process of delete manual alarm is complete.]]>
     </line>
     <line>
       <![CDATA[ ]]>
@@ -44,25 +26,10 @@
       <![CDATA[ ]]>
     </line>
     <line>
-      <![CDATA[The process of creating a manual alarm by firefighter is started.]]>
+      <![CDATA[The process of delete alarm resource is started.]]>
     </line>
     <line>
-      <![CDATA[The process of creating a manual alarm by firefighter is complete.]]>
-    </line>
-    <line>
-      <![CDATA[ ]]>
-    </line>
-    <line>
-      <![CDATA[|*******************************************************|]]>
-    </line>
-    <line>
-      <![CDATA[ ]]>
-    </line>
-    <line>
-      <![CDATA[The process of creating a low priority multi station manual alarm by attribute  is started.]]>
-    </line>
-    <line>
-      <![CDATA[The process of creating a low priority multi station manual alarm by attribute is complete.]]>
+      <![CDATA[The process of delete alarm resource is complete.]]>
     </line>
     <line>
       <![CDATA[ ]]>
@@ -74,25 +41,10 @@
       <![CDATA[ ]]>
     </line>
     <line>
-      <![CDATA[The process of creating a manual alarm by escaltion resource-single station is started.]]>
+      <![CDATA[The process of delete resource is started.]]>
     </line>
     <line>
-      <![CDATA[The process of creating a manual alarm by escaltion resource-single station is complete.]]>
-    </line>
-    <line>
-      <![CDATA[ ]]>
-    </line>
-    <line>
-      <![CDATA[|*******************************************************|]]>
-    </line>
-    <line>
-      <![CDATA[ ]]>
-    </line>
-    <line>
-      <![CDATA[The process of creating a manual alarm by escaltion resource-multi station is started.]]>
-    </line>
-    <line>
-      <![CDATA[The process of creating a manual alarm by escaltion resource-multi station is complete.]]>
+      <![CDATA[The process of delete alarm loop is complete.]]>
     </line>
     <line>
       <![CDATA[ ]]>
@@ -104,118 +56,16 @@
       <![CDATA[ ]]>
     </line>
     <line>
-      <![CDATA[The process of creating a manual alarm by attribute st2 and extend to st1 by resource is started.]]>
+      <![CDATA[The process of delete alarm template is started.]]>
     </line>
     <line>
-      <![CDATA[The process of creating a manual alarm by attribute st2 and extend to st1 by resource is complete.]]>
-    </line>
-    <line>
-      <![CDATA[ ]]>
-    </line>
-    <line>
-      <![CDATA[|*******************************************************|]]>
-    </line>
-    <line>
-      <![CDATA[ ]]>
-    </line>
-    <line>
-      <![CDATA[The process of creating a manual alarm by template is started.]]>
-    </line>
-    <line>
-      <![CDATA[The process of creating a manual alarm by template is complete.]]>
+      <![CDATA[The process of delete alarm template is complete.]]>
     </line>
     <line>
       <![CDATA[ ]]>
     </line>
     <line>
       <![CDATA[|*******************************************************|]]>
-    </line>
-    <line>
-      <![CDATA[ ]]>
-    </line>
-    <line>
-      <![CDATA[The process of send message to manual alarm user is started.]]>
-    </line>
-    <line>
-      <![CDATA[The process of send message to manual alarm user is complete.]]>
-    </line>
-    <line>
-      <![CDATA[ ]]>
-    </line>
-    <line>
-      <![CDATA[|*******************************************************|]]>
-    </line>
-    <line>
-      <![CDATA[ ]]>
-    </line>
-    <line>
-      <![CDATA[The process of creating new alarm resource is started.]]>
-    </line>
-    <line>
-      <![CDATA[The process of creating new alarm resource is complete.]]>
-    </line>
-    <line>
-      <![CDATA[ ]]>
-    </line>
-    <line>
-      <![CDATA[|*******************************************************|]]>
-    </line>
-    <line>
-      <![CDATA[ ]]>
-    </line>
-    <line>
-      <![CDATA[The process of creating new alarm loop is started.]]>
-    </line>
-    <line>
-      <![CDATA[The process of creating new alarm loop is is complete.]]>
-    </line>
-    <line>
-      <![CDATA[ ]]>
-    </line>
-    <line>
-      <![CDATA[|*******************************************************|]]>
-    </line>
-    <line>
-      <![CDATA[ ]]>
-    </line>
-    <line>
-      <![CDATA[The process of creating new alarm template by attribute is started.]]>
-    </line>
-    <line>
-      <![CDATA[The process of creating new alarm template by attribute is complete.]]>
-    </line>
-    <line>
-      <![CDATA[ ]]>
-    </line>
-    <line>
-      <![CDATA[|*******************************************************|]]>
-    </line>
-    <line>
-      <![CDATA[ ]]>
-    </line>
-    <line>
-      <![CDATA[The process of creating new alarm template by resource is started.]]>
-    </line>
-    <line>
-      <![CDATA[The process of creating new alarm template by resource is complete.]]>
-    </line>
-    <line>
-      <![CDATA[ ]]>
-    </line>
-    <line>
-      <![CDATA[|*******************************************************|]]>
-    </line>
-    <line>
-      <![CDATA[ ]]>
-    </line>
-    <line>
-      <![CDATA[The process of creating new alarm template by fire fighter is started.]]>
-    </line>
-    <line>
-      <![CDATA[The process of creating new alarm template by fire fighter is complete.]]>
-    </line>
-    <line>
-      <![CDATA[ ]]>
     </line>
     <line>
       <![CDATA[Logout sucessfully.]]>
@@ -236,408 +86,138 @@
       <![CDATA[Good to see you again.]]>
     </line>
   </reporter-output>
-  <suite started-at="2025-06-19T11:05:45 IST" name="Suite" finished-at="2025-06-19T11:21:17 IST" duration-ms="932288">
+  <suite started-at="2025-07-03T18:41:04 IST" name="delete" finished-at="2025-07-03T18:47:11 IST" duration-ms="367006">
     <groups>
     </groups>
-    <test started-at="2025-06-19T11:05:45 IST" name="Test" finished-at="2025-06-19T11:21:17 IST" duration-ms="932288">
-      <class name="function.A_testClassCreate">
-        <test-method is-config="true" signature="BeforeSuite()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-19T11:05:38 IST" name="BeforeSuite" finished-at="2025-06-19T11:05:45 IST" duration-ms="6839" status="PASS">
+    <test started-at="2025-07-03T18:41:04 IST" name="Test" finished-at="2025-07-03T18:47:11 IST" duration-ms="367006">
+      <class name="function.A_testClassDelte">
+        <test-method is-config="true" signature="BeforeSuite()[pri:0, instance:function.A_testClassDelte@202b0582]" started-at="2025-07-03T18:40:57 IST" name="BeforeSuite" finished-at="2025-07-03T18:41:04 IST" duration-ms="7004" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Well come to RETTERAlarm Live branch]]>
             </line>
           </reporter-output>
         </test-method> <!-- BeforeSuite -->
-        <test-method is-config="true" signature="BeforeTest()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-19T11:05:45 IST" name="BeforeTest" finished-at="2025-06-19T11:05:54 IST" duration-ms="9505" status="PASS">
+        <test-method is-config="true" signature="BeforeTest()[pri:0, instance:function.A_testClassDelte@202b0582]" started-at="2025-07-03T18:41:04 IST" name="BeforeTest" finished-at="2025-07-03T18:41:11 IST" duration-ms="7430" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Logged in user-6039-DE-andrew-deptu-2]]>
             </line>
           </reporter-output>
         </test-method> <!-- BeforeTest -->
-        <test-method is-config="true" signature="createObject()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-19T11:05:54 IST" name="createObject" finished-at="2025-06-19T11:05:54 IST" duration-ms="15" status="PASS">
+        <test-method is-config="true" signature="createObject()[pri:0, instance:function.A_testClassDelte@202b0582]" started-at="2025-07-03T18:41:11 IST" name="createObject" finished-at="2025-07-03T18:41:11 IST" duration-ms="25" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createObject -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-19T11:05:54 IST" name="backToHomePage" finished-at="2025-06-19T11:06:00 IST" duration-ms="5424" status="PASS">
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassDelte@202b0582]" started-at="2025-07-03T18:41:11 IST" name="backToHomePage" finished-at="2025-07-03T18:41:16 IST" duration-ms="5242" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- backToHomePage -->
+        <test-method signature="deleteManualAlarm()[pri:0, instance:function.A_testClassDelte@202b0582]" started-at="2025-07-03T18:41:16 IST" name="deleteManualAlarm" finished-at="2025-07-03T18:42:57 IST" duration-ms="101167" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+            <line>
+              <![CDATA[The process of delete manual alarm is started.]]>
+            </line>
+            <line>
+              <![CDATA[The process of delete manual alarm is complete.]]>
+            </line>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- deleteManualAlarm -->
+        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassDelte@202b0582]" started-at="2025-07-03T18:42:57 IST" name="backToHomePage2" finished-at="2025-07-03T18:43:11 IST" duration-ms="13847" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[|*******************************************************|]]>
             </line>
           </reporter-output>
-        </test-method> <!-- backToHomePage -->
-        <test-method signature="manualaByAttributeSingleStation()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-19T11:06:00 IST" name="manualaByAttributeSingleStation" finished-at="2025-06-19T11:06:49 IST" duration-ms="49607" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[ ]]>
-            </line>
-            <line>
-              <![CDATA[The process of creating a manual alarm by attribute  is started.]]>
-            </line>
-            <line>
-              <![CDATA[The process of creating a manual alarm by attribute is complete.]]>
-            </line>
-            <line>
-              <![CDATA[ ]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- manualaByAttributeSingleStation -->
-        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-19T11:06:49 IST" name="backToHomePage2" finished-at="2025-06-19T11:07:10 IST" duration-ms="21100" status="PASS">
-          <reporter-output>
-          </reporter-output>
         </test-method> <!-- backToHomePage2 -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-19T11:07:10 IST" name="backToHomePage" finished-at="2025-06-19T11:07:16 IST" duration-ms="5529" status="PASS">
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassDelte@202b0582]" started-at="2025-07-03T18:43:11 IST" name="backToHomePage" finished-at="2025-07-03T18:43:17 IST" duration-ms="5251" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- backToHomePage -->
+        <test-method signature="deleteResource()[pri:0, instance:function.A_testClassDelte@202b0582]" started-at="2025-07-03T18:43:17 IST" name="deleteResource" finished-at="2025-07-03T18:44:11 IST" duration-ms="54334" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+            <line>
+              <![CDATA[The process of delete alarm resource is started.]]>
+            </line>
+            <line>
+              <![CDATA[The process of delete alarm resource is complete.]]>
+            </line>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- deleteResource -->
+        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassDelte@202b0582]" started-at="2025-07-03T18:44:11 IST" name="backToHomePage2" finished-at="2025-07-03T18:44:25 IST" duration-ms="13728" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[|*******************************************************|]]>
             </line>
           </reporter-output>
-        </test-method> <!-- backToHomePage -->
-        <test-method signature="manualAlarmByResourceMs()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-19T11:07:16 IST" name="manualAlarmByResourceMs" finished-at="2025-06-19T11:07:46 IST" duration-ms="30708" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[ ]]>
-            </line>
-            <line>
-              <![CDATA[The process of creating a manual alarm by resource is started.]]>
-            </line>
-            <line>
-              <![CDATA[The process of creating a manual alarm by resource is complete.]]>
-            </line>
-            <line>
-              <![CDATA[ ]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- manualAlarmByResourceMs -->
-        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-19T11:07:46 IST" name="backToHomePage2" finished-at="2025-06-19T11:08:07 IST" duration-ms="20982" status="PASS">
-          <reporter-output>
-          </reporter-output>
         </test-method> <!-- backToHomePage2 -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-19T11:08:07 IST" name="backToHomePage" finished-at="2025-06-19T11:08:13 IST" duration-ms="5455" status="PASS">
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassDelte@202b0582]" started-at="2025-07-03T18:44:25 IST" name="backToHomePage" finished-at="2025-07-03T18:44:30 IST" duration-ms="5674" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- backToHomePage -->
+        <test-method signature="deleteAlarmLoop()[pri:0, instance:function.A_testClassDelte@202b0582]" started-at="2025-07-03T18:44:30 IST" name="deleteAlarmLoop" finished-at="2025-07-03T18:45:33 IST" duration-ms="62756" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+            <line>
+              <![CDATA[The process of delete resource is started.]]>
+            </line>
+            <line>
+              <![CDATA[The process of delete alarm loop is complete.]]>
+            </line>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- deleteAlarmLoop -->
+        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassDelte@202b0582]" started-at="2025-07-03T18:45:33 IST" name="backToHomePage2" finished-at="2025-07-03T18:45:47 IST" duration-ms="13950" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[|*******************************************************|]]>
             </line>
           </reporter-output>
-        </test-method> <!-- backToHomePage -->
-        <test-method signature="manualAlarmByFirefighterMs()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-19T11:08:13 IST" name="manualAlarmByFirefighterMs" finished-at="2025-06-19T11:09:04 IST" duration-ms="51005" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[ ]]>
-            </line>
-            <line>
-              <![CDATA[The process of creating a manual alarm by firefighter is started.]]>
-            </line>
-            <line>
-              <![CDATA[The process of creating a manual alarm by firefighter is complete.]]>
-            </line>
-            <line>
-              <![CDATA[ ]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- manualAlarmByFirefighterMs -->
-        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-19T11:09:04 IST" name="backToHomePage2" finished-at="2025-06-19T11:09:25 IST" duration-ms="20985" status="PASS">
-          <reporter-output>
-          </reporter-output>
         </test-method> <!-- backToHomePage2 -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-19T11:09:25 IST" name="backToHomePage" finished-at="2025-06-19T11:09:30 IST" duration-ms="5496" status="PASS">
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassDelte@202b0582]" started-at="2025-07-03T18:45:47 IST" name="backToHomePage" finished-at="2025-07-03T18:45:52 IST" duration-ms="5353" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- backToHomePage -->
+        <test-method signature="deleteAlarmTemplate()[pri:0, instance:function.A_testClassDelte@202b0582]" started-at="2025-07-03T18:45:52 IST" name="deleteAlarmTemplate" finished-at="2025-07-03T18:46:52 IST" duration-ms="60133" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+            <line>
+              <![CDATA[The process of delete alarm template is started.]]>
+            </line>
+            <line>
+              <![CDATA[The process of delete alarm template is complete.]]>
+            </line>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- deleteAlarmTemplate -->
+        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassDelte@202b0582]" started-at="2025-07-03T18:46:52 IST" name="backToHomePage2" finished-at="2025-07-03T18:47:06 IST" duration-ms="13951" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[|*******************************************************|]]>
             </line>
           </reporter-output>
-        </test-method> <!-- backToHomePage -->
-        <test-method signature="manualaByAttributeMSLP()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-19T11:09:30 IST" name="manualaByAttributeMSLP" finished-at="2025-06-19T11:10:09 IST" duration-ms="38372" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[ ]]>
-            </line>
-            <line>
-              <![CDATA[The process of creating a low priority multi station manual alarm by attribute  is started.]]>
-            </line>
-            <line>
-              <![CDATA[The process of creating a low priority multi station manual alarm by attribute is complete.]]>
-            </line>
-            <line>
-              <![CDATA[ ]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- manualaByAttributeMSLP -->
-        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-19T11:10:09 IST" name="backToHomePage2" finished-at="2025-06-19T11:10:31 IST" duration-ms="22430" status="PASS">
-          <reporter-output>
-          </reporter-output>
         </test-method> <!-- backToHomePage2 -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-19T11:10:31 IST" name="backToHomePage" finished-at="2025-06-19T11:10:37 IST" duration-ms="5409" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[|*******************************************************|]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- backToHomePage -->
-        <test-method signature="manualAlarmByEscResourceSingleStation()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-19T11:10:37 IST" name="manualAlarmByEscResourceSingleStation" finished-at="2025-06-19T11:11:08 IST" duration-ms="31197" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[ ]]>
-            </line>
-            <line>
-              <![CDATA[The process of creating a manual alarm by escaltion resource-single station is started.]]>
-            </line>
-            <line>
-              <![CDATA[The process of creating a manual alarm by escaltion resource-single station is complete.]]>
-            </line>
-            <line>
-              <![CDATA[ ]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- manualAlarmByEscResourceSingleStation -->
-        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-19T11:11:08 IST" name="backToHomePage2" finished-at="2025-06-19T11:11:29 IST" duration-ms="21477" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- backToHomePage2 -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-19T11:11:29 IST" name="backToHomePage" finished-at="2025-06-19T11:11:35 IST" duration-ms="5382" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[|*******************************************************|]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- backToHomePage -->
-        <test-method signature="manualAlarmByEscResourceMs()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-19T11:11:35 IST" name="manualAlarmByEscResourceMs" finished-at="2025-06-19T11:12:05 IST" duration-ms="30717" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[ ]]>
-            </line>
-            <line>
-              <![CDATA[The process of creating a manual alarm by escaltion resource-multi station is started.]]>
-            </line>
-            <line>
-              <![CDATA[The process of creating a manual alarm by escaltion resource-multi station is complete.]]>
-            </line>
-            <line>
-              <![CDATA[ ]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- manualAlarmByEscResourceMs -->
-        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-19T11:12:05 IST" name="backToHomePage2" finished-at="2025-06-19T11:12:27 IST" duration-ms="21245" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- backToHomePage2 -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-19T11:12:27 IST" name="backToHomePage" finished-at="2025-06-19T11:12:32 IST" duration-ms="5428" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[|*******************************************************|]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- backToHomePage -->
-        <test-method signature="manualaByAttributeExtend1StStResource()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-19T11:12:32 IST" name="manualaByAttributeExtend1StStResource" finished-at="2025-06-19T11:13:32 IST" duration-ms="60277" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[ ]]>
-            </line>
-            <line>
-              <![CDATA[The process of creating a manual alarm by attribute st2 and extend to st1 by resource is started.]]>
-            </line>
-            <line>
-              <![CDATA[The process of creating a manual alarm by attribute st2 and extend to st1 by resource is complete.]]>
-            </line>
-            <line>
-              <![CDATA[ ]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- manualaByAttributeExtend1StStResource -->
-        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-19T11:13:32 IST" name="backToHomePage2" finished-at="2025-06-19T11:13:54 IST" duration-ms="21542" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- backToHomePage2 -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-19T11:13:54 IST" name="backToHomePage" finished-at="2025-06-19T11:13:59 IST" duration-ms="5486" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[|*******************************************************|]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- backToHomePage -->
-        <test-method signature="manualAlarmByTemplate()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-19T11:13:59 IST" name="manualAlarmByTemplate" finished-at="2025-06-19T11:14:33 IST" duration-ms="33375" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[ ]]>
-            </line>
-            <line>
-              <![CDATA[The process of creating a manual alarm by template is started.]]>
-            </line>
-            <line>
-              <![CDATA[The process of creating a manual alarm by template is complete.]]>
-            </line>
-            <line>
-              <![CDATA[ ]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- manualAlarmByTemplate -->
-        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-19T11:14:33 IST" name="backToHomePage2" finished-at="2025-06-19T11:14:54 IST" duration-ms="21117" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- backToHomePage2 -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-19T11:14:54 IST" name="backToHomePage" finished-at="2025-06-19T11:14:59 IST" duration-ms="5599" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[|*******************************************************|]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- backToHomePage -->
-        <test-method signature="sendMessageToManualAlarmUser()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-19T11:14:59 IST" name="sendMessageToManualAlarmUser" finished-at="2025-06-19T11:15:37 IST" duration-ms="37477" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[ ]]>
-            </line>
-            <line>
-              <![CDATA[The process of send message to manual alarm user is started.]]>
-            </line>
-            <line>
-              <![CDATA[The process of send message to manual alarm user is complete.]]>
-            </line>
-            <line>
-              <![CDATA[ ]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- sendMessageToManualAlarmUser -->
-        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-19T11:15:37 IST" name="backToHomePage2" finished-at="2025-06-19T11:15:58 IST" duration-ms="21006" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- backToHomePage2 -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-19T11:15:58 IST" name="backToHomePage" finished-at="2025-06-19T11:16:03 IST" duration-ms="5475" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[|*******************************************************|]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- backToHomePage -->
-        <test-method signature="createNewResource()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-19T11:16:03 IST" name="createNewResource" finished-at="2025-06-19T11:16:36 IST" duration-ms="32889" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[ ]]>
-            </line>
-            <line>
-              <![CDATA[The process of creating new alarm resource is started.]]>
-            </line>
-            <line>
-              <![CDATA[The process of creating new alarm resource is complete.]]>
-            </line>
-            <line>
-              <![CDATA[ ]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- createNewResource -->
-        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-19T11:16:36 IST" name="backToHomePage2" finished-at="2025-06-19T11:16:57 IST" duration-ms="21008" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- backToHomePage2 -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-19T11:16:57 IST" name="backToHomePage" finished-at="2025-06-19T11:17:03 IST" duration-ms="5500" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[|*******************************************************|]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- backToHomePage -->
-        <test-method signature="createNewAlarmLoop()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-19T11:17:03 IST" name="createNewAlarmLoop" finished-at="2025-06-19T11:17:27 IST" duration-ms="24562" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[ ]]>
-            </line>
-            <line>
-              <![CDATA[The process of creating new alarm loop is started.]]>
-            </line>
-            <line>
-              <![CDATA[The process of creating new alarm loop is is complete.]]>
-            </line>
-            <line>
-              <![CDATA[ ]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- createNewAlarmLoop -->
-        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-19T11:17:27 IST" name="backToHomePage2" finished-at="2025-06-19T11:17:49 IST" duration-ms="21135" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- backToHomePage2 -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-19T11:17:49 IST" name="backToHomePage" finished-at="2025-06-19T11:17:54 IST" duration-ms="5470" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[|*******************************************************|]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- backToHomePage -->
-        <test-method signature="createNewAlarmTemplateByAttribute()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-19T11:17:54 IST" name="createNewAlarmTemplateByAttribute" finished-at="2025-06-19T11:18:36 IST" duration-ms="41496" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[ ]]>
-            </line>
-            <line>
-              <![CDATA[The process of creating new alarm template by attribute is started.]]>
-            </line>
-            <line>
-              <![CDATA[The process of creating new alarm template by attribute is complete.]]>
-            </line>
-            <line>
-              <![CDATA[ ]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- createNewAlarmTemplateByAttribute -->
-        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-19T11:18:36 IST" name="backToHomePage2" finished-at="2025-06-19T11:18:57 IST" duration-ms="21016" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- backToHomePage2 -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-19T11:18:57 IST" name="backToHomePage" finished-at="2025-06-19T11:19:02 IST" duration-ms="5401" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[|*******************************************************|]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- backToHomePage -->
-        <test-method signature="createNewAlarmTemplateByResource()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-19T11:19:02 IST" name="createNewAlarmTemplateByResource" finished-at="2025-06-19T11:19:35 IST" duration-ms="33165" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[ ]]>
-            </line>
-            <line>
-              <![CDATA[The process of creating new alarm template by resource is started.]]>
-            </line>
-            <line>
-              <![CDATA[The process of creating new alarm template by resource is complete.]]>
-            </line>
-            <line>
-              <![CDATA[ ]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- createNewAlarmTemplateByResource -->
-        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-19T11:19:35 IST" name="backToHomePage2" finished-at="2025-06-19T11:19:56 IST" duration-ms="20993" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- backToHomePage2 -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-19T11:19:56 IST" name="backToHomePage" finished-at="2025-06-19T11:20:02 IST" duration-ms="6034" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[|*******************************************************|]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- backToHomePage -->
-        <test-method signature="createNewAlarmTemplateByFirefighter()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-19T11:20:02 IST" name="createNewAlarmTemplateByFirefighter" finished-at="2025-06-19T11:20:48 IST" duration-ms="45823" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[ ]]>
-            </line>
-            <line>
-              <![CDATA[The process of creating new alarm template by fire fighter is started.]]>
-            </line>
-            <line>
-              <![CDATA[The process of creating new alarm template by fire fighter is complete.]]>
-            </line>
-            <line>
-              <![CDATA[ ]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- createNewAlarmTemplateByFirefighter -->
-        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-19T11:20:48 IST" name="backToHomePage2" finished-at="2025-06-19T11:21:11 IST" duration-ms="22777" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- backToHomePage2 -->
-        <test-method is-config="true" signature="logOut()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-19T11:21:11 IST" name="logOut" finished-at="2025-06-19T11:21:16 IST" duration-ms="5639" status="PASS">
+        <test-method is-config="true" signature="logOut()[pri:0, instance:function.A_testClassDelte@202b0582]" started-at="2025-07-03T18:47:06 IST" name="logOut" finished-at="2025-07-03T18:47:10 IST" duration-ms="3809" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Logout sucessfully.]]>
@@ -647,14 +227,14 @@
             </line>
           </reporter-output>
         </test-method> <!-- logOut -->
-        <test-method is-config="true" signature="AfterTest()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-19T11:21:16 IST" name="AfterTest" finished-at="2025-06-19T11:21:17 IST" duration-ms="484" status="PASS">
+        <test-method is-config="true" signature="AfterTest()[pri:0, instance:function.A_testClassDelte@202b0582]" started-at="2025-07-03T18:47:10 IST" name="AfterTest" finished-at="2025-07-03T18:47:11 IST" duration-ms="302" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Refresh the URL before successfully closing the browser.]]>
             </line>
           </reporter-output>
         </test-method> <!-- AfterTest -->
-        <test-method is-config="true" signature="AfterSute()[pri:0, instance:function.A_testClassCreate@5149d738]" started-at="2025-06-19T11:21:17 IST" name="AfterSute" finished-at="2025-06-19T11:21:17 IST" duration-ms="200" status="PASS">
+        <test-method is-config="true" signature="AfterSute()[pri:0, instance:function.A_testClassDelte@202b0582]" started-at="2025-07-03T18:47:11 IST" name="AfterSute" finished-at="2025-07-03T18:47:11 IST" duration-ms="164" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Browser close sucessfully.]]>
@@ -667,7 +247,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- AfterSute -->
-      </class> <!-- function.A_testClassCreate -->
+      </class> <!-- function.A_testClassDelte -->
     </test> <!-- Test -->
-  </suite> <!-- Suite -->
+  </suite> <!-- delete -->
 </testng-results>
