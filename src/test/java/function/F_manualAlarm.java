@@ -4,9 +4,13 @@
 		import java.awt.Toolkit;
 		import java.awt.datatransfer.StringSelection;
 		import java.awt.event.KeyEvent;
-		import java.util.List;
-		
-		import org.openqa.selenium.By;
+import java.io.File;
+import java.io.FileInputStream;
+import java.util.List;
+
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.By;
 		import org.openqa.selenium.Dimension;
 		import org.openqa.selenium.Keys;
 		import org.openqa.selenium.WebDriver;
@@ -575,6 +579,55 @@ int z=buttonCount.size();
 		
 		
 		
+		public void manualAlarmByNewTemplate (WebDriver driver, String st2t1) throws Throwable
+		{
+			
+
+			File src = new File(".\\DataFiles\\DetailsFile.xlsx");
+
+			FileInputStream ipt = new FileInputStream(src);
+
+			XSSFWorkbook wb = new XSSFWorkbook(ipt);
+
+			XSSFSheet sheet = wb.getSheetAt(0);
+		
+			NewTemplate = sheet.getRow(20).getCell(1).getStringCellValue();
+			
+			
+			Actions act = new Actions(driver);
+			Thread.sleep(2000);
+			createNewButton.click();
+			Thread.sleep(2000);
+			
+			templateField.click();
+			Thread.sleep(2000);
+			
+			
+			
+			act.sendKeys(NewTemplate).build().perform();
+			Thread.sleep(2000);
+			
+		
+			
+			act.sendKeys(Keys.ENTER).build().perform();
+			Thread.sleep(2000);
+			
+			user$resource.click();
+			Thread.sleep(2000);
+			
+			
+			generateAlarm.click();
+			Thread.sleep(2000);
+			
+			yesCreate.click();
+			Thread.sleep(2000);
+			
+			
+			
+			
+			
+			
+		}
 		
 		
 		

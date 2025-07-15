@@ -9,10 +9,13 @@
           <include name="createObject"/>
           <include name="BeforeTest"/>
           <include name="deleteAlarmTemplate"/>
+          <include name="deleteManualAlarm"/>
           <include name="AfterTest"/>
           <include name="backToHomePage"/>
+          <include name="deleteResource"/>
           <include name="BeforeSuite"/>
           <include name="backToHomePage2"/>
+          <include name="deleteAlarmLoop"/>
           <include name="logOut"/>
         </methods>
       </class> <!-- function.A_testClassDelte -->

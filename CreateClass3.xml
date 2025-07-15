@@ -13,6 +13,7 @@
 	
    
 	<include name="manualaByAttributeSingleStation"  />
+	
 	<include name="manualAlarmByResourceMs"  />
 	<include name="manualAlarmByFirefighterMs"  />
     <include name="manualaByAttributeMSLP"  />
@@ -25,12 +26,18 @@
     
     <include name="sendMessageToManualAlarmUser"  />
     
+     <include name="createNewAlarmTemplateByAttribute"  />
+       <include name="manualAlarmByNewTemplate"  />
+       
+       
+    <include name="createNewAlarmTemplateByResource"  />
+    <include name="createNewAlarmTemplateByFirefighter"  />
+   
+    
     
     <include name="createNewResource"  />
     <include name="createNewAlarmLoop"  />
-    <include name="createNewAlarmTemplateByAttribute"  />
-    <include name="createNewAlarmTemplateByResource"  />
-    <include name="createNewAlarmTemplateByFirefighter"  />
+   
 
       
 	</methods>

@@ -1,16 +1,8 @@
 package function;
 
 import java.awt.Robot;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.util.List;
 
-import org.apache.poi.sl.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,7 +10,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class I_AlarmTemplate extends b_baseClass {
+public class I_AlarmTemplate2 extends b_baseClass {
 	
 	
 	@FindBy(xpath = "//span[text()=\"Alarm\"]")private WebElement manualAlarmModule;
@@ -90,7 +82,7 @@ public class I_AlarmTemplate extends b_baseClass {
 	
 	
 	
-	public I_AlarmTemplate (WebDriver driver)
+	public I_AlarmTemplate2 (WebDriver driver)
 	{
 		PageFactory.initElements(driver, this);
 		
@@ -146,16 +138,12 @@ public class I_AlarmTemplate extends b_baseClass {
 	public void createNewAlarmTemplateByAttribute (WebDriver driver, String gTodaysDate,String gtimeHHMMSS, String St2N, String St1N, String St1V1, String St2V1,String st01A1, String st02A1 ) throws Throwable
 	{	
 		Actions act= new Actions (driver);
-		String filePath = ".\\DataFiles\\DetailsFile.xlsx";
 		
 		createNew.click();
 		Thread.sleep(2000);
 		alarmTemplateTitleField.click();
 		String title = "BG_AT by Atrribute_"+gTodaysDate+"_"+gtimeHHMMSS;
 		act.sendKeys(title).perform();
-
-		
-		
 		selectTemplateStationFiled.click();
 
 		act.sendKeys(St1N).perform();
@@ -181,7 +169,7 @@ public class I_AlarmTemplate extends b_baseClass {
 		
 		 
 		
-		act.sendKeys("BG Alarm by newly created template by attribute -" + gTodaysDate+"_"+gtimeHHMMSS).build().perform();
+		act.sendKeys("Alarm template by attribute -" + gTodaysDate+"_"+gtimeHHMMSS).build().perform();
 	
 	alarmImage.click();
 	
@@ -309,23 +297,6 @@ public class I_AlarmTemplate extends b_baseClass {
 	
 		System.out.println("Alarm Template-"+title+" added");
 		Thread.sleep(3000);
-		
-		FileInputStream in = new FileInputStream(filePath);
-		XSSFWorkbook wb = new XSSFWorkbook(in);
-		XSSFSheet sheet = wb.getSheetAt(0);
-
-		Row row = sheet.createRow(20); // Row 21
-		row.createCell(1).setCellValue(title); // Cell B
-
-		in.close();
-
-		FileOutputStream out = new FileOutputStream(filePath);
-		wb.write(out);
-		out.close();
-		wb.close();
-
-		
-		
 		
 	}
 	

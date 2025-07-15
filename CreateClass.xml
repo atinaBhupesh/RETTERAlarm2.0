@@ -6,9 +6,10 @@
       <class name="function.A_testClassCreate"/>
       
       <methods>
-
-  <include name="sendMessageToManualAlarmUser"  />
-    
+		  
+ <include name="createNewAlarmTemplateByAttribute"  />
+ 
+ 
 	</methods>
       
     </classes>
