@@ -1,13 +1,7 @@
 	package function;
 	
-	import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.util.List;
+	import java.util.List;
 
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,7 +9,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 	
-	public class G_resource extends b_baseClass{
+	public class G_resource2 extends b_baseClass{
 		
 		@FindBy(xpath = "//span[text()=\"Alarm\"]")private WebElement manualAlarmModule;
 		
@@ -68,7 +62,7 @@ import org.openqa.selenium.support.PageFactory;
 		
 		
 	
-	public G_resource(WebDriver driver)
+	public G_resource2(WebDriver driver)
 	{
 		PageFactory.initElements(driver, this);
 		
@@ -117,7 +111,6 @@ import org.openqa.selenium.support.PageFactory;
 	public void createNewResource(WebDriver driver,String St2N,String St1N,String gTodaysDate, String gtimeHHMMSS,String St2V1,String St1V1,String st01FF1, String st02FF1 ) throws Throwable
 	{
 		Actions act = new Actions(driver);
-		String filePath = ".\\DataFiles\\DetailsFile.xlsx";
 		
 	
 		createNew.click();
@@ -136,8 +129,6 @@ import org.openqa.selenium.support.PageFactory;
 		resourceNameField.click();
 		String resourceName= "BG_Resource_"+gTodaysDate+"_"+gtimeHHMMSS;
 		act.sendKeys(resourceName).perform();
-		
-		
 	
 		vehicleField.click();
 	
@@ -170,26 +161,6 @@ import org.openqa.selenium.support.PageFactory;
 		System.out.println("Resource-"+resourceName+" added.");
 		
 		Thread.sleep(3000);
-		
-		
-		
-		FileInputStream in = new FileInputStream(filePath);
-		XSSFWorkbook wb = new XSSFWorkbook(in);
-		XSSFSheet sheet = wb.getSheetAt(0);
-
-		Row row = sheet.createRow(21); // Row 22
-		row.createCell(1).setCellValue(resourceName); // Cell B
-
-		in.close();
-
-		FileOutputStream out = new FileOutputStream(filePath);
-		wb.write(out);
-		out.close();
-		wb.close();
-		
-		
-		
-	
 	
 		
 	}

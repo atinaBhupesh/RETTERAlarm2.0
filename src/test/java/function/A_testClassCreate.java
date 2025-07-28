@@ -310,6 +310,20 @@ public class A_testClassCreate extends b_baseClass {
 		
 	}
 	
+	@Test 
+	public void manualAlarmByNewREsource () throws Throwable
+		
+	{
+		Reporter.log(" ", true);
+		Reporter.log("The process of creating a manual alarm by new resource  is started.", true);
+		ma.manualAlarmCommon( driver,  deptN, branchName );
+		ma.manualAlarmByNewREsource( driver, st01N,  gTodaysDate,  gtimeHHMMSS);
+		Reporter.log("The process of creating a manual alarm by new resource is complete.", true);
+		Reporter.log(" ", true);
+		Thread.sleep(3000);
+		
+	}
+	
 	
 	@Test 
 	public void manualAlarmByNewTemplate () throws Throwable

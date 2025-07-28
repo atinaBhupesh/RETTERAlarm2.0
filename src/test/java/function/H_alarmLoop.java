@@ -20,7 +20,7 @@ import org.openqa.selenium.support.PageFactory;
 		
 		@FindBy(xpath="//i[@class=\"dx-icon dx-icon-refresh\"]")private WebElement refreshFilter;
 		@FindBy(xpath="//button[@class=\"btn-success btn-x30\"]")private WebElement createNew;
-		@FindBy(xpath="//input[@placeholder=\"Stations\"]")private WebElement alarmLoopStation;
+		@FindBy(xpath="//span[text()=\"Stations\"   or text()=\"Wache/Stationen\" ]")private WebElement alarmLoopStation;
 		@FindBy(xpath="//input[@name=\"nickname\"]")private WebElement alarmLoopNickName;
 		@FindBy(xpath="//input[@name=\"alarmcode\"]")private WebElement alarmLoopCode ;
 		@FindBy(xpath="//input[@placeholder=\"Select Resources\"]")private WebElement alarmLoopResource;
@@ -109,7 +109,6 @@ import org.openqa.selenium.support.PageFactory;
 				createNew.click();
 				Thread.sleep(2000);
 				alarmLoopStation.click();
-				
 				act.sendKeys(St2N).perform();
 				Thread.sleep(1000);
 				act.sendKeys(Keys.ENTER).perform();

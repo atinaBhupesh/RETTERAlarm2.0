@@ -7,8 +7,12 @@
       
       <methods>
 		  
- <include name="createNewAlarmTemplateByAttribute"  />
+   
  
+    <include name="createNewAlarmTemplateByResource"  />
+
+   
+    <include name="createNewAlarmLoop"  />
  
 	</methods>
       

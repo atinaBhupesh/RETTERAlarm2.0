@@ -6,13 +6,12 @@
       <class name="function.A_testClassCreate">
         <methods>
           <include name="AfterTest"/>
-          <include name="manualaByAttributeExtend1StStResource"/>
           <include name="BeforeSuite"/>
+          <include name="createNewAlarmLoop"/>
           <include name="backToHomePage2"/>
           <include name="BeforeTest"/>
-          <include name="backToHomePage"/>
           <include name="logOut"/>
-          <include name="sendMessageToManualAlarmUser"/>
+          <include name="backToHomePage"/>
           <include name="AfterSute"/>
           <include name="createObject"/>
         </methods>

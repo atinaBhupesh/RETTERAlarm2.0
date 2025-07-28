@@ -27,15 +27,13 @@
     <include name="sendMessageToManualAlarmUser"  />
     
      <include name="createNewAlarmTemplateByAttribute"  />
-       <include name="manualAlarmByNewTemplate"  />
-       
-       
+     <include name="manualAlarmByNewTemplate"  />
+     <include name="createNewResource"  />
+     <include name="manualAlarmByNewREsource"  />
+  
     <include name="createNewAlarmTemplateByResource"  />
     <include name="createNewAlarmTemplateByFirefighter"  />
    
-    
-    
-    <include name="createNewResource"  />
     <include name="createNewAlarmLoop"  />
    
 

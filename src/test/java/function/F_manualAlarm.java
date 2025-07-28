@@ -247,6 +247,183 @@ import org.openqa.selenium.By;
 		
 		}
 		
+		
+		
+		
+		
+		public void manualAlarmByNewREsource (WebDriver driver,String st01N, String gTodaysDate, String gtimeHHMMSS) throws Throwable
+		{
+			
+		
+			Actions act = new Actions(driver);
+			createNewButton.click();
+			Thread.sleep(1000);
+		
+			fireStationField.click();
+			Thread.sleep(500);
+			
+			
+			act.sendKeys(st01N).build().perform();
+			Thread.sleep(500);
+			act.sendKeys(Keys.ENTER).build().perform();
+			
+			alarmKeyword.click();
+			act.sendKeys("BG-manual alarm by new resource-" + gTodaysDate+"_"+gtimeHHMMSS).build().perform();
+		
+		alarmImage.click();
+		
+		
+		act.sendKeys("Image-manual alarm by new resource").build().perform();
+		
+		descriptionField.click();
+		
+		act.sendKeys("Checking manual alarm by new resource").build().perform();
+		
+		
+		
+		priority.click();
+		Thread.sleep(500);
+		
+		
+		reporter.click();
+		Thread.sleep(1000);
+		reporterName.click();
+		
+		act.sendKeys("Dr. Nikhil").build().perform();
+		
+		
+		reporterStreet.click();
+		act.sendKeys("Kharbi Road, Nagpur").build().perform();
+		reporterZipCode.click();
+		act.sendKeys("440009").build().perform();
+		
+		
+		reporterMobileNo.click();
+		act.sendKeys("1122334455").build().perform();
+		
+		reporterCallback.click();
+		act.sendKeys("10").build().perform();
+		
+		
+		Robot robot = new Robot();
+		
+		act.sendKeys(Keys.TAB).sendKeys(Keys.ENTER).sendKeys(Keys.TAB).build().perform();
+		
+		
+		
+		
+		
+		
+		
+		act.sendKeys("fire at hospital.").build().perform();
+		
+		
+		
+		
+		act.sendKeys(Keys.TAB).sendKeys(Keys.TAB).build().perform();
+		Thread.sleep(500);
+		robot.mouseWheel(5);
+		
+		act.sendKeys(Keys.ENTER).build().perform();
+		
+		
+		
+		alarmAddress.click();
+		act.sendKeys("Tapasya Vidya Mandir, 4446+52G, Vinkar Colony, Manewada, Nagpur, Maharashtra 440024").build().perform();
+		
+		
+		
+		for (int i=0;i<=9;i++)
+		{
+			act.sendKeys(Keys.TAB).perform();
+			
+		}
+		
+		
+		
+		additionalAddressInformation.click();
+		
+		
+		
+		alarmObject.click();
+		act.sendKeys("hospital").perform();
+		
+		
+		
+		alarmFloor.click();
+		act.sendKeys("ground floor").perform();
+		
+		
+		
+		alarmAnnotation.click();
+		act.sendKeys("alarm annotation").perform();
+		
+			
+			act.sendKeys(Keys.TAB).sendKeys(Keys.ENTER).build().perform();
+			
+		
+			
+			userTypeResource.click();
+			Thread.sleep(1000);
+			
+			
+			resourceField1.click();
+			Thread.sleep(500);
+			
+			
+			File src = new File(".\\DataFiles\\DetailsFile.xlsx");
+
+			FileInputStream ipt = new FileInputStream(src);
+
+			XSSFWorkbook wb11 = new XSSFWorkbook(ipt);
+
+			XSSFSheet sheet11 = wb11.getSheetAt(0);
+		
+			NewResource = sheet11.getRow(21).getCell(1).getStringCellValue();
+			
+	
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+				
+			
+			act.sendKeys(NewResource).perform();
+			Thread.sleep(500);
+			act.sendKeys(Keys.ENTER).perform();
+			
+		
+			
+			
+			generateAlarm.click();
+			Thread.sleep(1000);
+			yesCreate.click();
+			Thread.sleep(2000);
+			
+		
+			
+			
+		
+		
+		
+		
+		
+		}
+		
+		
+		
+		
+		
+		
+		
+		
 		public void sendMessageToManualAlarmUser(WebDriver driver,String branchName ) throws InterruptedException
 		{
 			Actions act = new Actions(driver);
@@ -261,7 +438,7 @@ import org.openqa.selenium.By;
 		action.click();
 		Thread.sleep(1000);
 		
-int z=buttonCount.size();
+		int z=buttonCount.size();
 		
 		if (z==5)
 		{
@@ -576,6 +753,12 @@ int z=buttonCount.size();
 			
 			
 		}
+		
+		
+		
+		
+		
+		
 		
 		
 		

@@ -7,13 +7,12 @@
         <methods>
           <include name="AfterTest"/>
           <include name="BeforeSuite"/>
+          <include name="manualaByAttributeSingleStation"/>
           <include name="backToHomePage2"/>
           <include name="BeforeTest"/>
-          <include name="logOut"/>
           <include name="backToHomePage"/>
-          <include name="manualAlarmByResourceMs"/>
+          <include name="logOut"/>
           <include name="AfterSute"/>
-          <include name="sendMessageToManualAlarmUser"/>
           <include name="createObject"/>
         </methods>
       </class> <!-- function.A_testClassCreate -->

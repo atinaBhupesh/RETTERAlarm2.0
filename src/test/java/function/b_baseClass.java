@@ -42,7 +42,9 @@ public class b_baseClass {
 	String st02REsc;
 	String st02t1;
 	String st02R1;
-	String NewTemplate ;
+	String NewTemplate;
+	String NewResource ;
+	
 	
 	
 	String proEnd ="|*******************************************************|";
@@ -204,6 +206,7 @@ public class b_baseClass {
 			st02t1 = sheet.getRow(18).getCell(1).getStringCellValue();
 			st02R1 = sheet.getRow(19).getCell(1).getStringCellValue();
 			NewTemplate = sheet.getRow(20).getCell(1).getStringCellValue();
+			NewResource  = sheet.getRow(21).getCell(1).getStringCellValue();
 			
 
 			
@@ -231,6 +234,8 @@ public class b_baseClass {
 			st02REsc = sheet.getRow(17).getCell(2).getStringCellValue();
 			st02t1 = sheet.getRow(18).getCell(2).getStringCellValue();
 			st02R1 = sheet.getRow(19).getCell(2).getStringCellValue();
+			NewTemplate = sheet.getRow(20).getCell(1).getStringCellValue();
+			NewResource  = sheet.getRow(21).getCell(1).getStringCellValue();
 			
 		}
 		
