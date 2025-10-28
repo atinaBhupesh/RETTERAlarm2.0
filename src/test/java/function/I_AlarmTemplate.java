@@ -39,19 +39,19 @@ public class I_AlarmTemplate extends b_baseClass {
 	
 	@FindBy(xpath="//input[@name=\"alarmImage\"]")private WebElement alarmImage ;
 	@FindBy(xpath = "//textarea[contains(@id,\"alarmDetails\")]")private WebElement descriptionField;
-	@FindBy(xpath="//div[text()=\"Reporter\"]")private WebElement reporter ;
+	@FindBy(xpath="//div[text()=\"Reporter\" or text()=\"Melder\"]")private WebElement reporter ;
 	@FindBy(xpath="//input[@name=\"reporter.name\"]")private WebElement reporterName ;
 	@FindBy(xpath="//input[@name=\"reporter.street\"]")private WebElement reporterStreet;
 	@FindBy(xpath="//input[contains(@id, 'reporter.zipCode')]")private WebElement reporterZipCode;
 	@FindBy(xpath="//input[contains(@id, 'reporter.mobileNo')]")private WebElement reporterMobileNo;
 	@FindBy(xpath="//input[contains(@id,\"reporter.callback\")]")private WebElement reporterCallback;
-	@FindBy(xpath="//div[text()=\"Additional Fields\"]")private WebElement additionalField;
+	@FindBy(xpath="//div[text()=\"Additional Fields\" or text()=\"Zusätzliche Felder\" ]")private WebElement additionalField;
 	@FindBy(xpath="//input[@name=\"additionalFields[0]\"]")private WebElement additionalField1;
 	@FindBy(xpath="//i[@class=\"dx-icon dx-icon-add\"]")private WebElement addadditionalField;
 	@FindBy(xpath="//input[@name=\"additionalFields[1]\"]")private WebElement additionalField2;
-	@FindBy(xpath="//span[text()=\"Next\"]")private WebElement 	next;
+	@FindBy(xpath="//span[text()=\"Next\" or text()=\"nächste\" ]")private WebElement next;
 	@FindBy(xpath="//textarea[@name=\"address\"]")private WebElement alarmAddress;
-	@FindBy(xpath="//div[text()=\"Additional address information\"]")private WebElement additionalAddressInformation;
+	@FindBy(xpath="//div[text()=\"Additional address information\" or text()=\"Zusätzliche Adressinformationen\"]")private WebElement additionalAddressInformation;
 	@FindBy(xpath="//input[@class='dx-texteditor-input' and @name='object']")private WebElement alarmObject;
 	@FindBy(xpath="//input[@name=\"floor\"]")private WebElement alarmFloor;
 	@FindBy(xpath="//input[@name=\"annotation\"]")private WebElement alarmAnnotation;

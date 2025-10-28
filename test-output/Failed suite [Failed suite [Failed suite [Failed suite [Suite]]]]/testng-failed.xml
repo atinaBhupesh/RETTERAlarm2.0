@@ -7,11 +7,12 @@
         <methods>
           <include name="AfterTest"/>
           <include name="BeforeSuite"/>
-          <include name="createNewAlarmLoop"/>
+          <include name="manualaByAttributeExtend1StStResource"/>
+          <include name="manualAlarmByNewREsource"/>
           <include name="backToHomePage2"/>
           <include name="BeforeTest"/>
-          <include name="logOut"/>
           <include name="backToHomePage"/>
+          <include name="logOut"/>
           <include name="AfterSute"/>
           <include name="createObject"/>
         </methods>

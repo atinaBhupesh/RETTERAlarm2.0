@@ -114,6 +114,77 @@ import org.openqa.selenium.support.PageFactory;
 	}
 	
 	
+	
+	public void createNewResourceEsc(WebDriver driver,String St01N,String gTodaysDate, String gtimeHHMMSS,String St1V3,String st01FF2  ) throws Throwable
+	{
+		Actions act = new Actions(driver);
+		String filePath = ".\\DataFiles\\DetailsFile.xlsx";
+		
+	 
+	
+		createNew.click();
+		Thread.sleep(3000);
+		resourceStation.click();
+		
+		
+		act.sendKeys(St01N).perform();
+		Thread.sleep(2000);
+		act.sendKeys(Keys.ENTER).perform();
+		resourceNameField.click();
+		String resourceName= "BG_ResourceEsc_"+gTodaysDate+"_"+gtimeHHMMSS;
+		act.sendKeys(resourceName).perform();
+		
+		
+	
+		vehicleField.click();
+	
+	
+		act.sendKeys(St1V3).perform();
+		Thread.sleep(2000);
+		act.sendKeys(Keys.ENTER).perform();
+		act.keyDown(Keys.CONTROL).sendKeys("A").keyUp(Keys.CONTROL).sendKeys(Keys.BACK_SPACE).build().perform();
+
+		
+		
+		station1FirefighterField.click();
+		act.sendKeys(st01FF2).perform();
+		Thread.sleep(2000);
+		act.sendKeys(Keys.ENTER).perform();
+	
+		
+		
+		
+		Thread.sleep(3000);
+		saveResource.click();
+		
+		System.out.println("Resource-"+resourceName+" added.");
+		
+		Thread.sleep(3000);
+		
+		
+		
+		FileInputStream in = new FileInputStream(filePath);
+		XSSFWorkbook wb = new XSSFWorkbook(in);
+		XSSFSheet sheet = wb.getSheetAt(0);
+
+		Row row = sheet.createRow(24); // Row 23
+		row.createCell(1).setCellValue(resourceName); // Cell B
+
+		in.close();
+
+		FileOutputStream out = new FileOutputStream(filePath);
+		wb.write(out);
+		out.close();
+		wb.close();
+		
+		
+		
+	
+	
+		
+	}
+	
+	
 	public void createNewResource(WebDriver driver,String St2N,String St1N,String gTodaysDate, String gtimeHHMMSS,String St2V1,String St1V1,String st01FF1, String st02FF1 ) throws Throwable
 	{
 		Actions act = new Actions(driver);
@@ -193,6 +264,32 @@ import org.openqa.selenium.support.PageFactory;
 	
 		
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	public void deleteResource(WebDriver driver ) throws Throwable
 	{

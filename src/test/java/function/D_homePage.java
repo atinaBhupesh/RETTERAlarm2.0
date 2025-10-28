@@ -12,7 +12,7 @@ public class D_homePage extends b_baseClass{
 	
 	@FindBy(xpath = "//img[@src=\"/img/logoicon.png\"]")private WebElement retterAlarmimg;
 	@FindBy(xpath = "//select[@name=\"data[app_type]\"]")private WebElement languageButton;
-	@FindBy(xpath="//span[text()=\"Dashboard\"]")private WebElement dashboardMenu;
+//	@FindBy(xpath="//span[text()=\"Dashboard\"]")private WebElement dashboardMenu;
 	@FindBy(xpath="//a[@href=\"http://testing.retteralarm.de/admin/dashboard/index\"]")private WebElement dashboardT;
 	@FindBy(xpath="//a[@href=\"http://live.retteralarm.de/admin/dashboard/index\"]")private WebElement dashboardL;
 	@FindBy(xpath="//a[@href=\"http://development.retteralarm.de/admin/dashboard/index\"]")private WebElement dashboardD;
@@ -35,8 +35,7 @@ public class D_homePage extends b_baseClass{
 		Thread.sleep(2000);
 		driver.navigate().refresh();
 		Thread.sleep(4000);
-		dashboardMenu.click();
-		Thread.sleep(2000);
+		
 		
 		
 		if  (branchName.equals("1"))

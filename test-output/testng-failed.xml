@@ -1,35 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Test(failed)">
+<suite name="Failed suite [Failed suite [Suite]]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)(failed)">
     <classes>
       <class name="function.A_testClassCreate">
         <methods>
-          <include name="manualAlarmByEscResourceSingleStation"/>
-          <include name="manualaByAttributeMSLP"/>
-          <include name="manualAlarmByNewTemplate"/>
-          <include name="manualAlarmByEscResourceMs"/>
-          <include name="manualAlarmByNewREsource"/>
-          <include name="createNewAlarmTemplateByResource"/>
-          <include name="manualAlarmByFirefighterMs"/>
-          <include name="logOut"/>
-          <include name="AfterSute"/>
-          <include name="sendMessageToNewApiAlarmUser"/>
-          <include name="manualAlarmByTemplate"/>
           <include name="AfterTest"/>
-          <include name="manualaByAttributeExtend1StStResource"/>
           <include name="BeforeSuite"/>
-          <include name="sendMessageToOldApiAlarmUser"/>
-          <include name="manualaByAttributeSingleStation"/>
+          <include name="manualAlarmByEscResourceMs"/>
           <include name="backToHomePage2"/>
+          <include name="manualAlarmByFirefighterMs"/>
           <include name="BeforeTest"/>
           <include name="backToHomePage"/>
-          <include name="createNewAlarmTemplateByFirefighter"/>
-          <include name="manualAlarmByResourceMs"/>
-          <include name="sendMessageToManualAlarmUser"/>
+          <include name="logOut"/>
+          <include name="AfterSute"/>
           <include name="createObject"/>
         </methods>
       </class> <!-- function.A_testClassCreate -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Test(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [Suite]] -->

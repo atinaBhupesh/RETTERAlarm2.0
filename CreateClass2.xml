@@ -7,20 +7,25 @@
       
       <methods>
 		  
-
-		  
-   
-	<include name="manualaByAttributeSingleStation"  />
-	<include name="manualAlarmByResourceMs"  />
-	<include name="manualAlarmByFirefighterMs"  />
-    <include name="manualaByAttributeMSLP"  />
+  <include name="manualaByAttributeMSLP"  />
     <include name="manualAlarmByEscResourceSingleStation"  />
     <include name="manualAlarmByEscResourceMs"  />
     <include name="manualaByAttributeExtend1StStResource"  />
   
     <include name="manualAlarmByTemplate"  />
+    
+    
     <include name="sendMessageToManualAlarmUser"  />
-
+    
+     <include name="createNewAlarmTemplateByAttribute"  />
+     <include name="manualAlarmByNewTemplate"  />
+     <include name="createNewResource"  />
+     <include name="manualAlarmByNewREsource"  />
+  
+    <include name="createNewAlarmTemplateByResource"  />
+    <include name="createNewAlarmTemplateByFirefighter"  />
+   
+    <include name="createNewAlarmLoop"  />
 
       
 	</methods>

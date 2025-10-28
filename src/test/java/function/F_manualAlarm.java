@@ -33,6 +33,8 @@ import org.openqa.selenium.By;
 		@FindBy(xpath="//option[text()=\" andrew department \"]")private WebElement andrewDepartment ;
 		
 		@FindBy(xpath="//option[text()=\" D1 \"]")private WebElement D1;	
+		@FindBy(xpath="//SELECT[@class=\"form-select ng-pristine ng-valid ng-touched\"]")private WebElement selectLanguage;
+		@FindBy(xpath="(//div[@class=\"dx-button-content\"])[3]")private WebElement refreshFilter;
 		
 		
 		@FindBy(xpath = "//button[@class=\"btn-success btn-x30\"]") private WebElement createNewButton;
@@ -40,41 +42,41 @@ import org.openqa.selenium.By;
 		@FindBy(xpath = "//input[contains(@id,\"keyword\")]")private WebElement alarmKeyword;
 		@FindBy(xpath="//input[@name=\"alarmImage\"]")private WebElement alarmImage ;
 		@FindBy(xpath = "//textarea[contains(@id,\"alarmDetails\")]")private WebElement descriptionField;
-		@FindBy(xpath="//div[text()=\"Reporter\"]")private WebElement reporter ;
+		@FindBy(xpath="//div[text()=\"Melder\" or text()=\"Reporter\"]")private WebElement reporter ;
 		@FindBy(xpath="//input[@name=\"reporter.name\"]")private WebElement reporterName ;
 		@FindBy(xpath="//input[@name=\"reporter.street\"]")private WebElement reporterStreet;
 		@FindBy(xpath="//input[contains(@id, 'reporter.zipCode')]")private WebElement reporterZipCode;
 		@FindBy(xpath="//input[contains(@id, 'reporter.mobileNo')]")private WebElement reporterMobileNo;
 		@FindBy(xpath="//input[contains(@id,\"reporter.callback\")]")private WebElement reporterCallback;
-		@FindBy(xpath="//div[text()=\"Additional Fields\"]")private WebElement additionalField;
+		@FindBy(xpath="//div[text()=\"Additional Fields\" or text()=\"Zusätzliche Felder\"]")private WebElement additionalField;
 		@FindBy(xpath="//input[@name=\"additionalFields[0]\"]")private WebElement additionalField1;
 		@FindBy(xpath="//i[@class=\"dx-icon dx-icon-add\"]")private WebElement addadditionalField;
 		@FindBy(xpath="//input[@name=\"additionalFields[1]\"]")private WebElement additionalField2;
-		@FindBy(xpath="//span[text()=\"Next\"]")private WebElement 	next;
+		@FindBy(xpath="//span[text()=\"Next\" or text()=\"nächste\" ]")private WebElement 	next;
 		@FindBy(xpath="//textarea[@name=\"address\"]")private WebElement alarmAddress;
-		@FindBy(xpath="//div[text()=\"Additional address information\"]")private WebElement additionalAddressInformation;
+		@FindBy(xpath="//div[text()=\"Additional address information\" or text()=\"Zusätzliche Adressinformationen\"]")private WebElement additionalAddressInformation;
 		@FindBy(xpath="//input[@class='dx-texteditor-input' and @name='object']")private WebElement alarmObject;
 		@FindBy(xpath="//input[@name=\"floor\"]")private WebElement alarmFloor;
 		@FindBy(xpath="//input[@name=\"annotation\"]")private WebElement alarmAnnotation;
 		@FindBy(xpath="(//span[@class=\"dx-button-text\"])[2]")private WebElement next2;
 		@FindBy(xpath="(//div[@class=\"dx-scrollable-scrollbar dx-widget dx-scrollbar-vertical dx-scrollbar-hoverable\"])[3]")private WebElement scrollDown;
 		
-		@FindBy(xpath="//div[text()=\"Attributes\"]")private WebElement userTypeAttribute;
+		@FindBy(xpath="//div[text()=\"Attributes\" or text()=\"Qualifikationen\"]")private WebElement userTypeAttribute;
 		@FindBy(xpath="//input[contains(@id,'selectedVehicles')]")private WebElement vehicleField1;
-		@FindBy(xpath="//div[text()=\"Select All\"]")private WebElement selectAllA;
+		@FindBy(xpath="//div[text()=\"Select All\" or text()=\"Alles auswählen\"]")private WebElement selectAllA;
 		 @FindBy(xpath="(//span[@class=\"dx-icon dx-icon-clear\"])[3]")private WebElement deselectAll;
 		@FindBy(xpath="//input[contains(@id,'selectedVehicles')]")private WebElement deSelectVehicls;
 		@FindBy(xpath="//input[contains(@id,'selectedAttributes')]")private WebElement attributeField;
 		
 		
-		@FindBy(xpath="//div[text()=\"Resources\"]")private WebElement userTypeResource;
+		@FindBy(xpath="//div[text()=\"Resources\" or text()=\"Ressourcen\"]")private WebElement userTypeResource;
 		 @FindBy(xpath="(//input[contains(@id,\"selectedResources\")])[1]")private WebElement resourceField1;
 		 @FindBy(xpath="(//input[contains(@id,\"selectedResources\")])[2]")private WebElement resourceField2;
 		
 		
 		
-		@FindBy(xpath="//div[@aria-label=\"Generate Alarm\"]")private WebElement generateAlarm;
-		@FindBy(xpath="//div[@aria-label=\"Yes, Create\"]")private WebElement yesCreate;
+		@FindBy(xpath="//span[text()=\"Generate Alarm\" or text()=\"Alarmieren\"]")private WebElement generateAlarm;
+		@FindBy(xpath="//span[text()=\"Ja, erstellen\" or text()=\"Yes, Create\"]")private WebElement yesCreate;
 		
 		@FindBy(xpath="(//div[@class=\"menubox dx-template-wrapper dx-item-content dx-treeview-item-content\"])[1]")private WebElement dashbordMenu2;
 		@FindBy(xpath="(//div[@class=\"menubox dx-template-wrapper dx-item-content dx-treeview-item-content\"])[2]")private WebElement dashboard2;
@@ -100,12 +102,12 @@ import org.openqa.selenium.By;
 		
 		
 		
-		 @FindBy(xpath="//div[text()=\"Fire Fighters\"]")private WebElement userTypeFirefighter;
+		 @FindBy(xpath="//div[text()=\"Fire Fighters\" or text()=\"Benutzer\"]")private WebElement userTypeFirefighter;
 		 @FindBy(xpath="(//input[contains(@id,\"selectedUsers\")])[1]")private WebElement FirefighterField1;
 		 @FindBy(xpath="(//input[contains(@id,\"selectedUsers\")])[2]")private WebElement FirefighterField2;
 		 
 		 
-		 @FindBy(xpath="//span[text()=\"Priority\"]")private WebElement priority;
+		 @FindBy(xpath="//span[text()=\"Priorität\" or text()=\"Priority\"]")private WebElement priority;
 		 @FindBy(xpath="//td[contains(text(),\"Bg\")]")private  WebElement BGAlams;
 		
 		 
@@ -119,10 +121,10 @@ import org.openqa.selenium.By;
 		@FindBy(xpath="//input[@value=\"476\"]")private WebElement D1ST04Esc;
 		@FindBy(xpath="//input[@id=\"information_1\"]")private WebElement additionalInformation1;
 		@FindBy(xpath="//button[@id=\"addSubmit\"]")private WebElement saveExtend;
-		@FindBy(xpath="(//div[@class=\"dx-button-content\"])[3]")private WebElement refreshFilter;
+
 		
 		@FindBy(xpath="//input[contains(@id,\"selectedTemplate\")]")private WebElement templateField;
-		@FindBy(xpath="//span[text()=\"Next\"]")private WebElement next1;
+		
 		@FindBy(xpath="(//span[@class=\"dx-tab-text-span\"])[3]")private WebElement user$resource;
 		
 		@FindBy(xpath = "//input[@value=\"4625\"]")	private WebElement ADST06REsc;
@@ -139,11 +141,11 @@ import org.openqa.selenium.By;
 			
 		
 		 @FindBy(xpath="//path[@fill-rule='evenodd' and contains(@d, 'M1 8a.5.5 0 0 1')]")private WebElement back;
-		@FindBy(xpath="//SELECT[@class=\"form-select ng-pristine ng-valid ng-touched\"]")private WebElement selectLanguage;
+		
 		 @FindBy(xpath="//td[contains(text(), 'Bg') or contains(text(), 'BG')]")private List<WebElement> BGAlarm;
 		 @FindBy(xpath="//dx-button[@class=\"dx-widget dx-button dx-button-mode-text dx-button-normal more-action-button delete-option\"]")private WebElement singleDelete ;
 		 @FindBy(xpath="(//div [@class=\"dx-item dx-toolbar-item dx-toolbar-button\"])[3]")private WebElement delateAll;
-		@FindBy(xpath="//span[text()=\"Yes, Delete\"]")private WebElement deleteAllYes;
+		@FindBy(xpath="///span[text()=\"Ja, löschen\" or text()=\"Yes, Delete\"]")private WebElement deleteAllYes;
 		
 		
 		@FindBy(xpath="//input[@placeholder=\"Select...\"]")private WebElement extendStation;
@@ -247,7 +249,159 @@ import org.openqa.selenium.By;
 		
 		}
 		
+		public void manualAlarmByNewEscResource (WebDriver driver,String st01N, String gTodaysDate, String gtimeHHMMSS) throws Throwable
+		{
+			
 		
+			Actions act = new Actions(driver);
+			createNewButton.click();
+			Thread.sleep(1000);
+		
+			fireStationField.click();
+			Thread.sleep(500);
+			
+			
+			act.sendKeys(st01N).build().perform();
+			Thread.sleep(500);
+			act.sendKeys(Keys.ENTER).build().perform();
+			
+			alarmKeyword.click();
+			act.sendKeys("BG-manual alarm by new escalation resource-" + gTodaysDate+"_"+gtimeHHMMSS).build().perform();
+		
+		alarmImage.click();
+		
+		
+		act.sendKeys("Image-manual alarm by new escalation resource").build().perform();
+		
+		descriptionField.click();
+		
+		act.sendKeys("Checking manual alarm by new escalation resource").build().perform();
+		
+		
+		
+		priority.click();
+		Thread.sleep(500);
+		
+		
+		reporter.click();
+		Thread.sleep(1000);
+		reporterName.click();
+		
+		act.sendKeys("Dr. Nikhil").build().perform();
+		
+		
+		reporterStreet.click();
+		act.sendKeys("Kharbi Road, Nagpur").build().perform();
+		reporterZipCode.click();
+		act.sendKeys("440009").build().perform();
+		
+		
+		reporterMobileNo.click();
+		act.sendKeys("1122334455").build().perform();
+		
+		reporterCallback.click();
+		act.sendKeys("10").build().perform();
+		
+		
+		Robot robot = new Robot();
+		
+		act.sendKeys(Keys.TAB).sendKeys(Keys.ENTER).sendKeys(Keys.TAB).build().perform();
+		
+		
+		
+		
+		
+		
+		
+		act.sendKeys("fire at hospital.").build().perform();
+		
+		
+		
+		
+		act.sendKeys(Keys.TAB).sendKeys(Keys.TAB).build().perform();
+		Thread.sleep(500);
+		robot.mouseWheel(5);
+		
+		act.sendKeys(Keys.ENTER).build().perform();
+		
+		
+		
+		alarmAddress.click();
+		act.sendKeys("Tapasya Vidya Mandir, 4446+52G, Vinkar Colony, Manewada, Nagpur, Maharashtra 440024").build().perform();
+		
+		
+		
+		for (int i=0;i<=9;i++)
+		{
+			act.sendKeys(Keys.TAB).perform();
+			
+		}
+		
+		
+		
+		additionalAddressInformation.click();
+		
+		
+		
+		alarmObject.click();
+		act.sendKeys("hospital").perform();
+		
+		
+		
+		alarmFloor.click();
+		act.sendKeys("ground floor").perform();
+		
+		
+		
+		alarmAnnotation.click();
+		act.sendKeys("alarm annotation").perform();
+		
+			
+			act.sendKeys(Keys.TAB).sendKeys(Keys.ENTER).build().perform();
+			
+		
+			
+			userTypeResource.click();
+			Thread.sleep(1000);
+			
+			
+			resourceField1.click();
+			Thread.sleep(500);
+			
+			
+			File src = new File(".\\DataFiles\\DetailsFile.xlsx");
+
+			FileInputStream ipt = new FileInputStream(src);
+
+			XSSFWorkbook wb11 = new XSSFWorkbook(ipt);
+
+			XSSFSheet sheet11 = wb11.getSheetAt(0);
+		
+			NewResourceEsc = sheet11.getRow(24).getCell(1).getStringCellValue();
+			
+	
+			
+			act.sendKeys(NewResourceEsc).perform();
+			Thread.sleep(500);
+			act.sendKeys(Keys.ENTER).perform();
+			
+		
+			
+			
+			generateAlarm.click();
+			Thread.sleep(1000);
+			yesCreate.click();
+			Thread.sleep(2000);
+			
+		
+			
+			
+		
+		
+		
+		
+		
+		}
 		
 		
 		
@@ -440,7 +594,7 @@ import org.openqa.selenium.By;
 		
 		int z=buttonCount.size();
 		
-		if (z==5)
+		if (z==6)
 		{
 		alarmChat.click();
 		Thread.sleep(1000);
@@ -510,7 +664,7 @@ import org.openqa.selenium.By;
 		
 		int z=buttonCount.size();
 		
-		if (z==5) {
+		if (z==6) {
 		
 		alarmChat.click();
 		Thread.sleep(1000);
@@ -591,7 +745,7 @@ import org.openqa.selenium.By;
 		
 		int z=buttonCount.size();
 		
-		if (z==5) {
+		if (z==6) {
 
 		alarmChat.click();
 		Thread.sleep(1000);
@@ -606,7 +760,7 @@ import org.openqa.selenium.By;
 		act.moveToElement(attachFile).click().build().perform();
 		Thread.sleep(1000);
 		
-		StringSelection ss = new StringSelection("C:\\Users\\BHUPESH\\Desktop\\New folder\\Sample Image\\0.98mb.JPG");
+		StringSelection ss = new StringSelection("C:\\Users\\BHUPESH\\Desktop\\SampleFiles\\sampleImage_2.21mb.jpg");
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
 		
 		Robot rc = new Robot();
@@ -632,7 +786,7 @@ import org.openqa.selenium.By;
 		act.moveToElement(attachFile).click().build().perform();
 		Thread.sleep(1000);
 		
-		StringSelection ss1 = new StringSelection("C:\\Users\\BHUPESH\\Desktop\\New folder\\Automation Test.pdf");
+		StringSelection ss1 = new StringSelection("C:\\Users\\BHUPESH\\Desktop\\SampleFiles\\samplePdf_5.4mb.pdf");
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss1, null);
 		
 		Thread.sleep(2000);
@@ -657,7 +811,7 @@ import org.openqa.selenium.By;
 		act.moveToElement(attachFile).click().build().perform();
 		Thread.sleep(1000);
 		
-		StringSelection ss2 = new StringSelection("C:\\Users\\BHUPESH\\Desktop\\New folder\\Notes.docx");
+		StringSelection ss2 = new StringSelection("C:\\Users\\BHUPESH\\Desktop\\SampleFiles\\sample_WordFile.docx");
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss2, null);
 		
 		Thread.sleep(2000);
@@ -1120,7 +1274,7 @@ import org.openqa.selenium.By;
 			
 			act.sendKeys(Keys.TAB).sendKeys(Keys.ENTER).build().perform();
 			
-		
+			Thread.sleep(1000);
 			
 			userTypeResource.click();
 			Thread.sleep(1000);
@@ -1303,11 +1457,11 @@ import org.openqa.selenium.By;
 			
 			
 			act.sendKeys(St1N).build().perform();
-			Thread.sleep(500);
+			Thread.sleep(1000);
 			act.sendKeys(Keys.ENTER).build().perform();
 			Thread.sleep(1000);
 			act.sendKeys(St2N).build().perform();
-			Thread.sleep(500);
+			Thread.sleep(1000);
 			act.sendKeys(Keys.ENTER).build().perform();
 		
 			alarmKeyword.click();

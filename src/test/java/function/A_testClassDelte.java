@@ -23,7 +23,7 @@ public class A_testClassDelte extends b_baseClass {
 
 	H_alarmLoop al;
 	I_AlarmTemplate at;
-	
+	J_alarmEscalation ae;
 
 	
 	String gTodaysDate;
@@ -55,6 +55,7 @@ public class A_testClassDelte extends b_baseClass {
 		al  =new H_alarmLoop (driver) ;
 		at=new I_AlarmTemplate (driver);
 		
+		ae=new J_alarmEscalation (driver);
 		
 	
 		
@@ -96,7 +97,22 @@ public class A_testClassDelte extends b_baseClass {
 	
 	
 	
-	
+	@Test 
+	public void deleteAlarmEscalation () throws Throwable
+		
+	{
+		Reporter.log(" ", true);
+		Reporter.log("The process of delete AlarmEscalation is started.", true);
+		ae.alarmEscaltionComman( driver,  deptN, branchName);
+		ae.deleteAlarmEscalation(driver);
+		
+
+		ma.backToOld();
+		Reporter.log("The process of delete AlarmEscalation is complete.", true);
+		Reporter.log(" ", true);
+		Thread.sleep(3000);
+		
+	}
 	
 	
 

@@ -33,7 +33,7 @@ import org.openqa.selenium.support.PageFactory;
 		@FindBy(xpath="(//i[@class=\"dx-icon dx-icon-overflow\"])[2]")private WebElement actionButton;
 		@FindBy(xpath="(//span[@class=\"dx-checkbox-icon\"])[1]")private WebElement selectAll;
 		@FindBy(xpath="//i[@class=\"ri ri-delete-bin-6-line\"]")private WebElement deleteAll;
-		@FindBy(xpath="//span[text()=\"Yes, Delete\"]")private WebElement yesDelete;
+		@FindBy(xpath="//span[text()=\"Yes, Delete\" or text()=\"Ja, löschen\" ]")private WebElement yesDelete;
 		@FindBy(xpath="//td[contains (text(),'BG')]")private List<WebElement> BGAlarmLoop ;
 		// @FindBy(xpath="")private WebElement ;
 		// @FindBy(xpath="")private WebElement ;

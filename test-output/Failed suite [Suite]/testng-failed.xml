@@ -7,8 +7,9 @@
         <methods>
           <include name="AfterTest"/>
           <include name="BeforeSuite"/>
-          <include name="manualaByAttributeSingleStation"/>
+          <include name="manualAlarmByEscResourceMs"/>
           <include name="backToHomePage2"/>
+          <include name="manualAlarmByFirefighterMs"/>
           <include name="BeforeTest"/>
           <include name="backToHomePage"/>
           <include name="logOut"/>

@@ -6,14 +6,11 @@
       <class name="function.A_testClassCreate"/>
       
       <methods>
-		  
-   
- 
-    <include name="createNewAlarmTemplateByResource"  />
+    
 
-   
-    <include name="createNewAlarmLoop"  />
- 
+  <include name="manualaByAttributeExtend1StStResource"  />
+	
+	
 	</methods>
       
     </classes>

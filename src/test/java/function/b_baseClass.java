@@ -44,12 +44,15 @@ public class b_baseClass {
 	String st02R1;
 	String NewTemplate;
 	String NewResource ;
+	String st01FF2;
+	String St1V3 ;
+	String NewResourceEsc;
 	
 	
 	
 	String proEnd ="|*******************************************************|";
 	
-	public void getDetailsFromUser()
+	public void getDetailsFromUser() throws Throwable
 	{
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("Enter the branch name > for live-1, for Testing-2, for development-3 : ");
@@ -123,25 +126,33 @@ public class b_baseClass {
 		}
 		
 		System.out.print("Enter password: ");
-		scriptPsaaword = scanner.nextLine();
+		String password = scanner.nextLine();
 
-		if (branchName != null && !branchName.isEmpty() && scriptPsaaword != null) {
+		if (branchName != null && !branchName.isEmpty() && password != null) {
 
-			if (scriptPsaaword.equals("123456")) {
-				System.out.println("*****entered password is correct*****");
-			} else {
-				
-				System.out.println("The Selenium script cannot continue because your password is incorrect.");
+		    if (password.equals("123456")) {
+		        System.out.println("***** Entered password is correct *****");
+		    } else {
+		        // Give second chance
+		        System.out.print("Wrong password. Please try again: ");
+		        password = scanner.nextLine();
 
-				System.exit(0);
+		        if (password.equals("123456")) {
+		            System.out.println("***** Entered password is correct *****");
+		        } else {
+		            System.out.println("The Selenium script cannot continue because your password is incorrect.");
+		            System.exit(0);
+		        }
+		    }
 
-			}
-		
-		
-		
+		} else {
+		    System.out.println("You did not enter any branch name.");
+		    Thread.sleep(2000);
+		    System.out.println();
+		    System.out.println("The Selenium script cannot continue because the branch name was not found.");
+		    System.exit(0);
 		}
-		
-		
+
 		
 		
 	}
@@ -207,7 +218,9 @@ public class b_baseClass {
 			st02R1 = sheet.getRow(19).getCell(1).getStringCellValue();
 			NewTemplate = sheet.getRow(20).getCell(1).getStringCellValue();
 			NewResource  = sheet.getRow(21).getCell(1).getStringCellValue();
-			
+			st01FF2 = sheet.getRow(22).getCell(1).getStringCellValue();
+			St1V3 = sheet.getRow(23).getCell(1).getStringCellValue();
+			NewResourceEsc = sheet.getRow(24).getCell(1).getStringCellValue();
 
 			
 		}
@@ -236,7 +249,9 @@ public class b_baseClass {
 			st02R1 = sheet.getRow(19).getCell(2).getStringCellValue();
 			NewTemplate = sheet.getRow(20).getCell(1).getStringCellValue();
 			NewResource  = sheet.getRow(21).getCell(1).getStringCellValue();
-			
+			st01FF2 =  sheet.getRow(22).getCell(1).getStringCellValue();
+			St1V3 = sheet.getRow(23).getCell(1).getStringCellValue();
+			NewResourceEsc = sheet.getRow(24).getCell(1).getStringCellValue();
 		}
 		
 		else if (branchName.equals("3"))

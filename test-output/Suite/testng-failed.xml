@@ -7,26 +7,16 @@
         <methods>
           <include name="manualAlarmByEscResourceSingleStation"/>
           <include name="manualaByAttributeMSLP"/>
-          <include name="manualAlarmByNewTemplate"/>
-          <include name="manualAlarmByEscResourceMs"/>
-          <include name="manualAlarmByNewREsource"/>
-          <include name="createNewAlarmTemplateByResource"/>
-          <include name="manualAlarmByFirefighterMs"/>
-          <include name="logOut"/>
-          <include name="AfterSute"/>
-          <include name="sendMessageToNewApiAlarmUser"/>
-          <include name="manualAlarmByTemplate"/>
           <include name="AfterTest"/>
-          <include name="manualaByAttributeExtend1StStResource"/>
+          <include name="manualAlarmByNewREsource"/>
+          <include name="manualAlarmByEscResourceMs"/>
           <include name="BeforeSuite"/>
-          <include name="sendMessageToOldApiAlarmUser"/>
-          <include name="manualaByAttributeSingleStation"/>
           <include name="backToHomePage2"/>
+          <include name="manualAlarmByFirefighterMs"/>
           <include name="BeforeTest"/>
+          <include name="logOut"/>
           <include name="backToHomePage"/>
-          <include name="createNewAlarmTemplateByFirefighter"/>
-          <include name="manualAlarmByResourceMs"/>
-          <include name="sendMessageToManualAlarmUser"/>
+          <include name="AfterSute"/>
           <include name="createObject"/>
         </methods>
       </class> <!-- function.A_testClassCreate -->

@@ -8,10 +8,10 @@
       <methods>
 		  
 
-	<include name="sendMessageToNewApiAlarmUser"  />
+   <include name="sendMessageToNewApiAlarmUser"  />
+	
 	<include name="sendMessageToOldApiAlarmUser"  />
 	
-   
 	<include name="manualaByAttributeSingleStation"  />
 	
 	<include name="manualAlarmByResourceMs"  />
@@ -29,7 +29,10 @@
      <include name="createNewAlarmTemplateByAttribute"  />
      <include name="manualAlarmByNewTemplate"  />
      <include name="createNewResource"  />
+     <include name="createNewResourceEsc"  />
+     <include name="createNewAlarmEscalation"  />
      <include name="manualAlarmByNewREsource"  />
+      <include name="manualAlarmByNewEscResource"  />
   
     <include name="createNewAlarmTemplateByResource"  />
     <include name="createNewAlarmTemplateByFirefighter"  />

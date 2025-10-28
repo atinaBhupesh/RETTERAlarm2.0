@@ -22,7 +22,7 @@ public class A_testClassCreate extends b_baseClass {
 	G_resource mr;
 	H_alarmLoop al;
 	I_AlarmTemplate at;
-	
+	J_alarmEscalation ae;
 
 	
 	String gTodaysDate;
@@ -55,6 +55,7 @@ public class A_testClassCreate extends b_baseClass {
 		mr = new G_resource(driver) ;
 		al  =new H_alarmLoop (driver) ;
 		at= new I_AlarmTemplate (driver) ;
+		ae=new J_alarmEscalation (driver);
 		
 		
 	
@@ -95,6 +96,53 @@ public class A_testClassCreate extends b_baseClass {
 		
 	}
 	
+	
+	
+
+	@Test 
+	public void manualAlarmByNewEscResource() throws Throwable
+		
+	{
+		Reporter.log(" ", true);
+		Reporter.log("The process of creating manual alarm by new escalation resource is started.", true);
+		ma.manualAlarmCommon(driver,deptN, branchName );
+		
+		ma.manualAlarmByNewEscResource( driver, st01N,  gTodaysDate,  gtimeHHMMSS);
+		Reporter.log("The process of creating nmanual alarm by new escalation resource is complete.", true);
+		Reporter.log(" ", true);
+		Thread.sleep(3000);
+		
+	}
+	
+	
+	@Test 
+	public void createNewResourceEsc() throws Throwable
+		
+	{
+		Reporter.log(" ", true);
+		Reporter.log("The process of creating new escaltion resource is started.", true);
+		mr.commonResource(  driver,  branchName);
+		mr.createNewResourceEsc( driver, st01N, gTodaysDate,  gtimeHHMMSS, St1V3, st01FF2);
+		Reporter.log("The process of creating new escaltion resource is complete.", true);
+		Reporter.log(" ", true);
+		Thread.sleep(3000);
+		
+	}
+	
+	
+	@Test 
+	public void createNewAlarmEscalation() throws Throwable
+		
+	{
+		Reporter.log(" ", true);
+		Reporter.log("The process of creating new alarm escaltion is started.", true);
+		ae.alarmEscaltionComman( driver,  deptN, branchName);
+		ae.createNewAlarmEscalation( driver, st01N );
+		Reporter.log("The process of creating new aalarm escaltion is complete.", true);
+		Reporter.log(" ", true);
+		Thread.sleep(3000);
+		
+	}
 	
 	@Test 
 	public void createNewAlarmTemplateByFirefighter() throws Throwable
