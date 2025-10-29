@@ -7,12 +7,11 @@
         <methods>
           <include name="AfterTest"/>
           <include name="BeforeSuite"/>
-          <include name="manualAlarmByEscResourceMs"/>
           <include name="backToHomePage2"/>
-          <include name="manualAlarmByFirefighterMs"/>
           <include name="BeforeTest"/>
           <include name="backToHomePage"/>
           <include name="logOut"/>
+          <include name="manualAlarmByResourceMs"/>
           <include name="AfterSute"/>
           <include name="createObject"/>
         </methods>

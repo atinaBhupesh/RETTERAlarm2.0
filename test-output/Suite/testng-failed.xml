@@ -5,17 +5,13 @@
     <classes>
       <class name="function.A_testClassCreate">
         <methods>
-          <include name="manualAlarmByEscResourceSingleStation"/>
-          <include name="manualaByAttributeMSLP"/>
           <include name="AfterTest"/>
-          <include name="manualAlarmByNewREsource"/>
-          <include name="manualAlarmByEscResourceMs"/>
           <include name="BeforeSuite"/>
           <include name="backToHomePage2"/>
-          <include name="manualAlarmByFirefighterMs"/>
           <include name="BeforeTest"/>
-          <include name="logOut"/>
           <include name="backToHomePage"/>
+          <include name="logOut"/>
+          <include name="manualAlarmByResourceMs"/>
           <include name="AfterSute"/>
           <include name="createObject"/>
         </methods>
