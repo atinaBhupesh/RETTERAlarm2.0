@@ -11,8 +11,8 @@
           <include name="BeforeTest"/>
           <include name="backToHomePage"/>
           <include name="logOut"/>
-          <include name="manualAlarmByResourceMs"/>
           <include name="AfterSute"/>
+          <include name="createMonitorInformationByFireFighterForTwoStation"/>
           <include name="createObject"/>
         </methods>
       </class> <!-- function.A_testClassCreate -->

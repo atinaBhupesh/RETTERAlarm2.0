@@ -17,6 +17,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 public class I_AlarmTemplate extends b_baseClass {
 	
@@ -31,8 +32,8 @@ public class I_AlarmTemplate extends b_baseClass {
 	@FindBy(xpath="//button[@class=\"btn-success btn-x30\"]")private WebElement createNew;
 	
 	@FindBy(xpath="//input[@name=\"title\"]")private WebElement alarmTemplateTitleField ;
-	@FindBy(xpath="(//input[@placeholder=\"Select...\"])[1]")private WebElement selectTemplateStationFiled ;
-	@FindBy(xpath="(//input[@placeholder=\"Select...\"])[2]")private WebElement selectAlarmStationsField ;
+	@FindBy(xpath="//input[@id=\"dx_dx-a5838d56-d52e-6b5c-9fac-18217d499561_selectedTemplateStation\"]")private WebElement selectTemplateStationFiled ;
+	@FindBy(xpath="//input[@id=\"dx_dx-d167d5a1-43eb-94d0-6763-ee486df55d41_selectedStations\"]")private WebElement selectAlarmStationsField ;
 	
 	
 	@FindBy(xpath = "//input[contains(@id,\"keyword\")]")private WebElement alarmKeyword;
@@ -80,13 +81,37 @@ public class I_AlarmTemplate extends b_baseClass {
 		@FindBy(xpath="(//i[@class=\"dx-icon-filter filter-icon\"])[1]")private WebElement titleSearch;
 		@FindBy(xpath="//dx-text-box[@mode=\"search\"]")private WebElement titleSearchField;
 		@FindBy(xpath="//div[@aria-label=\"OK\"]")private WebElement titleSearchFieldOk;
-		@FindBy(xpath="(//i[@class=\"dx-icon dx-icon-overflow\"])[2]")private WebElement actionButton;
+	
 		@FindBy(xpath="(//span[@class=\"dx-checkbox-icon\"])[1]")private WebElement selectAll;
 		@FindBy(xpath="//i[@class=\"ri ri-delete-bin-6-line\"]")private WebElement deleteAll;
 		@FindBy(xpath="//span[text()=\"Yes, Delete\"]")private WebElement yesDelete;
 	@FindBy(xpath="//td[contains(text(),\"BG_AT by\")]")private List< WebElement> BGTemplateCount;
+	 @FindBy(xpath="(//td[@role=\"gridcell\"])[4]")private WebElement firstItemTitle;
+	@FindBy(xpath="(//i[@class=\"dx-icon dx-icon-overflow\"])[2]")private WebElement actionButton;		
+	 @FindBy(xpath="(//div[@class=\"dx-button-content\"])[11]")private WebElement createAlarmButton;
+		 @FindBy(xpath="(//span[@class=\"dx-tab-text-span\"])[3]")private WebElement usersAndResources;
+			 @FindBy(xpath="(//span[@class=\"dx-button-text\"])[2]")private WebElement generateAlarm ;
+			@FindBy(xpath="(//span[@class=\"dx-button-text\"])[4]")private WebElement yesCreate ;
+			// @FindBy(xpath="")private WebElement ;
+			// @FindBy(xpath="")private WebElement ;
+			// @FindBy(xpath="")private WebElement ;
+			// @FindBy(xpath="")private WebElement ;		
 	// @FindBy(xpath="")private WebElement ;
-	// @FindBy(xpath="")private WebElement ;		
+			// @FindBy(xpath="")private WebElement ;
+			// @FindBy(xpath="")private WebElement ;
+			// @FindBy(xpath="")private WebElement ;
+			// @FindBy(xpath="")private WebElement ;
+			// @FindBy(xpath="")private WebElement ;
+			// @FindBy(xpath="")private WebElement ;
+			// @FindBy(xpath="")private WebElement ;		
+	// @FindBy(xpath="")private WebElement ;
+			// @FindBy(xpath="")private WebElement ;
+			// @FindBy(xpath="")private WebElement ;
+			// @FindBy(xpath="")private WebElement ;
+			// @FindBy(xpath="")private WebElement ;
+			// @FindBy(xpath="")private WebElement ;
+			// @FindBy(xpath="")private WebElement ;
+			// @FindBy(xpath="")private WebElement ;		
 	
 	
 	
@@ -96,42 +121,49 @@ public class I_AlarmTemplate extends b_baseClass {
 		
 	}
 	
-	
-	public void  commonAlarmTemplate (WebDriver driver, String  branchName) throws Throwable
+	public void createAlarmByNewlyAddedTemplateFromTemplateModule(WebDriver driver,String NewTemplate,String gTodaysDate,String gtimeHHMMSS, String branchName) throws Throwable
 	{
-		
-		
-		
-		manualAlarmModule.click();
-		Thread.sleep(2000);
-		
-		
-		if  (branchName.equals("1" ) )
-		{
-			
-			alarmTemplateL.click();
-
-		
-		}
-		
-		else if (branchName.equals("2"))
-		{
-			alarmTemplateT.click();
-			
-		}
-		
-		else if (branchName.equals("3"))
-			{
-			alarmTemplateD.click();
-				
-				
-			}		
-		Thread.sleep(2000);
-		
-
+		Actions act= new Actions (driver);
 		refreshFilter.click();
 		Thread.sleep(2000);
+		 titleSearch.click();
+		    Thread.sleep(500);
+		
+		    titleSearchField.click();
+		    Thread.sleep(500);
+		
+		    act.sendKeys(NewTemplate).perform();
+	
+			Thread.sleep(500);
+			titleSearchFieldOk.click();
+			Thread.sleep(2000);
 			
+			actionButton.click();
+			Thread.sleep(2000);
+			createAlarmButton.click();
+			Thread.sleep(2000);
+			usersAndResources.click();
+			Thread.sleep(1000);
+			generateAlarm.click();
+			Thread.sleep(1000);
+			yesCreate.click();
+			Thread.sleep(10000);
+			
+			String title = "BG-MA by newly added tem -" + gTodaysDate+"_"+gtimeHHMMSS;
+			
+			
+			String expectedTitle = firstItemTitle.getText();
+			
+			 
+			
+			Assert.assertTrue(
+					title.contains(expectedTitle),
+			        RED+"Alarm not added."
+			);
+	
+			
+			System.out.println(GREEN+title);
+		
 		
 		
 		
@@ -140,6 +172,7 @@ public class I_AlarmTemplate extends b_baseClass {
 		
 		
 	}
+	
 	
 	
 	
@@ -153,18 +186,20 @@ public class I_AlarmTemplate extends b_baseClass {
 		alarmTemplateTitleField.click();
 		String title = "BG_AT by Atrribute_"+gTodaysDate+"_"+gtimeHHMMSS;
 		act.sendKeys(title).perform();
-
+		Thread.sleep(2000);
+	
 		
-		
-		selectTemplateStationFiled.click();
-
-		act.sendKeys(St1N).perform();
+//		selectTemplateStationFiled.click();
+		act.sendKeys(Keys.TAB).perform();
 		Thread.sleep(1000);
+		act.sendKeys(St1N).perform();
+		Thread.sleep(1500);
 		act.sendKeys(Keys.ENTER).perform();
 		Thread.sleep(1000);
 		
-		selectAlarmStationsField.click();
-		
+//		selectAlarmStationsField.click();
+		act.sendKeys(Keys.TAB).perform();
+		Thread.sleep(1000);
 		act.sendKeys(St2N).perform();
 		Thread.sleep(1000);
 		act.sendKeys(Keys.ENTER).perform();
@@ -181,7 +216,7 @@ public class I_AlarmTemplate extends b_baseClass {
 		
 		 
 		
-		act.sendKeys("BG Alarm by newly created template by attribute -" + gTodaysDate+"_"+gtimeHHMMSS).build().perform();
+	act.sendKeys("BG-MA by newly added tem -" + gTodaysDate+"_"+gtimeHHMMSS).build().perform();
 	
 	alarmImage.click();
 	
@@ -305,10 +340,7 @@ public class I_AlarmTemplate extends b_baseClass {
 		Thread.sleep(500);
 		
 		yesCreateTemplate.click();
-		
-	
-		System.out.println("Alarm Template-"+title+" added");
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		
 		FileInputStream in = new FileInputStream(filePath);
 		XSSFWorkbook wb = new XSSFWorkbook(in);
@@ -325,12 +357,23 @@ public class I_AlarmTemplate extends b_baseClass {
 		wb.close();
 
 		
+		String expectedTitle = firstItemTitle.getText();
+		Assert.assertTrue(
+				title.contains(expectedTitle),
+		        RED+"Template not added."
+		);
+
+		
+		System.out.println(GREEN+title);
+		
+		
 		
 		
 	}
 	
 	public void createNewAlarmTemplateByResource (WebDriver driver, String gTodaysDate,String gtimeHHMMSS, String St2N, String St1N, String st01R1, String st02R1 ) throws Throwable
 	{	
+		
 		Actions act= new Actions (driver);
 		
 		createNew.click();
@@ -338,15 +381,17 @@ public class I_AlarmTemplate extends b_baseClass {
 		alarmTemplateTitleField.click();
 		String title = "BG_AT by Resource_"+gTodaysDate+"_"+gtimeHHMMSS;
 		act.sendKeys(title).perform();
-		selectTemplateStationFiled.click();
-
+//		selectTemplateStationFiled.click();
+		act.sendKeys(Keys.TAB).perform();
+		Thread.sleep(1000);
 		act.sendKeys(St1N).perform();
 		Thread.sleep(1000);
 		act.sendKeys(Keys.ENTER).perform();
 		Thread.sleep(1000);
 		
-		selectAlarmStationsField.click();
-		
+//		selectAlarmStationsField.click();
+		act.sendKeys(Keys.TAB).perform();
+		Thread.sleep(1000);
 		act.sendKeys(St2N).perform();
 		Thread.sleep(1000);
 		act.sendKeys(Keys.ENTER).perform();
@@ -363,7 +408,7 @@ public class I_AlarmTemplate extends b_baseClass {
 		
 		 
 		
-		act.sendKeys("Alarm template by resource -" + gTodaysDate+"_"+gtimeHHMMSS).build().perform();
+		act.sendKeys("BG - Alarm template by resource -" + gTodaysDate+"_"+gtimeHHMMSS).build().perform();
 	
 	alarmImage.click();
 	
@@ -480,10 +525,21 @@ public class I_AlarmTemplate extends b_baseClass {
 		Thread.sleep(500);
 		
 		yesCreateTemplate.click();
-		
+		Thread.sleep(5000);
 	
-		System.out.println("Alarm Template-"+title+" added");
-		Thread.sleep(3000);
+		String expectedTitle = firstItemTitle.getText();
+		
+		Assert.assertTrue(
+				title.contains(expectedTitle),
+		        RED+"Template not added."
+		);
+
+		
+		System.out.println(GREEN+title);
+		
+		
+		
+		
 		
 	}
 	
@@ -496,14 +552,18 @@ public class I_AlarmTemplate extends b_baseClass {
 		alarmTemplateTitleField.click();
 		String title = "BG_AT by fire fighter_"+gTodaysDate+"_"+gtimeHHMMSS;
 		act.sendKeys(title).perform();
-		selectTemplateStationFiled.click();
+//		selectTemplateStationFiled.click();
+		act.sendKeys(Keys.TAB).perform();
+		Thread.sleep(1000);
 
 		act.sendKeys(St1N).perform();
 		Thread.sleep(1000);
 		act.sendKeys(Keys.ENTER).perform();
 		Thread.sleep(1000);
 		
-		selectAlarmStationsField.click();
+//		selectAlarmStationsField.click();
+		act.sendKeys(Keys.TAB).perform();
+		Thread.sleep(1000);
 		
 		act.sendKeys(St2N).perform();
 		Thread.sleep(1000);
@@ -521,7 +581,7 @@ public class I_AlarmTemplate extends b_baseClass {
 		
 		 
 		
-		act.sendKeys("Alarm template by resource -" + gTodaysDate+"_"+gtimeHHMMSS).build().perform();
+		act.sendKeys("Bg Alarm template by resource -" + gTodaysDate+"_"+gtimeHHMMSS).build().perform();
 	
 	alarmImage.click();
 	
@@ -661,10 +721,17 @@ public class I_AlarmTemplate extends b_baseClass {
 		Thread.sleep(500);
 		
 		yesCreateTemplate.click();
+		Thread.sleep(5000);
 		
-	
-		System.out.println("Alarm Template-"+title+" added");
-		Thread.sleep(3000);
+		String expectedTitle = firstItemTitle.getText();
+		Assert.assertTrue(
+				title.contains(expectedTitle),
+		        RED+"Template not added."
+		);
+
+		
+		System.out.println(GREEN+title);
+		
 		
 	}
 	
@@ -719,7 +786,7 @@ public class I_AlarmTemplate extends b_baseClass {
 		
 
 			System.out.println("The iteration has been completed.");
-			System.out.println("Total >>>>>" + totalTemplateCountCount + "<<<<< alarms deleted successfully.");
+			System.out.println(GREEN+"Total >>>>>" + totalTemplateCountCount + "<<<<< alarms deleted successfully.");
 		
 		
 			    refreshFilter.click();
@@ -727,6 +794,51 @@ public class I_AlarmTemplate extends b_baseClass {
 		
 			 
 			}
+	
+	
+	public void  commonAlarmTemplate (WebDriver driver, String  branchName) throws Throwable
+	{
+		
+		
+		
+//		manualAlarmModule.click();
+		Thread.sleep(2000);
+		
+		
+		if  (branchName.equals("1" ) )
+		{
+			
+			driver.navigate().to("https://admin.retteralarm.de/admin/alarm-template/list");
+
+		
+		}
+		
+		else if (branchName.equals("2"))
+		{
+			driver.navigate().to("https://development.retteralarm.de/admin/Users/index");
+			
+		}
+		
+		else if (branchName.equals("3"))
+			{
+			driver.navigate().to("https://admin.retteralarm.de/admin/alarm-template/list");
+				
+				
+			}		
+		Thread.sleep(2000);
+		
+
+		refreshFilter.click();
+		Thread.sleep(2000);
+			
+		
+		
+		
+		
+		
+		
+		
+	}
 	
 	
 	

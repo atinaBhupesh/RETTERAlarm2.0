@@ -14,6 +14,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 	
 	public class G_resource extends b_baseClass{
 		
@@ -24,14 +25,14 @@ import org.openqa.selenium.support.PageFactory;
 	 @FindBy(xpath="//a[@href=\"http://admin.testing.retteralarm.de/verify-user?returnUrl=/admin/alarm-resource/list\"]")private WebElement manageResourceT;
 	 @FindBy(xpath="//a[@href=\"https://admin.development.retteralarm.de/verify-user?returnUrl=/admin/alarm-resource/list\"]")private WebElement manageResourceD;
 	 
-		@FindBy(xpath="(//div[@class=\"dx-button-content\"])[3]")private WebElement refreshFilter;
-	@FindBy(xpath="//button[@class=\"btn-success btn-x30\"]")private WebElement createNew;
+		@FindBy(xpath="//div[@aria-label=\"Refresh\"]")private WebElement refreshFilter;
+		@FindBy(xpath ="//button[@class=\"btn-success btn-x30\"]") private WebElement createNewButton;
 	@FindBy(xpath="//input[@placeholder=\"Stations\"]")private WebElement resourceStation;
 	@FindBy(xpath="//input[@name=\"name\"]")private WebElement resourceNameField;
 	@FindBy(xpath="//input[@placeholder=\"Select Vehicles/Cars\"]")private WebElement vehicleField ;
 	@FindBy(xpath="(//input[@placeholder=\"Select...\"])[1]")private WebElement station1FirefighterField;
 	@FindBy(xpath="(//input[@placeholder=\"Select...\"])[2]")private WebElement station2FirefighterField;
-	@FindBy(xpath="//span[text()=\"Save\"]")private WebElement saveResource;
+	@FindBy(xpath="//div[@aria-label=\"Save\"]")private WebElement saveResource;
 
 	@FindBy(xpath="//div[@aria-label=\"Items per page: 100\"]")private WebElement itemPepage100;
 	@FindBy(xpath="//input[@placeholder=\"Search\"]")private WebElement searchField;
@@ -40,7 +41,7 @@ import org.openqa.selenium.support.PageFactory;
 	@FindBy(xpath="//i[@class=\"ri ri-delete-bin-6-line\"]")private WebElement deleteAll;
 	@FindBy(xpath="//div[@aria-label=\"Yes, Delete\"]")private WebElement yesDelete;
 	@FindBy(xpath="//span[contains(text(), 'Bg') or contains(text(), 'BG')]")private List<WebElement> BGResource;
-	// @FindBy(xpath="")private WebElement ;
+	 @FindBy(xpath="(//td[@role=\"gridcell\"])[4]")private WebElement firstItemTitle;
 	// @FindBy(xpath="")private WebElement ;
 	// @FindBy(xpath="")private WebElement ;
 	// @FindBy(xpath="")private WebElement ;
@@ -77,36 +78,33 @@ import org.openqa.selenium.support.PageFactory;
 	public void commonResource( WebDriver driver, String branchName ) throws Throwable
 	{
 		
-	manualAlarmModule.click();
+//	manualAlarmModule.click();
 	Thread.sleep(2000);
 	
 
-	if  (branchName.equals("1" ) )
-	{
-		
-		manageResourceL.click();
-
+	 switch (branchName)
+	 {
+	 case "1":
+	 {
+	  driver.navigate().to("https://admin.retteralarm.de/admin/alarm-resource/list");
+	  break; 
+	 }
+	 case "2":
+	 {
+	  driver.navigate().to("https://admin.testing.retteralarm.de/admin/alarm-resource/list");
+	  break; 
+	 }
+	 case "3":
+	 {
+	  driver.navigate().to("https://admin.development.retteralarm.de/admin/alarm-resource/list");
+	  break; 
+	 }
+	 
+	 }
 	
-	}
-	
-	else if (branchName.equals("2"))
-	{
-		manageResourceT.click();
-		
-	}
-	
-	else if (branchName.equals("3"))
-		{
-		manageResourceD.click();
-			
-			
-		}		
 	Thread.sleep(2000);
-	
-
 	refreshFilter.click();
-	Thread.sleep(2000);
-		
+	Thread.sleep(4000);
 		
 		
 		
@@ -115,14 +113,15 @@ import org.openqa.selenium.support.PageFactory;
 	
 	
 	
-	public void createNewResourceEsc(WebDriver driver,String St01N,String gTodaysDate, String gtimeHHMMSS,String St1V3,String st01FF2  ) throws Throwable
+	public void createNewEscalationResource(WebDriver driver,String St01N,String gTodaysDate, String gtimeHHMMSS,String St1V3,String st01FF2  ) throws Throwable
 	{
+		 
 		Actions act = new Actions(driver);
 		String filePath = ".\\DataFiles\\DetailsFile.xlsx";
 		
-	 
 	
-		createNew.click();
+	
+		createNewButton.click();
 		Thread.sleep(3000);
 		resourceStation.click();
 		
@@ -131,8 +130,8 @@ import org.openqa.selenium.support.PageFactory;
 		Thread.sleep(2000);
 		act.sendKeys(Keys.ENTER).perform();
 		resourceNameField.click();
-		String resourceName= "BG_ResourceEsc_"+gTodaysDate+"_"+gtimeHHMMSS;
-		act.sendKeys(resourceName).perform();
+		String title= "BG_Escaltion Resource_"+gTodaysDate+"_"+gtimeHHMMSS;
+		act.sendKeys(title).perform();
 		
 		
 	
@@ -146,20 +145,20 @@ import org.openqa.selenium.support.PageFactory;
 
 		
 		
-		station1FirefighterField.click();
+		Thread.sleep(1000);
+	
+		act.sendKeys(Keys.TAB).perform();
+		Thread.sleep(1000);
 		act.sendKeys(st01FF2).perform();
 		Thread.sleep(2000);
 		act.sendKeys(Keys.ENTER).perform();
-	
-		
-		
 		
 		Thread.sleep(3000);
 		saveResource.click();
 		
-		System.out.println("Resource-"+resourceName+" added.");
 		
-		Thread.sleep(3000);
+		
+		Thread.sleep(5000);
 		
 		
 		
@@ -168,7 +167,7 @@ import org.openqa.selenium.support.PageFactory;
 		XSSFSheet sheet = wb.getSheetAt(0);
 
 		Row row = sheet.createRow(24); // Row 23
-		row.createCell(1).setCellValue(resourceName); // Cell B
+		row.createCell(1).setCellValue(title); // Cell B
 
 		in.close();
 
@@ -177,6 +176,18 @@ import org.openqa.selenium.support.PageFactory;
 		out.close();
 		wb.close();
 		
+
+		String expectedTitle = firstItemTitle.getText();
+		
+		 
+		
+		Assert.assertTrue(
+				title.contains(expectedTitle),
+		        RED+" New Escalation Resource not added."
+		);
+
+		
+		System.out.println(GREEN+title);
 		
 		
 	
@@ -189,9 +200,9 @@ import org.openqa.selenium.support.PageFactory;
 	{
 		Actions act = new Actions(driver);
 		String filePath = ".\\DataFiles\\DetailsFile.xlsx";
-		
+
 	
-		createNew.click();
+		createNewButton.click();
 		Thread.sleep(3000);
 		resourceStation.click();
 		
@@ -205,8 +216,8 @@ import org.openqa.selenium.support.PageFactory;
 		Thread.sleep(2000);
 		act.sendKeys(Keys.ENTER).perform();
 		resourceNameField.click();
-		String resourceName= "BG_Resource_"+gTodaysDate+"_"+gtimeHHMMSS;
-		act.sendKeys(resourceName).perform();
+		String title= "BG_Resource_"+gTodaysDate+"_"+gtimeHHMMSS;
+		act.sendKeys(title).perform();
 		
 		
 	
@@ -223,24 +234,31 @@ import org.openqa.selenium.support.PageFactory;
 
 		act.keyDown(Keys.CONTROL).sendKeys("A").keyUp(Keys.CONTROL).sendKeys(Keys.BACK_SPACE).build().perform();
 		
-		station1FirefighterField.click();
+//		station1FirefighterField.click();
+		act.sendKeys(Keys.TAB).perform();
+		Thread.sleep(1000);
 		act.sendKeys(st01FF1).perform();
 		Thread.sleep(2000);
 		act.sendKeys(Keys.ENTER).perform();
 	
 		act.keyDown(Keys.CONTROL).sendKeys("A").keyUp(Keys.CONTROL).sendKeys(Keys.BACK_SPACE).build().perform();
-		station2FirefighterField.click();
+		
+//		station2FirefighterField.click();
+		
+		act.sendKeys(Keys.TAB).perform();
 		act.sendKeys(st02FF1).perform();
+
 		Thread.sleep(1000);
+	
 		act.sendKeys(Keys.ENTER).perform();
 		
+		act.keyDown(Keys.CONTROL).sendKeys("A").keyUp(Keys.CONTROL).sendKeys(Keys.BACK_SPACE).build().perform();
 		
 		Thread.sleep(3000);
 		saveResource.click();
 		
-		System.out.println("Resource-"+resourceName+" added.");
 		
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		
 		
 		
@@ -249,7 +267,7 @@ import org.openqa.selenium.support.PageFactory;
 		XSSFSheet sheet = wb.getSheetAt(0);
 
 		Row row = sheet.createRow(21); // Row 22
-		row.createCell(1).setCellValue(resourceName); // Cell B
+		row.createCell(1).setCellValue(title); // Cell B
 
 		in.close();
 
@@ -258,7 +276,17 @@ import org.openqa.selenium.support.PageFactory;
 		out.close();
 		wb.close();
 		
+		String expectedTitle = firstItemTitle.getText();
 		
+		 
+		
+		Assert.assertTrue(
+				title.contains(expectedTitle),
+		        RED+" Ne Resource not added."
+		);
+
+		
+		System.out.println(GREEN+title);
 		
 	
 	
@@ -339,7 +367,7 @@ import org.openqa.selenium.support.PageFactory;
 		    }
 		
 		System.out.println("The iteration has been completed.");
-		System.out.println("Total >>>>>" + totalResourceCount + "<<<<< alarms deleted successfully.");
+		System.out.println(GREEN+"Total >>>>>" + totalResourceCount + "<<<<< resource deleted successfully.");
 		
 			    refreshFilter.click();
 			    Thread.sleep(2000);

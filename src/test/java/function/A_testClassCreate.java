@@ -23,16 +23,30 @@ public class A_testClassCreate extends b_baseClass {
 	H_alarmLoop al;
 	I_AlarmTemplate at;
 	J_alarmEscalation ae;
+	K_calendar cl;
+	L_Information info;
 
 	
 	String gTodaysDate;
+	String gTomorrowDate;
 	String gtimeHHMMSS;
+	String germanyTimeAfter5MinHH;
+	String germanyTimeAfter5MinMM;
+	String germanyTimeAfter20MinHH;
+	String germanyTimeAfter20MinMM;
+	
+	String germanyTimeAfter1Hrs5MinHH;
+	String germanyTimeAfter1Hrs5MinMM;
+	String germanyTimeAfter1Hrs20MinHH;
+	String germanyTimeAfter1Hrs20MinMM;
+	
 	
 	@BeforeSuite	
 	public void BeforeSuite () throws Throwable
 	{
 		getDetailsFromUser();
 		lonchBrowser();
+		getDetailsFromFiles();
 		
 		
 	
@@ -44,20 +58,22 @@ public class A_testClassCreate extends b_baseClass {
 
 		lp= new C_logIn_logOut (driver);
 		tc = new E_timeClass ();
+		hp= new D_homePage(driver) ;
 
 		Reporter.log("Logged in user-"+userName,true);
 		lp.logInUser(userName, password, driver);
+		hp.langChange(driver);
 		
 		Thread.sleep(2000);
 		
-		hp= new D_homePage(driver) ;
+		
 		hp.langChange(driver);
 		mr = new G_resource(driver) ;
 		al  =new H_alarmLoop (driver) ;
 		at= new I_AlarmTemplate (driver) ;
 		ae=new J_alarmEscalation (driver);
-		
-		
+		cl = new K_calendar (driver);
+		info= new L_Information (driver) ;
 	
 		
 		
@@ -74,6 +90,20 @@ public class A_testClassCreate extends b_baseClass {
 	
 		gTodaysDate=tc.germanyTodaysDate;
 		gtimeHHMMSS=tc.germanyCurrentTimeHHMMSS;
+		gTomorrowDate=tc.germanyTomorrowDate;
+		
+		 germanyTimeAfter5MinHH = tc.germanyTimeAfter5MinHH;
+		 germanyTimeAfter5MinMM=tc.germanyTimeAfter5MinMM;
+		 germanyTimeAfter20MinHH=tc.germanyTimeAfter20MinHH;
+		 germanyTimeAfter20MinMM=tc.germanyTimeAfter20MinMM;
+		 
+		 germanyTimeAfter1Hrs5MinHH =tc.germanyTimeAfter1Hrs5MinHH;
+		 germanyTimeAfter1Hrs5MinMM = tc.germanyTimeAfter1Hrs5MinMM;
+		 
+		 germanyTimeAfter1Hrs20MinHH= tc. germanyTimeAfter1Hrs20MinHH;
+		 germanyTimeAfter1Hrs20MinMM= tc.germanyTimeAfter1Hrs20MinMM;
+		
+		
 	
 		
 		ma = new F_manualAlarm (driver);
@@ -87,14 +117,398 @@ public class A_testClassCreate extends b_baseClass {
 	@BeforeMethod
 	public void backToHomePage () throws Throwable
 	{
-		Reporter.log(proEnd, true);
-		Thread.sleep(2000);
-	
-		driver.navigate().refresh();
+		switch (branchName)
+		{
+		case "1":
+		{
+		driver.navigate().to("https://live.retteralarm.de/");
+		 break;
+		}
+		
+		case "2":
+		{
+		driver.navigate().to("https://testing.retteralarm.de/");
+		 break;
+		}
+		
+		case "3":
+		{
+		driver.navigate().to("https://development.retteralarm.de/");
+		 break;
+		}
+		default:
+	         System.out.println("Branch not matched. Staying on current page.");
+	         break;
+		
+		}
+	 
+		
 		
 		Thread.sleep(2000);
+		getDetailsFromFiles();
 		
 	}
+	
+	@Test 
+	public void createEventCategory() throws Throwable
+		
+	{
+		
+		
+		Reporter.log(" ", true);
+		Reporter.log("The process for creating event category  has been initiated..", true);
+		cl.common_calendar(driver, branchName);
+		cl.createEventCategory(driver, gTodaysDate, gtimeHHMMSS);
+		Reporter.log("The process for ccreating event category has been completed successfully.", true);
+		Reporter.log(" ", true);
+		Thread.sleep(3000);
+		
+	}
+	
+	
+	@Test 
+	public void createCalendarEventByStationsMS() throws Throwable
+		
+	{
+		
+		
+		Reporter.log(" ", true);
+		Reporter.log("The process for creating calendar event by stations has been initiated..", true);
+		cl.common_calendar(driver, branchName);
+		cl.createCalendarEventByStationsMS(driver,  st01N, st02N,   gTodaysDate, gtimeHHMMSS);
+		Reporter.log("The process for creating calendar event by stations has been completed successfully.", true);
+		Reporter.log(" ", true);
+		Thread.sleep(3000);
+		
+	}
+	
+	
+	@Test 
+	public void createCalendarEventByFireFughterMS() throws Throwable
+		
+	{
+		tc.catchDateTime(driver);
+		germanyTimeAfter5MinHH = tc.germanyTimeAfter5MinHH;
+		 germanyTimeAfter5MinMM=tc.germanyTimeAfter5MinMM;
+		 germanyTimeAfter20MinHH=tc.germanyTimeAfter20MinHH;
+		 germanyTimeAfter20MinMM=tc.germanyTimeAfter20MinMM;
+		
+		
+		Reporter.log(" ", true);
+		Reporter.log("The process for creating calendar event by fire fighters has been initiated..", true);
+		cl.common_calendar(driver, branchName);
+		cl.createCalendarEventByFireFughterMS(driver,  st01N, st02N,   gTodaysDate, gtimeHHMMSS, 
+				 germanyTimeAfter5MinHH,  germanyTimeAfter5MinMM, germanyTimeAfter20MinHH, germanyTimeAfter20MinMM
+				, st01FF1, st02FF1);
+		Reporter.log("The process for creating calendar event by fire fighters has been completed successfully.", true);
+		Reporter.log(" ", true);
+		Thread.sleep(3000);
+		
+	}
+	
+	
+	@Test 
+	public void createCalendarEventByResource() throws Throwable
+		
+	{
+		tc.catchDateTime(driver);
+		 germanyTimeAfter1Hrs5MinHH =tc.germanyTimeAfter1Hrs5MinHH;
+		 germanyTimeAfter1Hrs5MinMM = tc.germanyTimeAfter1Hrs5MinMM;
+		 
+		 germanyTimeAfter1Hrs20MinHH= tc. germanyTimeAfter1Hrs20MinHH;
+		 germanyTimeAfter1Hrs20MinMM= tc.germanyTimeAfter1Hrs20MinMM;
+		
+		
+		Reporter.log(" ", true);
+		Reporter.log("The process for creating calendar event by Resource has been initiated..", true);
+		cl.common_calendar(driver, branchName);
+		cl.createCalendarEventByResource ( driver,  st01N, gTodaysDate, gtimeHHMMSS, 
+				 germanyTimeAfter1Hrs5MinHH,  germanyTimeAfter1Hrs5MinMM, germanyTimeAfter1Hrs20MinHH, germanyTimeAfter1Hrs20MinMM
+				, st01R1);
+		Reporter.log("The process for creating calendar event by Resource has been completed successfully.", true);
+		Reporter.log(" ", true);
+		Thread.sleep(3000);
+		
+	}
+	
+	@Test 
+	public void createCalendarEventByAttribute() throws Throwable
+		
+	{
+		tc.catchDateTime(driver);
+		germanyTimeAfter5MinHH = tc.germanyTimeAfter5MinHH;
+		 germanyTimeAfter5MinMM=tc.germanyTimeAfter5MinMM;
+		 germanyTimeAfter20MinHH=tc.germanyTimeAfter20MinHH;
+		 germanyTimeAfter20MinMM=tc.germanyTimeAfter20MinMM;
+		
+		
+		Reporter.log(" ", true);
+		Reporter.log("The process for creating calendar event by attribute has been initiated..", true);
+		cl.common_calendar(driver, branchName);
+		cl.createCalendarEventByAttribute(driver,  st01N, gTodaysDate, gtimeHHMMSS, 
+				 germanyTimeAfter5MinHH,  germanyTimeAfter5MinMM, germanyTimeAfter20MinHH, germanyTimeAfter20MinMM
+				, st01A1);
+		Reporter.log("The process for creating calendar event by attribute has been completed successfully.", true);
+		Reporter.log(" ", true);
+		Thread.sleep(3000);
+		
+	}
+	
+	@Test 
+	public void SendMessageTo1DayInformationEventByFireFighter() throws Throwable
+		
+	{
+		
+		
+		Reporter.log(" ", true);
+		Reporter.log("The process for sending messages for full-day Information Events using stations has been initiated..", true);
+		info.common_information( driver,  branchName);
+		
+		info.SendMessageTo1DayInformationEventByFireFighter(driver, InfoEventNameForChat,gTodaysDate,  gtimeHHMMSS,  branchName);
+		Reporter.log("The process for sending messages for full-day Information Events using stations  has been completed successfully.", true);
+		Reporter.log(" ", true);
+		Thread.sleep(3000);
+		
+	}
+	
+	@Test 
+	public void createAlarmByNewlyAddedTemplateFromTemplateModule() throws Throwable
+		
+	{
+		 
+		
+		Reporter.log(" ", true);
+		Reporter.log("The process for creating Alarm By Newly Added Template From Template Module has been initiated.", true);
+		at.commonAlarmTemplate(driver, branchName);
+		at.createAlarmByNewlyAddedTemplateFromTemplateModule(driver, NewTemplate, gTodaysDate, gtimeHHMMSS, branchName);
+		Reporter.log("The process for creating Alarm By Newly Added Template From Template Module has been completed successfully.", true);
+		Reporter.log(" ", true);
+		Thread.sleep(3000);
+		
+	}
+	
+	@Test 
+	public void createFullDayInformationEventByStation() throws Throwable
+		
+	{
+		tc.catchDateTime(driver);
+		germanyTimeAfter5MinHH = tc.germanyTimeAfter5MinHH;
+		 germanyTimeAfter5MinMM=tc.germanyTimeAfter5MinMM;
+		 germanyTimeAfter20MinHH=tc.germanyTimeAfter20MinHH;
+		 germanyTimeAfter20MinMM=tc.germanyTimeAfter20MinMM;
+		 
+		
+		Reporter.log(" ", true);
+		Reporter.log("The process for creating a new Information-Event full day using stations has been initiated.", true);
+		info.common_information( driver,  branchName);
+		
+		info.createFullDayInformationEventByStation( driver, st01N ,   st02N,  gTodaysDate, gtimeHHMMSS, gTomorrowDate,  branchName );
+		Reporter.log("The process for creating a new  Information-Event full day using stations has been completed successfully.", true);
+		Reporter.log(" ", true);
+		Thread.sleep(3000);
+		
+	}
+	
+	
+	
+	@Test 
+	public void create1DayInformationEventByFireFighter() throws Throwable
+		
+	{
+		tc.catchDateTime(driver);
+		germanyTimeAfter5MinHH = tc.germanyTimeAfter5MinHH;
+		 germanyTimeAfter5MinMM=tc.germanyTimeAfter5MinMM;
+		 germanyTimeAfter20MinHH=tc.germanyTimeAfter20MinHH;
+		 germanyTimeAfter20MinMM=tc.germanyTimeAfter20MinMM;
+		 
+		
+		Reporter.log(" ", true);
+		Reporter.log("The process for creating a new Information-Event using fire fighter  has been initiated.", true);
+		info.common_information( driver,  branchName);
+		
+		info.create1DayInformationEventByFireFighter( driver,st01N ,   st02N,  gTomorrowDate, gtimeHHMMSS, st01R1,
+				 St01M1, St01M2,  germanyTimeAfter5MinHH,  germanyTimeAfter5MinMM, 
+				  germanyTimeAfter20MinHH,   germanyTimeAfter20MinMM , st01FF1, st02FF1 , branchName );
+		Reporter.log("The process for creating a new Information-Event using fire fighter has been completed successfully.", true);
+		Reporter.log(" ", true);
+		Thread.sleep(3000);
+		
+	}
+	
+	
+	@Test 
+	public void create1HrInformationEventByResource() throws Throwable
+		
+	{
+		tc.catchDateTime(driver);
+		 germanyTimeAfter1Hrs5MinHH =tc.germanyTimeAfter1Hrs5MinHH;
+		 germanyTimeAfter1Hrs5MinMM = tc.germanyTimeAfter1Hrs5MinMM;
+		 
+		 germanyTimeAfter1Hrs20MinHH= tc. germanyTimeAfter1Hrs20MinHH;
+		 germanyTimeAfter1Hrs20MinMM= tc.germanyTimeAfter1Hrs20MinMM;
+		
+		 
+		
+		Reporter.log(" ", true);
+		Reporter.log("The process for creating a new Information-Event using resource has been initiated.", true);
+		info.common_information( driver,  branchName);
+		
+		info.create1HrInformationEventByResource( driver, st01N ,   gTodaysDate, gtimeHHMMSS, st01R1,
+				 St01M1, St01M2,  germanyTimeAfter1Hrs5MinHH, germanyTimeAfter1Hrs5MinMM, 
+				 germanyTimeAfter1Hrs20MinHH,  germanyTimeAfter1Hrs20MinMM , branchName );
+		Reporter.log("The process for creating a new Information-Event using resource has been completed successfully.", true);
+		Reporter.log(" ", true);
+		Thread.sleep(3000);
+		
+	}
+	
+	
+	@Test 
+	public void create1MinInformationEventByAttribute() throws Throwable
+		
+	{
+		tc.catchDateTime(driver);
+		germanyTimeAfter5MinHH = tc.germanyTimeAfter5MinHH;
+		 germanyTimeAfter5MinMM=tc.germanyTimeAfter5MinMM;
+		 germanyTimeAfter20MinHH=tc.germanyTimeAfter20MinHH;
+		 germanyTimeAfter20MinMM=tc.germanyTimeAfter20MinMM;
+		
+		Reporter.log(" ", true);
+		Reporter.log("The process for creating a new Information-Event using attribute has been initiated.", true);
+		info.common_information( driver,  branchName);
+		
+		info.create1MinInformationEventByAttribute( driver, st01N ,   gTodaysDate, gtimeHHMMSS, st01A1,
+				 St01M1, St01M2,  germanyTimeAfter5MinHH, germanyTimeAfter5MinMM, 
+				 germanyTimeAfter20MinHH,  germanyTimeAfter20MinMM , branchName );
+		Reporter.log("The process for creating a new Information-Event using attribute has been completed successfully.", true);
+		Reporter.log(" ", true);
+		Thread.sleep(3000);
+		
+	}
+	
+	
+	@Test 
+	public void createMonitorInformationByFireFighterForTwoStation() throws Throwable
+		
+	{
+		tc.catchDateTime(driver);
+		germanyTimeAfter5MinHH = tc.germanyTimeAfter5MinHH;
+		 germanyTimeAfter5MinMM=tc.germanyTimeAfter5MinMM;
+		 germanyTimeAfter20MinHH=tc.germanyTimeAfter20MinHH;
+		 germanyTimeAfter20MinMM=tc.germanyTimeAfter20MinMM;
+		
+		Reporter.log(" ", true);
+		Reporter.log("The process for creating a new monitor information using Fire Stations has been initiated.", true);
+		info.common_information( driver,  branchName);
+		
+		info.createMonitorInformationByFireFighterForTwoStation( driver, st01N , st02N,   gTodaysDate, gtimeHHMMSS, st01FF1,
+				 St01M1, St01M2, St02M1,  germanyTimeAfter5MinHH, germanyTimeAfter5MinMM, 
+				 st02FF1, germanyTimeAfter20MinHH,  germanyTimeAfter20MinMM , branchName);
+		Reporter.log("The process for creating a new monitor information using Stations has been completed successfully.", true);
+		Reporter.log(" ", true);
+		Thread.sleep(3000);
+		
+	}
+	
+	@Test 
+	public void createMonitorInformationByStations() throws Throwable
+		
+	{
+		tc.catchDateTime(driver);
+		germanyTimeAfter5MinHH = tc.germanyTimeAfter5MinHH;
+		 germanyTimeAfter5MinMM=tc.germanyTimeAfter5MinMM;
+		 germanyTimeAfter20MinHH=tc.germanyTimeAfter20MinHH;
+		 germanyTimeAfter20MinMM=tc.germanyTimeAfter20MinMM;
+		
+		Reporter.log(" ", true);
+		Reporter.log("The process for creating a new monitor information using Fire Stations has been initiated.", true);
+		info.common_information( driver,  branchName);
+		
+		info.createMonitorInformationByStations( driver, st01N ,   gTodaysDate, gtimeHHMMSS,
+				 St01M1, St01M2,  germanyTimeAfter5MinHH, germanyTimeAfter5MinMM, 
+				 germanyTimeAfter20MinHH,  germanyTimeAfter20MinMM , branchName);
+		Reporter.log("The process for creating a new monitor information using Stations has been completed successfully.", true);
+		Reporter.log(" ", true);
+		Thread.sleep(3000);
+		
+	}
+	
+	@Test 
+	public void createMonitorInformationByFireFighter() throws Throwable
+		
+	{
+		tc.catchDateTime(driver);
+		germanyTimeAfter5MinHH = tc.germanyTimeAfter5MinHH;
+		 germanyTimeAfter5MinMM=tc.germanyTimeAfter5MinMM;
+		 germanyTimeAfter20MinHH=tc.germanyTimeAfter20MinHH;
+		 germanyTimeAfter20MinMM=tc.germanyTimeAfter20MinMM;
+		
+		Reporter.log(" ", true);
+		Reporter.log("The process for creating a new monitor information using Fire Fighters has been initiated.", true);
+		info.common_information( driver,  branchName);
+		
+		info.createMonitorInformationByFireFighter(driver, st01N ,gTodaysDate, gtimeHHMMSS, st01FF1, St01M1, St01M2,  germanyTimeAfter5MinHH, 
+				germanyTimeAfter5MinMM, germanyTimeAfter20MinHH, germanyTimeAfter20MinMM,  branchName);
+		Reporter.log("The process for creating a new monitor information using Fire Fighters has been completed successfully.", true);
+		Reporter.log(" ", true);
+		Thread.sleep(3000);
+		
+	}
+	
+	@Test 
+	public void createMonitorInformationByResource() throws Throwable
+		
+	{
+		tc.catchDateTime(driver);
+		germanyTimeAfter5MinHH = tc.germanyTimeAfter5MinHH;
+		 germanyTimeAfter5MinMM=tc.germanyTimeAfter5MinMM;
+		 germanyTimeAfter20MinHH=tc.germanyTimeAfter20MinHH;
+		 germanyTimeAfter20MinMM=tc.germanyTimeAfter20MinMM;
+		
+		Reporter.log(" ", true);
+		Reporter.log("The process for creating a new monitor information using Resource has been initiated.", true);
+		info.common_information( driver,  branchName);
+		
+		info.createMonitorInformationByResource(driver, st01N ,gTodaysDate, gtimeHHMMSS, st01R1, St01M1, St01M2,  germanyTimeAfter5MinHH, 
+				germanyTimeAfter5MinMM, germanyTimeAfter20MinHH, germanyTimeAfter20MinMM,  branchName);
+		Reporter.log("The process for creating a new monitor information using Resource has been completed successfully.", true);
+		Reporter.log(" ", true);
+		Thread.sleep(3000);
+		
+	}
+	
+	
+	@Test 
+	public void createMonitorInformationByAttribute() throws Throwable
+		
+	{
+		tc.catchDateTime(driver);
+		germanyTimeAfter5MinHH = tc.germanyTimeAfter5MinHH;
+		 germanyTimeAfter5MinMM=tc.germanyTimeAfter5MinMM;
+		 germanyTimeAfter20MinHH=tc.germanyTimeAfter20MinHH;
+		 germanyTimeAfter20MinMM=tc.germanyTimeAfter20MinMM;
+		
+		Reporter.log(" ", true);
+		Reporter.log("The process for creating a new monitor information using attributes has been initiated.", true);
+		info.common_information( driver,  branchName);
+		
+		info.createMonitorInformationByAttribute(driver, st01N ,gTodaysDate, gtimeHHMMSS, st01A1, St01M1, St01M2,  germanyTimeAfter5MinHH, 
+				germanyTimeAfter5MinMM, germanyTimeAfter20MinHH, germanyTimeAfter20MinMM,  branchName);
+		Reporter.log("The process for creating a new monitor information using attributes has been completed successfully.", true);
+		Reporter.log(" ", true);
+		Thread.sleep(3000);
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
@@ -116,18 +530,24 @@ public class A_testClassCreate extends b_baseClass {
 	
 	
 	@Test 
-	public void createNewResourceEsc() throws Throwable
+	public void createNewEscalationResource() throws Throwable
 		
 	{
 		Reporter.log(" ", true);
 		Reporter.log("The process of creating new escaltion resource is started.", true);
 		mr.commonResource(  driver,  branchName);
-		mr.createNewResourceEsc( driver, st01N, gTodaysDate,  gtimeHHMMSS, St1V3, st01FF2);
+		mr.createNewEscalationResource( driver, st01N, gTodaysDate,  gtimeHHMMSS, St1V3, st01FF2);
 		Reporter.log("The process of creating new escaltion resource is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
 		
 	}
+	
+	
+	
+	
+	
+	
 	
 	
 	@Test 
@@ -137,7 +557,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of creating new alarm escaltion is started.", true);
 		ae.alarmEscaltionComman( driver,  deptN, branchName);
-		ae.createNewAlarmEscalation( driver, st01N );
+		ae.createNewAlarmEscalation( driver, st01N,  NewResourceEsc, branchName);
 		Reporter.log("The process of creating new aalarm escaltion is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
@@ -237,7 +657,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of send message to manual alarm user is started.", true);
 		ma.manualAlarmCommon( driver,  deptN, branchName );
-		ma.sendMessageToManualAlarmUser(driver, branchName);
+		ma.sendMessageToManualAlarmUser(driver,ManualAlarmNameForChat, gTodaysDate,  gtimeHHMMSS, branchName);
 		Reporter.log("The process of send message to manual alarm user is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
@@ -342,13 +762,13 @@ public class A_testClassCreate extends b_baseClass {
 	
 	
 	@Test 
-	public void manualAlarmByTemplate () throws Throwable
+	public void manualAlarmByOldEsclationTemplateFromSt02ToSt01 () throws Throwable
 		
 	{
 		Reporter.log(" ", true);
 		Reporter.log("The process of creating a manual alarm by template is started.", true);
 		ma.manualAlarmCommon( driver,  deptN, branchName );
-		ma.manualAlarmByTemplate (driver, st02t1);
+		ma.manualAlarmByOldEsclationTemplateFromSt02ToSt01 (driver, oldEscTemplateSt02ToSt01);
 		
 		
 		
@@ -380,7 +800,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of creating a manual alarm by new template is started.", true);
 		ma.manualAlarmCommon( driver,  deptN, branchName );
-		ma.manualAlarmByNewTemplate (driver, st02t1);
+//		ma.manualAlarmByNewTemplate (driver, st02t1);
 		
 		
 		
@@ -459,9 +879,38 @@ public class A_testClassCreate extends b_baseClass {
 	@AfterMethod
 	public void backToHomePage2 () throws Throwable
 	{
-		ma.backToOld();
 		
-		hp.backToHomePage(driver, branchName);
+		
+			switch (branchName)
+			{
+			case "1":
+			{
+			driver.navigate().to("https://live.retteralarm.de/");
+			 break;
+			}
+			
+			case "2":
+			{
+			driver.navigate().to("https://testing.retteralarm.de/");
+			 break;
+			}
+			
+			case "3":
+			{
+			driver.navigate().to("https://development.retteralarm.de/");
+			 break;
+			}
+			default:
+		         System.out.println("Branch not matched. Staying on current page.");
+		         break;
+			
+			}
+		 
+	 
+		
+		
+		Thread.sleep(2000);
+		
 	}
 	
 	@AfterClass
@@ -477,7 +926,7 @@ public class A_testClassCreate extends b_baseClass {
 	@AfterTest 
 	public void AfterTest ()
 	{
-		driver.navigate().refresh();
+		
 		Reporter.log("Refresh the URL before successfully closing the browser.", true);
 	}
 	

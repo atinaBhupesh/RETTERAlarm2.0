@@ -20,10 +20,12 @@ public class A_testClassDelte extends b_baseClass {
 	F_manualAlarm ma;
 	E_timeClass tc;
 	G_resource mr;
+	K_calendar ce;
 
 	H_alarmLoop al;
 	I_AlarmTemplate at;
 	J_alarmEscalation ae;
+	L_Information info;
 
 	
 	String gTodaysDate;
@@ -34,7 +36,7 @@ public class A_testClassDelte extends b_baseClass {
 	{
 		getDetailsFromUser();
 		lonchBrowser();
-		
+		getDetailsFromFiles();
 		
 	
 	}
@@ -45,19 +47,20 @@ public class A_testClassDelte extends b_baseClass {
 
 		lp= new C_logIn_logOut (driver);
 		tc = new E_timeClass ();
-
+		hp= new D_homePage(driver) ;
+		
 		Reporter.log("Logged in user-"+userName,true);
 		lp.logInUser(userName, password, driver);
+		hp.langChange(driver);
 		
-		hp= new D_homePage(driver) ;
 		hp.langChange(driver);
 		mr = new G_resource(driver) ;
 		al  =new H_alarmLoop (driver) ;
 		at=new I_AlarmTemplate (driver);
 		
 		ae=new J_alarmEscalation (driver);
-		
-	
+		ce=new K_calendar(driver);
+		 info= new L_Information(driver);
 		
 		
 		
@@ -88,14 +91,71 @@ public class A_testClassDelte extends b_baseClass {
 	{
 		
 	
-		Thread.sleep(2000);
+		switch (branchName)
+		{
+		case "1":
+		{
+		driver.navigate().to("https://live.retteralarm.de/");
+		 break;
+		}
 		
-		driver.navigate().refresh();
+		case "2":
+		{
+		driver.navigate().to("https://testing.retteralarm.de/");
+		 break;
+		}
+		
+		case "3":
+		{
+		driver.navigate().to("https://development.retteralarm.de/");
+		 break;
+		}
+		default:
+	         System.out.println("Branch not matched. Staying on current page.");
+	         break;
+		
+		}
+	 
+		
+		
 		
 		Thread.sleep(2000);		
 	}
 	
+	@Test 
+	public void deletedeleteEventCatogery () throws Throwable
+		
+	{
+		Reporter.log(" ", true);
+		Reporter.log("The process of delete event catogery is started.", true);
+		ce.common_calendar(driver, branchName);
+		ce.deleteEventCatogery(driver);
+		
+
+		ma.backToOld();
+		Reporter.log("The process of delete event catogery is complete.", true);
+		Reporter.log(" ", true);
+		Thread.sleep(3000);
+		
+	}
 	
+	
+	@Test 
+	public void delete_infoEvent () throws Throwable
+		
+	{
+		Reporter.log(" ", true);
+		Reporter.log("The process of delete information or event is started.", true);
+		
+		info.common_information(driver, branchName);
+		info.delete_infoEvent(driver);
+
+		ma.backToOld();
+		Reporter.log("The process of delete information or event is complete.", true);
+		Reporter.log(" ", true);
+		Thread.sleep(3000);
+		
+	}
 	
 	@Test 
 	public void deleteAlarmEscalation () throws Throwable
@@ -133,12 +193,32 @@ public class A_testClassDelte extends b_baseClass {
 		
 	}
 
+	
+	
+	
+	@Test 
+	public void deleteCalendarEvent () throws Throwable
+		
+	{
+		Reporter.log(" ", true);
+		Reporter.log("The process of delete calendar event is started.", true);
+		ce.common_calendar(driver, branchName);
+		ce.deleteCalendarEvent(driver);
+		
+
+		ma.backToOld();
+		Reporter.log("The process of delete calendar event is complete.", true);
+		Reporter.log(" ", true);
+		Thread.sleep(3000);
+		
+	}
+	
 	@Test 
 	public void deleteAlarmLoop () throws Throwable
 		
 	{
 		Reporter.log(" ", true);
-		Reporter.log("The process of delete resource is started.", true);
+		Reporter.log("The process of delete alarm loop is started.", true);
 		al.commonAlarmLoop(driver, branchName);
 		al.deleteAlarmLoop(driver);
 		
@@ -193,8 +273,34 @@ public class A_testClassDelte extends b_baseClass {
 	public void backToHomePage2 () throws Throwable
 	{
 
-		Reporter.log(proEnd, true);
-		hp.backToHomePage(driver, branchName);
+		switch (branchName)
+		{
+		case "1":
+		{
+		driver.navigate().to("https://live.retteralarm.de/");
+		 break;
+		}
+		
+		case "2":
+		{
+		driver.navigate().to("https://testing.retteralarm.de/");
+		 break;
+		}
+		
+		case "3":
+		{
+		driver.navigate().to("https://development.retteralarm.de/");
+		 break;
+		}
+		default:
+	         System.out.println("Branch not matched. Staying on current page.");
+	         break;
+		
+		}
+	 
+		
+		
+		
 	}
 	
 	@AfterClass

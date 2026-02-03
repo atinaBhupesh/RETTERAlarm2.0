@@ -5,15 +5,14 @@
     <classes>
       <class name="function.A_testClassCreate">
         <methods>
-          <include name="createNewAlarmEscalation"/>
           <include name="AfterTest"/>
           <include name="BeforeSuite"/>
           <include name="backToHomePage2"/>
           <include name="BeforeTest"/>
           <include name="backToHomePage"/>
           <include name="logOut"/>
-          <include name="manualAlarmByNewEscResource"/>
           <include name="AfterSute"/>
+          <include name="createMonitorInformationByFireFighterForTwoStation"/>
           <include name="createObject"/>
         </methods>
       </class> <!-- function.A_testClassCreate -->

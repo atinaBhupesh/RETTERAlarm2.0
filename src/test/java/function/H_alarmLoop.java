@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 	
 	public class H_alarmLoop extends b_baseClass {
 		
@@ -35,7 +36,7 @@ import org.openqa.selenium.support.PageFactory;
 		@FindBy(xpath="//i[@class=\"ri ri-delete-bin-6-line\"]")private WebElement deleteAll;
 		@FindBy(xpath="//span[text()=\"Yes, Delete\" or text()=\"Ja, löschen\" ]")private WebElement yesDelete;
 		@FindBy(xpath="//td[contains (text(),'BG')]")private List<WebElement> BGAlarmLoop ;
-		// @FindBy(xpath="")private WebElement ;
+		 @FindBy(xpath="(//td[@role=\"gridcell\"])[4]")private WebElement firstItemTitle;
 		// @FindBy(xpath="")private WebElement ;
 		// @FindBy(xpath="")private WebElement ;
 		// @FindBy(xpath="")private WebElement ;
@@ -57,54 +58,13 @@ import org.openqa.selenium.support.PageFactory;
 			
 			
 			
-			public void  commonAlarmLoop (WebDriver driver, String  branchName) throws Throwable
-			{
-				
-				
-				
-				manualAlarmModule.click();
-				Thread.sleep(2000);
-				
-				
-				if  (branchName.equals("1" ) )
-				{
-					
-					manageAlarmLoopL.click();
-
-				
-				}
-				
-				else if (branchName.equals("2"))
-				{
-					manageAlarmLoopT.click();
-					
-				}
-				
-				else if (branchName.equals("3"))
-					{
-					manageAlarmLoopD.click();
-						
-						
-					}		
-				Thread.sleep(2000);
-				
-
-				refreshFilter.click();
-				Thread.sleep(2000);
-					
-				
-				
-				
-				
-				
-				
-				
-			}
+			
 			
 			
 			public void createNewAlarmLoop (WebDriver driver, String St2N,String St1N,String gTodaysDate, String gtimeHHMMSS,String st01R1,   String St2R1 ) throws Throwable
 			{
 				Actions act = new Actions(driver);
+				
 				
 				createNew.click();
 				Thread.sleep(2000);
@@ -119,8 +79,8 @@ import org.openqa.selenium.support.PageFactory;
 				Thread.sleep(1000);
 				
 				alarmLoopNickName.click();
-				String nickName = "BG_AL_"+gTodaysDate+"_"+gtimeHHMMSS;
-				act.sendKeys(nickName).perform();
+				String title = "BG_AL_"+gTodaysDate+"_"+gtimeHHMMSS;
+				act.sendKeys(title).perform();
 				Thread.sleep(500);
 				alarmLoopCode.click();
 				act.sendKeys("AL_"+gTodaysDate+"_"+gtimeHHMMSS).perform();
@@ -137,9 +97,22 @@ import org.openqa.selenium.support.PageFactory;
 				Thread.sleep(500);
 				
 				saveAlarmLoop.click();
-				Thread.sleep(3000);
+				Thread.sleep(5000);
+			
 				
-				System.out.println("Alarm loop-"+nickName+" added.");
+			
+				String expectedTitle = firstItemTitle.getText();
+				
+				 
+				
+				Assert.assertTrue(
+						title.contains(expectedTitle),
+				        RED+"Alarm loop not added."
+				);
+		
+				
+				System.out.println(GREEN+title);
+				
 				
 				
 				
@@ -195,7 +168,7 @@ import org.openqa.selenium.support.PageFactory;
 				    }
 				
 					System.out.println("The iteration has been completed.");
-					System.out.println("Total >>>>>" + totalAlarmLoopCount + "<<<<< alarms deleted successfully.");
+					System.out.println(GREEN+"Total >>>>>" + totalAlarmLoopCount + "<<<<< alarm loops deleted successfully.");
 				
 					    refreshFilter.click();
 					    Thread.sleep(2000);
@@ -203,5 +176,52 @@ import org.openqa.selenium.support.PageFactory;
 				
 					}
 		
+			
+			public void  commonAlarmLoop (WebDriver driver, String  branchName) throws Throwable
+			{
+				
+				
+//				
+//				manualAlarmModule.click();
+				Thread.sleep(2000);
+				
+				
+				if  (branchName.equals("1" ) )
+				{
+					
+//					manageAlarmLoopL.click();
+					driver.navigate().to("https://admin.retteralarm.de/admin/alarm-loop/list");
+
+				
+				}
+				
+				else if (branchName.equals("2"))
+				{
+//					manageAlarmLoopT.click();
+					driver.navigate().to("https://admin.testing.retteralarm.de/admin/alarm-loop/list");
+					
+				}
+				
+				else if (branchName.equals("3"))
+					{
+//					manageAlarmLoopD.click();
+					driver.navigate().to("https://admin.development.retteralarm.de/admin/alarm-loop/list");
+						
+						
+					}		
+				Thread.sleep(2000);
+				
+
+				refreshFilter.click();
+				Thread.sleep(2000);
+					
+				
+				
+				
+				
+				
+				
+				
+			}
 	
 	}

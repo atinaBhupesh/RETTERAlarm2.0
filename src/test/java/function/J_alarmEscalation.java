@@ -13,6 +13,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 
 public class J_alarmEscalation extends b_baseClass{
 	
@@ -25,15 +26,15 @@ public class J_alarmEscalation extends b_baseClass{
 			@FindBy(xpath="//option[text()=\" andrew department \"]")private WebElement andrewDepartment ;
 			@FindBy(xpath="//option[text()=\" D1 \"]")private WebElement D1;
 			@FindBy(xpath="//SELECT[@class=\"form-select ng-pristine ng-valid ng-touched\"]")private WebElement selectLanguage;
-			@FindBy(xpath="(//div[@class=\"dx-button-content\"])[3]")private WebElement refreshFilter;
+			@FindBy(xpath="//i[@class=\"dx-icon dx-icon-refresh\"]")private WebElement refreshFilter;
 			
 			@FindBy(xpath = "//button[@class=\"btn-success btn-x30\"]") private WebElement createNewButton;
+			@FindBy(xpath="//label[text()=\"Stations *\"]")private WebElement sation;
 			
-			
-			 @FindBy(xpath="//input[@placeholder=\"Select...\"]")private WebElement selectStation;
+			 @FindBy(xpath="(//input[@placeholder=\"Select...\"])[3]")private WebElement selectStation;
 			@FindBy(xpath="//div[@class=\"dx-switch-handle\"]")private WebElement selectTimeFrame ;
 			 @FindBy(xpath="//input[@placeholder=\"Select Parent Resource\"]")private WebElement selectParentResource;
-			 @FindBy(xpath="//dx-select-box[@valueexpr=\"id\"]")private WebElement select1stChildResource;
+			 @FindBy(xpath="(//input[@placeholder=\"Select...\"])[4]")private WebElement select1stChildResource;
 			@FindBy(xpath="//dx-button[@title=\"Define Time Frame\"]")private WebElement timeBetweenResource1st;
 			
 			@FindBy(xpath="//span[text()=\"Anzahl der Benutzer\" or text()=\"No. of User\"]")private WebElement noOfUsers;
@@ -52,8 +53,8 @@ public class J_alarmEscalation extends b_baseClass{
 				@FindBy(xpath="(//span[@class=\"dx-checkbox-icon\"])[1]")private WebElement selectAll;
 				 @FindBy(xpath="(//div [@class=\"dx-item dx-toolbar-item dx-toolbar-button\"])[3]")private WebElement delateAll;
 					@FindBy(xpath="//div[@aria-label=\"Yes, Delete\"]")private WebElement deleteYes;
-	
-			// @FindBy(xpath="")private WebElement ;
+					@FindBy(xpath="(//td[@role=\"gridcell\"])[4]")private WebElement firstItemTitle;
+			
 			// @FindBy(xpath="")private WebElement ;
 			// @FindBy(xpath="")private WebElement ;
 			// @FindBy(xpath="")private WebElement ;
@@ -68,92 +69,58 @@ public class J_alarmEscalation extends b_baseClass{
 			}
 			
 			
-			public void alarmEscaltionComman(WebDriver driver, String deptN,String branchName ) throws Throwable {
-				
-				manualAlarmModule.click();
-				Thread.sleep(500);
-				Actions act = new Actions(driver);
-			
-			
-				
-				
-				
-				if  (branchName.equals("1" ) )
-			{
-					alarmEsclationL.click();
-				Thread.sleep(2000);
-				setting.click();
-				Thread.sleep(500);
-				
-				for (int w=0;w<=3;w++)
-					{
-					act.sendKeys(Keys.TAB).perform();
-					
-					}
-				
-				act.sendKeys(Keys.ENTER).perform();
-				Thread.sleep(2000);
-					
-			andrewDepartment.click();
-			
-			
-			}
-			
-			else if (branchName.equals("2"))
+			public void alarmEscaltionComman(WebDriver driver, String deptN,String branchName ) throws Throwable 
 			{
 				
-				alarmEsclationT.click();
-			Thread.sleep(2000);
-			setting.click();
-			Thread.sleep(500);
-			
-			for (int w=0;w<=3;w++)
+				
+				
+				
+				
+				
+				
+				
+				switch (branchName)
 				{
-				act.sendKeys(Keys.TAB).perform();
-				
+				case "1" :
+				{
+					driver.navigate().to("https://admin.retteralarm.de/admin/alarm-escalation/list");
+					break;
 				}
-			
-			act.sendKeys(Keys.ENTER).perform();
-			Thread.sleep(2000);
+				
+				case "2" :
+				{
+					driver.navigate().to("https://admin.testing.retteralarm.de/admin/alarm-escalation/list");
+					break;
+				}
+				
+				case "3" :
+				{
+					driver.navigate().to("https://admin.development.retteralarm.de/admin/alarm-escalation/list");
+					break;
+				}
+				
+				 
+				}
 				
 				
-				D1.click();
+				
+				
 			}
-			
-			else if (branchName.equals("3"))
-				{
-				alarmEsclationD.click();
-					
-				}
 				
-			
-				selectLanguage.click();
-				Thread.sleep(1000);
-				act.keyDown(Keys.SHIFT).perform();
-				for (int r=0;r<=1;r++)
-				{
-				act.sendKeys(Keys.TAB).perform();
-				
-				}
-				act.keyUp(Keys.SHIFT).perform();
-			
-			act.sendKeys(Keys.ENTER).perform();
-			Thread.sleep(2000);
-			
-			
-			 refreshFilter.click();
-			 Thread.sleep(2000);
-			
+
 			
 				
+				
+				
+		
 			
-			}
-			
-		public void createNewAlarmEscalation(WebDriver driver,String st01N ) throws Throwable 
+		public void createNewAlarmEscalation(WebDriver driver,String st01N, String NewResourceEsc,String branchNam ) throws Throwable 
 		{
 			Actions act = new Actions(driver);
 			createNewButton.click();
 			Thread.sleep(1000);
+			
+			
 			selectStation.click();
 			Thread.sleep(1000);
 			
@@ -169,18 +136,9 @@ public class J_alarmEscalation extends b_baseClass{
 		
 			
 			
-			File src = new File(".\\DataFiles\\DetailsFile.xlsx");
-
-			FileInputStream ipt = new FileInputStream(src);
-
-			XSSFWorkbook wb11 = new XSSFWorkbook(ipt);
-
-			XSSFSheet sheet11 = wb11.getSheetAt(0);
-		
-			NewResourceEsc = sheet11.getRow(24).getCell(1).getStringCellValue();
 			
-			
-			act.sendKeys(NewResourceEsc).perform();
+			String title= NewResourceEsc;
+			act.sendKeys(title).perform();
 			Thread.sleep(500);
 			act.sendKeys(Keys.ENTER).perform();
 			
@@ -233,6 +191,29 @@ public class J_alarmEscalation extends b_baseClass{
 			Thread.sleep(2000);
 			
 			saveTime1.click();
+			
+			
+
+			String expectedTitle = firstItemTitle.getText();
+			
+			 
+			
+			Assert.assertTrue(
+					title.contains(expectedTitle),
+			        RED+"Alarm loop not added."
+			);
+	
+			
+			System.out.println(GREEN+title);
+			
+			
+			
+			
+			
+			
+			
+			
+			
 		}
 			
 		
@@ -287,7 +268,7 @@ public class J_alarmEscalation extends b_baseClass{
 		    }
 		
 		System.out.println("The iteration has been completed.");
-		System.out.println("Total >>>>>" + totalAlarms + "<<<<< alarms escaltion deleted successfully.");
+		System.out.println(GREEN +"Total >>>>>" + totalAlarms + "<<<<< alarms escaltion deleted successfully.");
 		
 			    refreshFilter.click();
 			    Thread.sleep(2000);
