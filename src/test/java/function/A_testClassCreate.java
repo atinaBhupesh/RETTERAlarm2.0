@@ -117,34 +117,8 @@ public class A_testClassCreate extends b_baseClass {
 	@BeforeMethod
 	public void backToHomePage () throws Throwable
 	{
-		switch (branchName)
-		{
-		case "1":
-		{
-		driver.navigate().to("https://live.retteralarm.de/");
-		 break;
-		}
-		
-		case "2":
-		{
-		driver.navigate().to("https://testing.retteralarm.de/");
-		 break;
-		}
-		
-		case "3":
-		{
-		driver.navigate().to("https://development.retteralarm.de/");
-		 break;
-		}
-		default:
-	         System.out.println("Branch not matched. Staying on current page.");
-	         break;
-		
-		}
+		hp.backToHomePage(driver,   branchName);
 	 
-		
-		
-		Thread.sleep(2000);
 		getDetailsFromFiles();
 		
 	}
@@ -881,35 +855,12 @@ public class A_testClassCreate extends b_baseClass {
 	{
 		
 		
-			switch (branchName)
-			{
-			case "1":
-			{
-			driver.navigate().to("https://live.retteralarm.de/");
-			 break;
-			}
-			
-			case "2":
-			{
-			driver.navigate().to("https://testing.retteralarm.de/");
-			 break;
-			}
-			
-			case "3":
-			{
-			driver.navigate().to("https://development.retteralarm.de/");
-			 break;
-			}
-			default:
-		         System.out.println("Branch not matched. Staying on current page.");
-		         break;
-			
-			}
+	
+			hp.backToHomePage(driver,   branchName);
 		 
-	 
 		
+			
 		
-		Thread.sleep(2000);
 		
 	}
 	

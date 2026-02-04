@@ -741,7 +741,7 @@ public class K_calendar extends b_baseClass{
 	    }
 
 	    // Loop for 3 months
-	    for (int m = 1; m <= 3; m++) {
+	    for (int m = 1; m <= 4; m++) {
 
 	        String monthName = getMonthName.getText();
 	        Thread.sleep(1000);
@@ -781,7 +781,8 @@ public class K_calendar extends b_baseClass{
 	    }
 
 	    System.out.println(GREEN+">>>>TOTAL EVENTS DELETED: " + totalCount+" <<<<<");
-	    System.out.println();
+	   
+	    
 	}
 		 
 	

@@ -8,7 +8,7 @@
       <methods>
 		  
 		  
-		  <include name="createMonitorInformationByAttribute"  />
+	<include name="createMonitorInformationByAttribute"  />
   <include name="createMonitorInformationByResource"  />
   <include name="createMonitorInformationByFireFighter"  />
   <include name="createMonitorInformationByStations"  />

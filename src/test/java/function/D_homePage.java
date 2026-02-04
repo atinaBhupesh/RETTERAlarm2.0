@@ -32,35 +32,44 @@ public class D_homePage extends b_baseClass{
 	public void backToHomePage(WebDriver driver, String branchName) throws Throwable {
 		Actions act = new Actions(driver);
 		
-		Thread.sleep(2000);
-		driver.navigate().refresh();
+	
+		
+		
+		
+		
+		switch (branchName)
+		{
+		case "1":
+		{
+		driver.navigate().to("https://live.retteralarm.de/");
+		 break;
+		}
+		
+		case "2":
+		{
+		driver.navigate().to("https://testing.retteralarm.de/");
+		 break;
+		}
+		
+		case "3":
+		{
+		driver.navigate().to("https://development.retteralarm.de/");
+		 break;
+		}
+		default:
+	         System.out.println("Branch not matched. Staying on current page.");
+	         break;
+		
+		}
+		
+		
+		
+		
+		
+		
+		
+		
 		Thread.sleep(4000);
-		
-		
-		
-		if  (branchName.equals("1"))
-		{
-//			dashboardL.click();
-			driver.navigate().to("https://live.retteralarm.de/admin/dashboard/index");
-		}
-		
-		else if (branchName.equals("2"))
-		{
-			dashboardT.click();
-		}
-		
-		else if (branchName.equals("3"))
-		{
-			dashboardD.click();
-			
-		}
-		
-		
-		
-		
-		
-		
-		Thread.sleep(3000);
 		
 		
 

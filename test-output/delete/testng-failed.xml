@@ -6,19 +6,12 @@
       <class name="function.A_testClassDelte">
         <methods>
           <include name="AfterSute"/>
-          <include name="delete_infoEvent"/>
-          <include name="AfterTest"/>
-          <include name="deleteResource"/>
-          <include name="deletedeleteEventCatogery"/>
-          <include name="deleteAlarmEscalation"/>
           <include name="createObject"/>
-          <include name="deleteAlarmTemplate"/>
           <include name="BeforeTest"/>
-          <include name="deleteManualAlarm"/>
+          <include name="AfterTest"/>
           <include name="backToHomePage"/>
           <include name="deleteCalendarEvent"/>
           <include name="BeforeSuite"/>
-          <include name="deleteAlarmLoop"/>
           <include name="backToHomePage2"/>
           <include name="logOut"/>
         </methods>

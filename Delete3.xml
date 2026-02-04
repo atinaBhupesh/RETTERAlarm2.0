@@ -1,0 +1,8 @@
+<suite name="delete" parallel="classes" thread-count="5">
+  <test name="Test">
+    <classes>
+      <class name="function.A_testClassDelte"/>
+      <class name="function.A_testClassDelte"/>
+    </classes>
+  </test>
+</suite>

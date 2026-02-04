@@ -74,34 +74,34 @@
       <![CDATA[Good to see you again.]]>
     </line>
   </reporter-output>
-  <suite started-at="2026-02-04T18:14:13 IST" name="Suite" finished-at="2026-02-04T18:18:19 IST" duration-ms="245545">
+  <suite started-at="2026-02-04T19:06:28 IST" name="Suite" finished-at="2026-02-04T19:10:58 IST" duration-ms="269022">
     <groups>
     </groups>
-    <test started-at="2026-02-04T18:14:13 IST" name="Test" finished-at="2026-02-04T18:18:19 IST" duration-ms="245545">
+    <test started-at="2026-02-04T19:06:28 IST" name="Test" finished-at="2026-02-04T19:10:58 IST" duration-ms="269022">
       <class name="function.A_testClassCreate">
-        <test-method is-config="true" signature="BeforeSuite()[pri:0, instance:function.A_testClassCreate@710c2b53]" started-at="2026-02-04T18:14:06 IST" name="BeforeSuite" finished-at="2026-02-04T18:14:13 IST" duration-ms="7052" status="PASS">
+        <test-method is-config="true" signature="BeforeSuite()[pri:0, instance:function.A_testClassCreate@710c2b53]" started-at="2026-02-04T19:06:19 IST" name="BeforeSuite" finished-at="2026-02-04T19:06:28 IST" duration-ms="9232" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Well come to RETTERAlarm Live branch]]>
             </line>
           </reporter-output>
         </test-method> <!-- BeforeSuite -->
-        <test-method is-config="true" signature="BeforeTest()[pri:0, instance:function.A_testClassCreate@710c2b53]" started-at="2026-02-04T18:14:13 IST" name="BeforeTest" finished-at="2026-02-04T18:14:26 IST" duration-ms="12104" status="PASS">
+        <test-method is-config="true" signature="BeforeTest()[pri:0, instance:function.A_testClassCreate@710c2b53]" started-at="2026-02-04T19:06:28 IST" name="BeforeTest" finished-at="2026-02-04T19:06:44 IST" duration-ms="15330" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Logged in user-6039-DE-andrew-deptu-2]]>
             </line>
           </reporter-output>
         </test-method> <!-- BeforeTest -->
-        <test-method is-config="true" signature="createObject()[pri:0, instance:function.A_testClassCreate@710c2b53]" started-at="2026-02-04T18:14:26 IST" name="createObject" finished-at="2026-02-04T18:14:26 IST" duration-ms="9" status="PASS">
+        <test-method is-config="true" signature="createObject()[pri:0, instance:function.A_testClassCreate@710c2b53]" started-at="2026-02-04T19:06:44 IST" name="createObject" finished-at="2026-02-04T19:06:44 IST" duration-ms="10" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createObject -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@710c2b53]" started-at="2026-02-04T18:14:26 IST" name="backToHomePage" finished-at="2026-02-04T18:14:31 IST" duration-ms="5177" status="PASS">
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@710c2b53]" started-at="2026-02-04T19:06:44 IST" name="backToHomePage" finished-at="2026-02-04T19:06:51 IST" duration-ms="7500" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backToHomePage -->
-        <test-method signature="createCalendarEventByAttribute()[pri:0, instance:function.A_testClassCreate@710c2b53]" started-at="2026-02-04T18:14:31 IST" name="createCalendarEventByAttribute" finished-at="2026-02-04T18:15:20 IST" duration-ms="49341" status="PASS">
+        <test-method signature="createCalendarEventByAttribute()[pri:0, instance:function.A_testClassCreate@710c2b53]" started-at="2026-02-04T19:06:51 IST" name="createCalendarEventByAttribute" finished-at="2026-02-04T19:07:38 IST" duration-ms="46358" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[ ]]>
@@ -117,15 +117,15 @@
             </line>
           </reporter-output>
         </test-method> <!-- createCalendarEventByAttribute -->
-        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassCreate@710c2b53]" started-at="2026-02-04T18:15:20 IST" name="backToHomePage2" finished-at="2026-02-04T18:15:23 IST" duration-ms="3372" status="PASS">
+        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassCreate@710c2b53]" started-at="2026-02-04T19:07:38 IST" name="backToHomePage2" finished-at="2026-02-04T19:07:43 IST" duration-ms="5676" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backToHomePage2 -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@710c2b53]" started-at="2026-02-04T18:15:23 IST" name="backToHomePage" finished-at="2026-02-04T18:15:29 IST" duration-ms="5371" status="PASS">
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@710c2b53]" started-at="2026-02-04T19:07:43 IST" name="backToHomePage" finished-at="2026-02-04T19:07:51 IST" duration-ms="7448" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backToHomePage -->
-        <test-method signature="createCalendarEventByResource()[pri:0, instance:function.A_testClassCreate@710c2b53]" started-at="2026-02-04T18:15:29 IST" name="createCalendarEventByResource" finished-at="2026-02-04T18:16:13 IST" duration-ms="44230" status="PASS">
+        <test-method signature="createCalendarEventByResource()[pri:0, instance:function.A_testClassCreate@710c2b53]" started-at="2026-02-04T19:07:51 IST" name="createCalendarEventByResource" finished-at="2026-02-04T19:08:35 IST" duration-ms="44289" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[ ]]>
@@ -141,15 +141,15 @@
             </line>
           </reporter-output>
         </test-method> <!-- createCalendarEventByResource -->
-        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassCreate@710c2b53]" started-at="2026-02-04T18:16:13 IST" name="backToHomePage2" finished-at="2026-02-04T18:16:17 IST" duration-ms="3892" status="PASS">
+        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassCreate@710c2b53]" started-at="2026-02-04T19:08:35 IST" name="backToHomePage2" finished-at="2026-02-04T19:08:41 IST" duration-ms="6304" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backToHomePage2 -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@710c2b53]" started-at="2026-02-04T18:16:17 IST" name="backToHomePage" finished-at="2026-02-04T18:16:22 IST" duration-ms="5185" status="PASS">
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@710c2b53]" started-at="2026-02-04T19:08:41 IST" name="backToHomePage" finished-at="2026-02-04T19:08:50 IST" duration-ms="8346" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backToHomePage -->
-        <test-method signature="createCalendarEventByFireFughterMS()[pri:0, instance:function.A_testClassCreate@710c2b53]" started-at="2026-02-04T18:16:22 IST" name="createCalendarEventByFireFughterMS" finished-at="2026-02-04T18:17:15 IST" duration-ms="52843" status="PASS">
+        <test-method signature="createCalendarEventByFireFughterMS()[pri:0, instance:function.A_testClassCreate@710c2b53]" started-at="2026-02-04T19:08:50 IST" name="createCalendarEventByFireFughterMS" finished-at="2026-02-04T19:09:43 IST" duration-ms="53001" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[ ]]>
@@ -165,15 +165,15 @@
             </line>
           </reporter-output>
         </test-method> <!-- createCalendarEventByFireFughterMS -->
-        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassCreate@710c2b53]" started-at="2026-02-04T18:17:15 IST" name="backToHomePage2" finished-at="2026-02-04T18:17:19 IST" duration-ms="3906" status="PASS">
+        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassCreate@710c2b53]" started-at="2026-02-04T19:09:43 IST" name="backToHomePage2" finished-at="2026-02-04T19:09:49 IST" duration-ms="6357" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backToHomePage2 -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@710c2b53]" started-at="2026-02-04T18:17:19 IST" name="backToHomePage" finished-at="2026-02-04T18:17:25 IST" duration-ms="5827" status="PASS">
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@710c2b53]" started-at="2026-02-04T19:09:49 IST" name="backToHomePage" finished-at="2026-02-04T19:09:57 IST" duration-ms="7932" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backToHomePage -->
-        <test-method signature="createCalendarEventByStationsMS()[pri:0, instance:function.A_testClassCreate@710c2b53]" started-at="2026-02-04T18:17:25 IST" name="createCalendarEventByStationsMS" finished-at="2026-02-04T18:18:11 IST" duration-ms="46723" status="PASS">
+        <test-method signature="createCalendarEventByStationsMS()[pri:0, instance:function.A_testClassCreate@710c2b53]" started-at="2026-02-04T19:09:57 IST" name="createCalendarEventByStationsMS" finished-at="2026-02-04T19:10:47 IST" duration-ms="49832" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[ ]]>
@@ -189,11 +189,11 @@
             </line>
           </reporter-output>
         </test-method> <!-- createCalendarEventByStationsMS -->
-        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassCreate@710c2b53]" started-at="2026-02-04T18:18:11 IST" name="backToHomePage2" finished-at="2026-02-04T18:18:15 IST" duration-ms="3858" status="PASS">
+        <test-method is-config="true" signature="backToHomePage2()[pri:0, instance:function.A_testClassCreate@710c2b53]" started-at="2026-02-04T19:10:47 IST" name="backToHomePage2" finished-at="2026-02-04T19:10:53 IST" duration-ms="6579" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backToHomePage2 -->
-        <test-method is-config="true" signature="logOut()[pri:0, instance:function.A_testClassCreate@710c2b53]" started-at="2026-02-04T18:18:15 IST" name="logOut" finished-at="2026-02-04T18:18:19 IST" duration-ms="3666" status="PASS">
+        <test-method is-config="true" signature="logOut()[pri:0, instance:function.A_testClassCreate@710c2b53]" started-at="2026-02-04T19:10:53 IST" name="logOut" finished-at="2026-02-04T19:10:57 IST" duration-ms="4025" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Logout sucessfully.]]>
@@ -203,14 +203,14 @@
             </line>
           </reporter-output>
         </test-method> <!-- logOut -->
-        <test-method is-config="true" signature="AfterTest()[pri:0, instance:function.A_testClassCreate@710c2b53]" started-at="2026-02-04T18:18:19 IST" name="AfterTest" finished-at="2026-02-04T18:18:19 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="AfterTest()[pri:0, instance:function.A_testClassCreate@710c2b53]" started-at="2026-02-04T19:10:57 IST" name="AfterTest" finished-at="2026-02-04T19:10:58 IST" duration-ms="1" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Refresh the URL before successfully closing the browser.]]>
             </line>
           </reporter-output>
         </test-method> <!-- AfterTest -->
-        <test-method is-config="true" signature="AfterSute()[pri:0, instance:function.A_testClassCreate@710c2b53]" started-at="2026-02-04T18:18:19 IST" name="AfterSute" finished-at="2026-02-04T18:18:19 IST" duration-ms="167" status="PASS">
+        <test-method is-config="true" signature="AfterSute()[pri:0, instance:function.A_testClassCreate@710c2b53]" started-at="2026-02-04T19:10:58 IST" name="AfterSute" finished-at="2026-02-04T19:10:58 IST" duration-ms="160" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Browser close sucessfully.]]>
