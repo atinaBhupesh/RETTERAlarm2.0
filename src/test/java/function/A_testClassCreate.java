@@ -690,7 +690,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log("The process of send message to new api alarm user is started.", true);
 		ma.manualAlarmCommon( driver,  deptN, branchName );
 		ma.sendMessageToNewApiAlarmUser(driver, branchName);
-		Reporter.log("The process of send message to new api alarm user is complete.", true);
+		Reporter.log( "The process of send message to new api alarm user is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
 		

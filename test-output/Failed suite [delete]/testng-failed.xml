@@ -1,28 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [delete]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Test(failed)">
+<suite name="Failed suite [Failed suite [delete]]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)(failed)">
     <classes>
       <class name="function.A_testClassDelte">
         <methods>
           <include name="AfterSute"/>
-          <include name="delete_infoEvent"/>
-          <include name="AfterTest"/>
-          <include name="deleteResource"/>
-          <include name="deletedeleteEventCatogery"/>
-          <include name="deleteAlarmEscalation"/>
           <include name="createObject"/>
-          <include name="deleteAlarmTemplate"/>
           <include name="BeforeTest"/>
-          <include name="deleteManualAlarm"/>
+          <include name="AfterTest"/>
           <include name="backToHomePage"/>
           <include name="deleteCalendarEvent"/>
           <include name="BeforeSuite"/>
-          <include name="deleteAlarmLoop"/>
           <include name="backToHomePage2"/>
           <include name="logOut"/>
         </methods>
       </class> <!-- function.A_testClassDelte -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [delete] -->
+  </test> <!-- Test(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [delete]] -->

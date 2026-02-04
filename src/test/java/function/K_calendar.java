@@ -747,10 +747,10 @@ public class K_calendar extends b_baseClass{
 	        Thread.sleep(1000);
 
 	        int monthCount = 0;
-
+	        System.out.println(monthName);
 	        // Delete all events in current month
 	        while (getEventCount.size() > 0) {
-
+	        	
 	        	firstEvent.click();        // always first event
 	            Thread.sleep(1000);
 
@@ -768,11 +768,11 @@ public class K_calendar extends b_baseClass{
 
 	        if (monthCount == 0) {
 	            System.out.println("**No events available in " + monthName+"**");
-	            System.out.println();
+	           
 	
 	        } else {
 	            System.out.println(monthCount + " events deleted from " + monthName);
-	            System.out.println();
+	           
 	        }
 
 	        // Move to next month

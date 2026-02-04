@@ -10,9 +10,11 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Reporter;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class b_baseClass {
 	
@@ -99,7 +101,7 @@ public class b_baseClass {
 			    
 		}
 		
-		System.out.print("please select browser- 1 for chrome, 2 for edge,3 for firefox : ");
+		System.out.print("please select browser- 1 for chrome,1.5 for chrome headless, 2 for edge,3 for firefox : ");
 		browserName = scanner.nextLine();
 		
 		
@@ -108,6 +110,11 @@ public class b_baseClass {
 		case "1" :
 		{
 			System.out.println("*****you have selected chrome browser*****");
+			break;
+		}
+		case "1.5" :
+		{
+			System.out.println("*****you have selected chrome browser-HeadLess*****");
 			break;
 		}
 		
@@ -136,7 +143,7 @@ public class b_baseClass {
 		
 		System.out.print("Enter password: ");
 		String password = scanner.nextLine();
-
+		
 		if (branchName != null && !branchName.isEmpty() && password != null) {
 
 		    if (password.equals("123456")) {
@@ -170,21 +177,37 @@ public class b_baseClass {
 	public void lonchBrowser () throws Throwable
 	{
 		
-		if (browserName.equals("1")) {
+		switch  (browserName)
+		{
+		case "1" :
+		{
 			driver = new ChromeDriver();
-
+			break;
 		}
-
-		else if (browserName.equals("2")) {
+		case "1.5":
+		{
+			WebDriverManager.chromedriver().setup();
+	        ChromeOptions chromeOptions = new ChromeOptions();
+	        chromeOptions.addArguments("--headless=new");
+	        chromeOptions.addArguments("--window-size=1920,1080");
+	        driver = new ChromeDriver(chromeOptions);
+	        break;
+		}
+		case "2":
+		{
 			driver = new EdgeDriver();
-
+			break;
 		}
-
-		else if (browserName.equals("3")) {
+		case "3":
+		{
 			driver = new FirefoxDriver();
-
+			break;
 		}
+		default:
+	         System.out.println("Browser not matched.");
+	         break;
 		
+		}
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
 		driver.manage().window().maximize();

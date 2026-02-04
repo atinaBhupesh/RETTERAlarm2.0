@@ -256,13 +256,13 @@ public class A_testClassDelte extends b_baseClass {
 		
 	{
 		Reporter.log(" ", true);
-		Reporter.log("The process of delete manual alarm is started.", true);
+		Reporter.log("The process of delete alarms is started.", true);
 		ma.manualAlarmCommon( driver,  deptN, branchName );
 		ma.deleteManualAlarm( driver);
 
 		ma.backToOld();
 		
-		Reporter.log("The process of delete manual alarm is complete.", true);
+		Reporter.log("The process of delete alarms is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
 	

@@ -574,7 +574,7 @@ import org.testng.Reporter;
 			    Thread.sleep(2000);
 			    driver.navigate().refresh();
 			    Thread.sleep(2000);
-			    Reporter.log("Chat option not found.", true);
+			    Reporter.log("❌ Chat option not found.", true);
 			}
 			
 			
@@ -669,7 +669,7 @@ import org.testng.Reporter;
 		} else {
 
 		    Thread.sleep(2000);
-		    Reporter.log("Chat option not found.", true);
+		    Reporter.log("❌ Chat option not found.", true);
 		}
 		
 		}
@@ -879,7 +879,7 @@ import org.testng.Reporter;
 		} else {
 
 		    Thread.sleep(2000);
-		    Reporter.log("Chat option not found.", true);
+		    Reporter.log("❌ Chat option not found.", true);
 		}
 			
 			
