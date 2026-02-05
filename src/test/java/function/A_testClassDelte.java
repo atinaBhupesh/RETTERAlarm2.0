@@ -1,6 +1,7 @@
 package function;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -242,12 +243,19 @@ public class A_testClassDelte extends b_baseClass {
 	}
 	
 	@AfterMethod
-	public void backToHomePage2 () throws Throwable
+	public void backToHomePage2 (ITestResult result) throws Throwable
 	{
-
-		hp.backToHomePage(driver,   branchName);
-	 
 		
+		
+
+	    if (result.getStatus() == ITestResult.FAILURE) {
+	        System.out.println("Test Failed: " + result.getName());
+	     takeScreenshot(driver,  gTodaysDate+"_"+gtimeHHMMSS +"_"+result.getName());
+		 
+		
+	    }
+	    
+	    hp.backToHomePage(driver,   branchName);
 		
 		
 	}

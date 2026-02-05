@@ -13,7 +13,11 @@
    
     
     
-    <include name="smokeForManualAlarm"  />
+
+   <include name="sendMessageToNewApiAlarmUser"  />
+	
+	<include name="sendMessageToOldApiAlarmUser"  />
+	
     
   
 	

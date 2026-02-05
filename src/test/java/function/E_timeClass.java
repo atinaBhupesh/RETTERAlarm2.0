@@ -1,12 +1,16 @@
 package function;
 
+import java.io.File;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.TimeZone;
 
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.io.FileHandler;
 
 public class E_timeClass extends b_baseClass{
 	
@@ -95,8 +99,7 @@ public class E_timeClass extends b_baseClass{
 	
 	
 	
-	
-	
+
 	
 	
 

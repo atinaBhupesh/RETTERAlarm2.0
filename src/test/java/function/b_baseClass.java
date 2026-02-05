@@ -6,13 +6,17 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.Scanner;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.io.FileHandler;
 import org.testng.Reporter;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -340,6 +344,16 @@ public class b_baseClass {
 		    System.out.println("\u001B[31m✖ Invalid branch selected\u001B[0m");
 		}
 		
+	}
+		
+		public static void takeScreenshot(WebDriver driver, String name) throws Throwable {
+			
+	        TakesScreenshot screen = (TakesScreenshot)driver;
+	        File src = screen.getScreenshotAs(OutputType.FILE);
+	        File dest = new File ("D:\\Automation\\MasterAutomationWorkSpcae\\screenshots\\"+name+".jpg");
+	        FileHandler.copy(src, dest);
+
+//	        		System.out.println("Screenshot saved for: " + name);
 		
 		
 	
@@ -347,6 +361,5 @@ public class b_baseClass {
 	}
 	
 	
-
 
 }

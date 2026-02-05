@@ -12,6 +12,9 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
+
 public class A_testClassCreate extends b_baseClass {
 
 	
@@ -906,7 +909,7 @@ public class A_testClassCreate extends b_baseClass {
 	public void smokeForCreateManualAlarm() throws Throwable
 	{
 		ma.manualAlarmCommon(driver, deptN, branchName);
-		ma.manualAlarmByEscResourceSingleStation(driver,st01N ,gTodaysDate,gtimeHHMMSS,st01REsc);
+	ma.manualAlarmByEscResourceSingleStation(driver,st01N ,gTodaysDate,gtimeHHMMSS,st01REsc);
 	}
 	
 		
@@ -924,15 +927,19 @@ public class A_testClassCreate extends b_baseClass {
 	
 	
 	@AfterMethod
-	public void backToHomePage2 () throws Throwable
+	public void backToHomePage2 (ITestResult result) throws Throwable
 	{
 		
 		
-	
-			hp.backToHomePage(driver,   branchName);
+
+	    if (result.getStatus() == ITestResult.FAILURE) {
+	        System.out.println("Test Failed: " + result.getName());
+	     takeScreenshot(driver,  gTodaysDate+"_"+gtimeHHMMSS +"_"+result.getName());
 		 
 		
-			
+	    }
+	    
+	    hp.backToHomePage(driver,   branchName);
 		
 		
 	}
