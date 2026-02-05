@@ -75,6 +75,18 @@ import org.testng.Assert;
 		
 	}
 	
+	public void smokeForResource()
+	{
+		if(createNewButton.isDisplayed()) {
+		    System.out.println(GREEN+"Create New button for resource is visible");
+		} else {
+		    Assert.fail(RED+"Create New button is NOT displayed");
+		}
+		
+	}
+	
+	
+	
 	public void commonResource( WebDriver driver, String branchName ) throws Throwable
 	{
 		

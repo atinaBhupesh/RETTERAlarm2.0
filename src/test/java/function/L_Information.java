@@ -24,7 +24,7 @@ import org.openqa.selenium.Keys;
 	@FindBy(xpath="//a[@href=\"http://admin.testing.retteralarm.de/verify-user?returnUrl=/admin/information/list\"]")private WebElement informationT;
 	
 	
-	@FindBy(xpath="//button[@class=\"btn-success btn-x30\"]")private WebElement createNew;
+	@FindBy(xpath="//button[@class=\"btn-success btn-x30\"]")private WebElement createNewButton;
 	 @FindBy(xpath="//div[@class=\"dx-texteditor-input-container dx-tag-container\"]")private WebElement StationField ;
 	 @FindBy(xpath="(//input[@class=\"dx-texteditor-input\"])[4]")private WebElement selectType;
 	 @FindBy(xpath="//div[text()='Information']")private WebElement typeInformation;
@@ -141,6 +141,15 @@ import org.openqa.selenium.Keys;
 			PageFactory.initElements(driver, this);
 		}
 		
+		public void smokeForinformation()
+		{
+			if(createNewButton.isDisplayed()) {
+			    System.out.println(GREEN+"Create New button for information is visible");
+			} else {
+			    Assert.fail(RED+"Create New button is NOT displayed");
+			}
+			
+		}
 
 		public void SendMessageTo1DayInformationEventByFireFighter(WebDriver driver,String InfoEventNameForChat,String gTodaysDate, String gtimeHHMMSS, String branchName ) throws Throwable 
 		{
@@ -188,7 +197,7 @@ import org.openqa.selenium.Keys;
 			
 			
 			
-			createNew.click();
+			createNewButton.click();
 			Thread.sleep(2000);
 		
 			StationField.click();
@@ -297,7 +306,7 @@ import org.openqa.selenium.Keys;
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 			String filePath = ".\\DataFiles\\DetailsFile.xlsx";
 			
-			createNew.click();
+			createNewButton.click();
 			Thread.sleep(2000);
 		
 			StationField.click();
@@ -482,7 +491,7 @@ import org.openqa.selenium.Keys;
 			Actions act= new Actions (driver);
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 			
-			createNew.click();
+			createNewButton.click();
 			Thread.sleep(2000);
 		
 			StationField.click();
@@ -639,7 +648,7 @@ import org.openqa.selenium.Keys;
 			Actions act= new Actions (driver);
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 			
-			createNew.click();
+			createNewButton.click();
 			Thread.sleep(2000);
 		
 			StationField.click();
@@ -798,7 +807,7 @@ import org.openqa.selenium.Keys;
 			Actions act= new Actions (driver);
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 			
-			createNew.click();
+			createNewButton.click();
 			Thread.sleep(2000);
 		
 			StationField.click();
@@ -967,7 +976,7 @@ import org.openqa.selenium.Keys;
 			Actions act= new Actions (driver);
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 			
-			createNew.click();
+			createNewButton.click();
 			Thread.sleep(2000);
 		
 			StationField.click();
@@ -1108,7 +1117,7 @@ import org.openqa.selenium.Keys;
 			Actions act= new Actions (driver);
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 			
-			createNew.click();
+			createNewButton.click();
 			Thread.sleep(2000);
 		
 			StationField.click();
@@ -1257,7 +1266,7 @@ import org.openqa.selenium.Keys;
 			Actions act= new Actions (driver);
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 			
-			createNew.click();
+			createNewButton.click();
 			Thread.sleep(2000);
 		
 			StationField.click();
@@ -1398,7 +1407,7 @@ import org.openqa.selenium.Keys;
 			Actions act= new Actions (driver);
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 			
-			createNew.click();
+			createNewButton.click();
 			Thread.sleep(2000);
 		
 			StationField.click();

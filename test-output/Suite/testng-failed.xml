@@ -6,8 +6,8 @@
       <class name="function.A_testClassCreate">
         <methods>
           <include name="AfterTest"/>
+          <include name="smokeForManualAlarm"/>
           <include name="BeforeSuite"/>
-          <include name="createCalendarEventByAttribute"/>
           <include name="backToHomePage2"/>
           <include name="BeforeTest"/>
           <include name="logOut"/>

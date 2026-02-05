@@ -19,7 +19,7 @@ public class A_testClassCreate extends b_baseClass {
 	D_homePage hp;
 	F_manualAlarm ma;
 	E_timeClass tc;
-	G_resource mr;
+	G_resource ar;
 	H_alarmLoop al;
 	I_AlarmTemplate at;
 	J_alarmEscalation ae;
@@ -68,7 +68,7 @@ public class A_testClassCreate extends b_baseClass {
 		
 		
 		hp.langChange(driver);
-		mr = new G_resource(driver) ;
+		ar = new G_resource(driver) ;
 		al  =new H_alarmLoop (driver) ;
 		at= new I_AlarmTemplate (driver) ;
 		ae=new J_alarmEscalation (driver);
@@ -509,8 +509,8 @@ public class A_testClassCreate extends b_baseClass {
 	{
 		Reporter.log(" ", true);
 		Reporter.log("The process of creating new escaltion resource is started.", true);
-		mr.commonResource(  driver,  branchName);
-		mr.createNewEscalationResource( driver, st01N, gTodaysDate,  gtimeHHMMSS, St1V3, st01FF2);
+		ar.commonResource(  driver,  branchName);
+		ar.createNewEscalationResource( driver, st01N, gTodaysDate,  gtimeHHMMSS, St1V3, st01FF2);
 		Reporter.log("The process of creating new escaltion resource is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
@@ -530,7 +530,7 @@ public class A_testClassCreate extends b_baseClass {
 	{
 		Reporter.log(" ", true);
 		Reporter.log("The process of creating new alarm escaltion is started.", true);
-		ae.alarmEscaltionComman( driver,  deptN, branchName);
+		ae.alarmEscaltionComman( driver,   branchName);
 		ae.createNewAlarmEscalation( driver, st01N,  NewResourceEsc, branchName);
 		Reporter.log("The process of creating new aalarm escaltion is complete.", true);
 		Reporter.log(" ", true);
@@ -607,8 +607,8 @@ public class A_testClassCreate extends b_baseClass {
 	{
 		Reporter.log(" ", true);
 		Reporter.log("The process of creating new alarm resource is started.", true);
-		mr.commonResource( driver,  branchName);
-		mr.createNewResource( driver, st02N, st01N, gTodaysDate,  gtimeHHMMSS, st02V1, st01V1, st01FF1,st02FF1);
+		ar.commonResource( driver,  branchName);
+		ar.createNewResource( driver, st02N, st01N, gTodaysDate,  gtimeHHMMSS, st02V1, st01V1, st01FF1,st02FF1);
 		Reporter.log("The process of creating new alarm resource is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
@@ -837,6 +837,79 @@ public class A_testClassCreate extends b_baseClass {
 	}
 	
 	
+	// Smoke 
+	
+	@Test 
+	public void smokeForManualAlarm() throws Throwable
+	{
+		ma.manualAlarmCommon(driver, deptN, branchName);
+		ma.smokeForManualAlarm();
+		
+	}
+	@Test 
+	public void smokeForResource() throws Throwable
+	{
+		ar.commonResource(driver, branchName);
+		ar.smokeForResource();
+		
+	}
+	
+	@Test
+	public void smokeForAlrmLoop() throws Throwable 
+	{
+		
+		al.commonAlarmLoop(driver, branchName);
+		al.smokeForAlrmLoop();
+	
+	}
+	@Test
+	public void smokeAlarmTemplate() throws Throwable
+	{
+		at.commonAlarmTemplate(driver, branchName);
+		at.smokeAlarmTemplate();
+		
+	}
+	@Test
+		public void smokeForEscalation() throws Throwable
+		{
+		
+		ae.alarmEscaltionComman(driver, branchName);
+		ae.smokeForEscalation();
+		}
+		
+	@Test
+		public void smokeForCalendar() throws Throwable
+		{
+		
+		
+		cl.common_calendar(driver, branchName);
+		cl.smokeForCalendar();
+		}
+	@Test
+		public void smokeForEventCategory() throws Throwable
+		{
+		
+		cl.common_calendar(driver, branchName);
+		cl.smokeForEventCategory();
+		}
+		
+	@Test
+		public void smokeForinformation() throws Throwable
+		{
+		
+		info.common_information(driver, branchName);
+		info.smokeForinformation();
+		
+		}
+	
+	@Test 
+	public void smokeForCreateManualAlarm() throws Throwable
+	{
+		ma.manualAlarmCommon(driver, deptN, branchName);
+		ma.manualAlarmByEscResourceSingleStation(driver,st01N ,gTodaysDate,gtimeHHMMSS,st01REsc);
+	}
+	
+		
 	
 	
 	

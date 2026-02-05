@@ -68,7 +68,9 @@ public class b_baseClass {
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("Enter the branch name > for live-1, for Testing-2, for development-3 : ");
 		System.out.println();
-		branchName= scanner.nextLine();
+//		branchName= scanner.nextLine();
+		branchName= "1";
+		
 		
 		switch (branchName)
 		{
@@ -102,7 +104,8 @@ public class b_baseClass {
 		}
 		
 		System.out.print("please select browser- 1 for chrome,1.5 for chrome headless, 2 for edge,3 for firefox : ");
-		browserName = scanner.nextLine();
+//		browserName = scanner.nextLine();
+		browserName = "1";
 		
 		
 		switch (browserName)
@@ -142,7 +145,9 @@ public class b_baseClass {
 		}
 		
 		System.out.print("Enter password: ");
-		String password = scanner.nextLine();
+		String password ;
+//		password = scanner.nextLine();
+		password = "123456";
 		
 		if (branchName != null && !branchName.isEmpty() && password != null) {
 

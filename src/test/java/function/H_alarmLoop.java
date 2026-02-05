@@ -20,7 +20,7 @@ import org.testng.Assert;
 		@FindBy(xpath="//a[@href=\"https://admin.development.retteralarm.de/verify-user?returnUrl=/admin/alarm-loop/list\"]")private WebElement  manageAlarmLoopD;
 		
 		@FindBy(xpath="//i[@class=\"dx-icon dx-icon-refresh\"]")private WebElement refreshFilter;
-		@FindBy(xpath="//button[@class=\"btn-success btn-x30\"]")private WebElement createNew;
+		@FindBy(xpath="//button[@class=\"btn-success btn-x30\"]")private WebElement createNewButton;
 		@FindBy(xpath="//span[text()=\"Stations\"   or text()=\"Wache/Stationen\" ]")private WebElement alarmLoopStation;
 		@FindBy(xpath="//input[@name=\"nickname\"]")private WebElement alarmLoopNickName;
 		@FindBy(xpath="//input[@name=\"alarmcode\"]")private WebElement alarmLoopCode ;
@@ -56,7 +56,15 @@ import org.testng.Assert;
 				
 			}
 			
-			
+			public void smokeForAlrmLoop()
+			{
+				if(createNewButton.isDisplayed()) {
+				    System.out.println(GREEN+"Create New button for alarm loop is visible");
+				} else {
+				    Assert.fail(RED+"Create New button is NOT displayed");
+				}
+				
+			}
 			
 			
 			
@@ -66,7 +74,7 @@ import org.testng.Assert;
 				Actions act = new Actions(driver);
 				
 				
-				createNew.click();
+				createNewButton.click();
 				Thread.sleep(2000);
 				alarmLoopStation.click();
 				act.sendKeys(St2N).perform();

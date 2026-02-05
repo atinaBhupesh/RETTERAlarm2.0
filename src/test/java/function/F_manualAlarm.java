@@ -172,6 +172,18 @@ import org.testng.Reporter;
 		}
 		
 		
+		public void smokeForManualAlarm()
+		{
+			if(createNewButton.isDisplayed()) {
+			    System.out.println(GREEN+"Create New button for manual alarm is visible");
+			} else {
+			    Assert.fail(RED+"Create New button is NOT displayed");
+			}
+			
+		}
+		
+		
+		
 		public void manualAlarmCommon(WebDriver driver, String deptN,String branchName ) throws Throwable 
 		{
 		

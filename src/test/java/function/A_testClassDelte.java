@@ -19,7 +19,7 @@ public class A_testClassDelte extends b_baseClass {
 	D_homePage hp;
 	F_manualAlarm ma;
 	E_timeClass tc;
-	G_resource mr;
+	G_resource ar;
 	K_calendar ce;
 
 	H_alarmLoop al;
@@ -54,7 +54,7 @@ public class A_testClassDelte extends b_baseClass {
 		hp.langChange(driver);
 		
 		hp.langChange(driver);
-		mr = new G_resource(driver) ;
+		ar = new G_resource(driver) ;
 		al  =new H_alarmLoop (driver) ;
 		at=new I_AlarmTemplate (driver);
 		
@@ -135,7 +135,7 @@ public class A_testClassDelte extends b_baseClass {
 	{
 		Reporter.log(" ", true);
 		Reporter.log("The process of delete AlarmEscalation is started.", true);
-		ae.alarmEscaltionComman( driver,  deptN, branchName);
+		ae.alarmEscaltionComman( driver,   branchName);
 		ae.deleteAlarmEscalation(driver);
 		
 
@@ -210,8 +210,8 @@ public class A_testClassDelte extends b_baseClass {
 	{
 		Reporter.log(" ", true);
 		Reporter.log("The process of delete alarm resource is started.", true);
-		mr.commonResource(driver, branchName);
-		mr.deleteResource(driver);
+		ar.commonResource(driver, branchName);
+		ar.deleteResource(driver);
 		
 
 //		ma.backToOld();

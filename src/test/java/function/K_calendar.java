@@ -22,7 +22,7 @@ public class K_calendar extends b_baseClass{
 
 		
 	
-		@FindBy(xpath="//span[text()=\"Create New\"]")private WebElement createNew;
+		@FindBy(xpath="//span[text()=\"Create New\"]")private WebElement createNewButton;
 		 @FindBy(xpath="(//input[@class=\"dx-texteditor-input\"])[9]")private WebElement eventLocation;
 		 @FindBy(xpath="(//div[@class=\"dx-dropdowneditor-icon\"])[7]")private WebElement startDate;
 		@FindBy(xpath="(//div[@class=\"dx-dropdowneditor-icon\"])[8]")private WebElement endDate;
@@ -118,6 +118,31 @@ public class K_calendar extends b_baseClass{
 	}
 	
 	
+	public void smokeForCalendar()
+	{
+		if(createNewButton.isDisplayed()) {
+		    System.out.println(GREEN+"Create New button for calendar is visible");
+		} else {
+		    Assert.fail(RED+"Create New button is NOT displayed");
+		}
+		
+	}
+	
+	
+	public void smokeForEventCategory()
+	{
+		manageEventCategory.click();
+		
+		if(createNew1.isDisplayed()) {
+		    System.out.println(GREEN+"Create New button for event category is visible");
+		} else {
+		    Assert.fail(RED+"Create New button is NOT displayed");
+		}
+		
+	}
+	
+	
+	
 	public void createEventCategory(WebDriver driver, String gTodaysDate , String gtimeHHMMSS) throws Throwable 
 	{
 		Actions act= new Actions (driver);
@@ -210,7 +235,7 @@ public class K_calendar extends b_baseClass{
 			) throws Throwable
 	{
 		Actions act= new Actions (driver);
-		createNew.click();
+		createNewButton.click();
 		Thread.sleep(1000);
 		act.sendKeys(Keys.TAB, Keys.TAB).perform();
 		Thread.sleep(1000);
@@ -332,7 +357,7 @@ public class K_calendar extends b_baseClass{
 			,String st01FF1,String st02FF1) throws Throwable
 	{
 		Actions act= new Actions (driver);
-		createNew.click();
+		createNewButton.click();
 		Thread.sleep(1000);
 		act.sendKeys(Keys.TAB, Keys.TAB).perform();
 		Thread.sleep(1000);
@@ -449,7 +474,7 @@ public class K_calendar extends b_baseClass{
 			,String st01R1) throws Throwable
 	{
 		Actions act= new Actions (driver);
-		createNew.click();
+		createNewButton.click();
 		Thread.sleep(1000);
 		act.sendKeys(Keys.TAB, Keys.TAB).perform();
 		Thread.sleep(1000);
@@ -548,7 +573,7 @@ public class K_calendar extends b_baseClass{
 			,String st01A1) throws Throwable
 	{
 		Actions act= new Actions (driver);
-		createNew.click();
+		createNewButton.click();
 		Thread.sleep(1000);
 		act.sendKeys(Keys.TAB, Keys.TAB).perform();
 		Thread.sleep(1000);

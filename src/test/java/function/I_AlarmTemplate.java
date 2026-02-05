@@ -29,7 +29,7 @@ public class I_AlarmTemplate extends b_baseClass {
 	@FindBy(xpath="//a[@href=\"https://admin.development.retteralarm.de/verify-user?returnUrl=/admin/alarm-template/list\"]")private WebElement  alarmTemplateD;
 	
 	@FindBy(xpath="//div[@aria-label=\"Refresh\"]")private WebElement refreshFilter;
-	@FindBy(xpath="//button[@class=\"btn-success btn-x30\"]")private WebElement createNew;
+	@FindBy(xpath="//button[@class=\"btn-success btn-x30\"]")private WebElement createNewButton;
 	
 	@FindBy(xpath="//input[@name=\"title\"]")private WebElement alarmTemplateTitleField ;
 	@FindBy(xpath="//input[@id=\"dx_dx-a5838d56-d52e-6b5c-9fac-18217d499561_selectedTemplateStation\"]")private WebElement selectTemplateStationFiled ;
@@ -121,6 +121,17 @@ public class I_AlarmTemplate extends b_baseClass {
 		
 	}
 	
+	
+	public void smokeAlarmTemplate()
+	{
+		if(createNewButton.isDisplayed()) {
+		    System.out.println(GREEN+"Create New button for alarm template is visible");
+		} else {
+		    Assert.fail(RED+"Create New button is NOT displayed");
+		}
+		
+	}
+	
 	public void createAlarmByNewlyAddedTemplateFromTemplateModule(WebDriver driver,String NewTemplate,String gTodaysDate,String gtimeHHMMSS, String branchName) throws Throwable
 	{
 		Actions act= new Actions (driver);
@@ -181,7 +192,7 @@ public class I_AlarmTemplate extends b_baseClass {
 		Actions act= new Actions (driver);
 		String filePath = ".\\DataFiles\\DetailsFile.xlsx";
 		
-		createNew.click();
+		createNewButton.click();
 		Thread.sleep(2000);
 		alarmTemplateTitleField.click();
 		String title = "BG_AT by Atrribute_"+gTodaysDate+"_"+gtimeHHMMSS;
@@ -376,7 +387,7 @@ public class I_AlarmTemplate extends b_baseClass {
 		
 		Actions act= new Actions (driver);
 		
-		createNew.click();
+		createNewButton.click();
 		Thread.sleep(2000);
 		alarmTemplateTitleField.click();
 		String title = "BG_AT by Resource_"+gTodaysDate+"_"+gtimeHHMMSS;
@@ -547,7 +558,7 @@ public class I_AlarmTemplate extends b_baseClass {
 	public void createNewAlarmTemplateByFireFighter (WebDriver driver, String gTodaysDate,String gtimeHHMMSS, String St2N, String St1N, String st01V1, String st02V1,String st01FF1, String st02FF1 ) throws Throwable
 	{	
 		Actions act= new Actions (driver);
-		createNew.click();
+		createNewButton.click();
 		Thread.sleep(2000);
 		alarmTemplateTitleField.click();
 		String title = "BG_AT by fire fighter_"+gTodaysDate+"_"+gtimeHHMMSS;

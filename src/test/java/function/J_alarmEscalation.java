@@ -68,17 +68,21 @@ public class J_alarmEscalation extends b_baseClass{
 				PageFactory.initElements(driver, this);
 			}
 			
+			public void smokeForEscalation()
+			{
+				if(createNewButton.isDisplayed()) {
+				    System.out.println(GREEN+"Create New button for escalation is visible");
+				} else {
+				    Assert.fail(RED+"Create New button is NOT displayed");
+				}
+				
+			}
 			
-			public void alarmEscaltionComman(WebDriver driver, String deptN,String branchName ) throws Throwable 
+			
+			public void alarmEscaltionComman(WebDriver driver, String branchName ) throws Throwable 
 			{
 				
-				
-				
-				
-				
-				
-				
-				
+					
 				switch (branchName)
 				{
 				case "1" :
