@@ -45,23 +45,23 @@
   <include name="createMonitorInformationByFireFighterForTwoStation"  />
     
    <include name="create1MinInformationEventByAttribute"  />
-   	<include name="create1HrInformationEventByResource"  />
-    <include name="create1DayInformationEventByFireFighter"  />
-    <include name="createFullDayInformationEventByStation"  />
-     <include name="SendMessageTo1DayInformationEventByFireFighter"  />
+   <include name="create1HrInformationEventByResource"  />
+   <include name="create1DayInformationEventByFireFighter"  />
+   <include name="createFullDayInformationEventByStation"  />
+   <include name="SendMessageTo1DayInformationEventByFireFighter"  />
     
     
     <include name="createCalendarEventByAttribute"  />
-     <include name="createCalendarEventByResource"  />
-      <include name="createCalendarEventByFireFughterMS"  />
-         <include name="createCalendarEventByStationsMS"  />
+    <include name="createCalendarEventByResource"  />
+    <include name="createCalendarEventByFireFughterMS"  />
+    <include name="createCalendarEventByStationsMS"  />
 
   
     <include name="createNewAlarmTemplateByResource"  />
     <include name="createNewAlarmTemplateByFirefighter"  />
    
     <include name="createNewAlarmLoop"  />
-     <include name="createEventCategory"  />
+    <include name="createEventCategory"  />
     
 
    

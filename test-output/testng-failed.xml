@@ -7,13 +7,12 @@
         <methods>
           <include name="AfterTest"/>
           <include name="BeforeSuite"/>
-          <include name="sendMessageToOldApiAlarmUser"/>
+          <include name="TCManualAlarmByResourceMs"/>
           <include name="backToHomePage2"/>
           <include name="BeforeTest"/>
           <include name="logOut"/>
           <include name="backToHomePage"/>
           <include name="AfterSute"/>
-          <include name="sendMessageToNewApiAlarmUser"/>
           <include name="createObject"/>
         </methods>
       </class> <!-- function.A_testClassCreate -->

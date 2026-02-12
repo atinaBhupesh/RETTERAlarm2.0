@@ -14,7 +14,8 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 		import org.openqa.selenium.Dimension;
-		import org.openqa.selenium.Keys;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 		import org.openqa.selenium.WebDriver;
 		import org.openqa.selenium.WebElement;
 		import org.openqa.selenium.interactions.Actions;
@@ -160,16 +161,293 @@ import org.testng.Reporter;
 	
 			@FindBy(xpath="(//li[@class='replies'])[last()]/p") private WebElement messageText;
 			@FindBy(xpath="(//td[@role=\"gridcell\"])[4]")private WebElement firstItemTitle;
-		// @FindBy(xpath="")private WebElement ;
-		// @FindBy(xpath="")private WebElement ;
-		// @FindBy(xpath="")private WebElement ;
-		// @FindBy(xpath="")private WebElement ;
-		// @FindBy(xpath="")private WebElement ;
-		// @FindBy(xpath="")private WebElement ;
-		
+			
+		 @FindBy(xpath="//h2[text()=\"Alarm List\"]")private WebElement alarmListTitle;
+		@FindBy(xpath="//h2[text()=\"Create Alarm\"]")private WebElement createAlarmTitle;
+		 @FindBy(xpath="//span[text()=\"Next\"]")private WebElement nextButton;
+		 @FindBy(xpath="//div[text()=\"Fire Station is required\"]")private WebElement fireStaionIsRequriedValidation;
+		 @FindBy(xpath="//div[text()=\"Keyword is required\"]")private WebElement keywordIsRequriedValidation;
+		 @FindBy(xpath="//div[text()=\"Alarm details are required\"]")private WebElement alarmDetailsAreRequired;
+		 @FindBy(xpath="//div[text()=\"andrew station 01\"]")private WebElement andrewStation01Title;
+		 @FindBy(xpath="//div[text()=\"andrew station 06\"]")private WebElement andrewStation06Title;
+		 @FindBy(xpath="//div[text()=\"andrew station 07\"]")private WebElement andrewStation07Title;
+		 @FindBy(xpath="//INPUT[@name=\"additionalFields[0]\"]")private WebElement addIconAdditionalInformation;
+		 @FindBy(xpath="//INPUT[@name=\"additionalFields[1]\"]")private WebElement addIconAdditionalInformation1;
+			 @FindBy(xpath="//span[text()=\"Address\"]")private WebElement addressTitle;
+			@FindBy(xpath="//span[text()=\"Latitude\"]")private WebElement latitudeTitle;
+			@FindBy(xpath="//span[text()=\"Drag marker on the map\"]")private WebElement dragMarkerOnTheMapTitle;
+			@FindBy(xpath="//input[@id=\"dx_dx-3d99c10e-ac65-385c-d512-2313332d2f5c_latitude\"]")private WebElement latitudeInputField;
+			 @FindBy(xpath="//input[@id=\"dx_dx-3d99c10e-ac65-385c-d512-2313332d2f5c_longitude\"]")private WebElement longitudeInputField ;
+			// @FindBy(xpath="")private WebElement ;
+			// @FindBy(xpath="")private WebElement ;
+			// @FindBy(xpath="")private WebElement ;
+			// @FindBy(xpath="")private WebElement ;
+			// @FindBy(xpath="")private WebElement ;
+			// @FindBy(xpath="")private WebElement ;
+			// @FindBy(xpath="")private WebElement ;
+			// @FindBy(xpath="")private WebElement ;
+			// @FindBy(xpath="")private WebElement ;
+			// @FindBy(xpath="")private WebElement ;
+			// @FindBy(xpath="")private WebElement ;
+			// @FindBy(xpath="")private WebElement ;
+			// @FindBy(xpath="")private WebElement ;
+			// @FindBy(xpath="")private WebElement ;
+			// @FindBy(xpath="")private WebElement ;
+			// @FindBy(xpath="")private WebElement ;
+			// @FindBy(xpath="")private WebElement ;
+			// @FindBy(xpath="")private WebElement ;
+			
 		public F_manualAlarm(WebDriver driver) {
 			PageFactory.initElements(driver, this);
 		}
+		
+		public void TCManualAlarmByResourceMs (WebDriver driver,String St1N,String St2N, String gTodaysDate, String gtimeHHMMSS,String st01R1, String st01R2 ) throws Throwable
+		{
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			Actions act = new Actions(driver);
+			Robot robot = new Robot();
+			
+			
+			if (alarmListTitle.isDisplayed()&&createNewButton.isDisplayed())
+			{
+				System.out.println(GREEN + "TC_Alarm_001 — Verify Navigation to Amarm List Page.");
+			}
+			
+			if (createNewButton.isDisplayed())
+			{
+				System.out.println(GREEN + "TC_Alarm_002 — Verify Create Button Visibility.");
+			}
+			
+
+			// Create new alarm
+			createNewButton.click();
+			Thread.sleep(1000);
+			
+			if (createAlarmTitle.isDisplayed())
+			{
+				System.out.println(GREEN + "TC_Alarm_003 — Verify Navigation to basic information of Amarm Page.");
+			}
+			
+			nextButton.click();
+			Thread.sleep(1000);
+			if (fireStaionIsRequriedValidation.isDisplayed()&&keywordIsRequriedValidation.isDisplayed()&&alarmDetailsAreRequired.isDisplayed())
+			{
+				System.out.println(GREEN + "TC_Alarm_004 — Verify Required Validation for Station, Keyword, Alarm Details");
+			}
+			
+
+			fireStationField.click();
+			Thread.sleep(1000);
+			
+			if (andrewStation01Title.isDisplayed()&&andrewStation06Title.isDisplayed()&&andrewStation07Title.isDisplayed())
+			{
+				System.out.println(GREEN + "TC_Alarm_005 — Verify that the station list is displayed");
+			}
+			
+			
+			
+
+			// Select Fire Stations
+			act.sendKeys(St1N).perform();
+			Thread.sleep(2000);
+			
+			
+			
+			
+			
+			act.sendKeys(Keys.ENTER).perform();
+			Thread.sleep(500);
+
+			act.sendKeys(St2N).perform();
+			Thread.sleep(500);
+			act.sendKeys(Keys.ENTER).perform();
+
+			// Alarm details
+			alarmKeyword.click();
+			String title="BG-MA by resource-" + gTodaysDate + "_" + gtimeHHMMSS;
+			act.sendKeys(title).perform();
+
+			alarmImage.click();
+			act.sendKeys("Image-manual alarm by resource checking.").perform();
+
+			descriptionField.click();
+			act.sendKeys("BG-manual alarm by resource checking.").perform();
+			
+		
+
+			// Reporter details
+			reporter.click();
+			Thread.sleep(500);
+			
+
+			if (reporterName.isDisplayed()&&reporterStreet.isDisplayed()&&reporterZipCode.isDisplayed()&&reporterMobileNo.isDisplayed()&&reporterCallback.isDisplayed())
+			{
+				System.out.println(GREEN + "TC_Alarm_006 — Verify the visibility of the Reporter Name, Street, Zip Code, Mobile Number, and Callback fields.");
+			}
+			
+			
+			
+
+			reporterName.click();
+			act.sendKeys("Dr. Sumit Raghute").perform();
+
+			reporterStreet.click();
+			act.sendKeys("Kharbi Road, Nagpur").perform();
+
+			reporterZipCode.click();
+			act.sendKeys("440009").perform();
+
+			reporterMobileNo.click();
+			act.sendKeys("1122334455").perform();
+
+			reporterCallback.click();
+			act.sendKeys("10").perform();
+			Thread.sleep(500);
+
+			
+			// Incident details
+			act.sendKeys(Keys.TAB)
+			   .sendKeys(Keys.ENTER).build().perform();
+//			additionalFields.click();
+			Thread.sleep(500);
+//			addIconAdditionalInformation.click();
+			
+			
+			if (addIconAdditionalInformation.isDisplayed())
+			{
+				System.out.println(GREEN + "TC_Alarm_007 — Verify the visibility of the ‘Enter Additional’ field after clicking on the Additional Field title");
+			}
+			
+			
+			js.executeScript("arguments[0].scrollIntoView(true);", nextButton);
+			act.sendKeys(Keys.PAGE_DOWN).perform();
+			Thread.sleep(1000);
+			act .sendKeys(Keys.TAB)
+			   .perform();
+			act.sendKeys("fire at hospital.").perform();
+		
+
+			act.sendKeys(Keys.TAB,Keys.ENTER).perform();
+			
+			if (addIconAdditionalInformation1.isDisplayed())
+			{
+				System.out.println(GREEN + "TC_Alarm_008 — Verify the visibility of the ‘Enter Additional 2’ field after clicking on the add Additional Field button");
+			}
+			
+
+			js.executeScript("arguments[0].scrollIntoView(true);", nextButton);
+			act.sendKeys(Keys.PAGE_DOWN).perform();
+			Thread.sleep(1000);
+			nextButton.click();
+			Thread.sleep(1000);
+			
+//			
+//			Thread.sleep(500);
+//			robot.mouseWheel(5);
+//			act.sendKeys(Keys.ENTER).perform();
+
+			if (addressTitle.isDisplayed()&&latitudeTitle.isDisplayed()&&dragMarkerOnTheMapTitle.isDisplayed())
+			{
+				System.out.println(GREEN + "TC_Alarm_008 — Verify Navigation to address of Amarm Page.");
+			}
+			
+			
+			if (alarmAddress.isDisplayed()&&latitudeInputField.isDisplayed()&&longitudeInputField.isDisplayed())
+			{
+				System.out.println(GREEN + "TC_Alarm_009 — Verify the visibility of Address, Latitude,logitude inpu fields");
+			}
+			
+		
+			
+			// Alarm address
+			alarmAddress.click();
+			act.sendKeys(
+			        "YES Hospital, Plot no. 1 & 1A, Dighori Flyover Square, Dighori, Nagpur, Maharashtra 440017"
+			).perform();
+
+			// Tab navigation
+			for (int i = 0; i <= 9; i++) {
+			    act.sendKeys(Keys.TAB).perform();
+			}
+
+			// Additional address info
+			additionalAddressInformation.click();
+			Thread.sleep(500);
+
+			alarmObject.click();
+			act.sendKeys("hospital").perform();
+
+			alarmFloor.click();
+			act.sendKeys("ground floor").perform();
+
+			alarmAnnotation.click();
+			act.sendKeys("alarm annotation").perform();
+			Thread.sleep(1000);
+
+			act.sendKeys(Keys.TAB)
+			   .sendKeys(Keys.ENTER)
+			   .perform();
+
+			Thread.sleep(2000);
+
+			// Resource selection
+			userTypeResource.click();
+			Thread.sleep(500);
+
+			resourceField1.click();
+			act.sendKeys(st01R1).perform();
+			Thread.sleep(500);
+			act.sendKeys(Keys.ENTER).perform();
+			Thread.sleep(500);
+
+			resourceField2.click();
+			act.sendKeys(st01R2).perform();
+			Thread.sleep(500);
+			act.sendKeys(Keys.ENTER).perform();
+			Thread.sleep(1000);
+
+			act.sendKeys(Keys.TAB).perform();
+
+			// Generate alarm
+//			generateAlarm.click();
+//			Thread.sleep(500);
+//			yesCreate.click();
+//			Thread.sleep(500);
+			
+		
+			String expectedTitle = firstItemTitle.getText();
+			
+			 
+			
+			Assert.assertTrue(
+					title.contains(expectedTitle),
+			        RED+"Alarm not added."
+			);
+	
+			
+			System.out.println(GREEN+title);
+		
+		
+		
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		public void smokeForManualAlarm()
@@ -311,6 +589,15 @@ import org.testng.Reporter;
 			act.sendKeys("alarm annotation").perform();
 
 			act.sendKeys(Keys.TAB).sendKeys(Keys.ENTER).perform();
+			
+			
+			
+			
+			
+			
+			
+			
+			
 
 			/* Resource Selection */
 			userTypeResource.click();
@@ -586,7 +873,7 @@ import org.testng.Reporter;
 			    Thread.sleep(2000);
 			    driver.navigate().refresh();
 			    Thread.sleep(2000);
-			    Reporter.log("❌ Chat option not found.", true);
+			    Reporter.log(RED+"Chat option not found.", true);
 			}
 			
 			
@@ -681,7 +968,7 @@ import org.testng.Reporter;
 		} else {
 
 		    Thread.sleep(2000);
-		    Reporter.log("❌ Chat option not found.", true);
+		    Reporter.log(RED+"Chat option not found.", true);
 		}
 		
 		}
@@ -891,7 +1178,7 @@ import org.testng.Reporter;
 		} else {
 
 		    Thread.sleep(2000);
-		    Reporter.log("❌ Chat option not found.", true);
+		    Reporter.log(RED+"Chat option not found.", true);
 		}
 			
 			
@@ -2177,6 +2464,8 @@ import org.testng.Reporter;
 			    dashboard2.click();
 			    Thread.sleep(2000);
 			}
+
+			
 			
 		
 		}

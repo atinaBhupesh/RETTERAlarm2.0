@@ -14,9 +14,9 @@
     
     
 
-   <include name="sendMessageToNewApiAlarmUser"  />
+   <include name="TCManualAlarmByResourceMs"  />
 	
-	<include name="sendMessageToOldApiAlarmUser"  />
+	
 	
     
   
