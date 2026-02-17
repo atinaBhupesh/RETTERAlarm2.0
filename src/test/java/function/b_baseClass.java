@@ -61,8 +61,9 @@ public class b_baseClass {
 	public static final String RESET_COLOR = "\u001B[0m";
 	String GREEN = GREEN_COLOR + "\u2714 " + RESET_COLOR;
 	String RED = RED_COLOR + "\u2716 " + RESET_COLOR;
-	String ManualAlarmNameForChat;
+	String ManualAlarmNameForChatNewApi;
 	String oldEscTemplateSt02ToSt01;
+	String ManualAlarmNameForChatOldApi;
 
 	String proEnd = "|*******************************************************|";
 
@@ -266,8 +267,9 @@ public class b_baseClass {
 			St01M2 = sheet.getRow(26).getCell(1).getStringCellValue();
 			St02M1 = sheet.getRow(27).getCell(1).getStringCellValue();
 			InfoEventNameForChat = sheet.getRow(28).getCell(1).getStringCellValue();
-			ManualAlarmNameForChat = sheet.getRow(29).getCell(1).getStringCellValue();
+			ManualAlarmNameForChatNewApi = sheet.getRow(29).getCell(1).getStringCellValue();
 			oldEscTemplateSt02ToSt01 = sheet.getRow(30).getCell(1).getStringCellValue();
+			ManualAlarmNameForChatOldApi = sheet.getRow(31).getCell(1).getStringCellValue();
 
 			break;
 

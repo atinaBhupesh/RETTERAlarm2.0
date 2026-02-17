@@ -48,7 +48,7 @@ public class A_testClassCreate extends b_baseClass {
 		getDetailsFromUser();
 		lonchBrowser();
 		getDetailsFromFiles();
-		
+
 	}
 
 	@BeforeTest
@@ -105,7 +105,57 @@ public class A_testClassCreate extends b_baseClass {
 		getDetailsFromFiles();
 
 	}
+
+	@Test
+	public void TCAlarmTemplateCheckingValidation() throws Throwable
+
+	{
+		Reporter.log(" ", true);
+		Reporter.log("The process of Checking Alarm template validation is started.", true);
+		at.commonAlarmTemplate(driver, branchName);
+		at.TCAlarmTemplateCheckingValidation ( driver,  gTodaysDate,  gtimeHHMMSS,  st02N,
+				 st01N,  st01V1,  st02V1,  st01A1,  st02A1);
+		
+		getDetailsFromFiles();
 	
+		at.commonAlarmTemplate(driver, branchName);
+		at.createAlarmByNewlyAddedTemplateFromTemplateModule(driver, NewTemplate, gTodaysDate, gtimeHHMMSS, branchName);
+		Reporter.log("The process of Checking Alarm template validation is complete.", true);
+		Reporter.log(" ", true);
+		Thread.sleep(3000);
+
+	}
+
+	@Test
+	public void TCNewAlarmLoopCheckingValidation() throws Throwable
+
+	{
+		Reporter.log(" ", true);
+		Reporter.log("The process of checking validation for alarm loop is started.", true);
+		al.commonAlarmLoop(driver, branchName);
+		al.TCcreateNewAlarmLoop(driver, st02N, st01N, gTodaysDate, gtimeHHMMSS, st01R1, st02R1, st02V1, st01V1, st01FF1,
+				st02FF1);
+		Reporter.log("The process of checking validation for alarm loop is complete.", true);
+		Reporter.log(" ", true);
+		Thread.sleep(3000);
+
+	}
+
+	@Test
+	public void TCResourceValidationChecking() throws Throwable
+
+	{
+		Reporter.log(" ", true);
+		Reporter.log("The process of checking validation for alarm resource is started.", true);
+		ar.commonResource(driver, branchName);
+		ar.TCResourceValidationChecking(driver, st02N, st01N, gTodaysDate, gtimeHHMMSS, st02V1, st01V1, st01FF1,
+				st02FF1);
+		Reporter.log("The process of checking validation for alarm resource is complete.", true);
+		Reporter.log(" ", true);
+		Thread.sleep(3000);
+
+	}
+
 	@Test
 	public void TCCalenderEventValidationChecking() throws Throwable
 
@@ -120,34 +170,22 @@ public class A_testClassCreate extends b_baseClass {
 		Thread.sleep(3000);
 
 	}
-	
-	
-	
+
 	@Test
-	public void TCManualAlarmByResourceMs() throws Throwable
+	public void TCManualAlarmMSCheckingValidation() throws Throwable
 
 	{
 		Reporter.log(" ", true);
 		Reporter.log("The process of checking validation for the Alarm has been initiated.", true);
 		ma.manualAlarmCommon(driver, deptN, branchName);
-		ma.TCManualAlarmByResourceMs(driver, st01N, st02N, gTodaysDate, gtimeHHMMSS, st01R1, st01R2);
+		ma.TCManualAlarmMSCheckingValidation(driver, st01N, st02N, gTodaysDate, gtimeHHMMSS, st01R1, st01R2);
 
 		Reporter.log("The process of checking validation for the Alarm has been completed.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
 
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	@Test
 	public void TCMonitorInformationValidationChecking() throws Throwable
 
@@ -159,16 +197,13 @@ public class A_testClassCreate extends b_baseClass {
 		germanyTimeAfter20MinMM = tc.germanyTimeAfter20MinMM;
 
 		Reporter.log(" ", true);
-		Reporter.log("The process for checking validation for information has been initiated.",
-				true);
+		Reporter.log("The process for checking validation for information has been initiated.", true);
 		info.common_information(driver, branchName);
 
-		info.TCMonitorInformationValidationChecking(driver, st01N,  gTodaysDate,
-				 gtimeHHMMSS,  St01M1,  St01M2,  germanyTimeAfter5MinHH,
-				 germanyTimeAfter5MinMM,  germanyTimeAfter20MinHH,  germanyTimeAfter20MinMM,
-				 branchName);
-		Reporter.log(
-				"The process for checking validation for information event has been completed successfully.",
+		info.TCMonitorInformationValidationChecking(driver, st01N, gTodaysDate, gtimeHHMMSS, St01M1, St01M2,
+				germanyTimeAfter5MinHH, germanyTimeAfter5MinMM, germanyTimeAfter20MinHH, germanyTimeAfter20MinMM,
+				branchName);
+		Reporter.log("The process for checking validation for information event has been completed successfully.",
 				true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
@@ -186,14 +221,11 @@ public class A_testClassCreate extends b_baseClass {
 		germanyTimeAfter20MinMM = tc.germanyTimeAfter20MinMM;
 
 		Reporter.log(" ", true);
-		Reporter.log("The process for checking validation for information event has been initiated.",
-				true);
+		Reporter.log("The process for checking validation for information event has been initiated.", true);
 		info.common_information(driver, branchName);
 
-		info.TCInfoeventValidationChecking(driver, st01N, st02N, gTodaysDate, gtimeHHMMSS, gTomorrowDate,
-				branchName);
-		Reporter.log(
-				"The process for checking validation for information event has been completed successfully.",
+		info.TCInfoeventValidationChecking(driver, st01N, st02N, gTodaysDate, gtimeHHMMSS, gTomorrowDate, branchName);
+		Reporter.log("The process for checking validation for information event has been completed successfully.",
 				true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
@@ -683,7 +715,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of send message to manual alarm user is started.", true);
 		ma.manualAlarmCommon(driver, deptN, branchName);
-		ma.sendMessageToManualAlarmUser(driver, ManualAlarmNameForChat, gTodaysDate, gtimeHHMMSS, branchName);
+		ma.sendMessageToManualAlarmUser(driver, ManualAlarmNameForChatNewApi, gTodaysDate, gtimeHHMMSS, branchName);
 		Reporter.log("The process of send message to manual alarm user is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
@@ -697,7 +729,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of send message to old api alarm user is started.", true);
 		ma.manualAlarmCommon(driver, deptN, branchName);
-		ma.sendMessageToOldApiAlarmUser(driver, branchName);
+		ma.sendMessageToOldApiAlarmUser(driver, ManualAlarmNameForChatOldApi,branchName);
 		Reporter.log("The process of send message to old api alarm user is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);

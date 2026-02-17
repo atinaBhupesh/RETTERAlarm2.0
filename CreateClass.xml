@@ -11,10 +11,8 @@
      
   
    
-    
-    
-
-   <include name="TCManualAlarmByResourceMs"  />
+    <include name="sendMessageToOldApiAlarmUser"  />
+	
 	
 	
 	
