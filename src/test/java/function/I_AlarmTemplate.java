@@ -144,7 +144,7 @@ public class I_AlarmTemplate extends b_baseClass {
 	private WebElement generateAlarm;
 	@FindBy(xpath = "(//span[@class=\"dx-button-text\"])[4]")
 	private WebElement yesCreate;
-	
+
 	@FindBy(xpath = "//h2[text()=\"Alarm Template\"]")
 	private WebElement alarmTemplateTitle;
 	@FindBy(xpath = "//h2[text()=\"Create Template\"]")
@@ -152,36 +152,66 @@ public class I_AlarmTemplate extends b_baseClass {
 	@FindBy(xpath = "//span[text()=\"Next\"]")
 	private WebElement nextButton;
 
-	 @FindBy(xpath="//div[text()=\"Title is required\"]")private WebElement titleIsRequriedValidation;
-	 @FindBy(xpath="//div[text()=\"Template Fire Station is required\"]")private WebElement templateFireStationIsRequriedValidation;
-	@FindBy(xpath="//div[text()=\"Alarm Fire Station is required\"]")private WebElement alarmFireStationIsRequriedValidation;
-	 @FindBy(xpath="//div[text()=\"Keyword is required\"]")private WebElement keywordIsRequriedValidation;
-	@FindBy(xpath="//div[text()=\"Alarm details are required\"]")private WebElement alarmDetailsAreRequriedValidation;
-	 @FindBy(xpath="//input[@aria-expanded=\"true\"]")private WebElement StationNameList;
-	@FindBy(xpath="//span[text()=\"Name\"]")private WebElement reporterNameTitle;
-	 @FindBy(xpath="//span[text()=\"Street\"]")private WebElement reporterStreetTitle;
-	 @FindBy(xpath="//span[text()=\"Zip Code\"]")private WebElement reporterZipCodeTitle;
-	 @FindBy(xpath="//span[text()=\"Mobile No.\"]")private WebElement reporterMobileNoTitle;
-	@FindBy(xpath="//span[text()=\"Callback\"]")private WebElement reporterCallbackTitle;
-	 @FindBy(xpath="//div[text()=\"Additional Fields\"]")private WebElement additionalFields;
-	@FindBy(xpath="//input[@name=\"additionalFields[1]\"]")private WebElement seceondAdditionalFields;
-	@FindBy(xpath="//span[text()=\"Address\"]")private WebElement adressTitle;
-	 @FindBy(xpath="//span[text()=\"Object\"]")private WebElement objectTitle;
-	 @FindBy(xpath="//span[text()=\"Floor\"]")private WebElement floorTitle;
-	@FindBy(xpath="//span[text()=\"Annotation\"]")private WebElement annotationTitle;
-	 @FindBy(xpath="(//span[text()=\"Next\"])[2]")private WebElement nextButton2 ;
-	 @FindBy(xpath="//div[text()=\"Please select atleast a type\"]")private WebElement pleaseSelectAtleastATypeValidation;
-	 @FindBy(xpath="//div[text()=\"Please select at least one attribute.\"]")private WebElement pleaseSelectAtLeastOneAttributeValidation;
-	 @FindBy(xpath="//div[text()=\"Please select at least one resource.\"]")private WebElement pleaseSelectAtLeastOneResourceValidation;
-		@FindBy(xpath="//input[@role='combobox' and @aria-haspopup='listbox']")private WebElement station01FirefighterNameList;
-		@FindBy(xpath="//div[contains(@class,'dx-tagbox')]//input[@role='combobox']")private WebElement station02FirefighterNameList;
-	 @FindBy(xpath="//div[@aria-owns=\"dx-5bee876a-d993-42c2-7a48-bf5815929b81\"]")private WebElement ReslourceNameList;
-	 @FindBy(xpath="//input[@aria-expanded=\"true\"]")private WebElement attributeNameList;
-	 @FindBy(xpath="//div[text()=\"Please select at least one firefighter.\"]")private WebElement pleaseselectAtLeastOneFighterValidation;
-	 @FindBy(xpath="//span[text()=\"Select Attributes\"]")private WebElement selectAttributeTitle ;
-	 @FindBy(xpath="//input[@id=\"dx_dx-b4abef77-2b7e-27d2-60dc-b92ded49c453_selectedResources[786689f549defc0f094e283fcc6a8ba8f5c44494]\"]")private WebElement fireStationOneResourceField;
-	 @FindBy(xpath="//div[contains(@class,'dx-tagbox')]")private WebElement fireStationOneFirefighterNameList;
-	 @FindBy(xpath="//div[contains(@class,'dx-tagbox')]//input[@role='combobox']")private WebElement fireStationTwoFirefighterNameList; // @FindBy(xpath="")private WebElement
+	@FindBy(xpath = "//div[text()=\"Title is required\"]")
+	private WebElement titleIsRequriedValidation;
+	@FindBy(xpath = "//div[text()=\"Template Fire Station is required\"]")
+	private WebElement templateFireStationIsRequriedValidation;
+	@FindBy(xpath = "//div[text()=\"Alarm Fire Station is required\"]")
+	private WebElement alarmFireStationIsRequriedValidation;
+	@FindBy(xpath = "//div[text()=\"Keyword is required\"]")
+	private WebElement keywordIsRequriedValidation;
+	@FindBy(xpath = "//div[text()=\"Alarm details are required\"]")
+	private WebElement alarmDetailsAreRequriedValidation;
+	@FindBy(xpath = "//input[@aria-expanded=\"true\"]")
+	private WebElement StationNameList;
+	@FindBy(xpath = "//span[text()=\"Name\"]")
+	private WebElement reporterNameTitle;
+	@FindBy(xpath = "//span[text()=\"Street\"]")
+	private WebElement reporterStreetTitle;
+	@FindBy(xpath = "//span[text()=\"Zip Code\"]")
+	private WebElement reporterZipCodeTitle;
+	@FindBy(xpath = "//span[text()=\"Mobile No.\"]")
+	private WebElement reporterMobileNoTitle;
+	@FindBy(xpath = "//span[text()=\"Callback\"]")
+	private WebElement reporterCallbackTitle;
+	@FindBy(xpath = "//div[text()=\"Additional Fields\"]")
+	private WebElement additionalFields;
+	@FindBy(xpath = "//input[@name=\"additionalFields[1]\"]")
+	private WebElement seceondAdditionalFields;
+	@FindBy(xpath = "//span[text()=\"Address\"]")
+	private WebElement adressTitle;
+	@FindBy(xpath = "//span[text()=\"Object\"]")
+	private WebElement objectTitle;
+	@FindBy(xpath = "//span[text()=\"Floor\"]")
+	private WebElement floorTitle;
+	@FindBy(xpath = "//span[text()=\"Annotation\"]")
+	private WebElement annotationTitle;
+	@FindBy(xpath = "(//span[text()=\"Next\"])[2]")
+	private WebElement nextButton2;
+	@FindBy(xpath = "//div[text()=\"Please select atleast a type\"]")
+	private WebElement pleaseSelectAtleastATypeValidation;
+	@FindBy(xpath = "//div[text()=\"Please select at least one attribute.\"]")
+	private WebElement pleaseSelectAtLeastOneAttributeValidation;
+	@FindBy(xpath = "//div[text()=\"Please select at least one resource.\"]")
+	private WebElement pleaseSelectAtLeastOneResourceValidation;
+	@FindBy(xpath = "//input[@role='combobox' and @aria-haspopup='listbox']")
+	private WebElement station01FirefighterNameList;
+	@FindBy(xpath = "//div[contains(@class,'dx-tagbox')]//input[@role='combobox']")
+	private WebElement station02FirefighterNameList;
+	@FindBy(xpath = "//div[@aria-owns=\"dx-5bee876a-d993-42c2-7a48-bf5815929b81\"]")
+	private WebElement ReslourceNameList;
+	@FindBy(xpath = "//input[@aria-expanded=\"true\"]")
+	private WebElement attributeNameList;
+	@FindBy(xpath = "//div[text()=\"Please select at least one firefighter.\"]")
+	private WebElement pleaseselectAtLeastOneFighterValidation;
+	@FindBy(xpath = "//span[text()=\"Select Attributes\"]")
+	private WebElement selectAttributeTitle;
+	@FindBy(xpath = "//input[@id=\"dx_dx-b4abef77-2b7e-27d2-60dc-b92ded49c453_selectedResources[786689f549defc0f094e283fcc6a8ba8f5c44494]\"]")
+	private WebElement fireStationOneResourceField;
+	@FindBy(xpath = "//div[contains(@class,'dx-tagbox')]")
+	private WebElement fireStationOneFirefighterNameList;
+	@FindBy(xpath = "//div[contains(@class,'dx-tagbox')]//input[@role='combobox']")
+	private WebElement fireStationTwoFirefighterNameList; // @FindBy(xpath="")private WebElement
 	// ;
 	// @FindBy(xpath="")private WebElement ;
 	// @FindBy(xpath="")private WebElement ;
@@ -207,36 +237,31 @@ public class I_AlarmTemplate extends b_baseClass {
 
 	}
 
-	
-	
-	
-	
-	public void TCAlarmTemplateCheckingValidation (WebDriver driver, String gTodaysDate, String gtimeHHMMSS, String St2N,
+	public void TCAlarmTemplateCheckingValidation(WebDriver driver, String gTodaysDate, String gtimeHHMMSS, String St2N,
 			String St1N, String St1V1, String St2V1, String st01A1, String st02A1) throws Throwable {
 		Actions act = new Actions(driver);
 		String filePath = ".\\DataFiles\\DetailsFile.xlsx";
-		
-		if (alarmTemplateTitle.isDisplayed())
-		{
-			System.out.println(GREEN+"TC_AlarmTemplate_001 - Verify Navigation to Alarm Template Page");
+
+		if (alarmTemplateTitle.isDisplayed()) {
+			System.out.println(GREEN + "TC_AlarmTemplate_001 - Verify Navigation to Alarm Template Page");
 		}
-		
-		
+
 		if (createNewButton.isDisplayed()) {
-			System.out.println(GREEN+"TC_AlarmTemplate_002 - Verify Create Button Visibility");
-		} 
+			System.out.println(GREEN + "TC_AlarmTemplate_002 - Verify Create Button Visibility");
+		}
 
 		createNewButton.click();
 		Thread.sleep(2000);
 		nextButton.click();
 		Thread.sleep(2000);
-		
-		if (titleIsRequriedValidation.isDisplayed()&&templateFireStationIsRequriedValidation.isDisplayed()&&alarmFireStationIsRequriedValidation.isDisplayed()
-				&&keywordIsRequriedValidation.isDisplayed()&&titleIsRequriedValidation.isDisplayed()&&alarmDetailsAreRequriedValidation.isDisplayed()) {
-			System.out.println(GREEN+"TC_AlarmTemplate_003 - Verify Required Validation for Template Title, Template Fire Station, Alarm Fire Station, Keyword And Alarm Details Name");
+
+		if (titleIsRequriedValidation.isDisplayed() && templateFireStationIsRequriedValidation.isDisplayed()
+				&& alarmFireStationIsRequriedValidation.isDisplayed() && keywordIsRequriedValidation.isDisplayed()
+				&& titleIsRequriedValidation.isDisplayed() && alarmDetailsAreRequriedValidation.isDisplayed()) {
+			System.out.println(GREEN
+					+ "TC_AlarmTemplate_003 - Verify Required Validation for Template Title, Template Fire Station, Alarm Fire Station, Keyword And Alarm Details Name");
 		}
-		
-		
+
 		alarmTemplateTitleField.click();
 		String title = "BG_AT by Atrribute_" + gTodaysDate + "_" + gtimeHHMMSS;
 		act.sendKeys(title).perform();
@@ -247,11 +272,12 @@ public class I_AlarmTemplate extends b_baseClass {
 		Thread.sleep(1000);
 		act.sendKeys(St1N).perform();
 		Thread.sleep(1500);
-		
+
 		if (StationNameList.isDisplayed()) {
-			System.out.println(GREEN+"TC_AlarmTemplate_004 - Verify that the Template Fire Station list is displayed");
+			System.out
+					.println(GREEN + "TC_AlarmTemplate_004 - Verify that the Template Fire Station list is displayed");
 		}
-				
+
 		act.sendKeys(Keys.ENTER).perform();
 		Thread.sleep(1000);
 
@@ -260,13 +286,11 @@ public class I_AlarmTemplate extends b_baseClass {
 		Thread.sleep(1000);
 		act.sendKeys(St2N).perform();
 		Thread.sleep(1000);
-		
+
 		if (StationNameList.isDisplayed()) {
-			System.out.println(GREEN+"TC_AlarmTemplate_005 - Verify that the Alarm Fire Station list is displayed");
+			System.out.println(GREEN + "TC_AlarmTemplate_005 - Verify that the Alarm Fire Station list is displayed");
 		}
-		
-		
-		
+
 		act.sendKeys(Keys.ENTER).perform();
 		Thread.sleep(1000);
 		act.sendKeys(St1N).perform();
@@ -288,11 +312,13 @@ public class I_AlarmTemplate extends b_baseClass {
 
 		reporter.click();
 		Thread.sleep(1000);
-		
-		if (reporterNameTitle.isDisplayed()&&reporterStreetTitle.isDisplayed()&&reporterZipCodeTitle.isDisplayed()&&reporterMobileNoTitle.isDisplayed()&&reporterCallbackTitle.isDisplayed()) {
-			System.out.println(GREEN+"TC_AlarmTemplate_006 - Verify  the visibility of Name, Street, Zip Code, Mobele no. and Callback fields after click on Reporter ");
+
+		if (reporterNameTitle.isDisplayed() && reporterStreetTitle.isDisplayed() && reporterZipCodeTitle.isDisplayed()
+				&& reporterMobileNoTitle.isDisplayed() && reporterCallbackTitle.isDisplayed()) {
+			System.out.println(GREEN
+					+ "TC_AlarmTemplate_006 - Verify  the visibility of Name, Street, Zip Code, Mobele no. and Callback fields after click on Reporter ");
 		}
-		
+
 		reporterName.click();
 
 		act.sendKeys("Dr. Sumit ").build().perform();
@@ -309,47 +335,44 @@ public class I_AlarmTemplate extends b_baseClass {
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView(true);", nextButton);
-		
+
 		additionalFields.click();
 		act.sendKeys(Keys.TAB).build().perform();
 		Thread.sleep(500);
 		act.sendKeys("fire at hospital.").build().perform();
 		Thread.sleep(500);
-		act.sendKeys(Keys.TAB,Keys.ENTER).build().perform();
+		act.sendKeys(Keys.TAB, Keys.ENTER).build().perform();
 		Thread.sleep(1000);
-		
-		
-		if (seceondAdditionalFields.isDisplayed()){
-			System.out.println(GREEN+"TC_AlarmTemplate_007 - Verify the visibility of  seceond Alarm Additional fields added");
+
+		if (seceondAdditionalFields.isDisplayed()) {
+			System.out.println(
+					GREEN + "TC_AlarmTemplate_007 - Verify the visibility of  seceond Alarm Additional fields added");
 
 		}
-		
-		
-		act.sendKeys(Keys.TAB,Keys.TAB,Keys.TAB).build().perform();
+
+		act.sendKeys(Keys.TAB, Keys.TAB, Keys.TAB).build().perform();
 		Thread.sleep(500);
 		act.sendKeys("dental departmet.").build().perform();
 		js.executeScript("arguments[0].scrollIntoView(true);", nextButton);
 		nextButton.click();
 		Thread.sleep(2000);
-		
-		if (adressTitle.isDisplayed()){
-			System.out.println(GREEN+"TC_AlarmTemplate_008 - Verify the visibility Address page");
+
+		if (adressTitle.isDisplayed()) {
+			System.out.println(GREEN + "TC_AlarmTemplate_008 - Verify the visibility Address page");
 
 		}
-		
+
 		alarmAddress.click();
 		act.sendKeys("BAPS Swaminarayan mandir, Wathoda Layout, Nagpur, Maharashtra 440035").build().perform();
 
-
 		js.executeScript("arguments[0].scrollIntoView(true);", additionalAddressInformation);
 		additionalAddressInformation.click();
-		
-		if (objectTitle.isDisplayed()&&annotationTitle.isDisplayed()&&floorTitle.isDisplayed()){
-			System.out.println(GREEN+"TC_AlarmTemplate_009 - Verify the visibility of Object,Floor and Annotations Fields ");
+
+		if (objectTitle.isDisplayed() && annotationTitle.isDisplayed() && floorTitle.isDisplayed()) {
+			System.out.println(
+					GREEN + "TC_AlarmTemplate_009 - Verify the visibility of Object,Floor and Annotations Fields ");
 
 		}
-		
-		
 
 		alarmObject.click();
 		act.sendKeys("hospital").perform();
@@ -364,98 +387,95 @@ public class I_AlarmTemplate extends b_baseClass {
 		nextButton2.click();
 
 		Thread.sleep(2000);
-		
-		if (userTypeAttribute.isDisplayed()&&userTypeResource.isDisplayed()&&userTypeFirefighter.isDisplayed()){
-			System.out.println(GREEN+"TC_AlarmTemplate_010 - Verify the visibility of User Type Page");
+
+		if (userTypeAttribute.isDisplayed() && userTypeResource.isDisplayed() && userTypeFirefighter.isDisplayed()) {
+			System.out.println(GREEN + "TC_AlarmTemplate_010 - Verify the visibility of User Type Page");
 
 		}
-		
+
 		saveTemplate.click();
 		Thread.sleep(500);
-		
+
 		userTypeAttribute.click();
 		Thread.sleep(2000);
 		selectAttributeTitle.click();
 		Thread.sleep(500);
-		
-		if (attributeNameList.isDisplayed()){
-			System.out.println(GREEN+"TC_AlarmTemplate_011 - Verify the visibility of Attribute Name List ");
+
+		if (attributeNameList.isDisplayed()) {
+			System.out.println(GREEN + "TC_AlarmTemplate_011 - Verify the visibility of Attribute Name List ");
 
 		}
 		act.sendKeys(Keys.TAB).perform();
 		Thread.sleep(500);
 		saveTemplate.click();
 		Thread.sleep(500);
-		
-		if (pleaseSelectAtLeastOneAttributeValidation.isDisplayed()){
-			System.out.println(GREEN+"TC_AlarmTemplate_012 - Verify the visibility of Please select At Least A Type validation ");
+
+		if (pleaseSelectAtLeastOneAttributeValidation.isDisplayed()) {
+			System.out.println(GREEN
+					+ "TC_AlarmTemplate_012 - Verify the visibility of Please select At Least A Type validation ");
 
 		}
-	
+
 		userTypeResource.click();
 		Thread.sleep(500);
 		act.sendKeys(Keys.TAB).perform();
 		Thread.sleep(500);
 		act.sendKeys("0").perform();
 		Thread.sleep(500);
-		
-		if (attributeNameList.isDisplayed()){
-			System.out.println(GREEN+"TC_AlarmTemplate_013 - Verify the visibility of First Fire Station Resource Name List");
+
+		if (attributeNameList.isDisplayed()) {
+			System.out.println(
+					GREEN + "TC_AlarmTemplate_013 - Verify the visibility of First Fire Station Resource Name List");
 
 		}
-		
+
 		act.sendKeys(Keys.TAB).perform();
 		Thread.sleep(500);
-		
+
 		act.sendKeys("0").perform();
 		Thread.sleep(500);
-		
-		if (attributeNameList.isDisplayed()){
-			System.out.println(GREEN+"TC_AlarmTemplate_014 - Verify the visibility of Second Fire Station Resource Name List");
+
+		if (attributeNameList.isDisplayed()) {
+			System.out.println(
+					GREEN + "TC_AlarmTemplate_014 - Verify the visibility of Second Fire Station Resource Name List");
 
 		}
 		act.sendKeys(Keys.TAB).perform();
 		Thread.sleep(500);
-		
+
 		saveTemplate.click();
 		Thread.sleep(500);
-		
-		
-	
-		if (pleaseSelectAtLeastOneResourceValidation.isDisplayed()){
-			System.out.println(GREEN+"TC_AlarmTemplate_015 - Verify the visibility of Please select At Least One Resource validation ");
+
+		if (pleaseSelectAtLeastOneResourceValidation.isDisplayed()) {
+			System.out.println(GREEN
+					+ "TC_AlarmTemplate_015 - Verify the visibility of Please select At Least One Resource validation ");
 
 		}
-		
 
 		userTypeFirefighter.click();
 		Thread.sleep(1000);
-		
-		
+
 		FirefighterField1.click();
 		Thread.sleep(2000);
-		
-		if (fireStationOneFirefighterNameList.isDisplayed()){
-			System.out.println(GREEN+"TC_AlarmTemplate_016 - Verify the visibility of Fire Station One Fire fighter Name List");
+
+		if (fireStationOneFirefighterNameList.isDisplayed()) {
+			System.out.println(
+					GREEN + "TC_AlarmTemplate_016 - Verify the visibility of Fire Station One Fire fighter Name List");
 
 		}
 		act.sendKeys(Keys.TAB).perform();
 		Thread.sleep(1000);
 		act.sendKeys("0").perform();
-		
-		
-		if (fireStationTwoFirefighterNameList.isDisplayed()){
-			System.out.println(GREEN+"TC_AlarmTemplate_017 - Verify the visibility of Fire Station Two Fire fighter Name List");
+
+		if (fireStationTwoFirefighterNameList.isDisplayed()) {
+			System.out.println(
+					GREEN + "TC_AlarmTemplate_017 - Verify the visibility of Fire Station Two Fire fighter Name List");
 
 		}
-		
-		
-		
-		
-		userTypeAttribute.click(); 
+
+		userTypeAttribute.click();
 		Thread.sleep(3000);
-		
-		
+
 		vehicleField1.click();
 
 		act.sendKeys(St1V1).perform();
@@ -509,10 +529,7 @@ public class I_AlarmTemplate extends b_baseClass {
 		Assert.assertTrue(title.contains(expectedTitle), RED + "Template not added.");
 
 		System.out.println(GREEN + title);
-		
-		
-		
-		
+
 //		refreshFilter.click();
 //		Thread.sleep(2000);
 //		titleSearch.click();
@@ -547,56 +564,8 @@ public class I_AlarmTemplate extends b_baseClass {
 //
 //		System.out.println(GREEN + alarmTitle);
 //		
-		
-		
-		
-		
 
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
 	public void smokeAlarmTemplate() {
 		if (createNewButton.isDisplayed()) {
@@ -638,7 +607,7 @@ public class I_AlarmTemplate extends b_baseClass {
 		String title = "BG-MA by newly added tem -" + gTodaysDate + "_" + gtimeHHMMSS;
 
 		String expectedTitle = firstItemTitle.getText();
-System.out.println(expectedTitle);
+		System.out.println(expectedTitle);
 		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not added.");
 
 		System.out.println(GREEN + title);

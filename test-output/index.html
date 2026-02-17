@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-skipped">Suite</span>
+              <span class="suite-name border-passed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>D:\Automation\MasterAutomationWorkSpcae\Work Space Main\RETTERAlarm2.0\CreateClass.xml</span>
+                    <span>D:\Automation\MasterAutomationWorkSpcae\Work Space Main\RETTERAlarm2.0\SmokeTest.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,21 +92,61 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,  1 skipped,  </span>
+                    <span class="method-stats">9 methods,   9 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title skipped">Skipped methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
                     </span>
-                    <div class="method-list-content skipped suite-Suite">
+                    <div class="method-list-content passed suite-Suite">
                       <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="function.A_testClassCreate" class="method navigator-link" hash-for-method="sendMessageToOldApiAlarmUser">sendMessageToOldApiAlarmUser</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="function.A_testClassCreate" class="method navigator-link" hash-for-method="smokeAlarmTemplate">smokeAlarmTemplate</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content skipped suite-Suite -->
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="function.A_testClassCreate" class="method navigator-link" hash-for-method="smokeForAlrmLoop">smokeForAlrmLoop</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="function.A_testClassCreate" class="method navigator-link" hash-for-method="smokeForCalendar">smokeForCalendar</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="function.A_testClassCreate" class="method navigator-link" hash-for-method="smokeForCreateManualAlarm">smokeForCreateManualAlarm</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="function.A_testClassCreate" class="method navigator-link" hash-for-method="smokeForEscalation">smokeForEscalation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="function.A_testClassCreate" class="method navigator-link" hash-for-method="smokeForEventCategory">smokeForEventCategory</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="function.A_testClassCreate" class="method navigator-link" hash-for-method="smokeForManualAlarm">smokeForManualAlarm</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="function.A_testClassCreate" class="method navigator-link" hash-for-method="smokeForResource">smokeForResource</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="function.A_testClassCreate" class="method navigator-link" hash-for-method="smokeForinformation">smokeForinformation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -118,48 +158,81 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-skipped">
+          <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
+              <img src="passed.png"/>
               <span class="class-name">function.A_testClassCreate</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="sendMessageToOldApiAlarmUser">
-                  </a> <!-- sendMessageToOldApiAlarmUser -->
-                  <span class="method-name">sendMessageToOldApiAlarmUser</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchSessionException: invalid session id: session deleted as the browser has closed the connection
-from disconnected: not connected to DevTools
-  (Session info: chrome=144.0.7559.133)
-Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [2584576ccdbcf2d1eb9a4bfda5212e17, get {url=https://live.retteralarm.de/}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\BHUPESH\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63786}, goog:processID: 13220, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63786/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 2584576ccdbcf2d1eb9a4bfda5212e17
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:301)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:1064)
-	at function.D_homePage.backToHomePage(D_homePage.java:44)
-	at function.A_testClassCreate.backToHomePage(A_testClassCreate.java:103)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 36 stack frames
-</div> <!-- stack-trace -->
+                  <a name="smokeAlarmTemplate">
+                  </a> <!-- smokeAlarmTemplate -->
+                  <span class="method-name">smokeAlarmTemplate</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="smokeForAlrmLoop">
+                  </a> <!-- smokeForAlrmLoop -->
+                  <span class="method-name">smokeForAlrmLoop</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="smokeForCalendar">
+                  </a> <!-- smokeForCalendar -->
+                  <span class="method-name">smokeForCalendar</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="smokeForCreateManualAlarm">
+                  </a> <!-- smokeForCreateManualAlarm -->
+                  <span class="method-name">smokeForCreateManualAlarm</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="smokeForEscalation">
+                  </a> <!-- smokeForEscalation -->
+                  <span class="method-name">smokeForEscalation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="smokeForEventCategory">
+                  </a> <!-- smokeForEventCategory -->
+                  <span class="method-name">smokeForEventCategory</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="smokeForManualAlarm">
+                  </a> <!-- smokeForManualAlarm -->
+                  <span class="method-name">smokeForManualAlarm</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="smokeForResource">
+                  </a> <!-- smokeForResource -->
+                  <span class="method-name">smokeForResource</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="smokeForinformation">
+                  </a> <!-- smokeForinformation -->
+                  <span class="method-name">smokeForinformation</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-skipped -->
+          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">D:\Automation\MasterAutomationWorkSpcae\Work Space Main\RETTERAlarm2.0\CreateClass.xml</span>
+            <span class="header-content">D:\Automation\MasterAutomationWorkSpcae\Work Space Main\RETTERAlarm2.0\SmokeTest.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -170,7 +243,15 @@ Session ID: 2584576ccdbcf2d1eb9a4bfda5212e17
     &lt;classes&gt;
       &lt;class name=&quot;function.A_testClassCreate&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;sendMessageToOldApiAlarmUser&quot;/&gt;
+          &lt;include name=&quot;smokeForManualAlarm&quot;/&gt;
+          &lt;include name=&quot;smokeForCreateManualAlarm&quot;/&gt;
+          &lt;include name=&quot;smokeForResource&quot;/&gt;
+          &lt;include name=&quot;smokeForAlrmLoop&quot;/&gt;
+          &lt;include name=&quot;smokeAlarmTemplate&quot;/&gt;
+          &lt;include name=&quot;smokeForEscalation&quot;/&gt;
+          &lt;include name=&quot;smokeForCalendar&quot;/&gt;
+          &lt;include name=&quot;smokeForEventCategory&quot;/&gt;
+          &lt;include name=&quot;smokeForinformation&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- function.A_testClassCreate --&gt;
     &lt;/classes&gt;
@@ -212,16 +293,48 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(9);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'sendMessageToOldApiAlarmUser')
+data.setCell(0, 1, 'smokeForCreateManualAlarm')
 data.setCell(0, 2, 'function.A_testClassCreate')
-data.setCell(0, 3, 0);
+data.setCell(0, 3, 25948);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'smokeForManualAlarm')
+data.setCell(1, 2, 'function.A_testClassCreate')
+data.setCell(1, 3, 12623);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'smokeForResource')
+data.setCell(2, 2, 'function.A_testClassCreate')
+data.setCell(2, 3, 9943);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'smokeForinformation')
+data.setCell(3, 2, 'function.A_testClassCreate')
+data.setCell(3, 3, 9833);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'smokeForAlrmLoop')
+data.setCell(4, 2, 'function.A_testClassCreate')
+data.setCell(4, 3, 8179);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'smokeAlarmTemplate')
+data.setCell(5, 2, 'function.A_testClassCreate')
+data.setCell(5, 3, 7712);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'smokeForEventCategory')
+data.setCell(6, 2, 'function.A_testClassCreate')
+data.setCell(6, 3, 7145);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'smokeForCalendar')
+data.setCell(7, 2, 'function.A_testClassCreate')
+data.setCell(7, 3, 6862);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'smokeForEscalation')
+data.setCell(8, 2, 'function.A_testClassCreate')
+data.setCell(8, 3, 5676);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 0 ms</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -236,23 +349,39 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">52 ignored methods</span>
+            <span class="header-content">44 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
               <span class="ignored-class-name">function.A_testClassCreate</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">smokeForManualAlarm</span>
+                <span class="ignored-method-name">createCalendarEventByStationsMS</span>
+                <br/>
+                <span class="ignored-method-name">manualAlarmByNewTemplate</span>
+                <br/>
+                <span class="ignored-method-name">manualaByAttributeSingleStation</span>
+                <br/>
+                <span class="ignored-method-name">create1HrInformationEventByResource</span>
                 <br/>
                 <span class="ignored-method-name">create1MinInformationEventByAttribute</span>
+                <br/>
+                <span class="ignored-method-name">manualAlarmByFirefighterMs</span>
+                <br/>
+                <span class="ignored-method-name">createMonitorInformationByResource</span>
                 <br/>
                 <span class="ignored-method-name">createNewAlarmTemplateByFirefighter</span>
                 <br/>
                 <span class="ignored-method-name">manualAlarmByEscResourceMs</span>
                 <br/>
-                <span class="ignored-method-name">smokeForCreateManualAlarm</span>
+                <span class="ignored-method-name">SendMessageTo1DayInformationEventByFireFighter</span>
+                <br/>
+                <span class="ignored-method-name">createMonitorInformationByFireFighter</span>
                 <br/>
                 <span class="ignored-method-name">createEventCategory</span>
+                <br/>
+                <span class="ignored-method-name">createNewAlarmTemplateByAttribute</span>
+                <br/>
+                <span class="ignored-method-name">sendMessageToOldApiAlarmUser</span>
                 <br/>
                 <span class="ignored-method-name">sendMessageToNewApiAlarmUser</span>
                 <br/>
@@ -262,27 +391,39 @@ return data;
                 <br/>
                 <span class="ignored-method-name">manualaByAttributeExtend1StStResource</span>
                 <br/>
-                <span class="ignored-method-name">smokeForResource</span>
-                <br/>
                 <span class="ignored-method-name">TCResourceValidationChecking</span>
                 <br/>
-                <span class="ignored-method-name">smokeForinformation</span>
+                <span class="ignored-method-name">createNewAlarmEscalation</span>
+                <br/>
+                <span class="ignored-method-name">TCManualAlarmMSCheckingValidation</span>
                 <br/>
                 <span class="ignored-method-name">TCInfoeventValidationChecking</span>
                 <br/>
                 <span class="ignored-method-name">createMonitorInformationByStations</span>
                 <br/>
+                <span class="ignored-method-name">TCAlarmTemplateCheckingValidation</span>
+                <br/>
                 <span class="ignored-method-name">createNewAlarmTemplateByResource</span>
                 <br/>
                 <span class="ignored-method-name">TCCalenderEventValidationChecking</span>
+                <br/>
+                <span class="ignored-method-name">manualAlarmByEscResourceSingleStation</span>
                 <br/>
                 <span class="ignored-method-name">createMonitorInformationByFireFighterForTwoStation</span>
                 <br/>
                 <span class="ignored-method-name">createNewResource</span>
                 <br/>
+                <span class="ignored-method-name">manualAlarmByNewEscResource</span>
+                <br/>
                 <span class="ignored-method-name">createAlarmByNewlyAddedTemplateFromTemplateModule</span>
                 <br/>
+                <span class="ignored-method-name">manualaByAttributeMSLP</span>
+                <br/>
                 <span class="ignored-method-name">createCalendarEventByAttribute</span>
+                <br/>
+                <span class="ignored-method-name">createMonitorInformationByAttribute</span>
+                <br/>
+                <span class="ignored-method-name">createNewEscalationResource</span>
                 <br/>
                 <span class="ignored-method-name">sendMessageToManualAlarmUser</span>
                 <br/>
@@ -292,59 +433,15 @@ return data;
                 <br/>
                 <span class="ignored-method-name">TCNewAlarmLoopCheckingValidation</span>
                 <br/>
-                <span class="ignored-method-name">smokeForCalendar</span>
-                <br/>
                 <span class="ignored-method-name">createCalendarEventByFireFughterMS</span>
-                <br/>
-                <span class="ignored-method-name">TCMonitorInformationValidationChecking</span>
-                <br/>
-                <span class="ignored-method-name">createNewAlarmLoop</span>
-                <br/>
-                <span class="ignored-method-name">createCalendarEventByStationsMS</span>
-                <br/>
-                <span class="ignored-method-name">manualAlarmByNewTemplate</span>
-                <br/>
-                <span class="ignored-method-name">manualaByAttributeSingleStation</span>
-                <br/>
-                <span class="ignored-method-name">create1HrInformationEventByResource</span>
-                <br/>
-                <span class="ignored-method-name">manualAlarmByFirefighterMs</span>
-                <br/>
-                <span class="ignored-method-name">createMonitorInformationByResource</span>
-                <br/>
-                <span class="ignored-method-name">SendMessageTo1DayInformationEventByFireFighter</span>
-                <br/>
-                <span class="ignored-method-name">createMonitorInformationByFireFighter</span>
-                <br/>
-                <span class="ignored-method-name">createNewAlarmTemplateByAttribute</span>
-                <br/>
-                <span class="ignored-method-name">smokeForAlrmLoop</span>
-                <br/>
-                <span class="ignored-method-name">smokeForEscalation</span>
-                <br/>
-                <span class="ignored-method-name">createNewAlarmEscalation</span>
-                <br/>
-                <span class="ignored-method-name">TCManualAlarmMSCheckingValidation</span>
-                <br/>
-                <span class="ignored-method-name">TCAlarmTemplateCheckingValidation</span>
-                <br/>
-                <span class="ignored-method-name">manualAlarmByEscResourceSingleStation</span>
-                <br/>
-                <span class="ignored-method-name">smokeAlarmTemplate</span>
-                <br/>
-                <span class="ignored-method-name">manualAlarmByNewEscResource</span>
-                <br/>
-                <span class="ignored-method-name">smokeForEventCategory</span>
-                <br/>
-                <span class="ignored-method-name">manualaByAttributeMSLP</span>
-                <br/>
-                <span class="ignored-method-name">createMonitorInformationByAttribute</span>
-                <br/>
-                <span class="ignored-method-name">createNewEscalationResource</span>
                 <br/>
                 <span class="ignored-method-name">createFullDayInformationEventByStation</span>
                 <br/>
+                <span class="ignored-method-name">TCMonitorInformationValidationChecking</span>
+                <br/>
                 <span class="ignored-method-name">manualAlarmByOldEsclationTemplateFromSt02ToSt01</span>
+                <br/>
+                <span class="ignored-method-name">createNewAlarmLoop</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -363,18 +460,132 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
                 <span class="method-name">BeforeTest</span>
-                <span class="method-start">5265 ms</span>
+                <span class="method-start">4653 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
                 <span class="method-name">createObject</span>
-                <span class="method-start">18355 ms</span>
+                <span class="method-start">17341 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">backToHomePage</span>
-                <span class="method-start">18368 ms</span>
+                <span class="method-start">17367 ms</span>
               </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">smokeForManualAlarm</span>
+                <span class="method-start">24690 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">backToHomePage2([TestResult name=smokeForManualAlarm status=SUCCESS method=A_testClassCreate.smokeForManualAlarm()[p...)</span>
+                <span class="method-start">37316 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">backToHomePage</span>
+                <span class="method-start">42740 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">smokeForCreateManualAlarm</span>
+                <span class="method-start">49856 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">backToHomePage2([TestResult name=smokeForCreateManualAlarm status=SUCCESS method=A_testClassCreate.smokeForCreateMan...)</span>
+                <span class="method-start">75805 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">backToHomePage</span>
+                <span class="method-start">81395 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">smokeForResource</span>
+                <span class="method-start">89021 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">backToHomePage2([TestResult name=smokeForResource status=SUCCESS method=A_testClassCreate.smokeForResource()[pri:0, ...)</span>
+                <span class="method-start">98965 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">backToHomePage</span>
+                <span class="method-start">104642 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">smokeForAlrmLoop</span>
+                <span class="method-start">112296 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">backToHomePage2([TestResult name=smokeForAlrmLoop status=SUCCESS method=A_testClassCreate.smokeForAlrmLoop()[pri:0, ...)</span>
+                <span class="method-start">120475 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">backToHomePage</span>
+                <span class="method-start">125907 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">smokeAlarmTemplate</span>
+                <span class="method-start">133316 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">backToHomePage2([TestResult name=smokeAlarmTemplate status=SUCCESS method=A_testClassCreate.smokeAlarmTemplate()[pri...)</span>
+                <span class="method-start">141029 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">backToHomePage</span>
+                <span class="method-start">146466 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">smokeForEscalation</span>
+                <span class="method-start">154075 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">backToHomePage2([TestResult name=smokeForEscalation status=SUCCESS method=A_testClassCreate.smokeForEscalation()[pri...)</span>
+                <span class="method-start">159752 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">backToHomePage</span>
+                <span class="method-start">165600 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">smokeForCalendar</span>
+                <span class="method-start">172704 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">backToHomePage2([TestResult name=smokeForCalendar status=SUCCESS method=A_testClassCreate.smokeForCalendar()[pri:0, ...)</span>
+                <span class="method-start">179567 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">backToHomePage</span>
+                <span class="method-start">185430 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">smokeForEventCategory</span>
+                <span class="method-start">192802 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">backToHomePage2([TestResult name=smokeForEventCategory status=SUCCESS method=A_testClassCreate.smokeForEventCategory...)</span>
+                <span class="method-start">199948 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">backToHomePage</span>
+                <span class="method-start">205857 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">smokeForinformation</span>
+                <span class="method-start">213331 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">backToHomePage2([TestResult name=smokeForinformation status=SUCCESS method=A_testClassCreate.smokeForinformation()[p...)</span>
+                <span class="method-start">223165 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">logOut</span>
+                <span class="method-start">229276 ms</span>
+              </div> <!-- configuration-class after -->
+              <div class="configuration-test after">
+                <span class="method-name">AfterTest</span>
+                <span class="method-start">234075 ms</span>
+              </div> <!-- configuration-test after -->
+              <div class="configuration-suite after">
+                <span class="method-name">AfterSute</span>
+                <span class="method-start">234208 ms</span>
+              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

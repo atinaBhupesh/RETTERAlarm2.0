@@ -261,28 +261,42 @@ public class F_manualAlarm extends b_baseClass {
 	private WebElement pleaseSelectAtLeastOneResource;
 	@FindBy(xpath = "//div[text()=\"Please select at least one firefighter.\"]")
 	private WebElement pleaseSelectAtLeastOneFirefighter;
-	@FindBy(xpath="//div[text()=\"ADST06V1\"]")private WebElement adst06v1Title ;
-	 @FindBy(xpath="//div[text()=\"ADST06A2\"]")private WebElement adst06a2Title;
-	 @FindBy(xpath="//div[text()=\"ADST06R2\"]")private WebElement adst06r2Title;
-	 @FindBy(xpath="//input[@id=\"dx_dx-cc86a369-4c64-ff4b-3ebb-4a9202321cb4_selectedUsers[786689f549defc0f094e283fcc6a8ba8f5c44494]\"]")private WebElement firefighterField;
-	 @FindBy(xpath="//div[text()=\"Jonas2 Jonas02\"]")private WebElement jonas2Title;
-	@FindBy(xpath="//div[@aria-label=\"ben2 ben02\"]")private WebElement ben2Title;
-	 @FindBy(xpath="//div[@aria-label=\"ADST07R2\"]")private WebElement adst07r2Title;
-	 
-	 @FindBy(xpath="(//input[@role='combobox'])[3]")private WebElement stationNameList;
-	@FindBy(xpath="//input[@role='combobox' and @aria-haspopup='listbox']")private WebElement vehicleNameList;
-	 @FindBy(xpath="//input[@role='combobox' and @placeholder='Select...']")private WebElement attributeNameList;
-	@FindBy(xpath="//div[contains(@class,'dx-tagbox-popup-wrapper')]")private WebElement station01ResourceNameList;
-	 @FindBy(xpath="//input[@role='combobox' and @aria-haspopup='listbox']")private WebElement station02ResourceNameList;
-	@FindBy(xpath="//input[@role='combobox' and @aria-haspopup='listbox']")private WebElement station01FirefighterNameList;
-		@FindBy(xpath="//div[contains(@class,'dx-tagbox')]//input[@role='combobox']")private WebElement station02FirefighterNameList;
-		// @FindBy(xpath="")private WebElement ;
-		// @FindBy(xpath="")private WebElement ;
-		// @FindBy(xpath="")private WebElement ;
-		// @FindBy(xpath="")private WebElement ;
-		// @FindBy(xpath="")private WebElement ;
-		// @FindBy(xpath="")private WebElement ;
-		// @FindBy(xpath="")private WebElement ;
+	@FindBy(xpath = "//div[text()=\"ADST06V1\"]")
+	private WebElement adst06v1Title;
+	@FindBy(xpath = "//div[text()=\"ADST06A2\"]")
+	private WebElement adst06a2Title;
+	@FindBy(xpath = "//div[text()=\"ADST06R2\"]")
+	private WebElement adst06r2Title;
+	@FindBy(xpath = "//input[@id=\"dx_dx-cc86a369-4c64-ff4b-3ebb-4a9202321cb4_selectedUsers[786689f549defc0f094e283fcc6a8ba8f5c44494]\"]")
+	private WebElement firefighterField;
+	@FindBy(xpath = "//div[text()=\"Jonas2 Jonas02\"]")
+	private WebElement jonas2Title;
+	@FindBy(xpath = "//div[@aria-label=\"ben2 ben02\"]")
+	private WebElement ben2Title;
+	@FindBy(xpath = "//div[@aria-label=\"ADST07R2\"]")
+	private WebElement adst07r2Title;
+
+	@FindBy(xpath = "(//input[@role='combobox'])[3]")
+	private WebElement stationNameList;
+	@FindBy(xpath = "//input[@role='combobox' and @aria-haspopup='listbox']")
+	private WebElement vehicleNameList;
+	@FindBy(xpath = "//input[@role='combobox' and @placeholder='Select...']")
+	private WebElement attributeNameList;
+	@FindBy(xpath = "//div[contains(@class,'dx-tagbox-popup-wrapper')]")
+	private WebElement station01ResourceNameList;
+	@FindBy(xpath = "//input[@role='combobox' and @aria-haspopup='listbox']")
+	private WebElement station02ResourceNameList;
+	@FindBy(xpath = "//input[@role='combobox' and @aria-haspopup='listbox']")
+	private WebElement station01FirefighterNameList;
+	@FindBy(xpath = "//div[contains(@class,'dx-tagbox')]//input[@role='combobox']")
+	private WebElement station02FirefighterNameList;
+	// @FindBy(xpath="")private WebElement ;
+	// @FindBy(xpath="")private WebElement ;
+	// @FindBy(xpath="")private WebElement ;
+	// @FindBy(xpath="")private WebElement ;
+	// @FindBy(xpath="")private WebElement ;
+	// @FindBy(xpath="")private WebElement ;
+	// @FindBy(xpath="")private WebElement ;
 
 	public F_manualAlarm(WebDriver driver) {
 		PageFactory.initElements(driver, this);
@@ -320,7 +334,7 @@ public class F_manualAlarm extends b_baseClass {
 		fireStationField.click();
 		Thread.sleep(1000);
 
-		if (stationNameList.isDisplayed() ) {
+		if (stationNameList.isDisplayed()) {
 			System.out.println(GREEN + "TC_Alarm_005 — Verify that the station list is displayed");
 		}
 
@@ -472,52 +486,44 @@ public class F_manualAlarm extends b_baseClass {
 		if (pleaseSelectAtLeastOneAttributeValidation.isDisplayed()) {
 			System.out.println(GREEN + "TC_Alarm_013 — Verify the visibility of Attribute validation");
 		}
-		
+
 		vehicleField1.click();
 		Thread.sleep(500);
-		
-		
-		if (vehicleNameList.isDisplayed() ) {
-			System.out.println(
-					GREEN + "TC_Alarm_014 — Verify the visibility of vehicle list");
+
+		if (vehicleNameList.isDisplayed()) {
+			System.out.println(GREEN + "TC_Alarm_014 — Verify the visibility of vehicle list");
 		}
-		
+
 		attributeField.click();
 		Thread.sleep(500);
-		if (attributeNameList.isDisplayed() ) {
-			System.out.println(
-					GREEN + "TC_Alarm_015 — Verify the visibility of Attribute list");
+		if (attributeNameList.isDisplayed()) {
+			System.out.println(GREEN + "TC_Alarm_015 — Verify the visibility of Attribute list");
 		}
-		
 
-		
 		userTypeResource.click();
 		Thread.sleep(500);
 		generateAlarm.click();
 		Thread.sleep(500);
-		
+
 		if (pleaseSelectAtLeastOneResource.isDisplayed()) {
 			System.out.println(GREEN + "TC_Alarm_016 — Verify the visibility of Resource validation");
 		}
 		resourceField1.click();
 		Thread.sleep(500);
-		
+
 		if (station01ResourceNameList.isDisplayed()) {
 			System.out.println(GREEN + "TC_Alarm_017 — Verify the visibility of 1st Station Resource list");
 		}
-		
+
 		act.sendKeys(Keys.TAB).perform();
 		Thread.sleep(1000);
 		act.sendKeys("0").perform();
 		Thread.sleep(1000);
 		Thread.sleep(500);
-		
+
 		if (station02ResourceNameList.isDisplayed()) {
 			System.out.println(GREEN + "TC_Alarm_018 — Verify the visibility of 2nd Station Resource list");
 		}
-		
-
-		
 
 		userTypeFirefighter.click();
 		Thread.sleep(2000);
@@ -527,40 +533,33 @@ public class F_manualAlarm extends b_baseClass {
 		if (pleaseSelectAtLeastOneFirefighter.isDisplayed()) {
 			System.out.println(GREEN + "TC_Alarm_019 — Verify the visibility of Firefighter validation");
 		}
-		
+
 		vehicleField1.click();
 		Thread.sleep(500);
-		
-		if (vehicleNameList.isDisplayed() ) {
-			System.out.println(
-					GREEN + "TC_Alarm_020 — Verify the visibility of vehicle list");
+
+		if (vehicleNameList.isDisplayed()) {
+			System.out.println(GREEN + "TC_Alarm_020 — Verify the visibility of vehicle list");
 		}
 		act.sendKeys(Keys.TAB).perform();
 		Thread.sleep(1000);
 		act.sendKeys("0").perform();
 		Thread.sleep(1000);
-		
-		if (station01FirefighterNameList.isDisplayed() ) {
-			System.out.println(
-					GREEN + "TC_Alarm_021 — Verify the visibility of 1st Station firefighter list");
+
+		if (station01FirefighterNameList.isDisplayed()) {
+			System.out.println(GREEN + "TC_Alarm_021 — Verify the visibility of 1st Station firefighter list");
 		}
-		
+
 		act.sendKeys(Keys.TAB).perform();
 		Thread.sleep(1000);
 		act.sendKeys("0").perform();
 		Thread.sleep(1000);
-		
-		if (station02FirefighterNameList.isDisplayed() ) {
-			System.out.println(
-					GREEN + "TC_Alarm_022 — Verify the visibility of 2nd Station firefighter list");
+
+		if (station02FirefighterNameList.isDisplayed()) {
+			System.out.println(GREEN + "TC_Alarm_022 — Verify the visibility of 2nd Station firefighter list");
 		}
-		
-		
-		
-		
+
 		Thread.sleep(1000);
-		
-		
+
 		userTypeResource.click();
 		Thread.sleep(500);
 		resourceField1.click();
@@ -578,10 +577,10 @@ public class F_manualAlarm extends b_baseClass {
 		act.sendKeys(Keys.TAB).perform();
 
 //		 Generate alarm.
-			generateAlarm.click();
-			Thread.sleep(500);
-			yesCreate.click();
-			Thread.sleep(500);
+		generateAlarm.click();
+		Thread.sleep(500);
+		yesCreate.click();
+		Thread.sleep(500);
 
 		String expectedTitle = firstItemTitle.getText();
 
@@ -745,7 +744,7 @@ public class F_manualAlarm extends b_baseClass {
 
 		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not added.");
 
-		System.out.println(GREEN + title+GREEN);
+		System.out.println(GREEN + title + GREEN);
 
 	}
 
@@ -946,7 +945,8 @@ public class F_manualAlarm extends b_baseClass {
 
 	}
 
-	public void sendMessageToOldApiAlarmUser(WebDriver driver,String ManualAlarmNameForChatOldApi, String branchName) throws Throwable {
+	public void sendMessageToOldApiAlarmUser(WebDriver driver, String ManualAlarmNameForChatOldApi, String branchName)
+			throws Throwable {
 		Actions act = new Actions(driver);
 
 		// Search alarm by title

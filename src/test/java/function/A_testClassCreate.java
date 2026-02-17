@@ -113,11 +113,11 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of Checking Alarm template validation is started.", true);
 		at.commonAlarmTemplate(driver, branchName);
-		at.TCAlarmTemplateCheckingValidation ( driver,  gTodaysDate,  gtimeHHMMSS,  st02N,
-				 st01N,  st01V1,  st02V1,  st01A1,  st02A1);
-		
+		at.TCAlarmTemplateCheckingValidation(driver, gTodaysDate, gtimeHHMMSS, st02N, st01N, st01V1, st02V1, st01A1,
+				st02A1);
+
 		getDetailsFromFiles();
-	
+
 		at.commonAlarmTemplate(driver, branchName);
 		at.createAlarmByNewlyAddedTemplateFromTemplateModule(driver, NewTemplate, gTodaysDate, gtimeHHMMSS, branchName);
 		Reporter.log("The process of Checking Alarm template validation is complete.", true);
@@ -729,7 +729,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of send message to old api alarm user is started.", true);
 		ma.manualAlarmCommon(driver, deptN, branchName);
-		ma.sendMessageToOldApiAlarmUser(driver, ManualAlarmNameForChatOldApi,branchName);
+		ma.sendMessageToOldApiAlarmUser(driver, ManualAlarmNameForChatOldApi, branchName);
 		Reporter.log("The process of send message to old api alarm user is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);

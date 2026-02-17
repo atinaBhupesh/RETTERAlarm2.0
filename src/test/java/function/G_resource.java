@@ -61,16 +61,26 @@ public class G_resource extends b_baseClass {
 	private List<WebElement> BGResource;
 	@FindBy(xpath = "(//td[@role=\"gridcell\"])[4]")
 	private WebElement firstItemTitle;
-	 @FindBy(xpath="//h2[text()=\"Alarm Resource\"]")private WebElement alarmResourceTitle;
-	 @FindBy(xpath="//div[text()=\"Fire Station is required.\"]")private WebElement fireStationIsRequriedValidation;
-	 @FindBy(xpath="//div[text()=\"Name is required.\"]")private WebElement nmaeIsRequiredValidation;
-	 @FindBy(xpath="//div[contains(@class,'dx-tagbox-popup-wrapper')]")private WebElement stationNameList;
-	@FindBy(xpath="//div[text()=\" Connected Firefighters/Vehicles\"]")private WebElement connectedFirefightersVehicleTitle;
-	 @FindBy(xpath="//span[text()=\"Vehicles/Cars\"]")private WebElement vehicleCarTitle;
-	@FindBy(xpath="//div[text()=\"Firefighters\"]")private WebElement firefighterTitle;
-	 @FindBy(xpath="//input[@role='combobox' and @placeholder='Select Vehicles/Cars']")private WebElement vehicleNameList ;
-	@FindBy(xpath="//input[@role='combobox' and @aria-haspopup='listbox']")private WebElement station01FirefighterNameList;
-	 @FindBy(xpath="//input[@role='combobox' and @aria-haspopup='listbox']")private WebElement station02FirefighterNameList ;
+	@FindBy(xpath = "//h2[text()=\"Alarm Resource\"]")
+	private WebElement alarmResourceTitle;
+	@FindBy(xpath = "//div[text()=\"Fire Station is required.\"]")
+	private WebElement fireStationIsRequriedValidation;
+	@FindBy(xpath = "//div[text()=\"Name is required.\"]")
+	private WebElement nmaeIsRequiredValidation;
+	@FindBy(xpath = "//div[contains(@class,'dx-tagbox-popup-wrapper')]")
+	private WebElement stationNameList;
+	@FindBy(xpath = "//div[text()=\" Connected Firefighters/Vehicles\"]")
+	private WebElement connectedFirefightersVehicleTitle;
+	@FindBy(xpath = "//span[text()=\"Vehicles/Cars\"]")
+	private WebElement vehicleCarTitle;
+	@FindBy(xpath = "//div[text()=\"Firefighters\"]")
+	private WebElement firefighterTitle;
+	@FindBy(xpath = "//input[@role='combobox' and @placeholder='Select Vehicles/Cars']")
+	private WebElement vehicleNameList;
+	@FindBy(xpath = "//input[@role='combobox' and @aria-haspopup='listbox']")
+	private WebElement station01FirefighterNameList;
+	@FindBy(xpath = "//input[@role='combobox' and @aria-haspopup='listbox']")
+	private WebElement station02FirefighterNameList;
 	// @FindBy(xpath="")private WebElement ;
 	// @FindBy(xpath="")private WebElement ;
 	// @FindBy(xpath="")private WebElement ;
@@ -96,70 +106,59 @@ public class G_resource extends b_baseClass {
 		}
 
 	}
-	
-	
-	public void TCResourceValidationChecking(WebDriver driver, String St2N, String St1N, String gTodaysDate, String gtimeHHMMSS,
-			String St2V1, String St1V1, String st01FF1, String st02FF1) throws Throwable {
+
+	public void TCResourceValidationChecking(WebDriver driver, String St2N, String St1N, String gTodaysDate,
+			String gtimeHHMMSS, String St2V1, String St1V1, String st01FF1, String st02FF1) throws Throwable {
 		Actions act = new Actions(driver);
 		String filePath = ".\\DataFiles\\DetailsFile.xlsx";
-		
-		if( alarmResourceTitle.isDisplayed())
-		{
-			System.out.println(GREEN+"TC_Resource_001 - Verify Navigation to Alarm Resource Page");
+
+		if (alarmResourceTitle.isDisplayed()) {
+			System.out.println(GREEN + "TC_Resource_001 - Verify Navigation to Alarm Resource Page");
 		}
-		if( createNewButton.isDisplayed())
-		{
-			System.out.println(GREEN+"TC_Resource_002 - Verify Create Button Visibility");
+		if (createNewButton.isDisplayed()) {
+			System.out.println(GREEN + "TC_Resource_002 - Verify Create Button Visibility");
 		}
-		
 
 		createNewButton.click();
 		Thread.sleep(3000);
 		saveResource.click();
-		
-		if( fireStationIsRequriedValidation.isDisplayed()&&nmaeIsRequiredValidation.isDisplayed())
-		{
-			System.out.println(GREEN+"TC_Resource_003 - Verify Required Validation for Station, Resource Name");
+
+		if (fireStationIsRequriedValidation.isDisplayed() && nmaeIsRequiredValidation.isDisplayed()) {
+			System.out.println(GREEN + "TC_Resource_003 - Verify Required Validation for Station, Resource Name");
 		}
-		
+
 		resourceStation.click();
 		Thread.sleep(2000);
-		
-		if( stationNameList.isDisplayed())
-		{
-			System.out.println(GREEN+"TC_Resource_004 - Verify that the station list is displayed");
+
+		if (stationNameList.isDisplayed()) {
+			System.out.println(GREEN + "TC_Resource_004 - Verify that the station list is displayed");
 		}
-		
+
 		act.sendKeys(St2N).perform();
 		Thread.sleep(2000);
 		act.sendKeys(Keys.ENTER).build().perform();
 		Thread.sleep(1000);
-		
-		
-		if( connectedFirefightersVehicleTitle.isDisplayed()&&vehicleCarTitle.isDisplayed()&&firefighterTitle.isDisplayed())
-		{
-			System.out.println(GREEN+"TC_Resource_005 - Verify that the vehicle and firefighter input fields are displayed after select station");
+
+		if (connectedFirefightersVehicleTitle.isDisplayed() && vehicleCarTitle.isDisplayed()
+				&& firefighterTitle.isDisplayed()) {
+			System.out.println(GREEN
+					+ "TC_Resource_005 - Verify that the vehicle and firefighter input fields are displayed after select station");
 		}
-		
+
 		act.sendKeys(Keys.TAB).perform();
 
 		act.sendKeys(St1N).perform();
 		Thread.sleep(2000);
-		
-		
+
 		act.sendKeys(Keys.ENTER).perform();
 		resourceNameField.click();
 		String title = "BG_Resource_" + gTodaysDate + "_" + gtimeHHMMSS;
 		act.sendKeys(title).perform();
 
 		vehicleField.click();
-		if( vehicleNameList.isDisplayed())
-		{
-			System.out.println(GREEN+"TC_Resource_006 - Verify that the Vehicle list is displayed");
+		if (vehicleNameList.isDisplayed()) {
+			System.out.println(GREEN + "TC_Resource_006 - Verify that the Vehicle list is displayed");
 		}
-		
-		
-		
 
 		act.sendKeys(St2V1).perform();
 		Thread.sleep(2000);
@@ -177,10 +176,9 @@ public class G_resource extends b_baseClass {
 		Thread.sleep(1000);
 		act.sendKeys(st01FF1).perform();
 		Thread.sleep(2000);
-		
-		if( station01FirefighterNameList.isDisplayed())
-		{
-			System.out.println(GREEN+"TC_Resource_007 - Verify that the 1st station firefighter list is displayed");
+
+		if (station01FirefighterNameList.isDisplayed()) {
+			System.out.println(GREEN + "TC_Resource_007 - Verify that the 1st station firefighter list is displayed");
 		}
 		act.sendKeys(Keys.ENTER).perform();
 
@@ -192,10 +190,9 @@ public class G_resource extends b_baseClass {
 		act.sendKeys(st02FF1).perform();
 
 		Thread.sleep(1000);
-		
-		if( station02FirefighterNameList.isDisplayed())
-		{
-			System.out.println(GREEN+"TC_Resource_007 - Verify that the 2nd station firefighter list is displayed");
+
+		if (station02FirefighterNameList.isDisplayed()) {
+			System.out.println(GREEN + "TC_Resource_007 - Verify that the 2nd station firefighter list is displayed");
 		}
 
 		act.sendKeys(Keys.ENTER).perform();
@@ -207,20 +204,13 @@ public class G_resource extends b_baseClass {
 
 		Thread.sleep(5000);
 
-		
-
 		String expectedTitle = firstItemTitle.getText();
 
 		Assert.assertTrue(title.contains(expectedTitle), RED + " Ne Resource not added.");
 
-		System.out.println(GREEN + title+GREEN);
+		System.out.println(GREEN + title + GREEN);
 
 	}
-
-	
-	
-	
-	
 
 	public void commonResource(WebDriver driver, String branchName) throws Throwable {
 

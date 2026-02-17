@@ -1,26 +1,28 @@
-Error<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-  <test thread-count="5" name="Test">
-    <classes>
-      <class name="function.A_testClassCreate"/>
-      
-      <methods>
-		  
-	<include name="smokeForManualAlarm"  />
-	<include name="smokeForCreateManualAlarm"  />
-    <include name="smokeForResource"  />
-    <include name="smokeForAlrmLoop"  />
-    <include name="smokeAlarmTemplate"  />
-    <include name="smokeForEscalation"  />
-	<include name="smokeForCalendar"  />
-	<include name="smokeForEventCategory"  />
-	<include name="smokeForinformation"  />
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="function.A_testClassCreate" />
 
-   
-	
-	</methods>
-      
-    </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+
+			<methods>
+
+				<include name="smokeForManualAlarm" />
+				<include name="smokeForCreateManualAlarm" />
+				<include name="smokeForResource" />
+				<include name="smokeForAlrmLoop" />
+				<include name="smokeAlarmTemplate" />
+				<include name="smokeForEscalation" />
+				<include name="smokeForCalendar" />
+				<include name="smokeForEventCategory" />
+				<include name="smokeForinformation" />
+
+
+			</methods>
+
+		</classes>
+	</test> <!--
+	Test -->
+</suite> <!--
+Suite -->

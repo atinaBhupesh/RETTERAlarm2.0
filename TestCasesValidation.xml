@@ -12,10 +12,9 @@
 				<include name="TCMonitorInformationValidationChecking" />
 				<include name="TCCalenderEventValidationChecking" />
 				<include name="TCManualAlarmMSCheckingValidation" />
-				<include name="TCResourceValidationChecking"  />
+				<include name="TCResourceValidationChecking" />
 				<include name="TCNewAlarmLoopCheckingValidation" />
-				 <include name="TCAlarmTemplateCheckingValidation"  />
-	
+				<include name="TCAlarmTemplateCheckingValidation" />
 
 
 			</methods>
