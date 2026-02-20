@@ -812,10 +812,10 @@ public class L_Information extends b_baseClass {
 	public void create1DayInformationEventByFireFighter(WebDriver driver, String st01N, String st02N,
 			String gTomorrowDate, String gtimeHHMMSS, String st01R1, String St01M1, String St01M2,
 			String germanyTimeAfter5MinHH, String germanyTimeAfter5MinMM, String germanyTimeAfter20MinHH,
-			String germanyTimeAfter20MinMM, String st01FF1, String st02FF1, String branchName) throws Throwable {
+			String germanyTimeAfter20MinMM, String st01FF1, String st02FF1, String branchName,String filePath) throws Throwable {
 		Actions act = new Actions(driver);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		String filePath = ".\\DataFiles\\DetailsFile.xlsx";
+		
 
 		createNewButton.click();
 		Thread.sleep(2000);
@@ -1984,6 +1984,13 @@ public class L_Information extends b_baseClass {
 			break;
 
 		case "2":
+			
+			driver.navigate().to("https://admin.testing.retteralarm.de/admin/information/list");
+			Thread.sleep(5000);
+			refreshFilter.click();
+			Thread.sleep(3000);
+			
+			
 
 			break;
 

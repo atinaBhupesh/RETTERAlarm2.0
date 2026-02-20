@@ -1,11 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[Well come to RETTERAlarm Live branch]]>
     </line>
     <line>
       <![CDATA[Logged in user-6039-DE-andrew-deptu-2]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[The process of creating a manual alarm by attribute st2 and extend to st1 by resource is started.]]>
+    </line>
+    <line>
+      <![CDATA[The process of creating a manual alarm by attribute st2 and extend to st1 by resource is complete.]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[The process of send message to manual alarm user is started.]]>
+    </line>
+    <line>
+      <![CDATA[The process of send message to manual alarm user is complete.]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
     </line>
     <line>
       <![CDATA[Logout sucessfully.]]>
@@ -26,201 +50,92 @@
       <![CDATA[Good to see you again.]]>
     </line>
   </reporter-output>
-  <suite started-at="2026-02-17T18:30:41 IST" name="Suite" finished-at="2026-02-17T18:34:30 IST" duration-ms="229428">
+  <suite started-at="2026-02-20T11:54:46 IST" name="Suite" finished-at="2026-02-20T11:57:08 IST" duration-ms="142227">
     <groups>
     </groups>
-    <test started-at="2026-02-17T18:30:41 IST" name="Test" finished-at="2026-02-17T18:34:30 IST" duration-ms="229428">
+    <test started-at="2026-02-20T11:54:46 IST" name="Test" finished-at="2026-02-20T11:57:08 IST" duration-ms="142227">
       <class name="function.A_testClassCreate">
-        <test-method is-config="true" signature="BeforeSuite()[pri:0, instance:function.A_testClassCreate@496bc455]" started-at="2026-02-17T18:30:36 IST" name="BeforeSuite" finished-at="2026-02-17T18:30:41 IST" duration-ms="4646" status="PASS">
+        <test-method is-config="true" signature="BeforeSuite()[pri:0, instance:function.A_testClassCreate@496bc455]" started-at="2026-02-20T11:54:41 IST" name="BeforeSuite" finished-at="2026-02-20T11:54:46 IST" duration-ms="5096" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Well come to RETTERAlarm Live branch]]>
             </line>
           </reporter-output>
         </test-method> <!-- BeforeSuite -->
-        <test-method is-config="true" signature="BeforeTest()[pri:0, instance:function.A_testClassCreate@496bc455]" started-at="2026-02-17T18:30:41 IST" name="BeforeTest" finished-at="2026-02-17T18:30:53 IST" duration-ms="12670" status="PASS">
+        <test-method is-config="true" signature="BeforeTest()[pri:0, instance:function.A_testClassCreate@496bc455]" started-at="2026-02-20T11:54:46 IST" name="BeforeTest" finished-at="2026-02-20T11:54:59 IST" duration-ms="12907" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Logged in user-6039-DE-andrew-deptu-2]]>
             </line>
           </reporter-output>
         </test-method> <!-- BeforeTest -->
-        <test-method is-config="true" signature="createObject()[pri:0, instance:function.A_testClassCreate@496bc455]" started-at="2026-02-17T18:30:53 IST" name="createObject" finished-at="2026-02-17T18:30:53 IST" duration-ms="18" status="PASS">
+        <test-method is-config="true" signature="createObject()[pri:0, instance:function.A_testClassCreate@496bc455]" started-at="2026-02-20T11:54:59 IST" name="createObject" finished-at="2026-02-20T11:54:59 IST" duration-ms="13" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createObject -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@496bc455]" started-at="2026-02-17T18:30:53 IST" name="backToHomePage" finished-at="2026-02-17T18:31:01 IST" duration-ms="7321" status="PASS">
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@496bc455]" started-at="2026-02-20T11:54:59 IST" name="backToHomePage" finished-at="2026-02-20T11:55:06 IST" duration-ms="7303" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backToHomePage -->
-        <test-method signature="smokeForManualAlarm()[pri:0, instance:function.A_testClassCreate@496bc455]" started-at="2026-02-17T18:31:01 IST" name="smokeForManualAlarm" finished-at="2026-02-17T18:31:13 IST" duration-ms="12623" status="PASS">
+        <test-method signature="manualaByAttributeExtend1To01StEscResourceFrom02()[pri:0, instance:function.A_testClassCreate@496bc455]" started-at="2026-02-20T11:55:06 IST" name="manualaByAttributeExtend1To01StEscResourceFrom02" finished-at="2026-02-20T11:56:10 IST" duration-ms="64455" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+            <line>
+              <![CDATA[The process of creating a manual alarm by attribute st2 and extend to st1 by resource is started.]]>
+            </line>
+            <line>
+              <![CDATA[The process of creating a manual alarm by attribute st2 and extend to st1 by resource is complete.]]>
+            </line>
+            <line>
+              <![CDATA[ ]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- smokeForManualAlarm -->
-        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassCreate@496bc455]" started-at="2026-02-17T18:31:13 IST" name="backToHomePage2" finished-at="2026-02-17T18:31:19 IST" duration-ms="5423" status="PASS">
+        </test-method> <!-- manualaByAttributeExtend1To01StEscResourceFrom02 -->
+        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassCreate@496bc455]" started-at="2026-02-20T11:56:10 IST" name="backToHomePage2" finished-at="2026-02-20T11:56:16 IST" duration-ms="5627" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=smokeForManualAlarm status=SUCCESS method=A_testClassCreate.smokeForManualAlarm()[pri:0, instance:function.A_testClassCreate@496bc455] output={null}]]]>
+                <![CDATA[[TestResult name=manualaByAttributeExtend1To01StEscResourceFrom02 status=SUCCESS method=A_testClassCreate.manualaByAttributeExtend1To01StEscResourceFrom02()[pri:0, instance:function.A_testClassCreate@496bc455]]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backToHomePage2 -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@496bc455]" started-at="2026-02-17T18:31:19 IST" name="backToHomePage" finished-at="2026-02-17T18:31:26 IST" duration-ms="7116" status="PASS">
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@496bc455]" started-at="2026-02-20T11:56:16 IST" name="backToHomePage" finished-at="2026-02-20T11:56:23 IST" duration-ms="7395" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backToHomePage -->
-        <test-method signature="smokeForCreateManualAlarm()[pri:0, instance:function.A_testClassCreate@496bc455]" started-at="2026-02-17T18:31:26 IST" name="smokeForCreateManualAlarm" finished-at="2026-02-17T18:31:52 IST" duration-ms="25948" status="PASS">
+        <test-method signature="sendMessageToManualAlarmUser()[pri:0, instance:function.A_testClassCreate@496bc455]" started-at="2026-02-20T11:56:23 IST" name="sendMessageToManualAlarmUser" finished-at="2026-02-20T11:56:58 IST" duration-ms="35054" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+            <line>
+              <![CDATA[The process of send message to manual alarm user is started.]]>
+            </line>
+            <line>
+              <![CDATA[The process of send message to manual alarm user is complete.]]>
+            </line>
+            <line>
+              <![CDATA[ ]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- smokeForCreateManualAlarm -->
-        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassCreate@496bc455]" started-at="2026-02-17T18:31:52 IST" name="backToHomePage2" finished-at="2026-02-17T18:31:57 IST" duration-ms="5589" status="PASS">
+        </test-method> <!-- sendMessageToManualAlarmUser -->
+        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassCreate@496bc455]" started-at="2026-02-20T11:56:58 IST" name="backToHomePage2" finished-at="2026-02-20T11:57:04 IST" duration-ms="5694" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=smokeForCreateManualAlarm status=SUCCESS method=A_testClassCreate.smokeForCreateManualAlarm()[pri:0, instance:function.A_testClassCreate@496bc455] output={null}]]]>
+                <![CDATA[[TestResult name=sendMessageToManualAlarmUser status=SUCCESS method=A_testClassCreate.sendMessageToManualAlarmUser()[pri:0, instance:function.A_testClassCreate@496bc455]]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backToHomePage2 -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@496bc455]" started-at="2026-02-17T18:31:57 IST" name="backToHomePage" finished-at="2026-02-17T18:32:05 IST" duration-ms="7626" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- backToHomePage -->
-        <test-method signature="smokeForResource()[pri:0, instance:function.A_testClassCreate@496bc455]" started-at="2026-02-17T18:32:05 IST" name="smokeForResource" finished-at="2026-02-17T18:32:15 IST" duration-ms="9943" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- smokeForResource -->
-        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassCreate@496bc455]" started-at="2026-02-17T18:32:15 IST" name="backToHomePage2" finished-at="2026-02-17T18:32:21 IST" duration-ms="5675" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=smokeForResource status=SUCCESS method=A_testClassCreate.smokeForResource()[pri:0, instance:function.A_testClassCreate@496bc455] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- backToHomePage2 -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@496bc455]" started-at="2026-02-17T18:32:21 IST" name="backToHomePage" finished-at="2026-02-17T18:32:28 IST" duration-ms="7654" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- backToHomePage -->
-        <test-method signature="smokeForAlrmLoop()[pri:0, instance:function.A_testClassCreate@496bc455]" started-at="2026-02-17T18:32:28 IST" name="smokeForAlrmLoop" finished-at="2026-02-17T18:32:37 IST" duration-ms="8179" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- smokeForAlrmLoop -->
-        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassCreate@496bc455]" started-at="2026-02-17T18:32:37 IST" name="backToHomePage2" finished-at="2026-02-17T18:32:42 IST" duration-ms="5432" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=smokeForAlrmLoop status=SUCCESS method=A_testClassCreate.smokeForAlrmLoop()[pri:0, instance:function.A_testClassCreate@496bc455] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- backToHomePage2 -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@496bc455]" started-at="2026-02-17T18:32:42 IST" name="backToHomePage" finished-at="2026-02-17T18:32:49 IST" duration-ms="7409" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- backToHomePage -->
-        <test-method signature="smokeAlarmTemplate()[pri:0, instance:function.A_testClassCreate@496bc455]" started-at="2026-02-17T18:32:49 IST" name="smokeAlarmTemplate" finished-at="2026-02-17T18:32:57 IST" duration-ms="7712" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- smokeAlarmTemplate -->
-        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassCreate@496bc455]" started-at="2026-02-17T18:32:57 IST" name="backToHomePage2" finished-at="2026-02-17T18:33:03 IST" duration-ms="5436" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=smokeAlarmTemplate status=SUCCESS method=A_testClassCreate.smokeAlarmTemplate()[pri:0, instance:function.A_testClassCreate@496bc455] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- backToHomePage2 -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@496bc455]" started-at="2026-02-17T18:33:03 IST" name="backToHomePage" finished-at="2026-02-17T18:33:10 IST" duration-ms="7609" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- backToHomePage -->
-        <test-method signature="smokeForEscalation()[pri:0, instance:function.A_testClassCreate@496bc455]" started-at="2026-02-17T18:33:10 IST" name="smokeForEscalation" finished-at="2026-02-17T18:33:16 IST" duration-ms="5676" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- smokeForEscalation -->
-        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassCreate@496bc455]" started-at="2026-02-17T18:33:16 IST" name="backToHomePage2" finished-at="2026-02-17T18:33:22 IST" duration-ms="5847" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=smokeForEscalation status=SUCCESS method=A_testClassCreate.smokeForEscalation()[pri:0, instance:function.A_testClassCreate@496bc455] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- backToHomePage2 -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@496bc455]" started-at="2026-02-17T18:33:22 IST" name="backToHomePage" finished-at="2026-02-17T18:33:29 IST" duration-ms="7104" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- backToHomePage -->
-        <test-method signature="smokeForCalendar()[pri:0, instance:function.A_testClassCreate@496bc455]" started-at="2026-02-17T18:33:29 IST" name="smokeForCalendar" finished-at="2026-02-17T18:33:36 IST" duration-ms="6862" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- smokeForCalendar -->
-        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassCreate@496bc455]" started-at="2026-02-17T18:33:36 IST" name="backToHomePage2" finished-at="2026-02-17T18:33:42 IST" duration-ms="5862" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=smokeForCalendar status=SUCCESS method=A_testClassCreate.smokeForCalendar()[pri:0, instance:function.A_testClassCreate@496bc455] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- backToHomePage2 -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@496bc455]" started-at="2026-02-17T18:33:42 IST" name="backToHomePage" finished-at="2026-02-17T18:33:49 IST" duration-ms="7372" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- backToHomePage -->
-        <test-method signature="smokeForEventCategory()[pri:0, instance:function.A_testClassCreate@496bc455]" started-at="2026-02-17T18:33:49 IST" name="smokeForEventCategory" finished-at="2026-02-17T18:33:56 IST" duration-ms="7145" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- smokeForEventCategory -->
-        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassCreate@496bc455]" started-at="2026-02-17T18:33:56 IST" name="backToHomePage2" finished-at="2026-02-17T18:34:02 IST" duration-ms="5909" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=smokeForEventCategory status=SUCCESS method=A_testClassCreate.smokeForEventCategory()[pri:0, instance:function.A_testClassCreate@496bc455] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- backToHomePage2 -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@496bc455]" started-at="2026-02-17T18:34:02 IST" name="backToHomePage" finished-at="2026-02-17T18:34:09 IST" duration-ms="7474" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- backToHomePage -->
-        <test-method signature="smokeForinformation()[pri:0, instance:function.A_testClassCreate@496bc455]" started-at="2026-02-17T18:34:09 IST" name="smokeForinformation" finished-at="2026-02-17T18:34:19 IST" duration-ms="9833" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- smokeForinformation -->
-        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassCreate@496bc455]" started-at="2026-02-17T18:34:19 IST" name="backToHomePage2" finished-at="2026-02-17T18:34:25 IST" duration-ms="6110" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=smokeForinformation status=SUCCESS method=A_testClassCreate.smokeForinformation()[pri:0, instance:function.A_testClassCreate@496bc455] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- backToHomePage2 -->
-        <test-method is-config="true" signature="logOut()[pri:0, instance:function.A_testClassCreate@496bc455]" started-at="2026-02-17T18:34:25 IST" name="logOut" finished-at="2026-02-17T18:34:30 IST" duration-ms="4797" status="PASS">
+        <test-method is-config="true" signature="logOut()[pri:0, instance:function.A_testClassCreate@496bc455]" started-at="2026-02-20T11:57:04 IST" name="logOut" finished-at="2026-02-20T11:57:08 IST" duration-ms="3736" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Logout sucessfully.]]>
@@ -230,14 +145,14 @@
             </line>
           </reporter-output>
         </test-method> <!-- logOut -->
-        <test-method is-config="true" signature="AfterTest()[pri:0, instance:function.A_testClassCreate@496bc455]" started-at="2026-02-17T18:34:30 IST" name="AfterTest" finished-at="2026-02-17T18:34:30 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="AfterTest()[pri:0, instance:function.A_testClassCreate@496bc455]" started-at="2026-02-20T11:57:08 IST" name="AfterTest" finished-at="2026-02-20T11:57:08 IST" duration-ms="0" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Refresh the URL before successfully closing the browser.]]>
             </line>
           </reporter-output>
         </test-method> <!-- AfterTest -->
-        <test-method is-config="true" signature="AfterSute()[pri:0, instance:function.A_testClassCreate@496bc455]" started-at="2026-02-17T18:34:30 IST" name="AfterSute" finished-at="2026-02-17T18:34:39 IST" duration-ms="9131" status="PASS">
+        <test-method is-config="true" signature="AfterSute()[pri:0, instance:function.A_testClassCreate@496bc455]" started-at="2026-02-20T11:57:08 IST" name="AfterSute" finished-at="2026-02-20T11:57:08 IST" duration-ms="140" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Browser close sucessfully.]]>

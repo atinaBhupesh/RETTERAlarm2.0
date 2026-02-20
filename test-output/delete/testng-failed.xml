@@ -14,7 +14,6 @@
           <include name="createObject"/>
           <include name="deleteAlarmTemplate"/>
           <include name="BeforeTest"/>
-          <include name="deleteManualAlarm"/>
           <include name="backToHomePage"/>
           <include name="deleteCalendarEvent"/>
           <include name="BeforeSuite"/>

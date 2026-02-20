@@ -114,7 +114,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log("The process of Checking Alarm template validation is started.", true);
 		at.commonAlarmTemplate(driver, branchName);
 		at.TCAlarmTemplateCheckingValidation(driver, gTodaysDate, gtimeHHMMSS, st02N, st01N, st01V1, st02V1, st01A1,
-				st02A1);
+				st02A1,filePath);
 
 		getDetailsFromFiles();
 
@@ -149,7 +149,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log("The process of checking validation for alarm resource is started.", true);
 		ar.commonResource(driver, branchName);
 		ar.TCResourceValidationChecking(driver, st02N, st01N, gTodaysDate, gtimeHHMMSS, st02V1, st01V1, st01FF1,
-				st02FF1);
+				st02FF1, filePath);
 		Reporter.log("The process of checking validation for alarm resource is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
@@ -406,7 +406,7 @@ public class A_testClassCreate extends b_baseClass {
 
 		info.create1DayInformationEventByFireFighter(driver, st01N, st02N, gTomorrowDate, gtimeHHMMSS, st01R1, St01M1,
 				St01M2, germanyTimeAfter5MinHH, germanyTimeAfter5MinMM, germanyTimeAfter20MinHH,
-				germanyTimeAfter20MinMM, st01FF1, st02FF1, branchName);
+				germanyTimeAfter20MinMM, st01FF1, st02FF1, branchName, filePath);
 		Reporter.log(
 				"The process for creating a new Information-Event using fire fighter has been completed successfully.",
 				true);
@@ -601,7 +601,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log("The process of creating manual alarm by new escalation resource is started.", true);
 		ma.manualAlarmCommon(driver, deptN, branchName);
 
-		ma.manualAlarmByNewEscResource(driver, st01N, gTodaysDate, gtimeHHMMSS);
+		ma.manualAlarmByNewEscResource(driver, st01N, gTodaysDate, gtimeHHMMSS,filePath);
 		Reporter.log("The process of creating nmanual alarm by new escalation resource is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
@@ -615,7 +615,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of creating new escaltion resource is started.", true);
 		ar.commonResource(driver, branchName);
-		ar.createNewEscalationResource(driver, st01N, gTodaysDate, gtimeHHMMSS, St1V3, st01FF2);
+		ar.createNewEscalationResource(driver, st01N, gTodaysDate, gtimeHHMMSS, St1V3, st01FF2, filePath);
 		Reporter.log("The process of creating new escaltion resource is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
@@ -673,7 +673,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log("The process of creating new alarm template by attribute is started.", true);
 		at.commonAlarmTemplate(driver, branchName);
 		at.createNewAlarmTemplateByAttribute(driver, gTodaysDate, gtimeHHMMSS, st02N, st01N, st01V1, st02V1, st01A1,
-				st02A1);
+				st02A1, filePath);
 		Reporter.log("The process of creating new alarm template by attribute is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
@@ -701,7 +701,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of creating new alarm resource is started.", true);
 		ar.commonResource(driver, branchName);
-		ar.createNewResource(driver, st02N, st01N, gTodaysDate, gtimeHHMMSS, st02V1, st01V1, st01FF1, st02FF1);
+		ar.createNewResource(driver, st02N, st01N, gTodaysDate, gtimeHHMMSS, st02V1, st01V1, st01FF1, st02FF1, filePath);
 		Reporter.log("The process of creating new alarm resource is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
@@ -783,7 +783,7 @@ public class A_testClassCreate extends b_baseClass {
 	}
 
 	@Test
-	public void manualaByAttributeExtend1StStResource() throws Throwable
+	public void manualaByAttributeExtend1To01StEscResourceFrom02() throws Throwable
 
 	{
 		Reporter.log(" ", true);
@@ -791,8 +791,8 @@ public class A_testClassCreate extends b_baseClass {
 				"The process of creating a manual alarm by attribute st2 and extend to st1 by resource is started.",
 				true);
 		ma.manualAlarmCommon(driver, deptN, branchName);
-		ma.manualaByAttributeExtend1StStResource(driver, st02N, gTodaysDate, gtimeHHMMSS, st02V1, st02A1, st01N,
-				branchName, st01REsc);
+		ma.manualaByAttributeExtend1To01StEscResourceFrom02(driver, st02N, gTodaysDate, gtimeHHMMSS, st02V1, st02A1, st01N,
+				branchName, st01REsc, filePath);
 
 		Reporter.log(
 				"The process of creating a manual alarm by attribute st2 and extend to st1 by resource is complete.",
@@ -824,7 +824,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of creating a manual alarm by template is started.", true);
 		ma.manualAlarmCommon(driver, deptN, branchName);
-		ma.manualAlarmByOldEsclationTemplateFromSt02ToSt01(driver, oldEscTemplateSt02ToSt01);
+		ma.manualAlarmByOldEsclationTemplateFromSt02ToSt01(driver, st2Esc1t1, TemplateAlarmTitle);
 
 		Reporter.log("The process of creating a manual alarm by template is complete.", true);
 		Reporter.log(" ", true);
@@ -839,7 +839,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of creating a manual alarm by new resource  is started.", true);
 		ma.manualAlarmCommon(driver, deptN, branchName);
-		ma.manualAlarmByNewREsource(driver, st01N, gTodaysDate, gtimeHHMMSS);
+		ma.manualAlarmByNewREsource(driver, st01N, gTodaysDate, gtimeHHMMSS, filePath);
 		Reporter.log("The process of creating a manual alarm by new resource is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);

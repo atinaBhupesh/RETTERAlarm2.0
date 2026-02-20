@@ -5,20 +5,14 @@
     <classes>
       <class name="function.A_testClassCreate">
         <methods>
-          <include name="TCAlarmTemplateCheckingValidation"/>
-          <include name="TCNewAlarmLoopCheckingValidation"/>
-          <include name="TCCalenderEventValidationChecking"/>
-          <include name="logOut"/>
-          <include name="TCResourceValidationChecking"/>
-          <include name="TCManualAlarmMSCheckingValidation"/>
-          <include name="AfterSute"/>
           <include name="AfterTest"/>
           <include name="BeforeSuite"/>
-          <include name="TCInfoeventValidationChecking"/>
           <include name="backToHomePage2"/>
           <include name="BeforeTest"/>
+          <include name="logOut"/>
           <include name="backToHomePage"/>
-          <include name="TCMonitorInformationValidationChecking"/>
+          <include name="sendMessageToManualAlarmUser"/>
+          <include name="AfterSute"/>
           <include name="createObject"/>
         </methods>
       </class> <!-- function.A_testClassCreate -->

@@ -19,7 +19,7 @@
 				<include name="manualaByAttributeMSLP" />
 				<include name="manualAlarmByEscResourceSingleStation" />
 				<include name="manualAlarmByEscResourceMs" />
-				<include name="manualaByAttributeExtend1StStResource" />
+				<include name="manualaByAttributeExtend1To01StEscResourceFrom02" />
 				<include name="manualAlarmByOldEsclationTemplateFromSt02ToSt01" />
 
 				<include name="createNewAlarmTemplateByAttribute" />

@@ -8,9 +8,15 @@
 			<methods>
 
 
-				<include name="sendMessageToOldApiAlarmUser" />
+				<include name="createMonitorInformationByAttribute" />
+				<include name="createMonitorInformationByResource" />
+				<include name="createMonitorInformationByFireFighter" />
+				<include name="createMonitorInformationByStations" />
+				<include
+					name="createMonitorInformationByFireFighterForTwoStation" />
 
-
+				
+			
 			</methods>
 
 		</classes>

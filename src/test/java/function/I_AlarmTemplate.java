@@ -238,9 +238,9 @@ public class I_AlarmTemplate extends b_baseClass {
 	}
 
 	public void TCAlarmTemplateCheckingValidation(WebDriver driver, String gTodaysDate, String gtimeHHMMSS, String St2N,
-			String St1N, String St1V1, String St2V1, String st01A1, String st02A1) throws Throwable {
+			String St1N, String St1V1, String St2V1, String st01A1, String st02A1,String filePath) throws Throwable {
 		Actions act = new Actions(driver);
-		String filePath = ".\\DataFiles\\DetailsFile.xlsx";
+		
 
 		if (alarmTemplateTitle.isDisplayed()) {
 			System.out.println(GREEN + "TC_AlarmTemplate_001 - Verify Navigation to Alarm Template Page");
@@ -615,9 +615,9 @@ public class I_AlarmTemplate extends b_baseClass {
 	}
 
 	public void createNewAlarmTemplateByAttribute(WebDriver driver, String gTodaysDate, String gtimeHHMMSS, String St2N,
-			String St1N, String St1V1, String St2V1, String st01A1, String st02A1) throws Throwable {
+			String St1N, String St1V1, String St2V1, String st01A1, String st02A1,String filePath) throws Throwable {
 		Actions act = new Actions(driver);
-		String filePath = ".\\DataFiles\\DetailsFile.xlsx";
+		
 
 		createNewButton.click();
 		Thread.sleep(2000);
@@ -1099,7 +1099,8 @@ public class I_AlarmTemplate extends b_baseClass {
 		}
 
 		else if (branchName.equals("2")) {
-			driver.navigate().to("https://development.retteralarm.de/admin/Users/index");
+		
+			driver.navigate().to("https://admin.testing.retteralarm.de/admin/alarm-template/list");
 
 		}
 

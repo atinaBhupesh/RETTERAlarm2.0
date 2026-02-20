@@ -628,7 +628,7 @@ public class F_manualAlarm extends b_baseClass {
 
 	}
 
-	public void manualAlarmByNewEscResource(WebDriver driver, String st01N, String gTodaysDate, String gtimeHHMMSS)
+	public void manualAlarmByNewEscResource(WebDriver driver, String st01N, String gTodaysDate, String gtimeHHMMSS, String filePath)
 			throws Throwable {
 
 		Actions act = new Actions(driver);
@@ -723,7 +723,7 @@ public class F_manualAlarm extends b_baseClass {
 		Thread.sleep(500);
 
 		/* Read Resource from Excel */
-		File src = new File(".\\DataFiles\\DetailsFile.xlsx");
+		File src = new File(filePath);
 		FileInputStream ipt = new FileInputStream(src);
 		XSSFWorkbook wb11 = new XSSFWorkbook(ipt);
 		XSSFSheet sheet11 = wb11.getSheetAt(0);
@@ -748,7 +748,7 @@ public class F_manualAlarm extends b_baseClass {
 
 	}
 
-	public void manualAlarmByNewREsource(WebDriver driver, String st01N, String gTodaysDate, String gtimeHHMMSS)
+	public void manualAlarmByNewREsource(WebDriver driver, String st01N, String gTodaysDate, String gtimeHHMMSS, String filePath)
 			throws Throwable {
 
 		Actions actions = new Actions(driver);
@@ -843,7 +843,7 @@ public class F_manualAlarm extends b_baseClass {
 		Thread.sleep(500);
 
 		// Read resource from Excel
-		File src = new File(".\\DataFiles\\DetailsFile.xlsx");
+		File src = new File(filePath);
 		FileInputStream ipt = new FileInputStream(src);
 		XSSFWorkbook wb11 = new XSSFWorkbook(ipt);
 		XSSFSheet sheet11 = wb11.getSheetAt(0);
@@ -1184,7 +1184,7 @@ public class F_manualAlarm extends b_baseClass {
 
 	}
 
-	public void manualAlarmByOldEsclationTemplateFromSt02ToSt01(WebDriver driver, String oldEscTemplateSt02ToSt01)
+	public void manualAlarmByOldEsclationTemplateFromSt02ToSt01(WebDriver driver, String st2Esc1t1, String TemplateAlarmTitle)
 			throws Throwable {
 
 		Actions act = new Actions(driver);
@@ -1196,7 +1196,7 @@ public class F_manualAlarm extends b_baseClass {
 		templateField.click();
 		Thread.sleep(2000);
 
-		act.sendKeys(oldEscTemplateSt02ToSt01).perform();
+		act.sendKeys(st2Esc1t1).perform();
 		Thread.sleep(2000);
 
 		act.sendKeys(Keys.ENTER).perform();
@@ -1210,7 +1210,7 @@ public class F_manualAlarm extends b_baseClass {
 
 		yesCreate.click();
 		Thread.sleep(5000);
-		String title = "BG_Template alarm Escalate from st 07 to st 06";
+		String title=TemplateAlarmTitle;
 		String expectedTitle = firstItemTitle.getText();
 
 		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not created.");
@@ -1219,11 +1219,11 @@ public class F_manualAlarm extends b_baseClass {
 
 	}
 
-	public void manualaByAttributeExtend1StStResource(WebDriver driver, String St2N, String gTodaysDate,
-			String gtimeHHMMSS, String St2V1, String st02A1, String St1N, String branchName, String st01REsc)
+	public void manualaByAttributeExtend1To01StEscResourceFrom02(WebDriver driver, String St2N, String gTodaysDate,
+			String gtimeHHMMSS, String St2V1, String st02A1, String St1N, String branchName, String st01REsc, String filePath)
 			throws Throwable {
 		Actions act = new Actions(driver);
-		String filePath = ".\\DataFiles\\DetailsFile.xlsx";
+		
 
 		// Create new alarm
 		createNewButton.click();

@@ -108,10 +108,9 @@ public class G_resource extends b_baseClass {
 	}
 
 	public void TCResourceValidationChecking(WebDriver driver, String St2N, String St1N, String gTodaysDate,
-			String gtimeHHMMSS, String St2V1, String St1V1, String st01FF1, String st02FF1) throws Throwable {
+			String gtimeHHMMSS, String St2V1, String St1V1, String st01FF1, String st02FF1,String filePath) throws Throwable {
 		Actions act = new Actions(driver);
-		String filePath = ".\\DataFiles\\DetailsFile.xlsx";
-
+		
 		if (alarmResourceTitle.isDisplayed()) {
 			System.out.println(GREEN + "TC_Resource_001 - Verify Navigation to Alarm Resource Page");
 		}
@@ -240,10 +239,10 @@ public class G_resource extends b_baseClass {
 	}
 
 	public void createNewEscalationResource(WebDriver driver, String St01N, String gTodaysDate, String gtimeHHMMSS,
-			String St1V3, String st01FF2) throws Throwable {
+			String St1V3, String st01FF2, String filePath) throws Throwable {
 
 		Actions act = new Actions(driver);
-		String filePath = ".\\DataFiles\\DetailsFile.xlsx";
+		
 
 		createNewButton.click();
 		Thread.sleep(3000);
@@ -299,9 +298,9 @@ public class G_resource extends b_baseClass {
 	}
 
 	public void createNewResource(WebDriver driver, String St2N, String St1N, String gTodaysDate, String gtimeHHMMSS,
-			String St2V1, String St1V1, String st01FF1, String st02FF1) throws Throwable {
+			String St2V1, String St1V1, String st01FF1, String st02FF1,String filePath) throws Throwable {
 		Actions act = new Actions(driver);
-		String filePath = ".\\DataFiles\\DetailsFile.xlsx";
+		
 
 		createNewButton.click();
 		Thread.sleep(3000);

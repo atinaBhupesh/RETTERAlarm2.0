@@ -20,8 +20,7 @@ import org.openqa.selenium.io.FileHandler;
 import org.testng.Reporter;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-
-public class b_baseClass {
+public class b_baseClass2 {
 
 	String branchName;
 	String browserName;
@@ -46,7 +45,7 @@ public class b_baseClass {
 	String st02A1;
 	String st01REsc;
 	String st02REsc;
-	String st2Esc1t1;
+	String st02t1;
 	String st02R1;
 	String NewTemplate;
 	String NewResource;
@@ -63,11 +62,8 @@ public class b_baseClass {
 	String GREEN = GREEN_COLOR + "\u2714 " + RESET_COLOR;
 	String RED = RED_COLOR + "\u2716 " + RESET_COLOR;
 	String ManualAlarmNameForChatNewApi;
+	String oldEscTemplateSt02ToSt01;
 	String ManualAlarmNameForChatOldApi;
-	String TemplateAlarmTitle;
-
-	String filePath;
-	
 
 	String proEnd = "|*******************************************************|";
 
@@ -75,8 +71,8 @@ public class b_baseClass {
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("Enter the branch name > for live-1, for Testing-2, for development-3 : ");
 		System.out.println();
-		branchName= scanner.nextLine();
-//		branchName = "1";
+//		branchName= scanner.nextLine();
+		branchName = "1";
 
 		switch (branchName) {
 		case "1": {
@@ -230,29 +226,7 @@ public class b_baseClass {
 
 	public void getDetailsFromFiles() throws Throwable {
 
-		
-		switch (branchName) {
-
-		case "1":
-			filePath=".\\DataFiles\\DetailsFileLive.xlsx";
-			password = "123456";
-
-			break;
-
-		case "2":
-			filePath=".\\DataFiles\\DetailsFileTesting.xlsx";
-			password = "Qwerty@123";
-			break;
-
-		case "3":
-			
-			break;
-
-		default:
-			System.out.println("\u001B[31m✖ Invalid branch selected\u001B[0m");
-		}
-		
-		File src = new File(filePath);
+		File src = new File(".\\DataFiles\\DetailsFile.xlsx");
 
 		FileInputStream ipt = new FileInputStream(src);
 
@@ -260,46 +234,86 @@ public class b_baseClass {
 
 		XSSFSheet sheet = wb.getSheetAt(0);
 
-		
-		
-		
-		url = sheet.getRow(1).getCell(1).getStringCellValue();
-		driver.get(url);
+		switch (branchName) {
 
-		userName = sheet.getRow(2).getCell(1).getStringCellValue();
-		
-		deptN = sheet.getRow(4).getCell(1).getStringCellValue();
-		st01N = sheet.getRow(5).getCell(1).getStringCellValue();
-		st02N = sheet.getRow(6).getCell(1).getStringCellValue();
-		st01V1 = sheet.getRow(7).getCell(1).getStringCellValue();
-		st01V2 = sheet.getRow(8).getCell(1).getStringCellValue();
-		st01A1 = sheet.getRow(9).getCell(1).getStringCellValue();
-		st01R1 = sheet.getRow(10).getCell(1).getStringCellValue();
-		st01R2 = sheet.getRow(11).getCell(1).getStringCellValue();
-		st01FF1 = sheet.getRow(12).getCell(1).getStringCellValue();
-		st02FF1 = sheet.getRow(13).getCell(1).getStringCellValue();
-		st02V1 = sheet.getRow(14).getCell(1).getStringCellValue();
-		st02A1 = sheet.getRow(15).getCell(1).getStringCellValue();
-		st01REsc = sheet.getRow(16).getCell(1).getStringCellValue();
-		st02REsc = sheet.getRow(17).getCell(1).getStringCellValue();
-		st2Esc1t1 = sheet.getRow(18).getCell(1).getStringCellValue();
-		st02R1 = sheet.getRow(19).getCell(1).getStringCellValue();
-		NewTemplate = sheet.getRow(20).getCell(1).getStringCellValue();
-		NewResource = sheet.getRow(21).getCell(1).getStringCellValue();
-		st01FF2 = sheet.getRow(22).getCell(1).getStringCellValue();
-		St1V3 = sheet.getRow(23).getCell(1).getStringCellValue();
-		NewResourceEsc = sheet.getRow(24).getCell(1).getStringCellValue();
-		St01M1 = sheet.getRow(25).getCell(1).getStringCellValue();
-		St01M2 = sheet.getRow(26).getCell(1).getStringCellValue();
-		St02M1 = sheet.getRow(27).getCell(1).getStringCellValue();
-		InfoEventNameForChat = sheet.getRow(28).getCell(1).getStringCellValue();
-		ManualAlarmNameForChatNewApi = sheet.getRow(29).getCell(1).getStringCellValue();
-		ManualAlarmNameForChatOldApi = sheet.getRow(30).getCell(1).getStringCellValue();
-		TemplateAlarmTitle = sheet.getRow(31).getCell(1).getStringCellValue();
-		
-		
+		case "1":
+			url = sheet.getRow(1).getCell(1).getStringCellValue();
+			driver.get(url);
 
-		
+			userName = sheet.getRow(2).getCell(1).getStringCellValue();
+			password = "123456";
+			deptN = sheet.getRow(4).getCell(1).getStringCellValue();
+			st01N = sheet.getRow(5).getCell(1).getStringCellValue();
+			st02N = sheet.getRow(6).getCell(1).getStringCellValue();
+			st01V1 = sheet.getRow(7).getCell(1).getStringCellValue();
+			st01V2 = sheet.getRow(8).getCell(1).getStringCellValue();
+			st01A1 = sheet.getRow(9).getCell(1).getStringCellValue();
+			st01R1 = sheet.getRow(10).getCell(1).getStringCellValue();
+			st01R2 = sheet.getRow(11).getCell(1).getStringCellValue();
+			st01FF1 = sheet.getRow(12).getCell(1).getStringCellValue();
+			st02FF1 = sheet.getRow(13).getCell(1).getStringCellValue();
+			st02V1 = sheet.getRow(14).getCell(1).getStringCellValue();
+			st02A1 = sheet.getRow(15).getCell(1).getStringCellValue();
+			st01REsc = sheet.getRow(16).getCell(1).getStringCellValue();
+			st02REsc = sheet.getRow(17).getCell(1).getStringCellValue();
+			st02t1 = sheet.getRow(18).getCell(1).getStringCellValue();
+			st02R1 = sheet.getRow(19).getCell(1).getStringCellValue();
+			NewTemplate = sheet.getRow(20).getCell(1).getStringCellValue();
+			NewResource = sheet.getRow(21).getCell(1).getStringCellValue();
+			st01FF2 = sheet.getRow(22).getCell(1).getStringCellValue();
+			St1V3 = sheet.getRow(23).getCell(1).getStringCellValue();
+			NewResourceEsc = sheet.getRow(24).getCell(1).getStringCellValue();
+			St01M1 = sheet.getRow(25).getCell(1).getStringCellValue();
+			St01M2 = sheet.getRow(26).getCell(1).getStringCellValue();
+			St02M1 = sheet.getRow(27).getCell(1).getStringCellValue();
+			InfoEventNameForChat = sheet.getRow(28).getCell(1).getStringCellValue();
+			ManualAlarmNameForChatNewApi = sheet.getRow(29).getCell(1).getStringCellValue();
+			oldEscTemplateSt02ToSt01 = sheet.getRow(30).getCell(1).getStringCellValue();
+			ManualAlarmNameForChatOldApi = sheet.getRow(31).getCell(1).getStringCellValue();
+
+			break;
+
+		case "2":
+			url = sheet.getRow(1).getCell(2).getStringCellValue();
+			driver.get(url);
+
+			userName = sheet.getRow(2).getCell(2).getStringCellValue();
+			password = "Qwerty@123";
+			st01N = sheet.getRow(5).getCell(2).getStringCellValue();
+			st02N = sheet.getRow(6).getCell(2).getStringCellValue();
+			st01V1 = sheet.getRow(7).getCell(2).getStringCellValue();
+			st01V2 = sheet.getRow(8).getCell(2).getStringCellValue();
+			st01A1 = sheet.getRow(9).getCell(2).getStringCellValue();
+			st01R1 = sheet.getRow(10).getCell(2).getStringCellValue();
+			st01R2 = sheet.getRow(11).getCell(2).getStringCellValue();
+			st01FF1 = sheet.getRow(12).getCell(2).getStringCellValue();
+			st02FF1 = sheet.getRow(13).getCell(2).getStringCellValue();
+			st02V1 = sheet.getRow(14).getCell(2).getStringCellValue();
+			st02A1 = sheet.getRow(15).getCell(2).getStringCellValue();
+			st01REsc = sheet.getRow(16).getCell(2).getStringCellValue();
+			st02REsc = sheet.getRow(17).getCell(2).getStringCellValue();
+			st02t1 = sheet.getRow(18).getCell(2).getStringCellValue();
+			st02R1 = sheet.getRow(19).getCell(2).getStringCellValue();
+			NewTemplate = sheet.getRow(20).getCell(2).getStringCellValue();
+			NewResource = sheet.getRow(21).getCell(2).getStringCellValue();
+			st01FF2 = sheet.getRow(22).getCell(2).getStringCellValue();
+			St1V3 = sheet.getRow(23).getCell(2).getStringCellValue();
+			NewResourceEsc = sheet.getRow(24).getCell(2).getStringCellValue();
+			St01M1 = sheet.getRow(25).getCell(2).getStringCellValue();
+			St01M2 = sheet.getRow(26).getCell(2).getStringCellValue();
+			break;
+
+		case "3":
+			url = sheet.getRow(1).getCell(3).getStringCellValue();
+			driver.get(url);
+
+			userName = sheet.getRow(2).getCell(3).getStringCellValue();
+			password = "Qwerty@123";
+			break;
+
+		default:
+			System.out.println("\u001B[31m✖ Invalid branch selected\u001B[0m");
+		}
 
 	}
 
