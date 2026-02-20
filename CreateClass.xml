@@ -7,7 +7,22 @@
 
 			<methods>
 
-	<include name="createCalendarEventByAttribute" />
+	
+				<include name="createMonitorInformationByAttribute" />
+				<include name="createMonitorInformationByResource" />
+				<include name="createMonitorInformationByFireFighter" />
+				<include name="createMonitorInformationByStations" />
+				<include
+					name="createMonitorInformationByFireFighterForTwoStation" />
+
+				<include name="create1MinInformationEventByAttribute" />
+				<include name="create1HrInformationEventByResource" />
+				<include name="create1DayInformationEventByFireFighter" />
+				<include name="createFullDayInformationEventByStation" />
+				<include name="SendMessageTo1DayInformationEventByFireFighter" />
+
+
+				<include name="createCalendarEventByAttribute" />
 				<include name="createCalendarEventByResource" />
 				<include name="createCalendarEventByFireFughterMS" />
 				<include name="createCalendarEventByStationsMS" />
@@ -18,6 +33,7 @@
 
 				<include name="createNewAlarmLoop" />
 				<include name="createEventCategory" />
+
 
 			
 			</methods>
