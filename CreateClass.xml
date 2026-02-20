@@ -7,15 +7,18 @@
 
 			<methods>
 
+	<include name="createCalendarEventByAttribute" />
+				<include name="createCalendarEventByResource" />
+				<include name="createCalendarEventByFireFughterMS" />
+				<include name="createCalendarEventByStationsMS" />
 
-				<include name="createMonitorInformationByAttribute" />
-				<include name="createMonitorInformationByResource" />
-				<include name="createMonitorInformationByFireFighter" />
-				<include name="createMonitorInformationByStations" />
-				<include
-					name="createMonitorInformationByFireFighterForTwoStation" />
 
-				
+				<include name="createNewAlarmTemplateByResource" />
+				<include name="createNewAlarmTemplateByFirefighter" />
+
+				<include name="createNewAlarmLoop" />
+				<include name="createEventCategory" />
+
 			
 			</methods>
 

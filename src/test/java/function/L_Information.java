@@ -1023,7 +1023,12 @@ public class L_Information extends b_baseClass {
 
 		eventCategory.click();
 		Thread.sleep(2000);
-		ADSt06Ecat1.click();
+		
+		
+		act.sendKeys(Keys.UP,Keys.ENTER).perform();
+		
+		
+//		ADSt06Ecat1.click();
 		Thread.sleep(1000);
 
 		act.sendKeys(Keys.TAB).perform();
@@ -1162,7 +1167,10 @@ public class L_Information extends b_baseClass {
 
 		eventCategory.click();
 		Thread.sleep(2000);
-		ADSt06Ecat1.click();
+		
+		act.sendKeys(Keys.UP,Keys.ENTER).perform();
+		
+//		ADSt06Ecat1.click();
 		Thread.sleep(1000);
 
 		act.sendKeys(Keys.TAB).perform();
@@ -1262,6 +1270,8 @@ public class L_Information extends b_baseClass {
 		Actions act = new Actions(driver);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
+		
+
 		createNewButton.click();
 		Thread.sleep(2000);
 
@@ -1335,9 +1345,9 @@ public class L_Information extends b_baseClass {
 		act.sendKeys(Keys.TAB).perform();
 		Thread.sleep(500);
 		act.sendKeys(Keys.SPACE).perform();// active monitor options
-		Thread.sleep(500);
-		act.sendKeys(Keys.TAB).perform();
 		Thread.sleep(2000);
+		act.sendKeys(Keys.TAB).perform();
+		Thread.sleep(500);
 
 		// monitorFields.click();
 		// Thread.sleep(2000);
@@ -1483,7 +1493,8 @@ public class L_Information extends b_baseClass {
 		Thread.sleep(500);
 		act.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).sendKeys(Keys.BACK_SPACE).build().perform();
 		Thread.sleep(500);
-
+act.sendKeys(Keys.TAB).perform();
+Thread.sleep(500);
 		startDateSt.click();
 		Thread.sleep(1000);
 		today1.click();
