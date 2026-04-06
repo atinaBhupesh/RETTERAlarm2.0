@@ -6,12 +6,14 @@
       <class name="function.A_testClassCreate">
         <methods>
           <include name="AfterTest"/>
+          <include name="CheckManualAlarmEscalationFunctionality"/>
           <include name="BeforeSuite"/>
-          <include name="sendMessageToOldApiAlarmUser"/>
+          <include name="createCalendarEventByStationsMS"/>
           <include name="backToHomePage2"/>
+          <include name="CheckApiAlarmEscalationFunctionality"/>
           <include name="BeforeTest"/>
-          <include name="backToHomePage"/>
           <include name="logOut"/>
+          <include name="backToHomePage"/>
           <include name="AfterSute"/>
           <include name="createObject"/>
         </methods>

@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test(failed)(failed)</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Feb 02 12:11:46 IST 2026</td>
+<td>Started on:</td><td>Mon Apr 06 11:21:07 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>93 seconds (93038 ms)</td>
+<tr><td>Total time:</td><td>102 seconds (102013 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -68,7 +68,7 @@ function toggleAllBoxes() {
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
 <table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -76,24 +76,16 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='function.A_testClassCreate.createMonitorInformationByFireFighterForTwoStation()'><b>createMonitorInformationByFireFighterForTwoStation</b><br>Test class: function.A_testClassCreate<br/>
-<a href="#Output-1985178707" onClick='toggleBox("Output-1985178707", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1985178707" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1985178707">
- <br/>
-The process for creating a new monitor information using Fire Stations has been initiated.<br/>
-</div>
-</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//td[contains(translate(text(),&apos;BG&apos;,&apos;bg&apos;),&apos;bg&apos;)])[1]&quot;}
-  (Session info: chrome=144.0.7559.110)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+<td title='function.A_testClassCreate.logOut()'><b>logOut</b><br>Test class: function.A_testClassCreate</td>
+<td><div><pre>org.openqa.selenium.NoSuchSessionException: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=146.0.7680.178)
 Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [169074bc73c9d1ed6f8fb0a05584dfd2, findElement {value=(//td[contains(translate(text(),&apos;BG&apos;,&apos;bg&apos;),&apos;bg&apos;)])[1], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.110, chrome: {chromedriverVersion: 144.0.7559.109 (6a8d5e49388..., userDataDir: C:\Users\BHUPESH\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53010}, goog:processID: 18660, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53010/devtoo..., se:cdpVersion: 144.0.7559.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 169074bc73c9d1ed6f8fb0a05584dfd2
+Command: [dc9c52c8cee75d6787347fa7e16a8f8e, findElement {using=xpath, value=//a[@href=&quot;/admin/users/logout&quot;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\BHUPESH\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56609}, goog:processID: 6896, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56609/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: dc9c52c8cee75d6787347fa7e16a8f8e
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
@@ -107,20 +99,20 @@ Session ID: 169074bc73c9d1ed6f8fb0a05584dfd2
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy22.getText(Unknown Source)
-	at function.L_Information.createMonitorInformationByFireFighterForTwoStation(L_Information.java:948)
-	at function.A_testClassCreate.createMonitorInformationByFireFighterForTwoStation(A_testClassCreate.java:322)
+	at jdk.proxy2/jdk.proxy2.$Proxy22.click(Unknown Source)
+	at function.C_logIn_logOut.logOut(C_logIn_logOut.java:45)
+	at function.A_testClassCreate.logOut(A_testClassCreate.java:1057)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1985178707", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1985178707'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//td[contains(translate(text(),&apos;BG&apos;,&apos;bg&apos;),&apos;bg&apos;)])[1]&quot;}
-  (Session info: chrome=144.0.7559.110)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace831993944", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace831993944'><pre>org.openqa.selenium.NoSuchSessionException: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=146.0.7680.178)
 Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [169074bc73c9d1ed6f8fb0a05584dfd2, findElement {value=(//td[contains(translate(text(),&apos;BG&apos;,&apos;bg&apos;),&apos;bg&apos;)])[1], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.110, chrome: {chromedriverVersion: 144.0.7559.109 (6a8d5e49388..., userDataDir: C:\Users\BHUPESH\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53010}, goog:processID: 18660, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53010/devtoo..., se:cdpVersion: 144.0.7559.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 169074bc73c9d1ed6f8fb0a05584dfd2
+Command: [dc9c52c8cee75d6787347fa7e16a8f8e, findElement {using=xpath, value=//a[@href=&quot;/admin/users/logout&quot;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\BHUPESH\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56609}, goog:processID: 6896, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56609/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: dc9c52c8cee75d6787347fa7e16a8f8e
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -139,21 +131,20 @@ Session ID: 169074bc73c9d1ed6f8fb0a05584dfd2
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy22.getText(Unknown Source)
-	at function.L_Information.createMonitorInformationByFireFighterForTwoStation(L_Information.java:948)
-	at function.A_testClassCreate.createMonitorInformationByFireFighterForTwoStation(A_testClassCreate.java:322)
+	at jdk.proxy2/jdk.proxy2.$Proxy22.click(Unknown Source)
+	at function.C_logIn_logOut.logOut(C_logIn_logOut.java:45)
+	at function.A_testClassCreate.logOut(A_testClassCreate.java:1057)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
+	at org.testng.internal.invokers.TestMethodWorker.invokeAfterClassConfigurations(TestMethodWorker.java:229)
+	at org.testng.internal.invokers.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:215)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:131)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at org.testng.TestRunner.privateRun(TestRunner.java:819)
 	at org.testng.TestRunner.run(TestRunner.java:619)
@@ -171,8 +162,62 @@ Session ID: 169074bc73c9d1ed6f8fb0a05584dfd2
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>68</td>
-<td>function.A_testClassCreate@4c60d6e9</td></tr>
+<td>0</td>
+<td>function.A_testClassCreate@7c37508a</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='function.A_testClassCreate.AfterTest()'><b>AfterTest</b><br>Test class: function.A_testClassCreate</td>
+<td></td>
+<td>0</td>
+<td>function.A_testClassCreate@7c37508a</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='function.A_testClassCreate.manualAlarmByNewREsource()'><b>manualAlarmByNewREsource</b><br>Test class: function.A_testClassCreate<br/>
+<a href="#Output-1890097328" onClick='toggleBox("Output-1890097328", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1890097328" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1890097328">
+ <br/>
+The process of creating a manual alarm by new resource  is started.<br/>
+The process of creating a manual alarm by new resource is complete.<br/>
+ <br/>
+</div>
+</td>
+<td></td>
+<td>31</td>
+<td>function.A_testClassCreate@7c37508a</td></tr>
+<tr>
+<td title='function.A_testClassCreate.sendMessageToManualAlarmUser()'><b>sendMessageToManualAlarmUser</b><br>Test class: function.A_testClassCreate<br/>
+<a href="#Output-242224826" onClick='toggleBox("Output-242224826", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-242224826" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-242224826">
+ <br/>
+The process of send message to manual alarm user is started.<br/>
+[31m✖ [0mChat option not found.<br/>
+The process of send message to manual alarm user is complete.<br/>
+ <br/>
+</div>
+</td>
+<td></td>
+<td>24</td>
+<td>function.A_testClassCreate@7c37508a</td></tr>
 </table><p>
 </body>
 </html>

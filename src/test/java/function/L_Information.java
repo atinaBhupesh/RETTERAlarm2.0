@@ -221,7 +221,7 @@ public class L_Information extends b_baseClass {
 	private WebElement StartDateIsRequriedValidation;
 	@FindBy(xpath = "//div[text()=\"Enddate is required\"]")
 	private WebElement enDateIsRequriedValidation;
-	// @FindBy(xpath="") private WebElement ;
+	 @FindBy(xpath="(//DIV[@class=\"dx-dropdowneditor-icon\"])[8]") private WebElement endDtae001 ;
 	// @FindBy(xpath="") private WebElement ;
 	// @FindBy(xpath="") private WebElement ;
 	// @FindBy(xpath="") private WebElement ;
@@ -876,26 +876,30 @@ public class L_Information extends b_baseClass {
 		Thread.sleep(1000);
 		today1.click();
 		Thread.sleep(500);
-		act.sendKeys(Keys.RIGHT).sendKeys(Keys.ENTER).build().perform();
+		act.sendKeys(Keys.RIGHT).perform();
+		Thread.sleep(500);
+		act.sendKeys(Keys.ENTER).perform();
 		Thread.sleep(500);
 		startDateHours.click();
 		Thread.sleep(500);
 		act.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).build().perform();
-		Thread.sleep(1000);
+		Thread.sleep(500);
 		act.sendKeys(germanyTimeAfter5MinHH).perform();
-		Thread.sleep(200);
+		Thread.sleep(500);
 		act.keyDown(Keys.TAB).perform();
-		Thread.sleep(200);
+		Thread.sleep(500);
 		act.sendKeys(germanyTimeAfter5MinMM).perform();
-		Thread.sleep(200);
+		Thread.sleep(1000);
 		startTimeOk.click();
 		Thread.sleep(1000);
 
 		endDateTimeEvent.click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		today2.click();
 		Thread.sleep(500);
-		act.sendKeys(Keys.RIGHT).sendKeys(Keys.ENTER).build().perform();
+		act.sendKeys(Keys.RIGHT).perform();
+		Thread.sleep(500);
+		act.sendKeys(Keys.ENTER).perform();
 		Thread.sleep(500);
 		endDateHours.click();
 		Thread.sleep(500);
@@ -1414,7 +1418,8 @@ public class L_Information extends b_baseClass {
 
 		Assert.assertTrue(title.contains(expectedTitle), RED + "Info NOT added because title is not available");
 
-		System.out.println(GREEN + title);
+		System.out.println(GREEN + title+ " from -" + germanyTimeAfter5MinHH + ":" + germanyTimeAfter5MinMM + " To " + germanyTimeAfter20MinHH
+				+ ":" + germanyTimeAfter20MinMM);
 
 	}
 
@@ -1543,7 +1548,9 @@ Thread.sleep(500);
 
 		Assert.assertTrue(title.contains(expectedTitle), RED + "Info NOT added because title is not available");
 
-		System.out.println(GREEN + title);
+		System.out.println(GREEN + title+" from -"
+				+ germanyTimeAfter5MinHH + ":" + germanyTimeAfter5MinMM + " To " + germanyTimeAfter20MinHH + ":"
+				+ germanyTimeAfter20MinMM);
 
 	}
 
@@ -1675,7 +1682,9 @@ Thread.sleep(500);
 
 		Assert.assertTrue(title.contains(expectedTitle), RED + "Info NOT added because title is not available");
 
-		System.out.println(GREEN + title);
+		System.out.println(GREEN + title+ " from -"
+				+ germanyTimeAfter5MinHH + ":" + germanyTimeAfter5MinMM + " To " + germanyTimeAfter20MinHH + ":"
+				+ germanyTimeAfter20MinMM);
 
 	}
 
@@ -1806,7 +1815,10 @@ Thread.sleep(500);
 
 		Assert.assertTrue(title.contains(expectedTitle), RED + "Info NOT added because title is not available");
 
-		System.out.println(GREEN + title);
+		System.out.println(GREEN + title+" from -"
+				+ germanyTimeAfter5MinHH + ":" + germanyTimeAfter5MinMM + " To " + germanyTimeAfter20MinHH + ":"
+				+ germanyTimeAfter20MinMM);
+		
 
 	}
 
@@ -1934,17 +1946,19 @@ Thread.sleep(500);
 
 		Assert.assertTrue(title.contains(expectedTitle), RED + "Info NOT added because title is not available");
 
-		System.out.println(GREEN + title);
+		System.out.println(GREEN + title+ " from -"
+				+ germanyTimeAfter5MinHH + ":" + germanyTimeAfter5MinMM + " To " + germanyTimeAfter20MinHH + ":"
+				+ germanyTimeAfter20MinMM);
 
 	}
 
-	public void delete_infoEvent(WebDriver driver) throws Throwable {
+	public void delete_infoEvent(WebDriver driver, String SearWordForDelete) throws Throwable {
 		Actions act = new Actions(driver);
 //			refreshFilter.click();
 //			Thread.sleep(2000);
 		searchInfoEventField.click();
 		Thread.sleep(500);
-		act.sendKeys("Bg").perform();
+		act.sendKeys(SearWordForDelete).perform();
 		Thread.sleep(2000);
 		itemsPerPage100.click();
 		Thread.sleep(5000);

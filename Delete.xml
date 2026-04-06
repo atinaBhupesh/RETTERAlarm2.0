@@ -8,7 +8,8 @@
 
 			<methods>
 
-				<include name="deletedeleteEventCatogery" />
+					<include name="deleteCalendarEvent" />
+				<include name="delete_infoEvent" />
 
 
 			</methods>

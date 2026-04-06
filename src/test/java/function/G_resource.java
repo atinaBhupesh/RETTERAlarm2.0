@@ -379,13 +379,13 @@ public class G_resource extends b_baseClass {
 
 	}
 
-	public void deleteResource(WebDriver driver) throws Throwable {
+	public void deleteResource(WebDriver driver, String SearWordForDelete) throws Throwable {
 
 		itemPepage100.click();
 		Thread.sleep(5000);
 		Actions act = new Actions(driver);
 		searchField.click();
-		act.sendKeys("BG").perform();
+		act.sendKeys(SearWordForDelete).perform();
 		Thread.sleep(5000);
 
 		int totalResourceCount = 0;

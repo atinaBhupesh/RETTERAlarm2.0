@@ -205,13 +205,13 @@ public class J_alarmEscalation extends b_baseClass {
 
 	}
 
-	public void deleteAlarmEscalation(WebDriver driver) throws Throwable {
+	public void deleteAlarmEscalation(WebDriver driver, String SearWordForDelete) throws Throwable {
 		Actions act = new Actions(driver);
 		Thread.sleep(2000);
 
 		searchField.click();
 		Thread.sleep(2000);
-		act.sendKeys("bg").perform();
+		act.sendKeys(SearWordForDelete).perform();
 		Thread.sleep(2000);
 
 		int totalAlarms = 0;

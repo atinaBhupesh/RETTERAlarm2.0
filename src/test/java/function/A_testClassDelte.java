@@ -29,9 +29,13 @@ public class A_testClassDelte extends b_baseClass {
 
 	String gTodaysDate;
 	String gtimeHHMMSS;
+	
+	long startTime;
 
 	@BeforeSuite
 	public void BeforeSuite() throws Throwable {
+		 startTime = System.currentTimeMillis();
+		 
 		getDetailsFromUser();
 		lonchBrowser();
 		getDetailsFromFiles();
@@ -85,7 +89,7 @@ public class A_testClassDelte extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of delete event catogery is started.", true);
 		ce.common_calendar(driver, branchName);
-		ce.deleteEventCatogery(driver);
+		ce.deleteEventCatogery(driver, SearWordForDelete);
 
 //		ma.backToOld();
 		Reporter.log("The process of delete event catogery is complete.", true);
@@ -102,7 +106,7 @@ public class A_testClassDelte extends b_baseClass {
 		Reporter.log("The process of delete information or event is started.", true);
 
 		info.common_information(driver, branchName);
-		info.delete_infoEvent(driver);
+		info.delete_infoEvent(driver,SearWordForDelete);
 
 //		ma.backToOld();
 		Reporter.log("The process of delete information or event is complete.", true);
@@ -118,7 +122,7 @@ public class A_testClassDelte extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of delete AlarmEscalation is started.", true);
 		ae.alarmEscaltionComman(driver, branchName);
-		ae.deleteAlarmEscalation(driver);
+		ae.deleteAlarmEscalation(driver, SearWordForDelete);
 
 //		ma.backToOld();
 		Reporter.log("The process of delete AlarmEscalation is complete.", true);
@@ -134,7 +138,7 @@ public class A_testClassDelte extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of delete alarm template is started.", true);
 		at.commonAlarmTemplate(driver, branchName);
-		at.deleteAlarmTemplate(driver);
+		at.deleteAlarmTemplate(driver, SearWordForDeleteTemplate );
 
 //		ma.backToOld();
 		Reporter.log("The process of delete alarm template is complete.", true);
@@ -165,7 +169,7 @@ public class A_testClassDelte extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of delete alarm loop is started.", true);
 		al.commonAlarmLoop(driver, branchName);
-		al.deleteAlarmLoop(driver);
+		al.deleteAlarmLoop(driver, SearWordForDelete);
 
 //		ma.backToOld();
 		Reporter.log("The process of delete alarm loop is complete.", true);
@@ -181,7 +185,7 @@ public class A_testClassDelte extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of delete alarm resource is started.", true);
 		ar.commonResource(driver, branchName);
-		ar.deleteResource(driver);
+		ar.deleteResource(driver, SearWordForDelete);
 
 //		ma.backToOld();
 		Reporter.log("The process of delete alarm resource is complete.", true);
@@ -197,7 +201,7 @@ public class A_testClassDelte extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of delete alarms is started.", true);
 		ma.manualAlarmCommon(driver, deptN, branchName);
-		ma.deleteManualAlarm(driver);
+		ma.deleteManualAlarm(driver, SearWordForDelete);
 
 //		ma.backToOld();
 
@@ -209,6 +213,8 @@ public class A_testClassDelte extends b_baseClass {
 
 	@AfterMethod
 	public void backToHomePage2(ITestResult result) throws Throwable {
+		driver.navigate().refresh();
+		Thread.sleep(3000);
 
 		if (result.getStatus() == ITestResult.FAILURE) {
 			System.out.println(RED + "Test Failed: " + result.getName());
@@ -241,6 +247,16 @@ public class A_testClassDelte extends b_baseClass {
 		Reporter.log("Browser close sucessfully.", true);
 		Reporter.log(" ", true);
 		Reporter.log("Good to see you again.", true);
+		
+		
+		long endTime = System.currentTimeMillis();
+	    long totalTime = endTime - startTime;
+
+	    long seconds = (totalTime / 1000) % 60;
+	    long minutes = (totalTime / (1000 * 60)) % 60;
+	    long hours = (totalTime / (1000 * 60 * 60));
+
+	    System.out.println(String.format("Total Execution Time: %02d:%02d:%02d", hours, minutes, seconds));
 	}
 
 }

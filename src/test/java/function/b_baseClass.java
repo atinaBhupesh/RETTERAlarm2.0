@@ -65,7 +65,15 @@ public class b_baseClass {
 	String ManualAlarmNameForChatNewApi;
 	String ManualAlarmNameForChatOldApi;
 	String TemplateAlarmTitle;
-
+	String SearWordForDelete;
+	String SearWordForDeleteTemplate;
+	String newApiAlarmForMessage;
+	String apiAlarmNameForEsclationAlarm ;
+	String manualAlarmNameForEsclationAlarm;
+;
+	
+	
+	
 	String filePath;
 	
 
@@ -296,8 +304,11 @@ public class b_baseClass {
 		ManualAlarmNameForChatNewApi = sheet.getRow(29).getCell(1).getStringCellValue();
 		ManualAlarmNameForChatOldApi = sheet.getRow(30).getCell(1).getStringCellValue();
 		TemplateAlarmTitle = sheet.getRow(31).getCell(1).getStringCellValue();
-		
-		
+		SearWordForDelete= sheet.getRow(32).getCell(1).getStringCellValue();
+		SearWordForDeleteTemplate= sheet.getRow(33).getCell(1).getStringCellValue();
+		newApiAlarmForMessage=sheet.getRow(34).getCell(1).getStringCellValue();
+		apiAlarmNameForEsclationAlarm = sheet.getRow(35).getCell(1).getStringCellValue();
+		manualAlarmNameForEsclationAlarm =sheet.getRow(36).getCell(1).getStringCellValue();
 
 		
 

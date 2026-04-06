@@ -23,15 +23,17 @@ public class K_calendar extends b_baseClass {
 	private WebElement eventLocation;
 	@FindBy(xpath = "(//div[@class=\"dx-dropdowneditor-icon\"])[7]")
 	private WebElement startDate;
-	@FindBy(xpath = "(//div[@class=\"dx-dropdowneditor-icon\"])[8]")
+	@FindBy(xpath = "(//input[@class=\"dx-texteditor-input\"])[13]")
 	private WebElement endDate;
+	
+	
 	@FindBy(xpath = "(//DIV[@class=\"dx-texteditor-buttons-container\"])[11]")
 	private WebElement startDateSt;
 	@FindBy(xpath = "(//DIV[@class=\"dx-texteditor-buttons-container\"])[14]")
 	private WebElement endDateSt;
 	@FindBy(xpath = "(//span[text()=\"Today\"])[2]")
 	private WebElement today1;
-	@FindBy(xpath = "(//input[@aria-label=\"hours\"])[1]")
+	@FindBy(xpath = "//input[@aria-label=\"hours\"]")
 	private WebElement startDateHours;
 	@FindBy(xpath = "(//div[@aria-label=\"OK\"])[2]")
 	private WebElement startTimeOk;
@@ -76,7 +78,7 @@ public class K_calendar extends b_baseClass {
 	private List<WebElement> availableBGInfoEvent;
 	@FindBy(xpath = "//button[@class=\"btn-success btn-x30\"]")
 	private WebElement createNew1;
-	@FindBy(xpath = "(//div[@_ngcontent-ng-c1008411559])[18]")
+	@FindBy(xpath = "(//div[contains(text(),'BG_EventCatogery')])[1]")
 	private WebElement firstItemTitle;
 	@FindBy(xpath = "(//i[@class=\"dx-icon dx-icon-overflow\"])[2]")
 	private WebElement actionButton;
@@ -190,6 +192,8 @@ public class K_calendar extends b_baseClass {
 
 	@FindBy(xpath = "//span[text()='Today']")
 	private WebElement todayButton;
+	
+	 @FindBy(xpath="(//DIV[@class=\"dx-dropdowneditor-icon\"])[8]") private WebElement endDtae001 ;
 
 	public K_calendar(WebDriver driver) {
 		PageFactory.initElements(driver, this);
@@ -495,6 +499,9 @@ public class K_calendar extends b_baseClass {
 		Thread.sleep(4000);
 
 		String expectedTitle = firstItemTitle.getText();
+//		System.out.println(expectedTitle);
+//		System.out.println(title1);
+	
 
 		Assert.assertTrue(title1.contains(expectedTitle), RED + "Alarm not added.");
 
@@ -502,7 +509,7 @@ public class K_calendar extends b_baseClass {
 
 	}
 
-	public void deleteEventCatogery(WebDriver driver) throws Throwable {
+	public void deleteEventCatogery(WebDriver driver, String SearWordForDelete) throws Throwable {
 		Actions act = new Actions(driver);
 		manageEventCategory.click();
 		Thread.sleep(2000);
@@ -510,7 +517,7 @@ public class K_calendar extends b_baseClass {
 		Thread.sleep(2000);
 		searchField1.click();
 		Thread.sleep(500);
-		act.sendKeys("Bg").perform();
+		act.sendKeys(SearWordForDelete).perform();
 		Thread.sleep(2000);
 		itemsPerPage100.click();
 		Thread.sleep(5000);
@@ -589,20 +596,26 @@ public class K_calendar extends b_baseClass {
 		startDate.click();
 		Thread.sleep(1000);
 		today1.click();
+
+		Thread.sleep(1000);
+		act.sendKeys(Keys.RIGHT).perform();
 		Thread.sleep(500);
-		act.sendKeys(Keys.RIGHT, Keys.ENTER).perform();
+	
+		act.sendKeys( Keys.ENTER).perform();
 		Thread.sleep(1000);
 
-		endDate.click();
-		Thread.sleep(500);
+
+//		act.moveToElement(endDate).click().perform();
+		endDtae001.click();
+		Thread.sleep(1000);
 
 		act.sendKeys(Keys.ENTER).perform();
 		Thread.sleep(1000);
 
 		act.sendKeys(Keys.TAB, Keys.SPACE).perform();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		act.sendKeys(Keys.TAB, Keys.DOWN).perform();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		act.sendKeys(Keys.TAB, Keys.TAB, Keys.TAB, Keys.DOWN).perform();
 
 //		act.sendKeys(Keys.TAB).perform();
@@ -676,28 +689,32 @@ public class K_calendar extends b_baseClass {
 		act.sendKeys("KP ground Nagpur").perform();
 		;
 		Thread.sleep(1000);
-
+		
 		startDate.click();
 		Thread.sleep(1000);
 		today1.click();
 		Thread.sleep(500);
-		act.sendKeys(Keys.RIGHT, Keys.ENTER).perform();
+		act.sendKeys(Keys.RIGHT).perform();
+		Thread.sleep(500);
+		act.sendKeys( Keys.ENTER).perform();
 		Thread.sleep(500);
 		startDateHours.click();
 		Thread.sleep(500);
 		act.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).build().perform();
-		Thread.sleep(1000);
+		Thread.sleep(500);
 		act.sendKeys(germanyTimeAfter5MinHH).perform();
-		Thread.sleep(200);
+		Thread.sleep(1000);
 		act.keyDown(Keys.TAB).perform();
-		Thread.sleep(200);
+		Thread.sleep(500);
 		act.sendKeys(germanyTimeAfter5MinMM).perform();
-		Thread.sleep(200);
+		Thread.sleep(1000);
 		startTimeOk.click();
 		Thread.sleep(1000);
+		
+		
 
 		endDate.click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		today2.click();
 		Thread.sleep(500);
 		act.sendKeys(Keys.ENTER).perform();

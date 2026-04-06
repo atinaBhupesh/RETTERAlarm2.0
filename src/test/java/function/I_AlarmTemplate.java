@@ -211,8 +211,9 @@ public class I_AlarmTemplate extends b_baseClass {
 	@FindBy(xpath = "//div[contains(@class,'dx-tagbox')]")
 	private WebElement fireStationOneFirefighterNameList;
 	@FindBy(xpath = "//div[contains(@class,'dx-tagbox')]//input[@role='combobox']")
-	private WebElement fireStationTwoFirefighterNameList; // @FindBy(xpath="")private WebElement
-	// ;
+	private WebElement fireStationTwoFirefighterNameList; 
+	 @FindBy(xpath="//input[@name=\"keyword\"]")private  WebElement temAlarmTitle;
+
 	// @FindBy(xpath="")private WebElement ;
 	// @FindBy(xpath="")private WebElement ;
 	// @FindBy(xpath="")private WebElement ;
@@ -237,8 +238,8 @@ public class I_AlarmTemplate extends b_baseClass {
 
 	}
 
-	public void TCAlarmTemplateCheckingValidation(WebDriver driver, String gTodaysDate, String gtimeHHMMSS, String St2N,
-			String St1N, String St1V1, String St2V1, String st01A1, String st02A1,String filePath) throws Throwable {
+	public void TCAlarmTemplateCheckingValidation(WebDriver driver, String gTodaysDate, String gtimeHHMMSS, String st02N,
+			String st01N, String st01V1, String st02V1, String st01A1, String st02A1,String filePath) throws Throwable {
 		Actions act = new Actions(driver);
 		
 
@@ -270,7 +271,7 @@ public class I_AlarmTemplate extends b_baseClass {
 //		selectTemplateStationFiled.click();
 		act.sendKeys(Keys.TAB).perform();
 		Thread.sleep(1000);
-		act.sendKeys(St1N).perform();
+		act.sendKeys(st01N).perform();
 		Thread.sleep(1500);
 
 		if (StationNameList.isDisplayed()) {
@@ -284,7 +285,7 @@ public class I_AlarmTemplate extends b_baseClass {
 //		selectAlarmStationsField.click();
 		act.sendKeys(Keys.TAB).perform();
 		Thread.sleep(1000);
-		act.sendKeys(St2N).perform();
+		act.sendKeys(st02N).perform();
 		Thread.sleep(1000);
 
 		if (StationNameList.isDisplayed()) {
@@ -293,7 +294,7 @@ public class I_AlarmTemplate extends b_baseClass {
 
 		act.sendKeys(Keys.ENTER).perform();
 		Thread.sleep(1000);
-		act.sendKeys(St1N).perform();
+		act.sendKeys(st01N).perform();
 		Thread.sleep(1000);
 		act.sendKeys(Keys.ENTER).perform();
 		Thread.sleep(1000);
@@ -478,13 +479,13 @@ public class I_AlarmTemplate extends b_baseClass {
 
 		vehicleField1.click();
 
-		act.sendKeys(St1V1).perform();
+		act.sendKeys(st01V1).perform();
 		Thread.sleep(1000);
 		act.sendKeys(Keys.ENTER).perform();
 		Thread.sleep(1000);
 		act.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).sendKeys(Keys.BACK_SPACE).build().perform();
 		Thread.sleep(1000);
-		act.sendKeys(St2V1).perform();
+		act.sendKeys(st02V1).perform();
 		Thread.sleep(1000);
 		act.sendKeys(Keys.ENTER).perform();
 		Thread.sleep(1000);
@@ -597,17 +598,22 @@ public class I_AlarmTemplate extends b_baseClass {
 		Thread.sleep(2000);
 		createAlarmButton.click();
 		Thread.sleep(2000);
+		String title = temAlarmTitle.getAttribute("value");		
+		Thread.sleep(500);
 		usersAndResources.click();
 		Thread.sleep(1000);
 		generateAlarm.click();
 		Thread.sleep(1000);
 		yesCreate.click();
 		Thread.sleep(10000);
+		
 
-		String title = "BG-MA by newly added tem -" + gTodaysDate + "_" + gtimeHHMMSS;
+		
 
 		String expectedTitle = firstItemTitle.getText();
-		System.out.println(expectedTitle);
+		
+		
+	
 		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not added.");
 
 		System.out.println(GREEN + title);
@@ -1036,7 +1042,7 @@ public class I_AlarmTemplate extends b_baseClass {
 
 	}
 
-	public void deleteAlarmTemplate(WebDriver driver) throws Throwable {
+	public void deleteAlarmTemplate(WebDriver driver, String SearWordForDeleteTemplate) throws Throwable {
 
 		itemPepage100.click();
 		Thread.sleep(5000);
@@ -1047,7 +1053,7 @@ public class I_AlarmTemplate extends b_baseClass {
 		titleSearchField.click();
 		Thread.sleep(500);
 
-		act.sendKeys("BG_AT by").perform();
+		act.sendKeys(SearWordForDeleteTemplate).perform();
 
 		Thread.sleep(500);
 		titleSearchFieldOk.click();

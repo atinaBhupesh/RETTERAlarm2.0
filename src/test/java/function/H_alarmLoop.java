@@ -373,7 +373,7 @@ public class H_alarmLoop extends b_baseClass {
 
 	}
 
-	public void deleteAlarmLoop(WebDriver driver) throws Throwable {
+	public void deleteAlarmLoop(WebDriver driver, String SearWordForDelete) throws Throwable {
 
 		itemPepage100.click();
 		Thread.sleep(5000);
@@ -384,7 +384,7 @@ public class H_alarmLoop extends b_baseClass {
 		titleSearchField.click();
 		Thread.sleep(500);
 
-		act.sendKeys("BG").perform();
+		act.sendKeys(SearWordForDelete).perform();
 
 		Thread.sleep(500);
 		titleSearchFieldOk.click();

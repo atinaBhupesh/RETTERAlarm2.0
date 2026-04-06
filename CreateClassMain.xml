@@ -11,10 +11,13 @@
 				<include name="sendMessageToNewApiAlarmUser" />
 
 				<include name="sendMessageToOldApiAlarmUser" />
+				
+				<include name="sendMessageToApiEsclationAlarm" />
 
 				<include name="manualaByAttributeSingleStation" />
 
 				<include name="manualAlarmByResourceMs" />
+				
 				<include name="manualAlarmByFirefighterMs" />
 				<include name="manualaByAttributeMSLP" />
 				<include name="manualAlarmByEscResourceSingleStation" />
@@ -23,8 +26,7 @@
 				<include name="manualAlarmByOldEsclationTemplateFromSt02ToSt01" />
 
 				<include name="createNewAlarmTemplateByAttribute" />
-				<include
-					name="createAlarmByNewlyAddedTemplateFromTemplateModule" />
+				<include name="createAlarmByNewlyAddedTemplateFromTemplateModule" />
 
 				<include name="createNewResource" />
 				<include name="manualAlarmByNewREsource" />
@@ -35,17 +37,21 @@
 
 
 				<include name="sendMessageToManualAlarmUser" />
+				
+				<include name="CheckAlarmExtendFunctionality" />
+				<include name="CheckApiAlarmEscalationFunctionality" />
+				<include name="CheckManualAlarmEscalationFunctionality" />
 
 
 				<include name="createMonitorInformationByAttribute" />
 				<include name="createMonitorInformationByResource" />
 				<include name="createMonitorInformationByFireFighter" />
 				<include name="createMonitorInformationByStations" />
-				<include
-					name="createMonitorInformationByFireFighterForTwoStation" />
+				<include name="createMonitorInformationByFireFighterForTwoStation" />
 
 				<include name="create1MinInformationEventByAttribute" />
-				<include name="create1HrInformationEventByResource" />
+				<include name="create1HrInformationEventByResource" />1
+				
 				<include name="create1DayInformationEventByFireFighter" />
 				<include name="createFullDayInformationEventByStation" />
 				<include name="SendMessageTo1DayInformationEventByFireFighter" />

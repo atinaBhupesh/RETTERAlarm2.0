@@ -42,9 +42,11 @@ public class A_testClassCreate extends b_baseClass {
 	String germanyTimeAfter1Hrs5MinMM;
 	String germanyTimeAfter1Hrs20MinHH;
 	String germanyTimeAfter1Hrs20MinMM;
+	long startTime;
 
 	@BeforeSuite
 	public void BeforeSuite() throws Throwable {
+		 startTime = System.currentTimeMillis();
 		getDetailsFromUser();
 		lonchBrowser();
 		getDetailsFromFiles();
@@ -113,13 +115,12 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of Checking Alarm template validation is started.", true);
 		at.commonAlarmTemplate(driver, branchName);
-		at.TCAlarmTemplateCheckingValidation(driver, gTodaysDate, gtimeHHMMSS, st02N, st01N, st01V1, st02V1, st01A1,
-				st02A1,filePath);
-
+		at.TCAlarmTemplateCheckingValidation( driver,  gTodaysDate,  gtimeHHMMSS,  st02N, st01N,  st01V1,  st02V1,  st01A1,  st02A1, filePath);
 		getDetailsFromFiles();
 
 		at.commonAlarmTemplate(driver, branchName);
-		at.createAlarmByNewlyAddedTemplateFromTemplateModule(driver, NewTemplate, gTodaysDate, gtimeHHMMSS, branchName);
+		at. TCAlarmTemplateCheckingValidation( driver,  gTodaysDate,  gtimeHHMMSS,  st02N,
+				 st01N,  st01V1,  st02V1,  st01A1,  st02A1, filePath);
 		Reporter.log("The process of Checking Alarm template validation is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
@@ -476,7 +477,7 @@ public class A_testClassCreate extends b_baseClass {
 		germanyTimeAfter20MinMM = tc.germanyTimeAfter20MinMM;
 
 		Reporter.log(" ", true);
-		Reporter.log("The process for creating a new monitor information using Fire Stations has been initiated.",
+		Reporter.log("The process for creating a new monitor information using Fire Stations (MS) has been initiated.",
 				true);
 		info.common_information(driver, branchName);
 
@@ -484,7 +485,7 @@ public class A_testClassCreate extends b_baseClass {
 				St01M1, St01M2, St02M1, germanyTimeAfter5MinHH, germanyTimeAfter5MinMM, st02FF1,
 				germanyTimeAfter20MinHH, germanyTimeAfter20MinMM, branchName);
 		Reporter.log(
-				"The process for creating a new monitor information using Stations has been completed successfully.",
+				"The process for creating a new monitor information using Stations (MS) has been completed successfully.",
 				true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
@@ -743,8 +744,68 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of send message to new api alarm user is started.", true);
 		ma.manualAlarmCommon(driver, deptN, branchName);
-		ma.sendMessageToNewApiAlarmUser(driver, branchName);
+		ma.sendMessageToNewApiAlarmUser(driver,newApiAlarmForMessage, branchName);
 		Reporter.log("The process of send message to new api alarm user is complete.", true);
+		Reporter.log(" ", true);
+		Thread.sleep(3000);
+
+	}
+	@Test
+	public void CheckAlarmExtendFunctionality() throws Throwable
+
+	{
+		Reporter.log(" ", true);
+		Reporter.log("The process of checking extend alarm functionality  is started.", true);
+		ma.manualAlarmCommon(driver, deptN, branchName);
+		ma.CheckAlarmExtendFunctionality( driver,  newApiAlarmForMessage,  branchName);
+		Reporter.log("The process ofchecking extend alarm functionality is complete.", true);
+		Reporter.log(" ", true);
+		Thread.sleep(3000);
+
+	}
+	
+	
+	@Test
+	public void CheckManualAlarmEscalationFunctionality() throws Throwable
+
+	{
+		Reporter.log(" ", true);
+		Reporter.log("The process of checking escaltion for manual alarm is started.", true);
+		ma.manualAlarmCommon(driver, deptN, branchName);
+		ma.CheckManualAlarmEscalationFunctionalityForMultuStation( driver,  manualAlarmNameForEsclationAlarm,  branchName);
+		Reporter.log("he process of checking escaltion for manual alarm is complete.", true);
+		Reporter.log(" ", true);
+		Thread.sleep(3000);
+
+	}
+	
+	
+	@Test
+	public void CheckApiAlarmEscalationFunctionality() throws Throwable
+
+	{
+		Reporter.log(" ", true);
+		Reporter.log("The process of checking escaltion for api alarm is started.", true);
+		ma.manualAlarmCommon(driver, deptN, branchName);
+		ma.CheckApiAlarmEscalationFunctionality( driver,  apiAlarmNameForEsclationAlarm,  branchName);
+		Reporter.log("he process of checking escaltion for api alarm is complete.", true);
+		Reporter.log(" ", true);
+		Thread.sleep(3000);
+
+	}
+	
+	
+	
+	
+	@Test
+	public void sendMessageToApiEsclationAlarm() throws Throwable
+
+	{
+		Reporter.log(" ", true);
+		Reporter.log("The process of send message to escalation alarm user is started.", true);
+		ma.manualAlarmCommon(driver, deptN, branchName);
+		ma.sendMessageToApiEsclationAlarm( driver,  apiAlarmNameForEsclationAlarm,  branchName);
+		Reporter.log("he process of send message to escalation alarm user is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
 
@@ -792,7 +853,7 @@ public class A_testClassCreate extends b_baseClass {
 				true);
 		ma.manualAlarmCommon(driver, deptN, branchName);
 		ma.manualaByAttributeExtend1To01StEscResourceFrom02(driver, st02N, gTodaysDate, gtimeHHMMSS, st02V1, st02A1, st01N,
-				branchName, st01REsc, filePath);
+				branchName, st01R1, filePath);
 
 		Reporter.log(
 				"The process of creating a manual alarm by attribute st2 and extend to st1 by resource is complete.",
@@ -975,6 +1036,10 @@ public class A_testClassCreate extends b_baseClass {
 
 	@AfterMethod
 	public void backToHomePage2(ITestResult result) throws Throwable {
+		
+		driver.navigate().refresh();
+		Thread.sleep(3000);
+		
 
 		if (result.getStatus() == ITestResult.FAILURE) {
 			System.out.println(RED + "Test Failed: " + result.getName());
@@ -1007,6 +1072,17 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log("Browser close sucessfully.", true);
 		Reporter.log(" ", true);
 		Reporter.log("Good to see you again.", true);
+		
+		
+		
+		long endTime = System.currentTimeMillis();
+	    long totalTime = endTime - startTime;
+
+	    long seconds = (totalTime / 1000) % 60;
+	    long minutes = (totalTime / (1000 * 60)) % 60;
+	    long hours = (totalTime / (1000 * 60 * 60));
+
+	    System.out.println(String.format("Total Execution Time: %02d:%02d:%02d", hours, minutes, seconds));
 	}
 
 }
