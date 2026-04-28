@@ -1,22 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Failed suite [Suite]]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Test(failed)(failed)">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
     <classes>
       <class name="function.A_testClassCreate">
         <methods>
-          <include name="AfterTest"/>
+          <include name="manualAlarmByEscResourceSingleStation"/>
+          <include name="manualaByAttributeMSLP"/>
+          <include name="createNewAlarmTemplateByAttribute"/>
+          <include name="createNewAlarmEscalation"/>
+          <include name="createEventCategory"/>
+          <include name="createCalendarEventByFireFughterMS"/>
           <include name="manualAlarmByNewREsource"/>
+          <include name="createCalendarEventByAttribute"/>
+          <include name="SendMessageTo1DayInformationEventByFireFighter"/>
+          <include name="createNewEscalationResource"/>
+          <include name="logOut"/>
+          <include name="manualaByAttributeExtend1To01StEscResourceFrom02"/>
+          <include name="CheckAlarmExtendFunctionality"/>
+          <include name="createMonitorInformationByAttribute"/>
+          <include name="AfterTest"/>
+          <include name="createMonitorInformationByStations"/>
+          <include name="sendMessageToApiEsclationAlarm"/>
           <include name="BeforeSuite"/>
+          <include name="manualaByAttributeSingleStation"/>
+          <include name="createMonitorInformationByFireFighter"/>
+          <include name="createMonitorInformationByResource"/>
           <include name="backToHomePage2"/>
           <include name="BeforeTest"/>
-          <include name="logOut"/>
-          <include name="backToHomePage"/>
+          <include name="manualAlarmByResourceMs"/>
+          <include name="createCalendarEventByResource"/>
           <include name="sendMessageToManualAlarmUser"/>
-          <include name="AfterSute"/>
+          <include name="manualAlarmByNewEscResource"/>
+          <include name="createMonitorInformationByFireFighterForTwoStation"/>
           <include name="createObject"/>
+          <include name="createFullDayInformationEventByStation"/>
+          <include name="manualAlarmByEscResourceMs"/>
+          <include name="createNewAlarmTemplateByResource"/>
+          <include name="manualAlarmByFirefighterMs"/>
+          <include name="AfterSute"/>
+          <include name="create1MinInformationEventByAttribute"/>
+          <include name="createAlarmByNewlyAddedTemplateFromTemplateModule"/>
+          <include name="manualAlarmByOldEsclationTemplateFromSt02ToSt01"/>
+          <include name="CheckManualAlarmEscalationFunctionality"/>
+          <include name="createNewResource"/>
+          <include name="createNewAlarmLoop"/>
+          <include name="create1HrInformationEventByResource"/>
+          <include name="createCalendarEventByStationsMS"/>
+          <include name="CheckApiAlarmEscalationFunctionality"/>
+          <include name="backToHomePage"/>
+          <include name="createNewAlarmTemplateByFirefighter"/>
+          <include name="create1DayInformationEventByFireFighter"/>
         </methods>
       </class> <!-- function.A_testClassCreate -->
     </classes>
-  </test> <!-- Test(failed)(failed) -->
-</suite> <!-- Failed suite [Failed suite [Suite]] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

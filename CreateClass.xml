@@ -10,7 +10,7 @@
 	
         
 
-				<include name="createCalendarEventByStationsMS" />
+			<include name="manualAlarmByEscResourceSingleStation" />
 
 
 

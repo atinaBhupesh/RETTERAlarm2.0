@@ -147,6 +147,21 @@ public class A_testClassDelte extends b_baseClass {
 
 	}
 
+	
+	@Test
+	public void deleteCalendarEventAll() throws Throwable
+
+	{
+		Reporter.log(" ", true);
+		Reporter.log("The process of delete calendar event-All is started.", true);
+		ce.common_calendar(driver, branchName);
+		ce.deleteCalendarEventAll(driver);
+
+		Reporter.log("The process of delete calendar event-All is complete.", true);
+		Reporter.log(" ", true);
+		Thread.sleep(3000);
+
+	}
 	@Test
 	public void deleteCalendarEvent() throws Throwable
 

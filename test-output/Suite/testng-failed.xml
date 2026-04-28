@@ -6,19 +6,51 @@
       <class name="function.A_testClassCreate">
         <methods>
           <include name="manualAlarmByEscResourceSingleStation"/>
-          <include name="manualAlarmByEscResourceMs"/>
+          <include name="manualaByAttributeMSLP"/>
+          <include name="createNewAlarmTemplateByAttribute"/>
+          <include name="createNewAlarmEscalation"/>
+          <include name="createEventCategory"/>
+          <include name="createCalendarEventByFireFughterMS"/>
           <include name="manualAlarmByNewREsource"/>
+          <include name="createCalendarEventByAttribute"/>
+          <include name="SendMessageTo1DayInformationEventByFireFighter"/>
+          <include name="createNewEscalationResource"/>
           <include name="logOut"/>
-          <include name="AfterSute"/>
           <include name="manualaByAttributeExtend1To01StEscResourceFrom02"/>
+          <include name="CheckAlarmExtendFunctionality"/>
+          <include name="createMonitorInformationByAttribute"/>
           <include name="AfterTest"/>
-          <include name="CheckManualAlarmEscalationFunctionality"/>
+          <include name="createMonitorInformationByStations"/>
+          <include name="sendMessageToApiEsclationAlarm"/>
           <include name="BeforeSuite"/>
+          <include name="manualaByAttributeSingleStation"/>
+          <include name="createMonitorInformationByFireFighter"/>
+          <include name="createMonitorInformationByResource"/>
           <include name="backToHomePage2"/>
           <include name="BeforeTest"/>
-          <include name="backToHomePage"/>
+          <include name="manualAlarmByResourceMs"/>
+          <include name="createCalendarEventByResource"/>
           <include name="sendMessageToManualAlarmUser"/>
+          <include name="manualAlarmByNewEscResource"/>
+          <include name="createMonitorInformationByFireFighterForTwoStation"/>
           <include name="createObject"/>
+          <include name="createFullDayInformationEventByStation"/>
+          <include name="manualAlarmByEscResourceMs"/>
+          <include name="createNewAlarmTemplateByResource"/>
+          <include name="manualAlarmByFirefighterMs"/>
+          <include name="AfterSute"/>
+          <include name="create1MinInformationEventByAttribute"/>
+          <include name="createAlarmByNewlyAddedTemplateFromTemplateModule"/>
+          <include name="manualAlarmByOldEsclationTemplateFromSt02ToSt01"/>
+          <include name="CheckManualAlarmEscalationFunctionality"/>
+          <include name="createNewResource"/>
+          <include name="createNewAlarmLoop"/>
+          <include name="create1HrInformationEventByResource"/>
+          <include name="createCalendarEventByStationsMS"/>
+          <include name="CheckApiAlarmEscalationFunctionality"/>
+          <include name="backToHomePage"/>
+          <include name="createNewAlarmTemplateByFirefighter"/>
+          <include name="create1DayInformationEventByFireFighter"/>
         </methods>
       </class> <!-- function.A_testClassCreate -->
     </classes>

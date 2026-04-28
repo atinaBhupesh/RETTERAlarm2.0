@@ -5,15 +5,16 @@
     <classes>
       <class name="function.A_testClassCreate">
         <methods>
+          <include name="create1MinInformationEventByAttribute"/>
           <include name="AfterTest"/>
-          <include name="manualAlarmByNewREsource"/>
           <include name="BeforeSuite"/>
+          <include name="manualAlarmByEscResourceMs"/>
           <include name="backToHomePage2"/>
           <include name="BeforeTest"/>
           <include name="logOut"/>
           <include name="backToHomePage"/>
-          <include name="sendMessageToManualAlarmUser"/>
           <include name="AfterSute"/>
+          <include name="manualAlarmByNewEscResource"/>
           <include name="createObject"/>
         </methods>
       </class> <!-- function.A_testClassCreate -->

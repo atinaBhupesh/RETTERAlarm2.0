@@ -290,50 +290,62 @@ public class F_manualAlarm extends b_baseClass {
 	private WebElement station01FirefighterNameList;
 	@FindBy(xpath = "//div[contains(@class,'dx-tagbox')]//input[@role='combobox']")
 	private WebElement station02FirefighterNameList;
-	
-	
-	
-	
-	@FindBy(xpath="//textarea[@name=\"message\"]")private WebElement textarea;
-	 @FindBy(xpath="//i[@class=\"dx-icon-sendfilled\"]")private WebElement sendButton;
- @FindBy(xpath="(//div[text()=\"Text message sent to the new API alarm user.\"])[last()]")private WebElement textMessage  ;
-	
- 
-  @FindBy(xpath="(//td[contains(text(),\"BG\")])[1]")private WebElement bgAlarm;
-	 @FindBy(xpath="(//span[@class=\"dx-tab-text-span\"])[2]")private WebElement secondStataionTab;
-	 @FindBy(xpath="(//span[@class=\"dx-tab-text-span\"])[1]")private WebElement firstStataionTab;
-	 @FindBy(xpath="//div[text()=\"Attributes\"]")private WebElement ffAtribute;
+
+	@FindBy(xpath = "//textarea[@name=\"message\"]")
+	private WebElement textarea;
+	@FindBy(xpath = "//i[@class=\"dx-icon-sendfilled\"]")
+	private WebElement sendButton;
+	@FindBy(xpath = "(//div[text()=\"Text message sent to the new API alarm user.\"])[last()]")
+	private WebElement textMessage;
+
+	@FindBy(xpath = "(//td[contains(text(),\"BG\")])[1]")
+	private WebElement bgAlarm;
+	@FindBy(xpath = "(//span[@class=\"dx-tab-text-span\"])[2]")
+	private WebElement secondStataionTab;
+	@FindBy(xpath = "(//span[@class=\"dx-tab-text-span\"])[1]")
+	private WebElement firstStataionTab;
+	@FindBy(xpath = "//div[text()=\"Attributes\"]")
+	private WebElement ffAtribute;
 	// @FindBy(xpath="")private WebElement ;
 	// @FindBy(xpath="")private WebElement ;
-		 @FindBy(xpath="//td[text()=\"Jonas2 Jonas02\"]")private WebElement jonas2 ;
-		 
-		@FindBy(xpath="//td[contains(text(),\"bhupesh\")]")private WebElement bhupeshTest ;
-		 @FindBy(xpath="//i[@class=\"dx-icon-attach\"]")private WebElement chatAttachment;
-		
+	@FindBy(xpath = "//td[text()=\"Jonas2 Jonas02\"]")
+	private WebElement jonas2;
+
+	@FindBy(xpath = "//td[contains(text(),\"bhupesh\")]")
+	private WebElement bhupeshTest;
+	@FindBy(xpath = "//i[@class=\"dx-icon-attach\"]")
+	private WebElement chatAttachment;
+
 	// @FindBy(xpath="")private WebElement ;
-		 
-		 
-	 @FindBy(xpath="(//div[@title=\"sample_image.png\"])[last()]")private WebElement uploadedImage;
-	 @FindBy(xpath="((//div[text()=\"Image file & text sent to the new API alarm user.\"])[last()]")private WebElement imageMessage;
-	 @FindBy(xpath="(//div[@title=\"sample_pdf.pdf\"])[last()]")private WebElement  uploadedPdf;
-		@FindBy(xpath="(//div[text()=\"Word file & text sent to the new API alarm user.\"])[last()]")private WebElement pdfMessage ;
-		 
-		@FindBy(xpath="(//div[@title=\"sample_WordFile.docx\"])[last()]")private WebElement uploadedWordFile;
-		 @FindBy(xpath="(//div[contains(text(),\"Word file & text sent to the new API alarm user.\")])[last()]")private WebElement wordFileMessage;
-			@FindBy(xpath="(//div[@title=\"sample_XLS.xls\"])[last()]")private WebElement uploadedXls ;
-			// @FindBy(xpath="")private WebElement ;
-			// @FindBy(xpath="")private WebElement ;
-		// @FindBy(xpath="")private WebElement ;
-			// @FindBy(xpath="")private WebElement ;
-			// @FindBy(xpath="")private WebElement ;
-			// @FindBy(xpath="")private WebElement ;
+
+	@FindBy(xpath = "(//div[@title=\"sample_image.png\"])[last()]")
+	private WebElement uploadedImage;
+	@FindBy(xpath = "((//div[text()=\"Image file & text sent to the new API alarm user.\"])[last()]")
+	private WebElement imageMessage;
+	@FindBy(xpath = "(//div[@title=\"sample_pdf.pdf\"])[last()]")
+	private WebElement uploadedPdf;
+	@FindBy(xpath = "(//div[text()=\"Word file & text sent to the new API alarm user.\"])[last()]")
+	private WebElement pdfMessage;
+
+	@FindBy(xpath = "(//div[@title=\"sample_WordFile.docx\"])[last()]")
+	private WebElement uploadedWordFile;
+	@FindBy(xpath = "(//div[contains(text(),\"Word file & text sent to the new API alarm user.\")])[last()]")
+	private WebElement wordFileMessage;
+	@FindBy(xpath = "(//div[@title=\"sample_XLS.xls\"])[last()]")
+	private WebElement uploadedXls;
+	// @FindBy(xpath="")private WebElement ;
+	// @FindBy(xpath="")private WebElement ;
+	// @FindBy(xpath="")private WebElement ;
+	// @FindBy(xpath="")private WebElement ;
+	// @FindBy(xpath="")private WebElement ;
+	// @FindBy(xpath="")private WebElement ;
 
 	public F_manualAlarm(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
-	
-	public void CheckManualAlarmEscalationFunctionalityForMultuStation(WebDriver driver, String manualAlarmNameForEsclationAlarm, String branchName)
-			throws Throwable {
+
+	public void CheckManualAlarmEscalationFunctionalityForMultuStation(WebDriver driver,
+			String manualAlarmNameForEsclationAlarm, String branchName) throws Throwable {
 		Actions act = new Actions(driver);
 
 		// Search alarm by title
@@ -351,50 +363,47 @@ public class F_manualAlarm extends b_baseClass {
 
 		bgAlarm.click();
 		Thread.sleep(3000);
-		
-		
+
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 
 		js.executeScript("arguments[0].scrollIntoView(true);", firstStataionTab);
 		Thread.sleep(3000);
-		
+
 		secondStataionTab.click();
 		Thread.sleep(3000);
-		
+
 		js.executeScript("arguments[0].scrollIntoView(true);", ffAtribute);
 		Thread.sleep(2000);
-		
-		switch (branchName)
-		{
-		    case "1":
-		        try {
-		            if (jonas2.isDisplayed()) {
-		                System.out.println(GREEN + "Extended user visible,Alarm Extended successfully.");
-		            }
-		        } catch (Exception e) {
-		            System.out.println(RED + "User not found means alarm not extended.");
-		        }
-		        break;
 
-		    case "2":
-		        try {
-		            if (bhupeshTest.isDisplayed()) {
-		                System.out.println(GREEN + "Extended user visible,Alarm Extended successfully.");
-		            }
-		        } catch (Exception e) {
-		            System.out.println(RED + "User not found means alarm not extended.");
-		        }
-		        break;
+		switch (branchName) {
+		case "1":
+			try {
+				if (jonas2.isDisplayed()) {
+					System.out.println(GREEN + "Extended user visible,Alarm Extended successfully.");
+				}
+			} catch (Exception e) {
+				System.out.println(RED + "User not found means alarm not extended.");
+			}
+			break;
 
-		    default:
-		        System.out.println(RED + "Invalid branch");
+		case "2":
+			try {
+				if (bhupeshTest.isDisplayed()) {
+					System.out.println(GREEN + "Extended user visible,Alarm Extended successfully.");
+				}
+			} catch (Exception e) {
+				System.out.println(RED + "User not found means alarm not extended.");
+			}
+			break;
+
+		default:
+			System.out.println(RED + "Invalid branch");
 		}
-		
-		
-		}
-	
-	public void CheckApiAlarmEscalationFunctionality(WebDriver driver, String apiAlarmNameForEsclationAlarm, String branchName)
-			throws Throwable {
+
+	}
+
+	public void CheckApiAlarmEscalationFunctionality(WebDriver driver, String apiAlarmNameForEsclationAlarm,
+			String branchName) throws Throwable {
 		Actions act = new Actions(driver);
 
 		// Search alarm by title
@@ -412,45 +421,42 @@ public class F_manualAlarm extends b_baseClass {
 
 		bgAlarm.click();
 		Thread.sleep(3000);
-		
-		
+
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 
 		js.executeScript("arguments[0].scrollIntoView(true);", firstStataionTab);
 		Thread.sleep(3000);
-		
-		
+
 		js.executeScript("arguments[0].scrollIntoView(true);", ffAtribute);
 		Thread.sleep(2000);
-		
-		switch (branchName)
-		{
-		    case "1":
-		        try {
-		            if (jonas2.isDisplayed()) {
-		                System.out.println(GREEN + "Extended user visible,Alarm Extended successfully.");
-		            }
-		        } catch (Exception e) {
-		            System.out.println(RED + "User not found means alarm not extended.");
-		        }
-		        break;
 
-		    case "2":
-		        try {
-		            if (bhupeshTest.isDisplayed()) {
-		                System.out.println(GREEN + "Extended user visible,Alarm Extended successfully.");
-		            }
-		        } catch (Exception e) {
-		            System.out.println(RED + "User not found means alarm not extended.");
-		        }
-		        break;
+		switch (branchName) {
+		case "1":
+			try {
+				if (jonas2.isDisplayed()) {
+					System.out.println(GREEN + "Extended user visible,Alarm Extended successfully.");
+				}
+			} catch (Exception e) {
+				System.out.println(RED + "User not found means alarm not extended.");
+			}
+			break;
 
-		    default:
-		        System.out.println(RED + "Invalid branch");
+		case "2":
+			try {
+				if (bhupeshTest.isDisplayed()) {
+					System.out.println(GREEN + "Extended user visible,Alarm Extended successfully.");
+				}
+			} catch (Exception e) {
+				System.out.println(RED + "User not found means alarm not extended.");
+			}
+			break;
+
+		default:
+			System.out.println(RED + "Invalid branch");
 		}
-		
-		}
-	
+
+	}
+
 	public void CheckAlarmExtendFunctionality(WebDriver driver, String newApiAlarmForMessage, String branchName)
 			throws Throwable {
 		Actions act = new Actions(driver);
@@ -470,45 +476,43 @@ public class F_manualAlarm extends b_baseClass {
 
 		bgAlarm.click();
 		Thread.sleep(3000);
-		
-		
+
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 
 		js.executeScript("arguments[0].scrollIntoView(true);", secondStataionTab);
 		Thread.sleep(3000);
-		
+
 		secondStataionTab.click();
 		Thread.sleep(3000);
-		
+
 		js.executeScript("arguments[0].scrollIntoView(true);", ffAtribute);
 		Thread.sleep(2000);
-		
-		switch (branchName)
-		{
-		    case "1":
-		        try {
-		            if (jonas2.isDisplayed()) {
-		                System.out.println(GREEN + "Extended user visible,Alarm Extended successfully.");
-		            }
-		        } catch (Exception e) {
-		            System.out.println(RED + "User not found means alarm not extended.");
-		        }
-		        break;
 
-		    case "2":
-		        try {
-		            if (bhupeshTest.isDisplayed()) {
-		                System.out.println(GREEN + "Extended user visible,Alarm Extended successfully.");
-		            }
-		        } catch (Exception e) {
-		            System.out.println(RED + "User not found means alarm not extended.");
-		        }
-		        break;
+		switch (branchName) {
+		case "1":
+			try {
+				if (jonas2.isDisplayed()) {
+					System.out.println(GREEN + "Extended user visible,Alarm Extended successfully.");
+				}
+			} catch (Exception e) {
+				System.out.println(RED + "User not found means alarm not extended.");
+			}
+			break;
 
-		    default:
-		        System.out.println(RED + "Invalid branch");
+		case "2":
+			try {
+				if (bhupeshTest.isDisplayed()) {
+					System.out.println(GREEN + "Extended user visible,Alarm Extended successfully.");
+				}
+			} catch (Exception e) {
+				System.out.println(RED + "User not found means alarm not extended.");
+			}
+			break;
+
+		default:
+			System.out.println(RED + "Invalid branch");
 		}
-	
+
 	}
 
 	public void TCManualAlarmMSCheckingValidation(WebDriver driver, String St1N, String St2N, String gTodaysDate,
@@ -711,6 +715,7 @@ public class F_manualAlarm extends b_baseClass {
 
 		userTypeResource.click();
 		Thread.sleep(500);
+
 		generateAlarm.click();
 		Thread.sleep(500);
 
@@ -837,8 +842,8 @@ public class F_manualAlarm extends b_baseClass {
 
 	}
 
-	public void manualAlarmByNewEscResource(WebDriver driver, String st01N, String gTodaysDate, String gtimeHHMMSS, String filePath)
-			throws Throwable {
+	public void manualAlarmByNewEscResource(WebDriver driver, String st01N, String gTodaysDate, String gtimeHHMMSS,
+			String filePath) throws Throwable {
 
 		Actions act = new Actions(driver);
 
@@ -942,6 +947,9 @@ public class F_manualAlarm extends b_baseClass {
 		act.sendKeys(NewResourceEsc).perform();
 		Thread.sleep(500);
 		act.sendKeys(Keys.ENTER).perform();
+		Thread.sleep(500);
+		act.sendKeys(Keys.TAB).perform();
+		Thread.sleep(500);
 
 		/* Generate Alarm */
 		generateAlarm.click();
@@ -957,8 +965,8 @@ public class F_manualAlarm extends b_baseClass {
 
 	}
 
-	public void manualAlarmByNewREsource(WebDriver driver, String st01N, String gTodaysDate, String gtimeHHMMSS, String filePath)
-			throws Throwable {
+	public void manualAlarmByNewREsource(WebDriver driver, String st01N, String gTodaysDate, String gtimeHHMMSS,
+			String filePath) throws Throwable {
 
 		Actions actions = new Actions(driver);
 
@@ -1065,8 +1073,10 @@ public class F_manualAlarm extends b_baseClass {
 		actions.sendKeys(Keys.ENTER).perform();
 		Thread.sleep(500);
 		actions.sendKeys(Keys.TAB).perform();
-		
 
+		Thread.sleep(500);
+		actions.sendKeys(Keys.TAB).perform();
+		Thread.sleep(500);
 		// Generate alarm
 		generateAlarm.click();
 		Thread.sleep(1000);
@@ -1185,24 +1195,22 @@ public class F_manualAlarm extends b_baseClass {
 			// Open chat
 			alarmChat.click();
 			Thread.sleep(1000);
-			
-			
+
 			switch (branchName) {
-			case "1":
-			{		
+			case "1": {
 
-			writemessageField.click();
-			Thread.sleep(1000);
-			String message = "Text message sent to the new API alarm user.";
-			act.sendKeys(message).perform();
+				writemessageField.click();
+				Thread.sleep(1000);
+				String message = "Text message sent to the new API alarm user.";
+				act.sendKeys(message).perform();
 
-			sendmessageButton.click();
-			Thread.sleep(1000);
+				sendmessageButton.click();
+				Thread.sleep(1000);
 
-			String expectedTitle = messageText.getText().split("\\n")[0].trim();
-			Assert.assertTrue(message.contains(expectedTitle), RED + "Message not sent.");
+				String expectedTitle = messageText.getText().split("\\n")[0].trim();
+				Assert.assertTrue(message.contains(expectedTitle), RED + "Message not sent.");
 
-			System.out.println(GREEN + message + " sent successfuly ");
+				System.out.println(GREEN + message + " sent successfuly ");
 
 //			/* -------- IMAGE ATTACHMENT -------- */
 //			act.moveToElement(attachFile).click().perform();
@@ -1300,15 +1308,13 @@ public class F_manualAlarm extends b_baseClass {
 //
 //			System.out.println(GREEN + message3 + " sent successfuly ");
 
-			
-			break;
-			
-			
+				break;
+
 			}
 			case "2":
-				
+
 			{
-				
+
 				Thread.sleep(2000);
 				textarea.click();
 				Thread.sleep(1000);
@@ -1317,22 +1323,22 @@ public class F_manualAlarm extends b_baseClass {
 				Thread.sleep(1000);
 				sendButton.click();
 				Thread.sleep(1000);
-				String expTextmessage= textMessage.getText();				
-				
+				String expTextmessage = textMessage.getText();
+
 				Assert.assertTrue(messageText.contains(expTextmessage), RED + "Message not sent.");
 
 				System.out.println(GREEN + messageText + " sent successfuly ");
 				Thread.sleep(1000);
-				
-				//image`
-				
+
+				// image`
+
 				chatAttachment.click();
 				Thread.sleep(1000);
-				
+
 				StringSelection ss = new StringSelection(
 						"C:\\Users\\BHUPESH\\Desktop\\SampleFiles\\Automation\\sample_image.png");
 				Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
-				
+
 				Robot rc = new Robot();
 				Thread.sleep(2000);
 				rc.keyPress(KeyEvent.VK_CONTROL);
@@ -1345,7 +1351,6 @@ public class F_manualAlarm extends b_baseClass {
 				rc.keyRelease(KeyEvent.VK_ENTER);
 				Thread.sleep(2000);
 
-				
 				textarea.click();
 				Thread.sleep(1000);
 				String imageText = "Image file & text sent to the new API alarm user.";
@@ -1353,24 +1358,23 @@ public class F_manualAlarm extends b_baseClass {
 				Thread.sleep(1000);
 				sendButton.click();
 				Thread.sleep(2000);
-			
-				boolean isImageDisplay=	uploadedImage.isDisplayed();
-				
-				Assert.assertTrue( isImageDisplay, RED+"Image and text are not attached to the chat.");
-				
-				System.out.println(GREEN +imageText);
+
+				boolean isImageDisplay = uploadedImage.isDisplayed();
+
+				Assert.assertTrue(isImageDisplay, RED + "Image and text are not attached to the chat.");
+
+				System.out.println(GREEN + imageText);
 				Thread.sleep(1000);
 
-				//pdf
-				
+				// pdf
+
 				chatAttachment.click();
 				Thread.sleep(1000);
-				
+
 				StringSelection ss1 = new StringSelection(
 						"C:\\Users\\BHUPESH\\Desktop\\SampleFiles\\Automation\\sample_pdf.pdf");
 				Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss1, null);
-				
-				
+
 				Thread.sleep(2000);
 				rc.keyPress(KeyEvent.VK_CONTROL);
 				rc.keyPress(KeyEvent.VK_V);
@@ -1389,25 +1393,22 @@ public class F_manualAlarm extends b_baseClass {
 				Thread.sleep(1000);
 				sendButton.click();
 				Thread.sleep(2000);
-				
-				boolean isPdfAvailable = uploadedPdf.isDisplayed();
-				
-			Assert.assertTrue(isPdfAvailable, RED+"Pdf and text are not attached to the chat.");
 
-				System.out.println(GREEN + pdfText );
+				boolean isPdfAvailable = uploadedPdf.isDisplayed();
+
+				Assert.assertTrue(isPdfAvailable, RED + "Pdf and text are not attached to the chat.");
+
+				System.out.println(GREEN + pdfText);
 				Thread.sleep(1000);
-				
-				
-				
-				//WordFile
+
+				// WordFile
 				chatAttachment.click();
 				Thread.sleep(1000);
-				
+
 				StringSelection ss2 = new StringSelection(
 						"C:\\Users\\BHUPESH\\Desktop\\SampleFiles\\Automation\\sample_WordFile.docx");
 				Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss2, null);
-				
-				
+
 				Thread.sleep(2000);
 				rc.keyPress(KeyEvent.VK_CONTROL);
 				rc.keyPress(KeyEvent.VK_V);
@@ -1426,24 +1427,22 @@ public class F_manualAlarm extends b_baseClass {
 				Thread.sleep(1000);
 				sendButton.click();
 				Thread.sleep(2000);
-				
-				boolean isWorrdFileAvailable =uploadedWordFile.isDisplayed();
-				
-				
-				Assert.assertTrue(isWorrdFileAvailable , RED+"Pdf and text are not attached to the chat.");
 
-				System.out.println(GREEN + wordText1 );
+				boolean isWorrdFileAvailable = uploadedWordFile.isDisplayed();
+
+				Assert.assertTrue(isWorrdFileAvailable, RED + "Pdf and text are not attached to the chat.");
+
+				System.out.println(GREEN + wordText1);
 				Thread.sleep(1000);
-				
-				//XLc
+
+				// XLc
 				chatAttachment.click();
 				Thread.sleep(1000);
-				
+
 				StringSelection ss3 = new StringSelection(
 						"C:\\Users\\BHUPESH\\Desktop\\SampleFiles\\Automation\\sample_XLS.xls");
 				Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss3, null);
-				
-				
+
 				Thread.sleep(2000);
 				rc.keyPress(KeyEvent.VK_CONTROL);
 				rc.keyPress(KeyEvent.VK_V);
@@ -1462,25 +1461,19 @@ public class F_manualAlarm extends b_baseClass {
 				Thread.sleep(1000);
 				sendButton.click();
 				Thread.sleep(2000);
-				
-				boolean isXlsFileAvailable =uploadedXls.isDisplayed();
-				
-				
-				Assert.assertTrue(isXlsFileAvailable , RED+"Pdf and text are not attached to the chat.");
 
-				System.out.println(GREEN + xlsText );
+				boolean isXlsFileAvailable = uploadedXls.isDisplayed();
+
+				Assert.assertTrue(isXlsFileAvailable, RED + "Pdf and text are not attached to the chat.");
+
+				System.out.println(GREEN + xlsText);
 				Thread.sleep(1000);
-				
+
 				break;
-				
+
 			}
-			
-			
+
 			}
-			
-			
-	
-			
 
 		} else {
 
@@ -1489,9 +1482,8 @@ public class F_manualAlarm extends b_baseClass {
 		}
 	}
 
-	public void sendMessageToApiEsclationAlarm(WebDriver driver, String apiAlarmNameForEsclationAlarm
-, String branchName)
-			throws Throwable {
+	public void sendMessageToApiEsclationAlarm(WebDriver driver, String apiAlarmNameForEsclationAlarm,
+			String branchName) throws Throwable {
 		Actions act = new Actions(driver);
 
 		// Search alarm by title
@@ -1501,8 +1493,7 @@ public class F_manualAlarm extends b_baseClass {
 		titleSearchField.click();
 		Thread.sleep(500);
 
-		act.sendKeys(apiAlarmNameForEsclationAlarm
-).perform();
+		act.sendKeys(apiAlarmNameForEsclationAlarm).perform();
 		Thread.sleep(1000);
 
 		titleSearchFieldOk.click();
@@ -1519,24 +1510,22 @@ public class F_manualAlarm extends b_baseClass {
 			// Open chat
 			alarmChat.click();
 			Thread.sleep(1000);
-			
-			
+
 			switch (branchName) {
-			case "1":
-			{		
+			case "1": {
 
-			writemessageField.click();
-			Thread.sleep(1000);
-			String message = "Text message sent to the new API alarm user.";
-			act.sendKeys(message).perform();
+				writemessageField.click();
+				Thread.sleep(1000);
+				String message = "Text message sent to the new API alarm user.";
+				act.sendKeys(message).perform();
 
-			sendmessageButton.click();
-			Thread.sleep(1000);
+				sendmessageButton.click();
+				Thread.sleep(1000);
 
-			String expectedTitle = messageText.getText().split("\\n")[0].trim();
-			Assert.assertTrue(message.contains(expectedTitle), RED + "Message not sent.");
+				String expectedTitle = messageText.getText().split("\\n")[0].trim();
+				Assert.assertTrue(message.contains(expectedTitle), RED + "Message not sent.");
 
-			System.out.println(GREEN + message + " sent successfuly ");
+				System.out.println(GREEN + message + " sent successfuly ");
 
 //			/* -------- IMAGE ATTACHMENT -------- */
 //			act.moveToElement(attachFile).click().perform();
@@ -1634,15 +1623,13 @@ public class F_manualAlarm extends b_baseClass {
 //
 //			System.out.println(GREEN + message3 + " sent successfuly ");
 
-			
-			break;
-			
-			
+				break;
+
 			}
 			case "2":
-				
+
 			{
-				
+
 				Thread.sleep(2000);
 				textarea.click();
 				Thread.sleep(1000);
@@ -1651,22 +1638,22 @@ public class F_manualAlarm extends b_baseClass {
 				Thread.sleep(1000);
 				sendButton.click();
 				Thread.sleep(1000);
-				String expTextmessage= textMessage.getText();				
-				
+				String expTextmessage = textMessage.getText();
+
 				Assert.assertTrue(messageText.contains(expTextmessage), RED + "Message not sent.");
 
 				System.out.println(GREEN + messageText + " sent successfuly ");
 				Thread.sleep(1000);
-				
-				//image`
-				
+
+				// image`
+
 				chatAttachment.click();
 				Thread.sleep(1000);
-				
+
 				StringSelection ss = new StringSelection(
 						"C:\\Users\\BHUPESH\\Desktop\\SampleFiles\\Automation\\sample_image.png");
 				Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
-				
+
 				Robot rc = new Robot();
 				Thread.sleep(2000);
 				rc.keyPress(KeyEvent.VK_CONTROL);
@@ -1679,7 +1666,6 @@ public class F_manualAlarm extends b_baseClass {
 				rc.keyRelease(KeyEvent.VK_ENTER);
 				Thread.sleep(2000);
 
-				
 				textarea.click();
 				Thread.sleep(1000);
 				String imageText = "Image file & text sent to the new API alarm user.";
@@ -1687,24 +1673,23 @@ public class F_manualAlarm extends b_baseClass {
 				Thread.sleep(1000);
 				sendButton.click();
 				Thread.sleep(2000);
-			
-				boolean isImageDisplay=	uploadedImage.isDisplayed();
-				
-				Assert.assertTrue( isImageDisplay, RED+"Image and text are not attached to the chat.");
-				
-				System.out.println(GREEN +imageText);
+
+				boolean isImageDisplay = uploadedImage.isDisplayed();
+
+				Assert.assertTrue(isImageDisplay, RED + "Image and text are not attached to the chat.");
+
+				System.out.println(GREEN + imageText);
 				Thread.sleep(1000);
 
-				//pdf
-				
+				// pdf
+
 				chatAttachment.click();
 				Thread.sleep(1000);
-				
+
 				StringSelection ss1 = new StringSelection(
 						"C:\\Users\\BHUPESH\\Desktop\\SampleFiles\\Automation\\sample_pdf.pdf");
 				Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss1, null);
-				
-				
+
 				Thread.sleep(2000);
 				rc.keyPress(KeyEvent.VK_CONTROL);
 				rc.keyPress(KeyEvent.VK_V);
@@ -1723,25 +1708,22 @@ public class F_manualAlarm extends b_baseClass {
 				Thread.sleep(1000);
 				sendButton.click();
 				Thread.sleep(2000);
-				
-				boolean isPdfAvailable = uploadedPdf.isDisplayed();
-				
-			Assert.assertTrue(isPdfAvailable, RED+"Pdf and text are not attached to the chat.");
 
-				System.out.println(GREEN + pdfText );
+				boolean isPdfAvailable = uploadedPdf.isDisplayed();
+
+				Assert.assertTrue(isPdfAvailable, RED + "Pdf and text are not attached to the chat.");
+
+				System.out.println(GREEN + pdfText);
 				Thread.sleep(1000);
-				
-				
-				
-				//WordFile
+
+				// WordFile
 				chatAttachment.click();
 				Thread.sleep(1000);
-				
+
 				StringSelection ss2 = new StringSelection(
 						"C:\\Users\\BHUPESH\\Desktop\\SampleFiles\\Automation\\sample_WordFile.docx");
 				Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss2, null);
-				
-				
+
 				Thread.sleep(2000);
 				rc.keyPress(KeyEvent.VK_CONTROL);
 				rc.keyPress(KeyEvent.VK_V);
@@ -1760,24 +1742,22 @@ public class F_manualAlarm extends b_baseClass {
 				Thread.sleep(1000);
 				sendButton.click();
 				Thread.sleep(2000);
-				
-				boolean isWorrdFileAvailable =uploadedWordFile.isDisplayed();
-				
-				
-				Assert.assertTrue(isWorrdFileAvailable , RED+"Pdf and text are not attached to the chat.");
 
-				System.out.println(GREEN + wordText1 );
+				boolean isWorrdFileAvailable = uploadedWordFile.isDisplayed();
+
+				Assert.assertTrue(isWorrdFileAvailable, RED + "Pdf and text are not attached to the chat.");
+
+				System.out.println(GREEN + wordText1);
 				Thread.sleep(1000);
-				
-				//XLc
+
+				// XLc
 				chatAttachment.click();
 				Thread.sleep(1000);
-				
+
 				StringSelection ss3 = new StringSelection(
 						"C:\\Users\\BHUPESH\\Desktop\\SampleFiles\\Automation\\sample_XLS.xls");
 				Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss3, null);
-				
-				
+
 				Thread.sleep(2000);
 				rc.keyPress(KeyEvent.VK_CONTROL);
 				rc.keyPress(KeyEvent.VK_V);
@@ -1796,25 +1776,19 @@ public class F_manualAlarm extends b_baseClass {
 				Thread.sleep(1000);
 				sendButton.click();
 				Thread.sleep(2000);
-				
-				boolean isXlsFileAvailable =uploadedXls.isDisplayed();
-				
-				
-				Assert.assertTrue(isXlsFileAvailable , RED+"Pdf and text are not attached to the chat.");
 
-				System.out.println(GREEN + xlsText );
+				boolean isXlsFileAvailable = uploadedXls.isDisplayed();
+
+				Assert.assertTrue(isXlsFileAvailable, RED + "Pdf and text are not attached to the chat.");
+
+				System.out.println(GREEN + xlsText);
 				Thread.sleep(1000);
-				
+
 				break;
-				
+
 			}
-			
-			
+
 			}
-			
-			
-	
-			
 
 		} else {
 
@@ -1823,8 +1797,9 @@ public class F_manualAlarm extends b_baseClass {
 		}
 
 	}
-	
-	public void sendMessageToNewApiAlarmUser(WebDriver driver, String newApiAlarmForMessage, String branchName) throws Throwable {
+
+	public void sendMessageToNewApiAlarmUser(WebDriver driver, String newApiAlarmForMessage, String branchName)
+			throws Throwable {
 		Actions act = new Actions(driver);
 
 		// Search alarm
@@ -1835,9 +1810,7 @@ public class F_manualAlarm extends b_baseClass {
 		Thread.sleep(500);
 
 		act.sendKeys(newApiAlarmForMessage).perform();
-		
-		
-		
+
 		Thread.sleep(1000);
 
 		titleSearchFieldOk.click();
@@ -1854,154 +1827,31 @@ public class F_manualAlarm extends b_baseClass {
 			// Open chat
 			alarmChat.click();
 			Thread.sleep(1000);
-			
-			
+
 			switch (branchName) {
-			case "1":
-			{		
+			case "1": {
 
-			writemessageField.click();
-			Thread.sleep(1000);
-			String message = "Text message sent to the new API alarm user.";
-			act.sendKeys(message).perform();
-
-			sendmessageButton.click();
-			Thread.sleep(1000);
-
-			String expectedTitle = messageText.getText().split("\\n")[0].trim();
-			Assert.assertTrue(message.contains(expectedTitle), RED + "Message not sent.");
-
-			System.out.println(GREEN + message + " sent successfuly ");
-
-			/* -------- IMAGE ATTACHMENT -------- */
-			act.moveToElement(attachFile).click().perform();
-			Thread.sleep(1000);
-
-			StringSelection ss = new StringSelection(
-					"C:\\Users\\BHUPESH\\Desktop\\SampleFiles\\Automation\\sample_image.png");
-			Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
-
-			Robot rc = new Robot();
-			Thread.sleep(2000);
-			rc.keyPress(KeyEvent.VK_CONTROL);
-			rc.keyPress(KeyEvent.VK_V);
-			Thread.sleep(2000);
-			rc.keyRelease(KeyEvent.VK_CONTROL);
-			rc.keyRelease(KeyEvent.VK_V);
-			Thread.sleep(2000);
-			rc.keyPress(KeyEvent.VK_ENTER);
-			rc.keyRelease(KeyEvent.VK_ENTER);
-			Thread.sleep(2000);
-
-			writemessageField.click();
-			Thread.sleep(1000);
-			String message1 = "Image file message sent to the new API alarm user.";
-			act.sendKeys(message1).perform();
-			Thread.sleep(2000);
-
-			sendmessageButton.click();
-			expectedTitle = messageText.getText().split("\\n")[0].trim();
-			Assert.assertTrue(message1.contains(expectedTitle), RED + "Message not sent.");
-
-			System.out.println(GREEN + message1 + " sent successfuly ");
-
-			/* -------- PDF ATTACHMENT -------- */
-			Thread.sleep(1000);
-			act.moveToElement(attachFile).click().perform();
-			Thread.sleep(1000);
-
-			StringSelection ss1 = new StringSelection("C:\\Users\\BHUPESH\\Desktop\\SampleFiles\\Automation\\sample_pdf.pdf");
-			Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss1, null);
-
-			Thread.sleep(2000);
-			rc.keyPress(KeyEvent.VK_CONTROL);
-			rc.keyPress(KeyEvent.VK_V);
-			Thread.sleep(2000);
-			rc.keyRelease(KeyEvent.VK_CONTROL);
-			rc.keyRelease(KeyEvent.VK_V);
-			Thread.sleep(2000);
-			rc.keyPress(KeyEvent.VK_ENTER);
-			rc.keyRelease(KeyEvent.VK_ENTER);
-			Thread.sleep(2000);
-
-			writemessageField.click();
-			Thread.sleep(1000);
-			String message2 = "Pdf file message sent to the new API alarm user.";
-			act.sendKeys(message2).perform();
-			Thread.sleep(2000);
-			sendmessageButton.click();
-			Thread.sleep(2000);
-
-			sendmessageButton.click();
-			expectedTitle = messageText.getText().split("\\n")[0].trim();
-			Assert.assertTrue(message2.contains(expectedTitle), RED + "Message not sent.");
-
-			System.out.println(GREEN + message2 + " sent successfuly ");
-
-			/* -------- WORD FILE ATTACHMENT -------- */
-			Thread.sleep(1000);
-			act.moveToElement(attachFile).click().perform();
-			Thread.sleep(1000);
-
-			StringSelection ss2 = new StringSelection("C:\\Users\\BHUPESH\\Desktop\\SampleFiles\\Automation\\sample_WordFile.docx");
-			Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss2, null);
-
-			Thread.sleep(2000);
-			rc.keyPress(KeyEvent.VK_CONTROL);
-			rc.keyPress(KeyEvent.VK_V);
-			Thread.sleep(2000);
-			rc.keyRelease(KeyEvent.VK_CONTROL);
-			rc.keyRelease(KeyEvent.VK_V);
-			Thread.sleep(2000);
-			rc.keyPress(KeyEvent.VK_ENTER);
-			rc.keyRelease(KeyEvent.VK_ENTER);
-			Thread.sleep(2000);
-
-			writemessageField.click();
-			Thread.sleep(1000);
-			String message3 = "Word file message sent to the new API alarm user.";
-			act.sendKeys(message3).perform();
-			Thread.sleep(2000);
-			sendmessageButton.click();
-
-			expectedTitle = messageText.getText().split("\\n")[0].trim();
-			Assert.assertTrue(message3.contains(expectedTitle), RED + "Message not sent.");
-
-			System.out.println(GREEN + message3 + " sent successfuly ");
-
-			
-			break;
-			
-			
-			}
-			case "2":
-				
-			{
-				
-				Thread.sleep(2000);
-				textarea.click();
+				writemessageField.click();
 				Thread.sleep(1000);
-				String messageText = "Text message sent to the new API alarm user.";
-				act.sendKeys(messageText).perform();
-				Thread.sleep(1000);
-				sendButton.click();
-				Thread.sleep(1000);
-				String expTextmessage= textMessage.getText();				
-				
-				Assert.assertTrue(messageText.contains(expTextmessage), RED + "Message not sent.");
+				String message = "Text message sent to the new API alarm user.";
+				act.sendKeys(message).perform();
 
-				System.out.println(GREEN + messageText + " sent successfuly ");
+				sendmessageButton.click();
 				Thread.sleep(1000);
-				
-				//image`
-				
-				chatAttachment.click();
+
+				String expectedTitle = messageText.getText().split("\\n")[0].trim();
+				Assert.assertTrue(message.contains(expectedTitle), RED + "Message not sent.");
+
+				System.out.println(GREEN + message + " sent successfuly ");
+
+				/* -------- IMAGE ATTACHMENT -------- */
+				act.moveToElement(attachFile).click().perform();
 				Thread.sleep(1000);
-				
+
 				StringSelection ss = new StringSelection(
 						"C:\\Users\\BHUPESH\\Desktop\\SampleFiles\\Automation\\sample_image.png");
 				Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
-				
+
 				Robot rc = new Robot();
 				Thread.sleep(2000);
 				rc.keyPress(KeyEvent.VK_CONTROL);
@@ -2014,7 +1864,127 @@ public class F_manualAlarm extends b_baseClass {
 				rc.keyRelease(KeyEvent.VK_ENTER);
 				Thread.sleep(2000);
 
-				
+				writemessageField.click();
+				Thread.sleep(1000);
+				String message1 = "Image file message sent to the new API alarm user.";
+				act.sendKeys(message1).perform();
+				Thread.sleep(2000);
+
+				sendmessageButton.click();
+				expectedTitle = messageText.getText().split("\\n")[0].trim();
+				Assert.assertTrue(message1.contains(expectedTitle), RED + "Message not sent.");
+
+				System.out.println(GREEN + message1 + " sent successfuly ");
+
+				/* -------- PDF ATTACHMENT -------- */
+				Thread.sleep(1000);
+				act.moveToElement(attachFile).click().perform();
+				Thread.sleep(1000);
+
+				StringSelection ss1 = new StringSelection(
+						"C:\\Users\\BHUPESH\\Desktop\\SampleFiles\\Automation\\sample_pdf.pdf");
+				Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss1, null);
+
+				Thread.sleep(2000);
+				rc.keyPress(KeyEvent.VK_CONTROL);
+				rc.keyPress(KeyEvent.VK_V);
+				Thread.sleep(2000);
+				rc.keyRelease(KeyEvent.VK_CONTROL);
+				rc.keyRelease(KeyEvent.VK_V);
+				Thread.sleep(2000);
+				rc.keyPress(KeyEvent.VK_ENTER);
+				rc.keyRelease(KeyEvent.VK_ENTER);
+				Thread.sleep(2000);
+
+				writemessageField.click();
+				Thread.sleep(1000);
+				String message2 = "Pdf file message sent to the new API alarm user.";
+				act.sendKeys(message2).perform();
+				Thread.sleep(2000);
+				sendmessageButton.click();
+				Thread.sleep(2000);
+
+				sendmessageButton.click();
+				expectedTitle = messageText.getText().split("\\n")[0].trim();
+				Assert.assertTrue(message2.contains(expectedTitle), RED + "Message not sent.");
+
+				System.out.println(GREEN + message2 + " sent successfuly ");
+
+				/* -------- WORD FILE ATTACHMENT -------- */
+				Thread.sleep(1000);
+				act.moveToElement(attachFile).click().perform();
+				Thread.sleep(1000);
+
+				StringSelection ss2 = new StringSelection(
+						"C:\\Users\\BHUPESH\\Desktop\\SampleFiles\\Automation\\sample_WordFile.docx");
+				Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss2, null);
+
+				Thread.sleep(2000);
+				rc.keyPress(KeyEvent.VK_CONTROL);
+				rc.keyPress(KeyEvent.VK_V);
+				Thread.sleep(2000);
+				rc.keyRelease(KeyEvent.VK_CONTROL);
+				rc.keyRelease(KeyEvent.VK_V);
+				Thread.sleep(2000);
+				rc.keyPress(KeyEvent.VK_ENTER);
+				rc.keyRelease(KeyEvent.VK_ENTER);
+				Thread.sleep(2000);
+
+				writemessageField.click();
+				Thread.sleep(1000);
+				String message3 = "Word file message sent to the new API alarm user.";
+				act.sendKeys(message3).perform();
+				Thread.sleep(2000);
+				sendmessageButton.click();
+
+				expectedTitle = messageText.getText().split("\\n")[0].trim();
+				Assert.assertTrue(message3.contains(expectedTitle), RED + "Message not sent.");
+
+				System.out.println(GREEN + message3 + " sent successfuly ");
+
+				break;
+
+			}
+			case "2":
+
+			{
+
+				Thread.sleep(2000);
+				textarea.click();
+				Thread.sleep(1000);
+				String messageText = "Text message sent to the new API alarm user.";
+				act.sendKeys(messageText).perform();
+				Thread.sleep(1000);
+				sendButton.click();
+				Thread.sleep(1000);
+				String expTextmessage = textMessage.getText();
+
+				Assert.assertTrue(messageText.contains(expTextmessage), RED + "Message not sent.");
+
+				System.out.println(GREEN + messageText + " sent successfuly ");
+				Thread.sleep(1000);
+
+				// image`
+
+				chatAttachment.click();
+				Thread.sleep(1000);
+
+				StringSelection ss = new StringSelection(
+						"C:\\Users\\BHUPESH\\Desktop\\SampleFiles\\Automation\\sample_image.png");
+				Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
+
+				Robot rc = new Robot();
+				Thread.sleep(2000);
+				rc.keyPress(KeyEvent.VK_CONTROL);
+				rc.keyPress(KeyEvent.VK_V);
+				Thread.sleep(2000);
+				rc.keyRelease(KeyEvent.VK_CONTROL);
+				rc.keyRelease(KeyEvent.VK_V);
+				Thread.sleep(2000);
+				rc.keyPress(KeyEvent.VK_ENTER);
+				rc.keyRelease(KeyEvent.VK_ENTER);
+				Thread.sleep(2000);
+
 				textarea.click();
 				Thread.sleep(1000);
 				String imageText = "Image file & text sent to the new API alarm user.";
@@ -2022,24 +1992,23 @@ public class F_manualAlarm extends b_baseClass {
 				Thread.sleep(1000);
 				sendButton.click();
 				Thread.sleep(2000);
-			
-				boolean isImageDisplay=	uploadedImage.isDisplayed();
-				
-				Assert.assertTrue( isImageDisplay, RED+"Image and text are not attached to the chat.");
-				
-				System.out.println(GREEN +imageText);
+
+				boolean isImageDisplay = uploadedImage.isDisplayed();
+
+				Assert.assertTrue(isImageDisplay, RED + "Image and text are not attached to the chat.");
+
+				System.out.println(GREEN + imageText);
 				Thread.sleep(1000);
 
-				//pdf
-				
+				// pdf
+
 				chatAttachment.click();
 				Thread.sleep(1000);
-				
+
 				StringSelection ss1 = new StringSelection(
 						"C:\\Users\\BHUPESH\\Desktop\\SampleFiles\\Automation\\sample_pdf.pdf");
 				Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss1, null);
-				
-				
+
 				Thread.sleep(2000);
 				rc.keyPress(KeyEvent.VK_CONTROL);
 				rc.keyPress(KeyEvent.VK_V);
@@ -2058,25 +2027,22 @@ public class F_manualAlarm extends b_baseClass {
 				Thread.sleep(1000);
 				sendButton.click();
 				Thread.sleep(2000);
-				
-				boolean isPdfAvailable = uploadedPdf.isDisplayed();
-				
-			Assert.assertTrue(isPdfAvailable, RED+"Pdf and text are not attached to the chat.");
 
-				System.out.println(GREEN + pdfText );
+				boolean isPdfAvailable = uploadedPdf.isDisplayed();
+
+				Assert.assertTrue(isPdfAvailable, RED + "Pdf and text are not attached to the chat.");
+
+				System.out.println(GREEN + pdfText);
 				Thread.sleep(1000);
-				
-				
-				
-				//WordFile
+
+				// WordFile
 				chatAttachment.click();
 				Thread.sleep(1000);
-				
+
 				StringSelection ss2 = new StringSelection(
 						"C:\\Users\\BHUPESH\\Desktop\\SampleFiles\\Automation\\sample_WordFile.docx");
 				Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss2, null);
-				
-				
+
 				Thread.sleep(2000);
 				rc.keyPress(KeyEvent.VK_CONTROL);
 				rc.keyPress(KeyEvent.VK_V);
@@ -2095,24 +2061,22 @@ public class F_manualAlarm extends b_baseClass {
 				Thread.sleep(1000);
 				sendButton.click();
 				Thread.sleep(2000);
-				
-				boolean isWorrdFileAvailable =uploadedWordFile.isDisplayed();
-				
-				
-				Assert.assertTrue(isWorrdFileAvailable , RED+"Pdf and text are not attached to the chat.");
 
-				System.out.println(GREEN + wordText1 );
+				boolean isWorrdFileAvailable = uploadedWordFile.isDisplayed();
+
+				Assert.assertTrue(isWorrdFileAvailable, RED + "Pdf and text are not attached to the chat.");
+
+				System.out.println(GREEN + wordText1);
 				Thread.sleep(1000);
-				
-				//XLc
+
+				// XLc
 				chatAttachment.click();
 				Thread.sleep(1000);
-				
+
 				StringSelection ss3 = new StringSelection(
 						"C:\\Users\\BHUPESH\\Desktop\\SampleFiles\\Automation\\sample_XLS.xls");
 				Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss3, null);
-				
-				
+
 				Thread.sleep(2000);
 				rc.keyPress(KeyEvent.VK_CONTROL);
 				rc.keyPress(KeyEvent.VK_V);
@@ -2131,25 +2095,19 @@ public class F_manualAlarm extends b_baseClass {
 				Thread.sleep(1000);
 				sendButton.click();
 				Thread.sleep(2000);
-				
-				boolean isXlsFileAvailable =uploadedXls.isDisplayed();
-				
-				
-				Assert.assertTrue(isXlsFileAvailable , RED+"Pdf and text are not attached to the chat.");
 
-				System.out.println(GREEN + xlsText );
+				boolean isXlsFileAvailable = uploadedXls.isDisplayed();
+
+				Assert.assertTrue(isXlsFileAvailable, RED + "Pdf and text are not attached to the chat.");
+
+				System.out.println(GREEN + xlsText);
 				Thread.sleep(1000);
-				
+
 				break;
-				
+
 			}
-			
-			
+
 			}
-			
-			
-	
-			
 
 		} else {
 
@@ -2159,8 +2117,8 @@ public class F_manualAlarm extends b_baseClass {
 
 	}
 
-	public void manualAlarmByOldEsclationTemplateFromSt02ToSt01(WebDriver driver, String st2Esc1t1, String TemplateAlarmTitle)
-			throws Throwable {
+	public void manualAlarmByOldEsclationTemplateFromSt02ToSt01(WebDriver driver, String st2Esc1t1,
+			String TemplateAlarmTitle) throws Throwable {
 
 		Actions act = new Actions(driver);
 
@@ -2185,7 +2143,7 @@ public class F_manualAlarm extends b_baseClass {
 
 		yesCreate.click();
 		Thread.sleep(5000);
-		String title=TemplateAlarmTitle;
+		String title = TemplateAlarmTitle;
 		String expectedTitle = firstItemTitle.getText();
 
 		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not created.");
@@ -2195,10 +2153,9 @@ public class F_manualAlarm extends b_baseClass {
 	}
 
 	public void manualaByAttributeExtend1To01StEscResourceFrom02(WebDriver driver, String St2N, String gTodaysDate,
-			String gtimeHHMMSS, String St2V1, String st02A1, String St1N, String branchName, String st01R1, String filePath)
-			throws Throwable {
+			String gtimeHHMMSS, String St2V1, String st02A1, String St1N, String branchName, String st01R1,
+			String filePath) throws Throwable {
 		Actions act = new Actions(driver);
-		
 
 		// Create new alarm
 		createNewButton.click();
@@ -2294,7 +2251,9 @@ public class F_manualAlarm extends b_baseClass {
 		act.sendKeys(Keys.ENTER).perform();
 		Thread.sleep(1000);
 
+		Thread.sleep(500);
 		act.sendKeys(Keys.TAB).perform();
+		Thread.sleep(500);
 
 		// Generate alarm
 		generateAlarm.click();
@@ -2372,9 +2331,7 @@ public class F_manualAlarm extends b_baseClass {
 		wb.close();
 
 		Thread.sleep(5000);
-		
-		
-		
+
 		titleSearch.click();
 		Thread.sleep(500);
 
@@ -2385,50 +2342,46 @@ public class F_manualAlarm extends b_baseClass {
 		Thread.sleep(1000);
 		titleSearchFieldOk.click();
 		Thread.sleep(2000);
-		
+
 		bgAlarm.click();
 		Thread.sleep(3000);
-		
-		
+
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 
 		js.executeScript("arguments[0].scrollIntoView(true);", secondStataionTab);
 		Thread.sleep(3000);
-		
+
 		secondStataionTab.click();
 		Thread.sleep(3000);
-		
+
 		js.executeScript("arguments[0].scrollIntoView(true);", ffAtribute);
 		Thread.sleep(2000);
-		
-		switch (branchName)
-		{
-		    case "1":
-		        try {
-		            if (jonas2.isDisplayed()) {
-		                System.out.println(GREEN + "Extended user visible,Alarm Extended successfully.");
-		            }
-		        } catch (Exception e) {
-		            System.out.println(RED + "User not found means alarm not extended.");
-		        }
-		        break;
 
-		    case "2":
-		        try {
-		            if (bhupeshTest.isDisplayed()) {
-		                System.out.println(GREEN + "Extended user visible,Alarm Extended successfully.");
-		            }
-		        } catch (Exception e) {
-		            System.out.println(RED + "User not found means alarm not extended.");
-		        }
-		        break;
+		switch (branchName) {
+		case "1":
+			try {
+				if (jonas2.isDisplayed()) {
+					System.out.println(GREEN + "Extended user visible,Alarm Extended successfully.");
+				}
+			} catch (Exception e) {
+				System.out.println(RED + "User not found means alarm not extended.");
+			}
+			break;
 
-		    default:
-		        System.out.println(RED + "Invalid branch");
+		case "2":
+			try {
+				if (bhupeshTest.isDisplayed()) {
+					System.out.println(GREEN + "Extended user visible,Alarm Extended successfully.");
+				}
+			} catch (Exception e) {
+				System.out.println(RED + "User not found means alarm not extended.");
+			}
+			break;
+
+		default:
+			System.out.println(RED + "Invalid branch");
 		}
-		
-	
-		
+
 //		
 //		String expectedTitle1 = firstItemTitle.getText();
 //
@@ -2536,6 +2489,9 @@ public class F_manualAlarm extends b_baseClass {
 		act.sendKeys(st02REsc).perform();
 		Thread.sleep(500);
 		act.sendKeys(Keys.ENTER).perform();
+		Thread.sleep(500);
+		act.sendKeys(Keys.TAB).perform();
+		Thread.sleep(500);
 
 		// Generate alarm
 		generateAlarm.click();
@@ -2650,7 +2606,9 @@ public class F_manualAlarm extends b_baseClass {
 		Thread.sleep(500);
 		act.sendKeys(Keys.ENTER).perform();
 
+		Thread.sleep(500);
 		act.sendKeys(Keys.TAB).perform();
+		Thread.sleep(500);
 
 		// Generate alarm
 		generateAlarm.click();
@@ -2801,9 +2759,10 @@ public class F_manualAlarm extends b_baseClass {
 		act.sendKeys(st02A1).perform();
 		Thread.sleep(500);
 		act.sendKeys(Keys.ENTER).perform();
-		Thread.sleep(1000);
 
+		Thread.sleep(500);
 		act.sendKeys(Keys.TAB).perform();
+		Thread.sleep(500);
 
 		// Generate alarm
 		generateAlarm.click();
@@ -2938,7 +2897,9 @@ public class F_manualAlarm extends b_baseClass {
 		act.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).sendKeys(Keys.BACK_SPACE).perform();
 
 		Thread.sleep(1000);
+
 		act.sendKeys(Keys.TAB).perform();
+		Thread.sleep(500);
 
 		// Generate alarm
 		generateAlarm.click();
@@ -3064,7 +3025,7 @@ public class F_manualAlarm extends b_baseClass {
 		Thread.sleep(1000);
 
 		act.sendKeys(Keys.TAB).perform();
-
+		Thread.sleep(500);
 		// Generate alarm
 		generateAlarm.click();
 		Thread.sleep(500);
@@ -3219,7 +3180,9 @@ public class F_manualAlarm extends b_baseClass {
 		Thread.sleep(1000);
 
 		// Generate alarm
+		Thread.sleep(500);
 		act.sendKeys(Keys.TAB).perform();
+		Thread.sleep(500);
 		generateAlarm.click();
 		Thread.sleep(500);
 		yesCreate.click();
@@ -3295,8 +3258,5 @@ public class F_manualAlarm extends b_baseClass {
 		dashboard2.click();
 		Thread.sleep(2000);
 	}
-
-
-	
 
 }

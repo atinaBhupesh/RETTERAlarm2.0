@@ -177,6 +177,9 @@ public class K_calendar extends b_baseClass {
 
 	@FindBy(xpath = "//div[@class='title' and contains(translate(text(),'BG','bg'),'bg')]")
 	private List<WebElement> getEventCount;
+	
+	@FindBy(xpath = "//div[@class=\"dx-item dx-list-item\"]")
+	private List<WebElement> getEventCountAll;
 
 	@FindBy(xpath = "//div[@aria-label='Next page']")
 	private WebElement nextMonth;
@@ -995,6 +998,62 @@ public class K_calendar extends b_baseClass {
 			System.out.println(monthName);
 			// Delete all events in current month
 			while (getEventCount.size() > 0) {
+
+				firstEvent.click(); // always first event
+				Thread.sleep(1000);
+
+				deleteEvent.click();
+				Thread.sleep(1000);
+
+				deleteEventYes.click();
+				Thread.sleep(4000);
+
+				monthCount++;
+				System.out.println("Event no-" + monthCount + " Deleted successfully.");
+				totalCount++;
+
+			}
+
+			if (monthCount == 0) {
+				System.out.println("**No events available in " + monthName + "**");
+
+			} else {
+				System.out.println(monthCount + " events deleted from " + monthName);
+
+			}
+
+			// Move to next month
+			nextMonth.click();
+			Thread.sleep(2000);
+		}
+
+		System.out.println(GREEN + ">>>>TOTAL EVENTS DELETED: " + totalCount + " <<<<<");
+
+	}
+	
+	
+	public void deleteCalendarEventAll(WebDriver driver) throws Throwable {
+		int totalCount = 0;
+
+		todayButton.click();
+		Thread.sleep(3000);
+
+		// Go back 2 months
+		for (int i = 0; i < 2; i++) {
+			backMonth.click();
+			Thread.sleep(1500);
+		}
+
+		// Loop for 3 months
+		for (int m = 1; m <= 4; m++) {
+
+			String monthName = getMonthName.getText();
+			Thread.sleep(1000);
+
+			int monthCount = 0;
+			System.out.println(monthName);
+			// Delete all events in current month
+			while (getEventCountAll.size() > 0) {
 
 				firstEvent.click(); // always first event
 				Thread.sleep(1000);
