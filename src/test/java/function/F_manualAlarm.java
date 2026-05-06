@@ -1196,21 +1196,18 @@ public class F_manualAlarm extends b_baseClass {
 			alarmChat.click();
 			Thread.sleep(1000);
 
-			switch (branchName) {
-			case "1": {
-
-				writemessageField.click();
-				Thread.sleep(1000);
-				String message = "Text message sent to the new API alarm user.";
-				act.sendKeys(message).perform();
-
-				sendmessageButton.click();
-				Thread.sleep(1000);
-
-				String expectedTitle = messageText.getText().split("\\n")[0].trim();
-				Assert.assertTrue(message.contains(expectedTitle), RED + "Message not sent.");
-
-				System.out.println(GREEN + message + " sent successfuly ");
+//				writemessageField.click();
+//				Thread.sleep(1000);
+//				String message = "Text message sent to the new API alarm user.";
+//				act.sendKeys(message).perform();
+//
+//				sendmessageButton.click();
+//				Thread.sleep(1000);
+//
+//				String expectedTitle = messageText.getText().split("\\n")[0].trim();
+//				Assert.assertTrue(message.contains(expectedTitle), RED + "Message not sent.");
+//
+//				System.out.println(GREEN + message + " sent successfuly ");
 
 //			/* -------- IMAGE ATTACHMENT -------- */
 //			act.moveToElement(attachFile).click().perform();
@@ -1308,177 +1305,160 @@ public class F_manualAlarm extends b_baseClass {
 //
 //			System.out.println(GREEN + message3 + " sent successfuly ");
 
-				break;
+			Thread.sleep(2000);
+			textarea.click();
+			Thread.sleep(1000);
+			String messageText = "Text message sent to the new API alarm user.";
+			act.sendKeys(messageText).perform();
+			Thread.sleep(1000);
+			sendButton.click();
+			Thread.sleep(1000);
+			String expTextmessage = textMessage.getText();
 
-			}
-			case "2":
+			Assert.assertTrue(messageText.contains(expTextmessage), RED + "Message not sent.");
 
-			{
+			System.out.println(GREEN + messageText + " sent successfuly ");
+			Thread.sleep(1000);
 
-				Thread.sleep(2000);
-				textarea.click();
-				Thread.sleep(1000);
-				String messageText = "Text message sent to the new API alarm user.";
-				act.sendKeys(messageText).perform();
-				Thread.sleep(1000);
-				sendButton.click();
-				Thread.sleep(1000);
-				String expTextmessage = textMessage.getText();
+			// image`
 
-				Assert.assertTrue(messageText.contains(expTextmessage), RED + "Message not sent.");
+			chatAttachment.click();
+			Thread.sleep(1000);
 
-				System.out.println(GREEN + messageText + " sent successfuly ");
-				Thread.sleep(1000);
+			StringSelection ss = new StringSelection(
+					"C:\\Users\\BHUPESH\\Desktop\\SampleFiles\\Automation\\sample_image.png");
+			Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
 
-				// image`
+			Robot rc = new Robot();
+			Thread.sleep(2000);
+			rc.keyPress(KeyEvent.VK_CONTROL);
+			rc.keyPress(KeyEvent.VK_V);
+			Thread.sleep(2000);
+			rc.keyRelease(KeyEvent.VK_CONTROL);
+			rc.keyRelease(KeyEvent.VK_V);
+			Thread.sleep(2000);
+			rc.keyPress(KeyEvent.VK_ENTER);
+			rc.keyRelease(KeyEvent.VK_ENTER);
+			Thread.sleep(2000);
 
-				chatAttachment.click();
-				Thread.sleep(1000);
+			textarea.click();
+			Thread.sleep(1000);
+			String imageText = "Image file & text sent to the new API alarm user.";
+			act.sendKeys(imageText).perform();
+			Thread.sleep(1000);
+			sendButton.click();
+			Thread.sleep(2000);
 
-				StringSelection ss = new StringSelection(
-						"C:\\Users\\BHUPESH\\Desktop\\SampleFiles\\Automation\\sample_image.png");
-				Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
+			boolean isImageDisplay = uploadedImage.isDisplayed();
 
-				Robot rc = new Robot();
-				Thread.sleep(2000);
-				rc.keyPress(KeyEvent.VK_CONTROL);
-				rc.keyPress(KeyEvent.VK_V);
-				Thread.sleep(2000);
-				rc.keyRelease(KeyEvent.VK_CONTROL);
-				rc.keyRelease(KeyEvent.VK_V);
-				Thread.sleep(2000);
-				rc.keyPress(KeyEvent.VK_ENTER);
-				rc.keyRelease(KeyEvent.VK_ENTER);
-				Thread.sleep(2000);
+			Assert.assertTrue(isImageDisplay, RED + "Image and text are not attached to the chat.");
 
-				textarea.click();
-				Thread.sleep(1000);
-				String imageText = "Image file & text sent to the new API alarm user.";
-				act.sendKeys(imageText).perform();
-				Thread.sleep(1000);
-				sendButton.click();
-				Thread.sleep(2000);
+			System.out.println(GREEN + imageText);
+			Thread.sleep(1000);
 
-				boolean isImageDisplay = uploadedImage.isDisplayed();
+			// pdf
 
-				Assert.assertTrue(isImageDisplay, RED + "Image and text are not attached to the chat.");
+			chatAttachment.click();
+			Thread.sleep(1000);
 
-				System.out.println(GREEN + imageText);
-				Thread.sleep(1000);
-
-				// pdf
-
-				chatAttachment.click();
-				Thread.sleep(1000);
-
-				StringSelection ss1 = new StringSelection(
-						"C:\\Users\\BHUPESH\\Desktop\\SampleFiles\\Automation\\sample_pdf.pdf");
-				Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss1, null);
-
-				Thread.sleep(2000);
-				rc.keyPress(KeyEvent.VK_CONTROL);
-				rc.keyPress(KeyEvent.VK_V);
-				Thread.sleep(2000);
-				rc.keyRelease(KeyEvent.VK_CONTROL);
-				rc.keyRelease(KeyEvent.VK_V);
-				Thread.sleep(2000);
-				rc.keyPress(KeyEvent.VK_ENTER);
-				rc.keyRelease(KeyEvent.VK_ENTER);
-				Thread.sleep(2000);
-
-				textarea.click();
-				Thread.sleep(1000);
-				String pdfText = "Pdf file & message sent to the new API alarm user.";
-				act.sendKeys(pdfText).perform();
-				Thread.sleep(1000);
-				sendButton.click();
-				Thread.sleep(2000);
-
-				boolean isPdfAvailable = uploadedPdf.isDisplayed();
-
-				Assert.assertTrue(isPdfAvailable, RED + "Pdf and text are not attached to the chat.");
-
-				System.out.println(GREEN + pdfText);
-				Thread.sleep(1000);
-
-				// WordFile
-				chatAttachment.click();
-				Thread.sleep(1000);
-
-				StringSelection ss2 = new StringSelection(
-						"C:\\Users\\BHUPESH\\Desktop\\SampleFiles\\Automation\\sample_WordFile.docx");
-				Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss2, null);
-
-				Thread.sleep(2000);
-				rc.keyPress(KeyEvent.VK_CONTROL);
-				rc.keyPress(KeyEvent.VK_V);
-				Thread.sleep(2000);
-				rc.keyRelease(KeyEvent.VK_CONTROL);
-				rc.keyRelease(KeyEvent.VK_V);
-				Thread.sleep(2000);
-				rc.keyPress(KeyEvent.VK_ENTER);
-				rc.keyRelease(KeyEvent.VK_ENTER);
-				Thread.sleep(2000);
-
-				textarea.click();
-				Thread.sleep(1000);
-				String wordText1 = "Word file & text sent to the new API alarm user.";
-				act.sendKeys(wordText1).perform();
-				Thread.sleep(1000);
-				sendButton.click();
-				Thread.sleep(2000);
-
-				boolean isWorrdFileAvailable = uploadedWordFile.isDisplayed();
-
-				Assert.assertTrue(isWorrdFileAvailable, RED + "Pdf and text are not attached to the chat.");
-
-				System.out.println(GREEN + wordText1);
-				Thread.sleep(1000);
-
-				// XLc
-				chatAttachment.click();
-				Thread.sleep(1000);
-
-				StringSelection ss3 = new StringSelection(
-						"C:\\Users\\BHUPESH\\Desktop\\SampleFiles\\Automation\\sample_XLS.xls");
-				Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss3, null);
-
-				Thread.sleep(2000);
-				rc.keyPress(KeyEvent.VK_CONTROL);
-				rc.keyPress(KeyEvent.VK_V);
-				Thread.sleep(2000);
-				rc.keyRelease(KeyEvent.VK_CONTROL);
-				rc.keyRelease(KeyEvent.VK_V);
-				Thread.sleep(2000);
-				rc.keyPress(KeyEvent.VK_ENTER);
-				rc.keyRelease(KeyEvent.VK_ENTER);
-				Thread.sleep(2000);
-
-				textarea.click();
-				Thread.sleep(1000);
-				String xlsText = "Xls file & text sent to the new API alarm user.";
-				act.sendKeys(wordText1).perform();
-				Thread.sleep(1000);
-				sendButton.click();
-				Thread.sleep(2000);
-
-				boolean isXlsFileAvailable = uploadedXls.isDisplayed();
-
-				Assert.assertTrue(isXlsFileAvailable, RED + "Pdf and text are not attached to the chat.");
-
-				System.out.println(GREEN + xlsText);
-				Thread.sleep(1000);
-
-				break;
-
-			}
-
-			}
-
-		} else {
+			StringSelection ss1 = new StringSelection(
+					"C:\\Users\\BHUPESH\\Desktop\\SampleFiles\\Automation\\sample_pdf.pdf");
+			Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss1, null);
 
 			Thread.sleep(2000);
-			Reporter.log(RED + "Chat option not found.", true);
+			rc.keyPress(KeyEvent.VK_CONTROL);
+			rc.keyPress(KeyEvent.VK_V);
+			Thread.sleep(2000);
+			rc.keyRelease(KeyEvent.VK_CONTROL);
+			rc.keyRelease(KeyEvent.VK_V);
+			Thread.sleep(2000);
+			rc.keyPress(KeyEvent.VK_ENTER);
+			rc.keyRelease(KeyEvent.VK_ENTER);
+			Thread.sleep(2000);
+
+			textarea.click();
+			Thread.sleep(1000);
+			String pdfText = "Pdf file & message sent to the new API alarm user.";
+			act.sendKeys(pdfText).perform();
+			Thread.sleep(1000);
+			sendButton.click();
+			Thread.sleep(2000);
+
+			boolean isPdfAvailable = uploadedPdf.isDisplayed();
+
+			Assert.assertTrue(isPdfAvailable, RED + "Pdf and text are not attached to the chat.");
+
+			System.out.println(GREEN + pdfText);
+			Thread.sleep(1000);
+
+			// WordFile
+			chatAttachment.click();
+			Thread.sleep(1000);
+
+			StringSelection ss2 = new StringSelection(
+					"C:\\Users\\BHUPESH\\Desktop\\SampleFiles\\Automation\\sample_WordFile.docx");
+			Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss2, null);
+
+			Thread.sleep(2000);
+			rc.keyPress(KeyEvent.VK_CONTROL);
+			rc.keyPress(KeyEvent.VK_V);
+			Thread.sleep(2000);
+			rc.keyRelease(KeyEvent.VK_CONTROL);
+			rc.keyRelease(KeyEvent.VK_V);
+			Thread.sleep(2000);
+			rc.keyPress(KeyEvent.VK_ENTER);
+			rc.keyRelease(KeyEvent.VK_ENTER);
+			Thread.sleep(2000);
+
+			textarea.click();
+			Thread.sleep(1000);
+			String wordText1 = "Word file & text sent to the new API alarm user.";
+			act.sendKeys(wordText1).perform();
+			Thread.sleep(1000);
+			sendButton.click();
+			Thread.sleep(2000);
+
+			boolean isWorrdFileAvailable = uploadedWordFile.isDisplayed();
+
+			Assert.assertTrue(isWorrdFileAvailable, RED + "Pdf and text are not attached to the chat.");
+
+			System.out.println(GREEN + wordText1);
+			Thread.sleep(1000);
+
+			// XLc
+			chatAttachment.click();
+			Thread.sleep(1000);
+
+			StringSelection ss3 = new StringSelection(
+					"C:\\Users\\BHUPESH\\Desktop\\SampleFiles\\Automation\\sample_XLS.xls");
+			Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss3, null);
+
+			Thread.sleep(2000);
+			rc.keyPress(KeyEvent.VK_CONTROL);
+			rc.keyPress(KeyEvent.VK_V);
+			Thread.sleep(2000);
+			rc.keyRelease(KeyEvent.VK_CONTROL);
+			rc.keyRelease(KeyEvent.VK_V);
+			Thread.sleep(2000);
+			rc.keyPress(KeyEvent.VK_ENTER);
+			rc.keyRelease(KeyEvent.VK_ENTER);
+			Thread.sleep(2000);
+
+			textarea.click();
+			Thread.sleep(1000);
+			String xlsText = "Xls file & text sent to the new API alarm user.";
+			act.sendKeys(wordText1).perform();
+			Thread.sleep(1000);
+			sendButton.click();
+			Thread.sleep(2000);
+
+			boolean isXlsFileAvailable = uploadedXls.isDisplayed();
+
+			Assert.assertTrue(isXlsFileAvailable, RED + "Pdf and text are not attached to the chat.");
+
+			System.out.println(GREEN + xlsText);
+			Thread.sleep(1000);
+
 		}
 	}
 
@@ -1511,21 +1491,18 @@ public class F_manualAlarm extends b_baseClass {
 			alarmChat.click();
 			Thread.sleep(1000);
 
-			switch (branchName) {
-			case "1": {
-
-				writemessageField.click();
-				Thread.sleep(1000);
-				String message = "Text message sent to the new API alarm user.";
-				act.sendKeys(message).perform();
-
-				sendmessageButton.click();
-				Thread.sleep(1000);
-
-				String expectedTitle = messageText.getText().split("\\n")[0].trim();
-				Assert.assertTrue(message.contains(expectedTitle), RED + "Message not sent.");
-
-				System.out.println(GREEN + message + " sent successfuly ");
+//				writemessageField.click();
+//				Thread.sleep(1000);
+//				String message = "Text message sent to the new API alarm user.";
+//				act.sendKeys(message).perform();
+//
+//				sendmessageButton.click();
+//				Thread.sleep(1000);
+//
+//				String expectedTitle = messageText.getText().split("\\n")[0].trim();
+//				Assert.assertTrue(message.contains(expectedTitle), RED + "Message not sent.");
+//
+//				System.out.println(GREEN + message + " sent successfuly ");
 
 //			/* -------- IMAGE ATTACHMENT -------- */
 //			act.moveToElement(attachFile).click().perform();
@@ -1623,177 +1600,160 @@ public class F_manualAlarm extends b_baseClass {
 //
 //			System.out.println(GREEN + message3 + " sent successfuly ");
 
-				break;
+			Thread.sleep(2000);
+			textarea.click();
+			Thread.sleep(1000);
+			String messageText = "Text message sent to the new API alarm user.";
+			act.sendKeys(messageText).perform();
+			Thread.sleep(1000);
+			sendButton.click();
+			Thread.sleep(1000);
+			String expTextmessage = textMessage.getText();
 
-			}
-			case "2":
+			Assert.assertTrue(messageText.contains(expTextmessage), RED + "Message not sent.");
 
-			{
+			System.out.println(GREEN + messageText + " sent successfuly ");
+			Thread.sleep(1000);
 
-				Thread.sleep(2000);
-				textarea.click();
-				Thread.sleep(1000);
-				String messageText = "Text message sent to the new API alarm user.";
-				act.sendKeys(messageText).perform();
-				Thread.sleep(1000);
-				sendButton.click();
-				Thread.sleep(1000);
-				String expTextmessage = textMessage.getText();
+			// image`
 
-				Assert.assertTrue(messageText.contains(expTextmessage), RED + "Message not sent.");
+			chatAttachment.click();
+			Thread.sleep(1000);
 
-				System.out.println(GREEN + messageText + " sent successfuly ");
-				Thread.sleep(1000);
+			StringSelection ss = new StringSelection(
+					"C:\\Users\\BHUPESH\\Desktop\\SampleFiles\\Automation\\sample_image.png");
+			Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
 
-				// image`
+			Robot rc = new Robot();
+			Thread.sleep(2000);
+			rc.keyPress(KeyEvent.VK_CONTROL);
+			rc.keyPress(KeyEvent.VK_V);
+			Thread.sleep(2000);
+			rc.keyRelease(KeyEvent.VK_CONTROL);
+			rc.keyRelease(KeyEvent.VK_V);
+			Thread.sleep(2000);
+			rc.keyPress(KeyEvent.VK_ENTER);
+			rc.keyRelease(KeyEvent.VK_ENTER);
+			Thread.sleep(2000);
 
-				chatAttachment.click();
-				Thread.sleep(1000);
+			textarea.click();
+			Thread.sleep(1000);
+			String imageText = "Image file & text sent to the new API alarm user.";
+			act.sendKeys(imageText).perform();
+			Thread.sleep(1000);
+			sendButton.click();
+			Thread.sleep(2000);
 
-				StringSelection ss = new StringSelection(
-						"C:\\Users\\BHUPESH\\Desktop\\SampleFiles\\Automation\\sample_image.png");
-				Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
+			boolean isImageDisplay = uploadedImage.isDisplayed();
 
-				Robot rc = new Robot();
-				Thread.sleep(2000);
-				rc.keyPress(KeyEvent.VK_CONTROL);
-				rc.keyPress(KeyEvent.VK_V);
-				Thread.sleep(2000);
-				rc.keyRelease(KeyEvent.VK_CONTROL);
-				rc.keyRelease(KeyEvent.VK_V);
-				Thread.sleep(2000);
-				rc.keyPress(KeyEvent.VK_ENTER);
-				rc.keyRelease(KeyEvent.VK_ENTER);
-				Thread.sleep(2000);
+			Assert.assertTrue(isImageDisplay, RED + "Image and text are not attached to the chat.");
 
-				textarea.click();
-				Thread.sleep(1000);
-				String imageText = "Image file & text sent to the new API alarm user.";
-				act.sendKeys(imageText).perform();
-				Thread.sleep(1000);
-				sendButton.click();
-				Thread.sleep(2000);
+			System.out.println(GREEN + imageText);
+			Thread.sleep(1000);
 
-				boolean isImageDisplay = uploadedImage.isDisplayed();
+			// pdf
 
-				Assert.assertTrue(isImageDisplay, RED + "Image and text are not attached to the chat.");
+			chatAttachment.click();
+			Thread.sleep(1000);
 
-				System.out.println(GREEN + imageText);
-				Thread.sleep(1000);
-
-				// pdf
-
-				chatAttachment.click();
-				Thread.sleep(1000);
-
-				StringSelection ss1 = new StringSelection(
-						"C:\\Users\\BHUPESH\\Desktop\\SampleFiles\\Automation\\sample_pdf.pdf");
-				Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss1, null);
-
-				Thread.sleep(2000);
-				rc.keyPress(KeyEvent.VK_CONTROL);
-				rc.keyPress(KeyEvent.VK_V);
-				Thread.sleep(2000);
-				rc.keyRelease(KeyEvent.VK_CONTROL);
-				rc.keyRelease(KeyEvent.VK_V);
-				Thread.sleep(2000);
-				rc.keyPress(KeyEvent.VK_ENTER);
-				rc.keyRelease(KeyEvent.VK_ENTER);
-				Thread.sleep(2000);
-
-				textarea.click();
-				Thread.sleep(1000);
-				String pdfText = "Pdf file & message sent to the new API alarm user.";
-				act.sendKeys(pdfText).perform();
-				Thread.sleep(1000);
-				sendButton.click();
-				Thread.sleep(2000);
-
-				boolean isPdfAvailable = uploadedPdf.isDisplayed();
-
-				Assert.assertTrue(isPdfAvailable, RED + "Pdf and text are not attached to the chat.");
-
-				System.out.println(GREEN + pdfText);
-				Thread.sleep(1000);
-
-				// WordFile
-				chatAttachment.click();
-				Thread.sleep(1000);
-
-				StringSelection ss2 = new StringSelection(
-						"C:\\Users\\BHUPESH\\Desktop\\SampleFiles\\Automation\\sample_WordFile.docx");
-				Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss2, null);
-
-				Thread.sleep(2000);
-				rc.keyPress(KeyEvent.VK_CONTROL);
-				rc.keyPress(KeyEvent.VK_V);
-				Thread.sleep(2000);
-				rc.keyRelease(KeyEvent.VK_CONTROL);
-				rc.keyRelease(KeyEvent.VK_V);
-				Thread.sleep(2000);
-				rc.keyPress(KeyEvent.VK_ENTER);
-				rc.keyRelease(KeyEvent.VK_ENTER);
-				Thread.sleep(2000);
-
-				textarea.click();
-				Thread.sleep(1000);
-				String wordText1 = "Word file & text sent to the new API alarm user.";
-				act.sendKeys(wordText1).perform();
-				Thread.sleep(1000);
-				sendButton.click();
-				Thread.sleep(2000);
-
-				boolean isWorrdFileAvailable = uploadedWordFile.isDisplayed();
-
-				Assert.assertTrue(isWorrdFileAvailable, RED + "Pdf and text are not attached to the chat.");
-
-				System.out.println(GREEN + wordText1);
-				Thread.sleep(1000);
-
-				// XLc
-				chatAttachment.click();
-				Thread.sleep(1000);
-
-				StringSelection ss3 = new StringSelection(
-						"C:\\Users\\BHUPESH\\Desktop\\SampleFiles\\Automation\\sample_XLS.xls");
-				Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss3, null);
-
-				Thread.sleep(2000);
-				rc.keyPress(KeyEvent.VK_CONTROL);
-				rc.keyPress(KeyEvent.VK_V);
-				Thread.sleep(2000);
-				rc.keyRelease(KeyEvent.VK_CONTROL);
-				rc.keyRelease(KeyEvent.VK_V);
-				Thread.sleep(2000);
-				rc.keyPress(KeyEvent.VK_ENTER);
-				rc.keyRelease(KeyEvent.VK_ENTER);
-				Thread.sleep(2000);
-
-				textarea.click();
-				Thread.sleep(1000);
-				String xlsText = "Xls file & text sent to the new API alarm user.";
-				act.sendKeys(wordText1).perform();
-				Thread.sleep(1000);
-				sendButton.click();
-				Thread.sleep(2000);
-
-				boolean isXlsFileAvailable = uploadedXls.isDisplayed();
-
-				Assert.assertTrue(isXlsFileAvailable, RED + "Pdf and text are not attached to the chat.");
-
-				System.out.println(GREEN + xlsText);
-				Thread.sleep(1000);
-
-				break;
-
-			}
-
-			}
-
-		} else {
+			StringSelection ss1 = new StringSelection(
+					"C:\\Users\\BHUPESH\\Desktop\\SampleFiles\\Automation\\sample_pdf.pdf");
+			Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss1, null);
 
 			Thread.sleep(2000);
-			Reporter.log(RED + "Chat option not found.", true);
+			rc.keyPress(KeyEvent.VK_CONTROL);
+			rc.keyPress(KeyEvent.VK_V);
+			Thread.sleep(2000);
+			rc.keyRelease(KeyEvent.VK_CONTROL);
+			rc.keyRelease(KeyEvent.VK_V);
+			Thread.sleep(2000);
+			rc.keyPress(KeyEvent.VK_ENTER);
+			rc.keyRelease(KeyEvent.VK_ENTER);
+			Thread.sleep(2000);
+
+			textarea.click();
+			Thread.sleep(1000);
+			String pdfText = "Pdf file & message sent to the new API alarm user.";
+			act.sendKeys(pdfText).perform();
+			Thread.sleep(1000);
+			sendButton.click();
+			Thread.sleep(2000);
+
+			boolean isPdfAvailable = uploadedPdf.isDisplayed();
+
+			Assert.assertTrue(isPdfAvailable, RED + "Pdf and text are not attached to the chat.");
+
+			System.out.println(GREEN + pdfText);
+			Thread.sleep(1000);
+
+			// WordFile
+			chatAttachment.click();
+			Thread.sleep(1000);
+
+			StringSelection ss2 = new StringSelection(
+					"C:\\Users\\BHUPESH\\Desktop\\SampleFiles\\Automation\\sample_WordFile.docx");
+			Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss2, null);
+
+			Thread.sleep(2000);
+			rc.keyPress(KeyEvent.VK_CONTROL);
+			rc.keyPress(KeyEvent.VK_V);
+			Thread.sleep(2000);
+			rc.keyRelease(KeyEvent.VK_CONTROL);
+			rc.keyRelease(KeyEvent.VK_V);
+			Thread.sleep(2000);
+			rc.keyPress(KeyEvent.VK_ENTER);
+			rc.keyRelease(KeyEvent.VK_ENTER);
+			Thread.sleep(2000);
+
+			textarea.click();
+			Thread.sleep(1000);
+			String wordText1 = "Word file & text sent to the new API alarm user.";
+			act.sendKeys(wordText1).perform();
+			Thread.sleep(1000);
+			sendButton.click();
+			Thread.sleep(2000);
+
+			boolean isWorrdFileAvailable = uploadedWordFile.isDisplayed();
+
+			Assert.assertTrue(isWorrdFileAvailable, RED + "Pdf and text are not attached to the chat.");
+
+			System.out.println(GREEN + wordText1);
+			Thread.sleep(1000);
+
+			// XLc
+			chatAttachment.click();
+			Thread.sleep(1000);
+
+			StringSelection ss3 = new StringSelection(
+					"C:\\Users\\BHUPESH\\Desktop\\SampleFiles\\Automation\\sample_XLS.xls");
+			Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss3, null);
+
+			Thread.sleep(2000);
+			rc.keyPress(KeyEvent.VK_CONTROL);
+			rc.keyPress(KeyEvent.VK_V);
+			Thread.sleep(2000);
+			rc.keyRelease(KeyEvent.VK_CONTROL);
+			rc.keyRelease(KeyEvent.VK_V);
+			Thread.sleep(2000);
+			rc.keyPress(KeyEvent.VK_ENTER);
+			rc.keyRelease(KeyEvent.VK_ENTER);
+			Thread.sleep(2000);
+
+			textarea.click();
+			Thread.sleep(1000);
+			String xlsText = "Xls file & text sent to the new API alarm user.";
+			act.sendKeys(wordText1).perform();
+			Thread.sleep(1000);
+			sendButton.click();
+			Thread.sleep(2000);
+
+			boolean isXlsFileAvailable = uploadedXls.isDisplayed();
+
+			Assert.assertTrue(isXlsFileAvailable, RED + "Pdf and text are not attached to the chat.");
+
+			System.out.println(GREEN + xlsText);
+			Thread.sleep(1000);
+
 		}
 
 	}
@@ -1828,291 +1788,275 @@ public class F_manualAlarm extends b_baseClass {
 			alarmChat.click();
 			Thread.sleep(1000);
 
-			switch (branchName) {
-			case "1": {
-
-				writemessageField.click();
-				Thread.sleep(1000);
-				String message = "Text message sent to the new API alarm user.";
-				act.sendKeys(message).perform();
-
-				sendmessageButton.click();
-				Thread.sleep(1000);
-
-				String expectedTitle = messageText.getText().split("\\n")[0].trim();
-				Assert.assertTrue(message.contains(expectedTitle), RED + "Message not sent.");
-
-				System.out.println(GREEN + message + " sent successfuly ");
-
-				/* -------- IMAGE ATTACHMENT -------- */
-				act.moveToElement(attachFile).click().perform();
-				Thread.sleep(1000);
-
-				StringSelection ss = new StringSelection(
-						"C:\\Users\\BHUPESH\\Desktop\\SampleFiles\\Automation\\sample_image.png");
-				Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
-
-				Robot rc = new Robot();
-				Thread.sleep(2000);
-				rc.keyPress(KeyEvent.VK_CONTROL);
-				rc.keyPress(KeyEvent.VK_V);
-				Thread.sleep(2000);
-				rc.keyRelease(KeyEvent.VK_CONTROL);
-				rc.keyRelease(KeyEvent.VK_V);
-				Thread.sleep(2000);
-				rc.keyPress(KeyEvent.VK_ENTER);
-				rc.keyRelease(KeyEvent.VK_ENTER);
-				Thread.sleep(2000);
-
-				writemessageField.click();
-				Thread.sleep(1000);
-				String message1 = "Image file message sent to the new API alarm user.";
-				act.sendKeys(message1).perform();
-				Thread.sleep(2000);
-
-				sendmessageButton.click();
-				expectedTitle = messageText.getText().split("\\n")[0].trim();
-				Assert.assertTrue(message1.contains(expectedTitle), RED + "Message not sent.");
-
-				System.out.println(GREEN + message1 + " sent successfuly ");
-
-				/* -------- PDF ATTACHMENT -------- */
-				Thread.sleep(1000);
-				act.moveToElement(attachFile).click().perform();
-				Thread.sleep(1000);
-
-				StringSelection ss1 = new StringSelection(
-						"C:\\Users\\BHUPESH\\Desktop\\SampleFiles\\Automation\\sample_pdf.pdf");
-				Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss1, null);
-
-				Thread.sleep(2000);
-				rc.keyPress(KeyEvent.VK_CONTROL);
-				rc.keyPress(KeyEvent.VK_V);
-				Thread.sleep(2000);
-				rc.keyRelease(KeyEvent.VK_CONTROL);
-				rc.keyRelease(KeyEvent.VK_V);
-				Thread.sleep(2000);
-				rc.keyPress(KeyEvent.VK_ENTER);
-				rc.keyRelease(KeyEvent.VK_ENTER);
-				Thread.sleep(2000);
-
-				writemessageField.click();
-				Thread.sleep(1000);
-				String message2 = "Pdf file message sent to the new API alarm user.";
-				act.sendKeys(message2).perform();
-				Thread.sleep(2000);
-				sendmessageButton.click();
-				Thread.sleep(2000);
-
-				sendmessageButton.click();
-				expectedTitle = messageText.getText().split("\\n")[0].trim();
-				Assert.assertTrue(message2.contains(expectedTitle), RED + "Message not sent.");
-
-				System.out.println(GREEN + message2 + " sent successfuly ");
-
-				/* -------- WORD FILE ATTACHMENT -------- */
-				Thread.sleep(1000);
-				act.moveToElement(attachFile).click().perform();
-				Thread.sleep(1000);
-
-				StringSelection ss2 = new StringSelection(
-						"C:\\Users\\BHUPESH\\Desktop\\SampleFiles\\Automation\\sample_WordFile.docx");
-				Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss2, null);
-
-				Thread.sleep(2000);
-				rc.keyPress(KeyEvent.VK_CONTROL);
-				rc.keyPress(KeyEvent.VK_V);
-				Thread.sleep(2000);
-				rc.keyRelease(KeyEvent.VK_CONTROL);
-				rc.keyRelease(KeyEvent.VK_V);
-				Thread.sleep(2000);
-				rc.keyPress(KeyEvent.VK_ENTER);
-				rc.keyRelease(KeyEvent.VK_ENTER);
-				Thread.sleep(2000);
-
-				writemessageField.click();
-				Thread.sleep(1000);
-				String message3 = "Word file message sent to the new API alarm user.";
-				act.sendKeys(message3).perform();
-				Thread.sleep(2000);
-				sendmessageButton.click();
-
-				expectedTitle = messageText.getText().split("\\n")[0].trim();
-				Assert.assertTrue(message3.contains(expectedTitle), RED + "Message not sent.");
-
-				System.out.println(GREEN + message3 + " sent successfuly ");
-
-				break;
-
-			}
-			case "2":
-
-			{
-
-				Thread.sleep(2000);
-				textarea.click();
-				Thread.sleep(1000);
-				String messageText = "Text message sent to the new API alarm user.";
-				act.sendKeys(messageText).perform();
-				Thread.sleep(1000);
-				sendButton.click();
-				Thread.sleep(1000);
-				String expTextmessage = textMessage.getText();
-
-				Assert.assertTrue(messageText.contains(expTextmessage), RED + "Message not sent.");
-
-				System.out.println(GREEN + messageText + " sent successfuly ");
-				Thread.sleep(1000);
-
-				// image`
-
-				chatAttachment.click();
-				Thread.sleep(1000);
-
-				StringSelection ss = new StringSelection(
-						"C:\\Users\\BHUPESH\\Desktop\\SampleFiles\\Automation\\sample_image.png");
-				Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
-
-				Robot rc = new Robot();
-				Thread.sleep(2000);
-				rc.keyPress(KeyEvent.VK_CONTROL);
-				rc.keyPress(KeyEvent.VK_V);
-				Thread.sleep(2000);
-				rc.keyRelease(KeyEvent.VK_CONTROL);
-				rc.keyRelease(KeyEvent.VK_V);
-				Thread.sleep(2000);
-				rc.keyPress(KeyEvent.VK_ENTER);
-				rc.keyRelease(KeyEvent.VK_ENTER);
-				Thread.sleep(2000);
-
-				textarea.click();
-				Thread.sleep(1000);
-				String imageText = "Image file & text sent to the new API alarm user.";
-				act.sendKeys(imageText).perform();
-				Thread.sleep(1000);
-				sendButton.click();
-				Thread.sleep(2000);
-
-				boolean isImageDisplay = uploadedImage.isDisplayed();
-
-				Assert.assertTrue(isImageDisplay, RED + "Image and text are not attached to the chat.");
-
-				System.out.println(GREEN + imageText);
-				Thread.sleep(1000);
-
-				// pdf
-
-				chatAttachment.click();
-				Thread.sleep(1000);
-
-				StringSelection ss1 = new StringSelection(
-						"C:\\Users\\BHUPESH\\Desktop\\SampleFiles\\Automation\\sample_pdf.pdf");
-				Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss1, null);
-
-				Thread.sleep(2000);
-				rc.keyPress(KeyEvent.VK_CONTROL);
-				rc.keyPress(KeyEvent.VK_V);
-				Thread.sleep(2000);
-				rc.keyRelease(KeyEvent.VK_CONTROL);
-				rc.keyRelease(KeyEvent.VK_V);
-				Thread.sleep(2000);
-				rc.keyPress(KeyEvent.VK_ENTER);
-				rc.keyRelease(KeyEvent.VK_ENTER);
-				Thread.sleep(2000);
-
-				textarea.click();
-				Thread.sleep(1000);
-				String pdfText = "Pdf file & message sent to the new API alarm user.";
-				act.sendKeys(pdfText).perform();
-				Thread.sleep(1000);
-				sendButton.click();
-				Thread.sleep(2000);
-
-				boolean isPdfAvailable = uploadedPdf.isDisplayed();
-
-				Assert.assertTrue(isPdfAvailable, RED + "Pdf and text are not attached to the chat.");
-
-				System.out.println(GREEN + pdfText);
-				Thread.sleep(1000);
-
-				// WordFile
-				chatAttachment.click();
-				Thread.sleep(1000);
-
-				StringSelection ss2 = new StringSelection(
-						"C:\\Users\\BHUPESH\\Desktop\\SampleFiles\\Automation\\sample_WordFile.docx");
-				Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss2, null);
-
-				Thread.sleep(2000);
-				rc.keyPress(KeyEvent.VK_CONTROL);
-				rc.keyPress(KeyEvent.VK_V);
-				Thread.sleep(2000);
-				rc.keyRelease(KeyEvent.VK_CONTROL);
-				rc.keyRelease(KeyEvent.VK_V);
-				Thread.sleep(2000);
-				rc.keyPress(KeyEvent.VK_ENTER);
-				rc.keyRelease(KeyEvent.VK_ENTER);
-				Thread.sleep(2000);
-
-				textarea.click();
-				Thread.sleep(1000);
-				String wordText1 = "Word file & text sent to the new API alarm user.";
-				act.sendKeys(wordText1).perform();
-				Thread.sleep(1000);
-				sendButton.click();
-				Thread.sleep(2000);
-
-				boolean isWorrdFileAvailable = uploadedWordFile.isDisplayed();
-
-				Assert.assertTrue(isWorrdFileAvailable, RED + "Pdf and text are not attached to the chat.");
-
-				System.out.println(GREEN + wordText1);
-				Thread.sleep(1000);
-
-				// XLc
-				chatAttachment.click();
-				Thread.sleep(1000);
-
-				StringSelection ss3 = new StringSelection(
-						"C:\\Users\\BHUPESH\\Desktop\\SampleFiles\\Automation\\sample_XLS.xls");
-				Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss3, null);
-
-				Thread.sleep(2000);
-				rc.keyPress(KeyEvent.VK_CONTROL);
-				rc.keyPress(KeyEvent.VK_V);
-				Thread.sleep(2000);
-				rc.keyRelease(KeyEvent.VK_CONTROL);
-				rc.keyRelease(KeyEvent.VK_V);
-				Thread.sleep(2000);
-				rc.keyPress(KeyEvent.VK_ENTER);
-				rc.keyRelease(KeyEvent.VK_ENTER);
-				Thread.sleep(2000);
-
-				textarea.click();
-				Thread.sleep(1000);
-				String xlsText = "Xls file & text sent to the new API alarm user.";
-				act.sendKeys(wordText1).perform();
-				Thread.sleep(1000);
-				sendButton.click();
-				Thread.sleep(2000);
-
-				boolean isXlsFileAvailable = uploadedXls.isDisplayed();
-
-				Assert.assertTrue(isXlsFileAvailable, RED + "Pdf and text are not attached to the chat.");
-
-				System.out.println(GREEN + xlsText);
-				Thread.sleep(1000);
-
-				break;
-
-			}
-
-			}
-
-		} else {
+//				writemessageField.click();
+//				Thread.sleep(1000);
+//				String message = "Text message sent to the new API alarm user.";
+//				act.sendKeys(message).perform();
+//
+//				sendmessageButton.click();
+//				Thread.sleep(1000);
+//
+//				String expectedTitle = messageText.getText().split("\\n")[0].trim();
+//				Assert.assertTrue(message.contains(expectedTitle), RED + "Message not sent.");
+//
+//				System.out.println(GREEN + message + " sent successfuly ");
+//
+//				/* -------- IMAGE ATTACHMENT -------- */
+//				act.moveToElement(attachFile).click().perform();
+//				Thread.sleep(1000);
+//
+//				StringSelection ss = new StringSelection(
+//						"C:\\Users\\BHUPESH\\Desktop\\SampleFiles\\Automation\\sample_image.png");
+//				Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
+//
+//				Robot rc = new Robot();
+//				Thread.sleep(2000);
+//				rc.keyPress(KeyEvent.VK_CONTROL);
+//				rc.keyPress(KeyEvent.VK_V);
+//				Thread.sleep(2000);
+//				rc.keyRelease(KeyEvent.VK_CONTROL);
+//				rc.keyRelease(KeyEvent.VK_V);
+//				Thread.sleep(2000);
+//				rc.keyPress(KeyEvent.VK_ENTER);
+//				rc.keyRelease(KeyEvent.VK_ENTER);
+//				Thread.sleep(2000);
+//
+//				writemessageField.click();
+//				Thread.sleep(1000);
+//				String message1 = "Image file message sent to the new API alarm user.";
+//				act.sendKeys(message1).perform();
+//				Thread.sleep(2000);
+//
+//				sendmessageButton.click();
+//				expectedTitle = messageText.getText().split("\\n")[0].trim();
+//				Assert.assertTrue(message1.contains(expectedTitle), RED + "Message not sent.");
+//
+//				System.out.println(GREEN + message1 + " sent successfuly ");
+//
+//				/* -------- PDF ATTACHMENT -------- */
+//				Thread.sleep(1000);
+//				act.moveToElement(attachFile).click().perform();
+//				Thread.sleep(1000);
+//
+//				StringSelection ss1 = new StringSelection(
+//						"C:\\Users\\BHUPESH\\Desktop\\SampleFiles\\Automation\\sample_pdf.pdf");
+//				Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss1, null);
+//
+//				Thread.sleep(2000);
+//				rc.keyPress(KeyEvent.VK_CONTROL);
+//				rc.keyPress(KeyEvent.VK_V);
+//				Thread.sleep(2000);
+//				rc.keyRelease(KeyEvent.VK_CONTROL);
+//				rc.keyRelease(KeyEvent.VK_V);
+//				Thread.sleep(2000);
+//				rc.keyPress(KeyEvent.VK_ENTER);
+//				rc.keyRelease(KeyEvent.VK_ENTER);
+//				Thread.sleep(2000);
+//
+//				writemessageField.click();
+//				Thread.sleep(1000);
+//				String message2 = "Pdf file message sent to the new API alarm user.";
+//				act.sendKeys(message2).perform();
+//				Thread.sleep(2000);
+//				sendmessageButton.click();
+//				Thread.sleep(2000);
+//
+//				sendmessageButton.click();
+//				expectedTitle = messageText.getText().split("\\n")[0].trim();
+//				Assert.assertTrue(message2.contains(expectedTitle), RED + "Message not sent.");
+//
+//				System.out.println(GREEN + message2 + " sent successfuly ");
+//
+//				/* -------- WORD FILE ATTACHMENT -------- */
+//				Thread.sleep(1000);
+//				act.moveToElement(attachFile).click().perform();
+//				Thread.sleep(1000);
+//
+//				StringSelection ss2 = new StringSelection(
+//						"C:\\Users\\BHUPESH\\Desktop\\SampleFiles\\Automation\\sample_WordFile.docx");
+//				Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss2, null);
+//
+//				Thread.sleep(2000);
+//				rc.keyPress(KeyEvent.VK_CONTROL);
+//				rc.keyPress(KeyEvent.VK_V);
+//				Thread.sleep(2000);
+//				rc.keyRelease(KeyEvent.VK_CONTROL);
+//				rc.keyRelease(KeyEvent.VK_V);
+//				Thread.sleep(2000);
+//				rc.keyPress(KeyEvent.VK_ENTER);
+//				rc.keyRelease(KeyEvent.VK_ENTER);
+//				Thread.sleep(2000);
+//
+//				writemessageField.click();
+//				Thread.sleep(1000);
+//				String message3 = "Word file message sent to the new API alarm user.";
+//				act.sendKeys(message3).perform();
+//				Thread.sleep(2000);
+//				sendmessageButton.click();
+//
+//				expectedTitle = messageText.getText().split("\\n")[0].trim();
+//				Assert.assertTrue(message3.contains(expectedTitle), RED + "Message not sent.");
+//
+//				System.out.println(GREEN + message3 + " sent successfuly ");
+//
+//				break;
+//
+//			}
 
 			Thread.sleep(2000);
-			Reporter.log(RED + "Chat option not found.", true);
+			textarea.click();
+			Thread.sleep(1000);
+			String messageText = "Text message sent to the new API alarm user.";
+			act.sendKeys(messageText).perform();
+			Thread.sleep(1000);
+			sendButton.click();
+			Thread.sleep(1000);
+			String expTextmessage = textMessage.getText();
+
+			Assert.assertTrue(messageText.contains(expTextmessage), RED + "Message not sent.");
+
+			System.out.println(GREEN + messageText + " sent successfuly ");
+			Thread.sleep(1000);
+
+			// image`
+
+			chatAttachment.click();
+			Thread.sleep(1000);
+
+			StringSelection ss = new StringSelection(
+					"C:\\Users\\BHUPESH\\Desktop\\SampleFiles\\Automation\\sample_image.png");
+			Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
+
+			Robot rc = new Robot();
+			Thread.sleep(2000);
+			rc.keyPress(KeyEvent.VK_CONTROL);
+			rc.keyPress(KeyEvent.VK_V);
+			Thread.sleep(2000);
+			rc.keyRelease(KeyEvent.VK_CONTROL);
+			rc.keyRelease(KeyEvent.VK_V);
+			Thread.sleep(2000);
+			rc.keyPress(KeyEvent.VK_ENTER);
+			rc.keyRelease(KeyEvent.VK_ENTER);
+			Thread.sleep(2000);
+
+			textarea.click();
+			Thread.sleep(1000);
+			String imageText = "Image file & text sent to the new API alarm user.";
+			act.sendKeys(imageText).perform();
+			Thread.sleep(1000);
+			sendButton.click();
+			Thread.sleep(2000);
+
+			boolean isImageDisplay = uploadedImage.isDisplayed();
+
+			Assert.assertTrue(isImageDisplay, RED + "Image and text are not attached to the chat.");
+
+			System.out.println(GREEN + imageText);
+			Thread.sleep(1000);
+
+			// pdf
+
+			chatAttachment.click();
+			Thread.sleep(1000);
+
+			StringSelection ss1 = new StringSelection(
+					"C:\\Users\\BHUPESH\\Desktop\\SampleFiles\\Automation\\sample_pdf.pdf");
+			Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss1, null);
+
+			Thread.sleep(2000);
+			rc.keyPress(KeyEvent.VK_CONTROL);
+			rc.keyPress(KeyEvent.VK_V);
+			Thread.sleep(2000);
+			rc.keyRelease(KeyEvent.VK_CONTROL);
+			rc.keyRelease(KeyEvent.VK_V);
+			Thread.sleep(2000);
+			rc.keyPress(KeyEvent.VK_ENTER);
+			rc.keyRelease(KeyEvent.VK_ENTER);
+			Thread.sleep(2000);
+
+			textarea.click();
+			Thread.sleep(1000);
+			String pdfText = "Pdf file & message sent to the new API alarm user.";
+			act.sendKeys(pdfText).perform();
+			Thread.sleep(1000);
+			sendButton.click();
+			Thread.sleep(2000);
+
+			boolean isPdfAvailable = uploadedPdf.isDisplayed();
+
+			Assert.assertTrue(isPdfAvailable, RED + "Pdf and text are not attached to the chat.");
+
+			System.out.println(GREEN + pdfText);
+			Thread.sleep(1000);
+
+			// WordFile
+			chatAttachment.click();
+			Thread.sleep(1000);
+
+			StringSelection ss2 = new StringSelection(
+					"C:\\Users\\BHUPESH\\Desktop\\SampleFiles\\Automation\\sample_WordFile.docx");
+			Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss2, null);
+
+			Thread.sleep(2000);
+			rc.keyPress(KeyEvent.VK_CONTROL);
+			rc.keyPress(KeyEvent.VK_V);
+			Thread.sleep(2000);
+			rc.keyRelease(KeyEvent.VK_CONTROL);
+			rc.keyRelease(KeyEvent.VK_V);
+			Thread.sleep(2000);
+			rc.keyPress(KeyEvent.VK_ENTER);
+			rc.keyRelease(KeyEvent.VK_ENTER);
+			Thread.sleep(2000);
+
+			textarea.click();
+			Thread.sleep(1000);
+			String wordText1 = "Word file & text sent to the new API alarm user.";
+			act.sendKeys(wordText1).perform();
+			Thread.sleep(1000);
+			sendButton.click();
+			Thread.sleep(2000);
+
+			boolean isWorrdFileAvailable = uploadedWordFile.isDisplayed();
+
+			Assert.assertTrue(isWorrdFileAvailable, RED + "Pdf and text are not attached to the chat.");
+
+			System.out.println(GREEN + wordText1);
+			Thread.sleep(1000);
+
+			// XLc
+			chatAttachment.click();
+			Thread.sleep(1000);
+
+			StringSelection ss3 = new StringSelection(
+					"C:\\Users\\BHUPESH\\Desktop\\SampleFiles\\Automation\\sample_XLS.xls");
+			Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss3, null);
+
+			Thread.sleep(2000);
+			rc.keyPress(KeyEvent.VK_CONTROL);
+			rc.keyPress(KeyEvent.VK_V);
+			Thread.sleep(2000);
+			rc.keyRelease(KeyEvent.VK_CONTROL);
+			rc.keyRelease(KeyEvent.VK_V);
+			Thread.sleep(2000);
+			rc.keyPress(KeyEvent.VK_ENTER);
+			rc.keyRelease(KeyEvent.VK_ENTER);
+			Thread.sleep(2000);
+
+			textarea.click();
+			Thread.sleep(1000);
+			String xlsText = "Xls file & text sent to the new API alarm user.";
+			act.sendKeys(wordText1).perform();
+			Thread.sleep(1000);
+			sendButton.click();
+			Thread.sleep(2000);
+
+			boolean isXlsFileAvailable = uploadedXls.isDisplayed();
+
+			Assert.assertTrue(isXlsFileAvailable, RED + "Pdf and text are not attached to the chat.");
+
+			System.out.println(GREEN + xlsText);
+			Thread.sleep(1000);
+
 		}
 
 	}
@@ -3040,9 +2984,9 @@ public class F_manualAlarm extends b_baseClass {
 
 	}
 
-	public void manualAlarmByFirefighterMs(WebDriver driver, String St1N, String St2N, String gTodaysDate,
-			String gtimeHHMMSS, String St1V1, String St1V2, String St2V1, String st01FF1, String st02FF1)
-			throws Throwable {
+	public void manualAlarmByFirefighterMs(WebDriver driver, String st1N, String st2N, String gTodaysDate,
+			String gtimeHHMMSS, String st1V1, String st1V2, String st2V1, String st01FF1, String st01FFEmailCallSms,
+			String st02FF1) throws Throwable {
 
 		// -----------------------
 		// CREATE MANUAL ALARM (FIREFIGHTER)
@@ -3057,12 +3001,12 @@ public class F_manualAlarm extends b_baseClass {
 		Thread.sleep(1000);
 
 		// Select Fire Stations
-		act.sendKeys(St1N).perform();
+		act.sendKeys(st1N).perform();
 		Thread.sleep(1000);
 		act.sendKeys(Keys.ENTER).perform();
 		Thread.sleep(2000);
 
-		act.sendKeys(St2N).perform();
+		act.sendKeys(st2N).perform();
 		Thread.sleep(500);
 		act.sendKeys(Keys.ENTER).perform();
 
@@ -3072,7 +3016,7 @@ public class F_manualAlarm extends b_baseClass {
 		act.sendKeys(title).perform();
 
 		alarmImage.click();
-		act.sendKeys("Image-manual alarm by firefighter checking.").perform();
+		act.sendKeys("Checking email, call and sms for alarm. ").perform();
 
 		descriptionField.click();
 		act.sendKeys("BG-manual alarm by firefighter checking.").perform();
@@ -3143,7 +3087,7 @@ public class F_manualAlarm extends b_baseClass {
 		vehicleField1.click();
 		Thread.sleep(1000);
 
-		act.sendKeys(St1V1).perform();
+		act.sendKeys(st1V1).perform();
 		Thread.sleep(1000);
 		act.sendKeys(Keys.ENTER).perform();
 		Thread.sleep(1000);
@@ -3151,7 +3095,7 @@ public class F_manualAlarm extends b_baseClass {
 		act.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).sendKeys(Keys.BACK_SPACE).perform();
 		Thread.sleep(500);
 
-		act.sendKeys(St1V2).perform();
+		act.sendKeys(st1V2).perform();
 		Thread.sleep(1000);
 		act.sendKeys(Keys.ENTER).perform();
 		Thread.sleep(1000);
@@ -3159,7 +3103,7 @@ public class F_manualAlarm extends b_baseClass {
 		act.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).sendKeys(Keys.BACK_SPACE).perform();
 		Thread.sleep(500);
 
-		act.sendKeys(St2V1).perform();
+		act.sendKeys(st2V1).perform();
 		Thread.sleep(500);
 		act.sendKeys(Keys.ENTER).perform();
 		Thread.sleep(1000);
@@ -3171,6 +3115,14 @@ public class F_manualAlarm extends b_baseClass {
 		Thread.sleep(2000);
 		act.sendKeys(Keys.ENTER).perform();
 		Thread.sleep(2000);
+		act.keyDown(Keys.CONTROL).sendKeys("A").keyUp(Keys.CONTROL).sendKeys(Keys.BACK_SPACE).build().perform();
+		Thread.sleep(500);
+		act.sendKeys(st01FFEmailCallSms).perform();
+		Thread.sleep(2000);
+		act.sendKeys(Keys.ENTER).perform();
+		Thread.sleep(2000);
+		act.sendKeys(Keys.TAB).perform();
+		Thread.sleep(500);
 
 		FirefighterField2.click();
 		Thread.sleep(500);
@@ -3236,7 +3188,7 @@ public class F_manualAlarm extends b_baseClass {
 			Thread.sleep(5000);
 
 			driver.navigate().refresh();
-			Thread.sleep(30000);
+			Thread.sleep(3000);
 
 			totalAlarms += count;
 		}

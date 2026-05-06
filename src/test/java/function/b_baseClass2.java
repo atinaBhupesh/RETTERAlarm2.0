@@ -65,6 +65,7 @@ public class b_baseClass2 {
 	String oldEscTemplateSt02ToSt01;
 	String ManualAlarmNameForChatOldApi;
 
+
 	String proEnd = "|*******************************************************|";
 
 	public void getDetailsFromUser() throws Throwable {
@@ -270,6 +271,7 @@ public class b_baseClass2 {
 			ManualAlarmNameForChatNewApi = sheet.getRow(29).getCell(1).getStringCellValue();
 			oldEscTemplateSt02ToSt01 = sheet.getRow(30).getCell(1).getStringCellValue();
 			ManualAlarmNameForChatOldApi = sheet.getRow(31).getCell(1).getStringCellValue();
+			
 
 			break;
 

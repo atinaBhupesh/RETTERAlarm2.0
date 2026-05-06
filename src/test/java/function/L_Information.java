@@ -1555,7 +1555,7 @@ Thread.sleep(500);
 	}
 
 	public void createMonitorInformationByFireFighter(WebDriver driver, String st01N, String gTodaysDate,
-			String gtimeHHMMSS, String st01FF1, String St01M1, String St01M2, String germanyTimeAfter5MinHH,
+			String gtimeHHMMSS, String st01FF1,String st01FFEmailCallSms, String St01M1, String St01M2, String germanyTimeAfter5MinHH,
 			String germanyTimeAfter5MinMM, String germanyTimeAfter20MinHH, String germanyTimeAfter20MinMM,
 			String branchName) throws Throwable {
 		Actions act = new Actions(driver);
@@ -1617,6 +1617,14 @@ Thread.sleep(500);
 
 		act.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).sendKeys(Keys.BACK_SPACE).build().perform();
 		Thread.sleep(500);
+		
+//		act.sendKeys(st01FFEmailCallSms).perform();
+//		Thread.sleep(1000);
+//
+//		act.sendKeys(Keys.ENTER).perform();
+//		Thread.sleep(500);
+		
+		
 
 		act.sendKeys(Keys.TAB).perform();
 		Thread.sleep(500);

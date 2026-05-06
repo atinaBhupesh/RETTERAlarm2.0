@@ -70,7 +70,13 @@ public class b_baseClass {
 	String newApiAlarmForMessage;
 	String apiAlarmNameForEsclationAlarm ;
 	String manualAlarmNameForEsclationAlarm;
-;
+	String st01FFEmailCallSms;
+	String ChatGroupByAttributeMS;
+	String ChatGroupByResourceMS;
+	String ChatGroupByAlarmLoopMS;
+	String ChatGroupByFireFighterMS;
+	String st01Al1;
+	String st02Al1;
 	
 	
 	
@@ -309,7 +315,14 @@ public class b_baseClass {
 		newApiAlarmForMessage=sheet.getRow(34).getCell(1).getStringCellValue();
 		apiAlarmNameForEsclationAlarm = sheet.getRow(35).getCell(1).getStringCellValue();
 		manualAlarmNameForEsclationAlarm =sheet.getRow(36).getCell(1).getStringCellValue();
-
+		st01FFEmailCallSms =sheet.getRow(37).getCell(1).getStringCellValue();
+		ChatGroupByAttributeMS=sheet.getRow(38).getCell(1).getStringCellValue();
+		ChatGroupByResourceMS=sheet.getRow(39).getCell(1).getStringCellValue();
+		ChatGroupByAlarmLoopMS=sheet.getRow(40).getCell(1).getStringCellValue();
+		ChatGroupByFireFighterMS=sheet.getRow(41).getCell(1).getStringCellValue();
+		st01Al1=sheet.getRow(42).getCell(1).getStringCellValue();
+		st02Al1=sheet.getRow(43).getCell(1).getStringCellValue();
+		
 		
 
 	}

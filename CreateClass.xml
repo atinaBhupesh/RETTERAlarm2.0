@@ -8,13 +8,18 @@
 			<methods>
 
 	
-        
+				<include name="createChatFroupByAttributeMS" />
+				<include name="createChatFroupByResourceMS" />
+				<include name="createChatFroupByAlarmLoopsMS" />
+				<include name="createChatFroupByFireFighterMS" />
+				
 
-			<include name="manualAlarmByEscResourceSingleStation" />
-
-
-
-		
+				
+				<include name="sendMessageToChatGroupCreatedByAttribute" />
+				<include name="sendMessageToChatGroupCreatedByResource" />
+				<include name="sendMessageToChatGroupCreatedByAlarmLoop" />
+				<include name="sendMessageToChatGroupCreatedByFireFighter" />
+				
 
 			</methods>
 

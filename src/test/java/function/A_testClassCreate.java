@@ -29,6 +29,7 @@ public class A_testClassCreate extends b_baseClass {
 	J_alarmEscalation ae;
 	K_calendar cl;
 	L_Information info;
+	M_conversations chatGroups;
 
 	String gTodaysDate;
 	String gTomorrowDate;
@@ -73,6 +74,8 @@ public class A_testClassCreate extends b_baseClass {
 		ae = new J_alarmEscalation(driver);
 		cl = new K_calendar(driver);
 		info = new L_Information(driver);
+		chatGroups= new M_conversations (driver)  ;
+
 
 	}
 
@@ -107,7 +110,166 @@ public class A_testClassCreate extends b_baseClass {
 		getDetailsFromFiles();
 
 	}
+	
+	@Test
+	public void sendMessageToChatGroupCreatedByFireFighter() throws Throwable
 
+	{
+		Reporter.log(" ", true);
+		Reporter.log("The process of send message to chat group by fire fighter is started.", true);
+		chatGroups.commonForChatGroup(driver,branchName );
+		chatGroups.sendMessageToChatGroupCreatedByFireFighter(driver,  ChatGroupByFireFighterMS);
+		Reporter.log("The process of send message to chat group by fire fighter is complete.", true);
+		Reporter.log(" ", true);
+		Thread.sleep(3000);
+
+	}
+	
+	@Test
+	public void sendMessageToChatGroupCreatedByAlarmLoop() throws Throwable
+
+	{
+		Reporter.log(" ", true);
+		Reporter.log("The process of send message to chat group by alarm loop is started.", true);
+		chatGroups.commonForChatGroup(driver,branchName );
+		chatGroups.sendMessageToChatGroupCreatedByAlarmLoop(driver,  ChatGroupByAlarmLoopMS);
+		Reporter.log("The process of send message to chat group by alarm loop is complete.", true);
+		Reporter.log(" ", true);
+		Thread.sleep(3000);
+
+	}
+	
+	
+	
+	@Test
+	public void sendMessageToChatGroupCreatedByResource() throws Throwable
+
+	{
+		Reporter.log(" ", true);
+		Reporter.log("The process of send message to chat group by resource is started.", true);
+		chatGroups.commonForChatGroup(driver,branchName );
+		chatGroups.sendMessageToChatGroupCreatedByResource(driver,  ChatGroupByResourceMS);
+		Reporter.log("The process of send message to chat group by resource is complete.", true);
+		Reporter.log(" ", true);
+		Thread.sleep(3000);
+
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	@Test
+	public void sendMessageToChatGroupCreatedByAttribute() throws Throwable
+
+	{
+		Reporter.log(" ", true);
+		Reporter.log("The process of send message to chat group by attribute is started.", true);
+		chatGroups.commonForChatGroup(driver,branchName );
+		chatGroups.sendMessageToChatGroupCreatedByAttribute(driver,  ChatGroupByAttributeMS);
+		Reporter.log("The process of send message to chat group by attribute is complete.", true);
+		Reporter.log(" ", true);
+		Thread.sleep(3000);
+
+	}
+	
+	@Test
+	public void createChatFroupByFireFighterMS() throws Throwable
+
+	{
+		Reporter.log(" ", true);
+		Reporter.log("The process of create chat group by fire fighter is started.", true);
+		chatGroups.commonForChatGroup(driver,branchName );
+		chatGroups.createChatFroupByFireFighterMS(driver,  st01N, st02N, gTodaysDate, gtimeHHMMSS, st01FF1,  st02FF1, filePath);
+		Reporter.log("The process of create chat group by fire fighter is complete.", true);
+		Reporter.log(" ", true);
+		Thread.sleep(3000);
+
+	}
+	
+	
+	
+	
+	@Test
+	public void createChatFroupByAlarmLoopsMS() throws Throwable
+
+	{
+		Reporter.log(" ", true);
+		Reporter.log("The process of create chat group by alarm loop is started.", true);
+		chatGroups.commonForChatGroup(driver,branchName );
+		chatGroups.createChatFroupByAlarmLoopsMS(driver,  st01N, st02N, gTodaysDate, gtimeHHMMSS, st01Al1,  st02Al1, filePath);
+		Reporter.log("The process of create chat group by alarm loop is complete.", true);
+		Reporter.log(" ", true);
+		Thread.sleep(3000);
+
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	@Test
+	public void createChatFroupByResourceMS() throws Throwable
+
+	{
+		Reporter.log(" ", true);
+		Reporter.log("The process of create chat group by resource is started.", true);
+		chatGroups.commonForChatGroup(driver,branchName );
+		chatGroups.createChatFroupByResourceMS(driver,  st01N, st02N, gTodaysDate, gtimeHHMMSS, st01R1,  st02R1, filePath);
+		Reporter.log("The process of create chat group by resource is complete.", true);
+		Reporter.log(" ", true);
+		Thread.sleep(3000);
+
+	}
+	
+	
+	
+	
+	
+	
+
+	
+	@Test
+	public void createChatFroupByAttributeMS() throws Throwable
+
+	{
+		Reporter.log(" ", true);
+		Reporter.log("The process of create chat group by attribute is started.", true);
+		chatGroups.commonForChatGroup(driver,branchName );
+		chatGroups.createChatFroupByAttributeMS(driver,  st01N, st02N, gTodaysDate, gtimeHHMMSS, st01A1,  st02A1, filePath);
+		
+		
+		
+		Reporter.log("The process of create chat group by attribute is complete.", true);
+		Reporter.log(" ", true);
+		Thread.sleep(3000);
+
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	@Test
 	public void TCAlarmTemplateCheckingValidation() throws Throwable
 
@@ -533,7 +695,7 @@ public class A_testClassCreate extends b_baseClass {
 				true);
 		info.common_information(driver, branchName);
 
-		info.createMonitorInformationByFireFighter(driver, st01N, gTodaysDate, gtimeHHMMSS, st01FF1, St01M1, St01M2,
+		info.createMonitorInformationByFireFighter(driver, st01N, gTodaysDate, gtimeHHMMSS, st01FF1,st01FFEmailCallSms, St01M1, St01M2,
 				germanyTimeAfter5MinHH, germanyTimeAfter5MinMM, germanyTimeAfter20MinHH, germanyTimeAfter20MinMM,
 				branchName);
 		Reporter.log(
@@ -959,8 +1121,8 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of creating a manual alarm by firefighter is started.", true);
 		ma.manualAlarmCommon(driver, deptN, branchName);
-		ma.manualAlarmByFirefighterMs(driver, st01N, st02N, gTodaysDate, gtimeHHMMSS, st01V1, st01V2, st02V1, st01FF1,
-				st02FF1);
+		ma.manualAlarmByFirefighterMs(driver, st01N,  st02N,  gTodaysDate,
+				 gtimeHHMMSS,  st01V1,  st01V2, st02V1,  st01FF1, st01FFEmailCallSms,  st02FF1);
 
 		Reporter.log("The process of creating a manual alarm by firefighter is complete.", true);
 		Reporter.log(" ", true);

@@ -15,13 +15,13 @@
 				<include name="sendMessageToApiEsclationAlarm" />
 
 				<include name="manualaByAttributeSingleStation" />
-
 				<include name="manualAlarmByResourceMs" />
-				
 				<include name="manualAlarmByFirefighterMs" />
+				
 				<include name="manualaByAttributeMSLP" />
 				<include name="manualAlarmByEscResourceSingleStation" />
 				<include name="manualAlarmByEscResourceMs" />
+				
 				<include name="manualaByAttributeExtend1To01StEscResourceFrom02" />
 				<include name="manualAlarmByOldEsclationTemplateFromSt02ToSt01" />
 
@@ -68,6 +68,23 @@
 
 				<include name="createNewAlarmLoop" />
 				<include name="createEventCategory" />
+				
+				<include name="createChatFroupByAttributeMS" />
+				<include name="createChatFroupByResourceMS" />
+				<include name="createChatFroupByAlarmLoopsMS" />
+				<include name="createChatFroupByFireFighterMS" />
+				
+
+				
+				<include name="sendMessageToChatGroupCreatedByAttribute" />
+				<include name="sendMessageToChatGroupCreatedByResource" />
+				<include name="sendMessageToChatGroupCreatedByAlarmLoop" />
+				<include name="sendMessageToChatGroupCreatedByFireFighter" />
+				
+				
+				
+				
+				
 
 
 			</methods>

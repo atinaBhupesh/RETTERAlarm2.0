@@ -16,6 +16,8 @@
 				<include name="deleteAlarmLoop" />
 				<include name="deleteAlarmTemplate" />
 				<include name="deletedeleteEventCatogery" />
+				
+					<include name="deleteChatGroups" />
 
 
 			</methods>
