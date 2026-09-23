@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="delete">
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="function.A_testClassDelete" />
+
+
+			<methods>
+				<include name="deleteBhupeshTestAlarmFromAlarmList" />
+				<include name="deleteTestAlarmFromPlaningList" />
+				<include name="deleteManualAlarm" />
+				<include name="deleteCalendarEvent" />
+				<include name="delete_infoEvent" />
+				<include name="deleteResource" />
+				<include name="deleteAlarmEscalation" />
+				<include name="deleteAlarmLoop" />
+				<include name="deleteAlarmTemplate" />
+				<include name="deletedeleteEventCatogery" />
+				<include name="deleteUsers" />
+				<include name="deleteVehicleUsers" />
+
+
+				<include name="deleteChatGroups" />
+
+				<include name="deleteCalendarEventAll" />
+				<include name="deleteStaions" />
+
+
+			</methods>
+
+
+		</classes>
+	</test> <!--
+	Test -->
+</suite> <!--
+delete -->

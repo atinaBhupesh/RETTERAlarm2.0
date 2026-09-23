@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="15" passed="15" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[Well come to RETTERAlarm Live branch-Andrew Department]]>
+    </line>
+    <line>
+      <![CDATA[Logged in user-bhupesh+live_bhdeptuser@atinatechnology.in]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[The process of delete monthly test alarms is started.]]>
+    </line>
+    <line>
+      <![CDATA[[32m✔ [0m[32m✔ [0mThe process of delete monthly test alarms is complete.]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[The process of delete Test alarms is started.]]>
+    </line>
+    <line>
+      <![CDATA[[32m✔ [0m[32m✔ [0mThe process of delete Test alarms is complete.]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[The process of delete alarms is started.]]>
+    </line>
+    <line>
+      <![CDATA[[32m✔ [0m[32m✔ [0mThe process of delete alarms is complete.]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[The process of delete calendar event is started.]]>
+    </line>
+    <line>
+      <![CDATA[[32m✔ [0m[32m✔ [0mThe process of delete calendar event is complete.]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[The process of delete information or event is started.]]>
+    </line>
+    <line>
+      <![CDATA[[32m✔ [0m[32m✔ [0mThe process of delete information or event is complete.]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[The process of delete alarm resource is started.]]>
+    </line>
+    <line>
+      <![CDATA[[32m✔ [0m[32m✔ [0mThe process of delete alarm resource is complete.]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[The process of delete AlarmEscalation is started.]]>
+    </line>
+    <line>
+      <![CDATA[[32m✔ [0m[32m✔ [0mThe process of delete AlarmEscalation is complete.]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[The process of delete alarm loop is started.]]>
+    </line>
+    <line>
+      <![CDATA[[32m✔ [0m[32m✔ [0mThe process of delete alarm loop is complete.]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[The process of delete alarm template is started.]]>
+    </line>
+    <line>
+      <![CDATA[[32m✔ [0m[32m✔ [0mThe process of delete alarm template is complete.]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[The process of delete event catogery is started.]]>
+    </line>
+    <line>
+      <![CDATA[[32m✔ [0m[32m✔ [0mThe process of delete event catogery is complete.]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[The process of delete users is started.]]>
+    </line>
+    <line>
+      <![CDATA[[32m✔ [0m[32m✔ [0mThe process of delete users is complete.]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[The process of delete vehicle users  is started.]]>
+    </line>
+    <line>
+      <![CDATA[[32m✔ [0m[32m✔ [0mThe process of delete vehicle users is complete.]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[The process of delete chat groups is started.]]>
+    </line>
+    <line>
+      <![CDATA[[32m✔ [0m[32m✔ [0mThe process of delete chat groups is complete.]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[The process of delete calendar event-All is started.]]>
+    </line>
+    <line>
+      <![CDATA[[32m✔ [0m[32m✔ [0mThe process of delete calendar event-All is complete.]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[The process of delete stations is started.]]>
+    </line>
+    <line>
+      <![CDATA[[32m✔ [0m[32m✔ [0mThe process of delete stations is complete.]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[Logout sucessfully.]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[Refresh the URL before successfully closing the browser.]]>
+    </line>
+    <line>
+      <![CDATA[Browser close sucessfully.]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[Good to see you again.]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2026-09-23T13:34:04 IST" name="delete" finished-at="2026-09-23T13:54:01 IST" duration-ms="1197067">
+    <groups>
+    </groups>
+    <test started-at="2026-09-23T13:34:04 IST" name="Test" finished-at="2026-09-23T13:54:01 IST" duration-ms="1197067">
+      <class name="function.A_testClassDelete">
+        <test-method is-config="true" signature="BeforeSuite()[pri:0, instance:function.A_testClassDelete@24aed80c]" started-at="2026-09-23T13:33:44 IST" name="BeforeSuite" finished-at="2026-09-23T13:34:04 IST" duration-ms="20388" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Well come to RETTERAlarm Live branch-Andrew Department]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- BeforeSuite -->
+        <test-method is-config="true" signature="BeforeTest()[pri:0, instance:function.A_testClassDelete@24aed80c]" started-at="2026-09-23T13:34:04 IST" name="BeforeTest" finished-at="2026-09-23T13:34:14 IST" duration-ms="9923" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Logged in user-bhupesh+live_bhdeptuser@atinatechnology.in]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- BeforeTest -->
+        <test-method is-config="true" signature="createObject()[pri:0, instance:function.A_testClassDelete@24aed80c]" started-at="2026-09-23T13:34:14 IST" name="createObject" finished-at="2026-09-23T13:34:14 IST" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createObject -->
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassDelete@24aed80c]" started-at="2026-09-23T13:34:14 IST" name="backToHomePage" finished-at="2026-09-23T13:34:19 IST" duration-ms="5084" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- backToHomePage -->
+        <test-method signature="deleteTestAlarmFromAlarmList()[pri:0, instance:function.A_testClassDelete@24aed80c]" started-at="2026-09-23T13:34:19 IST" name="deleteTestAlarmFromAlarmList" finished-at="2026-09-23T13:35:28 IST" duration-ms="68749" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+            <line>
+              <![CDATA[The process of delete monthly test alarms is started.]]>
+            </line>
+            <line>
+              <![CDATA[[32m✔ [0m[32m✔ [0mThe process of delete monthly test alarms is complete.]]>
+            </line>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- deleteTestAlarmFromAlarmList -->
+        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassDelete@24aed80c]" started-at="2026-09-23T13:35:28 IST" name="backToHomePage2" finished-at="2026-09-23T13:35:37 IST" duration-ms="9047" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=deleteTestAlarmFromAlarmList status=SUCCESS method=A_testClassDelete.deleteTestAlarmFromAlarmList()[pri:0, instance:function.A_testClassDelete@24aed80c]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- backToHomePage2 -->
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassDelete@24aed80c]" started-at="2026-09-23T13:35:37 IST" name="backToHomePage" finished-at="2026-09-23T13:35:42 IST" duration-ms="5154" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- backToHomePage -->
+        <test-method signature="deleteTestAlarmFromPlaningList()[pri:0, instance:function.A_testClassDelete@24aed80c]" started-at="2026-09-23T13:35:42 IST" name="deleteTestAlarmFromPlaningList" finished-at="2026-09-23T13:36:47 IST" duration-ms="65272" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+            <line>
+              <![CDATA[The process of delete Test alarms is started.]]>
+            </line>
+            <line>
+              <![CDATA[[32m✔ [0m[32m✔ [0mThe process of delete Test alarms is complete.]]>
+            </line>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- deleteTestAlarmFromPlaningList -->
+        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassDelete@24aed80c]" started-at="2026-09-23T13:36:47 IST" name="backToHomePage2" finished-at="2026-09-23T13:36:56 IST" duration-ms="9081" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=deleteTestAlarmFromPlaningList status=SUCCESS method=A_testClassDelete.deleteTestAlarmFromPlaningList()[pri:0, instance:function.A_testClassDelete@24aed80c]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- backToHomePage2 -->
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassDelete@24aed80c]" started-at="2026-09-23T13:36:56 IST" name="backToHomePage" finished-at="2026-09-23T13:37:01 IST" duration-ms="5119" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- backToHomePage -->
+        <test-method signature="deleteManualAlarm()[pri:0, instance:function.A_testClassDelete@24aed80c]" started-at="2026-09-23T13:37:01 IST" name="deleteManualAlarm" finished-at="2026-09-23T13:38:31 IST" duration-ms="89797" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+            <line>
+              <![CDATA[The process of delete alarms is started.]]>
+            </line>
+            <line>
+              <![CDATA[[32m✔ [0m[32m✔ [0mThe process of delete alarms is complete.]]>
+            </line>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- deleteManualAlarm -->
+        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassDelete@24aed80c]" started-at="2026-09-23T13:38:31 IST" name="backToHomePage2" finished-at="2026-09-23T13:38:41 IST" duration-ms="9751" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=deleteManualAlarm status=SUCCESS method=A_testClassDelete.deleteManualAlarm()[pri:0, instance:function.A_testClassDelete@24aed80c]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- backToHomePage2 -->
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassDelete@24aed80c]" started-at="2026-09-23T13:38:41 IST" name="backToHomePage" finished-at="2026-09-23T13:38:46 IST" duration-ms="5072" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- backToHomePage -->
+        <test-method signature="deleteCalendarEvent()[pri:0, instance:function.A_testClassDelete@24aed80c]" started-at="2026-09-23T13:38:46 IST" name="deleteCalendarEvent" finished-at="2026-09-23T13:40:55 IST" duration-ms="129460" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+            <line>
+              <![CDATA[The process of delete calendar event is started.]]>
+            </line>
+            <line>
+              <![CDATA[[32m✔ [0m[32m✔ [0mThe process of delete calendar event is complete.]]>
+            </line>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- deleteCalendarEvent -->
+        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassDelete@24aed80c]" started-at="2026-09-23T13:40:55 IST" name="backToHomePage2" finished-at="2026-09-23T13:41:05 IST" duration-ms="9721" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=deleteCalendarEvent status=SUCCESS method=A_testClassDelete.deleteCalendarEvent()[pri:0, instance:function.A_testClassDelete@24aed80c]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- backToHomePage2 -->
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassDelete@24aed80c]" started-at="2026-09-23T13:41:05 IST" name="backToHomePage" finished-at="2026-09-23T13:41:10 IST" duration-ms="5054" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- backToHomePage -->
+        <test-method signature="delete_infoEvent()[pri:0, instance:function.A_testClassDelete@24aed80c]" started-at="2026-09-23T13:41:10 IST" name="delete_infoEvent" finished-at="2026-09-23T13:42:25 IST" duration-ms="75243" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+            <line>
+              <![CDATA[The process of delete information or event is started.]]>
+            </line>
+            <line>
+              <![CDATA[[32m✔ [0m[32m✔ [0mThe process of delete information or event is complete.]]>
+            </line>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- delete_infoEvent -->
+        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassDelete@24aed80c]" started-at="2026-09-23T13:42:25 IST" name="backToHomePage2" finished-at="2026-09-23T13:42:35 IST" duration-ms="9118" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=delete_infoEvent status=SUCCESS method=A_testClassDelete.delete_infoEvent()[pri:0, instance:function.A_testClassDelete@24aed80c]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- backToHomePage2 -->
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassDelete@24aed80c]" started-at="2026-09-23T13:42:35 IST" name="backToHomePage" finished-at="2026-09-23T13:42:40 IST" duration-ms="5117" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- backToHomePage -->
+        <test-method signature="deleteResource()[pri:0, instance:function.A_testClassDelete@24aed80c]" started-at="2026-09-23T13:42:40 IST" name="deleteResource" finished-at="2026-09-23T13:43:28 IST" duration-ms="48715" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+            <line>
+              <![CDATA[The process of delete alarm resource is started.]]>
+            </line>
+            <line>
+              <![CDATA[[32m✔ [0m[32m✔ [0mThe process of delete alarm resource is complete.]]>
+            </line>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- deleteResource -->
+        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassDelete@24aed80c]" started-at="2026-09-23T13:43:28 IST" name="backToHomePage2" finished-at="2026-09-23T13:43:38 IST" duration-ms="9102" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=deleteResource status=SUCCESS method=A_testClassDelete.deleteResource()[pri:0, instance:function.A_testClassDelete@24aed80c]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- backToHomePage2 -->
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassDelete@24aed80c]" started-at="2026-09-23T13:43:38 IST" name="backToHomePage" finished-at="2026-09-23T13:43:43 IST" duration-ms="5066" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- backToHomePage -->
+        <test-method signature="deleteAlarmEscalation()[pri:0, instance:function.A_testClassDelete@24aed80c]" started-at="2026-09-23T13:43:43 IST" name="deleteAlarmEscalation" finished-at="2026-09-23T13:44:05 IST" duration-ms="22040" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+            <line>
+              <![CDATA[The process of delete AlarmEscalation is started.]]>
+            </line>
+            <line>
+              <![CDATA[[32m✔ [0m[32m✔ [0mThe process of delete AlarmEscalation is complete.]]>
+            </line>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- deleteAlarmEscalation -->
+        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassDelete@24aed80c]" started-at="2026-09-23T13:44:05 IST" name="backToHomePage2" finished-at="2026-09-23T13:44:14 IST" duration-ms="9106" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=deleteAlarmEscalation status=SUCCESS method=A_testClassDelete.deleteAlarmEscalation()[pri:0, instance:function.A_testClassDelete@24aed80c]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- backToHomePage2 -->
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassDelete@24aed80c]" started-at="2026-09-23T13:44:14 IST" name="backToHomePage" finished-at="2026-09-23T13:44:19 IST" duration-ms="5216" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- backToHomePage -->
+        <test-method signature="deleteAlarmLoop()[pri:0, instance:function.A_testClassDelete@24aed80c]" started-at="2026-09-23T13:44:19 IST" name="deleteAlarmLoop" finished-at="2026-09-23T13:45:12 IST" duration-ms="53296" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+            <line>
+              <![CDATA[The process of delete alarm loop is started.]]>
+            </line>
+            <line>
+              <![CDATA[[32m✔ [0m[32m✔ [0mThe process of delete alarm loop is complete.]]>
+            </line>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- deleteAlarmLoop -->
+        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassDelete@24aed80c]" started-at="2026-09-23T13:45:12 IST" name="backToHomePage2" finished-at="2026-09-23T13:45:21 IST" duration-ms="9115" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=deleteAlarmLoop status=SUCCESS method=A_testClassDelete.deleteAlarmLoop()[pri:0, instance:function.A_testClassDelete@24aed80c]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- backToHomePage2 -->
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassDelete@24aed80c]" started-at="2026-09-23T13:45:21 IST" name="backToHomePage" finished-at="2026-09-23T13:45:27 IST" duration-ms="5684" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- backToHomePage -->
+        <test-method signature="deleteAlarmTemplate()[pri:0, instance:function.A_testClassDelete@24aed80c]" started-at="2026-09-23T13:45:27 IST" name="deleteAlarmTemplate" finished-at="2026-09-23T13:46:19 IST" duration-ms="52098" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+            <line>
+              <![CDATA[The process of delete alarm template is started.]]>
+            </line>
+            <line>
+              <![CDATA[[32m✔ [0m[32m✔ [0mThe process of delete alarm template is complete.]]>
+            </line>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- deleteAlarmTemplate -->
+        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassDelete@24aed80c]" started-at="2026-09-23T13:46:19 IST" name="backToHomePage2" finished-at="2026-09-23T13:46:28 IST" duration-ms="9259" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=deleteAlarmTemplate status=SUCCESS method=A_testClassDelete.deleteAlarmTemplate()[pri:0, instance:function.A_testClassDelete@24aed80c]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- backToHomePage2 -->
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassDelete@24aed80c]" started-at="2026-09-23T13:46:28 IST" name="backToHomePage" finished-at="2026-09-23T13:46:34 IST" duration-ms="5129" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- backToHomePage -->
+        <test-method signature="deletedeleteEventCatogery()[pri:0, instance:function.A_testClassDelete@24aed80c]" started-at="2026-09-23T13:46:34 IST" name="deletedeleteEventCatogery" finished-at="2026-09-23T13:47:16 IST" duration-ms="42948" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+            <line>
+              <![CDATA[The process of delete event catogery is started.]]>
+            </line>
+            <line>
+              <![CDATA[[32m✔ [0m[32m✔ [0mThe process of delete event catogery is complete.]]>
+            </line>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- deletedeleteEventCatogery -->
+        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassDelete@24aed80c]" started-at="2026-09-23T13:47:16 IST" name="backToHomePage2" finished-at="2026-09-23T13:47:25 IST" duration-ms="9017" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=deletedeleteEventCatogery status=SUCCESS method=A_testClassDelete.deletedeleteEventCatogery()[pri:0, instance:function.A_testClassDelete@24aed80c]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- backToHomePage2 -->
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassDelete@24aed80c]" started-at="2026-09-23T13:47:25 IST" name="backToHomePage" finished-at="2026-09-23T13:47:31 IST" duration-ms="5204" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- backToHomePage -->
+        <test-method signature="deleteUsers()[pri:0, instance:function.A_testClassDelete@24aed80c]" started-at="2026-09-23T13:47:31 IST" name="deleteUsers" finished-at="2026-09-23T13:49:47 IST" duration-ms="136727" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+            <line>
+              <![CDATA[The process of delete users is started.]]>
+            </line>
+            <line>
+              <![CDATA[[32m✔ [0m[32m✔ [0mThe process of delete users is complete.]]>
+            </line>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- deleteUsers -->
+        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassDelete@24aed80c]" started-at="2026-09-23T13:49:47 IST" name="backToHomePage2" finished-at="2026-09-23T13:49:58 IST" duration-ms="10104" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=deleteUsers status=SUCCESS method=A_testClassDelete.deleteUsers()[pri:0, instance:function.A_testClassDelete@24aed80c]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- backToHomePage2 -->
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassDelete@24aed80c]" started-at="2026-09-23T13:49:58 IST" name="backToHomePage" finished-at="2026-09-23T13:50:03 IST" duration-ms="5222" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- backToHomePage -->
+        <test-method signature="deleteVehicleUsers()[pri:0, instance:function.A_testClassDelete@24aed80c]" started-at="2026-09-23T13:50:03 IST" name="deleteVehicleUsers" finished-at="2026-09-23T13:50:44 IST" duration-ms="41020" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+            <line>
+              <![CDATA[The process of delete vehicle users  is started.]]>
+            </line>
+            <line>
+              <![CDATA[[32m✔ [0m[32m✔ [0mThe process of delete vehicle users is complete.]]>
+            </line>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- deleteVehicleUsers -->
+        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassDelete@24aed80c]" started-at="2026-09-23T13:50:44 IST" name="backToHomePage2" finished-at="2026-09-23T13:50:53 IST" duration-ms="9212" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=deleteVehicleUsers status=SUCCESS method=A_testClassDelete.deleteVehicleUsers()[pri:0, instance:function.A_testClassDelete@24aed80c]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- backToHomePage2 -->
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassDelete@24aed80c]" started-at="2026-09-23T13:50:53 IST" name="backToHomePage" finished-at="2026-09-23T13:50:58 IST" duration-ms="5052" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- backToHomePage -->
+        <test-method signature="deleteChatGroups()[pri:0, instance:function.A_testClassDelete@24aed80c]" started-at="2026-09-23T13:50:58 IST" name="deleteChatGroups" finished-at="2026-09-23T13:51:32 IST" duration-ms="33763" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+            <line>
+              <![CDATA[The process of delete chat groups is started.]]>
+            </line>
+            <line>
+              <![CDATA[[32m✔ [0m[32m✔ [0mThe process of delete chat groups is complete.]]>
+            </line>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- deleteChatGroups -->
+        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassDelete@24aed80c]" started-at="2026-09-23T13:51:32 IST" name="backToHomePage2" finished-at="2026-09-23T13:51:41 IST" duration-ms="9070" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=deleteChatGroups status=SUCCESS method=A_testClassDelete.deleteChatGroups()[pri:0, instance:function.A_testClassDelete@24aed80c]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- backToHomePage2 -->
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassDelete@24aed80c]" started-at="2026-09-23T13:51:41 IST" name="backToHomePage" finished-at="2026-09-23T13:51:46 IST" duration-ms="5033" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- backToHomePage -->
+        <test-method signature="deleteCalendarEventAll()[pri:0, instance:function.A_testClassDelete@24aed80c]" started-at="2026-09-23T13:51:46 IST" name="deleteCalendarEventAll" finished-at="2026-09-23T13:52:58 IST" duration-ms="72313" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+            <line>
+              <![CDATA[The process of delete calendar event-All is started.]]>
+            </line>
+            <line>
+              <![CDATA[[32m✔ [0m[32m✔ [0mThe process of delete calendar event-All is complete.]]>
+            </line>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- deleteCalendarEventAll -->
+        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassDelete@24aed80c]" started-at="2026-09-23T13:52:58 IST" name="backToHomePage2" finished-at="2026-09-23T13:53:08 IST" duration-ms="9335" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=deleteCalendarEventAll status=SUCCESS method=A_testClassDelete.deleteCalendarEventAll()[pri:0, instance:function.A_testClassDelete@24aed80c]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- backToHomePage2 -->
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassDelete@24aed80c]" started-at="2026-09-23T13:53:08 IST" name="backToHomePage" finished-at="2026-09-23T13:53:13 IST" duration-ms="5085" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- backToHomePage -->
+        <test-method signature="deleteStaions()[pri:0, instance:function.A_testClassDelete@24aed80c]" started-at="2026-09-23T13:53:13 IST" name="deleteStaions" finished-at="2026-09-23T13:53:47 IST" duration-ms="34248" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+            <line>
+              <![CDATA[The process of delete stations is started.]]>
+            </line>
+            <line>
+              <![CDATA[[32m✔ [0m[32m✔ [0mThe process of delete stations is complete.]]>
+            </line>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- deleteStaions -->
+        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassDelete@24aed80c]" started-at="2026-09-23T13:53:47 IST" name="backToHomePage2" finished-at="2026-09-23T13:53:56 IST" duration-ms="9051" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=deleteStaions status=SUCCESS method=A_testClassDelete.deleteStaions()[pri:0, instance:function.A_testClassDelete@24aed80c]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- backToHomePage2 -->
+        <test-method is-config="true" signature="logOut()[pri:0, instance:function.A_testClassDelete@24aed80c]" started-at="2026-09-23T13:53:56 IST" name="logOut" finished-at="2026-09-23T13:54:01 IST" duration-ms="4564" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Logout sucessfully.]]>
+            </line>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- logOut -->
+        <test-method is-config="true" signature="AfterTest()[pri:0, instance:function.A_testClassDelete@24aed80c]" started-at="2026-09-23T13:54:01 IST" name="AfterTest" finished-at="2026-09-23T13:54:01 IST" duration-ms="446" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Refresh the URL before successfully closing the browser.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- AfterTest -->
+        <test-method is-config="true" signature="AfterSute()[pri:0, instance:function.A_testClassDelete@24aed80c]" started-at="2026-09-23T13:54:01 IST" name="AfterSute" finished-at="2026-09-23T13:54:01 IST" duration-ms="297" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Browser close sucessfully.]]>
+            </line>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+            <line>
+              <![CDATA[Good to see you again.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- AfterSute -->
+      </class> <!-- function.A_testClassDelete -->
+    </test> <!-- Test -->
+  </suite> <!-- delete -->
+</testng-results>

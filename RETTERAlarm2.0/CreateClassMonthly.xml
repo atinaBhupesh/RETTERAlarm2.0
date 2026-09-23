@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="function.A_testClassCreate" />
+
+			<methods>
+	
+
+				
+				
+		 
+					<include name="Bhupesh_testAlarm_recursiv_daily_Attribute_0900" />
+					<include name="Bhupesh_testAlarm_recursiv_daily_Resource_0905" />
+					<include name="Bhupesh_testAlarm_recursiv_daily_Users_0910" />
+					<include name="Bhupesh_testAlarm_recursiv_daily_Resource_1855" />
+					
+					<include name="Bhupesh_testAlarm_recursiv_weekly_monday_attribute_0915" />
+					<include name="Bhupesh_testAlarm_recursiv_weekly_Wednesday_Resource_0915" />
+					<include name="Bhupesh_testAlarm_recursiv_weekly_friday_users_0915" />
+					
+					
+					<include name="Bhupesh_testAlarm_recursiv_monthly_frist_friday_Attribute_0920" />
+					<include name="Bhupesh_testAlarm_recursiv_monthly_frist_friday_Resource_0925" />
+					<include name="Bhupesh_testAlarm_recursiv_monthly_frist_friday_Users_0930" />
+		
+		
+					<include name="Bhupesh_testAlarm_recursiv_monthly_frist_Saturday_Attribute_0920" />
+					<include name="Bhupesh_testAlarm_recursiv_monthly_frist_Saturday_Resource_0925" />
+					<include name="Bhupesh_testAlarm_recursiv_monthly_frist_Saturday_Users_0930" />
+					
+					<include name="Bhupesh_testAlarm_recursiv_monthly_date01_Attribute_0935" />
+					<include name="Bhupesh_testAlarm_recursiv_monthly_date01_Resource_0940" />
+					<include name="Bhupesh_testAlarm_recursiv_monthly_date01_Users_0945" />
+					
+					
+					
+			</methods>
+
+		</classes>
+	
+	
+	</test> <!--
+	Test -->1
+</suite> <!--
+Suite -->

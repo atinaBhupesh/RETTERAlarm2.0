@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="function.A_testClassCreate" />
+
+			<methods>
+				
+				
+
+				<include name="manualaByAttributeExtend1To01StEscResourceFrom02" /> 
+				<include name="sendMessageToManualAlarmUser" />
+				<include name="createMonitorInformationByAttribute" />
+				<include name="create1HrInformationEventByResource" />
+				<include name="createCalendarEventByFireFughterMS" />
+				<include name="createChatFroupByAlarmLoopsMS" />
+				<include name="sendMessageToChatGroupCreatedByAlarmLoop" />
+				<include name="createNewEscalationResource" />
+				<include name="createNewAlarmEscalation" />
+				<include name="createNewAlarmTemplateByFirefighter" />
+				<include name="createNewAlarmLoop" />
+				<include name="createEventCategory" />
+				
+				
+				<include name="sendMessageToApiEsclationAlarm" />
+
+
+			</methods>
+
+		</classes>
+	</test> <!--
+	Test -->
+</suite> <!--
+Suite -->

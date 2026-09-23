@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="function.A_testClassCreate" />
+
+			<methods>
+
+				<include name="sendMessageToApiEsclationAlarm" />
+				
+				<include name="createMonitorInformationByAttributeWithAttachments" />
+				
+				 <include name="importUser"/>
+				 <include name="updateUser" />
+				  <include name="importEventWith1minReminder"/>
+				  
+				  
+				 <include name="nextStage" />
+				<include name="verifyAllApiAlarmsCretaed" />
+				<include name="sendMessageToNewApiAlarmUser" />
+				<include name="sendMessageToOldApiAlarmUser" />
+				
+				<include name="TestAlarm_OneTime_Attribute" />
+				<include name="manualaByAttributeMSLP" />
+							
+							
+				<include name="manualaByAttributeSingleStation" />
+				<include name="manualAlarmByResourceMsHP" />
+				<include name="manualAlarmByResourceMsLP" />
+				<include name="manualAlarmByUersMs" />
+				
+	
+				<include name="manualAlarmByEscResourceSingleStation" />
+				<include name="manualAlarmByEscResourceMs" />
+				
+				<include name="manualaByAttributeExtend1To01StEscResourceFrom02" /> 
+				 
+				<include name="manualAlarmByOldEsclationTemplateFromSt02ToSt01" />
+
+
+				<include name="createNewAlarmTemplateByAttribute" />
+				<include name="createAlarmByNewlyAddedTemplateFromTemplateModule" />
+
+				<include name="createNewResource" />
+				<include name="manualAlarmByNewREsource" />
+
+				<include name="createNewEscalationResource" />
+				<include name="createNewAlarmEscalation" />
+				<include name="manualAlarmByNewEscResource" />
+
+				<include name="sendMessageToManualAlarmUser" />
+				
+				<include name="CheckAlarmExtendFunctionality" />
+				<include name="CheckApiAlarmEscalationFunctionality" />
+				<include name="CheckManualAlarmEscalationFunctionality" />
+				
+				
+				<include name="nextStage" />
+				
+				<include name="testAlarm_recursiv_daily_Resource" />
+				<include name="testAlarm_recursiv_weekly_users" />
+				<include name="TestAlarm_Recursive_Monthly_DayWise_Attribute" />
+				<include name="TestAlarm_Recursive_Monthly_DateyWise_Attribute" />
+				
+				
+				<include name="createMonitorInformationByResource" />
+				<include name="createMonitorInformationByFireFighter" />
+				<include name="createMonitorInformationByStations" />
+				<include name="createMonitorInformationByFireFighterForTwoStation" />
+
+				<include name="create1MinInformationEventByAttribute" />
+				<include name="create1HrInformationEventByResource" />1
+				
+				<include name="create1DayInformationEventByFireFighter" />
+				<include name="createFullDayInformationEventByStation" />
+				
+				<include name="SendMessageTo1DayInformationEventByFireFighter" />
+
+
+				<include name="createCalendarEventByAttribute" />
+				<include name="createCalendarEventByResource" />
+				<include name="createCalendarEventByFireFughterMS" />
+				<include name="createCalendarEventByStationsMS" />
+
+
+				<include name="nextStage" />
+				
+				
+				
+				<include name="createNewAlarmTemplateByResource" />
+				<include name="createNewAlarmTemplateByFirefighter" />
+
+				<include name="createNewAlarmLoop" />
+				<include name="createEventCategory" />
+				
+				<include name="createChatFroupByAttributeMS" />
+				<include name="createChatFroupByResourceMS" />
+				<include name="createChatFroupByAlarmLoopsMS" />
+				<include name="createChatFroupByFireFighterMS" />
+				
+				<include name="sendMessageToChatGroupCreatedByAttribute" />
+				<include name="sendMessageToChatGroupCreatedByResource" />
+				<include name="sendMessageToChatGroupCreatedByAlarmLoop" />
+				<include name="sendMessageToChatGroupCreatedByFireFighter" />
+				
+				
+				<include name="addAppUser" />
+				<include name="addStataionUser" />
+				<include name="addMultiRoleUser" />
+				<include name="addVehicleUser" />
+				
+				
+				<include name="addNewStation" />
+				<include name="editStation" />
+				<include name="addStationMonitor" />
+				<include name="editStationMonitor" />
+				
+				 <include name="addOverviewMonitor" />
+					<include name="editOverviewMonitor" />
+
+
+			</methods>
+
+		</classes>
+	</test> <!--
+	Test -->
+</suite> <!--
+Suite -->

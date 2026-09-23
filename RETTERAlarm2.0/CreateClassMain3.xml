@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="function.A_testClassCreate" />
+
+			<methods>
+
+			
+				
+				
+				
+					
+				<include name="createNewAlarmTemplateByResource" />
+				<include name="createNewAlarmTemplateByFirefighter" />
+
+				<include name="createNewAlarmLoop" />
+				<include name="createEventCategory" />
+				
+				<include name="createChatFroupByAttributeMS" />
+				<include name="createChatFroupByResourceMS" />
+				<include name="createChatFroupByAlarmLoopsMS" />
+				<include name="createChatFroupByFireFighterMS" />
+				
+				<include name="sendMessageToChatGroupCreatedByAttribute" />
+				<include name="sendMessageToChatGroupCreatedByResource" />
+				<include name="sendMessageToChatGroupCreatedByAlarmLoop" />
+				<include name="sendMessageToChatGroupCreatedByFireFighter" />
+				
+				
+				<include name="addAppUser" />
+				<include name="addStataionUser" />
+				<include name="addMultiRoleUser" />
+				<include name="addVehicleUser" />
+				
+				<include name="addNewStation" />
+				<include name="editStation" />
+				
+				<include name="addStationMonitor" />
+				<include name="editStationMonitor" />
+					<include name="addOverviewMonitor" />
+					<include name="editOverviewMonitor" />
+				
+
+
+			</methods>
+
+		</classes>
+	</test> <!--
+	Test -->
+</suite> <!--
+Suite -->
