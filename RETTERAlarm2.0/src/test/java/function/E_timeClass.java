@@ -6,6 +6,7 @@ import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Locale;
 import java.util.TimeZone;
 
 import org.openqa.selenium.OutputType;
@@ -13,130 +14,182 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.io.FileHandler;
 
-
 public class E_timeClass extends b_baseClass {
 
-	String todaysDate;
-	String germanyTodaysDate;
-	String germanyTodaysDate1;
-	String germanyTodaysDate2;
-	String germanyTodaysDate3;
-	String germanyTodaysDate4;
-	String germanyTomorrowDate;
-	String germanyCurrentTimeHHMMSS;
+//	String todaysDate;
+	String todaysDate;// (dd.mmd.yyyy)
+	String todaysDateddmmyy;
+	String todaysDateD;
+	String todaysDate1;// (dd/mm/yyyy)
+	String tomorrowDate;
+	String currentTimeHHMMSS;
+	String currentTimeHHMMSSG;
 	String dayName;
 	String dayCount;
 	int monthCount;
 	
-	String germanyTimeAfter5MinHH;
-	String germanyTimeAfter5MinMM;
-	
-	String germanyTimeAfter7MinHH;
-	String germanyTimeAfter7MinMM;
+	String todaysDayG;
+	String tomorrowDayG;
+	String dayAfterFourDaysG;
 
-	String germanyTimeAfter9MinHH;
-	String germanyTimeAfter9MinMM;
+	String timeAfter5MinHH;
+	String timeAfter5MinMM;
 	
-	String germanyTimeAfter11MinHH;
-	String germanyTimeAfter11MinMM;
+	String timeAfter5MinHHG;
+	String timeAfter5MinMMG;
+
+	String timeAfter7MinHH;
+	String timeAfter7MinMM;
 	
-	String germanyTimeAfter15MinHH;
-	String germanyTimeAfter15MinMM;
+	String timeAfter7MinHHG;
+	String timeAfter7MinMMG;
+
+	String timeAfter9MinHH;
+	String timeAfter9MinMM;
 	
-	String germanyTimeAfter20MinHH;
-	String germanyTimeAfter20MinMM;
-	String germanyTimeAfter1Hrs5MinHH;
-	String germanyTimeAfter1Hrs5MinMM;
-	String germanyTimeAfter1Hrs20MinHH;
-	String germanyTimeAfter1Hrs20MinMM;
+	String timeAfter9MinHHG;
+	String timeAfter9MinMMG;
+
+	String timeAfter11MinHH;
+	String timeAfter11MinMM;
+
+	String timeAfter15MinHH;
+	String timeAfter15MinMM;
+
+	String timeAfter20MinHH;
+	String timeAfter20MinMM;
+	String timeAfter1Hrs5MinHH;
+	String timeAfter1Hrs5MinMM;
+	String timeAfter1Hrs20MinHH;
+	String timeAfter1Hrs20MinMM;
 
 	public void catchDateTime(WebDriver driver) {
-//		String germanyTimeZone = "Europe/Berlin";
-//		
-//		ZonedDateTime currentGermanDateTime = ZonedDateTime.now(TimeZone.getTimeZone(germanyTimeZone).toZoneId());
-//		ZonedDateTime currentGermanDateTimeHHMM = ZonedDateTime.now(TimeZone.getTimeZone(germanyTimeZone).toZoneId());
-//		
-//		DateTimeFormatter timeFormatterHHMMSS = DateTimeFormatter.ofPattern("HHmmss");
-//		
-//		DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
-//		
-//		germanyTodaysDate = currentGermanDateTime.format(dateFormatter);
-//		
-//		germanyCurrentTimeHHMMSS = currentGermanDateTimeHHMM.format(timeFormatterHHMMSS);
-		
-		
-//		ZoneId germanyZone = ZoneId.of("Europe/Berlin");
-		ZoneId germanyZone = ZoneId.of("Asia/Kolkata");
 
-		ZonedDateTime nowGermany = ZonedDateTime.now(germanyZone);
+//		ZoneId timeZone = ZoneId.of("Europe/Berlin");
+		ZoneId timeZone = ZoneId.of("Asia/Kolkata");
+		
+		ZoneId timeZoneG = ZoneId.of("Europe/Berlin");
 
-		
-		
+		ZonedDateTime now = ZonedDateTime.now(timeZone);
+		ZonedDateTime nowG = ZonedDateTime.now(timeZoneG);
+
 		// Formatters
 		DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
-		DateTimeFormatter dateFormatter1 = DateTimeFormatter.ofPattern("ddMMyyyy");
+		DateTimeFormatter dateFormatterddmmyy = DateTimeFormatter.ofPattern("ddMMyyyy");
 		
 		DateTimeFormatter timeFormatterHHMMSS = DateTimeFormatter.ofPattern("HHmmss");
 		DateTimeFormatter timeFormatterHH = DateTimeFormatter.ofPattern("HH");
 		DateTimeFormatter timeFormatterMM = DateTimeFormatter.ofPattern("mm");
+		
+		
+		
 
 		// Current date & time
-		germanyTodaysDate = nowGermany.format(dateFormatter);
-		germanyTodaysDate1=nowGermany.format(dateFormatter1);
-		germanyCurrentTimeHHMMSS = nowGermany.format(timeFormatterHHMMSS);
+		todaysDate = now.format(dateFormatter);
+		todaysDateddmmyy = now.format(dateFormatterddmmyy);
+		currentTimeHHMMSS = now.format(timeFormatterHHMMSS);
+		
+		currentTimeHHMMSSG= nowG.format(timeFormatterHHMMSS);
 
-		// tomorrow date
-
-		LocalDate tomorrowDate = LocalDate.now().plusDays(1);
-		germanyTomorrowDate = tomorrowDate.format(dateFormatter);
+		// Tomorrow date
+		LocalDate tomorrowDate1 = now.toLocalDate().plusDays(1);
+		tomorrowDate = tomorrowDate1.format(dateFormatter);
 
 		// Time after 5 minutes
-		ZonedDateTime after5Min = nowGermany.plusMinutes(5);
-		germanyTimeAfter5MinHH = after5Min.format(timeFormatterHH);
-		germanyTimeAfter5MinMM = after5Min.format(timeFormatterMM);
+		ZonedDateTime after5Min = now.plusMinutes(5);
+		timeAfter5MinHH = after5Min.format(timeFormatterHH);
+		timeAfter5MinMM = after5Min.format(timeFormatterMM);
 		
+		
+		// Time after 7 minutes-Germany
+		ZonedDateTime after5MinG = nowG.plusMinutes(5);
+		timeAfter5MinHHG = after5MinG.format(timeFormatterHH);
+		timeAfter5MinMMG = after5MinG.format(timeFormatterMM);
+
 		// Time after 7 minutes
-		ZonedDateTime after7Min = nowGermany.plusMinutes(7);
-		germanyTimeAfter7MinHH = after7Min.format(timeFormatterHH);
-		germanyTimeAfter7MinMM = after7Min.format(timeFormatterMM);
+		ZonedDateTime after7Min = now.plusMinutes(7);
+		timeAfter7MinHH = after7Min.format(timeFormatterHH);
+		timeAfter7MinMM = after7Min.format(timeFormatterMM);
 		
+		// Time after 7 minutes-Germany
+		ZonedDateTime after7MinG = nowG.plusMinutes(7);
+		timeAfter7MinHHG = after7MinG.format(timeFormatterHH);
+		timeAfter7MinMMG = after7MinG.format(timeFormatterMM);
 		
 		// Time after 9 minutes
-		ZonedDateTime after9Min = nowGermany.plusMinutes(9);
-		germanyTimeAfter9MinHH = after9Min.format(timeFormatterHH);
-		germanyTimeAfter9MinMM = after9Min.format(timeFormatterMM);
+		ZonedDateTime after9Min = now.plusMinutes(9);
+		timeAfter9MinHH = after9Min.format(timeFormatterHH);
+		timeAfter9MinMM = after9Min.format(timeFormatterMM);
 		
+		
+		// Time after 7 minutes-Germany
+		ZonedDateTime after9MinG = nowG.plusMinutes(9);
+		timeAfter9MinHHG = after9MinG.format(timeFormatterHH);
+		timeAfter9MinMMG = after9MinG.format(timeFormatterMM);
+		
+
 		// Time after 11 minutes
-				ZonedDateTime after11Min = nowGermany.plusMinutes(11);
-				germanyTimeAfter11MinHH = after11Min.format(timeFormatterHH);
-				germanyTimeAfter11MinMM = after11Min.format(timeFormatterMM);
-		
+		ZonedDateTime after11Min = now.plusMinutes(11);
+		timeAfter11MinHH = after11Min.format(timeFormatterHH);
+		timeAfter11MinMM = after11Min.format(timeFormatterMM);
 
-				// Time after 15 minutes
-				ZonedDateTime after15Min = nowGermany.plusMinutes(15);
-				germanyTimeAfter15MinHH = after15Min.format(timeFormatterHH);
-				germanyTimeAfter15MinMM = after15Min.format(timeFormatterMM);
-		
-				
+		// Time after 15 minutes
+		ZonedDateTime after15Min = now.plusMinutes(15);
+		timeAfter15MinHH = after15Min.format(timeFormatterHH);
+		timeAfter15MinMM = after15Min.format(timeFormatterMM);
+
 		// Time after 20 minutes
-		ZonedDateTime after20Min = nowGermany.plusMinutes(20);
-		germanyTimeAfter20MinHH = after20Min.format(timeFormatterHH);
-		germanyTimeAfter20MinMM = after20Min.format(timeFormatterMM);
+		ZonedDateTime after20Min = now.plusMinutes(20);
+		timeAfter20MinHH = after20Min.format(timeFormatterHH);
+		timeAfter20MinMM = after20Min.format(timeFormatterMM);
 
-		// Time after 1 hrs 5 minutes
-		ZonedDateTime after1Hrs5Min = nowGermany.plusMinutes(65);
-		germanyTimeAfter1Hrs5MinHH = after1Hrs5Min.format(timeFormatterHH);
-		germanyTimeAfter1Hrs5MinMM = after1Hrs5Min.format(timeFormatterMM);
+		// Time after 1 hour 5 minutes
+		ZonedDateTime after1Hrs5Min = now.plusMinutes(65);
+		timeAfter1Hrs5MinHH = after1Hrs5Min.format(timeFormatterHH);
+		timeAfter1Hrs5MinMM = after1Hrs5Min.format(timeFormatterMM);
 
-		// Time after 1 hrs 20 minutes
+		// Time after 1 hour 20 minutes
+		ZonedDateTime after1Hrs20Min = now.plusMinutes(80);
+		timeAfter1Hrs20MinHH = after1Hrs20Min.format(timeFormatterHH);
+		timeAfter1Hrs20MinMM = after1Hrs20Min.format(timeFormatterMM);
 
-		ZonedDateTime after1Hrs20Min = nowGermany.plusMinutes(80);
-		germanyTimeAfter1Hrs20MinHH = after1Hrs20Min.format(timeFormatterHH);
-		germanyTimeAfter1Hrs20MinMM = after1Hrs20Min.format(timeFormatterMM);
 		
-	
-		LocalDate today = ZonedDateTime.now(ZoneId.of("Europe/Berlin")).toLocalDate();
+		
+		
+		
+		
+		
+		
+		
+		
+		// Today's day and occurrence
+		LocalDate today = now.toLocalDate();
 		DayOfWeek day = today.getDayOfWeek();
+		
+		LocalDate todayG = nowG.toLocalDate();
+		DayOfWeek dayG = todayG.getDayOfWeek();
+
+		
+		todaysDayG = dayG.getDisplayName(java.time.format.TextStyle.FULL, Locale.getDefault());
+//		System.out.println(todaysDayG);
+		
+		LocalDate dateAfterTwoDays = todayG.plusDays(2);
+		LocalDate dateAfterFourDays = todayG.plusDays(4);
+
+		// Get the day of the week for the date after two days
+		DayOfWeek dayOfWeekAfterTwoDays = dateAfterTwoDays.getDayOfWeek();
+		DayOfWeek dayOfWeekAfterForeDays = dateAfterFourDays.getDayOfWeek();
+
+		// Format the date and day of the week using DateTimeFormatter
+
+		tomorrowDayG = dayOfWeekAfterTwoDays.getDisplayName(java.time.format.TextStyle.FULL, java.util.Locale.getDefault());
+
+		dayAfterFourDaysG = dayOfWeekAfterForeDays.getDisplayName(java.time.format.TextStyle.FULL, java.util.Locale.getDefault());
+
+		
+		
+		
+		
 
 		int count = 0;
 
@@ -144,42 +197,27 @@ public class E_timeClass extends b_baseClass {
 		    if (today.withDayOfMonth(i).getDayOfWeek() == day) {
 		        count++;
 		    }
-		} 
+		}
 
-		String[] words = {"", "First", "Second", "Third", "Fourth", "Fifth"};
+		String[] words = { "", "First", "Second", "Third", "Fourth", "Fifth" };
 
 		int occurrenceCount = count;
-		 dayCount = words[count];
+		dayCount = words[count];
 
-		  dayName = day.toString().substring(0, 1) +
-		                 day.toString().substring(1).toLowerCase();
+		dayName = day.toString().substring(0, 1)
+		        + day.toString().substring(1).toLowerCase();
 
 		// Month count
-		 monthCount = today.getMonthValue();
+		monthCount = today.getMonthValue();
 
-//		System.out.println("Month Count: " + monthCount);   // June=6, July=7
-//		System.out.println("Day Count: " + dayCount);
-//		System.out.println("Day Name: " + dayName);
-	     
-		 DateTimeFormatter dateFormatter2 = DateTimeFormatter.ofPattern("d");
+		DateTimeFormatter dateFormatter2 = DateTimeFormatter.ofPattern("d");
+		String date = today.format(dateFormatter2);
+		todaysDateD = date;
 
-	        String date = LocalDate.now().format(dateFormatter2);
+		DateTimeFormatter dateFormatter1 = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+		todaysDate1 = now.format(dateFormatter1);
 
-	        germanyTodaysDate2=date;
-	        
-	        DateTimeFormatter dateFormatter3 = DateTimeFormatter.ofPattern("dd.MM.yyyy");
-		
 
-	        germanyTodaysDate3=nowGermany.format(dateFormatter3);
-	        
-	        DateTimeFormatter dateFormatter4 = DateTimeFormatter.ofPattern("MM/dd/yyyy");
-			
-
-	        germanyTodaysDate3=nowGermany.format(dateFormatter3);
-	        germanyTodaysDate4=nowGermany.format(dateFormatter4);
-	        
-//	        System.out.println(germanyTodaysDate3);
-//	        System.out.println(germanyTodaysDate4);
 
 	}
 

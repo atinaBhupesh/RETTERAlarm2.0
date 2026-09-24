@@ -82,6 +82,10 @@
 				<include name="createCalendarEventByResource" />
 				<include name="createCalendarEventByFireFughterMS" />
 				<include name="createCalendarEventByStationsMS" />
+				
+				<include name="createAvailabilityRequestOneTimeImmediate" />
+				<include name="createAvailabilityRequestOneTimeSchedule" />
+				<include name="createAvailabilityRequestRecursive" />
 
 
 				<include name="nextStage" />

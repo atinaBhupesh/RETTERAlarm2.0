@@ -7,8 +7,10 @@
 
 
 			<methods>
-	
-			<include name="deactiveBgTestActiveAlarmsFromPlaningList" />
+			
+			
+	<include name="deleteAvailabilityRequestFromHistory" />
+			<include name="deleteAvailabilityRequestFromList" />
 			
 			
 			

@@ -33,48 +33,57 @@ public class A_testClassCreate extends b_baseClass {
 	M_conversations chatGroups;
 	N_users users;
 	O_stationModule stn;
-
-
 	P_monitors mo;
-	
 	Q_Attribute att;
-	
 	R_FileSections fs;
+	S_AvailabilityRequest arequest;
 
-	String gTodaysDate;
-	String germanyTodaysDate1;
-	String germanyTodaysDate2;
-	String germanyTodaysDate3;
-	String germanyTodaysDate4;
-	String gTomorrowDate;
-	String gtimeHHMMSS;
+	String todaysDate;
+	String todaysDateddmmyy;
+	String todaysDateD;
+	String todaysDate1;
+	String tomorrowDate;
+	String timeHHMMSS;
+	String timeHHMMSSG;
 	String dayName;
 	String dayCount;
 	int monthCount;
+	String todaysDayG;
+	String tomorrowDayG;
+	String dayAfterFourDaysG;
 
-	String germanyTimeAfter5MinHH;
-	String germanyTimeAfter5MinMM;
+	String timeAfter5MinHH;
+	String timeAfter5MinMM;
 
-	String germanyTimeAfter7MinHH;
-	String germanyTimeAfter7MinMM;
+	String timeAfter5MinHHG;
+	String timeAfter5MinMMG;
 
-	String germanyTimeAfter9MinHH;
-	String germanyTimeAfter9MinMM;
+	String timeAfter7MinHH;
+	String timeAfter7MinMM;
 
-	String germanyTimeAfter11MinHH;
-	String germanyTimeAfter11MinMM;
+	String timeAfter7MinHHG;
+	String timeAfter7MinMMG;
 
-	String germanyTimeAfter15MinHH;
-	String germanyTimeAfter15MinMM;
+	String timeAfter9MinHH;
+	String timeAfter9MinMM;
 
-	String germanyTimeAfter20MinHH;
-	String germanyTimeAfter20MinMM;
+	String timeAfter9MinHHG;
+	String timeAfter9MinMMG;
 
-	String germanyTimeAfter1Hrs5MinHH;
-	String germanyTimeAfter1Hrs5MinMM;
+	String timeAfter11MinHH;
+	String timeAfter11MinMM;
 
-	String germanyTimeAfter1Hrs20MinHH;
-	String germanyTimeAfter1Hrs20MinMM;
+	String timeAfter15MinHH;
+	String imeAfter15MinMM;
+
+	String timeAfter20MinHH;
+	String timeAfter20MinMM;
+
+	String timeAfter1Hrs5MinHH;
+	String timeAfter1Hrs5MinMM;
+
+	String timeAfter1Hrs20MinHH;
+	String timeAfter1Hrs20MinMM;
 	long startTime;
 
 	@BeforeSuite
@@ -111,9 +120,9 @@ public class A_testClassCreate extends b_baseClass {
 		stn = new O_stationModule(driver);
 		ma = new F_manualTestAlarm(driver);
 		mo = new P_monitors(driver);
-		
-		att =new Q_Attribute (driver) ;
-		fs= new R_FileSections  (driver) ;
+		att = new Q_Attribute(driver);
+		fs = new R_FileSections(driver);
+		arequest = new S_AvailabilityRequest(driver);
 
 	}
 
@@ -124,39 +133,55 @@ public class A_testClassCreate extends b_baseClass {
 
 		tc.catchDateTime(driver);
 
-		gTodaysDate = tc.germanyTodaysDate;
-		germanyTodaysDate1 = tc.germanyTodaysDate1;
-		germanyTodaysDate2 = tc.germanyTodaysDate2;
-		germanyTodaysDate3 = tc.germanyTodaysDate3;
-		germanyTodaysDate4 = tc.germanyTodaysDate4;
-		gtimeHHMMSS = tc.germanyCurrentTimeHHMMSS;
-		gTomorrowDate = tc.germanyTomorrowDate;
+		todaysDate = tc.todaysDate;
+
+		todaysDateddmmyy = tc.todaysDateddmmyy;
+		todaysDateD = tc.todaysDateD;
+		todaysDate1 = tc.todaysDate1;
+		timeHHMMSS = tc.currentTimeHHMMSS;
+		timeHHMMSSG = tc.currentTimeHHMMSSG;
+
+		tomorrowDate = tc.tomorrowDate;
 		dayName = tc.dayName;
 		dayCount = tc.dayCount;
 		monthCount = tc.monthCount;
 
-		germanyTimeAfter5MinHH = tc.germanyTimeAfter5MinHH;
-		germanyTimeAfter5MinMM = tc.germanyTimeAfter5MinMM;
-		germanyTimeAfter20MinHH = tc.germanyTimeAfter20MinHH;//
-		germanyTimeAfter20MinMM = tc.germanyTimeAfter20MinMM;
+		todaysDayG = tc.todaysDayG;
+		tomorrowDayG = tc.tomorrowDayG;
+		dayAfterFourDaysG = tc.dayAfterFourDaysG;
 
-		germanyTimeAfter1Hrs5MinHH = tc.germanyTimeAfter1Hrs5MinHH;
-		germanyTimeAfter1Hrs5MinMM = tc.germanyTimeAfter1Hrs5MinMM;
+		timeAfter5MinHH = tc.timeAfter5MinHH;
+		timeAfter5MinMM = tc.timeAfter5MinMM;
 
-		germanyTimeAfter7MinHH = tc.germanyTimeAfter7MinHH;
-		germanyTimeAfter7MinMM = tc.germanyTimeAfter7MinMM;
+		timeAfter5MinHHG = tc.timeAfter5MinHHG;
+		timeAfter5MinMMG = tc.timeAfter5MinMMG;
 
-		germanyTimeAfter9MinHH = tc.germanyTimeAfter9MinHH;
-		germanyTimeAfter9MinMM = tc.germanyTimeAfter9MinMM;
+		timeAfter20MinHH = tc.timeAfter20MinHH;//
+		timeAfter20MinMM = tc.timeAfter20MinMM;
 
-		germanyTimeAfter11MinHH = tc.germanyTimeAfter11MinHH;
-		germanyTimeAfter11MinMM = tc.germanyTimeAfter11MinMM;
+		timeAfter1Hrs5MinHH = tc.timeAfter1Hrs5MinHH;
+		timeAfter1Hrs5MinMM = tc.timeAfter1Hrs5MinMM;
 
-		germanyTimeAfter15MinHH = tc.germanyTimeAfter15MinHH;
-		germanyTimeAfter15MinMM = tc.germanyTimeAfter15MinMM;
+		timeAfter7MinHH = tc.timeAfter7MinHH;
+		timeAfter7MinMM = tc.timeAfter7MinMM;
 
-		germanyTimeAfter1Hrs20MinHH = tc.germanyTimeAfter1Hrs20MinHH;
-		germanyTimeAfter1Hrs20MinMM = tc.germanyTimeAfter1Hrs20MinMM;
+		timeAfter7MinHHG = tc.timeAfter7MinHHG;
+		timeAfter7MinMMG = tc.timeAfter7MinMMG;
+
+		timeAfter9MinHH = tc.timeAfter9MinHH;
+		timeAfter9MinMM = tc.timeAfter9MinMM;
+
+		timeAfter9MinHHG = tc.timeAfter9MinHHG;
+		timeAfter9MinMMG = tc.timeAfter9MinMMG;
+
+		timeAfter11MinHH = tc.timeAfter11MinHH;
+		timeAfter11MinMM = tc.timeAfter11MinMM;
+
+		timeAfter15MinHH = tc.timeAfter15MinHH;
+		imeAfter15MinMM = tc.timeAfter15MinMM;
+
+		timeAfter1Hrs20MinHH = tc.timeAfter1Hrs20MinHH;
+		timeAfter1Hrs20MinMM = tc.timeAfter1Hrs20MinMM;
 
 	}
 
@@ -176,36 +201,99 @@ public class A_testClassCreate extends b_baseClass {
 
 		Reporter.log(" ", true);
 	}
-	
+
+	@Test
+	public void createAvailabilityRequestRecursive() throws Throwable {
+
+		tc.catchDateTime(driver);
+		todaysDayG = tc.todaysDayG;
+		tomorrowDayG = tc.tomorrowDayG;
+		dayAfterFourDaysG = tc.dayAfterFourDaysG;
+
+		timeHHMMSSG = tc.currentTimeHHMMSSG;
+		timeAfter5MinHHG = tc.timeAfter5MinHHG;
+		timeAfter5MinMMG = tc.timeAfter5MinMMG;
+		timeAfter7MinHHG = tc.timeAfter7MinHHG;
+		timeAfter7MinMMG = tc.timeAfter7MinMMG;
+
+		Reporter.log(" ", true);
+		Reporter.log("The process of create availability request Recursive is started.", true);
+
+		arequest.createAvailabilityRequest(driver, branchName, "Recursive", todaysDate, timeHHMMSSG, deptN,
+				tomorrowDate, timeAfter5MinHHG, timeAfter5MinMMG, timeAfter7MinHHG, timeAfter7MinMMG, timeAfter9MinHHG,
+				timeAfter9MinMMG, todaysDayG,tomorrowDayG,dayAfterFourDaysG);
+
+		Reporter.log(GREEN + GREEN + "The process of create availability request Recursive is complete.", true);
+		Reporter.log(" ", true);
+	}
+
+	@Test
+	public void createAvailabilityRequestOneTimeSchedule() throws Throwable {
+
+		tc.catchDateTime(driver);
+		todaysDayG = tc.todaysDayG;
+		 tomorrowDayG =tc.tomorrowDayG;
+		 dayAfterFourDaysG= tc.dayAfterFourDaysG;
+		
+		timeHHMMSSG = tc.currentTimeHHMMSSG;
+		timeAfter5MinHHG = tc.timeAfter5MinHHG;
+		timeAfter5MinMMG = tc.timeAfter5MinMMG;
+		timeAfter7MinHHG = tc.timeAfter7MinHHG;
+		timeAfter7MinMMG = tc.timeAfter7MinMMG;
+
+		Reporter.log(" ", true);
+		Reporter.log("The process of create availability request OneTime>Schedule is started.", true);
+
+		arequest.createAvailabilityRequest(driver, branchName, "OneTime>Schedule", todaysDate, timeHHMMSSG, deptN,
+				tomorrowDate, timeAfter5MinHHG, timeAfter5MinMMG, timeAfter7MinHHG, timeAfter7MinMMG, timeAfter9MinHHG,
+				timeAfter9MinMMG, todaysDayG,tomorrowDayG,dayAfterFourDaysG);
+
+		Reporter.log(GREEN + GREEN + "The process of create availability request OneTime>Schedule is complete.", true);
+		Reporter.log(" ", true);
+	}
+
+	@Test
+	public void createAvailabilityRequestOneTimeImmediate() throws Throwable {
+
+		tc.catchDateTime(driver);
+		todaysDayG = tc.todaysDayG;
+		timeHHMMSSG = tc.currentTimeHHMMSSG;
+		timeAfter5MinHHG = tc.timeAfter5MinHHG;
+		timeAfter5MinMMG = tc.timeAfter5MinMMG;
+		timeAfter7MinHHG = tc.timeAfter7MinHHG;
+		timeAfter7MinMMG = tc.timeAfter7MinMMG;
+
+		Reporter.log(" ", true);
+		Reporter.log("The process of create availability request OneTime>Immediate is started.", true);
+
+		arequest.createAvailabilityRequest(driver, branchName, "OneTime>Schedule", todaysDate, timeHHMMSSG, deptN,
+				tomorrowDate, timeAfter5MinHHG, timeAfter5MinMMG, timeAfter7MinHHG, timeAfter7MinMMG, timeAfter9MinHHG,
+				timeAfter9MinMMG, todaysDayG,tomorrowDayG,dayAfterFourDaysG);
+
+		Reporter.log(GREEN + GREEN + "The process of create availability request OneTime>Immediate is complete.", true);
+		Reporter.log(" ", true);
+	}
+
 	@Test
 	public void addNewFile() throws Throwable {
-		
-		
-		
+
 		Reporter.log(" ", true);
 		Reporter.log("The process of add new file is started.", true);
 
 		fs.commanForDocumentation(driver);
-		fs.addNewFile(driver,branchName,deptN ,st01N,gtimeHHMMSS );
+		fs.addNewFile(driver, branchName, deptN, st01N, timeHHMMSS);
 
-		Reporter.log(GREEN + GREEN + "The process of add new file is started.r is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of add new file is complete.", true);
 		Reporter.log(" ", true);
 	}
 
-	
-	
-	
-	
-	
 	@Test
 	public void editOverviewMonitor() throws Throwable {
-		
-		
-		
+
 		Reporter.log(" ", true);
 		Reporter.log("The process of edit new overview monitor is started.", true);
 
-		mo.editOverviewMonitor(driver, branchName, newOverviewMonitorName, gtimeHHMMSS);
+		mo.editOverviewMonitor(driver, branchName, newOverviewMonitorName, timeHHMMSS);
 
 		Reporter.log(GREEN + GREEN + "The process of edit new overview monitor is complete.", true);
 		Reporter.log(" ", true);
@@ -216,7 +304,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of add new overview monitor is started.", true);
 
-		mo.addOverviewMonitor(driver, branchName, deptN, gtimeHHMMSS, filePath);
+		mo.addOverviewMonitor(driver, branchName, deptN, timeHHMMSS, filePath);
 
 		Reporter.log(GREEN + GREEN + "The process of add new overview monitor is complete.", true);
 		Reporter.log(" ", true);
@@ -227,7 +315,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of edit new station monitor is started.", true);
 
-		mo.editStationMonitor(driver, branchName, newStationMonitorName, newStationName, gtimeHHMMSS);
+		mo.editStationMonitor(driver, branchName, newStationMonitorName, newStationName, timeHHMMSS);
 
 		Reporter.log(GREEN + GREEN + "The process of edit new station monitor is complete.", true);
 		Reporter.log(" ", true);
@@ -238,9 +326,9 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of verify All Api Alarms Cretaed  is started.", true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.verifyAllApiAlarmsCretaed(driver, germanyTodaysDate3, germanyTodaysDate4, ApiAlarm01, ApiAlarm02, ApiAlarm03,
-				ApiAlarm04, ApiAlarm05, ApiAlarm06, ApiAlarm07, ApiAlarm08, ApiAlarm09, ApiAlarm10, ApiAlarm11,
-				ApiAlarm12, ApiAlarm13, ApiAlarm14);
+		ma.verifyAllApiAlarmsCretaed(driver, todaysDate, todaysDate1, ApiAlarm01, ApiAlarm02, ApiAlarm03, ApiAlarm04,
+				ApiAlarm05, ApiAlarm06, ApiAlarm07, ApiAlarm08, ApiAlarm09, ApiAlarm10, ApiAlarm11, ApiAlarm12,
+				ApiAlarm13, ApiAlarm14);
 
 		Reporter.log(GREEN + GREEN + "The process of verify All Api Alarms Cretaed is complete.", true);
 		Reporter.log(" ", true);
@@ -251,7 +339,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of add new station monitor is started.", true);
 
-		mo.addStationMonitor(driver, branchName, newStationName, gtimeHHMMSS, filePath);
+		mo.addStationMonitor(driver, branchName, newStationName, timeHHMMSS, filePath);
 
 		Reporter.log(GREEN + GREEN + "The process of add new station monitor is complete.", true);
 		Reporter.log(" ", true);
@@ -273,7 +361,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of add new station is started.", true);
 		stn.commonForStation(driver, branchName);
-		stn.addNewStation(driver, gTodaysDate, gtimeHHMMSS, filePath);
+		stn.addNewStation(driver, todaysDate, timeHHMMSS, filePath);
 
 		Reporter.log(GREEN + GREEN + "The process of add new station is complete.", true);
 		Reporter.log(" ", true);
@@ -284,7 +372,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of update users is started.", true);
 		users.commonForUser(driver, branchName);
-		users.updateUser(driver, branchName, updateUserFilr, gTodaysDate, gtimeHHMMSS, st01N, st01R1);
+		users.updateUser(driver, branchName, updateUserFilr, todaysDate, timeHHMMSS, st01N, st01R1);
 
 		Reporter.log(GREEN + GREEN + "The process of update users is complete.", true);
 		Reporter.log(" ", true);
@@ -296,15 +384,15 @@ public class A_testClassCreate extends b_baseClass {
 	{
 		tc.catchDateTime(driver);
 
-		germanyTimeAfter5MinHH = tc.germanyTimeAfter5MinHH;
-		germanyTimeAfter5MinMM = tc.germanyTimeAfter5MinMM;
+		timeAfter5MinHH = tc.timeAfter5MinHH;
+		timeAfter5MinMM = tc.timeAfter5MinMM;
 
 		Reporter.log(" ", true);
 		Reporter.log("The process of importing event with 1 min reminder has started.", true);
 
 		cl.common_calendar(driver, branchName);
-		cl.importEventWith1minReminder(driver, importEventFile, gTodaysDate, gtimeHHMMSS, germanyTimeAfter5MinHH,
-				germanyTimeAfter5MinMM, st01R1, st01N);
+		cl.importEventWith1minReminder(driver, importEventFile, todaysDate, timeHHMMSS, timeAfter5MinHH,
+				timeAfter5MinMM, st01R1, st01N);
 
 		Reporter.log(GREEN + GREEN + "The process of importing event with 1 min reminder is complete.", true);
 		Reporter.log(" ", true);
@@ -322,7 +410,7 @@ public class A_testClassCreate extends b_baseClass {
 				"The verification process for direct and fallback calls, SMS, and emails for esclated alarm has started.",
 				true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.ManualAlarForCheckEscalationAlarmCall(driver, st01N, gTodaysDate, gtimeHHMMSS,
+		ma.ManualAlarForCheckEscalationAlarmCall(driver, st01N, todaysDate, timeHHMMSS,
 				st01EscalarionResourceCallSmsEmail);
 
 		Reporter.log(GREEN + GREEN
@@ -343,7 +431,7 @@ public class A_testClassCreate extends b_baseClass {
 				"The verification process for direct and fallback calls, SMS, and emails for extend alarm has started.",
 				true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.ManualAlarForCheckExtendAlarmCall(driver, st02N, gTodaysDate, gtimeHHMMSS, st02V1, st02A1, st01N, branchName,
+		ma.ManualAlarForCheckExtendAlarmCall(driver, st02N, todaysDate, timeHHMMSS, st02V1, st02A1, st01N, branchName,
 				st01AttributeCallSmsEmail);
 
 		Reporter.log(GREEN + GREEN
@@ -362,7 +450,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The verification process for direct and fallback calls, SMS, and emails has started.", true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.ManualAlarmForDircetCall(driver, st01N, st02N, gTodaysDate, gtimeHHMMSS, st01V1, st01V2, st02V1, st01FF1,
+		ma.ManualAlarmForDircetCall(driver, st01N, st02N, todaysDate, timeHHMMSS, st01V1, st01V2, st02V1, st01FF1,
 				st01FF2, st01FFEmailCallSms, st01FFEmailCallSms_FallBack, st02FF1);
 
 		Reporter.log(
@@ -379,16 +467,16 @@ public class A_testClassCreate extends b_baseClass {
 	{
 
 		tc.catchDateTime(driver);
-		germanyTimeAfter15MinHH = tc.germanyTimeAfter15MinHH;
-		germanyTimeAfter15MinMM = tc.germanyTimeAfter15MinMM;
+		timeAfter15MinHH = tc.timeAfter15MinHH;
+		imeAfter15MinMM = tc.timeAfter15MinMM;
 
 		Reporter.log(" ", true);
 		Reporter.log(
 				"The process of creating Test alarm-recursive-montly_date wise by Attribute for multi station is started.",
 				true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.TestAlarm_Recursive_Monthly_DateyWise_Attribute(driver, st01N, gTodaysDate, germanyTimeAfter15MinHH,
-				germanyTimeAfter15MinMM, st01V1, st01V2, germanyTodaysDate2, dayName, st01A1);
+		ma.TestAlarm_Recursive_Monthly_DateyWise_Attribute(driver, st01N, todaysDate, timeAfter15MinHH, imeAfter15MinMM,
+				st01V1, st01V2, todaysDateD, dayName, st01A1);
 
 		Reporter.log(GREEN + GREEN
 				+ "The process of creating  Test alarm-recursive-montly_date wise by Attribute for multi station is complete.",
@@ -403,16 +491,16 @@ public class A_testClassCreate extends b_baseClass {
 
 	{
 		tc.catchDateTime(driver);
-		germanyTimeAfter11MinHH = tc.germanyTimeAfter11MinHH;
-		germanyTimeAfter11MinMM = tc.germanyTimeAfter11MinMM;
+		timeAfter11MinHH = tc.timeAfter11MinHH;
+		timeAfter11MinMM = tc.timeAfter11MinMM;
 
 		Reporter.log(" ", true);
 		Reporter.log(
 				"The process of creating Test alarm-recursive-montly_day wise by Attribute for multi station is started.",
 				true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.TestAlarm_Recursive_Monthly_DayWise_Attribute(driver, st01N, gTodaysDate, germanyTimeAfter11MinHH,
-				germanyTimeAfter11MinMM, st01V1, st01V2, dayCount, dayName, st01A1);
+		ma.TestAlarm_Recursive_Monthly_DayWise_Attribute(driver, st01N, todaysDate, timeAfter11MinHH, timeAfter11MinMM,
+				st01V1, st01V2, dayCount, dayName, st01A1);
 
 		Reporter.log(GREEN + GREEN
 				+ "The process of creating  Test alarm-recursive-montly_day wise by Attribute for multi station is complete.",
@@ -427,15 +515,15 @@ public class A_testClassCreate extends b_baseClass {
 
 	{
 		tc.catchDateTime(driver);
-		germanyTimeAfter7MinHH = tc.germanyTimeAfter7MinHH;
-		germanyTimeAfter7MinMM = tc.germanyTimeAfter7MinMM;
+		timeAfter7MinHH = tc.timeAfter7MinHH;
+		timeAfter7MinMM = tc.timeAfter7MinMM;
 
 		Reporter.log(" ", true);
 		Reporter.log("The process of creating Test alarm to check call and fall back with escalation alarm is started.",
 				true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.testAlarm_EscaltionCallSmsEmail(driver, st01N, st02N, gTodaysDate, germanyTimeAfter7MinHH,
-				germanyTimeAfter7MinMM, st01EscalarionResourceCallSmsEmail);
+		ma.testAlarm_EscaltionCallSmsEmail(driver, st01N, st02N, todaysDate, timeAfter7MinHH, timeAfter7MinMM,
+				st01EscalarionResourceCallSmsEmail);
 
 		Reporter.log(GREEN + GREEN
 				+ "The process of creating Test alarm to check call and fall back with escalation alarm is complete.",
@@ -449,16 +537,15 @@ public class A_testClassCreate extends b_baseClass {
 
 	{
 		tc.catchDateTime(driver);
-		germanyTimeAfter9MinHH = tc.germanyTimeAfter9MinHH;
-		germanyTimeAfter9MinMM = tc.germanyTimeAfter9MinMM;
+		timeAfter9MinHH = tc.timeAfter9MinHH;
+		timeAfter9MinMM = tc.timeAfter9MinMM;
 
 		Reporter.log(" ", true);
 		Reporter.log("The process of creating Test alarm to check call and fall back with direct alarm is started.",
 				true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.testAlarm_Direct_CallSmsEmail(driver, st01N, st02N, gTodaysDate, germanyTimeAfter9MinHH,
-				germanyTimeAfter9MinMM, dayName, st01V1, st01V2, st02V1, st01FF1, st01FFEmailCallSms,
-				st01FFEmailCallSms_FallBack, st02FF1);
+		ma.testAlarm_Direct_CallSmsEmail(driver, st01N, st02N, todaysDate, timeAfter9MinHH, timeAfter9MinMM, dayName,
+				st01V1, st01V2, st02V1, st01FF1, st01FFEmailCallSms, st01FFEmailCallSms_FallBack, st02FF1);
 
 		Reporter.log(GREEN + GREEN
 				+ "The process of creating Test alarm to check call and fall back with escalation alarm is complete.",
@@ -472,15 +559,15 @@ public class A_testClassCreate extends b_baseClass {
 
 	{
 		tc.catchDateTime(driver);
-		germanyTimeAfter9MinHH = tc.germanyTimeAfter9MinHH;
-		germanyTimeAfter9MinMM = tc.germanyTimeAfter9MinMM;
+		timeAfter9MinHH = tc.timeAfter9MinHH;
+		timeAfter9MinMM = tc.timeAfter9MinMM;
 
 		Reporter.log(" ", true);
 		Reporter.log("The process of creating Test alarm-recursive-weekly  by resource for multi station is started.",
 				true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.testAlarm_recursiv_weekly_users(driver, st01N, st02N, gTodaysDate, germanyTimeAfter9MinHH,
-				germanyTimeAfter9MinMM, dayName, st01V1, st01V2, st02V1, st01FF1, st01FF2, st02FF1);
+		ma.testAlarm_recursiv_weekly_users(driver, st01N, st02N, todaysDate, timeAfter9MinHH, timeAfter9MinMM, dayName,
+				st01V1, st01V2, st02V1, st01FF1, st01FF2, st02FF1);
 
 		Reporter.log(GREEN + GREEN
 				+ "The process of creating  Test alarm-recursive-weekly by resource for multi station is complete.",
@@ -495,16 +582,16 @@ public class A_testClassCreate extends b_baseClass {
 
 	{
 		tc.catchDateTime(driver);
-		germanyTimeAfter7MinHH = tc.germanyTimeAfter7MinHH;
-		germanyTimeAfter7MinMM = tc.germanyTimeAfter7MinMM;
+		timeAfter7MinHH = tc.timeAfter7MinHH;
+		timeAfter7MinMM = tc.timeAfter7MinMM;
 
 		Reporter.log(" ", true);
 		Reporter.log(
 				"The process of creating Test alarm-recursive-daily Time by resource for multi station is started.",
 				true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.testAlarm_recursiv_daily_Resource(driver, st01N, st02N, gTodaysDate, germanyTimeAfter7MinHH,
-				germanyTimeAfter7MinMM, st01R1, st02R1);
+		ma.testAlarm_recursiv_daily_Resource(driver, st01N, st02N, todaysDate, timeAfter7MinHH, timeAfter7MinMM, st01R1,
+				st02R1);
 
 		Reporter.log(GREEN + GREEN
 				+ "The process of creating  Test alarm-recursive-daily Time by resource for multi station is complete.",
@@ -520,16 +607,16 @@ public class A_testClassCreate extends b_baseClass {
 	{
 		tc.catchDateTime(driver);
 
-		germanyTimeAfter5MinHH = tc.germanyTimeAfter5MinHH;
-		germanyTimeAfter5MinMM = tc.germanyTimeAfter5MinMM;
-//		System.out.println(germanyTimeAfter5MinHH);
-//		System.out.println(germanyTimeAfter5MinMM);
+		timeAfter5MinHH = tc.timeAfter5MinHH;
+		timeAfter5MinMM = tc.timeAfter5MinMM;
+//		System.out.println(timeAfter5MinHH);
+//		System.out.println(timeAfter5MinMM);
 
 		Reporter.log(" ", true);
 		Reporter.log("The process of creating Test alarm-One Time by attribute for multi station is started.", true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.TestAlarm_OneTime_Attribute(driver, st01N, gTodaysDate, germanyTimeAfter5MinHH, germanyTimeAfter5MinMM,
-				st01V1, st01V2, st01A1);
+		ma.TestAlarm_OneTime_Attribute(driver, st01N, todaysDate, timeAfter5MinHH, timeAfter5MinMM, st01V1, st01V2,
+				st01A1);
 
 		Reporter.log(
 				GREEN + GREEN
@@ -545,7 +632,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of add vehicle user is started.", true);
 		users.commonForVehicleUser(driver, branchName);
-		users.addVehicleUser(driver, branchName, st01N, gTodaysDate, gtimeHHMMSS, resourceNewUser, filePath);
+		users.addVehicleUser(driver, branchName, st01N, todaysDate, timeHHMMSS, resourceNewUser, filePath);
 		Reporter.log(GREEN + GREEN + "The process of add vehicle user is complete.", true);
 		Reporter.log(" ", true);
 	}
@@ -555,8 +642,8 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of import users is started.", true);
 		users.commonForUser(driver, branchName);
-		users.importUser(driver, branchName, gTodaysDate, gtimeHHMMSS, st01N, st02N, germanyTodaysDate1,
-				resourceNewUser, importUserFile);
+		users.importUser(driver, branchName, todaysDate, timeHHMMSS, st01N, st02N, todaysDateddmmyy, resourceNewUser,
+				importUserFile);
 
 		Reporter.log(GREEN + GREEN + "The process of import users is is complete.", true);
 		Reporter.log(" ", true);
@@ -567,8 +654,8 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of add station user is started.", true);
 		users.commonForUser(driver, branchName);
-		users.AddUersBasicDetail(driver, branchName, gTodaysDate, gtimeHHMMSS, filePath, "MR");
-		users.addMultiRoleUser(driver, branchName, st01N, germanyTodaysDate1, gtimeHHMMSS, filePath, attributeNewUser,
+		users.AddUersBasicDetail(driver, branchName, todaysDate, timeHHMMSS, filePath, "MR");
+		users.addMultiRoleUser(driver, branchName, st01N, todaysDateddmmyy, timeHHMMSS, filePath, attributeNewUser,
 				resourceNewUser);
 
 		Reporter.log(GREEN + GREEN + "The process of add multi role user is complete.", true);
@@ -580,7 +667,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of add station user is started.", true);
 		users.commonForUser(driver, branchName);
-		users.AddUersBasicDetail(driver, branchName, gTodaysDate, gtimeHHMMSS, filePath, "SR");
+		users.AddUersBasicDetail(driver, branchName, todaysDate, timeHHMMSS, filePath, "SR");
 		users.addStataionUser(driver, branchName, st01N, filePath);
 
 		Reporter.log(GREEN + GREEN + "The process of add Station user is complete.", true);
@@ -592,8 +679,8 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of add firefighter is started.", true);
 		users.commonForUser(driver, branchName);
-		users.AddUersBasicDetail(driver, branchName, gTodaysDate, gtimeHHMMSS, filePath, "AR");
-		users.addAppUser(driver, branchName, st01N, germanyTodaysDate1, gtimeHHMMSS, filePath, attributeNewUser,
+		users.AddUersBasicDetail(driver, branchName, todaysDate, timeHHMMSS, filePath, "AR");
+		users.addAppUser(driver, branchName, st01N, todaysDateddmmyy, timeHHMMSS, filePath, attributeNewUser,
 				resourceNewUser);
 
 		Reporter.log(GREEN + GREEN + "The process of add App user is complete.", true);
@@ -663,7 +750,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of create chat group by fire fighter is started.", true);
 		chatGroups.commonForChatGroup(driver, branchName);
-		chatGroups.createChatFroupByFireFighterMS(driver, st01N, st02N, gTodaysDate, gtimeHHMMSS, st01FF1, st02FF1,
+		chatGroups.createChatFroupByFireFighterMS(driver, st01N, st02N, todaysDate, timeHHMMSS, st01FF1, st02FF1,
 				filePath);
 		Reporter.log(GREEN + GREEN + "The process of create chat group by fire fighter is complete.", true);
 		Reporter.log(" ", true);
@@ -678,7 +765,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of create chat group by alarm loop is started.", true);
 		chatGroups.commonForChatGroup(driver, branchName);
-		chatGroups.createChatFroupByAlarmLoopsMS(driver, st01N, st02N, gTodaysDate, gtimeHHMMSS, st01Al1, st02Al1,
+		chatGroups.createChatFroupByAlarmLoopsMS(driver, st01N, st02N, todaysDate, timeHHMMSS, st01Al1, st02Al1,
 				filePath);
 		Reporter.log(GREEN + GREEN + "The process of create chat group by alarm loop is complete.", true);
 		Reporter.log(" ", true);
@@ -693,8 +780,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of create chat group by resource is started.", true);
 		chatGroups.commonForChatGroup(driver, branchName);
-		chatGroups.createChatFroupByResourceMS(driver, st01N, st02N, gTodaysDate, gtimeHHMMSS, st01R1, st02R1,
-				filePath);
+		chatGroups.createChatFroupByResourceMS(driver, st01N, st02N, todaysDate, timeHHMMSS, st01R1, st02R1, filePath);
 		Reporter.log(GREEN + GREEN + "The process of create chat group by resource is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
@@ -708,8 +794,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of create chat group by attribute is started.", true);
 		chatGroups.commonForChatGroup(driver, branchName);
-		chatGroups.createChatFroupByAttributeMS(driver, st01N, st02N, gTodaysDate, gtimeHHMMSS, st01A1, st02A1,
-				filePath);
+		chatGroups.createChatFroupByAttributeMS(driver, st01N, st02N, todaysDate, timeHHMMSS, st01A1, st02A1, filePath);
 
 		Reporter.log(GREEN + GREEN + "The process of create chat group by attribute is complete.", true);
 		Reporter.log(" ", true);
@@ -724,12 +809,12 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of Checking Alarm template validation is started.", true);
 		at.commonAlarmTemplate(driver, branchName);
-		at.TCAlarmTemplateCheckingValidation(driver, gTodaysDate, gtimeHHMMSS, st02N, st01N, st01V1, st02V1, st01A1,
+		at.TCAlarmTemplateCheckingValidation(driver, todaysDate, timeHHMMSS, st02N, st01N, st01V1, st02V1, st01A1,
 				st02A1, filePath);
 		getDetailsFromFiles();
 
 		at.commonAlarmTemplate(driver, branchName);
-		at.TCAlarmTemplateCheckingValidation(driver, gTodaysDate, gtimeHHMMSS, st02N, st01N, st01V1, st02V1, st01A1,
+		at.TCAlarmTemplateCheckingValidation(driver, todaysDate, timeHHMMSS, st02N, st01N, st01V1, st02V1, st01A1,
 				st02A1, filePath);
 		Reporter.log(GREEN + GREEN + "The process of Checking Alarm template validation is complete.", true);
 		Reporter.log(" ", true);
@@ -744,7 +829,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of checking validation for alarm loop is started.", true);
 		al.commonAlarmLoop(driver, branchName);
-		al.TCcreateNewAlarmLoop(driver, st02N, st01N, gTodaysDate, gtimeHHMMSS, st01R1, st02R1, st02V1, st01V1, st01FF1,
+		al.TCcreateNewAlarmLoop(driver, st02N, st01N, todaysDate, timeHHMMSS, st01R1, st02R1, st02V1, st01V1, st01FF1,
 				st02FF1);
 		Reporter.log(GREEN + GREEN + "The process of checking validation for alarm loop is complete.", true);
 		Reporter.log(" ", true);
@@ -759,8 +844,8 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of checking validation for alarm resource is started.", true);
 		ar.commonResource(driver, branchName);
-		ar.TCResourceValidationChecking(driver, st02N, st01N, gTodaysDate, gtimeHHMMSS, st02V1, st01V1, st01FF1,
-				st02FF1, filePath);
+		ar.TCResourceValidationChecking(driver, st02N, st01N, todaysDate, timeHHMMSS, st02V1, st01V1, st01FF1, st02FF1,
+				filePath);
 		Reporter.log(GREEN + GREEN + "The process of checking validation for alarm resource is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
@@ -775,7 +860,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process for checking validation for calendar event has been initiated.", true);
 		cl.common_calendar(driver, branchName);
-		cl.TCCalenderEventValidationChecking(driver, st01N, st02N, gTodaysDate, gtimeHHMMSS);
+		cl.TCCalenderEventValidationChecking(driver, st01N, st02N, todaysDate, timeHHMMSS);
 		Reporter.log(
 				GREEN + GREEN
 						+ "The process for checking validation for calendar event has been completed successfully.",
@@ -792,7 +877,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of checking validation for the Alarm has been initiated.", true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.TCManualAlarmMSCheckingValidation(driver, st01N, st02N, gTodaysDate, gtimeHHMMSS, st01R1, st02R1);
+		ma.TCManualAlarmMSCheckingValidation(driver, st01N, st02N, todaysDate, timeHHMMSS, st01R1, st02R1);
 
 		Reporter.log(GREEN + GREEN + "The process of checking validation for the Alarm has been completed.", true);
 		Reporter.log(" ", true);
@@ -805,18 +890,17 @@ public class A_testClassCreate extends b_baseClass {
 
 	{
 		tc.catchDateTime(driver);
-		germanyTimeAfter5MinHH = tc.germanyTimeAfter5MinHH;
-		germanyTimeAfter5MinMM = tc.germanyTimeAfter5MinMM;
-		germanyTimeAfter20MinHH = tc.germanyTimeAfter20MinHH;
-		germanyTimeAfter20MinMM = tc.germanyTimeAfter20MinMM;
+		timeAfter5MinHH = tc.timeAfter5MinHH;
+		timeAfter5MinMM = tc.timeAfter5MinMM;
+		timeAfter20MinHH = tc.timeAfter20MinHH;
+		timeAfter20MinMM = tc.timeAfter20MinMM;
 
 		Reporter.log(" ", true);
 		Reporter.log("The process for checking validation for information has been initiated.", true);
 		info.common_information(driver, branchName);
 
-		info.TCMonitorInformationValidationChecking(driver, st01N, gTodaysDate, gtimeHHMMSS, St01M1, St01M2,
-				germanyTimeAfter5MinHH, germanyTimeAfter5MinMM, germanyTimeAfter20MinHH, germanyTimeAfter20MinMM,
-				branchName);
+		info.TCMonitorInformationValidationChecking(driver, st01N, todaysDate, timeHHMMSS, St01M1, St01M2,
+				timeAfter5MinHH, timeAfter5MinMM, timeAfter20MinHH, timeAfter20MinMM, branchName);
 		Reporter.log(
 				GREEN + GREEN
 						+ "The process for checking validation for information event has been completed successfully.",
@@ -831,16 +915,16 @@ public class A_testClassCreate extends b_baseClass {
 
 	{
 		tc.catchDateTime(driver);
-		germanyTimeAfter5MinHH = tc.germanyTimeAfter5MinHH;
-		germanyTimeAfter5MinMM = tc.germanyTimeAfter5MinMM;
-		germanyTimeAfter20MinHH = tc.germanyTimeAfter20MinHH;
-		germanyTimeAfter20MinMM = tc.germanyTimeAfter20MinMM;
+		timeAfter5MinHH = tc.timeAfter5MinHH;
+		timeAfter5MinMM = tc.timeAfter5MinMM;
+		timeAfter20MinHH = tc.timeAfter20MinHH;
+		timeAfter20MinMM = tc.timeAfter20MinMM;
 
 		Reporter.log(" ", true);
 		Reporter.log("The process for checking validation for information event has been initiated.", true);
 		info.common_information(driver, branchName);
 
-		info.TCInfoeventValidationChecking(driver, st01N, st02N, gTodaysDate, gtimeHHMMSS, gTomorrowDate, branchName);
+		info.TCInfoeventValidationChecking(driver, st01N, st02N, todaysDate, timeHHMMSS, tomorrowDate, branchName);
 		Reporter.log(
 				GREEN + GREEN
 						+ "The process for checking validation for information event has been completed successfully.",
@@ -858,7 +942,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process for creating event category  has been initiated..", true);
 		cl.common_calendar(driver, branchName);
-		cl.createEventCategory(driver, gTodaysDate, gtimeHHMMSS);
+		cl.createEventCategory(driver, todaysDate, timeHHMMSS);
 		Reporter.log(GREEN + GREEN + "The process for ccreating event category has been completed successfully.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
@@ -874,7 +958,7 @@ public class A_testClassCreate extends b_baseClass {
 
 		Reporter.log("The process for creating calendar event by stations has been initiated..", true);
 		cl.common_calendar(driver, branchName);
-		cl.createCalendarEventByStationsMS(driver, st01N, st02N, gTodaysDate, gtimeHHMMSS);
+		cl.createCalendarEventByStationsMS(driver, st01N, st02N, todaysDate, timeHHMMSS);
 		Reporter.log(
 				GREEN + GREEN + "The process for creating calendar event by stations has been completed successfully.",
 				true);
@@ -888,16 +972,16 @@ public class A_testClassCreate extends b_baseClass {
 
 	{
 		tc.catchDateTime(driver);
-		germanyTimeAfter5MinHH = tc.germanyTimeAfter5MinHH;
-		germanyTimeAfter5MinMM = tc.germanyTimeAfter5MinMM;
-		germanyTimeAfter20MinHH = tc.germanyTimeAfter20MinHH;
-		germanyTimeAfter20MinMM = tc.germanyTimeAfter20MinMM;
+		timeAfter5MinHH = tc.timeAfter5MinHH;
+		timeAfter5MinMM = tc.timeAfter5MinMM;
+		timeAfter20MinHH = tc.timeAfter20MinHH;
+		timeAfter20MinMM = tc.timeAfter20MinMM;
 
 		Reporter.log(" ", true);
 		Reporter.log("The process for creating calendar event by fire fighters has been initiated..", true);
 		cl.common_calendar(driver, branchName);
-		cl.createCalendarEventByFireFughterMS(driver, st01N, st02N, gTodaysDate, gtimeHHMMSS, germanyTimeAfter5MinHH,
-				germanyTimeAfter5MinMM, germanyTimeAfter20MinHH, germanyTimeAfter20MinMM, st01FF1, st02FF1);
+		cl.createCalendarEventByFireFughterMS(driver, st01N, st02N, todaysDate, timeHHMMSS, timeAfter5MinHH,
+				timeAfter5MinMM, timeAfter20MinHH, timeAfter20MinMM, st01FF1, st02FF1);
 		Reporter.log(
 				GREEN + GREEN
 						+ "The process for creating calendar event by fire fighters has been completed successfully.",
@@ -912,17 +996,17 @@ public class A_testClassCreate extends b_baseClass {
 
 	{
 		tc.catchDateTime(driver);
-		germanyTimeAfter1Hrs5MinHH = tc.germanyTimeAfter1Hrs5MinHH;
-		germanyTimeAfter1Hrs5MinMM = tc.germanyTimeAfter1Hrs5MinMM;
+		timeAfter1Hrs5MinHH = tc.timeAfter1Hrs5MinHH;
+		timeAfter1Hrs5MinMM = tc.timeAfter1Hrs5MinMM;
 
-		germanyTimeAfter1Hrs20MinHH = tc.germanyTimeAfter1Hrs20MinHH;
-		germanyTimeAfter1Hrs20MinMM = tc.germanyTimeAfter1Hrs20MinMM;
+		timeAfter1Hrs20MinHH = tc.timeAfter1Hrs20MinHH;
+		timeAfter1Hrs20MinMM = tc.timeAfter1Hrs20MinMM;
 
 		Reporter.log(" ", true);
 		Reporter.log("The process for creating calendar event by Resource has been initiated..", true);
 		cl.common_calendar(driver, branchName);
-		cl.createCalendarEventByResource(driver, st01N, gTodaysDate, gtimeHHMMSS, germanyTimeAfter1Hrs5MinHH,
-				germanyTimeAfter1Hrs5MinMM, germanyTimeAfter1Hrs20MinHH, germanyTimeAfter1Hrs20MinMM, st01R1);
+		cl.createCalendarEventByResource(driver, st01N, todaysDate, timeHHMMSS, timeAfter1Hrs5MinHH,
+				timeAfter1Hrs5MinMM, timeAfter1Hrs20MinHH, timeAfter1Hrs20MinMM, st01R1);
 		Reporter.log(
 				GREEN + GREEN + "The process for creating calendar event by Resource has been completed successfully.",
 				true);
@@ -936,16 +1020,16 @@ public class A_testClassCreate extends b_baseClass {
 
 	{
 		tc.catchDateTime(driver);
-		germanyTimeAfter5MinHH = tc.germanyTimeAfter5MinHH;
-		germanyTimeAfter5MinMM = tc.germanyTimeAfter5MinMM;
-		germanyTimeAfter20MinHH = tc.germanyTimeAfter20MinHH;
-		germanyTimeAfter20MinMM = tc.germanyTimeAfter20MinMM;
+		timeAfter5MinHH = tc.timeAfter5MinHH;
+		timeAfter5MinMM = tc.timeAfter5MinMM;
+		timeAfter20MinHH = tc.timeAfter20MinHH;
+		timeAfter20MinMM = tc.timeAfter20MinMM;
 
 		Reporter.log(" ", true);
 		Reporter.log("The process for creating calendar event by attribute has been initiated..", true);
 		cl.common_calendar(driver, branchName);
-		cl.createCalendarEventByAttribute(driver, st01N, gTodaysDate, gtimeHHMMSS, germanyTimeAfter5MinHH,
-				germanyTimeAfter5MinMM, germanyTimeAfter20MinHH, germanyTimeAfter20MinMM, st01A1);
+		cl.createCalendarEventByAttribute(driver, st01N, todaysDate, timeHHMMSS, timeAfter5MinHH, timeAfter5MinMM,
+				timeAfter20MinHH, timeAfter20MinMM, st01A1);
 		Reporter.log(
 				GREEN + GREEN + "The process for creating calendar event by attribute has been completed successfully.",
 				true);
@@ -965,7 +1049,7 @@ public class A_testClassCreate extends b_baseClass {
 				true);
 		info.common_information(driver, branchName);
 
-		info.SendMessageTo1DayInformationEventByFireFighter(driver, InfoEventNameForChat, gTodaysDate, gtimeHHMMSS,
+		info.SendMessageTo1DayInformationEventByFireFighter(driver, InfoEventNameForChat, todaysDate, timeHHMMSS,
 				branchName);
 		Reporter.log(GREEN + GREEN
 				+ "The process for sending messages for full-day Information Events using stations  has been completed successfully.",
@@ -984,7 +1068,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log("The process for creating Alarm By Newly Added Template From Template Module has been initiated.",
 				true);
 		at.commonAlarmTemplate(driver, branchName);
-		at.createAlarmByNewlyAddedTemplateFromTemplateModule(driver, NewTemplate, gTodaysDate, gtimeHHMMSS, branchName);
+		at.createAlarmByNewlyAddedTemplateFromTemplateModule(driver, NewTemplate, todaysDate, timeHHMMSS, branchName);
 		Reporter.log(GREEN + GREEN
 				+ "The process for creating Alarm By Newly Added Template From Template Module has been completed successfully.",
 				true);
@@ -998,17 +1082,17 @@ public class A_testClassCreate extends b_baseClass {
 
 	{
 		tc.catchDateTime(driver);
-		germanyTimeAfter5MinHH = tc.germanyTimeAfter5MinHH;
-		germanyTimeAfter5MinMM = tc.germanyTimeAfter5MinMM;
-		germanyTimeAfter20MinHH = tc.germanyTimeAfter20MinHH;
-		germanyTimeAfter20MinMM = tc.germanyTimeAfter20MinMM;
+		timeAfter5MinHH = tc.timeAfter5MinHH;
+		timeAfter5MinMM = tc.timeAfter5MinMM;
+		timeAfter20MinHH = tc.timeAfter20MinHH;
+		timeAfter20MinMM = tc.timeAfter20MinMM;
 
 		Reporter.log(" ", true);
 		Reporter.log("The process for creating a new Information-Event full day using stations has been initiated.",
 				true);
 		info.common_information(driver, branchName);
 
-		info.createFullDayInformationEventByStation(driver, st01N, st02N, gTodaysDate, gtimeHHMMSS, gTomorrowDate,
+		info.createFullDayInformationEventByStation(driver, st01N, st02N, todaysDate, timeHHMMSS, tomorrowDate,
 				branchName);
 		Reporter.log(GREEN + GREEN
 				+ "The process for creating a new  Information-Event full day using stations has been completed successfully.",
@@ -1023,18 +1107,18 @@ public class A_testClassCreate extends b_baseClass {
 
 	{
 		tc.catchDateTime(driver);
-		germanyTimeAfter5MinHH = tc.germanyTimeAfter5MinHH;
-		germanyTimeAfter5MinMM = tc.germanyTimeAfter5MinMM;
-		germanyTimeAfter20MinHH = tc.germanyTimeAfter20MinHH;
-		germanyTimeAfter20MinMM = tc.germanyTimeAfter20MinMM;
+		timeAfter5MinHH = tc.timeAfter5MinHH;
+		timeAfter5MinMM = tc.timeAfter5MinMM;
+		timeAfter20MinHH = tc.timeAfter20MinHH;
+		timeAfter20MinMM = tc.timeAfter20MinMM;
 
 		Reporter.log(" ", true);
 		Reporter.log("The process for creating a new Information-Event using fire fighter  has been initiated.", true);
 		info.common_information(driver, branchName);
 
-		info.create1DayInformationEventByFireFighter(driver, st01N, st02N, gTomorrowDate, gtimeHHMMSS, st01R1, St01M1,
-				St01M2, germanyTimeAfter5MinHH, germanyTimeAfter5MinMM, germanyTimeAfter20MinHH,
-				germanyTimeAfter20MinMM, st01FF1, st02FF1, branchName, filePath);
+		info.create1DayInformationEventByFireFighter(driver, st01N, st02N, tomorrowDate, timeHHMMSS, st01R1, St01M1,
+				St01M2, timeAfter5MinHH, timeAfter5MinMM, timeAfter20MinHH, timeAfter20MinMM, st01FF1, st02FF1,
+				branchName, filePath);
 		Reporter.log(GREEN + GREEN
 				+ "The process for creating a new Information-Event using fire fighter has been completed successfully.",
 				true);
@@ -1048,19 +1132,18 @@ public class A_testClassCreate extends b_baseClass {
 
 	{
 		tc.catchDateTime(driver);
-		germanyTimeAfter1Hrs5MinHH = tc.germanyTimeAfter1Hrs5MinHH;
-		germanyTimeAfter1Hrs5MinMM = tc.germanyTimeAfter1Hrs5MinMM;
+		timeAfter1Hrs5MinHH = tc.timeAfter1Hrs5MinHH;
+		timeAfter1Hrs5MinMM = tc.timeAfter1Hrs5MinMM;
 
-		germanyTimeAfter1Hrs20MinHH = tc.germanyTimeAfter1Hrs20MinHH;
-		germanyTimeAfter1Hrs20MinMM = tc.germanyTimeAfter1Hrs20MinMM;
+		timeAfter1Hrs20MinHH = tc.timeAfter1Hrs20MinHH;
+		timeAfter1Hrs20MinMM = tc.timeAfter1Hrs20MinMM;
 
 		Reporter.log(" ", true);
 		Reporter.log("The process for creating a new Information-Event using resource has been initiated.", true);
 		info.common_information(driver, branchName);
 
-		info.create1HrInformationEventByResource(driver, st01N, gTodaysDate, gtimeHHMMSS, st01R1, St01M1, St01M2,
-				germanyTimeAfter1Hrs5MinHH, germanyTimeAfter1Hrs5MinMM, germanyTimeAfter1Hrs20MinHH,
-				germanyTimeAfter1Hrs20MinMM, branchName);
+		info.create1HrInformationEventByResource(driver, st01N, todaysDate, timeHHMMSS, st01R1, St01M1, St01M2,
+				timeAfter1Hrs5MinHH, timeAfter1Hrs5MinMM, timeAfter1Hrs20MinHH, timeAfter1Hrs20MinMM, branchName);
 		Reporter.log(GREEN + GREEN
 				+ "The process for creating a new Information-Event using resource has been completed successfully.",
 				true);
@@ -1074,18 +1157,17 @@ public class A_testClassCreate extends b_baseClass {
 
 	{
 		tc.catchDateTime(driver);
-		germanyTimeAfter5MinHH = tc.germanyTimeAfter5MinHH;
-		germanyTimeAfter5MinMM = tc.germanyTimeAfter5MinMM;
-		germanyTimeAfter20MinHH = tc.germanyTimeAfter20MinHH;
-		germanyTimeAfter20MinMM = tc.germanyTimeAfter20MinMM;
+		timeAfter5MinHH = tc.timeAfter5MinHH;
+		timeAfter5MinMM = tc.timeAfter5MinMM;
+		timeAfter20MinHH = tc.timeAfter20MinHH;
+		timeAfter20MinMM = tc.timeAfter20MinMM;
 
 		Reporter.log(" ", true);
 		Reporter.log("The process for creating a new Information-Event using attribute has been initiated.", true);
 		info.common_information(driver, branchName);
 
-		info.create1MinInformationEventByAttribute(driver, st01N, gTodaysDate, gtimeHHMMSS, st01A1, St01M1, St01M2,
-				germanyTimeAfter5MinHH, germanyTimeAfter5MinMM, germanyTimeAfter20MinHH, germanyTimeAfter20MinMM,
-				branchName);
+		info.create1MinInformationEventByAttribute(driver, st01N, todaysDate, timeHHMMSS, st01A1, St01M1, St01M2,
+				timeAfter5MinHH, timeAfter5MinMM, timeAfter20MinHH, timeAfter20MinMM, branchName);
 		Reporter.log(GREEN + GREEN
 				+ "The process for creating a new Information-Event using attribute has been completed successfully.",
 				true);
@@ -1105,9 +1187,9 @@ public class A_testClassCreate extends b_baseClass {
 				true);
 		info.common_information(driver, branchName);
 
-		info.createMonitorInformationByFireFighterForTwoStation(driver, st01N, st02N, gTodaysDate, gtimeHHMMSS, st01FF1,
-				St01M1, St01M2, St02M1, germanyTimeAfter5MinHH, germanyTimeAfter5MinMM, st02FF1,
-				germanyTimeAfter20MinHH, germanyTimeAfter20MinMM, branchName);
+		info.createMonitorInformationByFireFighterForTwoStation(driver, st01N, st02N, todaysDate, timeHHMMSS, st01FF1,
+				St01M1, St01M2, St02M1, timeAfter5MinHH, timeAfter5MinMM, st02FF1, timeAfter20MinHH, timeAfter20MinMM,
+				branchName);
 		Reporter.log(GREEN + GREEN
 				+ "The process for creating a new monitor information using Stations (MS) has been completed successfully.",
 				true);
@@ -1121,19 +1203,18 @@ public class A_testClassCreate extends b_baseClass {
 
 	{
 		tc.catchDateTime(driver);
-		germanyTimeAfter5MinHH = tc.germanyTimeAfter5MinHH;
-		germanyTimeAfter5MinMM = tc.germanyTimeAfter5MinMM;
-		germanyTimeAfter20MinHH = tc.germanyTimeAfter20MinHH;
-		germanyTimeAfter20MinMM = tc.germanyTimeAfter20MinMM;
+		timeAfter5MinHH = tc.timeAfter5MinHH;
+		timeAfter5MinMM = tc.timeAfter5MinMM;
+		timeAfter20MinHH = tc.timeAfter20MinHH;
+		timeAfter20MinMM = tc.timeAfter20MinMM;
 
 		Reporter.log(" ", true);
 		Reporter.log("The process for creating a new monitor information using Fire Stations has been initiated.",
 				true);
 		info.common_information(driver, branchName);
 
-		info.createMonitorInformationByStations(driver, st01N, gTodaysDate, gtimeHHMMSS, St01M1, St01M2,
-				germanyTimeAfter5MinHH, germanyTimeAfter5MinMM, germanyTimeAfter20MinHH, germanyTimeAfter20MinMM,
-				branchName);
+		info.createMonitorInformationByStations(driver, st01N, todaysDate, timeHHMMSS, St01M1, St01M2, timeAfter5MinHH,
+				timeAfter5MinMM, timeAfter20MinHH, timeAfter20MinMM, branchName);
 		Reporter.log(GREEN + GREEN
 				+ "The process for creating a new monitor information using Stations has been completed successfully.",
 				true);
@@ -1147,19 +1228,18 @@ public class A_testClassCreate extends b_baseClass {
 
 	{
 		tc.catchDateTime(driver);
-		germanyTimeAfter5MinHH = tc.germanyTimeAfter5MinHH;
-		germanyTimeAfter5MinMM = tc.germanyTimeAfter5MinMM;
-		germanyTimeAfter20MinHH = tc.germanyTimeAfter20MinHH;
-		germanyTimeAfter20MinMM = tc.germanyTimeAfter20MinMM;
+		timeAfter5MinHH = tc.timeAfter5MinHH;
+		timeAfter5MinMM = tc.timeAfter5MinMM;
+		timeAfter20MinHH = tc.timeAfter20MinHH;
+		timeAfter20MinMM = tc.timeAfter20MinMM;
 
 		Reporter.log(" ", true);
 		Reporter.log("The process for creating a new monitor information using Fire Fighters has been initiated.",
 				true);
 		info.common_information(driver, branchName);
 
-		info.createMonitorInformationByFireFighter(driver, st01N, gTodaysDate, gtimeHHMMSS, st01FF1, St01M1, St01M2,
-				germanyTimeAfter5MinHH, germanyTimeAfter5MinMM, germanyTimeAfter20MinHH, germanyTimeAfter20MinMM,
-				branchName);
+		info.createMonitorInformationByFireFighter(driver, st01N, todaysDate, timeHHMMSS, st01FF1, St01M1, St01M2,
+				timeAfter5MinHH, timeAfter5MinMM, timeAfter20MinHH, timeAfter20MinMM, branchName);
 		Reporter.log(GREEN + GREEN
 				+ "The process for creating a new monitor information using Fire Fighters has been completed successfully.",
 				true);
@@ -1173,18 +1253,17 @@ public class A_testClassCreate extends b_baseClass {
 
 	{
 		tc.catchDateTime(driver);
-		germanyTimeAfter5MinHH = tc.germanyTimeAfter5MinHH;
-		germanyTimeAfter5MinMM = tc.germanyTimeAfter5MinMM;
-		germanyTimeAfter20MinHH = tc.germanyTimeAfter20MinHH;
-		germanyTimeAfter20MinMM = tc.germanyTimeAfter20MinMM;
+		timeAfter5MinHH = tc.timeAfter5MinHH;
+		timeAfter5MinMM = tc.timeAfter5MinMM;
+		timeAfter20MinHH = tc.timeAfter20MinHH;
+		timeAfter20MinMM = tc.timeAfter20MinMM;
 
 		Reporter.log(" ", true);
 		Reporter.log("The process for creating a new monitor information using Resource has been initiated.", true);
 		info.common_information(driver, branchName);
 
-		info.createMonitorInformationByResource(driver, st01N, gTodaysDate, gtimeHHMMSS, st01R1, St01M1, St01M2,
-				germanyTimeAfter5MinHH, germanyTimeAfter5MinMM, germanyTimeAfter20MinHH, germanyTimeAfter20MinMM,
-				branchName);
+		info.createMonitorInformationByResource(driver, st01N, todaysDate, timeHHMMSS, st01R1, St01M1, St01M2,
+				timeAfter5MinHH, timeAfter5MinMM, timeAfter20MinHH, timeAfter20MinMM, branchName);
 		Reporter.log(GREEN + GREEN
 				+ "The process for creating a new monitor information using Resource has been completed successfully.",
 				true);
@@ -1198,18 +1277,18 @@ public class A_testClassCreate extends b_baseClass {
 
 	{
 		tc.catchDateTime(driver);
-		germanyTimeAfter5MinHH = tc.germanyTimeAfter5MinHH;
-		germanyTimeAfter5MinMM = tc.germanyTimeAfter5MinMM;
-		germanyTimeAfter20MinHH = tc.germanyTimeAfter20MinHH;
-		germanyTimeAfter20MinMM = tc.germanyTimeAfter20MinMM;
+		timeAfter5MinHH = tc.timeAfter5MinHH;
+		timeAfter5MinMM = tc.timeAfter5MinMM;
+		timeAfter20MinHH = tc.timeAfter20MinHH;
+		timeAfter20MinMM = tc.timeAfter20MinMM;
 
 		Reporter.log(" ", true);
 //		Reporter.log("The process for creating a new monitor information using attributes has been initiated.", true);
 		info.common_information(driver, branchName);
 
-		info.createMonitorInformationByAttributeWithAttachments(driver, st01N, gTodaysDate, gtimeHHMMSS, st01A1, St01M1, St01M2,
-				germanyTimeAfter5MinHH, germanyTimeAfter5MinMM, germanyTimeAfter20MinHH, germanyTimeAfter20MinMM,
-				infoDocxFile, infoPdfFile, infoPdf9MbFile, infoPdf9Mb2File, infoWord10MbFile, branchName);
+		info.createMonitorInformationByAttributeWithAttachments(driver, st01N, todaysDate, timeHHMMSS, st01A1, St01M1,
+				St01M2, timeAfter5MinHH, timeAfter5MinMM, timeAfter20MinHH, timeAfter20MinMM, infoDocxFile, infoPdfFile,
+				infoPdf9MbFile, infoPdf9Mb2File, infoWord10MbFile, branchName);
 //		Reporter.log(GREEN + GREEN+ "The process for creating a new monitor information using attributes has been completed successfully.",true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
@@ -1224,7 +1303,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log("The process of creating manual alarm by new escalation resource is started.", true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
 
-		ma.manualAlarmByNewEscResource(driver, st01N, gTodaysDate, gtimeHHMMSS, filePath);
+		ma.manualAlarmByNewEscResource(driver, st01N, todaysDate, timeHHMMSS, filePath);
 		Reporter.log(GREEN + GREEN + "The process of creating nmanual alarm by new escalation resource is complete.",
 				true);
 		Reporter.log(" ", true);
@@ -1239,7 +1318,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of creating new escaltion resource is started.", true);
 		ar.commonResource(driver, branchName);
-		ar.createNewEscalationResource(driver, st01N, gTodaysDate, gtimeHHMMSS, St1V3, st01FF2, filePath);
+		ar.createNewEscalationResource(driver, st01N, todaysDate, timeHHMMSS, St1V3, st01FF2, filePath);
 		Reporter.log(GREEN + GREEN + "The process of creating new escaltion resource is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
@@ -1267,7 +1346,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of creating new alarm template by fire fighter is started.", true);
 		at.commonAlarmTemplate(driver, branchName);
-		at.createNewAlarmTemplateByFireFighter(driver, gTodaysDate, gtimeHHMMSS, st02N, st01N, st01V1, st02V1, st01FF1,
+		at.createNewAlarmTemplateByFireFighter(driver, todaysDate, timeHHMMSS, st02N, st01N, st01V1, st02V1, st01FF1,
 				st02FF1);
 		Reporter.log(GREEN + GREEN + "The process of creating new alarm template by fire fighter is complete.", true);
 		Reporter.log(" ", true);
@@ -1282,7 +1361,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of creating new alarm template by resource is started.", true);
 		at.commonAlarmTemplate(driver, branchName);
-		at.createNewAlarmTemplateByResource(driver, gTodaysDate, gtimeHHMMSS, st02N, st01N, st01R1, st02R1);
+		at.createNewAlarmTemplateByResource(driver, todaysDate, timeHHMMSS, st02N, st01N, st01R1, st02R1);
 		Reporter.log(GREEN + GREEN + "The process of creating new alarm template by resource is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
@@ -1296,7 +1375,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of creating new alarm template by attribute is started.", true);
 		at.commonAlarmTemplate(driver, branchName);
-		at.createNewAlarmTemplateByAttribute(driver, gTodaysDate, gtimeHHMMSS, st02N, st01N, st01V1, st02V1, st01A1,
+		at.createNewAlarmTemplateByAttribute(driver, todaysDate, timeHHMMSS, st02N, st01N, st01V1, st02V1, st01A1,
 				st02A1, filePath);
 		Reporter.log(GREEN + GREEN + "The process of creating new alarm template by attribute is complete.", true);
 		Reporter.log(" ", true);
@@ -1311,7 +1390,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of creating new alarm loop is started.", true);
 		al.commonAlarmLoop(driver, branchName);
-		al.createNewAlarmLoop(driver, st02N, st01N, gTodaysDate, gtimeHHMMSS, st01R1, st02R1);
+		al.createNewAlarmLoop(driver, st02N, st01N, todaysDate, timeHHMMSS, st01R1, st02R1);
 		Reporter.log(GREEN + GREEN + "The process of creating new alarm loop is is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
@@ -1325,8 +1404,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of creating new alarm resource is started.", true);
 		ar.commonResource(driver, branchName);
-		ar.createNewResource(driver, st02N, st01N, gTodaysDate, gtimeHHMMSS, st02V1, st01V1, st01FF1, st02FF1,
-				filePath);
+		ar.createNewResource(driver, st02N, st01N, todaysDate, timeHHMMSS, st02V1, st01V1, st01FF1, st02FF1, filePath);
 		Reporter.log(GREEN + GREEN + "The process of creating new alarm resource is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
@@ -1340,7 +1418,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of send message to manual alarm user is started.", true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.sendMessageToManualAlarmUser(driver, ManualAlarmNameForChat, gTodaysDate, gtimeHHMMSS, branchName);
+		ma.sendMessageToManualAlarmUser(driver, ManualAlarmNameForChat, todaysDate, timeHHMMSS, branchName);
 		Reporter.log(GREEN + GREEN + "The process of send message to manual alarm user is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
@@ -1441,8 +1519,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log("The process of creating a low priority multi station manual alarm by attribute  is started.",
 				true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.manualaByAttributeMSLP(driver, st01N, st02N, gTodaysDate, gtimeHHMMSS, st01V1, st01V2, st02V1, st01A1,
-				st02A1);
+		ma.manualaByAttributeMSLP(driver, st01N, st02N, todaysDate, timeHHMMSS, st01V1, st01V2, st02V1, st01A1, st02A1);
 		Reporter.log(
 				GREEN + GREEN
 						+ "The process of creating a low priority multi station manual alarm by attribute is complete.",
@@ -1459,7 +1536,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of creating a manual alarm by attribute  is started.", true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.manualaByAttributeSingleStation(driver, st01N, gTodaysDate, gtimeHHMMSS, st01V1, st01V2, st01A1);
+		ma.manualaByAttributeSingleStation(driver, st01N, todaysDate, timeHHMMSS, st01V1, st01V2, st01A1);
 
 		Reporter.log(GREEN + GREEN + "The process of creating a manual alarm by attribute is complete.", true);
 		Reporter.log(" ", true);
@@ -1476,7 +1553,7 @@ public class A_testClassCreate extends b_baseClass {
 				"The process of creating a manual alarm by attribute st2 and extend to st1 by resource is started.",
 				true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.manualaByAttributeExtend1To01StEscResourceFrom02(driver, st02N, gTodaysDate, gtimeHHMMSS, st02V1, st02A1,
+		ma.manualaByAttributeExtend1To01StEscResourceFrom02(driver, st02N, todaysDate, timeHHMMSS, st02V1, st02A1,
 				st01N, branchName, st01R1, filePath);
 
 		Reporter.log(GREEN + GREEN
@@ -1494,7 +1571,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of creating a manual alarm by resource-HP is started.", true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.manualAlarmByResourceMsHP(driver, st01N, st02N, gTodaysDate, gtimeHHMMSS, st01R1, st02R1);
+		ma.manualAlarmByResourceMsHP(driver, st01N, st02N, todaysDate, timeHHMMSS, st01R1, st02R1);
 
 		Reporter.log(GREEN + GREEN + "The process of creating a manual alarm by resource-HP is complete.", true);
 		Reporter.log(" ", true);
@@ -1509,7 +1586,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of creating a manual alarm by resource-LP is started.", true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.manualAlarmByResourceMsLP(driver, st01N, st02N, gTodaysDate, gtimeHHMMSS, st01R1, st02R1);
+		ma.manualAlarmByResourceMsLP(driver, st01N, st02N, todaysDate, timeHHMMSS, st01R1, st02R1);
 
 		Reporter.log(GREEN + GREEN + "The process of creating a manual alarm by esource-LP is complete.", true);
 		Reporter.log(" ", true);
@@ -1539,7 +1616,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of creating a manual alarm by new resource  is started.", true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.manualAlarmByNewREsource(driver, st01N, gTodaysDate, gtimeHHMMSS, filePath);
+		ma.manualAlarmByNewREsource(driver, st01N, todaysDate, timeHHMMSS, filePath);
 		Reporter.log(GREEN + GREEN + "The process of creating a manual alarm by new resource is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
@@ -1568,7 +1645,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of creating a manual alarm by escaltion resource-multi station is started.", true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.manualAlarmByEscResourceMS(driver, st02N, gTodaysDate, gtimeHHMMSS, st02REsc);
+		ma.manualAlarmByEscResourceMS(driver, st02N, todaysDate, timeHHMMSS, st02REsc);
 
 		Reporter.log(
 				GREEN + GREEN
@@ -1586,7 +1663,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of creating a manual alarm by escaltion resource-single station is started.", true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.manualAlarmByEscResourceSingleStation(driver, st01N, gTodaysDate, gtimeHHMMSS, st01REsc);
+		ma.manualAlarmByEscResourceSingleStation(driver, st01N, todaysDate, timeHHMMSS, st01REsc);
 
 		Reporter.log(
 				GREEN + GREEN
@@ -1604,7 +1681,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of creating a manual alarm by firefighter is started.", true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.manualAlarmByUersMs(driver, st01N, st02N, gTodaysDate, gtimeHHMMSS, st01V1, st01V2, st02V1, st01FF1, st01FF2,
+		ma.manualAlarmByUersMs(driver, st01N, st02N, todaysDate, timeHHMMSS, st01V1, st01V2, st02V1, st01FF1, st01FF2,
 				st02FF1);
 
 		Reporter.log(GREEN + GREEN + "The process of creating a manual alarm by firefighter is complete.", true);
@@ -1625,8 +1702,8 @@ public class A_testClassCreate extends b_baseClass {
 				"The process of creating Monthly Test alarm-recursive-daily-Attribute-09:00 Time by resource for multi station is started.",
 				true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.Bhupesh_testAlarm_recursiv_daily_userType_time( driver,  st01N,  st02N,    "Attribute",  "09", "00",  st01V1,  st01V2,
-				 st02V1,  st01A1, st02A1,  st01R1,  st02R1,  st01FF1,  st01FF2,  st02FF1 );
+		ma.Bhupesh_testAlarm_recursiv_daily_userType_time(driver, st01N, st02N, "Attribute", "09", "00", st01V1, st01V2,
+				st02V1, st01A1, st02A1, st01R1, st02R1, st01FF1, st01FF2, st02FF1);
 
 		Reporter.log(GREEN + GREEN
 				+ "The process of creating Monthly Test alarm-recursive-daily-Attribute-09:00 Time by resource for multi station is complete.",
@@ -1635,10 +1712,7 @@ public class A_testClassCreate extends b_baseClass {
 		Thread.sleep(3000);
 
 	}
-	
-	
-	
-	
+
 	@Test
 	public void Bhupesh_testAlarm_recursiv_daily_Resource_0905() throws Throwable
 
@@ -1649,8 +1723,8 @@ public class A_testClassCreate extends b_baseClass {
 				"The process of creating Monthly Test alarm-recursive-daily-Resource-09:05 Time by resource for multi station is started.",
 				true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.Bhupesh_testAlarm_recursiv_daily_userType_time( driver,  st01N,  st02N,    "Resource",  "09", "05",  st01V1,  st01V2,
-				 st02V1,  st01A1, st02A1,  st01R1,  st02R1,  st01FF1,  st01FF2,  st02FF1 );
+		ma.Bhupesh_testAlarm_recursiv_daily_userType_time(driver, st01N, st02N, "Resource", "09", "05", st01V1, st01V2,
+				st02V1, st01A1, st02A1, st01R1, st02R1, st01FF1, st01FF2, st02FF1);
 
 		Reporter.log(GREEN + GREEN
 				+ "The process of creating Monthly Test alarm-recursive-daily-Resource-09:05 Time by resource for multi station is complete.",
@@ -1659,7 +1733,7 @@ public class A_testClassCreate extends b_baseClass {
 		Thread.sleep(3000);
 
 	}
-	
+
 	@Test
 	public void Bhupesh_testAlarm_recursiv_daily_Users_0910() throws Throwable
 
@@ -1670,8 +1744,8 @@ public class A_testClassCreate extends b_baseClass {
 				"The process of creating Monthly Test alarm-recursive-daily-Users-09:10 Time by resource for multi station is started.",
 				true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.Bhupesh_testAlarm_recursiv_daily_userType_time( driver,  st01N,  st02N,    "Users",  "09", "10",  st01V1,  st01V2,
-				 st02V1,  st01A1, st02A1,  st01R1,  st02R1,  st01FF1,  st01FF2,  st02FF1 );
+		ma.Bhupesh_testAlarm_recursiv_daily_userType_time(driver, st01N, st02N, "Users", "09", "10", st01V1, st01V2,
+				st02V1, st01A1, st02A1, st01R1, st02R1, st01FF1, st01FF2, st02FF1);
 
 		Reporter.log(GREEN + GREEN
 				+ "The process of creating Monthly Test alarm-recursive-daily-Users-09:10 Time by resource for multi station is complete.",
@@ -1680,9 +1754,7 @@ public class A_testClassCreate extends b_baseClass {
 		Thread.sleep(3000);
 
 	}
-	
-	
-	
+
 	@Test
 	public void Bhupesh_testAlarm_recursiv_daily_Resource_1855() throws Throwable
 
@@ -1693,8 +1765,8 @@ public class A_testClassCreate extends b_baseClass {
 				"The process of creating Monthly Test alarm-recursive-daily-Resource-18:55 Time by resource for multi station is started.",
 				true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.Bhupesh_testAlarm_recursiv_daily_userType_time( driver,  st01N,  st02N,    "Resource",  "18", "55",  st01V1,  st01V2,
-				 st02V1,  st01A1, st02A1,  st01R1,  st02R1,  st01FF1,  st01FF2,  st02FF1 );
+		ma.Bhupesh_testAlarm_recursiv_daily_userType_time(driver, st01N, st02N, "Resource", "18", "55", st01V1, st01V2,
+				st02V1, st01A1, st02A1, st01R1, st02R1, st01FF1, st01FF2, st02FF1);
 		Reporter.log(GREEN + GREEN
 				+ "The process of creating Monthly Test alarm-recursive-daily-Resource-18:55 Time by resource for multi station is complete.",
 				true);
@@ -1703,26 +1775,18 @@ public class A_testClassCreate extends b_baseClass {
 
 	}
 
-	
-	
-	
-	
-	
-	
-	
-	
 	@Test
-	public void Bhupesh_testAlarm_recursiv_weekly_monday_attribute_0915 () throws Throwable
+	public void Bhupesh_testAlarm_recursiv_weekly_monday_attribute_0915() throws Throwable
 
 	{
 
 		Reporter.log(" ", true);
-		Reporter.log("The process of creating Test alarm-recursive-weekly-Monday-Attribute-09:15 by resource for multi station is started.",
+		Reporter.log(
+				"The process of creating Test alarm-recursive-weekly-Monday-Attribute-09:15 by resource for multi station is started.",
 				true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.Bhupesh_testAlarm_recursiv_weekly_weekDay_userType( driver,  st01N,  st02N, 
-				    "Monday",   "Attribute",  "09",  "15" ,  st01V1,  st01V2,
-					 st02V1,  st01A1, st02A1,  st01R1,  st02R1,  st01FF1,  st01FF2,  st02FF1 );
+		ma.Bhupesh_testAlarm_recursiv_weekly_weekDay_userType(driver, st01N, st02N, "Monday", "Attribute", "09", "15",
+				st01V1, st01V2, st02V1, st01A1, st02A1, st01R1, st02R1, st01FF1, st01FF2, st02FF1);
 
 		Reporter.log(GREEN + GREEN
 				+ "The process of creating  Test alarm-recursive-weekly-Monday-Attribute by resource-09:15 for multi station is complete.",
@@ -1733,17 +1797,17 @@ public class A_testClassCreate extends b_baseClass {
 	}
 
 	@Test
-	public void Bhupesh_testAlarm_recursiv_weekly_Wednesday_Resource_0915 () throws Throwable
+	public void Bhupesh_testAlarm_recursiv_weekly_Wednesday_Resource_0915() throws Throwable
 
 	{
 
 		Reporter.log(" ", true);
-		Reporter.log("The process of creating Test alarm-recursive-weekly-Wednesday-Resource-09:15 for multi station is started.",
+		Reporter.log(
+				"The process of creating Test alarm-recursive-weekly-Wednesday-Resource-09:15 for multi station is started.",
 				true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.Bhupesh_testAlarm_recursiv_weekly_weekDay_userType( driver,  st01N,  st02N, 
-			    "Wednesday",   "Resource",  "09",  "15" ,  st01V1,  st01V2,
-				 st02V1,  st01A1, st02A1,  st01R1,  st02R1,  st01FF1,  st01FF2,  st02FF1 );
+		ma.Bhupesh_testAlarm_recursiv_weekly_weekDay_userType(driver, st01N, st02N, "Wednesday", "Resource", "09", "15",
+				st01V1, st01V2, st02V1, st01A1, st02A1, st01R1, st02R1, st01FF1, st01FF2, st02FF1);
 
 		Reporter.log(GREEN + GREEN
 				+ "The process of creating  Test alarm-recursive-weekly-Wednesday-Resource-09:15 for multi station is complete.",
@@ -1759,12 +1823,12 @@ public class A_testClassCreate extends b_baseClass {
 	{
 
 		Reporter.log(" ", true);
-		Reporter.log("The process of creating Test alarm-recursive-weekly-Friday-Users-09:15 for multi station is started.",
+		Reporter.log(
+				"The process of creating Test alarm-recursive-weekly-Friday-Users-09:15 for multi station is started.",
 				true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.Bhupesh_testAlarm_recursiv_weekly_weekDay_userType( driver,  st01N,  st02N, 
-			    "Friday",   "Users",  "09",  "15" ,  st01V1,  st01V2,
-				 st02V1,  st01A1, st02A1,  st01R1,  st02R1,  st01FF1,  st01FF2,  st02FF1 );
+		ma.Bhupesh_testAlarm_recursiv_weekly_weekDay_userType(driver, st01N, st02N, "Friday", "Users", "09", "15",
+				st01V1, st01V2, st02V1, st01A1, st02A1, st01R1, st02R1, st01FF1, st01FF2, st02FF1);
 		Reporter.log(GREEN + GREEN
 				+ "The process of creating  Test alarm-recursive-weekly-Friday-Users-09:15 for multi station is complete.",
 				true);
@@ -1772,20 +1836,19 @@ public class A_testClassCreate extends b_baseClass {
 		Thread.sleep(3000);
 
 	}
-	
-	
+
 	@Test
 	public void Bhupesh_testAlarm_recursiv_monthly_frist_friday_Attribute_0920() throws Throwable
 
 	{
 
 		Reporter.log(" ", true);
-		Reporter.log("The process of creating Test alarm-recursive-First friday-Attribute-09:20 for multi station is started.",
+		Reporter.log(
+				"The process of creating Test alarm-recursive-First friday-Attribute-09:20 for multi station is started.",
 				true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-	ma.Bhupesh_testAlarm_recursiv_monthly_dayCount_dayName_userType( driver,  st01N,  st02N,  "Attribute",
-			 "Friday", "First" ,  "09",  "20",   st01V1,  st01V2,
-			 st02V1,  st01A1, st02A1,  st01R1,  st02R1,  st01FF1,  st01FF2,  st02FF1 ) ;
+		ma.Bhupesh_testAlarm_recursiv_monthly_dayCount_dayName_userType(driver, st01N, st02N, "Attribute", "Friday",
+				"First", "09", "20", st01V1, st01V2, st02V1, st01A1, st02A1, st01R1, st02R1, st01FF1, st01FF2, st02FF1);
 
 		Reporter.log(GREEN + GREEN
 				+ "The process of creating Test alarm-recursive-First friday-Attribute-09:20 for multi station is complete.",
@@ -1794,21 +1857,19 @@ public class A_testClassCreate extends b_baseClass {
 		Thread.sleep(3000);
 
 	}
-	
-	
-	
+
 	@Test
 	public void Bhupesh_testAlarm_recursiv_monthly_frist_friday_Resource_0925() throws Throwable
 
 	{
 
 		Reporter.log(" ", true);
-		Reporter.log("The process of creating Test alarm-recursive-First friday-Resource-09:25 for multi station is started.",
+		Reporter.log(
+				"The process of creating Test alarm-recursive-First friday-Resource-09:25 for multi station is started.",
 				true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-	ma.Bhupesh_testAlarm_recursiv_monthly_dayCount_dayName_userType( driver,  st01N,  st02N,  "Resource",
-			 "Friday", "First" ,  "09",  "25",   st01V1,  st01V2,
-			 st02V1,  st01A1, st02A1,  st01R1,  st02R1,  st01FF1,  st01FF2,  st02FF1 ) ;
+		ma.Bhupesh_testAlarm_recursiv_monthly_dayCount_dayName_userType(driver, st01N, st02N, "Resource", "Friday",
+				"First", "09", "25", st01V1, st01V2, st02V1, st01A1, st02A1, st01R1, st02R1, st01FF1, st01FF2, st02FF1);
 
 		Reporter.log(GREEN + GREEN
 				+ "The process of creating Test alarm-recursive-First friday-Resource-09:25 for multi station is complete.",
@@ -1817,20 +1878,19 @@ public class A_testClassCreate extends b_baseClass {
 		Thread.sleep(3000);
 
 	}
-	
-	
+
 	@Test
 	public void Bhupesh_testAlarm_recursiv_monthly_frist_friday_Users_0930() throws Throwable
 
 	{
 
 		Reporter.log(" ", true);
-		Reporter.log("The process of creating Test alarm-recursive-First friday-Resource-09:30 for multi station is started.",
+		Reporter.log(
+				"The process of creating Test alarm-recursive-First friday-Resource-09:30 for multi station is started.",
 				true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-	ma.Bhupesh_testAlarm_recursiv_monthly_dayCount_dayName_userType( driver,  st01N,  st02N,  "Users",
-			 "Friday", "First" ,  "09",  "30",   st01V1,  st01V2,
-			 st02V1,  st01A1, st02A1,  st01R1,  st02R1,  st01FF1,  st01FF2,  st02FF1 ) ;
+		ma.Bhupesh_testAlarm_recursiv_monthly_dayCount_dayName_userType(driver, st01N, st02N, "Users", "Friday",
+				"First", "09", "30", st01V1, st01V2, st02V1, st01A1, st02A1, st01R1, st02R1, st01FF1, st01FF2, st02FF1);
 
 		Reporter.log(GREEN + GREEN
 				+ "The process of creating Test alarm-recursive-First friday-Resource for multi station is complete.",
@@ -1839,23 +1899,21 @@ public class A_testClassCreate extends b_baseClass {
 		Thread.sleep(3000);
 
 	}
-	
 
-	
 //	Saturday
-	
+
 	@Test
 	public void Bhupesh_testAlarm_recursiv_monthly_frist_Saturday_Attribute_0920() throws Throwable
 
 	{
 
 		Reporter.log(" ", true);
-		Reporter.log("The process of creating Test alarm-recursive-First friday-Attribute-09:20 for multi station is started.",
+		Reporter.log(
+				"The process of creating Test alarm-recursive-First friday-Attribute-09:20 for multi station is started.",
 				true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-	ma.Bhupesh_testAlarm_recursiv_monthly_dayCount_dayName_userType( driver,  st01N,  st02N,  "Attribute",
-			 "Saturday", "First" ,  "09",  "20",   st01V1,  st01V2,
-			 st02V1,  st01A1, st02A1,  st01R1,  st02R1,  st01FF1,  st01FF2,  st02FF1 ) ;
+		ma.Bhupesh_testAlarm_recursiv_monthly_dayCount_dayName_userType(driver, st01N, st02N, "Attribute", "Saturday",
+				"First", "09", "20", st01V1, st01V2, st02V1, st01A1, st02A1, st01R1, st02R1, st01FF1, st01FF2, st02FF1);
 
 		Reporter.log(GREEN + GREEN
 				+ "The process of creating Test alarm-recursive-First friday-Attribute-09:20 for multi station is complete.",
@@ -1864,21 +1922,19 @@ public class A_testClassCreate extends b_baseClass {
 		Thread.sleep(3000);
 
 	}
-	
-	
-	
+
 	@Test
 	public void Bhupesh_testAlarm_recursiv_monthly_frist_Saturday_Resource_0925() throws Throwable
 
 	{
 
 		Reporter.log(" ", true);
-		Reporter.log("The process of creating Test alarm-recursive-First friday-Resource-09:25 for multi station is started.",
+		Reporter.log(
+				"The process of creating Test alarm-recursive-First friday-Resource-09:25 for multi station is started.",
 				true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-	ma.Bhupesh_testAlarm_recursiv_monthly_dayCount_dayName_userType( driver,  st01N,  st02N,  "Resource",
-			 "Saturday", "First" ,  "09",  "25",   st01V1,  st01V2,
-			 st02V1,  st01A1, st02A1,  st01R1,  st02R1,  st01FF1,  st01FF2,  st02FF1 ) ;
+		ma.Bhupesh_testAlarm_recursiv_monthly_dayCount_dayName_userType(driver, st01N, st02N, "Resource", "Saturday",
+				"First", "09", "25", st01V1, st01V2, st02V1, st01A1, st02A1, st01R1, st02R1, st01FF1, st01FF2, st02FF1);
 
 		Reporter.log(GREEN + GREEN
 				+ "The process of creating Test alarm-recursive-First friday-Resource-09:25 for multi station is complete.",
@@ -1887,20 +1943,19 @@ public class A_testClassCreate extends b_baseClass {
 		Thread.sleep(3000);
 
 	}
-	
-	
+
 	@Test
 	public void Bhupesh_testAlarm_recursiv_monthly_frist_Saturday_Users_0930() throws Throwable
 
 	{
 
 		Reporter.log(" ", true);
-		Reporter.log("The process of creating Test alarm-recursive-First friday-Resource-09:30 for multi station is started.",
+		Reporter.log(
+				"The process of creating Test alarm-recursive-First friday-Resource-09:30 for multi station is started.",
 				true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-	ma.Bhupesh_testAlarm_recursiv_monthly_dayCount_dayName_userType( driver,  st01N,  st02N,  "Users",
-			 "Saturday", "First" ,  "09",  "30",   st01V1,  st01V2,
-			 st02V1,  st01A1, st02A1,  st01R1,  st02R1,  st01FF1,  st01FF2,  st02FF1 ) ;
+		ma.Bhupesh_testAlarm_recursiv_monthly_dayCount_dayName_userType(driver, st01N, st02N, "Users", "Saturday",
+				"First", "09", "30", st01V1, st01V2, st02V1, st01A1, st02A1, st01R1, st02R1, st01FF1, st01FF2, st02FF1);
 
 		Reporter.log(GREEN + GREEN
 				+ "The process of creating Test alarm-recursive-First friday-Resource-09:30 for multi station is complete.",
@@ -1909,18 +1964,19 @@ public class A_testClassCreate extends b_baseClass {
 		Thread.sleep(3000);
 
 	}
+
 	@Test
 	public void Bhupesh_testAlarm_recursiv_monthly_date01_Attribute_0935() throws Throwable
 
 	{
 
 		Reporter.log(" ", true);
-		Reporter.log("The process of creating Test alarm-recursive-montly for 1st date-Attribute-09:35 for multi station is started.",
+		Reporter.log(
+				"The process of creating Test alarm-recursive-montly for 1st date-Attribute-09:35 for multi station is started.",
 				true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-	ma.Bhupesh_testAlarm_recursiv_monthly_date_userType( driver,  st01N,st02N,  "Attribute",  "01",
-			  "09" , "35" ,   st01V1,  st01V2,
-			 st02V1,  st01A1, st02A1,  st01R1,  st02R1,  st01FF1,  st01FF2,  st02FF1 );
+		ma.Bhupesh_testAlarm_recursiv_monthly_date_userType(driver, st01N, st02N, "Attribute", "01", "09", "35", st01V1,
+				st01V2, st02V1, st01A1, st02A1, st01R1, st02R1, st01FF1, st01FF2, st02FF1);
 
 		Reporter.log(GREEN + GREEN
 				+ "The process of creating Test alarm-recursive-montly for 1st date-Attribute-09:35 for multi station is complete.",
@@ -1929,21 +1985,19 @@ public class A_testClassCreate extends b_baseClass {
 		Thread.sleep(3000);
 
 	}
-	
-	
-	
+
 	@Test
 	public void Bhupesh_testAlarm_recursiv_monthly_date01_Resource_0940() throws Throwable
 
 	{
 
 		Reporter.log(" ", true);
-		Reporter.log("The process of creating Test alarm-recursive-montly for 1st date-Resource-09:40 for multi station is started.",
+		Reporter.log(
+				"The process of creating Test alarm-recursive-montly for 1st date-Resource-09:40 for multi station is started.",
 				true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-	ma.Bhupesh_testAlarm_recursiv_monthly_date_userType( driver,  st01N, st02N,  "Resource",  "01",
-			 "09" , "40" ,   st01V1,  st01V2,
-			 st02V1,  st01A1, st02A1,  st01R1,  st02R1,  st01FF1,  st01FF2,  st02FF1 );
+		ma.Bhupesh_testAlarm_recursiv_monthly_date_userType(driver, st01N, st02N, "Resource", "01", "09", "40", st01V1,
+				st01V2, st02V1, st01A1, st02A1, st01R1, st02R1, st01FF1, st01FF2, st02FF1);
 
 		Reporter.log(GREEN + GREEN
 				+ "The process of creating Test alarm-recursive-montly for 1st date-Resource-09:40 for multi station is complete.",
@@ -1952,20 +2006,19 @@ public class A_testClassCreate extends b_baseClass {
 		Thread.sleep(3000);
 
 	}
-	
-	
+
 	@Test
 	public void Bhupesh_testAlarm_recursiv_monthly_date01_Users_0945() throws Throwable
 
 	{
 
 		Reporter.log(" ", true);
-		Reporter.log("The process of creating Test alarm-recursive-montly for 1st date-Users-09:45 for multi station is started.",
+		Reporter.log(
+				"The process of creating Test alarm-recursive-montly for 1st date-Users-09:45 for multi station is started.",
 				true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-	ma.Bhupesh_testAlarm_recursiv_monthly_date_userType( driver,  st01N,st02N,  "Users",  "01",
-			 "09" , "45" ,   st01V1,  st01V2,
-			 st02V1,  st01A1, st02A1,  st01R1,  st02R1,  st01FF1,  st01FF2,  st02FF1 );
+		ma.Bhupesh_testAlarm_recursiv_monthly_date_userType(driver, st01N, st02N, "Users", "01", "09", "45", st01V1,
+				st01V2, st02V1, st01A1, st02A1, st01R1, st02R1, st01FF1, st01FF2, st02FF1);
 
 		Reporter.log(GREEN + GREEN
 				+ "The process of creating Test alarm-recursive-montly for 1st date-Users-09:45 for multi station is complete.",
@@ -1974,7 +2027,6 @@ public class A_testClassCreate extends b_baseClass {
 		Thread.sleep(3000);
 
 	}
-	
 
 	// Smoke
 
@@ -2039,7 +2091,7 @@ public class A_testClassCreate extends b_baseClass {
 	@Test
 	public void smokeForCreateManualAlarm() throws Throwable {
 		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.manualAlarmByEscResourceSingleStation(driver, st01N, gTodaysDate, gtimeHHMMSS, st01REsc);
+		ma.manualAlarmByEscResourceSingleStation(driver, st01N, todaysDate, timeHHMMSS, st01REsc);
 	}
 
 	@Test
@@ -2058,7 +2110,7 @@ public class A_testClassCreate extends b_baseClass {
 //		System.out.println("method end");
 
 //		if (result.getStatus() == ITestResult.FAILURE) {
-//			takeScreenshot(driver, gTodaysDate + "_" + gtimeHHMMSS + "_" + result.getName());
+//			takeScreenshot(driver, todaysDate + "_" + timeHHMMSS + "_" + result.getName());
 //			System.out.println(RED + RED + "Test Failed");
 //
 //		}

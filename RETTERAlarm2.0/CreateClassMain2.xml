@@ -7,25 +7,25 @@
 
 			<methods>
 
-				
-				
+
 				<include name="testAlarm_recursiv_daily_Resource" />
 				<include name="testAlarm_recursiv_weekly_users" />
 				<include name="TestAlarm_Recursive_Monthly_DayWise_Attribute" />
 				<include name="TestAlarm_Recursive_Monthly_DateyWise_Attribute" />
-				
-				
+
+
 				<include name="createMonitorInformationByResource" />
 				<include name="createMonitorInformationByFireFighter" />
 				<include name="createMonitorInformationByStations" />
-				<include name="createMonitorInformationByFireFighterForTwoStation" />
+				<include
+					name="createMonitorInformationByFireFighterForTwoStation" />
 
 				<include name="create1MinInformationEventByAttribute" />
 				<include name="create1HrInformationEventByResource" />
-				
+
 				<include name="create1DayInformationEventByFireFighter" />
 				<include name="createFullDayInformationEventByStation" />
-				
+
 				<include name="SendMessageTo1DayInformationEventByFireFighter" />
 
 
@@ -35,13 +35,11 @@
 				<include name="createCalendarEventByStationsMS" />
 
 
+				<include name="createAvailabilityRequestOneTimeImmediate" />
+				<include name="createAvailabilityRequestOneTimeSchedule" />
+				<include name="createAvailabilityRequestRecursive" />
+
 				<include name="nextStage" />
-				
-				
-				
-			
-				
-				
 
 
 			</methods>

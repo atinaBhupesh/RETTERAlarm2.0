@@ -8,15 +8,17 @@
 			<methods>
 			
 				
-				<include name="importUser" />
-				<include name="updateUser" />
-				 <include name="importEventWith1minReminder"/>				
+				<include name="createAvailabilityRequestOneTimeImmediate" />
+				<include name="createAvailabilityRequestOneTimeSchedule" />
+				<include name="createAvailabilityRequestRecursive" />
+			
 
 					
 					
 			</methods>
 
 		</classes>
+	
 	
 	
 	</test> <!--

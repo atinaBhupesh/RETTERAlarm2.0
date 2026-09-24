@@ -14,6 +14,8 @@
 				<include name="deleteVehicleUsers" />
 				<include name="deleteCalendarEvent" />
 				<include name="delete_infoEvent" />
+				<include name="deleteAvailabilityRequestFromHistory" />
+			<include name="deleteAvailabilityRequestFromList" />
 				<include name="deleteResource" />
 				<include name="deleteAlarmEscalation" />
 				<include name="deleteAlarmLoop" />
@@ -25,6 +27,9 @@
 				<include name="deleteTestAlarmFromPlaningList" />
 				<include name="deleteStaions" />
 				<include name="deleteMonitorUsers" />
+				
+				
+				
 
 			</methods>
 

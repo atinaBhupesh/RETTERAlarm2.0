@@ -30,6 +30,8 @@ public class A_testClassDelete extends b_baseClass {
 	N_users users;
 	O_stationModule stn;
 	P_monitors mo;
+	
+	S_AvailabilityRequest arequest;
 
 	String gTodaysDate;
 	String gtimeHHMMSS;
@@ -69,17 +71,15 @@ public class A_testClassDelete extends b_baseClass {
 		users = new N_users(driver);
 		stn= new O_stationModule (driver);
 		mo = new P_monitors(driver);
-
+		arequest = new S_AvailabilityRequest(driver);
+		
+		
 	}
 
 	@BeforeClass
 	public void createObject() throws Throwable {
 
-		tc.catchDateTime(driver);
-
-		gTodaysDate = tc.germanyTodaysDate;
-		gtimeHHMMSS = tc.germanyCurrentTimeHHMMSS;
-
+		
 		ma = new F_manualTestAlarm(driver);
 
 	}
@@ -90,6 +90,35 @@ public class A_testClassDelete extends b_baseClass {
 		hp.backToHomePage(driver, branchName);
 	}
 
+	@Test
+	public void deleteAvailabilityRequestFromHistory() throws Throwable
+
+	{
+		Reporter.log(" ", true);
+		Reporter.log("The process of delete Availability Request from History is started.", true);
+		arequest.deleteAvailabilityRequestFromHistory( driver);
+
+		Reporter.log(GREEN + GREEN + "The process of delete Availability Request from History is complete.", true);
+		Reporter.log(" ", true);
+		Thread.sleep(3000);
+
+	}
+	
+	
+	@Test
+	public void deleteAvailabilityRequestFromList() throws Throwable
+
+	{
+		Reporter.log(" ", true);
+		Reporter.log("The process of delete Availability Request from List is started.", true);
+		arequest.deleteAvailabilityRequestFromList( driver);
+
+		Reporter.log(GREEN + GREEN + "The process of delete Availability Request from List is complete.", true);
+		Reporter.log(" ", true);
+		Thread.sleep(3000);
+
+	}
+	
 	
 	@Test
 	public void deleteMonitorUsers() throws Throwable

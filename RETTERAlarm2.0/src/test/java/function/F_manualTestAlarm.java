@@ -450,7 +450,7 @@ public class F_manualTestAlarm extends b_baseClass {
 		PageFactory.initElements(driver, this);
 	}
 
-	public void verifyAllApiAlarmsCretaed(WebDriver driver, String germanyTodaysDate3, String germanyTodaysDate4,
+	public void verifyAllApiAlarmsCretaed(WebDriver driver, String gTodaysDate, String germanyTodaysDate1,
 			String ApiAlarm01, String ApiAlarm02, String ApiAlarm03, String ApiAlarm04, String ApiAlarm05,
 			String ApiAlarm06, String ApiAlarm07, String ApiAlarm08, String ApiAlarm09, String ApiAlarm10,
 			String ApiAlarm11, String ApiAlarm12, String ApiAlarm13, String ApiAlarm14) throws Throwable {
@@ -485,7 +485,7 @@ public class F_manualTestAlarm extends b_baseClass {
 //	        System.out.println(count);
 
 			Thread.sleep(2000);
-//	        System.out.println(germanyTodaysDate3);
+//	        System.out.println(gTodaysDate);
 
 			if (count == 0) {
 				System.out.println(RED + "Alarm not available.");
@@ -497,9 +497,9 @@ public class F_manualTestAlarm extends b_baseClass {
 				String alarmDate1 = getDate1.getText();
 
 //				System.out.println(germanyTodaysDate3);
-				System.out.println(alarmDate1);
+//				System.out.println(alarmDate1);
 
-				if (germanyTodaysDate3.equals(alarmDate1) || germanyTodaysDate4.equals(alarmDate1)) {
+				if (gTodaysDate.equals(alarmDate1) || germanyTodaysDate1.equals(alarmDate1)) {
 					System.out.println(GREEN + "Alarm " + title + " created successfully.");
 
 				}
@@ -1249,8 +1249,7 @@ public class F_manualTestAlarm extends b_baseClass {
 		act.sendKeys(Keys.ENTER).perform();
 
 		Thread.sleep(1000);
-//		act.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).sendKeys(Keys.BACK_SPACE).perform();
-
+		act.sendKeys(Keys.HOME).perform();
 		for (int d = 0; d <= 15; d++) {
 			act.sendKeys(Keys.DELETE).perform();
 
