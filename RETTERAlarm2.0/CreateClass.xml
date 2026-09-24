@@ -6,14 +6,11 @@
 			<class name="function.A_testClassCreate" />
 
 			<methods>
-					<include name="addNewStation" />
-				<include name="editStation" />
+			
 				
-				<include name="addStationMonitor" />
-				<include name="editStationMonitor" />
-					<include name="addOverviewMonitor" />
-					<include name="editOverviewMonitor" />
-				
+				<include name="importUser" />
+				<include name="updateUser" />
+				 <include name="importEventWith1minReminder"/>				
 
 					
 					

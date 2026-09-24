@@ -34,9 +34,12 @@ public class A_testClassCreate extends b_baseClass {
 	N_users users;
 	O_stationModule stn;
 
+
 	P_monitors mo;
 	
 	Q_Attribute att;
+	
+	R_FileSections fs;
 
 	String gTodaysDate;
 	String germanyTodaysDate1;
@@ -110,6 +113,7 @@ public class A_testClassCreate extends b_baseClass {
 		mo = new P_monitors(driver);
 		
 		att =new Q_Attribute (driver) ;
+		fs= new R_FileSections  (driver) ;
 
 	}
 
@@ -173,7 +177,21 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 	}
 	
-	
+	@Test
+	public void addNewFile() throws Throwable {
+		
+		
+		
+		Reporter.log(" ", true);
+		Reporter.log("The process of add new file is started.", true);
+
+		fs.commanForDocumentation(driver);
+		fs.addNewFile(driver,branchName,deptN ,st01N,gtimeHHMMSS );
+
+		Reporter.log(GREEN + GREEN + "The process of add new file is started.r is complete.", true);
+		Reporter.log(" ", true);
+	}
+
 	
 	
 	

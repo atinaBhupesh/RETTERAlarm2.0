@@ -6,10 +6,10 @@
       <class name="function.A_testClassCreate">
         <methods>
           <include name="AfterTest"/>
-          <include name="addNewStation"/>
           <include name="BeforeSuite"/>
           <include name="backToHomePage2"/>
           <include name="BeforeTest"/>
+          <include name="updateUser"/>
           <include name="logOut"/>
           <include name="backToHomePage"/>
           <include name="AfterSute"/>

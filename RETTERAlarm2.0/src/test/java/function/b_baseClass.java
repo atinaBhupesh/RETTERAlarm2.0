@@ -333,13 +333,13 @@ public class b_baseClass {
 		
 		
 		case "1":
-			filePath = ".\\DataFiles\\DetailsFileLiveBhupesh.xlsx";
+			filePath = "D:\\Automation_2307\\SampleFilesNew\\Details Files\\DetailsFileLiveBhupesh.xlsx";
 			password = "Atina@123";
 
 			break;
 
 		case "1.1":
-			filePath = ".\\DataFiles\\DetailsFileLive.xlsx";
+			filePath = "D:\\Automation_2307\\SampleFilesNew\\Details Files\\DetailsFileLive.xlsx";
 			password = "123456";
 
 			break;
@@ -347,7 +347,7 @@ public class b_baseClass {
 		
 
 		case "2":
-			filePath = ".\\DataFiles\\DetailsFileTesting.xlsx";
+			filePath = "D:\\Automation_2307\\SampleFilesNew\\Details Files\\DetailsFileTesting.xlsx";
 			password = "Qwerty@123";
 			break;
 
@@ -450,9 +450,12 @@ public class b_baseClass {
 
 	public void attachedField() {
 		
-		importUserFile = "D:\\Automation_2307\\MasterAutomationWorkSpcae\\RETTERAlarm2.0_Main\\RETTERAlarm2.0_07072026\\DataFiles\\User_Import_Sample.xlsx";
-		importEventFile = "D:\\Automation_2307\\MasterAutomationWorkSpcae\\RETTERAlarm2.0_Main\\RETTERAlarm2.0_07072026\\DataFiles\\importEventFile.xlsx";
-		updateUserFilr = "D:\\Automation_2307\\MasterAutomationWorkSpcae\\RETTERAlarm2.0_Main\\RETTERAlarm2.0_07072026\\DataFiles\\updateUserFile.xlsx";
+		importUserFile = "D:\\Automation_2307\\SampleFilesNew\\Details Files\\User_Import.xlsx";
+		importEventFile = "D:\\Automation_2307\\SampleFilesNew\\Details Files\\event_import.xlsx";
+		updateUserFilr = "D:\\Automation_2307\\SampleFilesNew\\Details Files\\user_update.xlsx";
+		
+		
+		
 		
 		
 		infoDocxFile = "D:\\Automation_2307\\SampleFilesNew\\docx_5mb.docx";
