@@ -8,41 +8,31 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">delete</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">95,030</td><td></td><td></td></tr>
+<tr><th colspan="8">Failed suite [delete]</th></tr>
+<tr><td><a href="#t0">Test(failed)</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num attn">1</td><td class="num">43,236</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">delete</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">function.A_testClassDelete</td><td><a href="#m0">backToHomePage2</a></td><td rowspan="1">1790256225640</td><td rowspan="1">173</td></tr><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">function.A_testClassDelete</td><td><a href="#m1">deleteAvailabilityRequestFromList</a></td><td rowspan="1">1790256146208</td><td rowspan="1">79425</td></tr><tr><th colspan="4">Test &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="3">function.A_testClassDelete</td><td><a href="#m2">AfterSute</a></td><td rowspan="1">1790256225858</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m3">AfterTest</a></td><td rowspan="1">1790256225819</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m4">logOut</a></td><td rowspan="1">1790256225816</td><td rowspan="1">0</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Failed suite [delete]</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test(failed) &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">function.A_testClassDelete</td><td><a href="#m0">backToHomePage2</a></td><td rowspan="1">1790317075307</td><td rowspan="1">94</td></tr><tr><th colspan="4">Test(failed) &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">function.A_testClassDelete</td><td><a href="#m1">deleteAvailabilityRequestFromHistory</a></td><td rowspan="1">1790317047623</td><td rowspan="1">27680</td></tr><tr><th colspan="4">Test(failed) &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="5">function.A_testClassDelete</td><td><a href="#m2">AfterSute</a></td><td rowspan="1">1790317075439</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m3">AfterTest</a></td><td rowspan="1">1790317075409</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m4">backToHomePage</a></td><td rowspan="1">1790317075404</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m5">backToHomePage2</a></td><td rowspan="1">1790317075407</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m6">logOut</a></td><td rowspan="1">1790317075408</td><td rowspan="1">0</td></tr><tr><th colspan="4">Test(failed) &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">function.A_testClassDelete</td><td><a href="#m7">deleteAvailabilityRequestFromList</a></td><td rowspan="1">1790317075405</td><td rowspan="1">0</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">function.A_testClassDelete#backToHomePage2</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>[TestResult name=deleteAvailabilityRequestFromList status=FAILURE method=A_testClassDelete.deleteAvailabilityRequestFromList()[pri:0, instance:function.A_testClassDelete@3a52dba3]]</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchSessionException: invalid session id
-Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.11&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ed796f10225a57fcef1970867e768e40, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 153.0.8010.53, chrome: {chromedriverVersion: 153.0.8010.52 (78e5e45d4bb4..., userDataDir: C:\Users\Bhupesh\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64819}, goog:processID: 125888, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64819/devtoo..., se:cdpVersion: 153.0.8010.53, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ed796f10225a57fcef1970867e768e40
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:592)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:596)
-	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:322)
-	at function.b_baseClass.takeScreenshot(b_baseClass.java:483)
-	at function.A_testClassDelete.backToHomePage2(A_testClassDelete.java:411)
+<h2>Test(failed)</h2><h3 id="m0">function.A_testClassDelete#backToHomePage2</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>[TestResult name=deleteAvailabilityRequestFromHistory status=FAILURE method=A_testClassDelete.deleteAvailabilityRequestFromHistory()[pri:0, instance:function.A_testClassDelete@2a5c8d3f]]</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.io.FileNotFoundException: E:\Automation _lapy\MasterAutomationWorkSpcae\screenshots\null_null_deleteAvailabilityRequestFromHistory.jpg (The system cannot find the path specified)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:289)
+	at java.base/java.io.FileOutputStream.&lt;init&gt;(FileOutputStream.java:230)
+	at java.base/java.io.FileOutputStream.&lt;init&gt;(FileOutputStream.java:179)
+	at org.openqa.selenium.io.FileHandler.copyFile(FileHandler.java:131)
+	at org.openqa.selenium.io.FileHandler.copy(FileHandler.java:110)
+	at function.b_baseClass.takeScreenshot(b_baseClass.java:485)
+	at function.A_testClassDelete.backToHomePage2(A_testClassDelete.java:424)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 33 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">function.A_testClassDelete#deleteAvailabilityRequestFromList</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages"> <br/>The process of delete Availability Request from List is started.</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchSessionException: invalid session id: session deleted as the browser has closed the connection
-from disconnected: not connected to DevTools
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">function.A_testClassDelete#deleteAvailabilityRequestFromHistory</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages"> <br/>The process of delete Availability Request from History is started.</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//i[@class=&quot;fa fa-trash-o&quot;])[1]&quot;}
   (Session info: chrome=153.0.8010.53)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.11&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ed796f10225a57fcef1970867e768e40, findElement {value=//input[@aria-controls=&quot;example1&quot;], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 153.0.8010.53, chrome: {chromedriverVersion: 153.0.8010.52 (78e5e45d4bb4..., userDataDir: C:\Users\Bhupesh\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64819}, goog:processID: 125888, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64819/devtoo..., se:cdpVersion: 153.0.8010.53, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ed796f10225a57fcef1970867e768e40
+Command: [6d4400750c7b5906106be9cc435120ba, findElement {value=(//i[@class=&quot;fa fa-trash-o&quot;])[1], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 153.0.8010.53, chrome: {chromedriverVersion: 153.0.8010.52 (78e5e45d4bb4..., userDataDir: C:\Users\Bhupesh\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58679}, goog:processID: 37524, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58679/devtoo..., se:cdpVersion: 153.0.8010.53, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6d4400750c7b5906106be9cc435120ba
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
@@ -57,12 +47,25 @@ Session ID: ed796f10225a57fcef1970867e768e40
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 	at jdk.proxy2/jdk.proxy2.$Proxy22.click(Unknown Source)
-	at function.S_AvailabilityRequest.deleteAvailabilityRequestFromList(S_AvailabilityRequest.java:393)
-	at function.A_testClassDelete.deleteAvailabilityRequestFromList(A_testClassDelete.java:101)
+	at function.S_AvailabilityRequest.deleteAvailabilityRequestFromHistory(S_AvailabilityRequest.java:498)
+	at function.A_testClassDelete.deleteAvailabilityRequestFromHistory(A_testClassDelete.java:99)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 ... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m2">function.A_testClassDelete#AfterSute</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m3">function.A_testClassDelete#AfterTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">function.A_testClassDelete#logOut</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">function.A_testClassDelete#backToHomePage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">function.A_testClassDelete#backToHomePage2</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">function.A_testClassDelete#logOut</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">function.A_testClassDelete#deleteAvailabilityRequestFromList</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.io.FileNotFoundException: E:\Automation _lapy\MasterAutomationWorkSpcae\screenshots\null_null_deleteAvailabilityRequestFromHistory.jpg (The system cannot find the path specified)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:289)
+	at java.base/java.io.FileOutputStream.&lt;init&gt;(FileOutputStream.java:230)
+	at java.base/java.io.FileOutputStream.&lt;init&gt;(FileOutputStream.java:179)
+	at org.openqa.selenium.io.FileHandler.copyFile(FileHandler.java:131)
+	at org.openqa.selenium.io.FileHandler.copy(FileHandler.java:110)
+	at function.b_baseClass.takeScreenshot(b_baseClass.java:485)
+	at function.A_testClassDelete.backToHomePage2(A_testClassDelete.java:424)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

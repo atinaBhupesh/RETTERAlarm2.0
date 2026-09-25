@@ -52,6 +52,9 @@ public class E_timeClass extends b_baseClass {
 
 	String timeAfter11MinHH;
 	String timeAfter11MinMM;
+	
+	String timeAfter11MinHHG;
+	String timeAfter11MinMMG;
 
 	String timeAfter15MinHH;
 	String timeAfter15MinMM;
@@ -122,7 +125,7 @@ public class E_timeClass extends b_baseClass {
 		timeAfter9MinMM = after9Min.format(timeFormatterMM);
 		
 		
-		// Time after 7 minutes-Germany
+		// Time after 9 minutes-Germany
 		ZonedDateTime after9MinG = nowG.plusMinutes(9);
 		timeAfter9MinHHG = after9MinG.format(timeFormatterHH);
 		timeAfter9MinMMG = after9MinG.format(timeFormatterMM);
@@ -132,6 +135,13 @@ public class E_timeClass extends b_baseClass {
 		ZonedDateTime after11Min = now.plusMinutes(11);
 		timeAfter11MinHH = after11Min.format(timeFormatterHH);
 		timeAfter11MinMM = after11Min.format(timeFormatterMM);
+		
+		// Time after 9 minutes-Germany
+		ZonedDateTime after11MinG = nowG.plusMinutes(9);
+		timeAfter11MinHHG = after11MinG.format(timeFormatterHH);
+		timeAfter11MinMMG = after11MinG.format(timeFormatterMM);
+		
+		
 
 		// Time after 15 minutes
 		ZonedDateTime after15Min = now.plusMinutes(15);

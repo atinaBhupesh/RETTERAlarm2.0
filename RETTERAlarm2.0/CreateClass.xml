@@ -8,9 +8,8 @@
 			<methods>
 			
 				
-				<include name="createAvailabilityRequestOneTimeImmediate" />
-				<include name="createAvailabilityRequestOneTimeSchedule" />
-				<include name="createAvailabilityRequestRecursive" />
+				<include name="createAvailabilityRequestMultipleDays" />
+				
 			
 
 					
