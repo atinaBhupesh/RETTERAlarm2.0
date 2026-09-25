@@ -5,14 +5,14 @@
     <classes>
       <class name="function.A_testClassDelete">
         <methods>
-          <include name="deleteCalendarEvent"/>
+          <include name="deleteAvailabilityRequestFromHistory"/>
           <include name="BeforeSuite"/>
           <include name="backToHomePage"/>
-          <include name="AfterSute"/>
           <include name="backToHomePage2"/>
+          <include name="AfterSute"/>
           <include name="BeforeTest"/>
+          <include name="deleteAvailabilityRequestFromList"/>
           <include name="logOut"/>
-          <include name="deleteCalendarEventAll"/>
           <include name="createObject"/>
           <include name="AfterTest"/>
         </methods>
