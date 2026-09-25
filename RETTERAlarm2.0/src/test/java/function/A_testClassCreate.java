@@ -211,7 +211,20 @@ public class A_testClassCreate extends b_baseClass {
 	}
 	
 	
+	@Test
+	public void createInformationWithEmailSms() throws Throwable {
+
 	
+		
+		Reporter.log(" ", true);
+		Reporter.log("The process of information with email and sms  is started.", true);
+		info.common_information(driver, branchName);
+		info.createInformationWithEmailSms( driver,  st01N,  todaysDate,  timeHHMMSS,
+				st01RCallSms,  branchName);
+
+	 	Reporter.log(GREEN + GREEN + "The process of information with email and sms  is started.", true);
+		Reporter.log(" ", true);
+	}
 	
 	@Test
 	public void createAvailabilityRequestMultipleDays() throws Throwable {
@@ -332,6 +345,37 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(GREEN + GREEN + "The process of create availability request OneTime>Immediate is complete.", true);
 		Reporter.log(" ", true);
 	}
+	
+	@Test
+	public void createAvailabilityRequestOneTimeImmediateCallSmsMail() throws Throwable {
+
+		tc.catchDateTime(driver);
+		todaysDayG = tc.todaysDayG;
+		tomorrowDayG = tc.tomorrowDayG;
+		dayAfterFourDaysG = tc.dayAfterFourDaysG;
+
+		timeHHMMSSG = tc.currentTimeHHMMSSG;
+		timeAfter5MinHHG = tc.timeAfter5MinHHG;
+		timeAfter5MinMMG = tc.timeAfter5MinMMG;
+		timeAfter7MinHHG = tc.timeAfter7MinHHG;
+		timeAfter7MinMMG = tc.timeAfter7MinMMG;
+		timeAfter9MinHHG = tc.timeAfter9MinHHG;
+		timeAfter9MinMMG = tc.timeAfter9MinMMG;
+		timeAfter11MinHHG = tc.timeAfter11MinHHG;
+		timeAfter11MinMMG = tc.timeAfter11MinMMG;
+
+		Reporter.log(" ", true);
+		Reporter.log("The process of create availability request OneTime>Immediate is started.", true);
+
+		arequest.createAvailabilityRequest(driver, "1call", "Recursive", todaysDate, timeHHMMSSG, deptN,
+				tomorrowDate, timeAfter5MinHHG, timeAfter5MinMMG, timeAfter7MinHHG, timeAfter7MinMMG, timeAfter9MinHHG,
+				timeAfter9MinMMG, todaysDayG,tomorrowDayG,dayAfterFourDaysG, timeAfter11MinMMG, timeAfter11MinHHG);
+
+		Reporter.log(GREEN + GREEN + "The process of create availability request OneTime>Immediate is complete.", true);
+		Reporter.log(" ", true);
+	}
+
+	
 
 	@Test
 	public void addNewFile() throws Throwable {
@@ -591,27 +635,7 @@ public class A_testClassCreate extends b_baseClass {
 		Thread.sleep(3000);
 	}
 
-	@Test
-	public void testAlarm_Direct_CallSmsEmail() throws Throwable
-
-	{
-		tc.catchDateTime(driver);
-		timeAfter9MinHH = tc.timeAfter9MinHH;
-		timeAfter9MinMM = tc.timeAfter9MinMM;
-
-		Reporter.log(" ", true);
-		Reporter.log("The process of creating Test alarm to check call and fall back with direct alarm is started.",
-				true);
-		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.testAlarm_Direct_CallSmsEmail(driver, st01N, st02N, todaysDate, timeAfter9MinHH, timeAfter9MinMM, dayName,
-				st01V1, st01V2, st02V1, st01FF1, st01FFEmailCallSms, st01FFEmailCallSms_FallBack, st02FF1);
-
-		Reporter.log(GREEN + GREEN
-				+ "The process of creating Test alarm to check call and fall back with escalation alarm is complete.",
-				true);
-		Reporter.log(" ", true);
-		Thread.sleep(3000);
-	}
+	
 
 	@Test
 	public void testAlarm_recursiv_weekly_users() throws Throwable
@@ -654,6 +678,32 @@ public class A_testClassCreate extends b_baseClass {
 
 		Reporter.log(GREEN + GREEN
 				+ "The process of creating  Test alarm-recursive-daily Time by resource for multi station is complete.",
+				true);
+		Reporter.log(" ", true);
+		Thread.sleep(3000);
+
+	}
+	
+	@Test
+	public void TestAlarm_OneTime_Resource_CallSmsEmail() throws Throwable
+
+	{
+		tc.catchDateTime(driver);
+
+		timeAfter5MinHH = tc.timeAfter5MinHH;
+		timeAfter5MinMM = tc.timeAfter5MinMM;
+//		System.out.println(timeAfter5MinHH);
+//		System.out.println(timeAfter5MinMM);
+
+		Reporter.log(" ", true);
+		Reporter.log("The process of creating Test alarm-One Time by attribute with call, sms And email for multi station is started.", true);
+		ma.commonForManualAlarm(driver, deptN, branchName);
+		ma.TestAlarm_OneTime_Resource_CallSmsEmail( driver,  st01N,st02N,  todaysDate,
+				 timeAfter5MinHH,  timeAfter5MinMM,  st01RCallSms,  st02R1);
+
+		Reporter.log(
+				GREEN + GREEN
+						+ "The process of creating  Test alarm-One Time by attribute with call, sms And email for multi station is complete.",
 				true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);

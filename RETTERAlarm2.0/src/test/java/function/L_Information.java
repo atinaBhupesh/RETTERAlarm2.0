@@ -241,8 +241,8 @@ public class L_Information extends b_baseClass {
 	private WebElement attachedFileName;
 	@FindBy(xpath = "//h4[text()=\"Users/Resources\"]")
 	private WebElement UsersResources;
-	// @FindBy(xpath="")private WebElement ;
-	// @FindBy(xpath="")private WebElement ;
+	@FindBy(xpath="//span[text()=\"Email\"]")private WebElement pushTypeEmail;
+	 @FindBy(xpath="//span[text()=\"SMS\"]")private WebElement pushTypeSms;
 	// @FindBy(xpath="")private WebElement ;
 	// @FindBy(xpath="")private WebElement ;
 	// @FindBy(xpath="")private WebElement ;
@@ -252,6 +252,97 @@ public class L_Information extends b_baseClass {
 
 	public L_Information(WebDriver driver) {
 		PageFactory.initElements(driver, this);
+	}
+
+	public void createInformationWithEmailSms(WebDriver driver, String st01N, String gTodaysDate, String gtimeHHMMSS,
+			String st01RCallSms, String branchName) throws Throwable {
+		Actions act = new Actions(driver);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+		createNewButton.click();
+		Thread.sleep(2000);
+
+		StationField.click();
+		act.sendKeys(st01N).perform();
+		Thread.sleep(2000);
+		act.sendKeys(Keys.ENTER).perform();
+		Thread.sleep(500);
+
+		selectType.click();
+		Thread.sleep(2000);
+
+		typeInformation.click();
+		Thread.sleep(500);
+		Description.click();
+		Thread.sleep(500);
+
+		infoTitle.click();
+		String title = "Bg_Information for email and sms by Resource_" + gTodaysDate + "_" + gtimeHHMMSS;
+		act.sendKeys(title).perform();
+		Thread.sleep(500);
+
+		infoLocation.click();
+		Thread.sleep(1000);
+
+		act.sendKeys("Pune").perform();
+		Thread.sleep(500);
+
+		InfoDescriptions.click();
+		Thread.sleep(1000);
+
+		act.sendKeys("Checking Information for email and sms by Resource_" + gTodaysDate + "_" + gtimeHHMMSS).perform();
+		Thread.sleep(500);
+
+		//
+		// userTypeAttribute.click();
+
+		
+		
+		act.moveToElement(userTypeResource).click().build().perform();
+
+//		userTypeResource.click();
+
+		Thread.sleep(1000);
+
+		act.sendKeys(Keys.TAB).perform();
+		Thread.sleep(500);
+
+		act.sendKeys(st01RCallSms).perform();
+		Thread.sleep(1000);
+		
+
+		act.sendKeys(Keys.ENTER).perform();
+		Thread.sleep(500);
+		
+		
+		act.sendKeys(Keys.HOME).perform();
+		Thread.sleep(500);
+	
+		for (int i=1;i<=20;i++)
+		{
+			act.sendKeys(Keys.DELETE).perform();
+		}
+		
+		act.moveToElement(save).click().perform();
+		Thread.sleep(500);
+		
+		
+		pushTypeEmail.click();
+		Thread.sleep(1000);
+		pushTypeSms.click();
+		Thread.sleep(1000);
+
+	
+		act.moveToElement(save).click().build().perform();
+//		save.click();
+		Thread.sleep(5000);
+
+		String expectedTitle = firstInfoTitle.getText();
+
+		Assert.assertTrue(title.contains(expectedTitle), RED + "Info NOT added because title is not available");
+
+	
+
 	}
 
 	public void TCMonitorInformationValidationChecking(WebDriver driver, String st01N, String gTodaysDate,
@@ -343,7 +434,7 @@ public class L_Information extends b_baseClass {
 		Thread.sleep(1000);
 		act.sendKeys(Keys.ENTER).perform();
 		Thread.sleep(500);
-act.sendKeys(Keys.HOME).perform();
+		act.sendKeys(Keys.HOME).perform();
 		for (int d = 0; d <= 30; d++) {
 			act.sendKeys(Keys.DELETE).perform();
 
@@ -1179,7 +1270,7 @@ act.sendKeys(Keys.HOME).perform();
 			act.sendKeys(Keys.DELETE).perform();
 
 		}
-		
+
 		Thread.sleep(500);
 
 		act.sendKeys(Keys.TAB).perform();
@@ -1454,7 +1545,8 @@ act.sendKeys(Keys.HOME).perform();
 		act.sendKeys(St01M1).perform();
 		Thread.sleep(1000);
 		act.sendKeys(Keys.ENTER).perform();
-		Thread.sleep(500);act.sendKeys(Keys.HOME).perform();
+		Thread.sleep(500);
+		act.sendKeys(Keys.HOME).perform();
 
 		for (int d = 0; d <= 30; d++) {
 			act.sendKeys(Keys.DELETE).perform();
@@ -1464,7 +1556,8 @@ act.sendKeys(Keys.HOME).perform();
 		act.sendKeys(St01M2).perform();
 		Thread.sleep(1000);
 		act.sendKeys(Keys.ENTER).perform();
-		Thread.sleep(500);act.sendKeys(Keys.HOME).perform();
+		Thread.sleep(500);
+		act.sendKeys(Keys.HOME).perform();
 
 		for (int d = 0; d <= 30; d++) {
 			act.sendKeys(Keys.DELETE).perform();
@@ -1513,15 +1606,14 @@ act.sendKeys(Keys.HOME).perform();
 		Thread.sleep(500);
 		endDateHours.click();
 		Thread.sleep(500);
-		
+
 		act.sendKeys(Keys.HOME).perform();
 
 		for (int d = 0; d <= 30; d++) {
 			act.sendKeys(Keys.DELETE).perform();
 
 		}
-		
-		
+
 		Thread.sleep(500);
 		act.sendKeys(germanyTimeAfter20MinHH).perform();
 		Thread.sleep(500);
@@ -1611,7 +1703,8 @@ act.sendKeys(Keys.HOME).perform();
 		act.sendKeys(St01M1).perform();
 		Thread.sleep(1000);
 		act.sendKeys(Keys.ENTER).perform();
-		Thread.sleep(500);act.sendKeys(Keys.HOME).perform();
+		Thread.sleep(500);
+		act.sendKeys(Keys.HOME).perform();
 
 		for (int d = 0; d <= 30; d++) {
 			act.sendKeys(Keys.DELETE).perform();
@@ -1621,7 +1714,8 @@ act.sendKeys(Keys.HOME).perform();
 		act.sendKeys(St01M2).perform();
 		Thread.sleep(1000);
 		act.sendKeys(Keys.ENTER).perform();
-		Thread.sleep(500);act.sendKeys(Keys.HOME).perform();
+		Thread.sleep(500);
+		act.sendKeys(Keys.HOME).perform();
 
 		for (int d = 0; d <= 30; d++) {
 			act.sendKeys(Keys.DELETE).perform();
@@ -1754,7 +1848,8 @@ act.sendKeys(Keys.HOME).perform();
 		Thread.sleep(1000);
 
 		act.sendKeys(Keys.ENTER).perform();
-		Thread.sleep(500);act.sendKeys(Keys.HOME).perform();
+		Thread.sleep(500);
+		act.sendKeys(Keys.HOME).perform();
 
 		for (int d = 0; d <= 30; d++) {
 			act.sendKeys(Keys.DELETE).perform();
@@ -1779,7 +1874,8 @@ act.sendKeys(Keys.HOME).perform();
 		act.sendKeys(St01M1).perform();
 		Thread.sleep(1000);
 		act.sendKeys(Keys.ENTER).perform();
-		Thread.sleep(500);act.sendKeys(Keys.HOME).perform();
+		Thread.sleep(500);
+		act.sendKeys(Keys.HOME).perform();
 
 		for (int d = 0; d <= 30; d++) {
 			act.sendKeys(Keys.DELETE).perform();
@@ -1916,7 +2012,7 @@ act.sendKeys(Keys.HOME).perform();
 
 		act.sendKeys(Keys.ENTER).perform();
 		Thread.sleep(500);
-act.sendKeys(Keys.HOME).perform();
+		act.sendKeys(Keys.HOME).perform();
 
 		for (int d = 0; d <= 30; d++) {
 			act.sendKeys(Keys.DELETE).perform();
@@ -1936,17 +2032,19 @@ act.sendKeys(Keys.HOME).perform();
 		act.sendKeys(St01M1).perform();
 		Thread.sleep(1000);
 		act.sendKeys(Keys.ENTER).perform();
-		Thread.sleep(500);act.sendKeys(Keys.HOME).perform();
+		Thread.sleep(500);
+		act.sendKeys(Keys.HOME).perform();
 
 		for (int d = 0; d <= 30; d++) {
 			act.sendKeys(Keys.DELETE).perform();
 
-		}		Thread.sleep(500);
+		}
+		Thread.sleep(500);
 		act.sendKeys(St01M2).perform();
 		Thread.sleep(1000);
 		act.sendKeys(Keys.ENTER).perform();
 		Thread.sleep(500);
-		
+
 		act.sendKeys(Keys.HOME).perform();
 
 		for (int d = 0; d <= 30; d++) {
@@ -1973,7 +2071,6 @@ act.sendKeys(Keys.HOME).perform();
 			act.sendKeys(Keys.DELETE).perform();
 
 		}
-		
 
 		Thread.sleep(1000);
 		act.sendKeys(germanyTimeAfter5MinHH).perform();
@@ -2246,7 +2343,8 @@ act.sendKeys(Keys.HOME).perform();
 		act.sendKeys(St01M1).perform();
 		Thread.sleep(1000);
 		act.sendKeys(Keys.ENTER).perform();
-		Thread.sleep(500);	act.sendKeys(Keys.HOME).perform();
+		Thread.sleep(500);
+		act.sendKeys(Keys.HOME).perform();
 
 		for (int d = 0; d <= 30; d++) {
 			act.sendKeys(Keys.DELETE).perform();

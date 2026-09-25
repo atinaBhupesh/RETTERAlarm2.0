@@ -334,7 +334,7 @@ public class b_baseClass {
 		
 		case "1":
 			filePath = "D:\\Automation_2307\\SampleFilesNew\\Details Files\\DetailsFileLiveBhupesh.xlsx";
-			password = "Atina@123";
+		 	password = "Atina@123";
 
 			break;
 

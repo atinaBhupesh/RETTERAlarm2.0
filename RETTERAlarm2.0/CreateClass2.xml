@@ -8,9 +8,7 @@
 			<methods>
 
 
-					
-				<include name="TestAlarm_Recursive_Monthly_DateyWise_Attribute" />
-				
+						<include name="createAvailabilityRequestOneTimeImmediateCallSmsMail" />
 				
 
 			</methods>

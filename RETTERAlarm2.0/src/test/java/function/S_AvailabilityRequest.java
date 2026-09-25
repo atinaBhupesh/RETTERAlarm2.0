@@ -109,6 +109,11 @@ public class S_AvailabilityRequest extends b_baseClass {
 	private WebElement BH_ST01;
 	@FindBy(xpath = "//input[@value=\"35651\"]")
 	private WebElement rick102;
+	
+	 @FindBy(xpath="//input[@value=\"35734\"]")private WebElement rickCall01;
+	
+	
+	
 	@FindBy(xpath = "(//td)[2]")
 	private WebElement firstTitle;
 	@FindBy(xpath = "//span[@role=\"presentation\"]")
@@ -139,9 +144,8 @@ public class S_AvailabilityRequest extends b_baseClass {
 	private WebElement countOnPage;
 	 @FindBy(xpath="//select[@name=\"example1_length\"]")private WebElement countOnPagePlaningList;
 	 @FindBy(xpath="//td[@class=\"sorting_1\"]")private WebElement  deleteId;
-	// @FindBy(xpath="")private WebElement ;
-	// @FindBy(xpath="")private WebElement ;
-	// @FindBy(xpath="")private WebElement ;
+	 @FindBy(xpath="//input[@id=\"PlanningResourcesEmailStatus\"]")private WebElement requestTypeMail;
+	 @FindBy(xpath="//input[@id=\"PlanningResourcesSmsStatus\"]")private WebElement requestTypeSms;
 	// @FindBy(xpath="")private WebElement ;
 	// @FindBy(xpath="")private WebElement ;
 	// @FindBy(xpath="")private WebElement ;
@@ -268,6 +272,22 @@ public class S_AvailabilityRequest extends b_baseClass {
 			Thread.sleep(1000);
 			rick102.click();
 			Thread.sleep(1000);
+
+			break;
+			
+			
+		case "1call":
+
+			BH_ST01.click();
+			act.sendKeys(Keys.PAGE_DOWN).build().perform();
+			Thread.sleep(2000);
+			BH_ST01.click();
+			Thread.sleep(2000);
+			act.sendKeys(Keys.PAGE_DOWN).build().perform();
+			Thread.sleep(2000);
+			rickCall01.click();
+			Thread.sleep(1000);
+			
 
 			break;
 
@@ -438,6 +458,22 @@ public class S_AvailabilityRequest extends b_baseClass {
 
 		adShiftButton.click();
 		Thread.sleep(1000);
+		
+		
+		
+		switch (branchName) {
+			case "1call":
+				requestTypeMail.click();
+				Thread.sleep(500);
+				requestTypeSms.click();
+				Thread.sleep(500);
+				
+
+				break;
+		
+		}
+		
+		
 		ARSaveButton.click();
 		Thread.sleep(5000);
 		driver.navigate().refresh();

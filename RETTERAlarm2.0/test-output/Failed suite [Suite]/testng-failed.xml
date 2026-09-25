@@ -5,15 +5,20 @@
     <classes>
       <class name="function.A_testClassCreate">
         <methods>
-          <include name="editOverviewMonitor"/>
+          <include name="manualAlarmByEscResourceSingleStation"/>
+          <include name="manualaByAttributeMSLP"/>
+          <include name="manualAlarmByResourceMsHP"/>
+          <include name="logOut"/>
+          <include name="AfterSute"/>
           <include name="AfterTest"/>
+          <include name="manualAlarmByOldEsclationTemplateFromSt02ToSt01"/>
+          <include name="manualAlarmByResourceMsLP"/>
           <include name="BeforeSuite"/>
+          <include name="manualaByAttributeSingleStation"/>
           <include name="backToHomePage2"/>
           <include name="BeforeTest"/>
-          <include name="logOut"/>
           <include name="backToHomePage"/>
-          <include name="addOverviewMonitor"/>
-          <include name="AfterSute"/>
+          <include name="manualAlarmByUersMs"/>
           <include name="createObject"/>
         </methods>
       </class> <!-- function.A_testClassCreate -->

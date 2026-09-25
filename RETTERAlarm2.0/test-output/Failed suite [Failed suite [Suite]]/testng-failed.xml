@@ -5,14 +5,16 @@
     <classes>
       <class name="function.A_testClassCreate">
         <methods>
-          <include name="testAlarm_recursiv_weekly_users"/>
           <include name="AfterTest"/>
+          <include name="manualAlarmByResourceMsLP"/>
           <include name="BeforeSuite"/>
+          <include name="manualaByAttributeSingleStation"/>
           <include name="backToHomePage2"/>
           <include name="BeforeTest"/>
           <include name="backToHomePage"/>
           <include name="logOut"/>
           <include name="AfterSute"/>
+          <include name="manualAlarmByUersMs"/>
           <include name="createObject"/>
         </methods>
       </class> <!-- function.A_testClassCreate -->

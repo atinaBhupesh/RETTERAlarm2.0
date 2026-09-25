@@ -7,11 +7,17 @@
 
 			<methods>
 
-				<include name="ManualAlarmForDircetCall" />
 				<include name="ManualAlarForCheckExtendAlarmCall" />
 				<include name="ManualAlarForCheckEscalationAlarmCall" />
 				
-				<include name="testAlarm_Direct_CallSmsEmail" />
+				
+				
+				<include name="ManualAlarmForDircetCall" />
+				
+				
+				<include name="TestAlarm_OneTime_Resource_CallSmsEmail" />
+				<include name="createInformationWithEmailSms" />
+				<include name="createAvailabilityRequestOneTimeImmediateCallSmsMail" />
 				
 				
 

@@ -423,27 +423,34 @@ public class F_manualTestAlarm extends b_baseClass {
 	private WebElement alarmModule;
 	@FindBy(xpath = "//a[text()=\"Manage Alarm\"]")
 	private WebElement manageAlarm;
-	 @FindBy(xpath="//span[@aria-label=\"Show filter options for column 'Status'\"]")private WebElement alarmStatus;
-	 @FindBy(xpath="//div[text()=\"Active\"]")private WebElement alarmStatusActive ;
-	 @FindBy(xpath="//span[text()=\"OK\"]")private WebElement alarmStatusOk;
-	 @FindBy(xpath="//span[text()=\"Active\"]")private List<WebElement> activeAlarmCount ;
-	 @FindBy(xpath="(//span[text()=\"Active\"])[1]")private WebElement firstActiveButton;
-	 @FindBy(xpath="//span[text()=\"Yes, Close\"]")private WebElement yesClose;
-	@FindBy(xpath="//span[text()=\"Yes\"]")private WebElement yes;
+	@FindBy(xpath = "//span[@aria-label=\"Show filter options for column 'Status'\"]")
+	private WebElement alarmStatus;
+	@FindBy(xpath = "//div[text()=\"Active\"]")
+	private WebElement alarmStatusActive;
+	@FindBy(xpath = "//span[text()=\"OK\"]")
+	private WebElement alarmStatusOk;
+	@FindBy(xpath = "//span[text()=\"Active\"]")
+	private List<WebElement> activeAlarmCount;
+	@FindBy(xpath = "(//span[text()=\"Active\"])[1]")
+	private WebElement firstActiveButton;
+	@FindBy(xpath = "//span[text()=\"Yes, Close\"]")
+	private WebElement yesClose;
+	@FindBy(xpath = "//span[text()=\"Yes\"]")
+	private WebElement yes;
 	// @FindBy(xpath="")private WebElement ;
 	// @FindBy(xpath="")private WebElement ;
-		// @FindBy(xpath="")private WebElement ;
-		// @FindBy(xpath="")private WebElement ;
 	// @FindBy(xpath="")private WebElement ;
-		// @FindBy(xpath="")private WebElement ;
-		// @FindBy(xpath="")private WebElement ;
-	 
 	// @FindBy(xpath="")private WebElement ;
-		// @FindBy(xpath="")private WebElement ;
-		// @FindBy(xpath="")private WebElement ;
 	// @FindBy(xpath="")private WebElement ;
-		// @FindBy(xpath="")private WebElement ;
-		// @FindBy(xpath="")private WebElement ;
+	// @FindBy(xpath="")private WebElement ;
+	// @FindBy(xpath="")private WebElement ;
+
+	// @FindBy(xpath="")private WebElement ;
+	// @FindBy(xpath="")private WebElement ;
+	// @FindBy(xpath="")private WebElement ;
+	// @FindBy(xpath="")private WebElement ;
+	// @FindBy(xpath="")private WebElement ;
+	// @FindBy(xpath="")private WebElement ;
 
 	public F_manualTestAlarm(WebDriver driver) {
 
@@ -738,312 +745,7 @@ public class F_manualTestAlarm extends b_baseClass {
 		System.out.println(GREEN + title);
 	}
 
-	public void testAlarm_Direct_CallSmsEmail(WebDriver driver, String st01N, String st02N, String gTodaysDate,
-			String germanyTimeAfter9MinHH, String germanyTimeAfter9MinMM, String dayName, String st01V1, String st01V2,
-			String st02V1, String st01FF1, String st01FFEmailCallSms, String st01FFEmailCallSms_FallBack,
-			String st02FF1) throws Throwable {
-
-		// -----------------------
-		// CREATE MANUAL ALARM (FIREFIGHTER)
-		// -----------------------
-		Actions act = new Actions(driver);
-		Robot robot = new Robot();
-
-		mangeTestAlarm.click();
-		Thread.sleep(2000);
-		refreshFilter.click();
-
-		Thread.sleep(2000);
-
-		createNewButton.click();
-		Thread.sleep(2000);
-
-		fireStationField.click();
-		Thread.sleep(1000);
-
-		// Select Fire Stations
-		act.sendKeys(st01N).perform();
-		Thread.sleep(1000);
-		act.sendKeys(Keys.ENTER).perform();
-		Thread.sleep(2000);
-
-		act.sendKeys(st02N).perform();
-		Thread.sleep(500);
-		act.sendKeys(Keys.ENTER).perform();
-
-		// Alarm details
-		alarmKeyword.click();
-		String title = "BG-TA to check call and fallback with direct alarm." + gTodaysDate + "_"
-				+ germanyTimeAfter9MinHH + germanyTimeAfter9MinMM;
-		act.sendKeys(title).perform();
-
-		alarmImage.click();
-		act.sendKeys("Image-TA to check direct and fallback with direct alarm.").perform();
-
-		descriptionField.click();
-		act.sendKeys("Verifying Test Alarm with call and fallback calls, SMS, and emails using a direct alarm.")
-				.perform();
-
-		Thread.sleep(1000);
-//		Alarmmonitor.click();
-//		Thread.sleep(1000);
-
-		// Reporter details
-		reporter.click();
-		Thread.sleep(1000);
-
-		reporterName.click();
-		act.sendKeys("Dr. Sumit Raghute").perform();
-
-		reporterStreet.click();
-		act.sendKeys("Kharbi Road, Nagpur").perform();
-
-		reporterZipCode.click();
-		act.sendKeys("440009").perform();
-
-		act.moveToElement(reporterMobileNo).click().perform();
-		Thread.sleep(500);
-
-		reporterMobileNo.click();
-		act.sendKeys("1122334455").perform();
-
-		reporterCallback.click();
-		act.sendKeys("10").perform();
-		Thread.sleep(500);
-
-		// Incident details
-		act.sendKeys(Keys.TAB).sendKeys(Keys.ENTER).sendKeys(Keys.TAB).perform();
-
-		act.sendKeys("fire at hospital.").perform();
-
-		act.sendKeys(Keys.TAB).sendKeys(Keys.TAB).perform();
-
-		Thread.sleep(500);
-		robot.mouseWheel(5);
-		act.sendKeys(Keys.ENTER).perform();
-		Thread.sleep(2000);
-
-		// Planning
-		setSchedule.click();
-		Thread.sleep(500);
-
-		selectScheduleType.click();
-		Thread.sleep(500);
-
-		scheduleRecursive.click();
-		Thread.sleep(500);
-
-		recursiveWeekly.click();
-		Thread.sleep(500);
-
-		selectWeekDay.click();
-		Thread.sleep(500);
-
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
-		WebElement pickUpDay = wait.until(ExpectedConditions
-				.visibilityOfElementLocated(By.xpath("//div[normalize-space(text())='" + dayName + "']")));
-
-		// hover + click
-		act.moveToElement(pickUpDay).click().perform();
-
-		timeWeekly.click();
-		Thread.sleep(500);
-
-		act.sendKeys(Keys.TAB).perform();
-		Thread.sleep(1000);
-
-		String currentHrs1 = currentHrs.getText().trim();
-
-//				System.out.println(currentHrs1);
-//				System.out.println(germanyTimeAfter5MinHH);
-
-		int current = Integer.parseInt(currentHrs1);
-		int target = Integer.parseInt(germanyTimeAfter9MinHH);
-
-		while (current != target) {
-
-			if (current > target) {
-				act.sendKeys(Keys.ARROW_UP).perform();
-				current--;
-			} else {
-				act.sendKeys(Keys.ARROW_DOWN).perform();
-				current++;
-			}
-
-			Thread.sleep(300);
-		}
-
-		act.sendKeys(Keys.TAB).perform();
-		Thread.sleep(1000);
-
-		String currentMin1 = currentMin.getText().trim();
-
-//				System.out.println(currentMin1);
-//				System.out.println(germanyTimeAfter5MinMM);
-
-		int current1 = Integer.parseInt(currentMin1);
-		int target1 = Integer.parseInt(germanyTimeAfter9MinMM);
-
-		while (current1 != target1) {
-
-			if (current1 > target1) {
-				act.sendKeys(Keys.ARROW_UP).perform();
-				current1--;
-			} else {
-				act.sendKeys(Keys.ARROW_DOWN).perform();
-				current1++;
-			}
-
-			Thread.sleep(300);
-		}
-
-		timeOk.click();
-		Thread.sleep(500);
-
-		alertingOverEmail.click();
-		Thread.sleep(500);
-
-		alertingOverSMS.click();
-		Thread.sleep(500);
-
-		alertingOverCall.click();
-		Thread.sleep(500);
-
-		act.moveToElement(testAlarmNext).click().build().perform();
-
-//		testAlarmNext.click();
-		Thread.sleep(2000);
-
-		// Alarm address
-		alarmAddress.click();
-		act.sendKeys("YES Hospital, Plot no. 1 & 1A, Dighori Flyover Square, Dighori, Nagpur, Maharashtra 440017")
-				.perform();
-
-		// Tab navigation
-//		for (int i = 0; i <= 9; i++) {
-//			act.sendKeys(Keys.TAB).perform();
-//		}
-//
-//		// Additional address info
-//		additionalAddressInformation.click();
-		act.moveToElement(additionalAddressInformation).click().perform();
-		Thread.sleep(500);
-
-		alarmObject.click();
-		act.sendKeys("hospital").perform();
-
-		alarmFloor.click();
-		act.sendKeys("ground floor").perform();
-
-		alarmAnnotation.click();
-		act.sendKeys("alarm annotation").perform();
-		Thread.sleep(1000);
-
-		act.sendKeys(Keys.TAB).sendKeys(Keys.ENTER).perform();
-
-		Thread.sleep(2000);
-
-		// Firefighter and vehicle selection
-		userTypeFirefighter.click();
-		Thread.sleep(1000);
-
-		vehicleField1.click();
-		Thread.sleep(1000);
-
-		act.sendKeys(st01V1).perform();
-		Thread.sleep(1000);
-		act.sendKeys(Keys.ENTER).perform();
-		Thread.sleep(1000);
-
-//		act.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).sendKeys(Keys.BACK_SPACE).perform();
-//		Thread.sleep(500);
-
-		act.sendKeys(Keys.HOME).perform();
-		Thread.sleep(500);
-
-		for (int d = 0; d <= 15; d++) {
-			act.sendKeys(Keys.DELETE).perform();
-		}
-
-		act.sendKeys(st01V2).perform();
-		Thread.sleep(1000);
-		act.sendKeys(Keys.ENTER).perform();
-		Thread.sleep(1000);
-
-//		act.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).sendKeys(Keys.BACK_SPACE).perform();
-//		Thread.sleep(500);
-
-		act.sendKeys(Keys.HOME).perform();
-		Thread.sleep(500);
-
-		for (int d = 0; d <= 15; d++) {
-			act.sendKeys(Keys.DELETE).perform();
-
-		}
-
-		act.sendKeys(st02V1).perform();
-		Thread.sleep(500);
-		act.sendKeys(Keys.ENTER).perform();
-		Thread.sleep(1000);
-
-		// Firefighter fields
-		FirefighterField1.click();
-		Thread.sleep(2000);
-		act.sendKeys(st01FF1).perform();
-		Thread.sleep(2000);
-		act.sendKeys(Keys.ENTER).perform();
-		Thread.sleep(2000);
-		act.keyDown(Keys.CONTROL).sendKeys("A").keyUp(Keys.CONTROL).sendKeys(Keys.BACK_SPACE).build().perform();
-
-		Thread.sleep(2000);
-		act.sendKeys(st01FFEmailCallSms).perform();
-		Thread.sleep(2000);
-		act.sendKeys(Keys.ENTER).perform();
-		Thread.sleep(2000);
-		act.keyDown(Keys.CONTROL).sendKeys("A").keyUp(Keys.CONTROL).sendKeys(Keys.BACK_SPACE).build().perform();
-
-		Thread.sleep(2000);
-		act.sendKeys(st01FFEmailCallSms_FallBack).perform();
-		Thread.sleep(2000);
-		act.sendKeys(Keys.ENTER).perform();
-		Thread.sleep(2000);
-		act.keyDown(Keys.CONTROL).sendKeys("A").keyUp(Keys.CONTROL).sendKeys(Keys.BACK_SPACE).build().perform();
-		Thread.sleep(500);
-
-//		act.sendKeys(st01FFEmailCallSms).perform();
-//		Thread.sleep(2000);
-//		act.sendKeys(Keys.ENTER).perform();
-//		Thread.sleep(2000);
-//		act.sendKeys(Keys.TAB).perform();
-//		Thread.sleep(500);
-
-		FirefighterField2.click();
-		Thread.sleep(500);
-		act.sendKeys(st02FF1).perform();
-		Thread.sleep(500);
-		act.sendKeys(Keys.ENTER).perform();
-		Thread.sleep(1000);
-
-		// Generate alarm
-		Thread.sleep(500);
-		act.sendKeys(Keys.TAB).perform();
-		Thread.sleep(500);
-		saveTestAlarm.click();
-		Thread.sleep(500);
-		yesCreate.click();
-		Thread.sleep(5000);
-
-		String firtsTestAlarm1 = firtsTestAlarm.getText();
-
-		firtsTestAlarm1 = firtsTestAlarm1.replace("...", "").trim();
-		title = title.replace("...", "").trim();
-
-		Assert.assertTrue(title.contains(firtsTestAlarm1), RED + "Alarm not added.");
-
-		System.out.println(GREEN + title);
-
-	}
+	
 
 	public void TestAlarm_Recursive_Monthly_DateyWise_Attribute(WebDriver driver, String st01N, String gTodaysDate,
 			String germanyTimeAfter15MinHH, String germanyTimeAfter15MinMM, String st01V1, String st01V2,
@@ -2067,6 +1769,195 @@ public class F_manualTestAlarm extends b_baseClass {
 		Thread.sleep(500);
 		yesCreate.click();
 		Thread.sleep(500);
+
+		String firtsTestAlarm1 = firtsTestAlarm.getText();
+
+		firtsTestAlarm1 = firtsTestAlarm1.replace("...", "").trim();
+		title = title.replace("...", "").trim();
+
+		Assert.assertTrue(title.contains(firtsTestAlarm1), RED + "Alarm not added.");
+
+		System.out.println(GREEN + title);
+
+	}
+
+	public void TestAlarm_OneTime_Resource_CallSmsEmail(WebDriver driver, String st01N, String st02N,
+			String gTodaysDate, String germanyTimeAfter5MinHH, String germanyTimeAfter5MinMM, String st01RCallSms,
+			String st02R1) throws Throwable {
+		Actions act = new Actions(driver);
+		Robot robot = new Robot();
+		mangeTestAlarm.click();
+		Thread.sleep(2000);
+		refreshFilter.click();
+		Thread.sleep(2000);
+
+		createNewButton.click();
+		Thread.sleep(1000);
+
+		fireStationField.click();
+		Thread.sleep(1000);
+
+		// Select Fire Stations
+		act.sendKeys(st01N).perform();
+		Thread.sleep(2000);
+		act.sendKeys(Keys.ENTER).perform();
+		Thread.sleep(500);
+
+		act.sendKeys(st02N).perform();
+		Thread.sleep(500);
+		act.sendKeys(Keys.ENTER).perform();
+
+		// Alarm keyword
+		alarmKeyword.click();
+		String title = "BG-TA One Time by Resource MS -" + gTodaysDate + "_" + germanyTimeAfter5MinHH
+				+ germanyTimeAfter5MinMM;
+		act.sendKeys(title).perform();
+
+		// Image & description
+		alarmImage.click();
+		act.sendKeys("Image-TA One Time by attribute").perform();
+
+		descriptionField.click();
+		act.sendKeys("Checking Test alarm One Time by attribute").perform();
+
+//		Thread.sleep(1000);
+//		Alarmmonitor.click();
+//		Thread.sleep(1000);
+//		
+
+		// Reporter details
+		Thread.sleep(2000);
+		reporter.click();
+
+		Thread.sleep(2000);
+		reporterName.click();
+		act.sendKeys("Dr. Sumit Raghute").perform();
+
+		reporterStreet.click();
+		act.sendKeys("Kharbi Road, Nagpur").perform();
+
+		reporterZipCode.click();
+		act.sendKeys("440009").perform();
+
+		act.moveToElement(reporterMobileNo).click().perform();
+		Thread.sleep(500);
+
+		reporterMobileNo.click();
+		act.sendKeys("1122334455").perform();
+
+		reporterCallback.click();
+		act.sendKeys("10").perform();
+
+		// Incident text
+		act.sendKeys(Keys.TAB).sendKeys(Keys.ENTER).sendKeys(Keys.TAB).perform();
+
+		act.sendKeys("fire at hospital.").perform();
+
+		act.sendKeys(Keys.TAB).sendKeys(Keys.TAB).perform();
+
+		Thread.sleep(500);
+		robot.mouseWheel(5);
+		act.sendKeys(Keys.ENTER).perform();
+		Thread.sleep(2000);
+
+		// Planning
+		setSchedule.click();
+		Thread.sleep(500);
+
+		selectScheduleType.click();
+		Thread.sleep(500);
+
+		scheduleOneTime.click();
+		Thread.sleep(500);
+
+		dateAndTimeOnetime.click();
+		Thread.sleep(500);
+
+		startDateHours.click();
+		Thread.sleep(500);
+		act.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).build().perform();
+
+		act.sendKeys(Keys.HOME).perform();
+		for (int a = 0; a <= 30; a++) {
+
+			act.sendKeys(Keys.DELETE).perform();
+		}
+
+		Thread.sleep(1000);
+		act.sendKeys(germanyTimeAfter5MinHH).perform();
+		Thread.sleep(200);
+		act.keyDown(Keys.TAB).perform();
+		Thread.sleep(200);
+		act.sendKeys(germanyTimeAfter5MinMM).perform();
+		Thread.sleep(200);
+		timeOk.click();
+		Thread.sleep(1000);
+
+		alertingOverEmail.click();
+		Thread.sleep(500);
+
+		alertingOverSMS.click();
+		Thread.sleep(500);
+
+		alertingOverCall.click();
+		Thread.sleep(500);
+
+		act.moveToElement(testAlarmNext).click().build().perform();
+
+//		testAlarmNext.click();
+		Thread.sleep(2000);
+
+		// Address
+		alarmAddress.click();
+		act.sendKeys("BAPS Swaminarayan mandir, Wathoda Layout, Nagpur, Maharashtra 440035").perform();
+
+		// Tab navigation
+//		for (int i = 0; i <= 9; i++) {
+//			act.sendKeys(Keys.TAB).perform();
+//		}
+
+		// Additional address info
+
+		act.moveToElement(additionalAddressInformation).click().perform();
+//		additionalAddressInformation.click();
+
+		alarmObject.click();
+		act.sendKeys("hospital").perform();
+
+		alarmFloor.click();
+		act.sendKeys("ground floor").perform();
+
+		alarmAnnotation.click();
+		act.sendKeys("alarm annotation").perform();
+
+		act.sendKeys(Keys.TAB).sendKeys(Keys.ENTER).perform();
+
+		// Attribute & vehicle selection
+		Thread.sleep(2000);
+
+		userTypeResource.click();
+		Thread.sleep(500);
+		resourceField1.click();
+		act.sendKeys(st01RCallSms).perform();
+		Thread.sleep(500);
+		act.sendKeys(Keys.ENTER).perform();
+		Thread.sleep(500);
+
+		act.sendKeys(Keys.TAB).perform();
+
+		resourceField2.click();
+		act.sendKeys(st02R1).perform();
+		Thread.sleep(500);
+		act.sendKeys(Keys.ENTER).perform();
+		Thread.sleep(1000);
+
+		act.sendKeys(Keys.TAB).perform();
+
+		// Generate alarm
+		saveTestAlarm.click();
+		Thread.sleep(1000);
+		yesCreate.click();
+		Thread.sleep(5000);
 
 		String firtsTestAlarm1 = firtsTestAlarm.getText();
 
@@ -6128,7 +6019,6 @@ public class F_manualTestAlarm extends b_baseClass {
 		Thread.sleep(2000);
 		itemPepage100.click();
 		Thread.sleep(5000);
-		
 
 		titleSearch.click();
 		Thread.sleep(2000);
@@ -6234,7 +6124,6 @@ public class F_manualTestAlarm extends b_baseClass {
 
 		refreshFilter.click();
 		Thread.sleep(2000);
-
 
 		mangeTestAlarm.click();
 		Thread.sleep(2000);
@@ -7932,9 +7821,8 @@ public class F_manualTestAlarm extends b_baseClass {
 
 	}
 
-	public void deactiveAllActiveAlarms (WebDriver driver) throws Throwable
-	{
-		
+	public void deactiveAllActiveAlarms(WebDriver driver) throws Throwable {
+
 		alarmStatus.click();
 		Thread.sleep(1000);
 		alarmStatusActive.click();
@@ -7943,31 +7831,28 @@ public class F_manualTestAlarm extends b_baseClass {
 		Thread.sleep(2000);
 		itemPepage100.click();
 		Thread.sleep(5000);
-		
-		
-		
 
 		int totalAlarms = 0;
 
-		for (int batch = 1; batch <= 15; batch++) {
+		for (int batch = 1; batch <= 1000; batch++) {
 			int count = activeAlarmCount.size();
 
 			if (count == 0) {
 				break;
 			}
 
-			System.out.println("Alarm Number " +batch+ " deactivation is in progress. Please wait.");
+			System.out.println("Alarm Number " + batch + " deactivation is in progress. Please wait.");
 
 			firstActiveButton.click();
 			Thread.sleep(2000);
-			
+
 			yesClose.click();
 			Thread.sleep(2000);
-			
+
 //			driver.navigate().refresh();
 //			Thread.sleep(3000);
 
-			totalAlarms ++;
+			totalAlarms++;
 		}
 
 		System.out.println("The deactivation has been completed.");
@@ -7975,15 +7860,12 @@ public class F_manualTestAlarm extends b_baseClass {
 
 		refreshFilter.click();
 		Thread.sleep(2000);
-		
 
 	}
-	
-	public void deactiveBgTestActiveAlarmsFromPlaningList (WebDriver driver) throws Throwable
-	{
-		Actions act = new Actions (driver);
-		
-		
+
+	public void deactiveBgTestActiveAlarmsFromPlaningList(WebDriver driver) throws Throwable {
+		Actions act = new Actions(driver);
+
 		mangeTestAlarm.click();
 		Thread.sleep(2000);
 
@@ -8004,8 +7886,7 @@ public class F_manualTestAlarm extends b_baseClass {
 
 		titleSearchFieldOk.click();
 		Thread.sleep(3000);
-		
-		
+
 		alarmStatus.click();
 		Thread.sleep(1000);
 		alarmStatusActive.click();
@@ -8014,9 +7895,6 @@ public class F_manualTestAlarm extends b_baseClass {
 		Thread.sleep(2000);
 		itemPepage100.click();
 		Thread.sleep(5000);
-		
-		
-		
 
 		int totalAlarms = 0;
 
@@ -8027,26 +7905,26 @@ public class F_manualTestAlarm extends b_baseClass {
 				break;
 			}
 
-			System.out.println("Alarm Number " +batch+ " deactivation is in progress. Please wait.");
+			System.out.println("Alarm Number " + batch + " deactivation is in progress. Please wait.");
 
 			firstActiveButton.click();
 			Thread.sleep(2000);
-			
+
 			yes.click();
 			Thread.sleep(2000);
-			
+
 //			driver.navigate().refresh();
 //			Thread.sleep(3000);
 
-			totalAlarms ++;
+			totalAlarms++;
 		}
 
 		System.out.println("The deactivation has been completed.");
-		System.out.println(GREEN + "Total >>>>>" + totalAlarms + "<<<<< BG alarms were successfully deactivated from the Planning List.");
+		System.out.println(GREEN + "Total >>>>>" + totalAlarms
+				+ "<<<<< BG alarms were successfully deactivated from the Planning List.");
 
 		refreshFilter.click();
 		Thread.sleep(2000);
-		
 
 	}
 
