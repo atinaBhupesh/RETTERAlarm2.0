@@ -1,12 +1,18 @@
 package function;
 
+import java.time.Duration;
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 public class S_AvailabilityRequest extends b_baseClass {
@@ -69,7 +75,7 @@ public class S_AvailabilityRequest extends b_baseClass {
 	private WebElement searchField;
 	@FindBy(xpath = "(//i[@class=\"fa fa-trash-o\"])[1]")
 	private WebElement deleteAvailbilityRequest;
-	@FindBy(xpath = "//button[@id=\"delYes1\"]")
+	@FindBy(xpath = "//button[@id=\"delYes4\"]")
 	private WebElement deleteAvailbiliYes;
 
 	@FindBy(xpath = "//input[@aria-controls=\"weekendHistoryTable\"]")
@@ -107,8 +113,7 @@ public class S_AvailabilityRequest extends b_baseClass {
 	private WebElement firstTitle;
 	@FindBy(xpath = "//span[@role=\"presentation\"]")
 	private WebElement deptDownArrow;
-	
-	
+
 	@FindBy(xpath = "//input[@id=\"requested_datetime_multi1\"]")
 	private WebElement ARMultiTime1;
 	@FindBy(xpath = "//button[@class=\"add_field_button btn btn-primary float-right\"]")
@@ -128,10 +133,12 @@ public class S_AvailabilityRequest extends b_baseClass {
 	@FindBy(xpath = "//input[@id=\"multiple_to_time\"]")
 	private WebElement ARMultiToTime;
 
-	// @FindBy(xpath="")private WebElement ;
-	// @FindBy(xpath="")private WebElement ;
-	// @FindBy(xpath="")private WebElement ;
-	// @FindBy(xpath="")private WebElement ;
+	@FindBy(xpath = "//td[contains(text(),\"BG-AR\")]")
+	private List<WebElement> availableBGARRequestInHistory;
+	@FindBy(xpath = "//select[@name=\"weekendHistoryTable_length\"]")
+	private WebElement countOnPage;
+	 @FindBy(xpath="//select[@name=\"example1_length\"]")private WebElement countOnPagePlaningList;
+	 @FindBy(xpath="//td[@class=\"sorting_1\"]")private WebElement  deleteId;
 	// @FindBy(xpath="")private WebElement ;
 	// @FindBy(xpath="")private WebElement ;
 	// @FindBy(xpath="")private WebElement ;
@@ -147,10 +154,10 @@ public class S_AvailabilityRequest extends b_baseClass {
 	}
 
 	public void createAvailabilityRequest(WebDriver driver, String branchName, String requestType, String todaysDateG,
-			String timeHHMMSSG, String deptN, String tomorrowDateG, String timeAfter5MinHHG,
-			String timeAfter5MinMMG, String timeAfter7MinHHG, String timeAfter7MinMMG,
-			String timeAfter9MinHHG, String timeAfter9MinMMG, String todaysDayG, String tomorrowDayG,
-			String dayAfterFourDaysG,String timeAfter11MinHHG, String timeAfter11MinMMG) throws Throwable {
+			String timeHHMMSSG, String deptN, String tomorrowDateG, String timeAfter5MinHHG, String timeAfter5MinMMG,
+			String timeAfter7MinHHG, String timeAfter7MinMMG, String timeAfter9MinHHG, String timeAfter9MinMMG,
+			String todaysDayG, String tomorrowDayG, String dayAfterFourDaysG, String timeAfter11MinHHG,
+			String timeAfter11MinMMG) throws Throwable {
 		Actions act = new Actions(driver);
 
 		availabilityRequest.click();
@@ -215,14 +222,14 @@ public class S_AvailabilityRequest extends b_baseClass {
 			ARMultiTime1.click();
 
 			act.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).build().perform();
-			act.sendKeys(todaysDateG + " " + timeAfter7MinHHG+":"+timeAfter7MinMMG).build().perform();
+			act.sendKeys(todaysDateG + " " + timeAfter7MinHHG + ":" + timeAfter7MinMMG).build().perform();
 
 			addMoreTime.click();
 
 			ARMultiTime2.click();
 
 			act.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).build().perform();
-			act.sendKeys(todaysDateG + " " + timeAfter9MinHHG+":"+timeAfter9MinMMG).build().perform();
+			act.sendKeys(todaysDateG + " " + timeAfter9MinHHG + ":" + timeAfter9MinMMG).build().perform();
 
 			addMoreTime.click();
 
@@ -230,7 +237,7 @@ public class S_AvailabilityRequest extends b_baseClass {
 
 			act.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).build().perform();
 
-			act.sendKeys(todaysDateG + " " + timeAfter11MinHHG+":"+timeAfter11MinMMG).build().perform();
+			act.sendKeys(todaysDateG + " " + timeAfter11MinHHG + ":" + timeAfter11MinMMG).build().perform();
 
 			break;
 
@@ -393,9 +400,9 @@ public class S_AvailabilityRequest extends b_baseClass {
 			Select se23 = new Select(ArRequestTo);
 			se23.selectByVisibleText(dayAfterFourDaysG);
 			break;
-			
+
 		case "MultipleDays":
-			
+
 			Select se1 = new Select(ARMultiFromDay);
 			se1.selectByVisibleText(tomorrowDayG);
 
@@ -404,17 +411,16 @@ public class S_AvailabilityRequest extends b_baseClass {
 			for (int i = 0; i <= 7; i++) {
 				act.sendKeys(Keys.DELETE).perform();
 			}
-			act.sendKeys(timeAfter7MinHHG+":"+timeAfter7MinMMG).build().perform();
+			act.sendKeys(timeAfter7MinHHG + ":" + timeAfter7MinMMG).build().perform();
 
 			Select se2 = new Select(ARMultiToDay);
 			se2.selectByVisibleText(dayAfterFourDaysG);
 
 			ARMultiToTime.click();
 			act.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).build().perform();
-			act.sendKeys(timeAfter11MinHHG+":"+timeAfter11MinMMG).build().perform();
-			
+			act.sendKeys(timeAfter11MinHHG + ":" + timeAfter11MinMMG).build().perform();
+
 			break;
-			
 
 		}
 
@@ -453,26 +459,60 @@ public class S_AvailabilityRequest extends b_baseClass {
 		availabilityRequestList.click();
 		Thread.sleep(2000);
 		Actions act = new Actions(driver);
+		
+		Select se = new Select(countOnPagePlaningList);
+		se.selectByVisibleText("100");
+		
+		searchField.click();
+		Thread.sleep(2000);
 
-		for (int i = 1; i <= 100; i++)
+		act.sendKeys("BG-AR").perform();
+		Thread.sleep(2000);
+		
+		
+		int count = 0;
+		int ARcount = availableBGARRequestInHistory.size();
+		System.out.println("Total-" + ARcount + " request available for delete");
+		searchField.clear();
+		
+		if (ARcount == 0) {
+			System.out.println("No availability reqest for delete ");
+
+		}
+		
+		
+		else {
+		
+		
+
+		for (int i = 1; i <= ARcount; i++)
 
 		{
+			
+			
 			searchField.click();
-			Thread.sleep(2000);
+			
 
-			act.sendKeys("BG").perform();
-			Thread.sleep(2000);
-
-			deleteAvailbilityRequest.click();
+			act.sendKeys("BG-AR").perform();
 			Thread.sleep(5000);
-			deleteAvailbiliYes.click();
+
+			String id = deleteId.getText();
+			deleteAvailbilityRequest.click();
+			Thread.sleep(2000);
+			driver.findElement(By.xpath("//button[@id=\"delYes"+id+"\"]")).click();
 
 			Thread.sleep(2000);
 			System.out.println("Availability request number-" + i + " deleted sucessfully from list-testing branch.");
 			driver.navigate().refresh();
 			Thread.sleep(2000);
 
+			count++;
 		}
+		
+		
+		}
+		
+		System.out.println("Total-" + count + " Availability request delete from planning list");
 	}
 
 	public void deleteAvailabilityRequestFromHistory(WebDriver driver) throws Throwable {
@@ -484,26 +524,58 @@ public class S_AvailabilityRequest extends b_baseClass {
 		availabilityRequestHistory.click();
 		Thread.sleep(2000);
 
-//	int z = availableDataCount.size();
-//	Reporter.log("The total available availability request count is-"+z+" in the history for delete.",true);
+		Select se = new Select(countOnPage);
+		se.selectByVisibleText("100");
 
-		for (int i = 1; i <= 100; i++) {
-			searFieldHistory.click();
-			Thread.sleep(2000);
-			act.sendKeys("BG").perform();
-			Thread.sleep(4000);
-			searchButton.click();
-			Thread.sleep(5000);
+	
+		searFieldHistory.click();
 
-			deleteAvailbilityRequest.click();
-			Thread.sleep(5000);
-			deleteAvailbiliHistoryYes.click();
-			Thread.sleep(2000);
-			System.out.println("Availability request number-" + i + " deleted sucessfully from histry-testing branch.");
-			driver.navigate().refresh();
-			Thread.sleep(2000);
+		act.sendKeys("BG-AR").perform();
+		Thread.sleep(500);
+		searchButton.click();
+		Thread.sleep(5000);
+		int count = 0;
+		int ARcount = availableBGARRequestInHistory.size();
+		System.out.println("Total-" + ARcount + " request available for delete");
+		searFieldHistory.clear();
+
+		if (ARcount == 0) {
+			System.out.println("No availability reqest for delete ");
 
 		}
+
+		else {
+
+			for (int i = 1; i <= ARcount; i++) {
+
+				WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+
+				if (wait.until(ExpectedConditions.or(ExpectedConditions.visibilityOf(deleteAvailbilityRequest),
+						ExpectedConditions.invisibilityOf(deleteAvailbilityRequest))) != null
+						&& deleteAvailbilityRequest.isDisplayed()) {
+				}
+
+				Thread.sleep(500);
+				searFieldHistory.click();
+				act.sendKeys("BG-AR").perform();
+				Thread.sleep(500);
+				searchButton.click();
+				Thread.sleep(5000);
+
+				deleteAvailbilityRequest.click();
+				Thread.sleep(5000);
+				deleteAvailbiliHistoryYes.click();
+				Thread.sleep(4000);
+				System.out.println(
+						"Availability request number-" + i + " deleted sucessfully from histry-testing branch.");
+
+				count++;
+
+			}
+
+		}
+
+		System.out.println("Total-" + count + " Availability request delete from history");
 
 	}
 
