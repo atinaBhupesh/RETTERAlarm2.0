@@ -8,14 +8,10 @@
 			<methods>
 			
 				
+				<include name="createAlarmChecklists" />
 				
-				<include name="createAvailabilityRequestOneTimeImmediate" />
-				<include name="createAvailabilityRequestOneTimeSchedule" />
-				<include name="createAvailabilityRequestRecursive" />
-				<include name="createAvailabilityRequestMultipleDays" />
-
-
-			<include name="createAvailabilityRequestOneTimeImmediateCallSmsMail" />
+				<include name="createNormalCheckList" />
+				
 				
 					
 			</methods>

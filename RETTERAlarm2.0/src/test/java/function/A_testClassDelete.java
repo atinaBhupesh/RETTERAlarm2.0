@@ -32,6 +32,8 @@ public class A_testClassDelete extends b_baseClass {
 	P_monitors mo;
 	
 	S_AvailabilityRequest arequest;
+	
+	T_checkList checkL;
 
 	String gTodaysDate;
 	String gtimeHHMMSS;
@@ -73,6 +75,8 @@ public class A_testClassDelete extends b_baseClass {
 		mo = new P_monitors(driver);
 		arequest = new S_AvailabilityRequest(driver);
 		
+		checkL = new T_checkList (driver);
+		
 		
 	}
 
@@ -89,6 +93,22 @@ public class A_testClassDelete extends b_baseClass {
 
 		hp.backToHomePage(driver, branchName);
 	}
+	
+	
+	@Test
+	public void deleteCheckList() throws Throwable
+
+	{
+		Reporter.log(" ", true);
+		Reporter.log("The process of delete Check list is started.", true);
+		checkL.deleteCheckList( driver);
+
+		Reporter.log(GREEN + GREEN + "The process of delete  Check list is complete.", true);
+		Reporter.log(" ", true);
+		Thread.sleep(3000);
+
+	}
+	
 
 	@Test
 	public void deleteAvailabilityRequestFromHistory() throws Throwable

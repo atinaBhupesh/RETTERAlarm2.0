@@ -8,21 +8,37 @@
 			<methods>
 
 				<include name="sendMessageToApiEsclationAlarm" />
+
+				<include name="createMonitorInformationByAttributeWithAttachments" />
+
+				<include name="importUser" />
+				<include name="updateUser" />
+				 <include name="importEventWith1minReminder"/>
+				 
+				 
+				 <include name="nextStage" />
+				 
+				<include name="verifyAllApiAlarmsCretaed" />
 				<include name="sendMessageToNewApiAlarmUser" />
 				<include name="sendMessageToOldApiAlarmUser" />
-				
+
+				<include name="TestAlarm_OneTime_Attribute" />
+				<include name="manualaByAttributeMSLP" />
+
 
 				<include name="manualaByAttributeSingleStation" />
 				<include name="manualAlarmByResourceMsHP" />
 				<include name="manualAlarmByResourceMsLP" />
 				<include name="manualAlarmByUersMs" />
-				
-				<include name="manualaByAttributeMSLP" />
+
+
 				<include name="manualAlarmByEscResourceSingleStation" />
 				<include name="manualAlarmByEscResourceMs" />
-				
+
 				<include name="manualaByAttributeExtend1To01StEscResourceFrom02" />
+
 				<include name="manualAlarmByOldEsclationTemplateFromSt02ToSt01" />
+
 
 				<include name="createNewAlarmTemplateByAttribute" />
 				<include name="createAlarmByNewlyAddedTemplateFromTemplateModule" />
@@ -35,32 +51,36 @@
 				<include name="manualAlarmByNewEscResource" />
 
 				<include name="sendMessageToManualAlarmUser" />
-				
+
 				<include name="CheckAlarmExtendFunctionality" />
 				<include name="CheckApiAlarmEscalationFunctionality" />
 				<include name="CheckManualAlarmEscalationFunctionality" />
-				
-				<include name="TestAlarm_OneTime_Attribute" />
-				
+
 				<include name="nextStage" />
-				
+
 				<include name="testAlarm_recursiv_daily_Resource" />
 				<include name="testAlarm_recursiv_weekly_users" />
-				<include name="TestAlarm_Recursive_Monthly_DayWise" />
-				<include name="TestAlarm_Recursive_Monthly_DateyWise" />
-				
-				<include name="createMonitorInformationByAttribute" />
+				<include name="TestAlarm_Recursive_Monthly_DayWise_Attribute" />
+				<include name="TestAlarm_Recursive_Monthly_DateyWise_Attribute" />
+
+
+				<include name="addAppUser" />
+				<include name="addStataionUser" />
+				<include name="addMultiRoleUser" />
+				<include name="addVehicleUser" />
+
 				<include name="createMonitorInformationByResource" />
 				<include name="createMonitorInformationByFireFighter" />
 				<include name="createMonitorInformationByStations" />
-				<include name="createMonitorInformationByFireFighterForTwoStation" />
+				<include
+					name="createMonitorInformationByFireFighterForTwoStation" />
 
 				<include name="create1MinInformationEventByAttribute" />
-				<include name="create1HrInformationEventByResource" />1
-				
+				<include name="create1HrInformationEventByResource" />
+
 				<include name="create1DayInformationEventByFireFighter" />
 				<include name="createFullDayInformationEventByStation" />
-				
+
 				<include name="SendMessageTo1DayInformationEventByFireFighter" />
 
 
@@ -70,35 +90,41 @@
 				<include name="createCalendarEventByStationsMS" />
 
 
+				<include name="createAvailabilityRequestOneTimeImmediate" />
+				<include name="createAvailabilityRequestOneTimeSchedule" />
+				<include name="createAvailabilityRequestRecursive" />
+				<include name="createAvailabilityRequestMultipleDays" />
+
+
 				<include name="nextStage" />
-				
+
 				<include name="createNewAlarmTemplateByResource" />
 				<include name="createNewAlarmTemplateByFirefighter" />
 
 				<include name="createNewAlarmLoop" />
 				<include name="createEventCategory" />
-				
+
 				<include name="createChatFroupByAttributeMS" />
 				<include name="createChatFroupByResourceMS" />
 				<include name="createChatFroupByAlarmLoopsMS" />
 				<include name="createChatFroupByFireFighterMS" />
-				
+
 				<include name="sendMessageToChatGroupCreatedByAttribute" />
 				<include name="sendMessageToChatGroupCreatedByResource" />
 				<include name="sendMessageToChatGroupCreatedByAlarmLoop" />
 				<include name="sendMessageToChatGroupCreatedByFireFighter" />
-				
-				
-				
-				
-				<include name="addAppUser" />
-				<include name="addStataionUser" />
-				<include name="addMultiRoleUser" />
-				<include name="addVehicleUser" />
-				
-				
-				
-				
+
+
+				<include name="createAlarmChecklists" />
+				<include name="createNormalCheckList" />
+
+				<include name="addNewStation" />
+				<include name="editStation" />
+
+				<include name="addStationMonitor" />
+				<include name="editStationMonitor" />
+				<include name="addOverviewMonitor" />
+				<include name="editOverviewMonitor" />
 
 
 			</methods>

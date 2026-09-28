@@ -8,62 +8,11 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">170,983</td><td></td><td></td></tr>
+<tr><th colspan="8">delete</th></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">43,542</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">function.A_testClassCreate</td><td><a href="#m0">backToHomePage2</a></td><td rowspan="1">1790580045806</td><td rowspan="1">6016</td></tr><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">function.A_testClassCreate</td><td><a href="#m1">createAvailabilityRequestOneTimeImmediate</a></td><td rowspan="1">1790579891114</td><td rowspan="1">12104</td></tr><tr><th colspan="4">Test &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="3">function.A_testClassCreate</td><td><a href="#m2">AfterSute</a></td><td rowspan="1">1790580051881</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m3">AfterTest</a></td><td rowspan="1">1790580051829</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m4">logOut</a></td><td rowspan="1">1790580051826</td><td rowspan="1">0</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">function.A_testClassCreate</td><td><a href="#m5">createAvailabilityRequestMultipleDays</a></td><td rowspan="1">1790580010760</td><td rowspan="1">35045</td></tr><tr class="passedeven"><td><a href="#m6">createAvailabilityRequestOneTimeSchedule</a></td><td rowspan="1">1790579915656</td><td rowspan="1">34366</td></tr><tr class="passedeven"><td><a href="#m7">createAvailabilityRequestRecursive</a></td><td rowspan="1">1790579962564</td><td rowspan="1">34856</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">delete</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">function.A_testClassDelete</td><td><a href="#m0">deleteCheckList</a></td><td rowspan="1">1790594104950</td><td rowspan="1">15168</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">function.A_testClassCreate#backToHomePage2</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>[TestResult name=createAvailabilityRequestMultipleDays status=SUCCESS method=A_testClassCreate.createAvailabilityRequestMultipleDays()[pri:0, instance:function.A_testClassCreate@1757cd72]]</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchSessionException: invalid session id: session deleted as the browser has closed the connection
-from disconnected: not connected to DevTools
-  (Session info: chrome=153.0.8010.53)
-Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.11&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f716b3342f92290cea32f8e4f9313239, get {url=https://live.retteralarm.de/}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 153.0.8010.53, chrome: {chromedriverVersion: 153.0.8010.52 (78e5e45d4bb4..., userDataDir: C:\Users\Bhupesh\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51460}, goog:processID: 38008, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51460/devtoo..., se:cdpVersion: 153.0.8010.53, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f716b3342f92290cea32f8e4f9313239
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:301)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:1064)
-	at function.D_homePage.backToHomePage(D_homePage.java:41)
-	at function.A_testClassCreate.backToHomePage2(A_testClassCreate.java:2253)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 33 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">function.A_testClassCreate#createAvailabilityRequestOneTimeImmediate</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages"> <br/>The process of create availability request OneTime>Immediate is started.</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=153.0.8010.53)
-Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.11&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f716b3342f92290cea32f8e4f9313239, clickElement {id=f.859DDDC1821EF7FDDEFE1EF85B31957D.d.7B105217347C08F7ABA8420C35610906.e.1612}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 153.0.8010.53, chrome: {chromedriverVersion: 153.0.8010.52 (78e5e45d4bb4..., userDataDir: C:\Users\Bhupesh\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51460}, goog:processID: 38008, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51460/devtoo..., se:cdpVersion: 153.0.8010.53, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (f716b3342f92290cea32f8e4f9313239)] -&gt; xpath: //a[text()=&quot;Availability Request&quot;]]
-Session ID: f716b3342f92290cea32f8e4f9313239
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy22.click(Unknown Source)
-	at function.S_AvailabilityRequest.createAvailabilityRequest(S_AvailabilityRequest.java:169)
-	at function.A_testClassCreate.createAvailabilityRequestOneTimeImmediate(A_testClassCreate.java:358)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">function.A_testClassCreate#AfterSute</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">function.A_testClassCreate#AfterTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">function.A_testClassCreate#logOut</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">function.A_testClassCreate#createAvailabilityRequestMultipleDays</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages"> <br/>The process of create availability request MultipleDays is started.<br/>[32m✔ [0m[32m✔ [0mThe process of create availability request MultipleDays is complete.<br/> </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">function.A_testClassCreate#createAvailabilityRequestOneTimeSchedule</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages"> <br/>The process of create availability request OneTime>Schedule is started.<br/>[32m✔ [0m[32m✔ [0mThe process of create availability request OneTime>Schedule is complete.<br/> </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">function.A_testClassCreate#createAvailabilityRequestRecursive</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages"> <br/>The process of create availability request Recursive is started.<br/>[32m✔ [0m[32m✔ [0mThe process of create availability request Recursive is complete.<br/> </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test</h2><h3 id="m0">function.A_testClassDelete#deleteCheckList</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages"> <br/>The process of delete Check list is started.<br/>[32m✔ [0m[32m✔ [0mThe process of delete  Check list is complete.<br/> </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

@@ -16,9 +16,9 @@ public class R_FileSections extends b_baseClass {
 	private WebElement fileSection;
 	@FindBy(xpath = "//button[text()=\" Create New\"]")
 	private WebElement createNew;
-	@FindBy(xpath = "//select[@name=\"data[FileSection][department_id]\"]")
+	@FindBy(xpath = "//select[@id=\"selectFiredepartment\"]")
 	private WebElement selectDepartment;
-	@FindBy(xpath = "//select[@id=\"select2Users\"]")
+	@FindBy(xpath = "//span[@class=\"select2-selection__placeholder\"]")
 	private WebElement selectStation;
 	 @FindBy(xpath="//textarea[@placeholder=\"Enter title\"]")private WebElement fileTitle;
 	 @FindBy(xpath="//input[@placeholder=\"Enter address\"]")private WebElement fileAddress;

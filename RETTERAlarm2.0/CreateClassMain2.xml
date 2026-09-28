@@ -14,6 +14,11 @@
 				<include name="TestAlarm_Recursive_Monthly_DateyWise_Attribute" />
 
 
+				<include name="addAppUser" />
+				<include name="addStataionUser" />
+				<include name="addMultiRoleUser" />
+				<include name="addVehicleUser" />
+
 				<include name="createMonitorInformationByResource" />
 				<include name="createMonitorInformationByFireFighter" />
 				<include name="createMonitorInformationByStations" />

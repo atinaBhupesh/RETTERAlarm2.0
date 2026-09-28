@@ -27,6 +27,7 @@
 				<include name="deleteTestAlarmFromPlaningList" />
 				<include name="deleteStaions" />
 				<include name="deleteMonitorUsers" />
+				<include name="deleteCheckList" />
 				
 				
 				

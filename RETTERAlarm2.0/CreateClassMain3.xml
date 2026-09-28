@@ -29,10 +29,10 @@
 				<include name="sendMessageToChatGroupCreatedByFireFighter" />
 				
 				
-				<include name="addAppUser" />
-				<include name="addStataionUser" />
-				<include name="addMultiRoleUser" />
-				<include name="addVehicleUser" />
+				
+				
+				<include name="createAlarmChecklists" />
+				<include name="createNormalCheckList" />
 				
 				<include name="addNewStation" />
 				<include name="editStation" />

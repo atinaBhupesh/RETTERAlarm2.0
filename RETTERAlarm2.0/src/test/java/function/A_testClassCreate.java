@@ -37,6 +37,7 @@ public class A_testClassCreate extends b_baseClass {
 	Q_Attribute att;
 	R_FileSections fs;
 	S_AvailabilityRequest arequest;
+	T_checkList checkL;
 
 	String todaysDate;
 	String todaysDateG;
@@ -131,6 +132,7 @@ public class A_testClassCreate extends b_baseClass {
 		att = new Q_Attribute(driver);
 		fs = new R_FileSections(driver);
 		arequest = new S_AvailabilityRequest(driver);
+		checkL = new T_checkList (driver);
 
 	}
 
@@ -219,6 +221,39 @@ public class A_testClassCreate extends b_baseClass {
 	
 	
 	@Test
+	public void createAlarmChecklists () throws Throwable {
+
+	
+		
+		Reporter.log(" ", true);
+		Reporter.log("The process of create Alarm check list is started.", true);
+		
+		checkL.commanCheckList(driver,  deptN,  st01N,  "AlarmChecklists",  timeHHMMSSG);
+	 	Reporter.log(GREEN + GREEN + "The process of create Alarm check list is complete.", true);
+		Reporter.log(" ", true);
+	}
+	
+	
+	
+	@Test
+	public void createNormalCheckList () throws Throwable {
+
+	
+		
+		Reporter.log(" ", true);
+		Reporter.log("The process of create Normal check list is started.", true);
+		
+		checkL.commanCheckList(driver,  deptN,  st01N,  "NormalChecklists",  timeHHMMSSG);
+	 	Reporter.log(GREEN + GREEN + "The process of create Normal check list is complete.", true);
+		Reporter.log(" ", true);
+	}
+	
+	
+	
+	
+	
+	
+	@Test
 	public void createInformationWithEmailSms() throws Throwable {
 
 	
@@ -229,7 +264,7 @@ public class A_testClassCreate extends b_baseClass {
 		info.createInformationWithEmailSms( driver,  st01N,  todaysDate,  timeHHMMSS,
 				st01RCallSms,  branchName);
 
-	 	Reporter.log(GREEN + GREEN + "The process of information with email and sms  is started.", true);
+	 	Reporter.log(GREEN + GREEN + "The process of information with email and sms  is complete.", true);
 		Reporter.log(" ", true);
 	}
 	

@@ -5,10 +5,8 @@
     <classes>
       <class name="function.A_testClassDelete">
         <methods>
-          <include name="deleteMonitorUsers"/>
-          <include name="deleteTestAlarmFromPlaningList"/>
-          <include name="deleteStaions"/>
           <include name="BeforeSuite"/>
+          <include name="deleteCheckList"/>
           <include name="backToHomePage"/>
           <include name="backToHomePage2"/>
           <include name="AfterSute"/>
