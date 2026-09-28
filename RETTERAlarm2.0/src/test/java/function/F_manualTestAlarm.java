@@ -747,9 +747,9 @@ public class F_manualTestAlarm extends b_baseClass {
 
 	
 
-	public void TestAlarm_Recursive_Monthly_DateyWise_Attribute(WebDriver driver, String st01N, String gTodaysDate,
+	public void testAlarm_Recursive_Monthly_DateyWise_Attribute(WebDriver driver, String st01N, String gTodaysDate,
 			String germanyTimeAfter15MinHH, String germanyTimeAfter15MinMM, String st01V1, String st01V2,
-			String germanyTodaysDate2, String dayName, String st01A1) throws Throwable {
+			String germanyTodaysDate2, String dayName, String st01A1, String filePath) throws Throwable {
 		Actions act = new Actions(driver);
 		Robot robot = new Robot();
 
@@ -1006,12 +1006,26 @@ public class F_manualTestAlarm extends b_baseClass {
 		Assert.assertTrue(title.contains(firtsTestAlarm1), RED + "Alarm not added.");
 
 		System.out.println(GREEN + title);
+		
+		FileInputStream in = new FileInputStream(filePath);
+		XSSFWorkbook wb = new XSSFWorkbook(in);
+		XSSFSheet sheet = wb.getSheetAt(0);
+
+		Row row = sheet.createRow(76);//
+		row.createCell(1).setCellValue(title); // Cell B
+
+		in.close();
+
+		FileOutputStream out = new FileOutputStream(filePath);
+		wb.write(out);
+		out.close();
+		wb.close();
 
 	}
 
-	public void TestAlarm_Recursive_Monthly_DayWise_Attribute(WebDriver driver, String st01N, String gTodaysDate,
+	public void testAlarm_Recursive_Monthly_DayWise_Attribute(WebDriver driver, String st01N, String gTodaysDate,
 			String germanyTimeAfter11MinHH, String germanyTimeAfter11MinMM, String st01V1, String st01V2,
-			String dayCount, String dayName, String st01A1) throws Throwable {
+			String dayCount, String dayName, String st01A1, String filePath) throws Throwable {
 		Actions act = new Actions(driver);
 		Robot robot = new Robot();
 		mangeTestAlarm.click();
@@ -1269,11 +1283,29 @@ public class F_manualTestAlarm extends b_baseClass {
 		Assert.assertTrue(title.contains(firtsTestAlarm1), RED + "Alarm not added.");
 
 		System.out.println(GREEN + title);
+		
+		
+		
+		
+		
+		FileInputStream in = new FileInputStream(filePath);
+		XSSFWorkbook wb = new XSSFWorkbook(in);
+		XSSFSheet sheet = wb.getSheetAt(0);
+
+		Row row = sheet.createRow(75);//
+		row.createCell(1).setCellValue(title); // Cell B
+
+		in.close();
+
+		FileOutputStream out = new FileOutputStream(filePath);
+		wb.write(out);
+		out.close();
+		wb.close();
 	}
 
 	public void testAlarm_recursiv_weekly_users(WebDriver driver, String st01N, String st02N, String gTodaysDate,
 			String germanyTimeAfter9MinHH, String germanyTimeAfter9MinMM, String dayName, String st01V1, String st01V2,
-			String st02V1, String st01FF1, String st01FF2, String st02FF1) throws Throwable {
+			String st02V1, String st01FF1, String st01FF2, String st02FF1, String filePath) throws Throwable {
 
 		// -----------------------
 		// CREATE MANUAL ALARM (FIREFIGHTER)
@@ -1561,11 +1593,26 @@ public class F_manualTestAlarm extends b_baseClass {
 		Assert.assertTrue(title.contains(firtsTestAlarm1), RED + "Alarm not added.");
 
 		System.out.println(GREEN + title);
+		
+		
+		FileInputStream in = new FileInputStream(filePath);
+		XSSFWorkbook wb = new XSSFWorkbook(in);
+		XSSFSheet sheet = wb.getSheetAt(0);
+
+		Row row = sheet.createRow(74);//
+		row.createCell(1).setCellValue(title); // Cell B
+
+		in.close();
+
+		FileOutputStream out = new FileOutputStream(filePath);
+		wb.write(out);
+		out.close();
+		wb.close();
 
 	}
 
 	public void testAlarm_recursiv_daily_Resource(WebDriver driver, String st01N, String st02N, String gTodaysDate,
-			String germanyTimeAfter7MinHH, String germanyTimeAfter7MinMM, String st01R1, String st01R2)
+			String germanyTimeAfter7MinHH, String germanyTimeAfter7MinMM, String st01R1, String st01R2, String filePath)
 			throws Throwable {
 
 		Actions act = new Actions(driver);
@@ -1778,6 +1825,21 @@ public class F_manualTestAlarm extends b_baseClass {
 		Assert.assertTrue(title.contains(firtsTestAlarm1), RED + "Alarm not added.");
 
 		System.out.println(GREEN + title);
+		
+		
+		FileInputStream in = new FileInputStream(filePath);
+		XSSFWorkbook wb = new XSSFWorkbook(in);
+		XSSFSheet sheet = wb.getSheetAt(0);
+
+		Row row = sheet.createRow(73);//
+		row.createCell(1).setCellValue(title); // Cell B
+
+		in.close();
+
+		FileOutputStream out = new FileOutputStream(filePath);
+		wb.write(out);
+		out.close();
+		wb.close();
 
 	}
 
@@ -1970,8 +2032,8 @@ public class F_manualTestAlarm extends b_baseClass {
 
 	}
 
-	public void TestAlarm_OneTime_Attribute(WebDriver driver, String st01N, String gTodaysDate,
-			String germanyTimeAfter5MinHH, String germanyTimeAfter5MinMM, String st01V1, String st01V2, String st01A1)
+	public void testAlarm_OneTime_Attribute(WebDriver driver, String st01N, String gTodaysDate,
+			String germanyTimeAfter5MinHH, String germanyTimeAfter5MinMM, String st01V1, String st01V2, String st01A1, String filePath)
 			throws Throwable {
 		Actions act = new Actions(driver);
 		Robot robot = new Robot();
@@ -2170,6 +2232,21 @@ public class F_manualTestAlarm extends b_baseClass {
 		Assert.assertTrue(title.contains(firtsTestAlarm1), RED + "Alarm not added.");
 
 		System.out.println(GREEN + title);
+		
+		
+		FileInputStream in = new FileInputStream(filePath);
+		XSSFWorkbook wb = new XSSFWorkbook(in);
+		XSSFSheet sheet = wb.getSheetAt(0);
+
+		Row row = sheet.createRow(72);//
+		row.createCell(1).setCellValue(title); // Cell B
+
+		in.close();
+
+		FileOutputStream out = new FileOutputStream(filePath);
+		wb.write(out);
+		out.close();
+		wb.close();
 
 	}
 

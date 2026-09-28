@@ -1,8 +1,13 @@
 package function;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.time.Duration;
 import java.util.List;
 
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -161,7 +166,7 @@ public class S_AvailabilityRequest extends b_baseClass {
 			String timeHHMMSSG, String deptN, String tomorrowDateG, String timeAfter5MinHHG, String timeAfter5MinMMG,
 			String timeAfter7MinHHG, String timeAfter7MinMMG, String timeAfter9MinHHG, String timeAfter9MinMMG,
 			String todaysDayG, String tomorrowDayG, String dayAfterFourDaysG, String timeAfter11MinHHG,
-			String timeAfter11MinMMG) throws Throwable {
+			String timeAfter11MinMMG, String filePath) throws Throwable {
 		Actions act = new Actions(driver);
 
 		availabilityRequest.click();
@@ -179,11 +184,14 @@ public class S_AvailabilityRequest extends b_baseClass {
 
 		Select se = new Select(ARType);
 
+		int rowNumber =0;
+		
 		switch (requestType) {
 
 		case "OneTime>Immediate":
 			se.selectByVisibleText("One time");
 			sendImmediateChekBox.click();
+			rowNumber = 77;
 			break;
 
 		case "OneTime>Schedule":
@@ -201,6 +209,8 @@ public class S_AvailabilityRequest extends b_baseClass {
 
 			act.sendKeys(todaysDateG + " " + timeAfter5MinHHG + ":" + timeAfter5MinMMG).build().perform();
 			Thread.sleep(2000);
+			
+			rowNumber = 78;
 
 			break;
 
@@ -216,6 +226,7 @@ public class S_AvailabilityRequest extends b_baseClass {
 			act.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).build().perform();
 
 			act.sendKeys(timeAfter9MinHHG + ":" + timeAfter9MinMMG).build().perform();
+			rowNumber = 79;
 
 			break;
 
@@ -242,6 +253,8 @@ public class S_AvailabilityRequest extends b_baseClass {
 			act.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).build().perform();
 
 			act.sendKeys(todaysDateG + " " + timeAfter11MinHHG + ":" + timeAfter11MinMMG).build().perform();
+			
+			rowNumber = 80;
 
 			break;
 
@@ -483,6 +496,25 @@ public class S_AvailabilityRequest extends b_baseClass {
 		Assert.assertTrue(actualTite.contains(title), RED + "Station not found.");
 
 		System.out.println(GREEN + requestType + " added successfully.");
+		
+		
+		FileInputStream in = new FileInputStream(filePath);
+		XSSFWorkbook wb = new XSSFWorkbook(in);
+		XSSFSheet sheet = wb.getSheetAt(0);
+
+		Row row = sheet.createRow(rowNumber);//
+		row.createCell(1).setCellValue(title); // Cell B
+
+		in.close();
+
+		FileOutputStream out = new FileOutputStream(filePath);
+		wb.write(out);
+		out.close();
+		wb.close();
+
+		
+		
+		
 	}
 
 	public void deleteAvailabilityRequestFromList(WebDriver driver) throws Throwable {

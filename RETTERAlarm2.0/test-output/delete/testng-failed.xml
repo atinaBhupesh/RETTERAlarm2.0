@@ -6,7 +6,7 @@
       <class name="function.A_testClassDelete">
         <methods>
           <include name="BeforeSuite"/>
-          <include name="deleteCheckList"/>
+          <include name="deactiveBgTestActiveAlarmsFromPlaningList"/>
           <include name="backToHomePage"/>
           <include name="backToHomePage2"/>
           <include name="AfterSute"/>

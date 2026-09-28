@@ -295,7 +295,7 @@ public class A_testClassCreate extends b_baseClass {
 				 timeHHMMSSG,  deptN,  tomorrowDateG,  timeAfter5MinHHG,  timeAfter5MinMMG,
 				 timeAfter7MinHHG,  timeAfter7MinMMG,  timeAfter9MinHHG,  timeAfter9MinMMG,
 				 todaysDayG,  tomorrowDayG,  dayAfterFourDaysG,  timeAfter11MinHHG,
-				 timeAfter11MinMMG);
+				 timeAfter11MinMMG, filePath);
 
 		Reporter.log(GREEN + GREEN + "The process of create availability request MultipleDays is complete.", true);
 		Reporter.log(" ", true);
@@ -308,6 +308,7 @@ public class A_testClassCreate extends b_baseClass {
 	@Test
 	public void createAvailabilityRequestRecursive() throws Throwable {
 
+		tc.catchDateTime(driver);
 		todaysDateG= tc.todaysDateG;
 		tomorrowDateG = tc.tomorrowDateG;
 		todaysDayG = tc.todaysDayG;
@@ -331,7 +332,7 @@ public class A_testClassCreate extends b_baseClass {
 				 timeHHMMSSG,  deptN,  tomorrowDateG,  timeAfter5MinHHG,  timeAfter5MinMMG,
 				 timeAfter7MinHHG,  timeAfter7MinMMG,  timeAfter9MinHHG,  timeAfter9MinMMG,
 				 todaysDayG,  tomorrowDayG,  dayAfterFourDaysG,  timeAfter11MinHHG,
-				 timeAfter11MinMMG);
+				 timeAfter11MinMMG, filePath);
 
 		Reporter.log(GREEN + GREEN + "The process of create availability request Recursive is complete.", true);
 		Reporter.log(" ", true);
@@ -340,6 +341,7 @@ public class A_testClassCreate extends b_baseClass {
 	@Test
 	public void createAvailabilityRequestOneTimeSchedule() throws Throwable {
 
+		tc.catchDateTime(driver);
 		todaysDateG= tc.todaysDateG;
 		tomorrowDateG = tc.tomorrowDateG;
 		todaysDayG = tc.todaysDayG;
@@ -362,7 +364,7 @@ public class A_testClassCreate extends b_baseClass {
 				 timeHHMMSSG,  deptN,  tomorrowDateG,  timeAfter5MinHHG,  timeAfter5MinMMG,
 				 timeAfter7MinHHG,  timeAfter7MinMMG,  timeAfter9MinHHG,  timeAfter9MinMMG,
 				 todaysDayG,  tomorrowDayG,  dayAfterFourDaysG,  timeAfter11MinHHG,
-				 timeAfter11MinMMG);
+				 timeAfter11MinMMG, filePath);
 
 		Reporter.log(GREEN + GREEN + "The process of create availability request OneTime>Schedule is complete.", true);
 		Reporter.log(" ", true);
@@ -371,6 +373,9 @@ public class A_testClassCreate extends b_baseClass {
 	@Test
 	public void createAvailabilityRequestOneTimeImmediate() throws Throwable {
 
+		
+		
+		tc.catchDateTime(driver);
 		todaysDateG= tc.todaysDateG;
 		tomorrowDateG = tc.tomorrowDateG;
 		todaysDayG = tc.todaysDayG;
@@ -394,7 +399,7 @@ public class A_testClassCreate extends b_baseClass {
 				 timeHHMMSSG,  deptN,  tomorrowDateG,  timeAfter5MinHHG,  timeAfter5MinMMG,
 				 timeAfter7MinHHG,  timeAfter7MinMMG,  timeAfter9MinHHG,  timeAfter9MinMMG,
 				 todaysDayG,  tomorrowDayG,  dayAfterFourDaysG,  timeAfter11MinHHG,
-				 timeAfter11MinMMG);
+				 timeAfter11MinMMG, filePath);
 
 		Reporter.log(GREEN + GREEN + "The process of create availability request OneTime>Immediate is complete.", true);
 		Reporter.log(" ", true);
@@ -403,6 +408,7 @@ public class A_testClassCreate extends b_baseClass {
 	@Test
 	public void createAvailabilityRequestOneTimeImmediateCallSmsMail() throws Throwable {
 
+		tc.catchDateTime(driver);
 		todaysDateG= tc.todaysDateG;
 		tomorrowDateG = tc.tomorrowDateG;
 		todaysDayG = tc.todaysDayG;
@@ -426,7 +432,7 @@ public class A_testClassCreate extends b_baseClass {
 				 timeHHMMSSG,  deptN,  tomorrowDateG,  timeAfter5MinHHG,  timeAfter5MinMMG,
 				 timeAfter7MinHHG,  timeAfter7MinMMG,  timeAfter9MinHHG,  timeAfter9MinMMG,
 				 todaysDayG,  tomorrowDayG,  dayAfterFourDaysG,  timeAfter11MinHHG,
-				 timeAfter11MinMMG);
+				 timeAfter11MinMMG, filePath);
 
 		Reporter.log(GREEN + GREEN + "The process of create availability request OneTime>Immediate is complete.", true);
 		Reporter.log(" ", true);
@@ -622,7 +628,7 @@ public class A_testClassCreate extends b_baseClass {
 	}
 
 	@Test
-	public void TestAlarm_Recursive_Monthly_DateyWise_Attribute() throws Throwable
+	public void testAlarm_Recursive_Monthly_DateyWise_Attribute() throws Throwable
 
 	{
 
@@ -635,8 +641,8 @@ public class A_testClassCreate extends b_baseClass {
 				"The process of creating Test alarm-recursive-montly_date wise by Attribute for multi station is started.",
 				true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.TestAlarm_Recursive_Monthly_DateyWise_Attribute(driver, st01N, todaysDate, timeAfter15MinHH, imeAfter15MinMM,
-				st01V1, st01V2, todaysDateD, dayName, st01A1);
+		ma.testAlarm_Recursive_Monthly_DateyWise_Attribute(driver, st01N, todaysDate, timeAfter15MinHH, imeAfter15MinMM,
+				st01V1, st01V2, todaysDateD, dayName, st01A1, filePath);
 
 		Reporter.log(GREEN + GREEN
 				+ "The process of creating  Test alarm-recursive-montly_date wise by Attribute for multi station is complete.",
@@ -647,7 +653,7 @@ public class A_testClassCreate extends b_baseClass {
 	}
 
 	@Test
-	public void TestAlarm_Recursive_Monthly_DayWise_Attribute() throws Throwable
+	public void testAlarm_Recursive_Monthly_DayWise_Attribute() throws Throwable
 
 	{
 		tc.catchDateTime(driver);
@@ -659,8 +665,8 @@ public class A_testClassCreate extends b_baseClass {
 				"The process of creating Test alarm-recursive-montly_day wise by Attribute for multi station is started.",
 				true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.TestAlarm_Recursive_Monthly_DayWise_Attribute(driver, st01N, todaysDate, timeAfter11MinHH, timeAfter11MinMM,
-				st01V1, st01V2, dayCount, dayName, st01A1);
+		ma.testAlarm_Recursive_Monthly_DayWise_Attribute(driver, st01N, todaysDate, timeAfter11MinHH, timeAfter11MinMM,
+				st01V1, st01V2, dayCount, dayName, st01A1, filePath);
 
 		Reporter.log(GREEN + GREEN
 				+ "The process of creating  Test alarm-recursive-montly_day wise by Attribute for multi station is complete.",
@@ -707,7 +713,7 @@ public class A_testClassCreate extends b_baseClass {
 				true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
 		ma.testAlarm_recursiv_weekly_users(driver, st01N, st02N, todaysDate, timeAfter9MinHH, timeAfter9MinMM, dayName,
-				st01V1, st01V2, st02V1, st01FF1, st01FF2, st02FF1);
+				st01V1, st01V2, st02V1, st01FF1, st01FF2, st02FF1, filePath);
 
 		Reporter.log(GREEN + GREEN
 				+ "The process of creating  Test alarm-recursive-weekly by resource for multi station is complete.",
@@ -731,7 +737,7 @@ public class A_testClassCreate extends b_baseClass {
 				true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
 		ma.testAlarm_recursiv_daily_Resource(driver, st01N, st02N, todaysDate, timeAfter7MinHH, timeAfter7MinMM, st01R1,
-				st02R1);
+				st02R1, filePath);
 
 		Reporter.log(GREEN + GREEN
 				+ "The process of creating  Test alarm-recursive-daily Time by resource for multi station is complete.",
@@ -768,7 +774,7 @@ public class A_testClassCreate extends b_baseClass {
 	}
 
 	@Test
-	public void TestAlarm_OneTime_Attribute() throws Throwable
+	public void testAlarm_OneTime_Attribute() throws Throwable
 
 	{
 		tc.catchDateTime(driver);
@@ -781,8 +787,8 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of creating Test alarm-One Time by attribute for multi station is started.", true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.TestAlarm_OneTime_Attribute(driver, st01N, todaysDate, timeAfter5MinHH, timeAfter5MinMM, st01V1, st01V2,
-				st01A1);
+		ma.testAlarm_OneTime_Attribute(driver, st01N, todaysDate, timeAfter5MinHH, timeAfter5MinMM, st01V1, st01V2,
+				st01A1,filePath);
 
 		Reporter.log(
 				GREEN + GREEN

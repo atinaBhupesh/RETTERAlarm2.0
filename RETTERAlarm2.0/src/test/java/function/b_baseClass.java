@@ -89,7 +89,7 @@ public class b_baseClass {
 	String email_FF;
 	String firstName_FF;
 	String lastName_FF;
-	long contactNoFF;
+	long contactNo_FF;
 	String newVehicleName;
 	String st01FFEmailCallSms_FallBack;
 	String st01AttributeCallSmsEmail;
@@ -99,7 +99,7 @@ public class b_baseClass {
 	String attributeNewUser;
 	String newStationName;
 	String newStationMonitorName;
-	String newOverviewMonitorName;
+	
 	
 	String ApiAlarm01;
 	String ApiAlarm02;
@@ -115,6 +115,8 @@ public class b_baseClass {
 	String ApiAlarm12;
 	String ApiAlarm13;
 	String ApiAlarm14;
+	
+	String newOverviewMonitorName;
 	
 	
 
@@ -419,7 +421,7 @@ public class b_baseClass {
 		email_FF = sheet.getRow(45).getCell(1).getStringCellValue();
 		firstName_FF = sheet.getRow(46).getCell(1).getStringCellValue();
 		lastName_FF = sheet.getRow(47).getCell(1).getStringCellValue();
-		contactNoFF = (long) sheet.getRow(48).getCell(1).getNumericCellValue();
+		contactNo_FF = (long) sheet.getRow(48).getCell(1).getNumericCellValue();
 		newVehicleName = sheet.getRow(49).getCell(1).getStringCellValue();
 		st01FFEmailCallSms_FallBack = sheet.getRow(50).getCell(1).getStringCellValue();
 		st01AttributeCallSmsEmail = sheet.getRow(51).getCell(1).getStringCellValue();
