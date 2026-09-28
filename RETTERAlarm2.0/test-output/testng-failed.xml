@@ -8,7 +8,7 @@
           <include name="AfterTest"/>
           <include name="BeforeSuite"/>
           <include name="backToHomePage2"/>
-          <include name="ManualAlarForCheckExtendAlarmCall"/>
+          <include name="createAvailabilityRequestOneTimeImmediate"/>
           <include name="BeforeTest"/>
           <include name="backToHomePage"/>
           <include name="logOut"/>

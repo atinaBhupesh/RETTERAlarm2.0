@@ -39,10 +39,14 @@ public class A_testClassCreate extends b_baseClass {
 	S_AvailabilityRequest arequest;
 
 	String todaysDate;
+	String todaysDateG;
 	String todaysDateddmmyy;
 	String todaysDateD;
+	
+	
 	String todaysDate1;
 	String tomorrowDate;
+	String tomorrowDateG;
 	String timeHHMMSS;
 	String timeHHMMSSG;
 	String dayName;
@@ -138,6 +142,8 @@ public class A_testClassCreate extends b_baseClass {
 		tc.catchDateTime(driver);
 
 		todaysDate = tc.todaysDate;
+		todaysDateG= tc.todaysDateG;
+		
 
 		todaysDateddmmyy = tc.todaysDateddmmyy;
 		todaysDateD = tc.todaysDateD;
@@ -146,6 +152,7 @@ public class A_testClassCreate extends b_baseClass {
 		timeHHMMSSG = tc.currentTimeHHMMSSG;
 
 		tomorrowDate = tc.tomorrowDate;
+		tomorrowDateG = tc.tomorrowDateG;
 		dayName = tc.dayName;
 		dayCount = tc.dayCount;
 		monthCount = tc.monthCount;
@@ -230,6 +237,8 @@ public class A_testClassCreate extends b_baseClass {
 	public void createAvailabilityRequestMultipleDays() throws Throwable {
 
 		tc.catchDateTime(driver);
+		todaysDateG= tc.todaysDateG;
+		tomorrowDateG = tc.tomorrowDateG;
 		todaysDayG = tc.todaysDayG;
 		tomorrowDayG = tc.tomorrowDayG;
 		dayAfterFourDaysG = tc.dayAfterFourDaysG;
@@ -247,9 +256,11 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of create availability request MultipleDays is started.", true);
 
-		arequest.createAvailabilityRequest(driver, branchName, "MultipleDays", todaysDate, timeHHMMSSG, deptN,
-				tomorrowDate, timeAfter5MinHHG, timeAfter5MinMMG, timeAfter7MinHHG, timeAfter7MinMMG, timeAfter9MinHHG,
-				timeAfter9MinMMG, todaysDayG,tomorrowDayG,dayAfterFourDaysG, timeAfter11MinHHG, timeAfter11MinMMG);
+		arequest.createAvailabilityRequest(driver,  branchName,  "MultipleDays",  todaysDateG,
+				 timeHHMMSSG,  deptN,  tomorrowDateG,  timeAfter5MinHHG,  timeAfter5MinMMG,
+				 timeAfter7MinHHG,  timeAfter7MinMMG,  timeAfter9MinHHG,  timeAfter9MinMMG,
+				 todaysDayG,  tomorrowDayG,  dayAfterFourDaysG,  timeAfter11MinHHG,
+				 timeAfter11MinMMG);
 
 		Reporter.log(GREEN + GREEN + "The process of create availability request MultipleDays is complete.", true);
 		Reporter.log(" ", true);
@@ -262,7 +273,8 @@ public class A_testClassCreate extends b_baseClass {
 	@Test
 	public void createAvailabilityRequestRecursive() throws Throwable {
 
-		tc.catchDateTime(driver);
+		todaysDateG= tc.todaysDateG;
+		tomorrowDateG = tc.tomorrowDateG;
 		todaysDayG = tc.todaysDayG;
 		tomorrowDayG = tc.tomorrowDayG;
 		dayAfterFourDaysG = tc.dayAfterFourDaysG;
@@ -280,9 +292,11 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of create availability request Recursive is started.", true);
 
-		arequest.createAvailabilityRequest(driver, branchName, "Recursive", todaysDate, timeHHMMSSG, deptN,
-				tomorrowDate, timeAfter5MinHHG, timeAfter5MinMMG, timeAfter7MinHHG, timeAfter7MinMMG, timeAfter9MinHHG,
-				timeAfter9MinMMG, todaysDayG,tomorrowDayG,dayAfterFourDaysG, timeAfter11MinMMG, timeAfter11MinHHG);
+		arequest.createAvailabilityRequest(driver,  branchName,  "Recursive",  todaysDateG,
+				 timeHHMMSSG,  deptN,  tomorrowDateG,  timeAfter5MinHHG,  timeAfter5MinMMG,
+				 timeAfter7MinHHG,  timeAfter7MinMMG,  timeAfter9MinHHG,  timeAfter9MinMMG,
+				 todaysDayG,  tomorrowDayG,  dayAfterFourDaysG,  timeAfter11MinHHG,
+				 timeAfter11MinMMG);
 
 		Reporter.log(GREEN + GREEN + "The process of create availability request Recursive is complete.", true);
 		Reporter.log(" ", true);
@@ -291,7 +305,8 @@ public class A_testClassCreate extends b_baseClass {
 	@Test
 	public void createAvailabilityRequestOneTimeSchedule() throws Throwable {
 
-		tc.catchDateTime(driver);
+		todaysDateG= tc.todaysDateG;
+		tomorrowDateG = tc.tomorrowDateG;
 		todaysDayG = tc.todaysDayG;
 		tomorrowDayG = tc.tomorrowDayG;
 		dayAfterFourDaysG = tc.dayAfterFourDaysG;
@@ -305,13 +320,14 @@ public class A_testClassCreate extends b_baseClass {
 		timeAfter9MinMMG = tc.timeAfter9MinMMG;
 		timeAfter11MinHHG = tc.timeAfter11MinHHG;
 		timeAfter11MinMMG = tc.timeAfter11MinMMG;
-
 		Reporter.log(" ", true);
 		Reporter.log("The process of create availability request OneTime>Schedule is started.", true);
 
-		arequest.createAvailabilityRequest(driver, branchName, "Recursive", todaysDate, timeHHMMSSG, deptN,
-				tomorrowDate, timeAfter5MinHHG, timeAfter5MinMMG, timeAfter7MinHHG, timeAfter7MinMMG, timeAfter9MinHHG,
-				timeAfter9MinMMG, todaysDayG,tomorrowDayG,dayAfterFourDaysG, timeAfter11MinMMG, timeAfter11MinHHG);
+		arequest.createAvailabilityRequest(driver,  branchName,  "OneTime>Schedule",  todaysDateG,
+				 timeHHMMSSG,  deptN,  tomorrowDateG,  timeAfter5MinHHG,  timeAfter5MinMMG,
+				 timeAfter7MinHHG,  timeAfter7MinMMG,  timeAfter9MinHHG,  timeAfter9MinMMG,
+				 todaysDayG,  tomorrowDayG,  dayAfterFourDaysG,  timeAfter11MinHHG,
+				 timeAfter11MinMMG);
 
 		Reporter.log(GREEN + GREEN + "The process of create availability request OneTime>Schedule is complete.", true);
 		Reporter.log(" ", true);
@@ -320,7 +336,8 @@ public class A_testClassCreate extends b_baseClass {
 	@Test
 	public void createAvailabilityRequestOneTimeImmediate() throws Throwable {
 
-		tc.catchDateTime(driver);
+		todaysDateG= tc.todaysDateG;
+		tomorrowDateG = tc.tomorrowDateG;
 		todaysDayG = tc.todaysDayG;
 		tomorrowDayG = tc.tomorrowDayG;
 		dayAfterFourDaysG = tc.dayAfterFourDaysG;
@@ -338,9 +355,11 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of create availability request OneTime>Immediate is started.", true);
 
-		arequest.createAvailabilityRequest(driver, branchName, "Recursive", todaysDate, timeHHMMSSG, deptN,
-				tomorrowDate, timeAfter5MinHHG, timeAfter5MinMMG, timeAfter7MinHHG, timeAfter7MinMMG, timeAfter9MinHHG,
-				timeAfter9MinMMG, todaysDayG,tomorrowDayG,dayAfterFourDaysG, timeAfter11MinMMG, timeAfter11MinHHG);
+		arequest.createAvailabilityRequest(driver,  branchName,  "OneTime>Immediate",  todaysDateG,
+				 timeHHMMSSG,  deptN,  tomorrowDateG,  timeAfter5MinHHG,  timeAfter5MinMMG,
+				 timeAfter7MinHHG,  timeAfter7MinMMG,  timeAfter9MinHHG,  timeAfter9MinMMG,
+				 todaysDayG,  tomorrowDayG,  dayAfterFourDaysG,  timeAfter11MinHHG,
+				 timeAfter11MinMMG);
 
 		Reporter.log(GREEN + GREEN + "The process of create availability request OneTime>Immediate is complete.", true);
 		Reporter.log(" ", true);
@@ -349,7 +368,8 @@ public class A_testClassCreate extends b_baseClass {
 	@Test
 	public void createAvailabilityRequestOneTimeImmediateCallSmsMail() throws Throwable {
 
-		tc.catchDateTime(driver);
+		todaysDateG= tc.todaysDateG;
+		tomorrowDateG = tc.tomorrowDateG;
 		todaysDayG = tc.todaysDayG;
 		tomorrowDayG = tc.tomorrowDayG;
 		dayAfterFourDaysG = tc.dayAfterFourDaysG;
@@ -367,9 +387,11 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of create availability request OneTime>Immediate is started.", true);
 
-		arequest.createAvailabilityRequest(driver, "1call", "Recursive", todaysDate, timeHHMMSSG, deptN,
-				tomorrowDate, timeAfter5MinHHG, timeAfter5MinMMG, timeAfter7MinHHG, timeAfter7MinMMG, timeAfter9MinHHG,
-				timeAfter9MinMMG, todaysDayG,tomorrowDayG,dayAfterFourDaysG, timeAfter11MinMMG, timeAfter11MinHHG);
+		arequest.createAvailabilityRequest(driver,  "1call",  "OneTime>Immediate",  todaysDateG,
+				 timeHHMMSSG,  deptN,  tomorrowDateG,  timeAfter5MinHHG,  timeAfter5MinMMG,
+				 timeAfter7MinHHG,  timeAfter7MinMMG,  timeAfter9MinHHG,  timeAfter9MinMMG,
+				 todaysDayG,  tomorrowDayG,  dayAfterFourDaysG,  timeAfter11MinHHG,
+				 timeAfter11MinMMG);
 
 		Reporter.log(GREEN + GREEN + "The process of create availability request OneTime>Immediate is complete.", true);
 		Reporter.log(" ", true);

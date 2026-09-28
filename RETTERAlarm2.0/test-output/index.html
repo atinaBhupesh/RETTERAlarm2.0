@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">4 methods, 1 failed,   3 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="function.A_testClassCreate" class="method navigator-link" hash-for-method="createAvailabilityRequestOneTimeImmediate">createAvailabilityRequestOneTimeImmediate</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,7 +117,17 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="function.A_testClassCreate" class="method navigator-link" hash-for-method="ManualAlarForCheckExtendAlarmCall">ManualAlarForCheckExtendAlarmCall</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="function.A_testClassCreate" class="method navigator-link" hash-for-method="createAvailabilityRequestMultipleDays">createAvailabilityRequestMultipleDays</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="function.A_testClassCreate" class="method navigator-link" hash-for-method="createAvailabilityRequestOneTimeSchedule">createAvailabilityRequestOneTimeSchedule</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="function.A_testClassCreate" class="method navigator-link" hash-for-method="createAvailabilityRequestRecursive">createAvailabilityRequestRecursive</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -118,6 +142,46 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">function.A_testClassCreate</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="createAvailabilityRequestOneTimeImmediate">
+                  </a> <!-- createAvailabilityRequestOneTimeImmediate -->
+                  <span class="method-name">createAvailabilityRequestOneTimeImmediate</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=153.0.8010.53)
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.11&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f716b3342f92290cea32f8e4f9313239, clickElement {id=f.859DDDC1821EF7FDDEFE1EF85B31957D.d.7B105217347C08F7ABA8420C35610906.e.1612}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 153.0.8010.53, chrome: {chromedriverVersion: 153.0.8010.52 (78e5e45d4bb4..., userDataDir: C:\Users\Bhupesh\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51460}, goog:processID: 38008, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51460/devtoo..., se:cdpVersion: 153.0.8010.53, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (f716b3342f92290cea32f8e4f9313239)] -&gt; xpath: //a[text()=&quot;Availability Request&quot;]]
+Session ID: f716b3342f92290cea32f8e4f9313239
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy22.click(Unknown Source)
+	at function.S_AvailabilityRequest.createAvailabilityRequest(S_AvailabilityRequest.java:169)
+	at function.A_testClassCreate.createAvailabilityRequestOneTimeImmediate(A_testClassCreate.java:358)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -126,9 +190,23 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="ManualAlarForCheckExtendAlarmCall">
-                  </a> <!-- ManualAlarForCheckExtendAlarmCall -->
-                  <span class="method-name">ManualAlarForCheckExtendAlarmCall</span>
+                  <a name="createAvailabilityRequestMultipleDays">
+                  </a> <!-- createAvailabilityRequestMultipleDays -->
+                  <span class="method-name">createAvailabilityRequestMultipleDays</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="createAvailabilityRequestOneTimeSchedule">
+                  </a> <!-- createAvailabilityRequestOneTimeSchedule -->
+                  <span class="method-name">createAvailabilityRequestOneTimeSchedule</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="createAvailabilityRequestRecursive">
+                  </a> <!-- createAvailabilityRequestRecursive -->
+                  <span class="method-name">createAvailabilityRequestRecursive</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -147,7 +225,10 @@
     &lt;classes&gt;
       &lt;class name=&quot;function.A_testClassCreate&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;ManualAlarForCheckExtendAlarmCall&quot;/&gt;
+          &lt;include name=&quot;createAvailabilityRequestOneTimeImmediate&quot;/&gt;
+          &lt;include name=&quot;createAvailabilityRequestOneTimeSchedule&quot;/&gt;
+          &lt;include name=&quot;createAvailabilityRequestRecursive&quot;/&gt;
+          &lt;include name=&quot;createAvailabilityRequestMultipleDays&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- function.A_testClassCreate --&gt;
     &lt;/classes&gt;
@@ -189,11 +270,23 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'ManualAlarForCheckExtendAlarmCall')
+data.setCell(0, 1, 'createAvailabilityRequestMultipleDays')
 data.setCell(0, 2, 'function.A_testClassCreate')
-data.setCell(0, 3, 65455);
+data.setCell(0, 3, 35045);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'createAvailabilityRequestRecursive')
+data.setCell(1, 2, 'function.A_testClassCreate')
+data.setCell(1, 3, 34856);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'createAvailabilityRequestOneTimeSchedule')
+data.setCell(2, 2, 'function.A_testClassCreate')
+data.setCell(2, 3, 34366);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'createAvailabilityRequestOneTimeImmediate')
+data.setCell(3, 2, 'function.A_testClassCreate')
+data.setCell(3, 3, 12104);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -210,19 +303,44 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">ManualAlarForCheckExtendAlarmCall</span>
+              <span class="reporter-method-name">createAvailabilityRequestMultipleDays</span>
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output"> </span>
-                <span class="reporter-method-output">The verification process for direct and fallback calls, SMS, and emails for extend alarm has started.</span>
-                <span class="reporter-method-output">[32m✔ [0m[32m✔ [0mThe verification process for direct and fallback calls, SMS, and emails for extend alarm is complete.</span>
+                <span class="reporter-method-output">The process of create availability request MultipleDays is started.</span>
+                <span class="reporter-method-output">[32m✔ [0m[32m✔ [0mThe process of create availability request MultipleDays is complete.</span>
                 <span class="reporter-method-output"> </span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">createAvailabilityRequestOneTimeSchedule</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"> </span>
+                <span class="reporter-method-output">The process of create availability request OneTime>Schedule is started.</span>
+                <span class="reporter-method-output">[32m✔ [0m[32m✔ [0mThe process of create availability request OneTime>Schedule is complete.</span>
+                <span class="reporter-method-output"> </span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">createAvailabilityRequestRecursive</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"> </span>
+                <span class="reporter-method-output">The process of create availability request Recursive is started.</span>
+                <span class="reporter-method-output">[32m✔ [0m[32m✔ [0mThe process of create availability request Recursive is complete.</span>
+                <span class="reporter-method-output"> </span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">createAvailabilityRequestOneTimeImmediate</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"> </span>
+                <span class="reporter-method-output">The process of create availability request OneTime>Immediate is started.</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">114 ignored methods</span>
+            <span class="header-content">111 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
@@ -245,8 +363,6 @@ return data;
                 <span class="ignored-method-name">createMonitorInformationByFireFighter</span>
                 <br/>
                 <span class="ignored-method-name">SendMessageTo1DayInformationEventByFireFighter</span>
-                <br/>
-                <span class="ignored-method-name">createAvailabilityRequestOneTimeSchedule</span>
                 <br/>
                 <span class="ignored-method-name">Bhupesh_testAlarm_recursiv_monthly_frist_friday_Attribute_0920</span>
                 <br/>
@@ -302,6 +418,8 @@ return data;
                 <br/>
                 <span class="ignored-method-name">Bhupesh_testAlarm_recursiv_monthly_date01_Resource_0940</span>
                 <br/>
+                <span class="ignored-method-name">ManualAlarForCheckExtendAlarmCall</span>
+                <br/>
                 <span class="ignored-method-name">Bhupesh_testAlarm_recursiv_monthly_frist_friday_Users_0930</span>
                 <br/>
                 <span class="ignored-method-name">createNewAlarmTemplateByFirefighter</span>
@@ -352,13 +470,9 @@ return data;
                 <br/>
                 <span class="ignored-method-name">createNewAlarmTemplateByAttribute</span>
                 <br/>
-                <span class="ignored-method-name">createAvailabilityRequestMultipleDays</span>
-                <br/>
                 <span class="ignored-method-name">createNewAlarmLoop</span>
                 <br/>
                 <span class="ignored-method-name">TCMonitorInformationValidationChecking</span>
-                <br/>
-                <span class="ignored-method-name">createAvailabilityRequestRecursive</span>
                 <br/>
                 <span class="ignored-method-name">addMultiRoleUser</span>
                 <br/>
@@ -422,8 +536,6 @@ return data;
                 <br/>
                 <span class="ignored-method-name">TCResourceValidationChecking</span>
                 <br/>
-                <span class="ignored-method-name">createAvailabilityRequestOneTimeImmediate</span>
-                <br/>
                 <span class="ignored-method-name">manualaByAttributeExtend1To01StEscResourceFrom02</span>
                 <br/>
                 <span class="ignored-method-name">sendMessageToChatGroupCreatedByFireFighter</span>
@@ -473,36 +585,64 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
                 <span class="method-name">BeforeTest</span>
-                <span class="method-start">5693 ms</span>
+                <span class="method-start">5430 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
                 <span class="method-name">createObject</span>
-                <span class="method-start">13203 ms</span>
+                <span class="method-start">14263 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">backToHomePage</span>
-                <span class="method-start">13218 ms</span>
+                <span class="method-start">14284 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">ManualAlarForCheckExtendAlarmCall</span>
-                <span class="method-start">14587 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">createAvailabilityRequestOneTimeImmediate</span>
+                <span class="method-start">15692 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">backToHomePage2([TestResult name=ManualAlarForCheckExtendAlarmCall status=SUCCESS method=A_testClassCreate.ManualAla...)</span>
-                <span class="method-start">80044 ms</span>
+                <span class="method-name">backToHomePage2([TestResult name=createAvailabilityRequestOneTimeImmediate status=FAILURE method=A_testClassCreate.c...)</span>
+                <span class="method-start">27800 ms</span>
               </div> <!-- configuration-method after -->
-              <div class="configuration-class after">
-                <span class="method-name">logOut</span>
-                <span class="method-start">91118 ms</span>
-              </div> <!-- configuration-class after -->
-              <div class="configuration-test after">
-                <span class="method-name">AfterTest</span>
-                <span class="method-start">94747 ms</span>
-              </div> <!-- configuration-test after -->
-              <div class="configuration-suite after">
-                <span class="method-name">AfterSute</span>
-                <span class="method-start">94781 ms</span>
-              </div> <!-- configuration-suite after -->
+              <div class="configuration-method before">
+                <span class="method-name">backToHomePage</span>
+                <span class="method-start">38857 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">createAvailabilityRequestOneTimeSchedule</span>
+                <span class="method-start">40234 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">backToHomePage2([TestResult name=createAvailabilityRequestOneTimeSchedule status=SUCCESS method=A_testClassCreate.cr...)</span>
+                <span class="method-start">74601 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">backToHomePage</span>
+                <span class="method-start">85646 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">createAvailabilityRequestRecursive</span>
+                <span class="method-start">87142 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">backToHomePage2([TestResult name=createAvailabilityRequestRecursive status=SUCCESS method=A_testClassCreate.createAv...)</span>
+                <span class="method-start">121999 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">backToHomePage</span>
+                <span class="method-start">133195 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">createAvailabilityRequestMultipleDays</span>
+                <span class="method-start">135338 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">backToHomePage2([TestResult name=createAvailabilityRequestMultipleDays status=SUCCESS method=A_testClassCreate.creat...)</span>
+                <span class="method-start">170384 ms</span>
+              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

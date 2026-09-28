@@ -7,13 +7,14 @@
 
 			<methods>
 
-				<include name="ManualAlarForCheckExtendAlarmCall" />
-				<include name="ManualAlarForCheckEscalationAlarmCall" />
+				
+			
 				
 				
 				
 				<include name="ManualAlarmForDircetCall" />
-				
+				<include name="ManualAlarForCheckExtendAlarmCall" />
+				<include name="ManualAlarForCheckEscalationAlarmCall" />
 				
 				<include name="TestAlarm_OneTime_Resource_CallSmsEmail" />
 				<include name="createInformationWithEmailSms" />

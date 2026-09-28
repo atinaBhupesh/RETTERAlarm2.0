@@ -8,8 +8,15 @@
 			<methods>
 			
 				
-			
-						<include name="ManualAlarForCheckExtendAlarmCall" />
+				
+				<include name="createAvailabilityRequestOneTimeImmediate" />
+				<include name="createAvailabilityRequestOneTimeSchedule" />
+				<include name="createAvailabilityRequestRecursive" />
+				<include name="createAvailabilityRequestMultipleDays" />
+
+
+			<include name="createAvailabilityRequestOneTimeImmediateCallSmsMail" />
+				
 					
 			</methods>
 

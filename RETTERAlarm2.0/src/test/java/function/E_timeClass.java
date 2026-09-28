@@ -18,10 +18,14 @@ public class E_timeClass extends b_baseClass {
 
 //	String todaysDate;
 	String todaysDate;// (dd.mmd.yyyy)
+	String todaysDateG;
+	
 	String todaysDateddmmyy;
 	String todaysDateD;
 	String todaysDate1;// (dd/mm/yyyy)
 	String tomorrowDate;
+	
+	String tomorrowDateG;
 	String currentTimeHHMMSS;
 	String currentTimeHHMMSSG;
 	String dayName;
@@ -89,6 +93,7 @@ public class E_timeClass extends b_baseClass {
 
 		// Current date & time
 		todaysDate = now.format(dateFormatter);
+		todaysDateG = nowG.format(dateFormatter);
 		todaysDateddmmyy = now.format(dateFormatterddmmyy);
 		currentTimeHHMMSS = now.format(timeFormatterHHMMSS);
 		
@@ -96,8 +101,13 @@ public class E_timeClass extends b_baseClass {
 
 		// Tomorrow date
 		LocalDate tomorrowDate1 = now.toLocalDate().plusDays(1);
+		LocalDate tomorrowDate1G = nowG.toLocalDate().plusDays(1);
+		
 		tomorrowDate = tomorrowDate1.format(dateFormatter);
-
+		
+		tomorrowDateG = tomorrowDate1G.format(dateFormatter);
+		
+		
 		// Time after 5 minutes
 		ZonedDateTime after5Min = now.plusMinutes(5);
 		timeAfter5MinHH = after5Min.format(timeFormatterHH);
@@ -137,7 +147,7 @@ public class E_timeClass extends b_baseClass {
 		timeAfter11MinMM = after11Min.format(timeFormatterMM);
 		
 		// Time after 9 minutes-Germany
-		ZonedDateTime after11MinG = nowG.plusMinutes(9);
+		ZonedDateTime after11MinG = nowG.plusMinutes(11);
 		timeAfter11MinHHG = after11MinG.format(timeFormatterHH);
 		timeAfter11MinMMG = after11MinG.format(timeFormatterMM);
 		
