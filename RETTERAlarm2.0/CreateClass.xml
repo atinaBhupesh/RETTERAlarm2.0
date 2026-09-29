@@ -7,14 +7,10 @@
 
 			<methods>
 			
+			<include name="verifyingAllTestAlarmAfterCronRun" />
+				<include name="verifyingAllTestAlarmAfterCronRun" />
+			
 				
-				
-
-				<include name="createAvailabilityRequestOneTimeImmediate" />
-				<include name="createAvailabilityRequestOneTimeSchedule" />
-				<include name="createAvailabilityRequestRecursive" />
-				<include name="createAvailabilityRequestMultipleDays" />
-
 				
 					
 			</methods>

@@ -168,15 +168,24 @@ public class P_monitors extends b_baseClass {
 		
 
 		FileInputStream in = new FileInputStream(filePath);
+
 		XSSFWorkbook wb = new XSSFWorkbook(in);
 		XSSFSheet sheet = wb.getSheetAt(0);
 
-		Row row = sheet.createRow(71); 
+		Row row = sheet.getRow(70);
+
+		if (row == null) {
+		    row = sheet.createRow(70);
+		}
+
+		row.createCell(0).setCellValue("newOverviewMonitorName");
 		row.createCell(1).setCellValue(title);
+
 		in.close();
 
 		FileOutputStream out = new FileOutputStream(filePath);
 		wb.write(out);
+
 		out.close();
 		wb.close();
 

@@ -218,7 +218,7 @@ public class I_AlarmTemplate extends b_baseClass {
 	 @FindBy(xpath="//span[text()=\"Next\"]")private WebElement nextAddress;
 	 
 	 @FindBy(xpath="//span[text()=\"Object\"]")private WebElement objectLebal;
-	// @FindBy(xpath="")private WebElement ;
+	
 	// @FindBy(xpath="")private WebElement ;
 	// @FindBy(xpath="")private WebElement ;
 	// @FindBy(xpath="")private WebElement ;
@@ -239,6 +239,11 @@ public class I_AlarmTemplate extends b_baseClass {
 		PageFactory.initElements(driver, this);
 
 	}
+	
+	
+	
+	
+	
 
 	public void TCAlarmTemplateCheckingValidation(WebDriver driver, String gTodaysDate, String gtimeHHMMSS,
 			String st02N, String st01N, String st01V1, String st02V1, String st01A1, String st02A1, String filePath)

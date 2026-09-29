@@ -5,20 +5,20 @@
     <classes>
       <class name="function.A_testClassCreate">
         <methods>
-          <include name="manualAlarmByEscResourceSingleStation"/>
-          <include name="manualaByAttributeMSLP"/>
-          <include name="manualAlarmByResourceMsHP"/>
+          <include name="testAlarm_Recursive_Monthly_DayWise_Attribute"/>
+          <include name="createAvailabilityRequestOneTimeImmediate"/>
           <include name="logOut"/>
           <include name="AfterSute"/>
+          <include name="createAvailabilityRequestOneTimeSchedule"/>
+          <include name="testAlarm_Recursive_Monthly_DateyWise_Attribute"/>
           <include name="AfterTest"/>
-          <include name="manualAlarmByOldEsclationTemplateFromSt02ToSt01"/>
-          <include name="manualAlarmByResourceMsLP"/>
           <include name="BeforeSuite"/>
-          <include name="manualaByAttributeSingleStation"/>
+          <include name="createAvailabilityRequestRecursive"/>
           <include name="backToHomePage2"/>
+          <include name="testAlarm_recursiv_daily_Resource"/>
           <include name="BeforeTest"/>
           <include name="backToHomePage"/>
-          <include name="manualAlarmByUersMs"/>
+          <include name="createAvailabilityRequestMultipleDays"/>
           <include name="createObject"/>
         </methods>
       </class> <!-- function.A_testClassCreate -->

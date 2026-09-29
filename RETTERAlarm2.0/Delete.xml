@@ -9,8 +9,8 @@
 			<methods>
 			
 			
-				<include name="deleteCheckList" />
-			
+				<include name="deleteAvailabilityRequestFromList" />
+			<include name="deleteAvailabilityRequestFromHistory" />
 		
 			
 			

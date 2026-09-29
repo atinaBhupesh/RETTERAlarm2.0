@@ -185,6 +185,7 @@ public class S_AvailabilityRequest extends b_baseClass {
 		Select se = new Select(ARType);
 
 		int rowNumber =0;
+		String methodName="";
 		
 		switch (requestType) {
 
@@ -192,6 +193,7 @@ public class S_AvailabilityRequest extends b_baseClass {
 			se.selectByVisibleText("One time");
 			sendImmediateChekBox.click();
 			rowNumber = 77;
+			methodName= "createAvailabilityRequestOneTimeImmediate";
 			break;
 
 		case "OneTime>Schedule":
@@ -211,6 +213,8 @@ public class S_AvailabilityRequest extends b_baseClass {
 			Thread.sleep(2000);
 			
 			rowNumber = 78;
+			methodName= "createAvailabilityRequestOneTimeSchedule";
+			
 
 			break;
 
@@ -227,6 +231,7 @@ public class S_AvailabilityRequest extends b_baseClass {
 
 			act.sendKeys(timeAfter9MinHHG + ":" + timeAfter9MinMMG).build().perform();
 			rowNumber = 79;
+			methodName= "createAvailabilityRequestRecursive";
 
 			break;
 
@@ -255,6 +260,7 @@ public class S_AvailabilityRequest extends b_baseClass {
 			act.sendKeys(todaysDateG + " " + timeAfter11MinHHG + ":" + timeAfter11MinMMG).build().perform();
 			
 			rowNumber = 80;
+			methodName= "createAvailabilityRequestMultipleDays";
 
 			break;
 
@@ -439,18 +445,15 @@ public class S_AvailabilityRequest extends b_baseClass {
 			Select se1 = new Select(ARMultiFromDay);
 			se1.selectByVisibleText(tomorrowDayG);
 
+			ARMultiFromTime.clear();
 			ARMultiFromTime.click();
-			act.keyDown(Keys.HOME).perform();
-			for (int i = 0; i <= 7; i++) {
-				act.sendKeys(Keys.DELETE).perform();
-			}
 			act.sendKeys(timeAfter7MinHHG + ":" + timeAfter7MinMMG).build().perform();
 
 			Select se2 = new Select(ARMultiToDay);
 			se2.selectByVisibleText(dayAfterFourDaysG);
-
+			
+			ARMultiToTime.clear();
 			ARMultiToTime.click();
-			act.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).build().perform();
 			act.sendKeys(timeAfter11MinHHG + ":" + timeAfter11MinMMG).build().perform();
 
 			break;
@@ -499,16 +502,24 @@ public class S_AvailabilityRequest extends b_baseClass {
 		
 		
 		FileInputStream in = new FileInputStream(filePath);
+
 		XSSFWorkbook wb = new XSSFWorkbook(in);
 		XSSFSheet sheet = wb.getSheetAt(0);
 
-		Row row = sheet.createRow(rowNumber);//
-		row.createCell(1).setCellValue(title); // Cell B
+		Row row = sheet.getRow(rowNumber);
+
+		if (row == null) {
+		    row = sheet.createRow(rowNumber);
+		}
+
+		row.createCell(0).setCellValue(methodName);
+		row.createCell(1).setCellValue(title);
 
 		in.close();
 
 		FileOutputStream out = new FileOutputStream(filePath);
 		wb.write(out);
+
 		out.close();
 		wb.close();
 

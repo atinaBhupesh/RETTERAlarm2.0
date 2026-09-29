@@ -99,8 +99,7 @@ public class b_baseClass {
 	String attributeNewUser;
 	String newStationName;
 	String newStationMonitorName;
-	
-	
+
 	String ApiAlarm01;
 	String ApiAlarm02;
 	String ApiAlarm03;
@@ -115,10 +114,20 @@ public class b_baseClass {
 	String ApiAlarm12;
 	String ApiAlarm13;
 	String ApiAlarm14;
-	
+
 	String newOverviewMonitorName;
 	
+	String testAlarm_OneTime_Attribute;
+	String testAlarm_recursiv_daily_Resource;
+	String testAlarm_recursiv_weekly_users;
+	String testAlarm_Recursive_Monthly_DayWise_Attribute;
+	String testAlarm_Recursive_Monthly_DateyWise_Attribute;
 	
+	String createAvailabilityRequestOneTimeImmediate;
+	String createAvailabilityRequestOneTimeSchedule;
+	String createAvailabilityRequestRecursive;
+	String createAvailabilityRequestMultipleDays;
+
 
 	String infoDocxFile;
 	String infoPdfFile;
@@ -136,10 +145,10 @@ public class b_baseClass {
 	String chatExcelFile;
 	String chatPptFile;
 	String chatMp4File;
-	
+
 	String importUserFile;
 	String importEventFile;
-	String updateUserFilr; 
+	String updateUserFilr;
 
 	String proEnd = "|*******************************************************|";
 
@@ -169,7 +178,7 @@ public class b_baseClass {
 		}
 
 		case "3": {
- 			System.out.println("*****you have selected Development branch *****");
+			System.out.println("*****you have selected Development branch *****");
 			break;
 		}
 		default:
@@ -254,10 +263,9 @@ public class b_baseClass {
 
 		switch (browserName) {
 		case "1": {
-			//Normal browser 
+			// Normal browser
 			driver = new ChromeDriver();
-			
-			
+
 //			For Headless browser 
 //			WebDriverManager.chromedriver().setup();
 //			ChromeOptions chromeOptions = new ChromeOptions();
@@ -265,7 +273,7 @@ public class b_baseClass {
 //			chromeOptions.addArguments("--window-size=1920,1080");
 //			driver = new ChromeDriver(chromeOptions);
 //			
-			
+
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 			break;
 		}
@@ -305,8 +313,7 @@ public class b_baseClass {
 			System.out.println("|*******************************************************|");
 
 			break;
-			
-			
+
 		case "2":
 			Reporter.log("Well come to RETTERAlarm Testing branch", true);
 			System.out.println("|*******************************************************|");
@@ -332,11 +339,10 @@ public class b_baseClass {
 	public void getDetailsFromFiles() throws Throwable {
 
 		switch (branchName) {
-		
-		
+
 		case "1":
 			filePath = "D:\\Automation_2307\\SampleFilesNew\\Details Files\\DetailsFileLiveBhupesh.xlsx";
-		 	password = "Atina@123";
+			password = "Atina@123";
 
 			break;
 
@@ -345,8 +351,6 @@ public class b_baseClass {
 			password = "123456";
 
 			break;
-			
-		
 
 		case "2":
 			filePath = "D:\\Automation_2307\\SampleFilesNew\\Details Files\\DetailsFileTesting.xlsx";
@@ -391,7 +395,7 @@ public class b_baseClass {
 		st01REsc = sheet.getRow(16).getCell(1).getStringCellValue();
 		st02REsc = sheet.getRow(17).getCell(1).getStringCellValue();
 		st02EscSt01t1 = sheet.getRow(18).getCell(1).getStringCellValue();
-		st02R1 = sheet.getRow(19).getCell(1).getStringCellValue();
+//		st02R1 = sheet.getRow(19).getCell(1).getStringCellValue();
 		NewTemplate = sheet.getRow(20).getCell(1).getStringCellValue();
 		NewResource = sheet.getRow(21).getCell(1).getStringCellValue();
 		st01FF2 = sheet.getRow(22).getCell(1).getStringCellValue();
@@ -431,7 +435,7 @@ public class b_baseClass {
 		attributeNewUser = sheet.getRow(54).getCell(1).getStringCellValue();
 		newStationName = sheet.getRow(55).getCell(1).getStringCellValue();
 		newStationMonitorName = sheet.getRow(56).getCell(1).getStringCellValue();
-		
+
 		ApiAlarm01 = sheet.getRow(57).getCell(1).getStringCellValue();
 		ApiAlarm02 = sheet.getRow(58).getCell(1).getStringCellValue();
 		ApiAlarm03 = sheet.getRow(59).getCell(1).getStringCellValue();
@@ -447,19 +451,26 @@ public class b_baseClass {
 		ApiAlarm13 = sheet.getRow(69).getCell(1).getStringCellValue();
 		ApiAlarm14 = sheet.getRow(70).getCell(1).getStringCellValue();
 		newOverviewMonitorName = sheet.getRow(71).getCell(1).getStringCellValue();
+		
+		testAlarm_OneTime_Attribute = sheet.getRow(72).getCell(1).getStringCellValue();
+		testAlarm_recursiv_daily_Resource = sheet.getRow(73).getCell(1).getStringCellValue();
+		testAlarm_recursiv_weekly_users = sheet.getRow(74).getCell(1).getStringCellValue();
+		testAlarm_Recursive_Monthly_DayWise_Attribute = sheet.getRow(75).getCell(1).getStringCellValue();
+		testAlarm_Recursive_Monthly_DateyWise_Attribute = sheet.getRow(76).getCell(1).getStringCellValue();
+
+		createAvailabilityRequestOneTimeImmediate = sheet.getRow(77).getCell(1).getStringCellValue();
+		createAvailabilityRequestOneTimeSchedule= sheet.getRow(78).getCell(1).getStringCellValue();
+		createAvailabilityRequestRecursive = sheet.getRow(79).getCell(1).getStringCellValue();
+		createAvailabilityRequestMultipleDays = sheet.getRow(80).getCell(1).getStringCellValue();
 
 	}
 
 	public void attachedField() {
-		
+
 		importUserFile = "D:\\Automation_2307\\SampleFilesNew\\Details Files\\User_Import.xlsx";
 		importEventFile = "D:\\Automation_2307\\SampleFilesNew\\Details Files\\event_import.xlsx";
 		updateUserFilr = "D:\\Automation_2307\\SampleFilesNew\\Details Files\\user_update.xlsx";
-		
-		
-		
-		
-		
+
 		infoDocxFile = "D:\\Automation_2307\\SampleFilesNew\\docx_5mb.docx";
 		infoPdfFile = "D:\\Automation_2307\\SampleFilesNew\\pdf_5mb.pdf";
 		infoPdf9MbFile = "D:\\Automation_2307\\SampleFilesNew\\pdf_9mb.pdf";

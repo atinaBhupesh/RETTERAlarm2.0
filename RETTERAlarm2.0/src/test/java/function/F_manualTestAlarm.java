@@ -437,7 +437,8 @@ public class F_manualTestAlarm extends b_baseClass {
 	private WebElement yesClose;
 	@FindBy(xpath = "//span[text()=\"Yes\"]")
 	private WebElement yes;
-	// @FindBy(xpath="")private WebElement ;
+	
+		// @FindBy(xpath="")private WebElement ;
 	// @FindBy(xpath="")private WebElement ;
 	// @FindBy(xpath="")private WebElement ;
 	// @FindBy(xpath="")private WebElement ;
@@ -457,68 +458,77 @@ public class F_manualTestAlarm extends b_baseClass {
 		PageFactory.initElements(driver, this);
 	}
 
-	public void verifyAllApiAlarmsCretaed(WebDriver driver, String gTodaysDate, String germanyTodaysDate1,
-			String ApiAlarm01, String ApiAlarm02, String ApiAlarm03, String ApiAlarm04, String ApiAlarm05,
-			String ApiAlarm06, String ApiAlarm07, String ApiAlarm08, String ApiAlarm09, String ApiAlarm10,
-			String ApiAlarm11, String ApiAlarm12, String ApiAlarm13, String ApiAlarm14) throws Throwable {
-
-		Actions act = new Actions(driver);
-
-		String[] alarms = { ApiAlarm01, ApiAlarm02, ApiAlarm03, ApiAlarm04, ApiAlarm05, ApiAlarm06, ApiAlarm07,
-				ApiAlarm08, ApiAlarm09, ApiAlarm10, ApiAlarm11, ApiAlarm12, ApiAlarm13, ApiAlarm14 };
-
-		for (int a = 0; a < alarms.length; a++) {
-
-			String title = alarms[a];
-
-			System.out.println("Searching alarm: " + title);
-
-			refreshFilter.click();
-
-			titleSearch.click();
-			Thread.sleep(1000);
-
-			titleSearchField.click();
-			Thread.sleep(500);
-
-			act.sendKeys(title).perform();
-//			System.out.println(title);
-
-			Thread.sleep(2000);
-
-			titleSearchFieldOk.click();
-			Thread.sleep(2000);
-			int count = getDate.size();
-//	        System.out.println(count);
-
-			Thread.sleep(2000);
-//	        System.out.println(gTodaysDate);
-
-			if (count == 0) {
-				System.out.println(RED + "Alarm not available.");
-
-			}
-
-			else {
-
-				String alarmDate1 = getDate1.getText();
-
-//				System.out.println(germanyTodaysDate3);
-//				System.out.println(alarmDate1);
-
-				if (gTodaysDate.equals(alarmDate1) || germanyTodaysDate1.equals(alarmDate1)) {
-					System.out.println(GREEN + "Alarm " + title + " created successfully.");
-
-				}
-
-				else {
-					System.out.println(RED + "Alarm " + title + " not created successfully.");
-				}
-
-			}
-
-		}
-	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+//	public void verifyAllApiAlarmsCretaed(WebDriver driver, String gTodaysDate, String germanyTodaysDate1,
+//			String ApiAlarm01, String ApiAlarm02, String ApiAlarm03, String ApiAlarm04, String ApiAlarm05,
+//			String ApiAlarm06, String ApiAlarm07, String ApiAlarm08, String ApiAlarm09, String ApiAlarm10,
+//			String ApiAlarm11, String ApiAlarm12, String ApiAlarm13, String ApiAlarm14) throws Throwable {
+//
+//		Actions act = new Actions(driver);
+//
+//		String[] alarms = { ApiAlarm01, ApiAlarm02, ApiAlarm03, ApiAlarm04, ApiAlarm05, ApiAlarm06, ApiAlarm07,
+//				ApiAlarm08, ApiAlarm09, ApiAlarm10, ApiAlarm11, ApiAlarm12, ApiAlarm13, ApiAlarm14 };
+//
+//		for (int a = 0; a < alarms.length; a++) {
+//
+//			String title = alarms[a];
+//
+//			System.out.println("Searching alarm: " + title);
+//
+//			refreshFilter.click();
+//
+//			titleSearch.click();
+//			Thread.sleep(1000);
+//
+//			titleSearchField.click();
+//			Thread.sleep(500);
+//
+//			act.sendKeys(title).perform();
+////			System.out.println(title);
+//
+//			Thread.sleep(2000);
+//
+//			titleSearchFieldOk.click();
+//			Thread.sleep(2000);
+//			int count = getDate.size();
+////	        System.out.println(count);
+//
+//			Thread.sleep(2000);
+////	        System.out.println(gTodaysDate);
+//
+//			if (count == 0) {
+//				System.out.println(RED + "Alarm not available.");
+//
+//			}
+//
+//			else {
+//
+//				String alarmDate1 = getDate1.getText();
+//
+////				System.out.println(germanyTodaysDate3);
+////				System.out.println(alarmDate1);
+//
+//				if (gTodaysDate.equals(alarmDate1) || germanyTodaysDate1.equals(alarmDate1)) {
+//					System.out.println(GREEN + "Alarm " + title + " created successfully.");
+//
+//				}
+//
+//				else {
+//					System.out.println(RED + "Alarm " + title + " not created successfully.");
+//				}
+//
+//			}
+//
+//		}
+//	}
 
 	public void testAlarm_EscaltionCallSmsEmail(WebDriver driver, String st01N, String st02N, String gTodaysDate,
 			String germanyTimeAfter7MinHH, String germanyTimeAfter7MinMM, String st01EscalarionResourceCallSmsEmail)
@@ -1008,16 +1018,24 @@ public class F_manualTestAlarm extends b_baseClass {
 		System.out.println(GREEN + title);
 		
 		FileInputStream in = new FileInputStream(filePath);
+
 		XSSFWorkbook wb = new XSSFWorkbook(in);
 		XSSFSheet sheet = wb.getSheetAt(0);
 
-		Row row = sheet.createRow(76);//
-		row.createCell(1).setCellValue(title); // Cell B
+		Row row = sheet.getRow(76);
+
+		if (row == null) {
+		    row = sheet.createRow(76);
+		}
+
+		row.createCell(0).setCellValue("testAlarm_Recursive_Monthly_DateyWise_Attribute");
+		row.createCell(1).setCellValue(title);
 
 		in.close();
 
 		FileOutputStream out = new FileOutputStream(filePath);
 		wb.write(out);
+
 		out.close();
 		wb.close();
 
@@ -1289,16 +1307,24 @@ public class F_manualTestAlarm extends b_baseClass {
 		
 		
 		FileInputStream in = new FileInputStream(filePath);
+
 		XSSFWorkbook wb = new XSSFWorkbook(in);
 		XSSFSheet sheet = wb.getSheetAt(0);
 
-		Row row = sheet.createRow(75);//
-		row.createCell(1).setCellValue(title); // Cell B
+		Row row = sheet.getRow(75);
+
+		if (row == null) {
+		    row = sheet.createRow(75);
+		}
+
+		row.createCell(0).setCellValue("testAlarm_Recursive_Monthly_DayWise_Attribute");
+		row.createCell(1).setCellValue(title);
 
 		in.close();
 
 		FileOutputStream out = new FileOutputStream(filePath);
 		wb.write(out);
+
 		out.close();
 		wb.close();
 	}
@@ -1596,16 +1622,24 @@ public class F_manualTestAlarm extends b_baseClass {
 		
 		
 		FileInputStream in = new FileInputStream(filePath);
+
 		XSSFWorkbook wb = new XSSFWorkbook(in);
 		XSSFSheet sheet = wb.getSheetAt(0);
 
-		Row row = sheet.createRow(74);//
-		row.createCell(1).setCellValue(title); // Cell B
+		Row row = sheet.getRow(74);
+
+		if (row == null) {
+		    row = sheet.createRow(74);
+		}
+
+		row.createCell(0).setCellValue("testAlarm_recursiv_weekly_users");
+		row.createCell(1).setCellValue(title);
 
 		in.close();
 
 		FileOutputStream out = new FileOutputStream(filePath);
 		wb.write(out);
+
 		out.close();
 		wb.close();
 
@@ -1830,9 +1864,15 @@ public class F_manualTestAlarm extends b_baseClass {
 		FileInputStream in = new FileInputStream(filePath);
 		XSSFWorkbook wb = new XSSFWorkbook(in);
 		XSSFSheet sheet = wb.getSheetAt(0);
-
+		
 		Row row = sheet.createRow(73);//
-		row.createCell(1).setCellValue(title); // Cell B
+		
+		if (row == null) {
+		    row = sheet.createRow(73);
+		}
+		
+		row.createCell(0).setCellValue("testAlarm_recursiv_daily_Resource");
+		row.createCell(1).setCellValue(title);
 
 		in.close();
 
@@ -1840,6 +1880,10 @@ public class F_manualTestAlarm extends b_baseClass {
 		wb.write(out);
 		out.close();
 		wb.close();
+		
+		
+		
+		
 
 	}
 
@@ -2233,18 +2277,21 @@ public class F_manualTestAlarm extends b_baseClass {
 
 		System.out.println(GREEN + title);
 		
-		
 		FileInputStream in = new FileInputStream(filePath);
+
 		XSSFWorkbook wb = new XSSFWorkbook(in);
 		XSSFSheet sheet = wb.getSheetAt(0);
 
-		Row row = sheet.createRow(72);//
-		row.createCell(1).setCellValue(title); // Cell B
+		Row row = sheet.createRow(72);
+
+		row.createCell(0).setCellValue("testAlarm_OneTime_Attribute"); // Column A
+		row.createCell(1).setCellValue(title);                         // Column B
 
 		in.close();
 
 		FileOutputStream out = new FileOutputStream(filePath);
 		wb.write(out);
+
 		out.close();
 		wb.close();
 
@@ -8004,5 +8051,79 @@ public class F_manualTestAlarm extends b_baseClass {
 		Thread.sleep(2000);
 
 	}
+
+
+
+
+
+
+
+
+
+
+	public void verifyAllAlarmsCretaed(WebDriver driver, String todaysDate,
+	        String todaysDate1, List<String> alarms) throws Throwable {
+		
+		Actions act = new Actions (driver);
+
+	    for (int a = 0; a < alarms.size(); a++) {
+
+	        String title = alarms.get(a);
+
+	        System.out.println("Searching alarm: " + title);
+
+	        refreshFilter.click();
+	        titleSearch.click();
+	        Thread.sleep(1000);
+
+	        titleSearchField.click();
+	        Thread.sleep(500);
+
+	        act.sendKeys(title).perform();
+
+	        Thread.sleep(2000);
+
+	        titleSearchFieldOk.click();
+	        Thread.sleep(2000);
+
+	        int count = getDate.size();
+
+	        Thread.sleep(2000);
+
+	        if (count == 0) {
+
+	            System.out.println(RED + "Alarm " + title + " not available.");
+
+	        } else {
+
+	            String alarmDate1 = getDate1.getText();
+
+	            if (todaysDate.equals(alarmDate1)
+	                    || todaysDate1.equals(alarmDate1)) {
+
+	                System.out.println(
+	                    GREEN + "Alarm " + title + " created successfully."
+	                );
+
+	            } else {
+
+	                System.out.println(
+	                    RED + "Alarm " + title + " not created successfully."
+	                );
+	            }
+	        }
+	    }
+	}
+
+
+
+
+
+
+
+
+
+
+	
 
 }

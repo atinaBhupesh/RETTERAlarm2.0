@@ -1,5 +1,8 @@
 package function;
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Reporter;
@@ -216,6 +219,26 @@ public class A_testClassCreate extends b_baseClass {
 
 		att.commanAttribute(driver);
 
+		Reporter.log(" ", true);
+	}
+	
+	
+	@Test
+	public void verifyingAllTestAlarmAfterCronRun () throws Throwable {
+		List<String> alarms = Arrays.asList(
+			    testAlarm_OneTime_Attribute,
+			    testAlarm_recursiv_daily_Resource,
+			    testAlarm_recursiv_weekly_users,
+			    testAlarm_Recursive_Monthly_DayWise_Attribute,
+			    testAlarm_Recursive_Monthly_DateyWise_Attribute
+			);
+	
+		Reporter.log(" ", true);
+		Reporter.log("The process of verify All Test Alarms Cretaed after cron run is started.", true);
+		ma.commonForManualAlarm(driver, deptN, branchName);
+		ma.verifyAllAlarmsCretaed(driver,  todaysDate, todaysDate1,  alarms);
+
+		Reporter.log(GREEN + GREEN + "The process of verify All Test Alarms Cretaed after cron run is complete.", true);
 		Reporter.log(" ", true);
 	}
 	
@@ -489,12 +512,19 @@ public class A_testClassCreate extends b_baseClass {
 
 	@Test
 	public void verifyAllApiAlarmsCretaed() throws Throwable {
+		List<String> alarms = Arrays.asList(
+			    ApiAlarm01, ApiAlarm02, ApiAlarm03, ApiAlarm04,
+			    ApiAlarm05, ApiAlarm06, ApiAlarm07, ApiAlarm08,
+			    ApiAlarm09, ApiAlarm10, ApiAlarm11, ApiAlarm12,
+			    ApiAlarm13, ApiAlarm14
+			);
+		
+		
 		Reporter.log(" ", true);
 		Reporter.log("The process of verify All Api Alarms Cretaed  is started.", true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.verifyAllApiAlarmsCretaed(driver, todaysDate, todaysDate1, ApiAlarm01, ApiAlarm02, ApiAlarm03, ApiAlarm04,
-				ApiAlarm05, ApiAlarm06, ApiAlarm07, ApiAlarm08, ApiAlarm09, ApiAlarm10, ApiAlarm11, ApiAlarm12,
-				ApiAlarm13, ApiAlarm14);
+
+		ma.verifyAllAlarmsCretaed(driver,  todaysDate, todaysDate1,  alarms);
 
 		Reporter.log(GREEN + GREEN + "The process of verify All Api Alarms Cretaed is complete.", true);
 		Reporter.log(" ", true);

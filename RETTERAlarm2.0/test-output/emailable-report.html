@@ -8,52 +8,11 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">delete</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">116,103</td><td></td><td></td></tr>
+<tr><th colspan="8">Suite</th></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">81,281</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">delete</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">function.A_testClassDelete</td><td><a href="#m0">backToHomePage2</a></td><td rowspan="1">1790602149787</td><td rowspan="1">141</td></tr><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">function.A_testClassDelete</td><td><a href="#m1">deactiveBgTestActiveAlarmsFromPlaningList</a></td><td rowspan="1">1790602131662</td><td rowspan="1">18121</td></tr><tr><th colspan="4">Test &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="3">function.A_testClassDelete</td><td><a href="#m2">AfterSute</a></td><td rowspan="1">1790602149976</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m3">AfterTest</a></td><td rowspan="1">1790602149934</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m4">logOut</a></td><td rowspan="1">1790602149931</td><td rowspan="1">0</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">function.A_testClassDelete</td><td><a href="#m5">deactiveAllActiveAlarms</a></td><td rowspan="1">1790602048945</td><td rowspan="1">68501</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">function.A_testClassCreate</td><td><a href="#m0">verifyingAllTestAlarmAfterCronRun</a></td><td rowspan="1">1790687748438</td><td rowspan="1">56380</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">function.A_testClassDelete#backToHomePage2</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>[TestResult name=deactiveBgTestActiveAlarmsFromPlaningList status=FAILURE method=A_testClassDelete.deactiveBgTestActiveAlarmsFromPlaningList()[pri:0, instance:function.A_testClassDelete@752325ad]]</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.io.FileNotFoundException: E:\Automation _lapy\MasterAutomationWorkSpcae\screenshots\null_null_deactiveBgTestActiveAlarmsFromPlaningList.jpg (The system cannot find the path specified)
-	at java.base/java.io.FileOutputStream.open0(Native Method)
-	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:289)
-	at java.base/java.io.FileOutputStream.&lt;init&gt;(FileOutputStream.java:230)
-	at java.base/java.io.FileOutputStream.&lt;init&gt;(FileOutputStream.java:179)
-	at org.openqa.selenium.io.FileHandler.copyFile(FileHandler.java:131)
-	at org.openqa.selenium.io.FileHandler.copy(FileHandler.java:110)
-	at function.b_baseClass.takeScreenshot(b_baseClass.java:487)
-	at function.A_testClassDelete.backToHomePage2(A_testClassDelete.java:444)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">function.A_testClassDelete#deactiveBgTestActiveAlarmsFromPlaningList</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages"> <br/>The process of deactive Test alarms is started.</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//i[@class=&quot;dx-icon dx-icon-refresh&quot;]&quot;}
-  (Session info: chrome=153.0.8010.53)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.11&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [558dd119f928c269160c6a91ce8f3fef, findElement {using=xpath, value=//i[@class=&quot;dx-icon dx-icon-refresh&quot;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 153.0.8010.53, chrome: {chromedriverVersion: 153.0.8010.52 (78e5e45d4bb4..., userDataDir: C:\Users\Bhupesh\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59746}, goog:processID: 55368, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59746/devtoo..., se:cdpVersion: 153.0.8010.53, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 558dd119f928c269160c6a91ce8f3fef
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy22.click(Unknown Source)
-	at function.F_manualTestAlarm.commonForManualAlarm(F_manualTestAlarm.java:2792)
-	at function.A_testClassDelete.deactiveBgTestActiveAlarmsFromPlaningList(A_testClassDelete.java:379)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">function.A_testClassDelete#AfterSute</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">function.A_testClassDelete#AfterTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">function.A_testClassDelete#logOut</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">function.A_testClassDelete#deactiveAllActiveAlarms</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages"> <br/>The process of deactive alarm is started.<br/>The process of deactive alarm is complete.<br/> </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test</h2><h3 id="m0">function.A_testClassCreate#verifyingAllTestAlarmAfterCronRun</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages"> <br/>The process of verify All Test Alarms Cretaed after cron run is started.<br/>[32m✔ [0m[32m✔ [0mThe process of verify All Test Alarms Cretaed after cron run is complete.<br/> </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

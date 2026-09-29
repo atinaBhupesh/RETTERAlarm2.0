@@ -5,8 +5,8 @@
     <classes>
       <class name="function.A_testClassCreate">
         <methods>
-          <include name="testAlarm_recursiv_weekly_users"/>
           <include name="AfterTest"/>
+          <include name="verifyingAllTestAlarmAfterCronRun"/>
           <include name="BeforeSuite"/>
           <include name="backToHomePage2"/>
           <include name="BeforeTest"/>

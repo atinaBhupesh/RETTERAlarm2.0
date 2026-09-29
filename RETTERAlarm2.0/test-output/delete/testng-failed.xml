@@ -5,8 +5,8 @@
     <classes>
       <class name="function.A_testClassDelete">
         <methods>
+          <include name="deleteAvailabilityRequestFromHistory"/>
           <include name="BeforeSuite"/>
-          <include name="deactiveBgTestActiveAlarmsFromPlaningList"/>
           <include name="backToHomePage"/>
           <include name="backToHomePage2"/>
           <include name="AfterSute"/>
