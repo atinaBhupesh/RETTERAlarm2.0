@@ -6,9 +6,9 @@
       <class name="function.A_testClassCreate">
         <methods>
           <include name="AfterTest"/>
-          <include name="verifyAllApiAlarmsCretaed"/>
           <include name="BeforeSuite"/>
           <include name="backToHomePage2"/>
+          <include name="createAvailabilityRequestOneTimeImmediate"/>
           <include name="BeforeTest"/>
           <include name="logOut"/>
           <include name="backToHomePage"/>

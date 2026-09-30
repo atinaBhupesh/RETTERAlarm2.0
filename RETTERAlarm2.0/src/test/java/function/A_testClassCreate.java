@@ -462,7 +462,28 @@ public class A_testClassCreate extends b_baseClass {
 	}
 
 	
+	@Test
+	public void verifyAvailabilityRequestCreatedAfterCronExecution() throws Throwable {
 
+		List<String> availabilityRequests = Arrays.asList(
+				createAvailabilityRequestOneTimeImmediate,
+				createAvailabilityRequestOneTimeSchedule,
+				createAvailabilityRequestRecursive, 
+				createAvailabilityRequestMultipleDays
+			    
+			);
+		
+		
+		Reporter.log(" ", true);
+		Reporter.log("The process of verify Availability Request CreatedAfter Cron Execution is started.", true);
+		arequest.verifyAvailabilityRequestCreatedAfterCronExecution(driver,  todaysDateG, availabilityRequests );
+
+		Reporter.log(GREEN + GREEN + "The process of verify Availability Request CreatedAfter Cron Execution is complete.", true);
+		Reporter.log(" ", true);
+	}
+	
+	
+	
 	@Test
 	public void addNewFile() throws Throwable {
 
@@ -517,8 +538,9 @@ public class A_testClassCreate extends b_baseClass {
 			    ApiAlarm05, ApiAlarm06, ApiAlarm07, ApiAlarm08,
 			    ApiAlarm09, ApiAlarm10, ApiAlarm11, ApiAlarm12,
 			    ApiAlarm13, ApiAlarm14
+			    
 			);
-		
+		System.out.println(ApiAlarm14);
 		
 		Reporter.log(" ", true);
 		Reporter.log("The process of verify All Api Alarms Cretaed  is started.", true);

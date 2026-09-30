@@ -12,7 +12,11 @@
 				<include name="testAlarm_recursiv_weekly_users" />
 				<include name="testAlarm_Recursive_Monthly_DayWise_Attribute" />
 				<include name="testAlarm_Recursive_Monthly_DateyWise_Attribute" />
-
+				
+				<include name="createAvailabilityRequestOneTimeImmediate" />
+				<include name="createAvailabilityRequestOneTimeSchedule" />
+				<include name="createAvailabilityRequestRecursive" />
+				<include name="createAvailabilityRequestMultipleDays" />
 
 				<include name="addAppUser" />
 				<include name="addStataionUser" />
@@ -39,12 +43,9 @@
 				<include name="createCalendarEventByFireFughterMS" />
 				<include name="createCalendarEventByStationsMS" />
 
-
-				<include name="createAvailabilityRequestOneTimeImmediate" />
-				<include name="createAvailabilityRequestOneTimeSchedule" />
-				<include name="createAvailabilityRequestRecursive" />
-				<include name="createAvailabilityRequestMultipleDays" />
-
+				<include name="verifyingAllTestAlarmAfterCronRun" />
+				<include name="verifyAvailabilityRequestCreatedAfterCronExecution" />
+				
 				<include name="nextStage" />
 
 

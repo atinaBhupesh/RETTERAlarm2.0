@@ -5,20 +5,14 @@
     <classes>
       <class name="function.A_testClassCreate">
         <methods>
-          <include name="testAlarm_Recursive_Monthly_DayWise_Attribute"/>
-          <include name="createAvailabilityRequestOneTimeImmediate"/>
-          <include name="logOut"/>
-          <include name="AfterSute"/>
-          <include name="createAvailabilityRequestOneTimeSchedule"/>
-          <include name="testAlarm_Recursive_Monthly_DateyWise_Attribute"/>
           <include name="AfterTest"/>
           <include name="BeforeSuite"/>
-          <include name="createAvailabilityRequestRecursive"/>
           <include name="backToHomePage2"/>
-          <include name="testAlarm_recursiv_daily_Resource"/>
+          <include name="createAvailabilityRequestOneTimeImmediate"/>
           <include name="BeforeTest"/>
+          <include name="logOut"/>
           <include name="backToHomePage"/>
-          <include name="createAvailabilityRequestMultipleDays"/>
+          <include name="AfterSute"/>
           <include name="createObject"/>
         </methods>
       </class> <!-- function.A_testClassCreate -->

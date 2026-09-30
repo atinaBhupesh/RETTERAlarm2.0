@@ -7,8 +7,9 @@
 
 			<methods>
 			
-			<include name="verifyingAllTestAlarmAfterCronRun" />
-				<include name="verifyingAllTestAlarmAfterCronRun" />
+				
+				<include name="verifyAvailabilityRequestCreatedAfterCronExecution" />
+				
 			
 				
 				

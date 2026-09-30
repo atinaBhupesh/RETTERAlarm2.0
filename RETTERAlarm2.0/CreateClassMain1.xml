@@ -56,7 +56,6 @@
 				<include name="CheckApiAlarmEscalationFunctionality" />
 				<include name="CheckManualAlarmEscalationFunctionality" />
 
-<include name="verifyingAllTestAlarmAfterCronRun" />
 
 				<include name="nextStage" />
 

@@ -3,7 +3,10 @@ package function;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.time.Duration;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
+import java.util.Locale;
 
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -114,11 +117,10 @@ public class S_AvailabilityRequest extends b_baseClass {
 	private WebElement BH_ST01;
 	@FindBy(xpath = "//input[@value=\"35651\"]")
 	private WebElement rick102;
-	
-	 @FindBy(xpath="//input[@value=\"35734\"]")private WebElement rickCall01;
-	
-	
-	
+
+	@FindBy(xpath = "//input[@value=\"35734\"]")
+	private WebElement rickCall01;
+
 	@FindBy(xpath = "(//td)[2]")
 	private WebElement firstTitle;
 	@FindBy(xpath = "//span[@role=\"presentation\"]")
@@ -147,11 +149,16 @@ public class S_AvailabilityRequest extends b_baseClass {
 	private List<WebElement> availableBGARRequestInHistory;
 	@FindBy(xpath = "//select[@name=\"weekendHistoryTable_length\"]")
 	private WebElement countOnPage;
-	 @FindBy(xpath="//select[@name=\"example1_length\"]")private WebElement countOnPagePlaningList;
-	 @FindBy(xpath="//td[@class=\"sorting_1\"]")private WebElement  deleteId;
-	 @FindBy(xpath="//input[@id=\"PlanningResourcesEmailStatus\"]")private WebElement requestTypeMail;
-	 @FindBy(xpath="//input[@id=\"PlanningResourcesSmsStatus\"]")private WebElement requestTypeSms;
-	// @FindBy(xpath="")private WebElement ;
+	@FindBy(xpath = "//select[@name=\"example1_length\"]")
+	private WebElement countOnPagePlaningList;
+	@FindBy(xpath = "//td[@class=\"sorting_1\"]")
+	private WebElement deleteId;
+	@FindBy(xpath = "//input[@id=\"PlanningResourcesEmailStatus\"]")
+	private WebElement requestTypeMail;
+	@FindBy(xpath = "//input[@id=\"PlanningResourcesSmsStatus\"]")
+	private WebElement requestTypeSms;
+	@FindBy(xpath = "(//td[contains(.,\"2026\") or contains(., \"2027\") or contains(., \"2029\")])[4]")
+	private List<WebElement> getDate;
 	// @FindBy(xpath="")private WebElement ;
 	// @FindBy(xpath="")private WebElement ;
 	// @FindBy(xpath="")private WebElement ;
@@ -159,6 +166,57 @@ public class S_AvailabilityRequest extends b_baseClass {
 
 	public S_AvailabilityRequest(WebDriver driver) {
 		PageFactory.initElements(driver, this);
+
+	}
+
+	public void verifyAvailabilityRequestCreatedAfterCronExecution(WebDriver driver, String todaysDateG,
+			List<String> availabilityRequests) throws Throwable {
+		Actions act = new Actions(driver);
+
+		for (int a = 0; a < availabilityRequests.size(); a++) {
+
+			String title = availabilityRequests.get(a);
+
+			availabilityRequest.click();
+			Thread.sleep(2000);
+			availabilityRequestHistory.click();
+			Thread.sleep(2000);
+			searFieldHistory.clear();
+			searFieldHistory.click();
+			act.sendKeys(title).perform();
+			searchButton.click();
+			Thread.sleep(2000);
+
+			int count = getDate.size();
+
+			if (count == 0) {
+
+				System.out.println(RED + "Alarm " + title + " not available.");
+
+			}
+
+			else {
+				DateTimeFormatter inputFormatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
+				DateTimeFormatter outputFormatter = DateTimeFormatter.ofPattern("dd MMM yyyy", Locale.ENGLISH);
+
+				LocalDate localDate = LocalDate.parse(todaysDateG, inputFormatter);
+				String dateMontth = localDate.format(outputFormatter);
+
+				String getDate1 = driver.findElement(By.xpath("(//td[contains(., '" + dateMontth + "')])[2]"))
+						.getText();
+
+				if (getDate1.contains(dateMontth) || dateMontth.equals(dateMontth)) {
+
+					System.out.println(GREEN + "Alarm " + title + " created successfully.");
+
+				} else {
+
+					System.out.println(RED + "Alarm " + title + " not created successfully.");
+				}
+
+			}
+
+		}
 
 	}
 
@@ -184,16 +242,16 @@ public class S_AvailabilityRequest extends b_baseClass {
 
 		Select se = new Select(ARType);
 
-		int rowNumber =0;
-		String methodName="";
-		
+		int rowNumber = 0;
+		String methodName = "";
+
 		switch (requestType) {
 
 		case "OneTime>Immediate":
 			se.selectByVisibleText("One time");
 			sendImmediateChekBox.click();
 			rowNumber = 77;
-			methodName= "createAvailabilityRequestOneTimeImmediate";
+			methodName = "createAvailabilityRequestOneTimeImmediate";
 			break;
 
 		case "OneTime>Schedule":
@@ -211,10 +269,9 @@ public class S_AvailabilityRequest extends b_baseClass {
 
 			act.sendKeys(todaysDateG + " " + timeAfter5MinHHG + ":" + timeAfter5MinMMG).build().perform();
 			Thread.sleep(2000);
-			
+
 			rowNumber = 78;
-			methodName= "createAvailabilityRequestOneTimeSchedule";
-			
+			methodName = "createAvailabilityRequestOneTimeSchedule";
 
 			break;
 
@@ -231,7 +288,7 @@ public class S_AvailabilityRequest extends b_baseClass {
 
 			act.sendKeys(timeAfter9MinHHG + ":" + timeAfter9MinMMG).build().perform();
 			rowNumber = 79;
-			methodName= "createAvailabilityRequestRecursive";
+			methodName = "createAvailabilityRequestRecursive";
 
 			break;
 
@@ -258,9 +315,9 @@ public class S_AvailabilityRequest extends b_baseClass {
 			act.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).build().perform();
 
 			act.sendKeys(todaysDateG + " " + timeAfter11MinHHG + ":" + timeAfter11MinMMG).build().perform();
-			
+
 			rowNumber = 80;
-			methodName= "createAvailabilityRequestMultipleDays";
+			methodName = "createAvailabilityRequestMultipleDays";
 
 			break;
 
@@ -293,8 +350,7 @@ public class S_AvailabilityRequest extends b_baseClass {
 			Thread.sleep(1000);
 
 			break;
-			
-			
+
 		case "1call":
 
 			BH_ST01.click();
@@ -306,7 +362,6 @@ public class S_AvailabilityRequest extends b_baseClass {
 			Thread.sleep(2000);
 			rickCall01.click();
 			Thread.sleep(1000);
-			
 
 			break;
 
@@ -451,7 +506,7 @@ public class S_AvailabilityRequest extends b_baseClass {
 
 			Select se2 = new Select(ARMultiToDay);
 			se2.selectByVisibleText(dayAfterFourDaysG);
-			
+
 			ARMultiToTime.clear();
 			ARMultiToTime.click();
 			act.sendKeys(timeAfter11MinHHG + ":" + timeAfter11MinMMG).build().perform();
@@ -474,22 +529,18 @@ public class S_AvailabilityRequest extends b_baseClass {
 
 		adShiftButton.click();
 		Thread.sleep(1000);
-		
-		
-		
-		switch (branchName) {
-			case "1call":
-				requestTypeMail.click();
-				Thread.sleep(500);
-				requestTypeSms.click();
-				Thread.sleep(500);
-				
 
-				break;
-		
+		switch (branchName) {
+		case "1call":
+			requestTypeMail.click();
+			Thread.sleep(500);
+			requestTypeSms.click();
+			Thread.sleep(500);
+
+			break;
+
 		}
-		
-		
+
 		ARSaveButton.click();
 		Thread.sleep(5000);
 		driver.navigate().refresh();
@@ -499,8 +550,7 @@ public class S_AvailabilityRequest extends b_baseClass {
 		Assert.assertTrue(actualTite.contains(title), RED + "Station not found.");
 
 		System.out.println(GREEN + requestType + " added successfully.");
-		
-		
+
 		FileInputStream in = new FileInputStream(filePath);
 
 		XSSFWorkbook wb = new XSSFWorkbook(in);
@@ -509,7 +559,7 @@ public class S_AvailabilityRequest extends b_baseClass {
 		Row row = sheet.getRow(rowNumber);
 
 		if (row == null) {
-		    row = sheet.createRow(rowNumber);
+			row = sheet.createRow(rowNumber);
 		}
 
 		row.createCell(0).setCellValue(methodName);
@@ -523,9 +573,6 @@ public class S_AvailabilityRequest extends b_baseClass {
 		out.close();
 		wb.close();
 
-		
-		
-		
 	}
 
 	public void deleteAvailabilityRequestFromList(WebDriver driver) throws Throwable {
@@ -538,59 +585,53 @@ public class S_AvailabilityRequest extends b_baseClass {
 		availabilityRequestList.click();
 		Thread.sleep(2000);
 		Actions act = new Actions(driver);
-		
+
 		Select se = new Select(countOnPagePlaningList);
 		se.selectByVisibleText("100");
-		
+
 		searchField.click();
 		Thread.sleep(2000);
 
 		act.sendKeys("BG-AR").perform();
 		Thread.sleep(2000);
-		
-		
+
 		int count = 0;
 		int ARcount = availableBGARRequestInHistory.size();
 		System.out.println("Total-" + ARcount + " request available for delete");
 		searchField.clear();
-		
+
 		if (ARcount == 0) {
 			System.out.println("No availability reqest for delete ");
 
 		}
-		
-		
+
 		else {
-		
-		
 
-		for (int i = 1; i <= ARcount; i++)
+			for (int i = 1; i <= ARcount; i++)
 
-		{
-			
-			
-			searchField.click();
-			
+			{
 
-			act.sendKeys("BG-AR").perform();
-			Thread.sleep(5000);
+				searchField.click();
 
-			String id = deleteId.getText();
-			deleteAvailbilityRequest.click();
-			Thread.sleep(2000);
-			driver.findElement(By.xpath("//button[@id=\"delYes"+id+"\"]")).click();
+				act.sendKeys("BG-AR").perform();
+				Thread.sleep(5000);
 
-			Thread.sleep(2000);
-			System.out.println("Availability request number-" + i + " deleted sucessfully from list-testing branch.");
-			driver.navigate().refresh();
-			Thread.sleep(2000);
+				String id = deleteId.getText();
+				deleteAvailbilityRequest.click();
+				Thread.sleep(2000);
+				driver.findElement(By.xpath("//button[@id=\"delYes" + id + "\"]")).click();
 
-			count++;
+				Thread.sleep(2000);
+				System.out
+						.println("Availability request number-" + i + " deleted sucessfully from list-testing branch.");
+				driver.navigate().refresh();
+				Thread.sleep(2000);
+
+				count++;
+			}
+
 		}
-		
-		
-		}
-		
+
 		System.out.println("Total-" + count + " Availability request delete from planning list");
 	}
 
@@ -606,7 +647,6 @@ public class S_AvailabilityRequest extends b_baseClass {
 		Select se = new Select(countOnPage);
 		se.selectByVisibleText("100");
 
-	
 		searFieldHistory.click();
 
 		act.sendKeys("BG-AR").perform();

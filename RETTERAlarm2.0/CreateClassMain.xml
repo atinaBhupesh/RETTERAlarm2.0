@@ -56,7 +56,9 @@
 				<include name="CheckApiAlarmEscalationFunctionality" />
 				<include name="CheckManualAlarmEscalationFunctionality" />
 				
+				
 				<include name="verifyingAllTestAlarmAfterCronRun" />
+				<include name="verifyAvailabilityRequestCreatedAfterCronExecution" />
 
 				<include name="nextStage" />
 
@@ -127,6 +129,7 @@
 				<include name="editStationMonitor" />
 				<include name="addOverviewMonitor" />
 				<include name="editOverviewMonitor" />
+				
 
 
 
