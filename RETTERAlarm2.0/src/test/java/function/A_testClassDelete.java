@@ -59,7 +59,6 @@ public class A_testClassDelete extends b_baseClass {
 
 		Reporter.log("Logged in user-" + userName, true);
 		lp.logInUser(userName, password, driver);
-		hp.langChange(driver);
 
 		hp.langChange(driver);
 		ar = new G_resource(driver);

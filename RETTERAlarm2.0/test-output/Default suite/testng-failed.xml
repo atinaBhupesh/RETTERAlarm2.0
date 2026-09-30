@@ -3,19 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="function.A_testClassCreate">
+      <class name="function.Y_extra">
         <methods>
-          <include name="TCAlarmTemplateCheckingValidation"/>
-          <include name="AfterTest"/>
-          <include name="BeforeSuite"/>
-          <include name="backToHomePage2"/>
-          <include name="BeforeTest"/>
-          <include name="logOut"/>
-          <include name="backToHomePage"/>
-          <include name="AfterSute"/>
-          <include name="createObject"/>
+          <include name="testFirmwareUpload"/>
         </methods>
-      </class> <!-- function.A_testClassCreate -->
+      </class> <!-- function.Y_extra -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
