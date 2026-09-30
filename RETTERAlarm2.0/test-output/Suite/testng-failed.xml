@@ -6,7 +6,7 @@
       <class name="function.A_testClassCreate">
         <methods>
           <include name="AfterTest"/>
-          <include name="verifyingAllTestAlarmAfterCronRun"/>
+          <include name="verifyAllApiAlarmsCretaed"/>
           <include name="BeforeSuite"/>
           <include name="backToHomePage2"/>
           <include name="BeforeTest"/>

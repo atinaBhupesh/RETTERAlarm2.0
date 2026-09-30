@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[Well come to RETTERAlarm Live branch-Andrew Department]]>
@@ -20,6 +20,12 @@
       <![CDATA[ ]]>
     </line>
     <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[The process of verify All Api Alarms Cretaed  is started.]]>
+    </line>
+    <line>
       <![CDATA[Logout sucessfully.]]>
     </line>
     <line>
@@ -38,34 +44,34 @@
       <![CDATA[Good to see you again.]]>
     </line>
   </reporter-output>
-  <suite started-at="2026-09-29T18:45:38 IST" name="Suite" finished-at="2026-09-29T18:46:59 IST" duration-ms="81281">
+  <suite started-at="2026-09-29T19:04:43 IST" name="Suite" finished-at="2026-09-29T19:08:04 IST" duration-ms="201411">
     <groups>
     </groups>
-    <test started-at="2026-09-29T18:45:38 IST" name="Test" finished-at="2026-09-29T18:46:59 IST" duration-ms="81281">
+    <test started-at="2026-09-29T19:04:43 IST" name="Test" finished-at="2026-09-29T19:08:04 IST" duration-ms="201411">
       <class name="function.A_testClassCreate">
-        <test-method is-config="true" signature="BeforeSuite()[pri:0, instance:function.A_testClassCreate@5c671d7f]" started-at="2026-09-29T18:45:33 IST" name="BeforeSuite" finished-at="2026-09-29T18:45:38 IST" duration-ms="5274" status="PASS">
+        <test-method is-config="true" signature="BeforeSuite()[pri:0, instance:function.A_testClassCreate@5c671d7f]" started-at="2026-09-29T19:04:36 IST" name="BeforeSuite" finished-at="2026-09-29T19:04:43 IST" duration-ms="6664" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Well come to RETTERAlarm Live branch-Andrew Department]]>
             </line>
           </reporter-output>
         </test-method> <!-- BeforeSuite -->
-        <test-method is-config="true" signature="BeforeTest()[pri:0, instance:function.A_testClassCreate@5c671d7f]" started-at="2026-09-29T18:45:38 IST" name="BeforeTest" finished-at="2026-09-29T18:45:47 IST" duration-ms="8741" status="PASS">
+        <test-method is-config="true" signature="BeforeTest()[pri:0, instance:function.A_testClassCreate@5c671d7f]" started-at="2026-09-29T19:04:43 IST" name="BeforeTest" finished-at="2026-09-29T19:04:49 IST" duration-ms="6781" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Logged in user-bhupesh+live_bhdeptuser@atinatechnology.in]]>
             </line>
           </reporter-output>
         </test-method> <!-- BeforeTest -->
-        <test-method is-config="true" signature="createObject()[pri:0, instance:function.A_testClassCreate@5c671d7f]" started-at="2026-09-29T18:45:47 IST" name="createObject" finished-at="2026-09-29T18:45:47 IST" duration-ms="12" status="PASS">
+        <test-method is-config="true" signature="createObject()[pri:0, instance:function.A_testClassCreate@5c671d7f]" started-at="2026-09-29T19:04:49 IST" name="createObject" finished-at="2026-09-29T19:04:49 IST" duration-ms="9" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createObject -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@5c671d7f]" started-at="2026-09-29T18:45:47 IST" name="backToHomePage" finished-at="2026-09-29T18:45:48 IST" duration-ms="1355" status="PASS">
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@5c671d7f]" started-at="2026-09-29T19:04:49 IST" name="backToHomePage" finished-at="2026-09-29T19:04:51 IST" duration-ms="1392" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backToHomePage -->
-        <test-method signature="verifyingAllTestAlarmAfterCronRun()[pri:0, instance:function.A_testClassCreate@5c671d7f]" started-at="2026-09-29T18:45:48 IST" name="verifyingAllTestAlarmAfterCronRun" finished-at="2026-09-29T18:46:44 IST" duration-ms="56380" status="PASS">
+        <test-method signature="verifyingAllTestAlarmAfterCronRun()[pri:0, instance:function.A_testClassCreate@5c671d7f]" started-at="2026-09-29T19:04:51 IST" name="verifyingAllTestAlarmAfterCronRun" finished-at="2026-09-29T19:06:07 IST" duration-ms="75757" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[ ]]>
@@ -81,7 +87,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- verifyingAllTestAlarmAfterCronRun -->
-        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassCreate@5c671d7f]" started-at="2026-09-29T18:46:44 IST" name="backToHomePage2" finished-at="2026-09-29T18:46:55 IST" duration-ms="11106" status="PASS">
+        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassCreate@5c671d7f]" started-at="2026-09-29T19:06:07 IST" name="backToHomePage2" finished-at="2026-09-29T19:06:18 IST" duration-ms="11216" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -92,7 +98,103 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backToHomePage2 -->
-        <test-method is-config="true" signature="logOut()[pri:0, instance:function.A_testClassCreate@5c671d7f]" started-at="2026-09-29T18:46:55 IST" name="logOut" finished-at="2026-09-29T18:46:59 IST" duration-ms="3661" status="PASS">
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@5c671d7f]" started-at="2026-09-29T19:06:18 IST" name="backToHomePage" finished-at="2026-09-29T19:06:19 IST" duration-ms="1514" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- backToHomePage -->
+        <test-method signature="verifyAllApiAlarmsCretaed()[pri:0, instance:function.A_testClassCreate@5c671d7f]" started-at="2026-09-29T19:06:19 IST" name="verifyAllApiAlarmsCretaed" finished-at="2026-09-29T19:07:47 IST" duration-ms="87187" status="FAIL">
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
+            <message>
+              <![CDATA[stale element reference: stale element not found in the current frame
+  (Session info: chrome=153.0.8010.53)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.17.0', revision: 'e52b1be057*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [289a4075baf941ff77086a156b05d6d5, clickElement {id=f.BB250E27C08007968B7EB5D699D9E2A6.d.4CCDC4CBD0AF90394C800E481941A8D0.e.26709}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 153.0.8010.53, chrome: {chromedriverVersion: 153.0.8010.52 (78e5e45d4bb4..., userDataDir: C:\Users\Bhupesh\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49208}, goog:processID: 150368, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49208/devtoo..., se:cdpVersion: 153.0.8010.53, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (289a4075baf941ff77086a156b05d6d5)] -> xpath: (//i[@class="dx-icon-filter filter-icon"])[1]]
+Session ID: 289a4075baf941ff77086a156b05d6d5]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+  (Session info: chrome=153.0.8010.53)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.17.0', revision: 'e52b1be057*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [289a4075baf941ff77086a156b05d6d5, clickElement {id=f.BB250E27C08007968B7EB5D699D9E2A6.d.4CCDC4CBD0AF90394C800E481941A8D0.e.26709}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 153.0.8010.53, chrome: {chromedriverVersion: 153.0.8010.52 (78e5e45d4bb4..., userDataDir: C:\Users\Bhupesh\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49208}, goog:processID: 150368, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49208/devtoo..., se:cdpVersion: 153.0.8010.53, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (289a4075baf941ff77086a156b05d6d5)] -> xpath: (//i[@class="dx-icon-filter filter-icon"])[1]]
+Session ID: 289a4075baf941ff77086a156b05d6d5
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy22.click(Unknown Source)
+at function.F_manualTestAlarm.verifyAllAlarmsCretaed(F_manualTestAlarm.java:8077)
+at function.A_testClassCreate.verifyAllApiAlarmsCretaed(A_testClassCreate.java:527)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
+          <reporter-output>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+            <line>
+              <![CDATA[The process of verify All Api Alarms Cretaed  is started.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyAllApiAlarmsCretaed -->
+        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassCreate@5c671d7f]" started-at="2026-09-29T19:07:47 IST" name="backToHomePage2" finished-at="2026-09-29T19:07:59 IST" duration-ms="12157" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyAllApiAlarmsCretaed status=FAILURE method=A_testClassCreate.verifyAllApiAlarmsCretaed()[pri:0, instance:function.A_testClassCreate@5c671d7f]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- backToHomePage2 -->
+        <test-method is-config="true" signature="logOut()[pri:0, instance:function.A_testClassCreate@5c671d7f]" started-at="2026-09-29T19:07:59 IST" name="logOut" finished-at="2026-09-29T19:08:04 IST" duration-ms="5274" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Logout sucessfully.]]>
@@ -102,14 +204,14 @@
             </line>
           </reporter-output>
         </test-method> <!-- logOut -->
-        <test-method is-config="true" signature="AfterTest()[pri:0, instance:function.A_testClassCreate@5c671d7f]" started-at="2026-09-29T18:46:59 IST" name="AfterTest" finished-at="2026-09-29T18:46:59 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="AfterTest()[pri:0, instance:function.A_testClassCreate@5c671d7f]" started-at="2026-09-29T19:08:04 IST" name="AfterTest" finished-at="2026-09-29T19:08:04 IST" duration-ms="0" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Refresh the URL before successfully closing the browser.]]>
             </line>
           </reporter-output>
         </test-method> <!-- AfterTest -->
-        <test-method is-config="true" signature="AfterSute()[pri:0, instance:function.A_testClassCreate@5c671d7f]" started-at="2026-09-29T18:46:59 IST" name="AfterSute" finished-at="2026-09-29T18:46:59 IST" duration-ms="286" status="PASS">
+        <test-method is-config="true" signature="AfterSute()[pri:0, instance:function.A_testClassCreate@5c671d7f]" started-at="2026-09-29T19:08:05 IST" name="AfterSute" finished-at="2026-09-29T19:08:28 IST" duration-ms="23738" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Browser close sucessfully.]]>

@@ -8073,22 +8073,21 @@ public class F_manualTestAlarm extends b_baseClass {
 	        System.out.println("Searching alarm: " + title);
 
 	        refreshFilter.click();
+	        
 	        titleSearch.click();
-	        Thread.sleep(1000);
 
 	        titleSearchField.click();
 	        Thread.sleep(500);
 
 	        act.sendKeys(title).perform();
 
-	        Thread.sleep(2000);
 
 	        titleSearchFieldOk.click();
-	        Thread.sleep(2000);
+	        Thread.sleep(1000);
 
 	        int count = getDate.size();
 
-	        Thread.sleep(2000);
+	       
 
 	        if (count == 0) {
 
