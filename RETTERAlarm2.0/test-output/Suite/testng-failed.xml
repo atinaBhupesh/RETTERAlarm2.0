@@ -5,13 +5,13 @@
     <classes>
       <class name="function.A_testClassCreate">
         <methods>
+          <include name="verifyAvailabilityRequestCreatedAfterCronExecution"/>
           <include name="AfterTest"/>
           <include name="BeforeSuite"/>
           <include name="backToHomePage2"/>
-          <include name="createAvailabilityRequestOneTimeImmediate"/>
           <include name="BeforeTest"/>
-          <include name="logOut"/>
           <include name="backToHomePage"/>
+          <include name="logOut"/>
           <include name="AfterSute"/>
           <include name="createObject"/>
         </methods>
