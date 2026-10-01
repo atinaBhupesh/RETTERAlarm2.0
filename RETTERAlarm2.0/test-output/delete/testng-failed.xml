@@ -12,8 +12,8 @@
           <include name="AfterSute"/>
           <include name="BeforeTest"/>
           <include name="logOut"/>
-          <include name="createObject"/>
           <include name="AfterTest"/>
+          <include name="createObject"/>
         </methods>
       </class> <!-- function.A_testClassDelete -->
     </classes>

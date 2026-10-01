@@ -145,7 +145,7 @@ public class S_AvailabilityRequest extends b_baseClass {
 	@FindBy(xpath = "//input[@id=\"multiple_to_time\"]")
 	private WebElement ARMultiToTime;
 
-	@FindBy(xpath = "//td[contains(text(),\"BG-AR\")]")
+	@FindBy(xpath = "//td[contains(text(),\"BG-AR\") or contains (text(),\"BHUPESH\")]")
 	private List<WebElement> availableBGARRequestInHistory;
 	@FindBy(xpath = "//select[@name=\"weekendHistoryTable_length\"]")
 	private WebElement countOnPage;
@@ -237,6 +237,8 @@ public class S_AvailabilityRequest extends b_baseClass {
 		ARTitle.click();
 
 		String title = "BG-AR >" + requestType + "-" + timeHHMMSSG;
+		
+		
 
 		act.sendKeys(title).build().perform();
 
@@ -593,6 +595,8 @@ public class S_AvailabilityRequest extends b_baseClass {
 		Thread.sleep(2000);
 
 		act.sendKeys("BG-AR").perform();
+//		act.sendKeys("BHUPESH").perform();
+		
 		Thread.sleep(2000);
 
 		int count = 0;
@@ -650,6 +654,7 @@ public class S_AvailabilityRequest extends b_baseClass {
 		searFieldHistory.click();
 
 		act.sendKeys("BG-AR").perform();
+//		act.sendKeys("BHUPESH").perform();
 		Thread.sleep(500);
 		searchButton.click();
 		Thread.sleep(5000);
