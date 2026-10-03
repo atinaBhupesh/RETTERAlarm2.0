@@ -18,15 +18,15 @@
 				 
 				 <include name="nextStage" />
 				 
-				<include name="verifyAllApiAlarmsCretaed" />
+				
 				<include name="sendMessageToNewApiAlarmUser" />
 				<include name="sendMessageToOldApiAlarmUser" />
 
 				<include name="testAlarm_OneTime_Attribute" />
+				
 				<include name="manualaByAttributeMSLP" />
-
-
 				<include name="manualaByAttributeSingleStation" />
+				
 				<include name="manualAlarmByResourceMsHP" />
 				<include name="manualAlarmByResourceMsLP" />
 				<include name="manualAlarmByUersMs" />
@@ -34,6 +34,8 @@
 
 				<include name="manualAlarmByEscResourceSingleStation" />
 				<include name="manualAlarmByEscResourceMs" />
+
+
 
 				<include name="manualaByAttributeExtend1To01StEscResourceFrom02" />
 
@@ -59,6 +61,10 @@
 				
 				<include name="verifyingAllTestAlarmAfterCronRun" />
 				<include name="verifyAvailabilityRequestCreatedAfterCronExecution" />
+				
+				<include name="verifyAllApiAlarmsCretaed" />
+				<include name="checkAlarmDisplayedOnMonitors" />
+
 
 				<include name="nextStage" />
 

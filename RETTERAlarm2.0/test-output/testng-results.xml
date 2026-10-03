@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[Well come to RETTERAlarm Live branch-Andrew Department]]>
@@ -11,231 +11,143 @@
       <![CDATA[ ]]>
     </line>
     <line>
-      <![CDATA[The process of delete Availability Request from List is started.]]>
+      <![CDATA[The process of verifying all API alarms created has started.]]>
     </line>
     <line>
-      <![CDATA[[32m✔ [0m[32m✔ [0mThe process of delete Availability Request from List is complete.]]>
-    </line>
-    <line>
-      <![CDATA[ ]]>
+      <![CDATA[[32m✔ [0m[32m✔ [0mThe process of verifying all API alarms created is complete.]]>
     </line>
     <line>
       <![CDATA[ ]]>
     </line>
     <line>
-      <![CDATA[The process of delete Availability Request from History is started.]]>
+      <![CDATA[[32m✔ [0m[32m✔ [0mThe process of monitor login is complete.]]>
+    </line>
+    <line>
+      <![CDATA[Logout sucessfully.]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[Refresh the URL before successfully closing the browser.]]>
+    </line>
+    <line>
+      <![CDATA[Browser close sucessfully.]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[Good to see you again.]]>
     </line>
   </reporter-output>
-  <suite started-at="2026-09-30T19:02:59 IST" name="delete" finished-at="2026-09-30T19:06:56 IST" duration-ms="237913">
+  <suite started-at="2026-10-03T16:08:29 IST" name="Suite" finished-at="2026-10-03T16:13:23 IST" duration-ms="294305">
     <groups>
     </groups>
-    <test started-at="2026-09-30T19:02:59 IST" name="Test" finished-at="2026-09-30T19:06:56 IST" duration-ms="237913">
-      <class name="function.A_testClassDelete">
-        <test-method is-config="true" signature="BeforeSuite()[pri:0, instance:function.A_testClassDelete@595b007d]" started-at="2026-09-30T19:02:53 IST" name="BeforeSuite" finished-at="2026-09-30T19:02:59 IST" duration-ms="5476" status="PASS">
+    <test started-at="2026-10-03T16:08:29 IST" name="Test" finished-at="2026-10-03T16:13:23 IST" duration-ms="294305">
+      <class name="function.A_testClassCreate">
+        <test-method is-config="true" signature="BeforeSuite()[pri:0, instance:function.A_testClassCreate@47eaca72]" started-at="2026-10-03T16:08:24 IST" name="BeforeSuite" finished-at="2026-10-03T16:08:29 IST" duration-ms="5227" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Well come to RETTERAlarm Live branch-Andrew Department]]>
             </line>
           </reporter-output>
         </test-method> <!-- BeforeSuite -->
-        <test-method is-config="true" signature="BeforeTest()[pri:0, instance:function.A_testClassDelete@595b007d]" started-at="2026-09-30T19:02:59 IST" name="BeforeTest" finished-at="2026-09-30T19:03:05 IST" duration-ms="6567" status="PASS">
+        <test-method is-config="true" signature="BeforeTest()[pri:0, instance:function.A_testClassCreate@47eaca72]" started-at="2026-10-03T16:08:29 IST" name="BeforeTest" finished-at="2026-10-03T16:08:36 IST" duration-ms="6843" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Logged in user-bhupesh+live_bhdeptuser@atinatechnology.in]]>
             </line>
           </reporter-output>
         </test-method> <!-- BeforeTest -->
-        <test-method is-config="true" signature="createObject()[pri:0, instance:function.A_testClassDelete@595b007d]" started-at="2026-09-30T19:03:05 IST" name="createObject" finished-at="2026-09-30T19:03:05 IST" duration-ms="6" status="PASS">
+        <test-method is-config="true" signature="createObject()[pri:0, instance:function.A_testClassCreate@47eaca72]" started-at="2026-10-03T16:08:36 IST" name="createObject" finished-at="2026-10-03T16:08:36 IST" duration-ms="6" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createObject -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassDelete@595b007d]" started-at="2026-09-30T19:03:05 IST" name="backToHomePage" finished-at="2026-09-30T19:03:10 IST" duration-ms="5040" status="PASS">
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@47eaca72]" started-at="2026-10-03T16:08:36 IST" name="backToHomePage" finished-at="2026-10-03T16:08:37 IST" duration-ms="1506" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backToHomePage -->
-        <test-method signature="deleteAvailabilityRequestFromList()[pri:0, instance:function.A_testClassDelete@595b007d]" started-at="2026-09-30T19:03:10 IST" name="deleteAvailabilityRequestFromList" finished-at="2026-09-30T19:04:14 IST" duration-ms="63509" status="PASS">
+        <test-method signature="verifyAllApiAlarmsCretaed()[pri:0, instance:function.A_testClassCreate@47eaca72]" started-at="2026-10-03T16:08:37 IST" name="verifyAllApiAlarmsCretaed" finished-at="2026-10-03T16:10:33 IST" duration-ms="115296" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[ ]]>
             </line>
             <line>
-              <![CDATA[The process of delete Availability Request from List is started.]]>
+              <![CDATA[The process of verifying all API alarms created has started.]]>
             </line>
             <line>
-              <![CDATA[[32m✔ [0m[32m✔ [0mThe process of delete Availability Request from List is complete.]]>
+              <![CDATA[[32m✔ [0m[32m✔ [0mThe process of verifying all API alarms created is complete.]]>
             </line>
             <line>
               <![CDATA[ ]]>
             </line>
           </reporter-output>
-        </test-method> <!-- deleteAvailabilityRequestFromList -->
-        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassDelete@595b007d]" started-at="2026-09-30T19:04:14 IST" name="backToHomePage2" finished-at="2026-09-30T19:04:23 IST" duration-ms="9107" status="PASS">
+        </test-method> <!-- verifyAllApiAlarmsCretaed -->
+        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassCreate@47eaca72]" started-at="2026-10-03T16:10:33 IST" name="backToHomePage2" finished-at="2026-10-03T16:10:45 IST" duration-ms="11872" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=deleteAvailabilityRequestFromList status=SUCCESS method=A_testClassDelete.deleteAvailabilityRequestFromList()[pri:0, instance:function.A_testClassDelete@595b007d]]]]>
+                <![CDATA[[TestResult name=verifyAllApiAlarmsCretaed status=SUCCESS method=A_testClassCreate.verifyAllApiAlarmsCretaed()[pri:0, instance:function.A_testClassCreate@47eaca72]]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backToHomePage2 -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassDelete@595b007d]" started-at="2026-09-30T19:04:23 IST" name="backToHomePage" finished-at="2026-09-30T19:04:28 IST" duration-ms="4931" status="PASS">
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@47eaca72]" started-at="2026-10-03T16:10:45 IST" name="backToHomePage" finished-at="2026-10-03T16:10:46 IST" duration-ms="1362" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backToHomePage -->
-        <test-method signature="deleteAvailabilityRequestFromHistory()[pri:0, instance:function.A_testClassDelete@595b007d]" started-at="2026-09-30T19:04:28 IST" name="deleteAvailabilityRequestFromHistory" finished-at="2026-09-30T19:06:56 IST" duration-ms="148623" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"(//i[@class="fa fa-trash-o"])[1]"}
-  (Session info: chrome=154.0.8037.58)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.4.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [865605f24a3d16bbae7732fc9370eccf, findElement {using=xpath, value=(//i[@class="fa fa-trash-o"])[1]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 154.0.8037.58, chrome: {chromedriverVersion: 154.0.8037.92 (334b65d254cc..., userDataDir: C:\Users\Bhupesh\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54503}, goog:processID: 9568, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54503/devtoo..., se:cdpVersion: 154.0.8037.58, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 865605f24a3d16bbae7732fc9370eccf]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//i[@class="fa fa-trash-o"])[1]"}
-  (Session info: chrome=154.0.8037.58)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.4.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [865605f24a3d16bbae7732fc9370eccf, findElement {using=xpath, value=(//i[@class="fa fa-trash-o"])[1]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 154.0.8037.58, chrome: {chromedriverVersion: 154.0.8037.92 (334b65d254cc..., userDataDir: C:\Users\Bhupesh\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54503}, goog:processID: 9568, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54503/devtoo..., se:cdpVersion: 154.0.8037.58, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 865605f24a3d16bbae7732fc9370eccf
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy22.click(Unknown Source)
-at function.S_AvailabilityRequest.deleteAvailabilityRequestFromHistory(S_AvailabilityRequest.java:689)
-at function.A_testClassDelete.deleteAvailabilityRequestFromHistory(A_testClassDelete.java:118)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method signature="checkAlarmDisplayedOnMonitors()[pri:0, instance:function.A_testClassCreate@47eaca72]" started-at="2026-10-03T16:10:46 IST" name="checkAlarmDisplayedOnMonitors" finished-at="2026-10-03T16:13:06 IST" duration-ms="140173" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[ ]]>
-            </line>
-            <line>
-              <![CDATA[The process of delete Availability Request from History is started.]]>
+              <![CDATA[[32m✔ [0m[32m✔ [0mThe process of monitor login is complete.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- deleteAvailabilityRequestFromHistory -->
-        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassDelete@595b007d]" started-at="2026-09-30T19:06:56 IST" name="backToHomePage2" finished-at="2026-09-30T19:06:56 IST" duration-ms="91" status="FAIL">
+        </test-method> <!-- checkAlarmDisplayedOnMonitors -->
+        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassCreate@47eaca72]" started-at="2026-10-03T16:13:06 IST" name="backToHomePage2" finished-at="2026-10-03T16:13:20 IST" duration-ms="13526" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=deleteAvailabilityRequestFromHistory status=FAILURE method=A_testClassDelete.deleteAvailabilityRequestFromHistory()[pri:0, instance:function.A_testClassDelete@595b007d]]]]>
+                <![CDATA[[TestResult name=checkAlarmDisplayedOnMonitors status=SUCCESS method=A_testClassCreate.checkAlarmDisplayedOnMonitors()[pri:0, instance:function.A_testClassCreate@47eaca72] output=[32m✔ [0m[32m✔ [0mThe process of monitor login is complete.]]]>
               </value>
             </param>
           </params>
-          <exception class="java.io.FileNotFoundException">
-            <message>
-              <![CDATA[E:\Automation _lapy\MasterAutomationWorkSpcae\screenshots\null_null_deleteAvailabilityRequestFromHistory.jpg (The system cannot find the path specified)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.io.FileNotFoundException: E:\Automation _lapy\MasterAutomationWorkSpcae\screenshots\null_null_deleteAvailabilityRequestFromHistory.jpg (The system cannot find the path specified)
-at java.base/java.io.FileOutputStream.open0(Native Method)
-at java.base/java.io.FileOutputStream.open(FileOutputStream.java:255)
-at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:210)
-at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:171)
-at org.openqa.selenium.io.FileHandler.copyFile(FileHandler.java:131)
-at org.openqa.selenium.io.FileHandler.copy(FileHandler.java:110)
-at function.b_baseClass.takeScreenshot(b_baseClass.java:498)
-at function.A_testClassDelete.backToHomePage2(A_testClassDelete.java:443)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.io.FileNotFoundException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backToHomePage2 -->
-        <test-method is-config="true" signature="logOut()[pri:0, instance:function.A_testClassDelete@595b007d]" started-at="2026-09-30T19:06:56 IST" name="logOut" finished-at="2026-09-30T19:06:56 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="logOut()[pri:0, instance:function.A_testClassCreate@47eaca72]" started-at="2026-10-03T16:13:20 IST" name="logOut" finished-at="2026-10-03T16:13:23 IST" duration-ms="3696" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[Logout sucessfully.]]>
+            </line>
+            <line>
+              <![CDATA[ ]]>
+            </line>
           </reporter-output>
         </test-method> <!-- logOut -->
-        <test-method is-config="true" signature="AfterTest()[pri:0, instance:function.A_testClassDelete@595b007d]" started-at="2026-09-30T19:06:56 IST" name="AfterTest" finished-at="2026-09-30T19:06:56 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="AfterTest()[pri:0, instance:function.A_testClassCreate@47eaca72]" started-at="2026-10-03T16:13:23 IST" name="AfterTest" finished-at="2026-10-03T16:13:23 IST" duration-ms="0" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[Refresh the URL before successfully closing the browser.]]>
+            </line>
           </reporter-output>
         </test-method> <!-- AfterTest -->
-        <test-method is-config="true" signature="AfterSute()[pri:0, instance:function.A_testClassDelete@595b007d]" started-at="2026-09-30T19:06:56 IST" name="AfterSute" finished-at="2026-09-30T19:06:56 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="AfterSute()[pri:0, instance:function.A_testClassCreate@47eaca72]" started-at="2026-10-03T16:13:23 IST" name="AfterSute" finished-at="2026-10-03T16:13:24 IST" duration-ms="324" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[Browser close sucessfully.]]>
+            </line>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+            <line>
+              <![CDATA[Good to see you again.]]>
+            </line>
           </reporter-output>
         </test-method> <!-- AfterSute -->
-      </class> <!-- function.A_testClassDelete -->
+      </class> <!-- function.A_testClassCreate -->
     </test> <!-- Test -->
-  </suite> <!-- delete -->
+  </suite> <!-- Suite -->
 </testng-results>

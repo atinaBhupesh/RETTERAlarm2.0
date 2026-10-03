@@ -10,6 +10,7 @@ import java.io.FileOutputStream;
 import java.time.Duration;
 import java.util.List;
 
+import org.apache.commons.collections4.bag.SynchronizedSortedBag;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -412,7 +413,7 @@ public class F_manualTestAlarm extends b_baseClass {
 	@FindBy(xpath = "//span[text()=\"Generate Alarm\"]")
 	private WebElement generateAlarm;
 
-	@FindBy(xpath = "//div[@_ngcontent-ng-c2814457879 and contains(text(),\"20\")]")
+	@FindBy(xpath = "((//span[@class=\"dx-datagrid-search-text\"]))[1]")
 	private List<WebElement> getDate;
 	@FindBy(xpath = "//div[@_ngcontent-ng-c2814457879 and contains(text(),\"20\")]")
 	private WebElement getDate1;
@@ -437,9 +438,10 @@ public class F_manualTestAlarm extends b_baseClass {
 	private WebElement yesClose;
 	@FindBy(xpath = "//span[text()=\"Yes\"]")
 	private WebElement yes;
-	
-		// @FindBy(xpath="")private WebElement ;
-	// @FindBy(xpath="")private WebElement ;
+
+	@FindBy(xpath = "(//span[@class=\"alarm-title-text\"])[1]")
+	private WebElement createdAlarmKeyword;
+	 @FindBy(xpath="//input[@placeholder=\"Alarm Search...\"]")private WebElement alarmSearchField;
 	// @FindBy(xpath="")private WebElement ;
 	// @FindBy(xpath="")private WebElement ;
 	// @FindBy(xpath="")private WebElement ;
@@ -458,15 +460,6 @@ public class F_manualTestAlarm extends b_baseClass {
 		PageFactory.initElements(driver, this);
 	}
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
 //	public void verifyAllApiAlarmsCretaed(WebDriver driver, String gTodaysDate, String germanyTodaysDate1,
 //			String ApiAlarm01, String ApiAlarm02, String ApiAlarm03, String ApiAlarm04, String ApiAlarm05,
 //			String ApiAlarm06, String ApiAlarm07, String ApiAlarm08, String ApiAlarm09, String ApiAlarm10,
@@ -755,8 +748,6 @@ public class F_manualTestAlarm extends b_baseClass {
 		System.out.println(GREEN + title);
 	}
 
-	
-
 	public void testAlarm_Recursive_Monthly_DateyWise_Attribute(WebDriver driver, String st01N, String gTodaysDate,
 			String germanyTimeAfter15MinHH, String germanyTimeAfter15MinMM, String st01V1, String st01V2,
 			String germanyTodaysDate2, String dayName, String st01A1, String filePath) throws Throwable {
@@ -1016,7 +1007,7 @@ public class F_manualTestAlarm extends b_baseClass {
 		Assert.assertTrue(title.contains(firtsTestAlarm1), RED + "Alarm not added.");
 
 		System.out.println(GREEN + title);
-		
+
 		FileInputStream in = new FileInputStream(filePath);
 
 		XSSFWorkbook wb = new XSSFWorkbook(in);
@@ -1025,7 +1016,7 @@ public class F_manualTestAlarm extends b_baseClass {
 		Row row = sheet.getRow(76);
 
 		if (row == null) {
-		    row = sheet.createRow(76);
+			row = sheet.createRow(76);
 		}
 
 		row.createCell(0).setCellValue("testAlarm_Recursive_Monthly_DateyWise_Attribute");
@@ -1301,11 +1292,7 @@ public class F_manualTestAlarm extends b_baseClass {
 		Assert.assertTrue(title.contains(firtsTestAlarm1), RED + "Alarm not added.");
 
 		System.out.println(GREEN + title);
-		
-		
-		
-		
-		
+
 		FileInputStream in = new FileInputStream(filePath);
 
 		XSSFWorkbook wb = new XSSFWorkbook(in);
@@ -1314,7 +1301,7 @@ public class F_manualTestAlarm extends b_baseClass {
 		Row row = sheet.getRow(75);
 
 		if (row == null) {
-		    row = sheet.createRow(75);
+			row = sheet.createRow(75);
 		}
 
 		row.createCell(0).setCellValue("testAlarm_Recursive_Monthly_DayWise_Attribute");
@@ -1619,8 +1606,7 @@ public class F_manualTestAlarm extends b_baseClass {
 		Assert.assertTrue(title.contains(firtsTestAlarm1), RED + "Alarm not added.");
 
 		System.out.println(GREEN + title);
-		
-		
+
 		FileInputStream in = new FileInputStream(filePath);
 
 		XSSFWorkbook wb = new XSSFWorkbook(in);
@@ -1629,7 +1615,7 @@ public class F_manualTestAlarm extends b_baseClass {
 		Row row = sheet.getRow(74);
 
 		if (row == null) {
-		    row = sheet.createRow(74);
+			row = sheet.createRow(74);
 		}
 
 		row.createCell(0).setCellValue("testAlarm_recursiv_weekly_users");
@@ -1859,18 +1845,17 @@ public class F_manualTestAlarm extends b_baseClass {
 		Assert.assertTrue(title.contains(firtsTestAlarm1), RED + "Alarm not added.");
 
 		System.out.println(GREEN + title);
-		
-		
+
 		FileInputStream in = new FileInputStream(filePath);
 		XSSFWorkbook wb = new XSSFWorkbook(in);
 		XSSFSheet sheet = wb.getSheetAt(0);
-		
+
 		Row row = sheet.createRow(73);//
-		
+
 		if (row == null) {
-		    row = sheet.createRow(73);
+			row = sheet.createRow(73);
 		}
-		
+
 		row.createCell(0).setCellValue("testAlarm_recursiv_daily_Resource");
 		row.createCell(1).setCellValue(title);
 
@@ -1880,10 +1865,6 @@ public class F_manualTestAlarm extends b_baseClass {
 		wb.write(out);
 		out.close();
 		wb.close();
-		
-		
-		
-		
 
 	}
 
@@ -2077,8 +2058,8 @@ public class F_manualTestAlarm extends b_baseClass {
 	}
 
 	public void testAlarm_OneTime_Attribute(WebDriver driver, String st01N, String gTodaysDate,
-			String germanyTimeAfter5MinHH, String germanyTimeAfter5MinMM, String st01V1, String st01V2, String st01A1, String filePath)
-			throws Throwable {
+			String germanyTimeAfter5MinHH, String germanyTimeAfter5MinMM, String st01V1, String st01V2, String st01A1,
+			String filePath) throws Throwable {
 		Actions act = new Actions(driver);
 		Robot robot = new Robot();
 		mangeTestAlarm.click();
@@ -2276,7 +2257,7 @@ public class F_manualTestAlarm extends b_baseClass {
 		Assert.assertTrue(title.contains(firtsTestAlarm1), RED + "Alarm not added.");
 
 		System.out.println(GREEN + title);
-		
+
 		FileInputStream in = new FileInputStream(filePath);
 
 		XSSFWorkbook wb = new XSSFWorkbook(in);
@@ -2285,7 +2266,7 @@ public class F_manualTestAlarm extends b_baseClass {
 		Row row = sheet.createRow(72);
 
 		row.createCell(0).setCellValue("testAlarm_OneTime_Attribute"); // Column A
-		row.createCell(1).setCellValue(title);                         // Column B
+		row.createCell(1).setCellValue(title); // Column B
 
 		in.close();
 
@@ -4277,7 +4258,7 @@ public class F_manualTestAlarm extends b_baseClass {
 	}
 
 	public void manualAlarmByOldEsclationTemplateFromSt02ToSt01(WebDriver driver, String st2Esc1t1,
-			String TemplateAlarmTitle) throws Throwable {
+			String TemplateAlarmTitle, String filePath) throws Throwable {
 
 		Actions act = new Actions(driver);
 
@@ -4313,8 +4294,10 @@ public class F_manualTestAlarm extends b_baseClass {
 //		System.out.println(expectedTitle);
 
 		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not created.");
-
+		
 		System.out.println(GREEN + title);
+	
+		
 
 	}
 
@@ -4335,14 +4318,14 @@ public class F_manualTestAlarm extends b_baseClass {
 
 		// Alarm details
 		alarmKeyword.click();
-		String title = "BG-C MA by attribute for extend-" + gTodaysDate + "_" + gtimeHHMMSS;
+		String title = "BG-C MA for Multi sation by attribute for extend-" + gTodaysDate + "_" + gtimeHHMMSS;
 		act.sendKeys(title).perform();
 
 		alarmImage.click();
-		act.sendKeys("Image-manual alarm by attribute for extend.").perform();
+		act.sendKeys("Image-"+title).perform();
 
 		descriptionField.click();
-		act.sendKeys("checking manual alarm created by attribute for extend.").perform();
+		act.sendKeys("checking "+title).perform();
 
 		// Reporter details
 		reporter.click();
@@ -4567,6 +4550,18 @@ public class F_manualTestAlarm extends b_baseClass {
 		default:
 			System.out.println(RED + "Invalid branch");
 		}
+		
+		
+		
+		
+	
+
+	
+		
+		
+		
+		
+		
 
 	}
 
@@ -4748,11 +4743,32 @@ public class F_manualTestAlarm extends b_baseClass {
 		// Refresh
 		refreshFilter.click();
 		Thread.sleep(2000);
+		
+		FileInputStream in = new FileInputStream(filePath);
+
+		XSSFWorkbook wb = new XSSFWorkbook(in);
+		XSSFSheet sheet = wb.getSheetAt(0);
+
+		Row row = sheet.createRow(99);
+
+		row.createCell(0).setCellValue("manualaByAttributeExtend1To01StEscResourceFrom02"); // Column A
+		row.createCell(1).setCellValue(title); // Column B
+
+		in.close();
+
+		FileOutputStream out = new FileOutputStream(filePath);
+		wb.write(out);
+
+		out.close();
+		wb.close();
+		
+		
+		
 
 	}
 
 	public void manualAlarmByEscResourceMS(WebDriver driver, String st02N, String gTodaysDate, String gtimeHHMMSS,
-			String st02REsc) throws Throwable {
+			String st02REsc, String filePath) throws Throwable {
 
 		Actions act = new Actions(driver);
 
@@ -4769,14 +4785,14 @@ public class F_manualTestAlarm extends b_baseClass {
 
 		// Alarm details
 		alarmKeyword.click();
-		String title = "BG-C MA by Esc resource MS-" + gTodaysDate + "_" + gtimeHHMMSS;
+		String title = "BG-C MA for Multi station by Esc resource MS-" + gTodaysDate + "_" + gtimeHHMMSS;
 		act.sendKeys(title).perform();
 
 		alarmImage.click();
-		act.sendKeys("Image-manual alarm by escalation resource MS").perform();
+		act.sendKeys("Image-"+title).perform();
 
 		descriptionField.click();
-		act.sendKeys("Checking manual alarm by escalation resource MS").perform();
+		act.sendKeys("Checking "+title).perform();
 
 		// Priority
 		priority.click();
@@ -4869,13 +4885,33 @@ public class F_manualTestAlarm extends b_baseClass {
 		title = title.replace("...", "").trim();
 
 		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not added.");
+		
+		
+		
+		FileInputStream in = new FileInputStream(filePath);
+
+		XSSFWorkbook wb = new XSSFWorkbook(in);
+		XSSFSheet sheet = wb.getSheetAt(0);
+
+		Row row = sheet.createRow(98);
+
+		row.createCell(0).setCellValue("manualAlarmByEscResourceMs"); // Column A
+		row.createCell(1).setCellValue(title); // Column B
+
+		in.close();
+
+		FileOutputStream out = new FileOutputStream(filePath);
+		wb.write(out);
+
+		out.close();
+		wb.close();
 
 		System.out.println(GREEN + title);
 
 	}
 
 	public void manualAlarmByEscResourceSingleStation(WebDriver driver, String st01N, String gTodaysDate,
-			String gtimeHHMMSS, String st01REsc) throws Throwable {
+			String gtimeHHMMSS, String st01REsc, String filePath) throws Throwable {
 
 		Actions act = new Actions(driver);
 
@@ -4893,15 +4929,15 @@ public class F_manualTestAlarm extends b_baseClass {
 
 		// Alarm details
 		alarmKeyword.click();
-		String title = "BG-MA by Esc resource SS-" + gTodaysDate + "_" + gtimeHHMMSS;
+		String title = "BG-MA Signle Station by Esc resource SS-" + gTodaysDate + "_" + gtimeHHMMSS;
 
 		act.sendKeys(title).perform();
 
 		alarmImage.click();
-		act.sendKeys("Image-manual alarm by escalation resource SS").perform();
+		act.sendKeys("Image-"+title).perform();
 
 		descriptionField.click();
-		act.sendKeys("Checking manual alarm by escalation resource SS").perform();
+		act.sendKeys("Checking "+title).perform();
 
 		Thread.sleep(2000);
 
@@ -4994,6 +5030,25 @@ public class F_manualTestAlarm extends b_baseClass {
 		title = title.replace("...", "").trim();
 
 		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not added.");
+		
+		FileInputStream in = new FileInputStream(filePath);
+
+		XSSFWorkbook wb = new XSSFWorkbook(in);
+		XSSFSheet sheet = wb.getSheetAt(0);
+
+		Row row = sheet.createRow(97);
+
+		row.createCell(0).setCellValue("manualAlarmByEscResourceSingleStation"); // Column A
+		row.createCell(1).setCellValue(title); // Column B
+
+		in.close();
+
+		FileOutputStream out = new FileOutputStream(filePath);
+		wb.write(out);
+
+		out.close();
+		wb.close();
+		
 
 		System.out.println(GREEN + title);
 
@@ -5129,7 +5184,7 @@ public class F_manualTestAlarm extends b_baseClass {
 	}
 
 	public void manualaByAttributeMSLP(WebDriver driver, String st01N, String st02N, String gTodaysDate,
-			String gtimeHHMMSS, String st01V1, String st01V2, String st02V1, String st01A1, String st02A1)
+			String gtimeHHMMSS, String st01V1, String st01V2, String st02V1, String st01A1, String st02A1, String filePath)
 			throws Throwable {
 
 		Actions act = new Actions(driver);
@@ -5153,14 +5208,14 @@ public class F_manualTestAlarm extends b_baseClass {
 
 		// Alarm details
 		alarmKeyword.click();
-		String title = "BG-MA by attribute-" + gTodaysDate + "_" + gtimeHHMMSS;
+		String title = "BG-MA for Multi Station by attribute-" + gTodaysDate + "_" + gtimeHHMMSS;
 		act.sendKeys(title).perform();
 
 		alarmImage.click();
-		act.sendKeys("Image-manual alarm by checking.").perform();
+		act.sendKeys("Image-"+title).perform();
 
 		descriptionField.click();
-		act.sendKeys("BG-manual alarm by attribute checking.").perform();
+		act.sendKeys("Checking "+title).perform();
 
 		// Priority
 		priority.click();
@@ -5306,12 +5361,36 @@ public class F_manualTestAlarm extends b_baseClass {
 
 		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not added.");
 
+	
+		
+		
+		
+		FileInputStream in = new FileInputStream(filePath);
+
+		XSSFWorkbook wb = new XSSFWorkbook(in);
+		XSSFSheet sheet = wb.getSheetAt(0);
+
+		Row row = sheet.createRow(92);
+
+		row.createCell(0).setCellValue("manualaByAttributeMSLP"); // Column A
+		row.createCell(1).setCellValue(title); // Column B
+
+		in.close();
+
+		FileOutputStream out = new FileOutputStream(filePath);
+		wb.write(out);
+
+		out.close();
+		wb.close();
+		
 		System.out.println(GREEN + title);
+		
+		
 
 	}
 
 	public void manualaByAttributeSingleStation(WebDriver driver, String st01N, String gTodaysDate, String gtimeHHMMSS,
-			String st01V1, String st01V2, String st01A1) throws Throwable {
+			String st01V1, String st01V2, String st01A1, String filePath) throws Throwable {
 
 		Actions act = new Actions(driver);
 		Robot robot = new Robot();
@@ -5460,13 +5539,39 @@ public class F_manualTestAlarm extends b_baseClass {
 		title = title.replace("...", "").trim();
 
 		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not added.");
+		
+		
+		
+		FileInputStream in = new FileInputStream(filePath);
+
+		XSSFWorkbook wb = new XSSFWorkbook(in);
+		XSSFSheet sheet = wb.getSheetAt(0);
+
+		Row row = sheet.createRow(93);
+
+		row.createCell(0).setCellValue("manualaByAttributeSingleStation"); // Column A
+		row.createCell(1).setCellValue(title); // Column B
+
+		in.close();
+
+		FileOutputStream out = new FileOutputStream(filePath);
+		wb.write(out);
+
+		out.close();
+		wb.close();
+		
+		
+		
+		
+		
+		
 
 		System.out.println(GREEN + title);
 
 	}
 
 	public void manualAlarmByResourceMsHP(WebDriver driver, String st01N, String st02N, String gTodaysDate,
-			String gtimeHHMMSS, String st01R1, String st01R2) throws Throwable {
+			String gtimeHHMMSS, String st01R1, String st01R2, String filePath) throws Throwable {
 
 		Actions act = new Actions(driver);
 		Robot robot = new Robot();
@@ -5490,14 +5595,14 @@ public class F_manualTestAlarm extends b_baseClass {
 
 		// Alarm details
 		alarmKeyword.click();
-		String title = "BG-MA by resource-" + gTodaysDate + "_" + gtimeHHMMSS;
+		String title = "BG-MA High priority for Multi Station by resource-" + gTodaysDate + "_" + gtimeHHMMSS;
 		act.sendKeys(title).perform();
 
 		alarmImage.click();
-		act.sendKeys("Image-manual alarm by resource checking.").perform();
+		act.sendKeys("Image-"+title).perform();
 
 		descriptionField.click();
-		act.sendKeys("BG-manual alarm by resource checking.").perform();
+		act.sendKeys("Checking "+title).perform();
 
 		// Reporter details
 		reporter.click();
@@ -5588,13 +5693,37 @@ public class F_manualTestAlarm extends b_baseClass {
 		title = title.replace("...", "").trim();
 
 		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not added.");
+		
+		
+		FileInputStream in = new FileInputStream(filePath);
+
+		XSSFWorkbook wb = new XSSFWorkbook(in);
+		XSSFSheet sheet = wb.getSheetAt(0);
+
+		Row row = sheet.createRow(94);
+
+		row.createCell(0).setCellValue("manualAlarmByResourceMsHP"); // Column A
+		row.createCell(1).setCellValue(title); // Column B
+
+		in.close();
+
+		FileOutputStream out = new FileOutputStream(filePath);
+		wb.write(out);
+
+		out.close();
+		wb.close();
+		
+		
+		
+		
+		
 
 		System.out.println(GREEN + title);
 
 	}
 
 	public void manualAlarmByResourceMsLP(WebDriver driver, String st01N, String st02N, String gTodaysDate,
-			String gtimeHHMMSS, String st01R1, String st01R2) throws Throwable {
+			String gtimeHHMMSS, String st01R1, String st01R2,String filePath) throws Throwable {
 
 		Actions act = new Actions(driver);
 		Robot robot = new Robot();
@@ -5618,14 +5747,14 @@ public class F_manualTestAlarm extends b_baseClass {
 
 		// Alarm details
 		alarmKeyword.click();
-		String title = "BG-MA by resource-" + gTodaysDate + "_" + gtimeHHMMSS;
+		String title = "BG-MA Low Priority for Multi Station by resource-" + gTodaysDate + "_" + gtimeHHMMSS;
 		act.sendKeys(title).perform();
 
 		alarmImage.click();
-		act.sendKeys("Image-manual alarm by resource checking.").perform();
+		act.sendKeys("Image-"+title).perform();
 
 		descriptionField.click();
-		act.sendKeys("BG-manual alarm by resource checking.").perform();
+		act.sendKeys("Checking "+title).perform();
 
 		setPriority.click();
 		Thread.sleep(500);
@@ -5723,6 +5852,29 @@ public class F_manualTestAlarm extends b_baseClass {
 		title = title.replace("...", "").trim();
 
 		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not added.");
+		
+		FileInputStream in = new FileInputStream(filePath);
+
+		XSSFWorkbook wb = new XSSFWorkbook(in);
+		XSSFSheet sheet = wb.getSheetAt(0);
+
+		Row row = sheet.createRow(95);
+
+		row.createCell(0).setCellValue("manualAlarmByResourceMsLP"); // Column A
+		row.createCell(1).setCellValue(title); // Column B
+
+		in.close();
+
+		FileOutputStream out = new FileOutputStream(filePath);
+		wb.write(out);
+
+		out.close();
+		wb.close();
+		
+		
+		
+		
+		
 
 		System.out.println(GREEN + title);
 
@@ -5730,7 +5882,7 @@ public class F_manualTestAlarm extends b_baseClass {
 
 	public void manualAlarmByUersMs(WebDriver driver, String st01N, String st02N, String gTodaysDate,
 			String gtimeHHMMSS, String st01V1, String st01V2, String st02V1, String st01FF1, String st01FF2,
-			String st02FF1) throws Throwable {
+			String st02FF1, String filePath) throws Throwable {
 
 		// -----------------------
 		// CREATE MANUAL ALARM (FIREFIGHTER)
@@ -5756,14 +5908,14 @@ public class F_manualTestAlarm extends b_baseClass {
 
 		// Alarm details
 		alarmKeyword.click();
-		String title = "BG-MA by firefighter-" + gTodaysDate + "_" + gtimeHHMMSS;
+		String title = "BG-MA Multi Station by firefighter-" + gTodaysDate + "_" + gtimeHHMMSS;
 		act.sendKeys(title).perform();
 
 		alarmImage.click();
-		act.sendKeys("Checking email, call and sms for alarm. ").perform();
+		act.sendKeys("Image-"+title).perform();
 
 		descriptionField.click();
-		act.sendKeys("BG-manual alarm by firefighter checking.").perform();
+		act.sendKeys("Checking "+title).perform();
 
 		// Reporter details
 		reporter.click();
@@ -5926,6 +6078,30 @@ public class F_manualTestAlarm extends b_baseClass {
 		title = title.replace("...", "").trim();
 
 		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not added.");
+		
+		
+		FileInputStream in = new FileInputStream(filePath);
+
+		XSSFWorkbook wb = new XSSFWorkbook(in);
+		XSSFSheet sheet = wb.getSheetAt(0);
+
+		Row row = sheet.createRow(96);
+
+		row.createCell(0).setCellValue("manualAlarmByUersMs"); // Column A
+		row.createCell(1).setCellValue(title); // Column B
+
+		in.close();
+
+		FileOutputStream out = new FileOutputStream(filePath);
+		wb.write(out);
+
+		out.close();
+		wb.close();
+		
+		
+		
+		
+		
 
 		System.out.println(GREEN + title);
 
@@ -8052,77 +8228,132 @@ public class F_manualTestAlarm extends b_baseClass {
 
 	}
 
+	public void verifyAllAlarmsCretaed(WebDriver driver, String todaysDate, String todaysDate1, List<String> alarms,
+			String filePath) throws Throwable {
 
+		Actions act = new Actions(driver);
 
+		for (int a = 0; a < alarms.size(); a++) {
 
+			String title = alarms.get(a);
 
+			System.out.println("Searching alarm: " + title);
 
+			refreshFilter.click();
+//
+//			titleSearch.click();
+//
+//			titleSearchField.click();
+//			Thread.sleep(500);
+//
+//			act.sendKeys(title).perform();
+//
+//			titleSearchFieldOk.click();
+//			Thread.sleep(1000);
 
+			alarmSearchField.click();
+			Thread.sleep(1000);
+			act.sendKeys(title).perform();
+			
+			Thread.sleep(5000);
+			
+			
+			int count = getDate.size();
 
+			if (count == 0) {
 
+				System.out.println(RED + "Alarm " + title + " not available.");
 
-	public void verifyAllAlarmsCretaed(WebDriver driver, String todaysDate,
-	        String todaysDate1, List<String> alarms) throws Throwable {
-		
-		Actions act = new Actions (driver);
+			} else {
 
-	    for (int a = 0; a < alarms.size(); a++) {
+				String alarmDate1 = getDate1.getText();
 
-	        String title = alarms.get(a);
+				if (todaysDate.equals(alarmDate1) || todaysDate1.equals(alarmDate1)) {
+//
+//	            	System.out.println(createdAlarmKeyword.getText());
 
-	        System.out.println("Searching alarm: " + title);
+					FileInputStream in = new FileInputStream(filePath);
+					int rowCount = 0;
+					
+					switch (title) {
+					case "BG-API A-v1 St 01 HP":
+						break;
+					case "BG-C A-v1 MS":
+						rowCount= 81;
+						break;
+						
+					case "BG-NEW Api MS HP":
+						rowCount= 82;
+						break;
+					case "BG-NEW API MS LP":
+						break;
+					case "BG-New APi Alarm Updated":
+						rowCount= 83;
+						break;
+					case "BG-NEW Api Email to St 01 from St 02":
+						rowCount= 84;
+						break;
+						
+					case "BG-NEW API Vehicle user":
+						rowCount= 85;
+						break;
+					case "BG-C New APi st 01 esc":
+						rowCount= 86;
+						break;
+					case "BG-New Api Esc 02 to 01 LP":
+						rowCount= 87;
+						break;
+					case "BG-New APi ex st 01 from 02 HP":
+						rowCount= 88;
+						break;
+					case "BG-C New APi ex st 01 from 02 LP":
+						rowCount= 89;
+						break;
+						
+					case "New DME Alarm-New API HP":
+						rowCount= 90;
+						break;
+						case "BG-DME Alarm-Old API HP":
+							break;
+						case "BG-DME Alarm-New API LP":
+							rowCount= 91;
+							break;
+						
 
-	        refreshFilter.click();
-	        
-	        titleSearch.click();
+					}
+					
+					XSSFWorkbook wb = new XSSFWorkbook(in);
+					XSSFSheet sheet = wb.getSheetAt(0);
 
-	        titleSearchField.click();
-	        Thread.sleep(500);
+					Row row = sheet.getRow(rowCount);
 
-	        act.sendKeys(title).perform();
+					if (row == null) {
+						row = sheet.createRow(rowCount);
+					}
 
+					row.createCell(0).setCellValue(title);
+					row.createCell(1).setCellValue(createdAlarmKeyword.getText());
+					
+					
 
-	        titleSearchFieldOk.click();
-	        Thread.sleep(1000);
+					in.close();
 
-	        int count = getDate.size();
+					FileOutputStream out = new FileOutputStream(filePath);
+					wb.write(out);
 
-	       
+					out.close();
+					wb.close();
 
-	        if (count == 0) {
+					System.out.println(
 
-	            System.out.println(RED + "Alarm " + title + " not available.");
+							GREEN + "Alarm " + title + " created successfully.");
 
-	        } else {
+				} else {
 
-	            String alarmDate1 = getDate1.getText();
-
-	            if (todaysDate.equals(alarmDate1)
-	                    || todaysDate1.equals(alarmDate1)) {
-
-	                System.out.println(
-	                    GREEN + "Alarm " + title + " created successfully."
-	                );
-
-	            } else {
-
-	                System.out.println(
-	                    RED + "Alarm " + title + " not created successfully."
-	                );
-	            }
-	        }
-	    }
+					System.out.println(RED + "Alarm " + title + " not created successfully.");
+				}
+			}
+		}
 	}
-
-
-
-
-
-
-
-
-
-
-	
 
 }

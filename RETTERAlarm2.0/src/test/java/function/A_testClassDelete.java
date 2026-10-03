@@ -99,10 +99,10 @@ public class A_testClassDelete extends b_baseClass {
 
 	{
 		Reporter.log(" ", true);
-		Reporter.log("The process of delete Check list is started.", true);
+		Reporter.log("The process of deleting the Check list has started.", true);
 		checkL.deleteCheckList( driver);
 
-		Reporter.log(GREEN + GREEN + "The process of delete  Check list is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of deleting the Check list is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
 
@@ -114,10 +114,10 @@ public class A_testClassDelete extends b_baseClass {
 
 	{
 		Reporter.log(" ", true);
-		Reporter.log("The process of delete Availability Request from History is started.", true);
+		Reporter.log("The process of deleting the Availability Request from History has started.", true);
 		arequest.deleteAvailabilityRequestFromHistory( driver);
 
-		Reporter.log(GREEN + GREEN + "The process of delete Availability Request from History is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of deleting the Availability Request from History is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
 
@@ -129,10 +129,10 @@ public class A_testClassDelete extends b_baseClass {
 
 	{
 		Reporter.log(" ", true);
-		Reporter.log("The process of delete Availability Request from List is started.", true);
+		Reporter.log("The process of deleting the Availability Request from List has started.", true);
 		arequest.deleteAvailabilityRequestFromList( driver);
 
-		Reporter.log(GREEN + GREEN + "The process of delete Availability Request from List is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of deleting the Availability Request from List is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
 
@@ -144,10 +144,10 @@ public class A_testClassDelete extends b_baseClass {
 
 	{
 		Reporter.log(" ", true);
-		Reporter.log("The process of delete monitors is started.", true);
+		Reporter.log("The process of deleting monitors has started.", true);
 		mo.deleteMonitorUsers( driver,  branchName);
 
-		Reporter.log(GREEN + GREEN + "The process of delete monitors is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of deleting monitors is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
 
@@ -158,10 +158,10 @@ public class A_testClassDelete extends b_baseClass {
 
 	{
 		Reporter.log(" ", true);
-		Reporter.log("The process of deactive alarm is started.", true);
+		Reporter.log("The process of deactivating all active alarms has started.", true);
 		ma.commonForManualAlarm(driver,  deptN,  branchName);
 		ma.deactiveAllActiveAlarms(driver);
-		Reporter.log("The process of deactive alarm is complete.", true);
+		Reporter.log("The process of deactivating all active alarms is complete.", true);
 
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
@@ -178,11 +178,11 @@ public class A_testClassDelete extends b_baseClass {
 
 	{
 		Reporter.log(" ", true);
-		Reporter.log("The process of delete stations is started.", true);
+		Reporter.log("The process of deleting stations has started.", true);
 		stn.commonForStation(driver, branchName);
 		stn.deleteStaions(driver);
 
-		Reporter.log(GREEN + GREEN + "The process of delete stations is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of deleting stations is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
 
@@ -200,11 +200,11 @@ public class A_testClassDelete extends b_baseClass {
 
 	{
 		Reporter.log(" ", true);
-		Reporter.log("The process of delete vehicle users  is started.", true);
+		Reporter.log("The process of deleting vehicle users has started.", true);
 		users.commonForVehicleUser(driver, branchName);
 		users.deleteVehicleUsers(driver);
 
-		Reporter.log(GREEN + GREEN + "The process of delete vehicle users is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of deleting vehicle users is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
 
@@ -215,11 +215,11 @@ public class A_testClassDelete extends b_baseClass {
 
 	{
 		Reporter.log(" ", true);
-		Reporter.log("The process of delete users is started.", true);
+		Reporter.log("The process of deleting users has started.", true);
 		users.commonForUser(driver, branchName);
 		users.deleteUsers(driver);
 
-		Reporter.log(GREEN + GREEN + "The process of delete users is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of deleting users is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
 
@@ -230,11 +230,11 @@ public class A_testClassDelete extends b_baseClass {
 
 	{
 		Reporter.log(" ", true);
-		Reporter.log("The process of delete chat groups is started.", true);
+		Reporter.log("The process of deleting chat groups has started.", true);
 		chatGroups.commonForChatGroup(driver, branchName);
 		chatGroups.deleteChatGroups(driver);
 
-		Reporter.log(GREEN + GREEN + "The process of delete chat groups is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of deleting chat groups is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
 
@@ -245,12 +245,12 @@ public class A_testClassDelete extends b_baseClass {
 
 	{
 		Reporter.log(" ", true);
-		Reporter.log("The process of delete event catogery is started.", true);
+		Reporter.log("The process of deleting the event category has started.", true);
 		ce.common_calendar(driver, branchName);
 		ce.deleteEventCatogery(driver, SearhWordForDelete);
 
 //		ma.backToOld();
-		Reporter.log(GREEN + GREEN + "The process of delete event catogery is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of deleting the event category is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
 
@@ -261,13 +261,13 @@ public class A_testClassDelete extends b_baseClass {
 
 	{
 		Reporter.log(" ", true);
-		Reporter.log("The process of delete information or event is started.", true);
+		Reporter.log("The process of deleting information or events has started.", true);
 
 		info.common_information(driver, branchName);
 		info.delete_infoEvent(driver, SearhWordForDelete);
 
 //		ma.backToOld();
-		Reporter.log(GREEN + GREEN + "The process of delete information or event is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of deleting information or events is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
 
@@ -278,12 +278,12 @@ public class A_testClassDelete extends b_baseClass {
 
 	{
 		Reporter.log(" ", true);
-		Reporter.log("The process of delete AlarmEscalation is started.", true);
+		Reporter.log("The process of deleting Alarm Escalation has started.", true);
 		ae.alarmEscaltionComman(driver, branchName);
 		ae.deleteAlarmEscalation(driver, SearhWordForDelete);
 
 //		ma.backToOld();
-		Reporter.log(GREEN + GREEN + "The process of delete AlarmEscalation is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of deleting Alarm Escalation is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
 
@@ -294,12 +294,12 @@ public class A_testClassDelete extends b_baseClass {
 
 	{
 		Reporter.log(" ", true);
-		Reporter.log("The process of delete alarm template is started.", true);
+		Reporter.log("The process of deleting the alarm template has started.", true);
 		at.commonAlarmTemplate(driver, branchName);
 		at.deleteAlarmTemplate(driver, SearhWordForDeleteTemplate);
 
 //		ma.backToOld();
-		Reporter.log(GREEN + GREEN + "The process of delete alarm template is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of deleting the alarm template is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
 
@@ -310,11 +310,11 @@ public class A_testClassDelete extends b_baseClass {
 
 	{
 		Reporter.log(" ", true);
-		Reporter.log("The process of delete calendar event-All is started.", true);
+		Reporter.log("The process of deleting all calendar events has started.", true);
 		ce.common_calendar(driver, branchName);
 		ce.deleteCalendarEventAll(driver);
 
-		Reporter.log(GREEN + GREEN + "The process of delete calendar event-All is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of deleting all calendar events is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
 
@@ -325,11 +325,11 @@ public class A_testClassDelete extends b_baseClass {
 
 	{
 		Reporter.log(" ", true);
-		Reporter.log("The process of delete calendar event is started.", true);
+		Reporter.log("The process of deleting the calendar event has started.", true);
 		ce.common_calendar(driver, branchName);
 		ce.deleteCalendarEvent(driver);
 
-		Reporter.log(GREEN + GREEN + "The process of delete calendar event is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of deleting the calendar event is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
 
@@ -340,12 +340,12 @@ public class A_testClassDelete extends b_baseClass {
 
 	{
 		Reporter.log(" ", true);
-		Reporter.log("The process of delete alarm loop is started.", true);
+		Reporter.log("The process of deleting the alarm loop has started.", true);
 		al.commonAlarmLoop(driver, branchName);
 		al.deleteAlarmLoop(driver, SearhWordForDelete);
 
 //		ma.backToOld();
-		Reporter.log(GREEN + GREEN + "The process of delete alarm loop is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of deleting the alarm loop is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
 
@@ -356,12 +356,12 @@ public class A_testClassDelete extends b_baseClass {
 
 	{
 		Reporter.log(" ", true);
-		Reporter.log("The process of delete alarm resource is started.", true);
+		Reporter.log("The process of deleting the alarm resource has started.", true);
 		ar.commonResource(driver, branchName);
 		ar.deleteResource(driver, SearhWordForDelete);
 
 //		ma.backToOld();
-		Reporter.log(GREEN + GREEN + "The process of delete alarm resource is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of deleting the alarm resource is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
 
@@ -374,13 +374,13 @@ public class A_testClassDelete extends b_baseClass {
 
 	{
 		Reporter.log(" ", true);
-		Reporter.log("The process of deactive Test alarms is started.", true);
+		Reporter.log("The process of deactivating Test alarms has started.", true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
 		ma.deactiveBgTestActiveAlarmsFromPlaningList ( driver);
 
 //		ma.backToOld();
 
-		Reporter.log(GREEN + GREEN + "The process of deactive Test alarms is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of deactivating Test alarms is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
 
@@ -391,13 +391,13 @@ public class A_testClassDelete extends b_baseClass {
 
 	{
 		Reporter.log(" ", true);
-		Reporter.log("The process of delete Test alarms is started.", true);
+		Reporter.log("The process of deleting Test alarms has started.", true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
 		ma.deleteTestAlarmFromPlaningList(driver);
 
 //		ma.backToOld();
 
-		Reporter.log(GREEN + GREEN + "The process of delete Test alarms is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of deleting Test alarms is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
 
@@ -408,11 +408,11 @@ public class A_testClassDelete extends b_baseClass {
 
 	{
 		Reporter.log(" ", true);
-		Reporter.log("The process of delete monthly test alarms is started.", true);
+		Reporter.log("The process of deleting monthly test alarms has started.", true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
 			ma.deleteBhupeshTestAlarmFromAlarmList(driver);
 
-		Reporter.log(GREEN + GREEN + "The process of delete monthly test alarms is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of deleting monthly test alarms is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
 
@@ -424,13 +424,13 @@ public class A_testClassDelete extends b_baseClass {
 
 	{
 		Reporter.log(" ", true);
-		Reporter.log("The process of delete alarms is started.", true);
+		Reporter.log("The process of deleting alarms has started.", true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
 		ma.deleteManualAlarm(driver, SearhWordForDelete);
 
 //		ma.backToOld();
 
-		Reporter.log(GREEN + GREEN + "The process of delete alarms is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of deleting alarms is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
 

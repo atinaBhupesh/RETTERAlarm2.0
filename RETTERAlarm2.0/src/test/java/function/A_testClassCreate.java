@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WindowType;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
@@ -41,6 +42,9 @@ public class A_testClassCreate extends b_baseClass {
 	R_FileSections fs;
 	S_AvailabilityRequest arequest;
 	T_checkList checkL;
+	U_MonitorLogIn mlogin;
+	
+	
 
 	String todaysDate;
 	String todaysDateG;
@@ -136,6 +140,7 @@ public class A_testClassCreate extends b_baseClass {
 		fs = new R_FileSections(driver);
 		arequest = new S_AvailabilityRequest(driver);
 		checkL = new T_checkList (driver);
+		mlogin = new U_MonitorLogIn(driver);
 
 	}
 
@@ -222,6 +227,43 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 	}
 	
+	@Test
+	public void checkAlarmDisplayedOnMonitors () throws Throwable {
+		
+		
+
+		List<String> createdAlarmTitles =Arrays.asList( 
+				BGCAv1MS,
+				BGNEWApiMSHP,
+				BGNewAPiAlarmUpdated,
+				BGNEWApiEmailtoSt01fromSt02,
+				BGNEWAPIVehicleuser,
+				BGCNewAPist01esc,
+				BGNewApiEsc02to01LP,
+				BGNewAPiexst01from02HP,
+				BGCNewAPiexst01from02LP,
+				NewDMEAlarmNewAPIHP,
+				BGDMEAlarmNewAPILP, 
+				
+				 manualaByAttributeMSLP,
+				 manualaByAttributeSingleStation,
+				 manualAlarmByResourceMsHP,
+				 manualAlarmByResourceMsLP,
+				 manualAlarmByUersMs,
+				 manualAlarmByEscResourceSingleStation,
+				 manualAlarmByEscResourceMs
+				
+			);
+		
+		mlogin.checkAlarmDisplayedOnMonitors( driver,branchName,St01M1 , createdAlarmTitles);
+		
+		
+
+	 	Reporter.log(GREEN + GREEN + "The process of monitor login is complete.", true);
+	 	
+
+		
+	}
 	
 	@Test
 	public void verifyingAllTestAlarmAfterCronRun () throws Throwable {
@@ -234,11 +276,11 @@ public class A_testClassCreate extends b_baseClass {
 			);
 	
 		Reporter.log(" ", true);
-		Reporter.log("The process of verify All Test Alarms Cretaed after cron run is started.", true);
+		Reporter.log("The process of verifying all test alarms created after cron run has started.", true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.verifyAllAlarmsCretaed(driver,  todaysDate, todaysDate1,  alarms);
+		ma.verifyAllAlarmsCretaed(driver,  todaysDate, todaysDate1,  alarms, filePath);
 
-		Reporter.log(GREEN + GREEN + "The process of verify All Test Alarms Cretaed after cron run is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of verifying all test alarms created after cron run is complete.", true);
 		Reporter.log(" ", true);
 	}
 	
@@ -249,10 +291,10 @@ public class A_testClassCreate extends b_baseClass {
 	
 		
 		Reporter.log(" ", true);
-		Reporter.log("The process of create Alarm check list is started.", true);
+		Reporter.log("The process of creating the Alarm check list has started.", true);
 		
 		checkL.commanCheckList(driver,  deptN,  st01N,  "AlarmChecklists",  timeHHMMSSG);
-	 	Reporter.log(GREEN + GREEN + "The process of create Alarm check list is complete.", true);
+	 	Reporter.log(GREEN + GREEN + "The process of creating the Alarm check list is complete.", true);
 		Reporter.log(" ", true);
 	}
 	
@@ -264,10 +306,10 @@ public class A_testClassCreate extends b_baseClass {
 	
 		
 		Reporter.log(" ", true);
-		Reporter.log("The process of create Normal check list is started.", true);
+		Reporter.log("The process of creating the Normal check list has started.", true);
 		
 		checkL.commanCheckList(driver,  deptN,  st01N,  "NormalChecklists",  timeHHMMSSG);
-	 	Reporter.log(GREEN + GREEN + "The process of create Normal check list is complete.", true);
+	 	Reporter.log(GREEN + GREEN + "The process of creating the Normal check list is complete.", true);
 		Reporter.log(" ", true);
 	}
 	
@@ -282,12 +324,12 @@ public class A_testClassCreate extends b_baseClass {
 	
 		
 		Reporter.log(" ", true);
-		Reporter.log("The process of information with email and sms  is started.", true);
+		Reporter.log("The process of creating information with email and SMS has started.", true);
 		info.common_information(driver, branchName);
 		info.createInformationWithEmailSms( driver,  st01N,  todaysDate,  timeHHMMSS,
 				st01RCallSms,  branchName);
 
-	 	Reporter.log(GREEN + GREEN + "The process of information with email and sms  is complete.", true);
+	 	Reporter.log(GREEN + GREEN + "The process of creating information with email and SMS is complete.", true);
 		Reporter.log(" ", true);
 	}
 	
@@ -312,7 +354,7 @@ public class A_testClassCreate extends b_baseClass {
 		timeAfter11MinMMG = tc.timeAfter11MinMMG;
 		
 		Reporter.log(" ", true);
-		Reporter.log("The process of create availability request MultipleDays is started.", true);
+		Reporter.log("The process of creating availability request for multiple days has started.", true);
 
 		arequest.createAvailabilityRequest(driver,  branchName,  "MultipleDays",  todaysDateG,
 				 timeHHMMSSG,  deptN,  tomorrowDateG,  timeAfter5MinHHG,  timeAfter5MinMMG,
@@ -320,7 +362,7 @@ public class A_testClassCreate extends b_baseClass {
 				 todaysDayG,  tomorrowDayG,  dayAfterFourDaysG,  timeAfter11MinHHG,
 				 timeAfter11MinMMG, filePath);
 
-		Reporter.log(GREEN + GREEN + "The process of create availability request MultipleDays is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of creating availability request for multiple days is complete.", true);
 		Reporter.log(" ", true);
 	}
 	
@@ -349,7 +391,7 @@ public class A_testClassCreate extends b_baseClass {
 		timeAfter11MinMMG = tc.timeAfter11MinMMG;
 
 		Reporter.log(" ", true);
-		Reporter.log("The process of create availability request Recursive is started.", true);
+		Reporter.log("The process of creating availability request for recursive schedule has started.", true);
 
 		arequest.createAvailabilityRequest(driver,  branchName,  "Recursive",  todaysDateG,
 				 timeHHMMSSG,  deptN,  tomorrowDateG,  timeAfter5MinHHG,  timeAfter5MinMMG,
@@ -357,7 +399,7 @@ public class A_testClassCreate extends b_baseClass {
 				 todaysDayG,  tomorrowDayG,  dayAfterFourDaysG,  timeAfter11MinHHG,
 				 timeAfter11MinMMG, filePath);
 
-		Reporter.log(GREEN + GREEN + "The process of create availability request Recursive is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of creating availability request for recursive schedule is complete.", true);
 		Reporter.log(" ", true);
 	}
 
@@ -381,7 +423,7 @@ public class A_testClassCreate extends b_baseClass {
 		timeAfter11MinHHG = tc.timeAfter11MinHHG;
 		timeAfter11MinMMG = tc.timeAfter11MinMMG;
 		Reporter.log(" ", true);
-		Reporter.log("The process of create availability request OneTime>Schedule is started.", true);
+		Reporter.log("The process of creating availability request for one-time scheduled has started.", true);
 
 		arequest.createAvailabilityRequest(driver,  branchName,  "OneTime>Schedule",  todaysDateG,
 				 timeHHMMSSG,  deptN,  tomorrowDateG,  timeAfter5MinHHG,  timeAfter5MinMMG,
@@ -389,7 +431,7 @@ public class A_testClassCreate extends b_baseClass {
 				 todaysDayG,  tomorrowDayG,  dayAfterFourDaysG,  timeAfter11MinHHG,
 				 timeAfter11MinMMG, filePath);
 
-		Reporter.log(GREEN + GREEN + "The process of create availability request OneTime>Schedule is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of creating availability request for one-time scheduled is complete.", true);
 		Reporter.log(" ", true);
 	}
 
@@ -416,7 +458,7 @@ public class A_testClassCreate extends b_baseClass {
 		timeAfter11MinMMG = tc.timeAfter11MinMMG;
 
 		Reporter.log(" ", true);
-		Reporter.log("The process of create availability request OneTime>Immediate is started.", true);
+		Reporter.log("The process of creating availability request for one-time immediate has started.", true);
 
 		arequest.createAvailabilityRequest(driver,  branchName,  "OneTime>Immediate",  todaysDateG,
 				 timeHHMMSSG,  deptN,  tomorrowDateG,  timeAfter5MinHHG,  timeAfter5MinMMG,
@@ -424,7 +466,7 @@ public class A_testClassCreate extends b_baseClass {
 				 todaysDayG,  tomorrowDayG,  dayAfterFourDaysG,  timeAfter11MinHHG,
 				 timeAfter11MinMMG, filePath);
 
-		Reporter.log(GREEN + GREEN + "The process of create availability request OneTime>Immediate is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of creating availability request for one-time immediate is complete.", true);
 		Reporter.log(" ", true);
 	}
 	
@@ -449,7 +491,7 @@ public class A_testClassCreate extends b_baseClass {
 		timeAfter11MinMMG = tc.timeAfter11MinMMG;
 
 		Reporter.log(" ", true);
-		Reporter.log("The process of create availability request OneTime>Immediate is started.", true);
+		Reporter.log("The process of creating availability request for one-time immediate with call, SMS, and email has started.", true);
 
 		arequest.createAvailabilityRequest(driver,  "1call",  "OneTime>Immediate",  todaysDateG,
 				 timeHHMMSSG,  deptN,  tomorrowDateG,  timeAfter5MinHHG,  timeAfter5MinMMG,
@@ -457,7 +499,7 @@ public class A_testClassCreate extends b_baseClass {
 				 todaysDayG,  tomorrowDayG,  dayAfterFourDaysG,  timeAfter11MinHHG,
 				 timeAfter11MinMMG, filePath);
 
-		Reporter.log(GREEN + GREEN + "The process of create availability request OneTime>Immediate is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of creating availability request for one-time immediate with call, SMS, and email is complete.", true);
 		Reporter.log(" ", true);
 	}
 
@@ -475,10 +517,10 @@ public class A_testClassCreate extends b_baseClass {
 		
 		
 		Reporter.log(" ", true);
-		Reporter.log("The process of verify Availability Request CreatedAfter Cron Execution is started.", true);
+		Reporter.log("The process of verifying availability request created after cron execution has started.", true);
 		arequest.verifyAvailabilityRequestCreatedAfterCronExecution(driver,  todaysDateG, availabilityRequests );
 
-		Reporter.log(GREEN + GREEN + "The process of verify Availability Request CreatedAfter Cron Execution is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of verifying availability request created after cron execution is complete.", true);
 		Reporter.log(" ", true);
 	}
 	
@@ -488,12 +530,12 @@ public class A_testClassCreate extends b_baseClass {
 	public void addNewFile() throws Throwable {
 
 		Reporter.log(" ", true);
-		Reporter.log("The process of add new file is started.", true);
+		Reporter.log("The process of adding a new file has started.", true);
 
 		fs.commanForDocumentation(driver);
 		fs.addNewFile(driver, branchName, deptN, st01N, timeHHMMSS);
 
-		Reporter.log(GREEN + GREEN + "The process of add new file is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of adding a new file is complete.", true);
 		Reporter.log(" ", true);
 	}
 
@@ -501,33 +543,33 @@ public class A_testClassCreate extends b_baseClass {
 	public void editOverviewMonitor() throws Throwable {
 
 		Reporter.log(" ", true);
-		Reporter.log("The process of edit new overview monitor is started.", true);
+		Reporter.log("The process of editing the new overview monitor has started.", true);
 
 		mo.editOverviewMonitor(driver, branchName, newOverviewMonitorName, timeHHMMSS);
 
-		Reporter.log(GREEN + GREEN + "The process of edit new overview monitor is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of editing the new overview monitor is complete.", true);
 		Reporter.log(" ", true);
 	}
 
 	@Test
 	public void addOverviewMonitor() throws Throwable {
 		Reporter.log(" ", true);
-		Reporter.log("The process of add new overview monitor is started.", true);
+		Reporter.log("The process of adding the new overview monitor has started.", true);
 
 		mo.addOverviewMonitor(driver, branchName, deptN, timeHHMMSS, filePath);
 
-		Reporter.log(GREEN + GREEN + "The process of add new overview monitor is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of adding the new overview monitor is complete.", true);
 		Reporter.log(" ", true);
 	}
 
 	@Test
 	public void editStationMonitor() throws Throwable {
 		Reporter.log(" ", true);
-		Reporter.log("The process of edit new station monitor is started.", true);
+		Reporter.log("The process of editing the new station monitor has started.", true);
 
 		mo.editStationMonitor(driver, branchName, newStationMonitorName, newStationName, timeHHMMSS);
 
-		Reporter.log(GREEN + GREEN + "The process of edit new station monitor is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of editing the new station monitor is complete.", true);
 		Reporter.log(" ", true);
 	}
 
@@ -543,56 +585,56 @@ public class A_testClassCreate extends b_baseClass {
 		System.out.println(ApiAlarm14);
 		
 		Reporter.log(" ", true);
-		Reporter.log("The process of verify All Api Alarms Cretaed  is started.", true);
+		Reporter.log("The process of verifying all API alarms created has started.", true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
 
-		ma.verifyAllAlarmsCretaed(driver,  todaysDate, todaysDate1,  alarms);
+		ma.verifyAllAlarmsCretaed(driver,  todaysDate, todaysDate1,  alarms,  filePath);
 
-		Reporter.log(GREEN + GREEN + "The process of verify All Api Alarms Cretaed is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of verifying all API alarms created is complete.", true);
 		Reporter.log(" ", true);
 	}
 
 	@Test
 	public void addStationMonitor() throws Throwable {
 		Reporter.log(" ", true);
-		Reporter.log("The process of add new station monitor is started.", true);
+		Reporter.log("The process of adding the new station monitor has started.", true);
 
 		mo.addStationMonitor(driver, branchName, newStationName, timeHHMMSS, filePath);
 
-		Reporter.log(GREEN + GREEN + "The process of add new station monitor is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of adding the new station monitor is complete.", true);
 		Reporter.log(" ", true);
 	}
 
 	@Test
 	public void editStation() throws Throwable {
 		Reporter.log(" ", true);
-		Reporter.log("The process of edit new station is started.", true);
+		Reporter.log("The process of editing the new station has started.", true);
 		stn.commonForStation(driver, branchName);
 		stn.editStation(driver, newStationName);
 
-		Reporter.log(GREEN + GREEN + "The process of edit new station is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of editing the new station is complete.", true);
 		Reporter.log(" ", true);
 	}
 
 	@Test
 	public void addNewStation() throws Throwable {
 		Reporter.log(" ", true);
-		Reporter.log("The process of add new station is started.", true);
+		Reporter.log("The process of adding the new station has started.", true);
 		stn.commonForStation(driver, branchName);
 		stn.addNewStation(driver, todaysDate, timeHHMMSS, filePath);
 
-		Reporter.log(GREEN + GREEN + "The process of add new station is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of adding the new station is complete.", true);
 		Reporter.log(" ", true);
 	}
 
 	@Test
 	public void updateUser() throws Throwable {
 		Reporter.log(" ", true);
-		Reporter.log("The process of update users is started.", true);
+		Reporter.log("The process of updating users has started.", true);
 		users.commonForUser(driver, branchName);
 		users.updateUser(driver, branchName, updateUserFilr, todaysDate, timeHHMMSS, st01N, st01R1);
 
-		Reporter.log(GREEN + GREEN + "The process of update users is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of updating users is complete.", true);
 		Reporter.log(" ", true);
 	}
 
@@ -606,13 +648,13 @@ public class A_testClassCreate extends b_baseClass {
 		timeAfter5MinMM = tc.timeAfter5MinMM;
 
 		Reporter.log(" ", true);
-		Reporter.log("The process of importing event with 1 min reminder has started.", true);
+		Reporter.log("The process of importing event with 1 minute reminder has started.", true);
 
 		cl.common_calendar(driver, branchName);
 		cl.importEventWith1minReminder(driver, importEventFile, todaysDate, timeHHMMSS, timeAfter5MinHH,
 				timeAfter5MinMM, st01R1, st01N);
 
-		Reporter.log(GREEN + GREEN + "The process of importing event with 1 min reminder is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of importing event with 1 minute reminder is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
 
@@ -625,14 +667,14 @@ public class A_testClassCreate extends b_baseClass {
 
 		Reporter.log(" ", true);
 		Reporter.log(
-				"The verification process for direct and fallback calls, SMS, and emails for esclated alarm has started.",
+				"The verification process for direct and fallback calls, SMS, and emails for escalated alarms has started.",
 				true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
 		ma.ManualAlarForCheckEscalationAlarmCall(driver, st01N, todaysDate, timeHHMMSS,
 				st01EscalarionResourceCallSmsEmail);
 
 		Reporter.log(GREEN + GREEN
-				+ "The verification process for direct and fallback calls, SMS, and emails for esclated alarm is complete.",
+				+ "The verification process for direct and fallback calls, SMS, and emails for escalated alarms is complete.",
 				true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
@@ -646,14 +688,14 @@ public class A_testClassCreate extends b_baseClass {
 
 		Reporter.log(" ", true);
 		Reporter.log(
-				"The verification process for direct and fallback calls, SMS, and emails for extend alarm has started.",
+				"The verification process for direct and fallback calls, SMS, and emails for extended alarms has started.",
 				true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
 		ma.ManualAlarForCheckExtendAlarmCall(driver, st02N, todaysDate, timeHHMMSS, st02V1, st02A1, st01N, branchName,
 				st01AttributeCallSmsEmail);
 
 		Reporter.log(GREEN + GREEN
-				+ "The verification process for direct and fallback calls, SMS, and emails for extend alarm is complete.",
+				+ "The verification process for direct and fallback calls, SMS, and emails for extended alarms is complete.",
 				true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
@@ -690,14 +732,14 @@ public class A_testClassCreate extends b_baseClass {
 
 		Reporter.log(" ", true);
 		Reporter.log(
-				"The process of creating Test alarm-recursive-montly_date wise by Attribute for multi station is started.",
+				"The process of creating test alarm-recursive-monthly date-wise by Attribute for multi-station has started.",
 				true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
 		ma.testAlarm_Recursive_Monthly_DateyWise_Attribute(driver, st01N, todaysDate, timeAfter15MinHH, imeAfter15MinMM,
 				st01V1, st01V2, todaysDateD, dayName, st01A1, filePath);
 
 		Reporter.log(GREEN + GREEN
-				+ "The process of creating  Test alarm-recursive-montly_date wise by Attribute for multi station is complete.",
+				+ "The process of creating test alarm-recursive-monthly date-wise by Attribute for multi-station is complete.",
 				true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
@@ -714,14 +756,14 @@ public class A_testClassCreate extends b_baseClass {
 
 		Reporter.log(" ", true);
 		Reporter.log(
-				"The process of creating Test alarm-recursive-montly_day wise by Attribute for multi station is started.",
+				"The process of creating test alarm-recursive-monthly day-wise by Attribute for multi-station has started.",
 				true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
 		ma.testAlarm_Recursive_Monthly_DayWise_Attribute(driver, st01N, todaysDate, timeAfter11MinHH, timeAfter11MinMM,
 				st01V1, st01V2, dayCount, dayName, st01A1, filePath);
 
 		Reporter.log(GREEN + GREEN
-				+ "The process of creating  Test alarm-recursive-montly_day wise by Attribute for multi station is complete.",
+				+ "The process of creating test alarm-recursive-monthly day-wise by Attribute for multi-station is complete.",
 				true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
@@ -737,14 +779,14 @@ public class A_testClassCreate extends b_baseClass {
 		timeAfter7MinMM = tc.timeAfter7MinMM;
 
 		Reporter.log(" ", true);
-		Reporter.log("The process of creating Test alarm to check call and fall back with escalation alarm is started.",
+		Reporter.log("The process of creating test alarm to check call and fallback with escalation alarm has started.",
 				true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
 		ma.testAlarm_EscaltionCallSmsEmail(driver, st01N, st02N, todaysDate, timeAfter7MinHH, timeAfter7MinMM,
 				st01EscalarionResourceCallSmsEmail);
 
 		Reporter.log(GREEN + GREEN
-				+ "The process of creating Test alarm to check call and fall back with escalation alarm is complete.",
+				+ "The process of creating test alarm to check call and fallback with escalation alarm is complete.",
 				true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
@@ -761,14 +803,14 @@ public class A_testClassCreate extends b_baseClass {
 		timeAfter9MinMM = tc.timeAfter9MinMM;
 
 		Reporter.log(" ", true);
-		Reporter.log("The process of creating Test alarm-recursive-weekly  by resource for multi station is started.",
+		Reporter.log("The process of creating test alarm-recursive-weekly by resource for multi-station has started.",
 				true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
 		ma.testAlarm_recursiv_weekly_users(driver, st01N, st02N, todaysDate, timeAfter9MinHH, timeAfter9MinMM, dayName,
 				st01V1, st01V2, st02V1, st01FF1, st01FF2, st02FF1, filePath);
 
 		Reporter.log(GREEN + GREEN
-				+ "The process of creating  Test alarm-recursive-weekly by resource for multi station is complete.",
+				+ "The process of creating test alarm-recursive-weekly by resource for multi-station is complete.",
 				true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
@@ -785,14 +827,14 @@ public class A_testClassCreate extends b_baseClass {
 
 		Reporter.log(" ", true);
 		Reporter.log(
-				"The process of creating Test alarm-recursive-daily Time by resource for multi station is started.",
+				"The process of creating test alarm-recursive-daily time by resource for multi-station has started.",
 				true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
 		ma.testAlarm_recursiv_daily_Resource(driver, st01N, st02N, todaysDate, timeAfter7MinHH, timeAfter7MinMM, st01R1,
 				st02R1, filePath);
 
 		Reporter.log(GREEN + GREEN
-				+ "The process of creating  Test alarm-recursive-daily Time by resource for multi station is complete.",
+				+ "The process of creating test alarm-recursive-daily time by resource for multi-station is complete.",
 				true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
@@ -811,14 +853,14 @@ public class A_testClassCreate extends b_baseClass {
 //		System.out.println(timeAfter5MinMM);
 
 		Reporter.log(" ", true);
-		Reporter.log("The process of creating Test alarm-One Time by attribute with call, sms And email for multi station is started.", true);
+		Reporter.log("The process of creating test alarm-one time by attribute with call, SMS and email for multi-station has started.", true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
 		ma.TestAlarm_OneTime_Resource_CallSmsEmail( driver,  st01N,st02N,  todaysDate,
 				 timeAfter5MinHH,  timeAfter5MinMM,  st01RCallSms,  st02R1);
 
 		Reporter.log(
 				GREEN + GREEN
-						+ "The process of creating  Test alarm-One Time by attribute with call, sms And email for multi station is complete.",
+						+ "The process of creating test alarm-one time by attribute with call, SMS and email for multi-station is complete.",
 				true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
@@ -837,14 +879,14 @@ public class A_testClassCreate extends b_baseClass {
 //		System.out.println(timeAfter5MinMM);
 
 		Reporter.log(" ", true);
-		Reporter.log("The process of creating Test alarm-One Time by attribute for multi station is started.", true);
+		Reporter.log("The process of creating test alarm-one time by attribute for multi-station has started.", true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
 		ma.testAlarm_OneTime_Attribute(driver, st01N, todaysDate, timeAfter5MinHH, timeAfter5MinMM, st01V1, st01V2,
 				st01A1,filePath);
 
 		Reporter.log(
 				GREEN + GREEN
-						+ "The process of creating  Test alarm-One Time by attribute for multi station is complete.",
+						+ "The process of creating test alarm-one time by attribute for multi-station is complete.",
 				true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
@@ -854,60 +896,60 @@ public class A_testClassCreate extends b_baseClass {
 	@Test
 	public void addVehicleUser() throws Throwable {
 		Reporter.log(" ", true);
-		Reporter.log("The process of add vehicle user is started.", true);
+		Reporter.log("The process of adding the vehicle user has started.", true);
 		users.commonForVehicleUser(driver, branchName);
 		users.addVehicleUser(driver, branchName, st01N, todaysDate, timeHHMMSS, resourceNewUser, filePath);
-		Reporter.log(GREEN + GREEN + "The process of add vehicle user is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of adding the vehicle user is complete.", true);
 		Reporter.log(" ", true);
 	}
 
 	@Test
 	public void importUser() throws Throwable {
 		Reporter.log(" ", true);
-		Reporter.log("The process of import users is started.", true);
+		Reporter.log("The process of importing users has started.", true);
 		users.commonForUser(driver, branchName);
 		users.importUser(driver, branchName, todaysDate, timeHHMMSS, st01N, st02N, todaysDateddmmyy, resourceNewUser,
 				importUserFile);
 
-		Reporter.log(GREEN + GREEN + "The process of import users is is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of importing users is complete.", true);
 		Reporter.log(" ", true);
 	}
 
 	@Test
 	public void addMultiRoleUser() throws Throwable {
 		Reporter.log(" ", true);
-		Reporter.log("The process of add station user is started.", true);
+		Reporter.log("The process of adding a station user has started.", true);
 		users.commonForUser(driver, branchName);
 		users.AddUersBasicDetail(driver, branchName, todaysDate, timeHHMMSS, filePath, "MR");
 		users.addMultiRoleUser(driver, branchName, st01N, todaysDateddmmyy, timeHHMMSS, filePath, attributeNewUser,
 				resourceNewUser);
 
-		Reporter.log(GREEN + GREEN + "The process of add multi role user is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of adding a multi role user is complete.", true);
 		Reporter.log(" ", true);
 	}
 
 	@Test
 	public void addStataionUser() throws Throwable {
 		Reporter.log(" ", true);
-		Reporter.log("The process of add station user is started.", true);
+		Reporter.log("The process of adding a station user has started.", true);
 		users.commonForUser(driver, branchName);
 		users.AddUersBasicDetail(driver, branchName, todaysDate, timeHHMMSS, filePath, "SR");
 		users.addStataionUser(driver, branchName, st01N, filePath);
 
-		Reporter.log(GREEN + GREEN + "The process of add Station user is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of adding a station user is complete.", true);
 		Reporter.log(" ", true);
 	}
 
 	@Test
 	public void addAppUser() throws Throwable {
 		Reporter.log(" ", true);
-		Reporter.log("The process of add firefighter is started.", true);
+		Reporter.log("The process of adding a firefighter has started.", true);
 		users.commonForUser(driver, branchName);
 		users.AddUersBasicDetail(driver, branchName, todaysDate, timeHHMMSS, filePath, "AR");
 		users.addAppUser(driver, branchName, st01N, todaysDateddmmyy, timeHHMMSS, filePath, attributeNewUser,
 				resourceNewUser);
 
-		Reporter.log(GREEN + GREEN + "The process of add App user is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of adding an App user is complete.", true);
 		Reporter.log(" ", true);
 	}
 
@@ -916,10 +958,10 @@ public class A_testClassCreate extends b_baseClass {
 
 	{
 		Reporter.log(" ", true);
-		Reporter.log("The process of send message to chat group by fire fighter is started.", true);
+		Reporter.log("The process of sending message to chat group by firefighter has started.", true);
 		chatGroups.commonForChatGroup(driver, branchName);
 		chatGroups.sendMessageToChatGroupCreatedByFireFighter(driver, ChatGroupByFireFighterMS);
-		Reporter.log(GREEN + GREEN + "The process of send message to chat group by fire fighter is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of sending message to chat group by firefighter is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
 
@@ -930,10 +972,10 @@ public class A_testClassCreate extends b_baseClass {
 
 	{
 		Reporter.log(" ", true);
-		Reporter.log("The process of send message to chat group by alarm loop is started.", true);
+		Reporter.log("The process of sending message to chat group by alarm loop has started.", true);
 		chatGroups.commonForChatGroup(driver, branchName);
 		chatGroups.sendMessageToChatGroupCreatedByAlarmLoop(driver, ChatGroupByAlarmLoopMS);
-		Reporter.log(GREEN + GREEN + "The process of send message to chat group by alarm loop is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of sending message to chat group by alarm loop is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
 
@@ -944,10 +986,10 @@ public class A_testClassCreate extends b_baseClass {
 
 	{
 		Reporter.log(" ", true);
-		Reporter.log("The process of send message to chat group by resource is started.", true);
+		Reporter.log("The process of sending message to chat group by resource has started.", true);
 		chatGroups.commonForChatGroup(driver, branchName);
 		chatGroups.sendMessageToChatGroupCreatedByResource(driver, ChatGroupByResourceMS);
-		Reporter.log(GREEN + GREEN + "The process of send message to chat group by resource is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of sending message to chat group by resource is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
 
@@ -958,10 +1000,10 @@ public class A_testClassCreate extends b_baseClass {
 
 	{
 		Reporter.log(" ", true);
-		Reporter.log("The process of send message to chat group by attribute is started.", true);
+		Reporter.log("The process of sending message to chat group by attribute has started.", true);
 		chatGroups.commonForChatGroup(driver, branchName);
 		chatGroups.sendMessageToChatGroupCreatedByAttribute(driver, ChatGroupByAttributeMS);
-		Reporter.log(GREEN + GREEN + "The process of send message to chat group by attribute is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of sending message to chat group by attribute is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
 
@@ -972,11 +1014,11 @@ public class A_testClassCreate extends b_baseClass {
 
 	{
 		Reporter.log(" ", true);
-		Reporter.log("The process of create chat group by fire fighter is started.", true);
+		Reporter.log("The process of creating chat group by firefighter has started.", true);
 		chatGroups.commonForChatGroup(driver, branchName);
 		chatGroups.createChatFroupByFireFighterMS(driver, st01N, st02N, todaysDate, timeHHMMSS, st01FF1, st02FF1,
 				filePath);
-		Reporter.log(GREEN + GREEN + "The process of create chat group by fire fighter is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of creating chat group by firefighter is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
 
@@ -987,11 +1029,11 @@ public class A_testClassCreate extends b_baseClass {
 
 	{
 		Reporter.log(" ", true);
-		Reporter.log("The process of create chat group by alarm loop is started.", true);
+		Reporter.log("The process of creating chat group by alarm loop has started.", true);
 		chatGroups.commonForChatGroup(driver, branchName);
 		chatGroups.createChatFroupByAlarmLoopsMS(driver, st01N, st02N, todaysDate, timeHHMMSS, st01Al1, st02Al1,
 				filePath);
-		Reporter.log(GREEN + GREEN + "The process of create chat group by alarm loop is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of creating chat group by alarm loop is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
 
@@ -1002,10 +1044,10 @@ public class A_testClassCreate extends b_baseClass {
 
 	{
 		Reporter.log(" ", true);
-		Reporter.log("The process of create chat group by resource is started.", true);
+		Reporter.log("The process of creating chat group by resource has started.", true);
 		chatGroups.commonForChatGroup(driver, branchName);
 		chatGroups.createChatFroupByResourceMS(driver, st01N, st02N, todaysDate, timeHHMMSS, st01R1, st02R1, filePath);
-		Reporter.log(GREEN + GREEN + "The process of create chat group by resource is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of creating chat group by resource is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
 
@@ -1016,11 +1058,11 @@ public class A_testClassCreate extends b_baseClass {
 
 	{
 		Reporter.log(" ", true);
-		Reporter.log("The process of create chat group by attribute is started.", true);
+		Reporter.log("The process of creating chat group by attribute has started.", true);
 		chatGroups.commonForChatGroup(driver, branchName);
 		chatGroups.createChatFroupByAttributeMS(driver, st01N, st02N, todaysDate, timeHHMMSS, st01A1, st02A1, filePath);
 
-		Reporter.log(GREEN + GREEN + "The process of create chat group by attribute is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of creating chat group by attribute is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
 
@@ -1031,7 +1073,7 @@ public class A_testClassCreate extends b_baseClass {
 
 	{
 		Reporter.log(" ", true);
-		Reporter.log("The process of Checking Alarm template validation is started.", true);
+		Reporter.log("The process of checking Alarm template validation has started.", true);
 		at.commonAlarmTemplate(driver, branchName);
 		at.TCAlarmTemplateCheckingValidation(driver, todaysDate, timeHHMMSS, st02N, st01N, st01V1, st02V1, st01A1,
 				st02A1, filePath);
@@ -1040,7 +1082,7 @@ public class A_testClassCreate extends b_baseClass {
 		at.commonAlarmTemplate(driver, branchName);
 		at.TCAlarmTemplateCheckingValidation(driver, todaysDate, timeHHMMSS, st02N, st01N, st01V1, st02V1, st01A1,
 				st02A1, filePath);
-		Reporter.log(GREEN + GREEN + "The process of Checking Alarm template validation is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of checking Alarm template validation is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
 
@@ -1051,7 +1093,7 @@ public class A_testClassCreate extends b_baseClass {
 
 	{
 		Reporter.log(" ", true);
-		Reporter.log("The process of checking validation for alarm loop is started.", true);
+		Reporter.log("The process of checking validation for alarm loop has started.", true);
 		al.commonAlarmLoop(driver, branchName);
 		al.TCcreateNewAlarmLoop(driver, st02N, st01N, todaysDate, timeHHMMSS, st01R1, st02R1, st02V1, st01V1, st01FF1,
 				st02FF1);
@@ -1066,7 +1108,7 @@ public class A_testClassCreate extends b_baseClass {
 
 	{
 		Reporter.log(" ", true);
-		Reporter.log("The process of checking validation for alarm resource is started.", true);
+		Reporter.log("The process of checking validation for alarm resource has started.", true);
 		ar.commonResource(driver, branchName);
 		ar.TCResourceValidationChecking(driver, st02N, st01N, todaysDate, timeHHMMSS, st02V1, st01V1, st01FF1, st02FF1,
 				filePath);
@@ -1743,7 +1785,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log("The process of creating a low priority multi station manual alarm by attribute  is started.",
 				true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.manualaByAttributeMSLP(driver, st01N, st02N, todaysDate, timeHHMMSS, st01V1, st01V2, st02V1, st01A1, st02A1);
+		ma.manualaByAttributeMSLP(driver, st01N, st02N, todaysDate, timeHHMMSS, st01V1, st01V2, st02V1, st01A1, st02A1, filePath);
 		Reporter.log(
 				GREEN + GREEN
 						+ "The process of creating a low priority multi station manual alarm by attribute is complete.",
@@ -1760,7 +1802,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of creating a manual alarm by attribute  is started.", true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.manualaByAttributeSingleStation(driver, st01N, todaysDate, timeHHMMSS, st01V1, st01V2, st01A1);
+		ma.manualaByAttributeSingleStation(driver, st01N, todaysDate, timeHHMMSS, st01V1, st01V2, st01A1,filePath);
 
 		Reporter.log(GREEN + GREEN + "The process of creating a manual alarm by attribute is complete.", true);
 		Reporter.log(" ", true);
@@ -1795,7 +1837,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of creating a manual alarm by resource-HP is started.", true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.manualAlarmByResourceMsHP(driver, st01N, st02N, todaysDate, timeHHMMSS, st01R1, st02R1);
+		ma.manualAlarmByResourceMsHP(driver, st01N, st02N, todaysDate, timeHHMMSS, st01R1, st02R1, filePath);
 
 		Reporter.log(GREEN + GREEN + "The process of creating a manual alarm by resource-HP is complete.", true);
 		Reporter.log(" ", true);
@@ -1810,7 +1852,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of creating a manual alarm by resource-LP is started.", true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.manualAlarmByResourceMsLP(driver, st01N, st02N, todaysDate, timeHHMMSS, st01R1, st02R1);
+		ma.manualAlarmByResourceMsLP(driver, st01N, st02N, todaysDate, timeHHMMSS, st01R1, st02R1, filePath);
 
 		Reporter.log(GREEN + GREEN + "The process of creating a manual alarm by esource-LP is complete.", true);
 		Reporter.log(" ", true);
@@ -1825,7 +1867,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of creating a manual alarm by template is started.", true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.manualAlarmByOldEsclationTemplateFromSt02ToSt01(driver, st02EscSt01t1, TemplateAlarmTitle);
+		ma.manualAlarmByOldEsclationTemplateFromSt02ToSt01(driver, st02EscSt01t1, TemplateAlarmTitle, filePath);
 
 		Reporter.log(GREEN + GREEN + "The process of creating a manual alarm by template is complete.", true);
 		Reporter.log(" ", true);
@@ -1869,7 +1911,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of creating a manual alarm by escaltion resource-multi station is started.", true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.manualAlarmByEscResourceMS(driver, st02N, todaysDate, timeHHMMSS, st02REsc);
+		ma.manualAlarmByEscResourceMS(driver, st02N, todaysDate, timeHHMMSS, st02REsc, filePath);
 
 		Reporter.log(
 				GREEN + GREEN
@@ -1887,7 +1929,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of creating a manual alarm by escaltion resource-single station is started.", true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.manualAlarmByEscResourceSingleStation(driver, st01N, todaysDate, timeHHMMSS, st01REsc);
+		ma.manualAlarmByEscResourceSingleStation(driver, st01N, todaysDate, timeHHMMSS, st01REsc, filePath);
 
 		Reporter.log(
 				GREEN + GREEN
@@ -1906,7 +1948,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log("The process of creating a manual alarm by firefighter is started.", true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
 		ma.manualAlarmByUersMs(driver, st01N, st02N, todaysDate, timeHHMMSS, st01V1, st01V2, st02V1, st01FF1, st01FF2,
-				st02FF1);
+				st02FF1, filePath);
 
 		Reporter.log(GREEN + GREEN + "The process of creating a manual alarm by firefighter is complete.", true);
 		Reporter.log(" ", true);
@@ -2312,11 +2354,7 @@ public class A_testClassCreate extends b_baseClass {
 
 	}
 
-	@Test
-	public void smokeForCreateManualAlarm() throws Throwable {
-		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.manualAlarmByEscResourceSingleStation(driver, st01N, todaysDate, timeHHMMSS, st01REsc);
-	}
+	
 
 	@Test
 	public void nextStage()

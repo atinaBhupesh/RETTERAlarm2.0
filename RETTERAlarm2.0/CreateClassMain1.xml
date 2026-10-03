@@ -18,11 +18,11 @@
 				 
 				 <include name="nextStage" />
 				 
-				<include name="verifyAllApiAlarmsCretaed" />
 				<include name="sendMessageToNewApiAlarmUser" />
 				<include name="sendMessageToOldApiAlarmUser" />
 
 				<include name="testAlarm_OneTime_Attribute" />
+				
 				<include name="manualaByAttributeMSLP" />
 
 
@@ -55,6 +55,10 @@
 				<include name="CheckAlarmExtendFunctionality" />
 				<include name="CheckApiAlarmEscalationFunctionality" />
 				<include name="CheckManualAlarmEscalationFunctionality" />
+				
+				<include name="verifyAllApiAlarmsCretaed" />
+				<include name="checkAlarmDisplayedOnMonitors" />
+
 
 
 				<include name="nextStage" />

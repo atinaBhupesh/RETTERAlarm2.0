@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Sep 30 19:02:59 IST 2026</td>
+<td>Started on:</td><td>Sat Oct 03 14:52:39 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>237 seconds (237913 ms)</td>
+<tr><td>Total time:</td><td>330 seconds (330780 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,193 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='function.A_testClassDelete.backToHomePage2()'><b>backToHomePage2</b><br>Test class: function.A_testClassDelete<br>Parameters: [TestResult name=deleteAvailabilityRequestFromHistory status=FAILURE method=A_testClassDelete.deleteAvailabilityRequestFromHistory()[pri:0, instance:function.A_testClassDelete@595b007d]]</td>
-<td><div><pre>java.io.FileNotFoundException: E:\Automation _lapy\MasterAutomationWorkSpcae\screenshots\null_null_deleteAvailabilityRequestFromHistory.jpg (The system cannot find the path specified)
-	at java.base/java.io.FileOutputStream.open0(Native Method)
-	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:255)
-	at java.base/java.io.FileOutputStream.&lt;init&gt;(FileOutputStream.java:210)
-	at java.base/java.io.FileOutputStream.&lt;init&gt;(FileOutputStream.java:171)
-	at org.openqa.selenium.io.FileHandler.copyFile(FileHandler.java:131)
-	at org.openqa.selenium.io.FileHandler.copy(FileHandler.java:110)
-	at function.b_baseClass.takeScreenshot(b_baseClass.java:498)
-	at function.A_testClassDelete.backToHomePage2(A_testClassDelete.java:443)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1583082378", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1583082378'><pre>java.io.FileNotFoundException: E:\Automation _lapy\MasterAutomationWorkSpcae\screenshots\null_null_deleteAvailabilityRequestFromHistory.jpg (The system cannot find the path specified)
-	at java.base/java.io.FileOutputStream.open0(Native Method)
-	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:255)
-	at java.base/java.io.FileOutputStream.&lt;init&gt;(FileOutputStream.java:210)
-	at java.base/java.io.FileOutputStream.&lt;init&gt;(FileOutputStream.java:171)
-	at org.openqa.selenium.io.FileHandler.copyFile(FileHandler.java:131)
-	at org.openqa.selenium.io.FileHandler.copy(FileHandler.java:110)
-	at function.b_baseClass.takeScreenshot(b_baseClass.java:498)
-	at function.A_testClassDelete.backToHomePage2(A_testClassDelete.java:443)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
-	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>function.A_testClassDelete@595b007d</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='function.A_testClassDelete.logOut()'><b>logOut</b><br>Test class: function.A_testClassDelete</td>
-<td></td>
-<td>0</td>
-<td>function.A_testClassDelete@595b007d</td></tr>
-<tr>
-<td title='function.A_testClassDelete.AfterTest()'><b>AfterTest</b><br>Test class: function.A_testClassDelete</td>
-<td></td>
-<td>0</td>
-<td>function.A_testClassDelete@595b007d</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='function.A_testClassDelete.deleteAvailabilityRequestFromHistory()'><b>deleteAvailabilityRequestFromHistory</b><br>Test class: function.A_testClassDelete<br/>
-<a href="#Output-1337289706" onClick='toggleBox("Output-1337289706", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1337289706" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1337289706">
- <br/>
-The process of delete Availability Request from History is started.<br/>
-</div>
-</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//i[@class=&quot;fa fa-trash-o&quot;])[1]&quot;}
-  (Session info: chrome=154.0.8037.58)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.4.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [865605f24a3d16bbae7732fc9370eccf, findElement {using=xpath, value=(//i[@class=&quot;fa fa-trash-o&quot;])[1]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 154.0.8037.58, chrome: {chromedriverVersion: 154.0.8037.92 (334b65d254cc..., userDataDir: C:\Users\Bhupesh\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54503}, goog:processID: 9568, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54503/devtoo..., se:cdpVersion: 154.0.8037.58, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 865605f24a3d16bbae7732fc9370eccf
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy22.click(Unknown Source)
-	at function.S_AvailabilityRequest.deleteAvailabilityRequestFromHistory(S_AvailabilityRequest.java:689)
-	at function.A_testClassDelete.deleteAvailabilityRequestFromHistory(A_testClassDelete.java:118)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1337289706", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1337289706'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//i[@class=&quot;fa fa-trash-o&quot;])[1]&quot;}
-  (Session info: chrome=154.0.8037.58)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.4.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [865605f24a3d16bbae7732fc9370eccf, findElement {using=xpath, value=(//i[@class=&quot;fa fa-trash-o&quot;])[1]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 154.0.8037.58, chrome: {chromedriverVersion: 154.0.8037.92 (334b65d254cc..., userDataDir: C:\Users\Bhupesh\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54503}, goog:processID: 9568, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54503/devtoo..., se:cdpVersion: 154.0.8037.58, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 865605f24a3d16bbae7732fc9370eccf
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy22.click(Unknown Source)
-	at function.S_AvailabilityRequest.deleteAvailabilityRequestFromHistory(S_AvailabilityRequest.java:689)
-	at function.A_testClassDelete.deleteAvailabilityRequestFromHistory(A_testClassDelete.java:118)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>148</td>
-<td>function.A_testClassDelete@595b007d</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -263,19 +76,34 @@ Session ID: 865605f24a3d16bbae7732fc9370eccf
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='function.A_testClassDelete.deleteAvailabilityRequestFromList()'><b>deleteAvailabilityRequestFromList</b><br>Test class: function.A_testClassDelete<br/>
-<a href="#Output-1258527853" onClick='toggleBox("Output-1258527853", this, "Show output", "Hide output");'>Show output</a>
+<td title='function.A_testClassDelete.deactiveBgTestActiveAlarmsFromPlaningList()'><b>deactiveBgTestActiveAlarmsFromPlaningList</b><br>Test class: function.A_testClassDelete<br/>
+<a href="#Output-187452043" onClick='toggleBox("Output-187452043", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1258527853" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1258527853">
+<a href="#Output-187452043" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-187452043">
  <br/>
-The process of delete Availability Request from List is started.<br/>
-[32m✔ [0m[32m✔ [0mThe process of delete Availability Request from List is complete.<br/>
+The process of deactivating Test alarms has started.<br/>
+[32m✔ [0m[32m✔ [0mThe process of deactivating Test alarms is complete.<br/>
  <br/>
 </div>
 </td>
 <td></td>
-<td>63</td>
+<td>111</td>
+<td>function.A_testClassDelete@595b007d</td></tr>
+<tr>
+<td title='function.A_testClassDelete.deactiveAllActiveAlarms()'><b>deactiveAllActiveAlarms</b><br>Test class: function.A_testClassDelete<br/>
+<a href="#Output-1108136194" onClick='toggleBox("Output-1108136194", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1108136194" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1108136194">
+ <br/>
+The process of deactivating all active alarms has started.<br/>
+The process of deactivating all active alarms is complete.<br/>
+ <br/>
+</div>
+</td>
+<td></td>
+<td>178</td>
 <td>function.A_testClassDelete@595b007d</td></tr>
 </table><p>
 </body>

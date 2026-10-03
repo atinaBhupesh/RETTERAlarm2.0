@@ -7,8 +7,19 @@
 
 			<methods>
 			
+			<include name="manualaByAttributeMSLP" />
+				<include name="manualaByAttributeSingleStation" />
 				
-				<include name="verifyAvailabilityRequestCreatedAfterCronExecution" />
+				<include name="manualAlarmByResourceMsHP" />
+				<include name="manualAlarmByResourceMsLP" />
+				<include name="manualAlarmByUersMs" />
+
+
+				<include name="manualAlarmByEscResourceSingleStation" />
+				<include name="manualAlarmByEscResourceMs" />
+
+
+
 				
 			
 				

@@ -116,18 +116,40 @@ public class b_baseClass {
 	String ApiAlarm14;
 
 	String newOverviewMonitorName;
-	
+
 	String testAlarm_OneTime_Attribute;
 	String testAlarm_recursiv_daily_Resource;
 	String testAlarm_recursiv_weekly_users;
 	String testAlarm_Recursive_Monthly_DayWise_Attribute;
 	String testAlarm_Recursive_Monthly_DateyWise_Attribute;
-	
+
 	String createAvailabilityRequestOneTimeImmediate;
 	String createAvailabilityRequestOneTimeSchedule;
 	String createAvailabilityRequestRecursive;
 	String createAvailabilityRequestMultipleDays;
 
+//	String BGAPIAv1St01HP;
+	String BGCAv1MS;
+	String BGNEWApiMSHP;
+//	String BGNEWAPIMS_LP;
+	String BGNewAPiAlarmUpdated;
+	String BGNEWApiEmailtoSt01fromSt02;
+	String BGNEWAPIVehicleuser;
+	String BGCNewAPist01esc;
+	String BGNewApiEsc02to01LP;
+	String BGNewAPiexst01from02HP;
+	String BGCNewAPiexst01from02LP;
+	String NewDMEAlarmNewAPIHP;
+//	String BGDMEAlarmOldAPIHP;
+	String BGDMEAlarmNewAPILP;
+
+	String manualaByAttributeMSLP;
+	String manualaByAttributeSingleStation;
+	String manualAlarmByResourceMsHP;
+	String manualAlarmByResourceMsLP;
+	String manualAlarmByUersMs;
+	String manualAlarmByEscResourceSingleStation;
+	String manualAlarmByEscResourceMs;
 
 	String infoDocxFile;
 	String infoPdfFile;
@@ -341,7 +363,8 @@ public class b_baseClass {
 		switch (branchName) {
 
 		case "1":
-			filePath = "D:\\Automation_2307\\SampleFilesNew\\Details Files\\DetailsFileLiveBhupesh.xlsx";
+			filePath = "D:\\Automation_2307\\SampleFilesNew\\Details Files\\DetailsFileLiveBhupesh1.xlsx";
+//			filePath = "D:\\Automation_2307\\SampleFilesNew\\Details Files\\DetailsFileLiveBhupesh - Copy.xlsx";
 			password = "Atina@123";
 
 			break;
@@ -354,6 +377,7 @@ public class b_baseClass {
 
 		case "2":
 			filePath = "D:\\Automation_2307\\SampleFilesNew\\Details Files\\DetailsFileTesting.xlsx";
+
 			password = "Qwerty@123";
 			break;
 
@@ -451,7 +475,7 @@ public class b_baseClass {
 		ApiAlarm13 = sheet.getRow(69).getCell(1).getStringCellValue();
 		ApiAlarm14 = sheet.getRow(70).getCell(1).getStringCellValue();
 		newOverviewMonitorName = sheet.getRow(71).getCell(1).getStringCellValue();
-		
+
 		testAlarm_OneTime_Attribute = sheet.getRow(72).getCell(1).getStringCellValue();
 		testAlarm_recursiv_daily_Resource = sheet.getRow(73).getCell(1).getStringCellValue();
 		testAlarm_recursiv_weekly_users = sheet.getRow(74).getCell(1).getStringCellValue();
@@ -459,9 +483,31 @@ public class b_baseClass {
 		testAlarm_Recursive_Monthly_DateyWise_Attribute = sheet.getRow(76).getCell(1).getStringCellValue();
 
 		createAvailabilityRequestOneTimeImmediate = sheet.getRow(77).getCell(1).getStringCellValue();
-		createAvailabilityRequestOneTimeSchedule= sheet.getRow(78).getCell(1).getStringCellValue();
+		createAvailabilityRequestOneTimeSchedule = sheet.getRow(78).getCell(1).getStringCellValue();
 		createAvailabilityRequestRecursive = sheet.getRow(79).getCell(1).getStringCellValue();
 		createAvailabilityRequestMultipleDays = sheet.getRow(80).getCell(1).getStringCellValue();
+
+//		 BGAPIAv1St01HP = sheet.getRow(81).getCell(1).getStringCellValue();
+		BGCAv1MS = sheet.getRow(81).getCell(1).getStringCellValue();
+		BGNEWApiMSHP = sheet.getRow(82).getCell(1).getStringCellValue();
+//		 BGNEWAPIMS_LP= sheet.getRow(84).getCell(1).getStringCellValue();
+		BGNewAPiAlarmUpdated = sheet.getRow(83).getCell(1).getStringCellValue();
+		BGNEWApiEmailtoSt01fromSt02 = sheet.getRow(84).getCell(1).getStringCellValue();
+		BGNEWAPIVehicleuser = sheet.getRow(85).getCell(1).getStringCellValue();
+		BGCNewAPist01esc = sheet.getRow(86).getCell(1).getStringCellValue();
+		BGNewApiEsc02to01LP = sheet.getRow(87).getCell(1).getStringCellValue();
+		BGNewAPiexst01from02HP = sheet.getRow(88).getCell(1).getStringCellValue();
+		BGCNewAPiexst01from02LP = sheet.getRow(89).getCell(1).getStringCellValue();
+		NewDMEAlarmNewAPIHP = sheet.getRow(90).getCell(1).getStringCellValue();
+		BGDMEAlarmNewAPILP=sheet.getRow(91).getCell(1).getStringCellValue();
+		 
+		manualaByAttributeMSLP = sheet.getRow(92).getCell(1).getStringCellValue();
+		manualaByAttributeSingleStation = sheet.getRow(93).getCell(1).getStringCellValue();
+		manualAlarmByResourceMsHP = sheet.getRow(94).getCell(1).getStringCellValue();
+		manualAlarmByResourceMsLP = sheet.getRow(95).getCell(1).getStringCellValue();
+		manualAlarmByUersMs = sheet.getRow(96).getCell(1).getStringCellValue();
+		manualAlarmByEscResourceSingleStation = sheet.getRow(97).getCell(1).getStringCellValue();
+		manualAlarmByEscResourceMs = sheet.getRow(98).getCell(1).getStringCellValue();
 
 	}
 
