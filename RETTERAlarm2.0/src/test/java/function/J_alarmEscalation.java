@@ -113,7 +113,6 @@ public class J_alarmEscalation extends b_baseClass {
 			break;
 		}
 
-		
 		case "1.1": {
 			driver.navigate().to("https://admin.retteralarm.de/admin/alarm-escalation/list");
 			break;
@@ -244,7 +243,7 @@ public class J_alarmEscalation extends b_baseClass {
 			driver.navigate().refresh();
 			Thread.sleep(30000);
 
-		 	totalAlarms += count;
+			totalAlarms += count;
 		}
 
 		System.out.println("The iteration has been completed.");

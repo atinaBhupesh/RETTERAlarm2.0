@@ -5,14 +5,18 @@
     <classes>
       <class name="function.A_testClassCreate">
         <methods>
+          <include name="verifyAvailabilityRequestCreatedAfterCronExecution"/>
           <include name="AfterTest"/>
+          <include name="verifyingAllTestAlarmAfterCronRun"/>
+          <include name="createCalendarEventByFireFughterMS"/>
           <include name="BeforeSuite"/>
+          <include name="createCalendarEventByStationsMS"/>
           <include name="backToHomePage2"/>
           <include name="BeforeTest"/>
           <include name="backToHomePage"/>
-          <include name="checkAlarmDisplayedOnMonitors"/>
           <include name="logOut"/>
           <include name="AfterSute"/>
+          <include name="nextStage"/>
           <include name="createObject"/>
         </methods>
       </class> <!-- function.A_testClassCreate -->

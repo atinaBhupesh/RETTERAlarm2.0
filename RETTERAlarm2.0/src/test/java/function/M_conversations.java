@@ -362,15 +362,20 @@ public class M_conversations extends b_baseClass {
 		Thread.sleep(3000);
 
 		FileInputStream in = new FileInputStream(filePath);
+
 		XSSFWorkbook wb = new XSSFWorkbook(in);
 		XSSFSheet sheet = wb.getSheetAt(0);
 
-		Row row = sheet.createRow(40); // 41
-		row.createCell(1).setCellValue(title);
+		Row row = sheet.createRow(40);
+
+		row.createCell(0).setCellValue("ChatGroupByAlarmLoopMS"); // Column A
+		row.createCell(1).setCellValue(title); // Column B
+
 		in.close();
 
 		FileOutputStream out = new FileOutputStream(filePath);
 		wb.write(out);
+
 		out.close();
 		wb.close();
 
@@ -428,16 +433,22 @@ public class M_conversations extends b_baseClass {
 		saveChatGroup.click();
 		Thread.sleep(3000);
 
+		
 		FileInputStream in = new FileInputStream(filePath);
+
 		XSSFWorkbook wb = new XSSFWorkbook(in);
 		XSSFSheet sheet = wb.getSheetAt(0);
 
-		Row row = sheet.createRow(39); // 40
-		row.createCell(1).setCellValue(title);
+		Row row = sheet.createRow(39);
+
+		row.createCell(0).setCellValue("ChatGroupByResourceMS"); // Column A
+		row.createCell(1).setCellValue(title); // Column B
+
 		in.close();
 
 		FileOutputStream out = new FileOutputStream(filePath);
 		wb.write(out);
+
 		out.close();
 		wb.close();
 
@@ -501,17 +512,21 @@ public class M_conversations extends b_baseClass {
 		Thread.sleep(500);
 		saveChatGroup.click();
 		Thread.sleep(3000);
-
 		FileInputStream in = new FileInputStream(filePath);
+
 		XSSFWorkbook wb = new XSSFWorkbook(in);
 		XSSFSheet sheet = wb.getSheetAt(0);
 
-		Row row = sheet.createRow(38); // 39
-		row.createCell(1).setCellValue(title);
+		Row row = sheet.createRow(38);
+
+		row.createCell(0).setCellValue("ChatGroupByAttributeMS"); // Column A
+		row.createCell(1).setCellValue(title); // Column B
+
 		in.close();
 
 		FileOutputStream out = new FileOutputStream(filePath);
 		wb.write(out);
+
 		out.close();
 		wb.close();
 

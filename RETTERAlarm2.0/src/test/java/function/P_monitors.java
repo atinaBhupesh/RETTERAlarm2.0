@@ -319,24 +319,23 @@ public class P_monitors extends b_baseClass {
 
 		act.sendKeys("Atina@123").perform();
 		
-		
-
 		FileInputStream in = new FileInputStream(filePath);
+
 		XSSFWorkbook wb = new XSSFWorkbook(in);
 		XSSFSheet sheet = wb.getSheetAt(0);
 
-		Row row = sheet.createRow(56); // 56
-		row.createCell(1).setCellValue(title);
+		Row row = sheet.createRow(56);
+
+		row.createCell(0).setCellValue("newStationMonitorName"); // Column A
+		row.createCell(1).setCellValue(title); // Column B
+
 		in.close();
 
 		FileOutputStream out = new FileOutputStream(filePath);
 		wb.write(out);
+
 		out.close();
 		wb.close();
-
-		
-		act.moveToElement(save).click().build().perform();
-		Thread.sleep(2000);
 		
 		
 		

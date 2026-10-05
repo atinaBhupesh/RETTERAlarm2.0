@@ -99,15 +99,20 @@ public class O_stationModule extends b_baseClass {
 		
 
 		FileInputStream in = new FileInputStream(filePath);
+
 		XSSFWorkbook wb = new XSSFWorkbook(in);
 		XSSFSheet sheet = wb.getSheetAt(0);
 
-		Row row = sheet.createRow(55); // 56
-		row.createCell(1).setCellValue(title);
+		Row row = sheet.createRow(55);
+
+		row.createCell(0).setCellValue("newStationName"); // Column A
+		row.createCell(1).setCellValue(title); // Column B
+
 		in.close();
 
 		FileOutputStream out = new FileOutputStream(filePath);
 		wb.write(out);
+
 		out.close();
 		wb.close();
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));

@@ -11,16 +11,25 @@
       <![CDATA[ ]]>
     </line>
     <line>
-      <![CDATA[The process of verifying all API alarms created has started.]]>
+      <![CDATA[The process of deactivating all active alarms has started.]]>
     </line>
     <line>
-      <![CDATA[[32m✔ [0m[32m✔ [0mThe process of verifying all API alarms created is complete.]]>
+      <![CDATA[The process of deactivating all active alarms is complete.]]>
     </line>
     <line>
       <![CDATA[ ]]>
     </line>
     <line>
-      <![CDATA[[32m✔ [0m[32m✔ [0mThe process of monitor login is complete.]]>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[The process of deactivating Test alarms has started.]]>
+    </line>
+    <line>
+      <![CDATA[[32m✔ [0m[32m✔ [0mThe process of deactivating Test alarms is complete.]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
     </line>
     <line>
       <![CDATA[Logout sucessfully.]]>
@@ -41,83 +50,92 @@
       <![CDATA[Good to see you again.]]>
     </line>
   </reporter-output>
-  <suite started-at="2026-10-03T16:08:29 IST" name="Suite" finished-at="2026-10-03T16:13:23 IST" duration-ms="294305">
+  <suite started-at="2026-10-03T18:07:21 IST" name="delete" finished-at="2026-10-03T18:09:36 IST" duration-ms="134692">
     <groups>
     </groups>
-    <test started-at="2026-10-03T16:08:29 IST" name="Test" finished-at="2026-10-03T16:13:23 IST" duration-ms="294305">
-      <class name="function.A_testClassCreate">
-        <test-method is-config="true" signature="BeforeSuite()[pri:0, instance:function.A_testClassCreate@47eaca72]" started-at="2026-10-03T16:08:24 IST" name="BeforeSuite" finished-at="2026-10-03T16:08:29 IST" duration-ms="5227" status="PASS">
+    <test started-at="2026-10-03T18:07:21 IST" name="Test" finished-at="2026-10-03T18:09:36 IST" duration-ms="134692">
+      <class name="function.A_testClassDelete">
+        <test-method is-config="true" signature="BeforeSuite()[pri:0, instance:function.A_testClassDelete@595b007d]" started-at="2026-10-03T18:07:16 IST" name="BeforeSuite" finished-at="2026-10-03T18:07:21 IST" duration-ms="5344" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Well come to RETTERAlarm Live branch-Andrew Department]]>
             </line>
           </reporter-output>
         </test-method> <!-- BeforeSuite -->
-        <test-method is-config="true" signature="BeforeTest()[pri:0, instance:function.A_testClassCreate@47eaca72]" started-at="2026-10-03T16:08:29 IST" name="BeforeTest" finished-at="2026-10-03T16:08:36 IST" duration-ms="6843" status="PASS">
+        <test-method is-config="true" signature="BeforeTest()[pri:0, instance:function.A_testClassDelete@595b007d]" started-at="2026-10-03T18:07:21 IST" name="BeforeTest" finished-at="2026-10-03T18:07:28 IST" duration-ms="7126" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Logged in user-bhupesh+live_bhdeptuser@atinatechnology.in]]>
             </line>
           </reporter-output>
         </test-method> <!-- BeforeTest -->
-        <test-method is-config="true" signature="createObject()[pri:0, instance:function.A_testClassCreate@47eaca72]" started-at="2026-10-03T16:08:36 IST" name="createObject" finished-at="2026-10-03T16:08:36 IST" duration-ms="6" status="PASS">
+        <test-method is-config="true" signature="createObject()[pri:0, instance:function.A_testClassDelete@595b007d]" started-at="2026-10-03T18:07:28 IST" name="createObject" finished-at="2026-10-03T18:07:28 IST" duration-ms="7" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createObject -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@47eaca72]" started-at="2026-10-03T16:08:36 IST" name="backToHomePage" finished-at="2026-10-03T16:08:37 IST" duration-ms="1506" status="PASS">
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassDelete@595b007d]" started-at="2026-10-03T18:07:28 IST" name="backToHomePage" finished-at="2026-10-03T18:07:34 IST" duration-ms="5103" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backToHomePage -->
-        <test-method signature="verifyAllApiAlarmsCretaed()[pri:0, instance:function.A_testClassCreate@47eaca72]" started-at="2026-10-03T16:08:37 IST" name="verifyAllApiAlarmsCretaed" finished-at="2026-10-03T16:10:33 IST" duration-ms="115296" status="PASS">
+        <test-method signature="deactiveAllActiveAlarms()[pri:0, instance:function.A_testClassDelete@595b007d]" started-at="2026-10-03T18:07:34 IST" name="deactiveAllActiveAlarms" finished-at="2026-10-03T18:08:18 IST" duration-ms="44209" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[ ]]>
             </line>
             <line>
-              <![CDATA[The process of verifying all API alarms created has started.]]>
+              <![CDATA[The process of deactivating all active alarms has started.]]>
             </line>
             <line>
-              <![CDATA[[32m✔ [0m[32m✔ [0mThe process of verifying all API alarms created is complete.]]>
+              <![CDATA[The process of deactivating all active alarms is complete.]]>
             </line>
             <line>
               <![CDATA[ ]]>
             </line>
           </reporter-output>
-        </test-method> <!-- verifyAllApiAlarmsCretaed -->
-        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassCreate@47eaca72]" started-at="2026-10-03T16:10:33 IST" name="backToHomePage2" finished-at="2026-10-03T16:10:45 IST" duration-ms="11872" status="PASS">
+        </test-method> <!-- deactiveAllActiveAlarms -->
+        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassDelete@595b007d]" started-at="2026-10-03T18:08:18 IST" name="backToHomePage2" finished-at="2026-10-03T18:08:27 IST" duration-ms="9341" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyAllApiAlarmsCretaed status=SUCCESS method=A_testClassCreate.verifyAllApiAlarmsCretaed()[pri:0, instance:function.A_testClassCreate@47eaca72]]]]>
+                <![CDATA[[TestResult name=deactiveAllActiveAlarms status=SUCCESS method=A_testClassDelete.deactiveAllActiveAlarms()[pri:0, instance:function.A_testClassDelete@595b007d]]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backToHomePage2 -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@47eaca72]" started-at="2026-10-03T16:10:45 IST" name="backToHomePage" finished-at="2026-10-03T16:10:46 IST" duration-ms="1362" status="PASS">
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassDelete@595b007d]" started-at="2026-10-03T18:08:27 IST" name="backToHomePage" finished-at="2026-10-03T18:08:32 IST" duration-ms="5163" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backToHomePage -->
-        <test-method signature="checkAlarmDisplayedOnMonitors()[pri:0, instance:function.A_testClassCreate@47eaca72]" started-at="2026-10-03T16:10:46 IST" name="checkAlarmDisplayedOnMonitors" finished-at="2026-10-03T16:13:06 IST" duration-ms="140173" status="PASS">
+        <test-method signature="deactiveBgTestActiveAlarmsFromPlaningList()[pri:0, instance:function.A_testClassDelete@595b007d]" started-at="2026-10-03T18:08:32 IST" name="deactiveBgTestActiveAlarmsFromPlaningList" finished-at="2026-10-03T18:09:23 IST" duration-ms="50583" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[[32m✔ [0m[32m✔ [0mThe process of monitor login is complete.]]>
+              <![CDATA[ ]]>
+            </line>
+            <line>
+              <![CDATA[The process of deactivating Test alarms has started.]]>
+            </line>
+            <line>
+              <![CDATA[[32m✔ [0m[32m✔ [0mThe process of deactivating Test alarms is complete.]]>
+            </line>
+            <line>
+              <![CDATA[ ]]>
             </line>
           </reporter-output>
-        </test-method> <!-- checkAlarmDisplayedOnMonitors -->
-        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassCreate@47eaca72]" started-at="2026-10-03T16:13:06 IST" name="backToHomePage2" finished-at="2026-10-03T16:13:20 IST" duration-ms="13526" status="PASS">
+        </test-method> <!-- deactiveBgTestActiveAlarmsFromPlaningList -->
+        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassDelete@595b007d]" started-at="2026-10-03T18:09:23 IST" name="backToHomePage2" finished-at="2026-10-03T18:09:32 IST" duration-ms="9143" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=checkAlarmDisplayedOnMonitors status=SUCCESS method=A_testClassCreate.checkAlarmDisplayedOnMonitors()[pri:0, instance:function.A_testClassCreate@47eaca72] output=[32m✔ [0m[32m✔ [0mThe process of monitor login is complete.]]]>
+                <![CDATA[[TestResult name=deactiveBgTestActiveAlarmsFromPlaningList status=SUCCESS method=A_testClassDelete.deactiveBgTestActiveAlarmsFromPlaningList()[pri:0, instance:function.A_testClassDelete@595b007d]]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backToHomePage2 -->
-        <test-method is-config="true" signature="logOut()[pri:0, instance:function.A_testClassCreate@47eaca72]" started-at="2026-10-03T16:13:20 IST" name="logOut" finished-at="2026-10-03T16:13:23 IST" duration-ms="3696" status="PASS">
+        <test-method is-config="true" signature="logOut()[pri:0, instance:function.A_testClassDelete@595b007d]" started-at="2026-10-03T18:09:32 IST" name="logOut" finished-at="2026-10-03T18:09:36 IST" duration-ms="3665" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Logout sucessfully.]]>
@@ -127,14 +145,14 @@
             </line>
           </reporter-output>
         </test-method> <!-- logOut -->
-        <test-method is-config="true" signature="AfterTest()[pri:0, instance:function.A_testClassCreate@47eaca72]" started-at="2026-10-03T16:13:23 IST" name="AfterTest" finished-at="2026-10-03T16:13:23 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="AfterTest()[pri:0, instance:function.A_testClassDelete@595b007d]" started-at="2026-10-03T18:09:36 IST" name="AfterTest" finished-at="2026-10-03T18:09:36 IST" duration-ms="316" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Refresh the URL before successfully closing the browser.]]>
             </line>
           </reporter-output>
         </test-method> <!-- AfterTest -->
-        <test-method is-config="true" signature="AfterSute()[pri:0, instance:function.A_testClassCreate@47eaca72]" started-at="2026-10-03T16:13:23 IST" name="AfterSute" finished-at="2026-10-03T16:13:24 IST" duration-ms="324" status="PASS">
+        <test-method is-config="true" signature="AfterSute()[pri:0, instance:function.A_testClassDelete@595b007d]" started-at="2026-10-03T18:09:36 IST" name="AfterSute" finished-at="2026-10-03T18:09:36 IST" duration-ms="251" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Browser close sucessfully.]]>
@@ -147,7 +165,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- AfterSute -->
-      </class> <!-- function.A_testClassCreate -->
+      </class> <!-- function.A_testClassDelete -->
     </test> <!-- Test -->
-  </suite> <!-- Suite -->
+  </suite> <!-- delete -->
 </testng-results>

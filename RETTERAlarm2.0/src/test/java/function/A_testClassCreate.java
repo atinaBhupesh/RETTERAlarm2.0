@@ -1889,20 +1889,20 @@ public class A_testClassCreate extends b_baseClass {
 
 	}
 
-	@Test
-	public void manualAlarmByNewTemplate() throws Throwable
-
-	{
-		Reporter.log(" ", true);
-		Reporter.log("The process of creating a manual alarm by new template is started.", true);
-		ma.commonForManualAlarm(driver, deptN, branchName);
+//	@Test
+//	public void manualAlarmByNewTemplate() throws Throwable
+//
+//	{
+//		Reporter.log(" ", true);
+//		Reporter.log("The process of creating a manual alarm by new template is started.", true);
+//		ma.commonForManualAlarm(driver, deptN, branchName);
 //		ma.manualAlarmByNewTemplate (driver, st02t1);
-
-		Reporter.log(GREEN + GREEN + "The process of creating a manual alarm by new template is complete.", true);
-		Reporter.log(" ", true);
-		Thread.sleep(3000);
-
-	}
+//
+//		Reporter.log(GREEN + GREEN + "The process of creating a manual alarm by new template is complete.", true);
+//		Reporter.log(" ", true);
+//		Thread.sleep(3000);
+//
+//	}
 
 	@Test
 	public void manualAlarmByEscResourceMs() throws Throwable

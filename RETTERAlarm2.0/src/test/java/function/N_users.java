@@ -568,16 +568,20 @@ public class N_users extends b_baseClass {
 		act.sendKeys(String.valueOf(contactNoFF)).perform();
 
 		FileInputStream in = new FileInputStream(filePath);
+
 		XSSFWorkbook wb = new XSSFWorkbook(in);
 		XSSFSheet sheet = wb.getSheetAt(0);
 
-		Row row = sheet.createRow(48);//
-		row.createCell(1).setCellValue(contactNoFF); // Cell B
+		Row row = sheet.createRow(48);
+
+		row.createCell(0).setCellValue("contactNo_FF"); // Column A
+		row.createCell(1).setCellValue(contactNoFF); // Column B
 
 		in.close();
 
 		FileOutputStream out = new FileOutputStream(filePath);
 		wb.write(out);
+
 		out.close();
 		wb.close();
 
@@ -1079,18 +1083,20 @@ public class N_users extends b_baseClass {
 
 		act.moveToElement(saveAndContinue).click().build().perform();
 		Thread.sleep(1000);
-
 		FileInputStream in = new FileInputStream(filePath);
 		XSSFWorkbook wb = new XSSFWorkbook(in);
 		XSSFSheet sheet = wb.getSheetAt(0);
 
-		// Email in B46
+		// Email in A46 / B46
+		sheet.getRow(45).createCell(0).setCellValue("email_FF");
 		sheet.getRow(45).createCell(1).setCellValue(email);
 
-		// First Name in B47
+		// First Name in A47 / B47
+		sheet.getRow(46).createCell(0).setCellValue("firstName_FF");
 		sheet.getRow(46).createCell(1).setCellValue(firstName);
 
-		// Last Name in B48
+		// Last Name in A48 / B48
+		sheet.getRow(47).createCell(0).setCellValue("lastName_FF");
 		sheet.getRow(47).createCell(1).setCellValue(lastName);
 
 		in.close();
@@ -1100,7 +1106,7 @@ public class N_users extends b_baseClass {
 		wb.write(out);
 		out.close();
 		wb.close();
-
+		
 		if (firfighterRole.isDisplayed()) {
 
 			switch (role) {
@@ -1333,16 +1339,20 @@ public class N_users extends b_baseClass {
 		act.sendKeys(String.valueOf(contactNo_FF)).perform();
 
 		FileInputStream in = new FileInputStream(filePath);
+
 		XSSFWorkbook wb = new XSSFWorkbook(in);
 		XSSFSheet sheet = wb.getSheetAt(0);
 
-		Row row = sheet.createRow(47);//
-		row.createCell(1).setCellValue(newVehicleName); // Cell B
+		Row row = sheet.createRow(49);
+
+		row.createCell(0).setCellValue("newVehicleName"); // Column A
+		row.createCell(1).setCellValue(newVehicleName); // Column B
 
 		in.close();
 
 		FileOutputStream out = new FileOutputStream(filePath);
 		wb.write(out);
+
 		out.close();
 		wb.close();
 

@@ -321,16 +321,20 @@ public class G_resource extends b_baseClass {
 		Thread.sleep(5000);
 
 		FileInputStream in = new FileInputStream(filePath);
+
 		XSSFWorkbook wb = new XSSFWorkbook(in);
 		XSSFSheet sheet = wb.getSheetAt(0);
 
-		Row row = sheet.createRow(24); // Row 23
-		row.createCell(1).setCellValue(title); // Cell B
+		Row row = sheet.createRow(24);
+
+		row.createCell(0).setCellValue("ChatGroupByFireFighterMS"); // Column A
+		row.createCell(1).setCellValue(title); // Column B
 
 		in.close();
 
 		FileOutputStream out = new FileOutputStream(filePath);
 		wb.write(out);
+
 		out.close();
 		wb.close();
 
@@ -427,16 +431,20 @@ public class G_resource extends b_baseClass {
 		Thread.sleep(5000);
 
 		FileInputStream in = new FileInputStream(filePath);
+
 		XSSFWorkbook wb = new XSSFWorkbook(in);
 		XSSFSheet sheet = wb.getSheetAt(0);
 
-		Row row = sheet.createRow(21); // Row 22
-		row.createCell(1).setCellValue(title); // Cell B
+		Row row = sheet.createRow(21);
+
+		row.createCell(0).setCellValue("NewResource"); // Column A
+		row.createCell(1).setCellValue(title); // Column B
 
 		in.close();
 
 		FileOutputStream out = new FileOutputStream(filePath);
 		wb.write(out);
+
 		out.close();
 		wb.close();
 

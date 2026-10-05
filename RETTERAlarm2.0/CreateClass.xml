@@ -7,19 +7,7 @@
 
 			<methods>
 			
-			<include name="manualaByAttributeMSLP" />
-				<include name="manualaByAttributeSingleStation" />
-				
-				<include name="manualAlarmByResourceMsHP" />
-				<include name="manualAlarmByResourceMsLP" />
-				<include name="manualAlarmByUersMs" />
-
-
-				<include name="manualAlarmByEscResourceSingleStation" />
-				<include name="manualAlarmByEscResourceMs" />
-
-
-
+			<include name="createNewEscalationResource" />
 				
 			
 				

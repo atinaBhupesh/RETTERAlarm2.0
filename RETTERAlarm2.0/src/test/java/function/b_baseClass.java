@@ -97,6 +97,7 @@ public class b_baseClass {
 
 	String resourceNewUser;
 	String attributeNewUser;
+	
 	String newStationName;
 	String newStationMonitorName;
 

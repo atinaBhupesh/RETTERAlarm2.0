@@ -4476,16 +4476,20 @@ public class F_manualTestAlarm extends b_baseClass {
 		Thread.sleep(2000);
 
 		FileInputStream in = new FileInputStream(filePath);
+
 		XSSFWorkbook wb = new XSSFWorkbook(in);
 		XSSFSheet sheet = wb.getSheetAt(0);
 
 		Row row = sheet.createRow(29);
-		row.createCell(1).setCellValue(title); // Cell B
+
+		row.createCell(0).setCellValue("ManualAlarmNameForChat"); // Column A
+		row.createCell(1).setCellValue(title); // Column B
 
 		in.close();
 
 		FileOutputStream out = new FileOutputStream(filePath);
 		wb.write(out);
+
 		out.close();
 		wb.close();
 
