@@ -154,12 +154,13 @@ public class U_MonitorLogIn extends b_baseClass {
 		
 		int alarmCount = alarmTitle.size();
 		Thread.sleep(2000);
+		int totalAlarms = 0;
 
 		System.out.println("Number of alarms displayed on monitor: " + alarmCount);
 		
 		if (alarmCount==0)
 		{
-			  System.out.println("No alarms for closed on monitor");
+			  System.out.println(GREEN+"No alarms for closed on monitor");
 		}
 		
 		else {
@@ -173,13 +174,15 @@ public class U_MonitorLogIn extends b_baseClass {
 		    Thread.sleep(2000);
 		    yesCloseAlarm.click();
 		    Thread.sleep(2000);
-		    System.out.println("Alarm no-" + i + " closed successfully");
+		    System.out.println(GREEN+"Alarm no-" + i + " closed successfully");
+		    totalAlarms++;
 		    
 		    
 		    
 		}
 		
 	}
+		System.out.println(GREEN+"Total alarms closed from monitor: " + totalAlarms);
 		System.out.println();
 		driver.close();
 		driver.switchTo().window(parentWindow);
