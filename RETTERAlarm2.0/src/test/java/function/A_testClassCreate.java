@@ -43,15 +43,12 @@ public class A_testClassCreate extends b_baseClass {
 	S_AvailabilityRequest arequest;
 	T_checkList checkL;
 	U_MonitorLogIn mlogin;
-	
-	
 
 	String todaysDate;
 	String todaysDateG;
 	String todaysDateddmmyy;
 	String todaysDateD;
-	
-	
+
 	String todaysDate1;
 	String tomorrowDate;
 	String tomorrowDateG;
@@ -84,10 +81,9 @@ public class A_testClassCreate extends b_baseClass {
 
 	String timeAfter11MinHH;
 	String timeAfter11MinMM;
-	
+
 	String timeAfter11MinHHG;
 	String timeAfter11MinMMG;
-
 
 	String timeAfter15MinHH;
 	String imeAfter15MinMM;
@@ -139,7 +135,7 @@ public class A_testClassCreate extends b_baseClass {
 		att = new Q_Attribute(driver);
 		fs = new R_FileSections(driver);
 		arequest = new S_AvailabilityRequest(driver);
-		checkL = new T_checkList (driver);
+		checkL = new T_checkList(driver);
 		mlogin = new U_MonitorLogIn(driver);
 
 	}
@@ -152,8 +148,7 @@ public class A_testClassCreate extends b_baseClass {
 		tc.catchDateTime(driver);
 
 		todaysDate = tc.todaysDate;
-		todaysDateG= tc.todaysDateG;
-		
+		todaysDateG = tc.todaysDateG;
 
 		todaysDateddmmyy = tc.todaysDateddmmyy;
 		todaysDateD = tc.todaysDateD;
@@ -197,10 +192,9 @@ public class A_testClassCreate extends b_baseClass {
 
 		timeAfter11MinHH = tc.timeAfter11MinHH;
 		timeAfter11MinMM = tc.timeAfter11MinMM;
-		
+
 		timeAfter11MinHHG = tc.timeAfter11MinHHG;
 		timeAfter11MinMMG = tc.timeAfter11MinMMG;
-
 
 		timeAfter15MinHH = tc.timeAfter15MinHH;
 		imeAfter15MinMM = tc.timeAfter15MinMM;
@@ -226,118 +220,81 @@ public class A_testClassCreate extends b_baseClass {
 
 		Reporter.log(" ", true);
 	}
-	
+
 	@Test
-	public void checkAlarmDisplayedOnMonitors () throws Throwable {
-		
-		
+	public void checkAlarmDisplayedOnMonitors() throws Throwable {
 
-		List<String> createdAlarmTitles =Arrays.asList( 
-				BGCAv1MS,
-				BGNEWApiMSHP,
-				BGNewAPiAlarmUpdated,
-				BGNEWApiEmailtoSt01fromSt02,
-				BGNEWAPIVehicleuser,
-				BGCNewAPist01esc,
-				BGNewApiEsc02to01LP,
-				BGNewAPiexst01from02HP,
-				BGCNewAPiexst01from02LP,
-				NewDMEAlarmNewAPIHP,
-				BGDMEAlarmNewAPILP, 
-				
-				 manualaByAttributeMSLP,
-				 manualaByAttributeSingleStation,
-				 manualAlarmByResourceMsHP,
-				 manualAlarmByResourceMsLP,
-				 manualAlarmByUersMs,
-				 manualAlarmByEscResourceSingleStation,
-				 manualAlarmByEscResourceMs
-				
-			);
-		
-		mlogin.checkAlarmDisplayedOnMonitors( driver,branchName,St01M1 , createdAlarmTitles);
-		
-		
+		List<String> createdAlarmTitles = Arrays.asList(BGCAv1MS, BGNEWApiMSHP, BGNewAPiAlarmUpdated,
+				BGNEWApiEmailtoSt01fromSt02, BGNEWAPIVehicleuser, BGCNewAPist01esc, BGNewApiEsc02to01LP,
+				BGNewAPiexst01from02HP, BGCNewAPiexst01from02LP, NewDMEAlarmNewAPIHP, BGDMEAlarmNewAPILP,
 
-	 	Reporter.log(GREEN + GREEN + "The process of monitor login is complete.", true);
-	 	
+				manualaByAttributeMSLP, manualaByAttributeSingleStation, manualAlarmByResourceMsHP,
+				manualAlarmByResourceMsLP, manualAlarmByUersMs, manualAlarmByEscResourceSingleStation,
+				manualAlarmByEscResourceMs, testAlarm_OneTime_Attribute
 
-		
+		);
+
+		mlogin.checkAlarmDisplayedOnMonitors(driver, branchName, St01M1, createdAlarmTitles);
+
+		Reporter.log(GREEN + GREEN + "The process of monitor login is complete.", true);
+
 	}
-	
+
 	@Test
-	public void verifyingAllTestAlarmAfterCronRun () throws Throwable {
-		List<String> alarms = Arrays.asList(
-			    testAlarm_OneTime_Attribute,
-			    testAlarm_recursiv_daily_Resource,
-			    testAlarm_recursiv_weekly_users,
-			    testAlarm_Recursive_Monthly_DayWise_Attribute,
-			    testAlarm_Recursive_Monthly_DateyWise_Attribute
-			);
-	
+	public void verifyingAllTestAlarmAfterCronRun() throws Throwable {
+		List<String> alarms = Arrays.asList(testAlarm_OneTime_Attribute, testAlarm_recursiv_daily_Resource,
+				testAlarm_recursiv_weekly_users, testAlarm_Recursive_Monthly_DayWise_Attribute,
+				testAlarm_Recursive_Monthly_DateyWise_Attribute);
+
 		Reporter.log(" ", true);
 		Reporter.log("The process of verifying all test alarms created after cron run has started.", true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.verifyAllAlarmsCretaed(driver,  todaysDate, todaysDate1,  alarms, filePath);
+		ma.verifyAllAlarmsCretaed(driver, todaysDate, todaysDate1, alarms, filePath);
 
-		Reporter.log(GREEN + GREEN + "The process of verifying all test alarms created after cron run is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of verifying all test alarms created after cron run is complete.",
+				true);
 		Reporter.log(" ", true);
 	}
-	
-	
-	@Test
-	public void createAlarmChecklists () throws Throwable {
 
-	
-		
+	@Test
+	public void createAlarmChecklists() throws Throwable {
+
 		Reporter.log(" ", true);
 		Reporter.log("The process of creating the Alarm check list has started.", true);
-		
-		checkL.commanCheckList(driver,  deptN,  st01N,  "AlarmChecklists",  timeHHMMSSG);
-	 	Reporter.log(GREEN + GREEN + "The process of creating the Alarm check list is complete.", true);
+
+		checkL.commanCheckList(driver, deptN, st01N, "AlarmChecklists", timeHHMMSSG);
+		Reporter.log(GREEN + GREEN + "The process of creating the Alarm check list is complete.", true);
 		Reporter.log(" ", true);
 	}
-	
-	
-	
-	@Test
-	public void createNormalCheckList () throws Throwable {
 
-	
-		
+	@Test
+	public void createNormalCheckList() throws Throwable {
+
 		Reporter.log(" ", true);
 		Reporter.log("The process of creating the Normal check list has started.", true);
-		
-		checkL.commanCheckList(driver,  deptN,  st01N,  "NormalChecklists",  timeHHMMSSG);
-	 	Reporter.log(GREEN + GREEN + "The process of creating the Normal check list is complete.", true);
+
+		checkL.commanCheckList(driver, deptN, st01N, "NormalChecklists", timeHHMMSSG);
+		Reporter.log(GREEN + GREEN + "The process of creating the Normal check list is complete.", true);
 		Reporter.log(" ", true);
 	}
-	
-	
-	
-	
-	
-	
+
 	@Test
 	public void createInformationWithEmailSms() throws Throwable {
 
-	
-		
 		Reporter.log(" ", true);
 		Reporter.log("The process of creating information with email and SMS has started.", true);
 		info.common_information(driver, branchName);
-		info.createInformationWithEmailSms( driver,  st01N,  todaysDate,  timeHHMMSS,
-				st01RCallSms,  branchName);
+		info.createInformationWithEmailSms(driver, st01N, todaysDate, timeHHMMSS, st01RCallSms, branchName);
 
-	 	Reporter.log(GREEN + GREEN + "The process of creating information with email and SMS is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of creating information with email and SMS is complete.", true);
 		Reporter.log(" ", true);
 	}
-	
+
 	@Test
 	public void createAvailabilityRequestMultipleDays() throws Throwable {
 
 		tc.catchDateTime(driver);
-		todaysDateG= tc.todaysDateG;
+		todaysDateG = tc.todaysDateG;
 		tomorrowDateG = tc.tomorrowDateG;
 		todaysDayG = tc.todaysDayG;
 		tomorrowDayG = tc.tomorrowDayG;
@@ -352,29 +309,25 @@ public class A_testClassCreate extends b_baseClass {
 		timeAfter9MinMMG = tc.timeAfter9MinMMG;
 		timeAfter11MinHHG = tc.timeAfter11MinHHG;
 		timeAfter11MinMMG = tc.timeAfter11MinMMG;
-		
+
 		Reporter.log(" ", true);
 		Reporter.log("The process of creating availability request for multiple days has started.", true);
 
-		arequest.createAvailabilityRequest(driver,  branchName,  "MultipleDays",  todaysDateG,
-				 timeHHMMSSG,  deptN,  tomorrowDateG,  timeAfter5MinHHG,  timeAfter5MinMMG,
-				 timeAfter7MinHHG,  timeAfter7MinMMG,  timeAfter9MinHHG,  timeAfter9MinMMG,
-				 todaysDayG,  tomorrowDayG,  dayAfterFourDaysG,  timeAfter11MinHHG,
-				 timeAfter11MinMMG, filePath);
+		arequest.createAvailabilityRequest(driver, branchName, "MultipleDays", todaysDateG, timeHHMMSSG, deptN,
+				tomorrowDateG, timeAfter5MinHHG, timeAfter5MinMMG, timeAfter7MinHHG, timeAfter7MinMMG, timeAfter9MinHHG,
+				timeAfter9MinMMG, todaysDayG, tomorrowDayG, dayAfterFourDaysG, timeAfter11MinHHG, timeAfter11MinMMG,
+				filePath);
 
-		Reporter.log(GREEN + GREEN + "The process of creating availability request for multiple days is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of creating availability request for multiple days is complete.",
+				true);
 		Reporter.log(" ", true);
 	}
-	
-	
-	
-	
 
 	@Test
 	public void createAvailabilityRequestRecursive() throws Throwable {
 
 		tc.catchDateTime(driver);
-		todaysDateG= tc.todaysDateG;
+		todaysDateG = tc.todaysDateG;
 		tomorrowDateG = tc.tomorrowDateG;
 		todaysDayG = tc.todaysDayG;
 		tomorrowDayG = tc.tomorrowDayG;
@@ -393,13 +346,13 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of creating availability request for recursive schedule has started.", true);
 
-		arequest.createAvailabilityRequest(driver,  branchName,  "Recursive",  todaysDateG,
-				 timeHHMMSSG,  deptN,  tomorrowDateG,  timeAfter5MinHHG,  timeAfter5MinMMG,
-				 timeAfter7MinHHG,  timeAfter7MinMMG,  timeAfter9MinHHG,  timeAfter9MinMMG,
-				 todaysDayG,  tomorrowDayG,  dayAfterFourDaysG,  timeAfter11MinHHG,
-				 timeAfter11MinMMG, filePath);
+		arequest.createAvailabilityRequest(driver, branchName, "Recursive", todaysDateG, timeHHMMSSG, deptN,
+				tomorrowDateG, timeAfter5MinHHG, timeAfter5MinMMG, timeAfter7MinHHG, timeAfter7MinMMG, timeAfter9MinHHG,
+				timeAfter9MinMMG, todaysDayG, tomorrowDayG, dayAfterFourDaysG, timeAfter11MinHHG, timeAfter11MinMMG,
+				filePath);
 
-		Reporter.log(GREEN + GREEN + "The process of creating availability request for recursive schedule is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of creating availability request for recursive schedule is complete.",
+				true);
 		Reporter.log(" ", true);
 	}
 
@@ -407,7 +360,7 @@ public class A_testClassCreate extends b_baseClass {
 	public void createAvailabilityRequestOneTimeSchedule() throws Throwable {
 
 		tc.catchDateTime(driver);
-		todaysDateG= tc.todaysDateG;
+		todaysDateG = tc.todaysDateG;
 		tomorrowDateG = tc.tomorrowDateG;
 		todaysDayG = tc.todaysDayG;
 		tomorrowDayG = tc.tomorrowDayG;
@@ -425,23 +378,21 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of creating availability request for one-time scheduled has started.", true);
 
-		arequest.createAvailabilityRequest(driver,  branchName,  "OneTime>Schedule",  todaysDateG,
-				 timeHHMMSSG,  deptN,  tomorrowDateG,  timeAfter5MinHHG,  timeAfter5MinMMG,
-				 timeAfter7MinHHG,  timeAfter7MinMMG,  timeAfter9MinHHG,  timeAfter9MinMMG,
-				 todaysDayG,  tomorrowDayG,  dayAfterFourDaysG,  timeAfter11MinHHG,
-				 timeAfter11MinMMG, filePath);
+		arequest.createAvailabilityRequest(driver, branchName, "OneTime>Schedule", todaysDateG, timeHHMMSSG, deptN,
+				tomorrowDateG, timeAfter5MinHHG, timeAfter5MinMMG, timeAfter7MinHHG, timeAfter7MinMMG, timeAfter9MinHHG,
+				timeAfter9MinMMG, todaysDayG, tomorrowDayG, dayAfterFourDaysG, timeAfter11MinHHG, timeAfter11MinMMG,
+				filePath);
 
-		Reporter.log(GREEN + GREEN + "The process of creating availability request for one-time scheduled is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of creating availability request for one-time scheduled is complete.",
+				true);
 		Reporter.log(" ", true);
 	}
 
 	@Test
 	public void createAvailabilityRequestOneTimeImmediate() throws Throwable {
 
-		
-		
 		tc.catchDateTime(driver);
-		todaysDateG= tc.todaysDateG;
+		todaysDateG = tc.todaysDateG;
 		tomorrowDateG = tc.tomorrowDateG;
 		todaysDayG = tc.todaysDayG;
 		tomorrowDayG = tc.tomorrowDayG;
@@ -460,21 +411,21 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of creating availability request for one-time immediate has started.", true);
 
-		arequest.createAvailabilityRequest(driver,  branchName,  "OneTime>Immediate",  todaysDateG,
-				 timeHHMMSSG,  deptN,  tomorrowDateG,  timeAfter5MinHHG,  timeAfter5MinMMG,
-				 timeAfter7MinHHG,  timeAfter7MinMMG,  timeAfter9MinHHG,  timeAfter9MinMMG,
-				 todaysDayG,  tomorrowDayG,  dayAfterFourDaysG,  timeAfter11MinHHG,
-				 timeAfter11MinMMG, filePath);
+		arequest.createAvailabilityRequest(driver, branchName, "OneTime>Immediate", todaysDateG, timeHHMMSSG, deptN,
+				tomorrowDateG, timeAfter5MinHHG, timeAfter5MinMMG, timeAfter7MinHHG, timeAfter7MinMMG, timeAfter9MinHHG,
+				timeAfter9MinMMG, todaysDayG, tomorrowDayG, dayAfterFourDaysG, timeAfter11MinHHG, timeAfter11MinMMG,
+				filePath);
 
-		Reporter.log(GREEN + GREEN + "The process of creating availability request for one-time immediate is complete.", true);
+		Reporter.log(GREEN + GREEN + "The process of creating availability request for one-time immediate is complete.",
+				true);
 		Reporter.log(" ", true);
 	}
-	
+
 	@Test
 	public void createAvailabilityRequestOneTimeImmediateCallSmsMail() throws Throwable {
 
 		tc.catchDateTime(driver);
-		todaysDateG= tc.todaysDateG;
+		todaysDateG = tc.todaysDateG;
 		tomorrowDateG = tc.tomorrowDateG;
 		todaysDayG = tc.todaysDayG;
 		tomorrowDayG = tc.tomorrowDayG;
@@ -491,41 +442,41 @@ public class A_testClassCreate extends b_baseClass {
 		timeAfter11MinMMG = tc.timeAfter11MinMMG;
 
 		Reporter.log(" ", true);
-		Reporter.log("The process of creating availability request for one-time immediate with call, SMS, and email has started.", true);
+		Reporter.log(
+				"The process of creating availability request for one-time immediate with call, SMS, and email has started.",
+				true);
 
-		arequest.createAvailabilityRequest(driver,  "1call",  "OneTime>Immediate",  todaysDateG,
-				 timeHHMMSSG,  deptN,  tomorrowDateG,  timeAfter5MinHHG,  timeAfter5MinMMG,
-				 timeAfter7MinHHG,  timeAfter7MinMMG,  timeAfter9MinHHG,  timeAfter9MinMMG,
-				 todaysDayG,  tomorrowDayG,  dayAfterFourDaysG,  timeAfter11MinHHG,
-				 timeAfter11MinMMG, filePath);
+		arequest.createAvailabilityRequest(driver, "1call", "OneTime>Immediate", todaysDateG, timeHHMMSSG, deptN,
+				tomorrowDateG, timeAfter5MinHHG, timeAfter5MinMMG, timeAfter7MinHHG, timeAfter7MinMMG, timeAfter9MinHHG,
+				timeAfter9MinMMG, todaysDayG, tomorrowDayG, dayAfterFourDaysG, timeAfter11MinHHG, timeAfter11MinMMG,
+				filePath);
 
-		Reporter.log(GREEN + GREEN + "The process of creating availability request for one-time immediate with call, SMS, and email is complete.", true);
+		Reporter.log(GREEN + GREEN
+				+ "The process of creating availability request for one-time immediate with call, SMS, and email is complete.",
+				true);
 		Reporter.log(" ", true);
 	}
 
-	
 	@Test
 	public void verifyAvailabilityRequestCreatedAfterCronExecution() throws Throwable {
 
-		List<String> availabilityRequests = Arrays.asList(
-				createAvailabilityRequestOneTimeImmediate,
-				createAvailabilityRequestOneTimeSchedule,
-				createAvailabilityRequestRecursive, 
+		List<String> availabilityRequests = Arrays.asList(createAvailabilityRequestOneTimeImmediate,
+				createAvailabilityRequestOneTimeSchedule, createAvailabilityRequestRecursive,
 				createAvailabilityRequestMultipleDays
-			    
-			);
-		
-		
+
+		);
+
 		Reporter.log(" ", true);
 		Reporter.log("The process of verifying availability request created after cron execution has started.", true);
-		arequest.verifyAvailabilityRequestCreatedAfterCronExecution(driver,  todaysDateG, availabilityRequests );
+		arequest.verifyAvailabilityRequestCreatedAfterCronExecution(driver, todaysDateG, availabilityRequests);
 
-		Reporter.log(GREEN + GREEN + "The process of verifying availability request created after cron execution is complete.", true);
+		Reporter.log(
+				GREEN + GREEN
+						+ "The process of verifying availability request created after cron execution is complete.",
+				true);
 		Reporter.log(" ", true);
 	}
-	
-	
-	
+
 	@Test
 	public void addNewFile() throws Throwable {
 
@@ -575,20 +526,17 @@ public class A_testClassCreate extends b_baseClass {
 
 	@Test
 	public void verifyAllApiAlarmsCretaed() throws Throwable {
-		List<String> alarms = Arrays.asList(
-			    ApiAlarm01, ApiAlarm02, ApiAlarm03, ApiAlarm04,
-			    ApiAlarm05, ApiAlarm06, ApiAlarm07, ApiAlarm08,
-			    ApiAlarm09, ApiAlarm10, ApiAlarm11, ApiAlarm12,
-			    ApiAlarm13, ApiAlarm14
-			    
-			);
+		List<String> alarms = Arrays.asList(ApiAlarm01, ApiAlarm02, ApiAlarm03, ApiAlarm04, ApiAlarm05, ApiAlarm06,
+				ApiAlarm07, ApiAlarm08, ApiAlarm09, ApiAlarm10, ApiAlarm11, ApiAlarm12, ApiAlarm13, ApiAlarm14
+
+		);
 		System.out.println(ApiAlarm14);
-		
+
 		Reporter.log(" ", true);
 		Reporter.log("The process of verifying all API alarms created has started.", true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
 
-		ma.verifyAllAlarmsCretaed(driver,  todaysDate, todaysDate1,  alarms,  filePath);
+		ma.verifyAllAlarmsCretaed(driver, todaysDate, todaysDate1, alarms, filePath);
 
 		Reporter.log(GREEN + GREEN + "The process of verifying all API alarms created is complete.", true);
 		Reporter.log(" ", true);
@@ -792,8 +740,6 @@ public class A_testClassCreate extends b_baseClass {
 		Thread.sleep(3000);
 	}
 
-	
-
 	@Test
 	public void testAlarm_recursiv_weekly_users() throws Throwable
 
@@ -840,7 +786,7 @@ public class A_testClassCreate extends b_baseClass {
 		Thread.sleep(3000);
 
 	}
-	
+
 	@Test
 	public void TestAlarm_OneTime_Resource_CallSmsEmail() throws Throwable
 
@@ -853,14 +799,15 @@ public class A_testClassCreate extends b_baseClass {
 //		System.out.println(timeAfter5MinMM);
 
 		Reporter.log(" ", true);
-		Reporter.log("The process of creating test alarm-one time by attribute with call, SMS and email for multi-station has started.", true);
-		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.TestAlarm_OneTime_Resource_CallSmsEmail( driver,  st01N,st02N,  todaysDate,
-				 timeAfter5MinHH,  timeAfter5MinMM,  st01RCallSms,  st02R1);
-
 		Reporter.log(
-				GREEN + GREEN
-						+ "The process of creating test alarm-one time by attribute with call, SMS and email for multi-station is complete.",
+				"The process of creating test alarm-one time by attribute with call, SMS and email for multi-station has started.",
+				true);
+		ma.commonForManualAlarm(driver, deptN, branchName);
+		ma.TestAlarm_OneTime_Resource_CallSmsEmail(driver, st01N, st02N, todaysDate, timeAfter5MinHH, timeAfter5MinMM,
+				st01RCallSms, st02R1);
+
+		Reporter.log(GREEN + GREEN
+				+ "The process of creating test alarm-one time by attribute with call, SMS and email for multi-station is complete.",
 				true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
@@ -882,7 +829,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log("The process of creating test alarm-one time by attribute for multi-station has started.", true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
 		ma.testAlarm_OneTime_Attribute(driver, st01N, todaysDate, timeAfter5MinHH, timeAfter5MinMM, st01V1, st01V2,
-				st01A1,filePath);
+				st01A1, filePath);
 
 		Reporter.log(
 				GREEN + GREEN
@@ -1785,7 +1732,8 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log("The process of creating a low priority multi station manual alarm by attribute  is started.",
 				true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.manualaByAttributeMSLP(driver, st01N, st02N, todaysDate, timeHHMMSS, st01V1, st01V2, st02V1, st01A1, st02A1, filePath);
+		ma.manualaByAttributeMSLP(driver, st01N, st02N, todaysDate, timeHHMMSS, st01V1, st01V2, st02V1, st01A1, st02A1,
+				filePath);
 		Reporter.log(
 				GREEN + GREEN
 						+ "The process of creating a low priority multi station manual alarm by attribute is complete.",
@@ -1802,7 +1750,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of creating a manual alarm by attribute  is started.", true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.manualaByAttributeSingleStation(driver, st01N, todaysDate, timeHHMMSS, st01V1, st01V2, st01A1,filePath);
+		ma.manualaByAttributeSingleStation(driver, st01N, todaysDate, timeHHMMSS, st01V1, st01V2, st01A1, filePath);
 
 		Reporter.log(GREEN + GREEN + "The process of creating a manual alarm by attribute is complete.", true);
 		Reporter.log(" ", true);
@@ -2353,8 +2301,6 @@ public class A_testClassCreate extends b_baseClass {
 		info.smokeForinformation();
 
 	}
-
-	
 
 	@Test
 	public void nextStage()

@@ -7,10 +7,10 @@
 
 			<methods>
 			
-			<include name="createNewEscalationResource" />
-				
 			
-				
+			<include name="verifyAllApiAlarmsCretaed" />
+			<include name="checkAlarmDisplayedOnMonitors" />
+			
 				
 					
 			</methods>

@@ -1007,20 +1007,15 @@ public class F_manualTestAlarm extends b_baseClass {
 		Assert.assertTrue(title.contains(firtsTestAlarm1), RED + "Alarm not added.");
 
 		System.out.println(GREEN + title);
-
 		FileInputStream in = new FileInputStream(filePath);
 
 		XSSFWorkbook wb = new XSSFWorkbook(in);
 		XSSFSheet sheet = wb.getSheetAt(0);
 
-		Row row = sheet.getRow(76);
+		Row row = sheet.createRow(76);
 
-		if (row == null) {
-			row = sheet.createRow(76);
-		}
-
-		row.createCell(0).setCellValue("testAlarm_Recursive_Monthly_DateyWise_Attribute");
-		row.createCell(1).setCellValue(title);
+		row.createCell(0).setCellValue("testAlarm_OneTime_Attribute"); // Column A
+		row.createCell(1).setCellValue(title); // Column B
 
 		in.close();
 

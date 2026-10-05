@@ -92,6 +92,7 @@ public class U_MonitorLogIn extends b_baseClass {
 		Thread.sleep(2000);
 
 		int alarmCount = alarmTitle.size();
+		Thread.sleep(2000);
 
 		System.out.println("Number of alarms displayed on monitor: " + alarmCount);
 
@@ -101,7 +102,7 @@ public class U_MonitorLogIn extends b_baseClass {
 		// Store all alarm titles in array
 		for (int i = 0; i < alarmCount; i++) {
 
-		    Thread.sleep(2000);
+		    
 		    actualTitles[i] = alarmTitle1.getText().trim();
 		    Thread.sleep(1000);
 		    System.out.println("actualTitles[" + i + "] = " + actualTitles[i]);
@@ -110,6 +111,7 @@ public class U_MonitorLogIn extends b_baseClass {
 		    cloeseAlarm.click();
 		    Thread.sleep(2000);
 		    yesCloseAlarm.click();
+		    Thread.sleep(2000);
 		    
 		    
 		    
