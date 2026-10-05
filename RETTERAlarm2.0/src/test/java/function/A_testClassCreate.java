@@ -234,7 +234,11 @@ public class A_testClassCreate extends b_baseClass {
 
 		);
 
-		mlogin.checkAlarmDisplayedOnMonitors(driver, branchName, St01M1, createdAlarmTitles);
+//		mlogin.loginToMonitors(driver,  branchName,  St01M1);
+		
+		
+		mlogin.checkAlarmDisplayedOnMonitors( driver,  branchName,  St01M1,
+			createdAlarmTitles);
 
 		Reporter.log(GREEN + GREEN + "The process of monitor login is complete.", true);
 

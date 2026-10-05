@@ -7,10 +7,7 @@
 
 			<methods>
 			
-			
-			<include name="verifyAllApiAlarmsCretaed" />
 			<include name="checkAlarmDisplayedOnMonitors" />
-			
 				
 					
 			</methods>

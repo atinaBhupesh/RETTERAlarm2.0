@@ -7,7 +7,7 @@
 
 
 			<methods>
-
+				<include name="cloesedAlarmFromMonitor" />
 				<include name="deleteManualAlarm" />
 				<include name="deleteTestAlarmFromAlarmList" />
 				<include name="deleteUsers" />

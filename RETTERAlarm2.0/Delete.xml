@@ -9,8 +9,8 @@
 			<methods>
 			
 			
-				<include name="deleteAvailabilityRequestFromList" />
-			<include name="deleteAvailabilityRequestFromHistory" />
+				<include name="cloesedAlarmFromMonitor" />
+		
 		
 			
 			

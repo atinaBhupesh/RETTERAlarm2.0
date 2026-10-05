@@ -31,6 +31,8 @@ public class A_testClassDelete extends b_baseClass {
 	O_stationModule stn;
 	P_monitors mo;
 	
+	U_MonitorLogIn mlogin;
+	
 	S_AvailabilityRequest arequest;
 	
 	T_checkList checkL;
@@ -75,7 +77,7 @@ public class A_testClassDelete extends b_baseClass {
 		arequest = new S_AvailabilityRequest(driver);
 		
 		checkL = new T_checkList (driver);
-		
+		mlogin = new U_MonitorLogIn(driver);
 		
 	}
 
@@ -91,6 +93,21 @@ public class A_testClassDelete extends b_baseClass {
 	public void backToHomePage() throws Throwable {
 
 		hp.backToHomePage(driver, branchName);
+	}
+	
+	
+	@Test
+	public void cloesedAlarmFromMonitor() throws Throwable
+
+	{
+		Reporter.log(" ", true);
+		Reporter.log("The process of closing the alarm has started.", true);
+		mlogin.cloesedAlarmFromMonitor (  driver,  branchName,  St01M1);
+
+		Reporter.log(GREEN + GREEN + "The process of closing the alarm is complete.", true);
+		Reporter.log(" ", true);
+		Thread.sleep(3000);
+
 	}
 	
 	
