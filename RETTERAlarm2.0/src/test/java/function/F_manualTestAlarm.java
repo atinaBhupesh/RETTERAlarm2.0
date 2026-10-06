@@ -2274,7 +2274,7 @@ public class F_manualTestAlarm extends b_baseClass {
 	}
 
 	public void CheckManualAlarmEscalationFunctionalityForMultuStation(WebDriver driver,
-			String manualAlarmNameForEsclationAlarm, String branchName) throws Throwable {
+			String manualAlarmNameForEsclationAlarm,String st01N, String branchName) throws Throwable {
 		Actions act = new Actions(driver);
 
 		// Search alarm by title
@@ -2297,12 +2297,18 @@ public class F_manualTestAlarm extends b_baseClass {
 
 		js.executeScript("arguments[0].scrollIntoView(true);", firstStataionTab);
 		Thread.sleep(3000);
-
-		secondStataionTab.click();
-		Thread.sleep(3000);
-
-		js.executeScript("arguments[0].scrollIntoView(true);", ffAtribute);
+//
+//		secondStataionTab.click();
+//		Thread.sleep(3000);
+//
+//		js.executeScript("arguments[0].scrollIntoView(true);", ffAtribute);
+//		Thread.sleep(2000);
+		
+		WebElement st=driver.findElement(By.xpath("(//span[text()='" + st01N + "'])[1]")); 
+		
+		act.moveToElement((st)).click().build().perform();
 		Thread.sleep(2000);
+		
 
 		switch (branchName) {
 		case "1":

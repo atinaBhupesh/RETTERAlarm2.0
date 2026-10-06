@@ -5,13 +5,13 @@
     <classes>
       <class name="function.A_testClassCreate">
         <methods>
+          <include name="createAlarmChecklists"/>
           <include name="AfterTest"/>
           <include name="BeforeSuite"/>
           <include name="backToHomePage2"/>
           <include name="BeforeTest"/>
           <include name="backToHomePage"/>
           <include name="logOut"/>
-          <include name="checkAlarmDisplayedOnMonitors"/>
           <include name="AfterSute"/>
           <include name="createObject"/>
         </methods>

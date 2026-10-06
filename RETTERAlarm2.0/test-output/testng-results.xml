@@ -11,10 +11,10 @@
       <![CDATA[ ]]>
     </line>
     <line>
-      <![CDATA[The process of closing the alarm has started.]]>
+      <![CDATA[The process of creating the Normal check list has started.]]>
     </line>
     <line>
-      <![CDATA[[32m✔ [0m[32m✔ [0mThe process of closing the alarm is complete.]]>
+      <![CDATA[[32m✔ [0m[32m✔ [0mThe process of creating the Normal check list is complete.]]>
     </line>
     <line>
       <![CDATA[ ]]>
@@ -38,61 +38,61 @@
       <![CDATA[Good to see you again.]]>
     </line>
   </reporter-output>
-  <suite started-at="2026-10-05T17:12:32 IST" name="delete" finished-at="2026-10-05T17:13:19 IST" duration-ms="46448">
+  <suite started-at="2026-10-06T12:51:40 IST" name="Failed suite [Failed suite [Suite]]" finished-at="2026-10-06T12:52:17 IST" duration-ms="37535">
     <groups>
     </groups>
-    <test started-at="2026-10-05T17:12:32 IST" name="Test" finished-at="2026-10-05T17:13:19 IST" duration-ms="46448">
-      <class name="function.A_testClassDelete">
-        <test-method is-config="true" signature="BeforeSuite()[pri:0, instance:function.A_testClassDelete@72d1ad2e]" started-at="2026-10-05T17:12:27 IST" name="BeforeSuite" finished-at="2026-10-05T17:12:32 IST" duration-ms="5353" status="PASS">
+    <test started-at="2026-10-06T12:51:40 IST" name="Test(failed)(failed)" finished-at="2026-10-06T12:52:17 IST" duration-ms="37535">
+      <class name="function.A_testClassCreate">
+        <test-method is-config="true" signature="BeforeSuite()[pri:0, instance:function.A_testClassCreate@1aafa419]" started-at="2026-10-06T12:51:35 IST" name="BeforeSuite" finished-at="2026-10-06T12:51:40 IST" duration-ms="5206" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Well come to RETTERAlarm Live branch-Andrew Department]]>
             </line>
           </reporter-output>
         </test-method> <!-- BeforeSuite -->
-        <test-method is-config="true" signature="BeforeTest()[pri:0, instance:function.A_testClassDelete@72d1ad2e]" started-at="2026-10-05T17:12:32 IST" name="BeforeTest" finished-at="2026-10-05T17:12:39 IST" duration-ms="6942" status="PASS">
+        <test-method is-config="true" signature="BeforeTest()[pri:0, instance:function.A_testClassCreate@1aafa419]" started-at="2026-10-06T12:51:40 IST" name="BeforeTest" finished-at="2026-10-06T12:51:47 IST" duration-ms="6812" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Logged in user-bhupesh+live_bhdeptuser@atinatechnology.in]]>
             </line>
           </reporter-output>
         </test-method> <!-- BeforeTest -->
-        <test-method is-config="true" signature="createObject()[pri:0, instance:function.A_testClassDelete@72d1ad2e]" started-at="2026-10-05T17:12:39 IST" name="createObject" finished-at="2026-10-05T17:12:39 IST" duration-ms="17" status="PASS">
+        <test-method is-config="true" signature="createObject()[pri:0, instance:function.A_testClassCreate@1aafa419]" started-at="2026-10-06T12:51:47 IST" name="createObject" finished-at="2026-10-06T12:51:47 IST" duration-ms="10" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createObject -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassDelete@72d1ad2e]" started-at="2026-10-05T17:12:39 IST" name="backToHomePage" finished-at="2026-10-05T17:12:44 IST" duration-ms="5033" status="PASS">
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@1aafa419]" started-at="2026-10-06T12:51:47 IST" name="backToHomePage" finished-at="2026-10-06T12:51:48 IST" duration-ms="1499" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backToHomePage -->
-        <test-method signature="cloesedAlarmFromMonitor()[pri:0, instance:function.A_testClassDelete@72d1ad2e]" started-at="2026-10-05T17:12:44 IST" name="cloesedAlarmFromMonitor" finished-at="2026-10-05T17:13:06 IST" duration-ms="21532" status="PASS">
+        <test-method signature="createNormalCheckList()[pri:0, instance:function.A_testClassCreate@1aafa419]" started-at="2026-10-06T12:51:48 IST" name="createNormalCheckList" finished-at="2026-10-06T12:52:03 IST" duration-ms="14384" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[ ]]>
             </line>
             <line>
-              <![CDATA[The process of closing the alarm has started.]]>
+              <![CDATA[The process of creating the Normal check list has started.]]>
             </line>
             <line>
-              <![CDATA[[32m✔ [0m[32m✔ [0mThe process of closing the alarm is complete.]]>
+              <![CDATA[[32m✔ [0m[32m✔ [0mThe process of creating the Normal check list is complete.]]>
             </line>
             <line>
               <![CDATA[ ]]>
             </line>
           </reporter-output>
-        </test-method> <!-- cloesedAlarmFromMonitor -->
-        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassDelete@72d1ad2e]" started-at="2026-10-05T17:13:06 IST" name="backToHomePage2" finished-at="2026-10-05T17:13:15 IST" duration-ms="9014" status="PASS">
+        </test-method> <!-- createNormalCheckList -->
+        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassCreate@1aafa419]" started-at="2026-10-06T12:52:03 IST" name="backToHomePage2" finished-at="2026-10-06T12:52:14 IST" duration-ms="11092" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=cloesedAlarmFromMonitor status=SUCCESS method=A_testClassDelete.cloesedAlarmFromMonitor()[pri:0, instance:function.A_testClassDelete@72d1ad2e]]]]>
+                <![CDATA[[TestResult name=createNormalCheckList status=SUCCESS method=A_testClassCreate.createNormalCheckList()[pri:0, instance:function.A_testClassCreate@1aafa419]]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backToHomePage2 -->
-        <test-method is-config="true" signature="logOut()[pri:0, instance:function.A_testClassDelete@72d1ad2e]" started-at="2026-10-05T17:13:15 IST" name="logOut" finished-at="2026-10-05T17:13:18 IST" duration-ms="3599" status="PASS">
+        <test-method is-config="true" signature="logOut()[pri:0, instance:function.A_testClassCreate@1aafa419]" started-at="2026-10-06T12:52:14 IST" name="logOut" finished-at="2026-10-06T12:52:17 IST" duration-ms="3707" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Logout sucessfully.]]>
@@ -102,14 +102,14 @@
             </line>
           </reporter-output>
         </test-method> <!-- logOut -->
-        <test-method is-config="true" signature="AfterTest()[pri:0, instance:function.A_testClassDelete@72d1ad2e]" started-at="2026-10-05T17:13:18 IST" name="AfterTest" finished-at="2026-10-05T17:13:19 IST" duration-ms="301" status="PASS">
+        <test-method is-config="true" signature="AfterTest()[pri:0, instance:function.A_testClassCreate@1aafa419]" started-at="2026-10-06T12:52:17 IST" name="AfterTest" finished-at="2026-10-06T12:52:17 IST" duration-ms="0" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Refresh the URL before successfully closing the browser.]]>
             </line>
           </reporter-output>
         </test-method> <!-- AfterTest -->
-        <test-method is-config="true" signature="AfterSute()[pri:0, instance:function.A_testClassDelete@72d1ad2e]" started-at="2026-10-05T17:13:19 IST" name="AfterSute" finished-at="2026-10-05T17:13:19 IST" duration-ms="261" status="PASS">
+        <test-method is-config="true" signature="AfterSute()[pri:0, instance:function.A_testClassCreate@1aafa419]" started-at="2026-10-06T12:52:17 IST" name="AfterSute" finished-at="2026-10-06T12:52:18 IST" duration-ms="415" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Browser close sucessfully.]]>
@@ -122,7 +122,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- AfterSute -->
-      </class> <!-- function.A_testClassDelete -->
-    </test> <!-- Test -->
-  </suite> <!-- delete -->
+      </class> <!-- function.A_testClassCreate -->
+    </test> <!-- Test(failed)(failed) -->
+  </suite> <!-- Failed suite [Failed suite [Suite]] -->
 </testng-results>

@@ -54,7 +54,7 @@ public class T_checkList extends b_baseClass {
 
 	
 		
-		public void commanCheckList (WebDriver driver, String deptN, String st01N, String checkListType, String timeHHMMSSG) throws Throwable 
+		public void commanCheckList (WebDriver driver,String branchName, String deptN, String st01N, String checkListType, String timeHHMMSSG) throws Throwable 
 		{
 			
 			
@@ -68,7 +68,13 @@ public class T_checkList extends b_baseClass {
 			
 			selectDepartment.click();
 			Thread.sleep(1000);
-			driver.findElement(By.xpath("//option[text()='" + deptN + "']")).click();
+			
+			Select se = new Select(selectDepartment);
+			Thread.sleep(1000);
+			se.selectByVisibleText(deptN);
+			
+//			driver.findElement(By.xpath("//option[text()='" + deptN + "']")).click();
+			Thread.sleep(1000);
 			
 			selectStation.click();
 			Thread.sleep(1000);

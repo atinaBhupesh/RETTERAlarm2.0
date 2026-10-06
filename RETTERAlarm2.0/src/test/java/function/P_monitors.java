@@ -319,6 +319,9 @@ public class P_monitors extends b_baseClass {
 
 		act.sendKeys("Atina@123").perform();
 		
+		act.moveToElement(save).click().build().perform();
+		Thread.sleep(3000);
+		
 		FileInputStream in = new FileInputStream(filePath);
 
 		XSSFWorkbook wb = new XSSFWorkbook(in);

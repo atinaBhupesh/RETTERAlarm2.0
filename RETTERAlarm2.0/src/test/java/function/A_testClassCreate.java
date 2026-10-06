@@ -266,7 +266,8 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of creating the Alarm check list has started.", true);
 
-		checkL.commanCheckList(driver, deptN, st01N, "AlarmChecklists", timeHHMMSSG);
+		checkL.commanCheckList(driver,branchName, deptN, st01N, "AlarmChecklists", timeHHMMSSG);
+		
 		Reporter.log(GREEN + GREEN + "The process of creating the Alarm check list is complete.", true);
 		Reporter.log(" ", true);
 	}
@@ -277,7 +278,8 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of creating the Normal check list has started.", true);
 
-		checkL.commanCheckList(driver, deptN, st01N, "NormalChecklists", timeHHMMSSG);
+		checkL.commanCheckList(driver,branchName, deptN, st01N, "NormalChecklists", timeHHMMSSG);
+		
 		Reporter.log(GREEN + GREEN + "The process of creating the Normal check list is complete.", true);
 		Reporter.log(" ", true);
 	}
@@ -1691,7 +1693,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of checking escaltion for manual alarm is started.", true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.CheckManualAlarmEscalationFunctionalityForMultuStation(driver, manualAlarmNameForEsclationAlarm, branchName);
+		ma.CheckManualAlarmEscalationFunctionalityForMultuStation(driver, manualAlarmNameForEsclationAlarm,st01N, branchName);
 		Reporter.log(GREEN + GREEN + "The process of checking escaltion for manual alarm is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);

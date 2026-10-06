@@ -5,30 +5,16 @@
     <classes>
       <class name="function.A_testClassDelete">
         <methods>
-          <include name="deleteCalendarEvent"/>
-          <include name="deleteAvailabilityRequestFromHistory"/>
           <include name="BeforeSuite"/>
-          <include name="deleteChatGroups"/>
-          <include name="deleteCheckList"/>
-          <include name="deleteVehicleUsers"/>
-          <include name="deleteAlarmTemplate"/>
+          <include name="deactiveBgTestActiveAlarmsFromPlaningList"/>
           <include name="backToHomePage"/>
-          <include name="backToHomePage2"/>
-          <include name="deleteAvailabilityRequestFromList"/>
-          <include name="BeforeTest"/>
-          <include name="createObject"/>
-          <include name="deleteMonitorUsers"/>
-          <include name="deleteStaions"/>
-          <include name="deleteTestAlarmFromPlaningList"/>
-          <include name="deleteResource"/>
-          <include name="deleteAlarmEscalation"/>
-          <include name="deleteUsers"/>
-          <include name="deletedeleteEventCatogery"/>
-          <include name="deleteAlarmLoop"/>
           <include name="AfterSute"/>
+          <include name="backToHomePage2"/>
+          <include name="deactiveAllActiveAlarms"/>
+          <include name="BeforeTest"/>
           <include name="logOut"/>
+          <include name="createObject"/>
           <include name="AfterTest"/>
-          <include name="delete_infoEvent"/>
         </methods>
       </class> <!-- function.A_testClassDelete -->
     </classes>

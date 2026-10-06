@@ -7,7 +7,7 @@
 
 			<methods>
 			
-			<include name="checkAlarmDisplayedOnMonitors" />
+				<include name="createAlarmChecklists" />
 				
 					
 			</methods>
