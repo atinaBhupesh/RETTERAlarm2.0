@@ -89,7 +89,9 @@ public class M_conversations extends b_baseClass {
 	public void sendMessageToChatGroupCreatedByFireFighter(WebDriver driver, String ChatGroupByFireFighterMS)
 			throws Throwable
 
+			
 	{
+		System.out.println(ChatGroupByFireFighterMS);
 		Actions act = new Actions(driver);
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));

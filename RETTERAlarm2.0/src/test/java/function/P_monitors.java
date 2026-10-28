@@ -195,7 +195,7 @@ public class P_monitors extends b_baseClass {
 		
 		
 		searchField.click();
-		act.sendKeys("BG_Bhupesh Fire & Emergency Services Department").perform();		
+		act.sendKeys(title).perform();		
 		Thread.sleep(2000);
 		
 		

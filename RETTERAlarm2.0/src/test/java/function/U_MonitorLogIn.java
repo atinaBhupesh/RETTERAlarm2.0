@@ -20,7 +20,7 @@ public class U_MonitorLogIn extends b_baseClass {
 	private WebElement password;
 	@FindBy(xpath = "//button[@type=\"submit\"]")
 	private WebElement logInButton;
-	@FindBy(xpath = "//span[@class=\"titletext ng-tns-c3911627336-0\"]")
+	@FindBy(xpath = "//span[contains(@class,'titletext')]")
 	private List<WebElement> alarmTitle;
 	@FindBy(xpath = "(//i[@class=\"fa fa-times ng-tns-c3911627336-0\"])[1]")
 	private WebElement cloeseAlarm;
@@ -66,6 +66,7 @@ public class U_MonitorLogIn extends b_baseClass {
 
 		case "1.1": {
 			driver.navigate().to("https://am2.retteralarm.de/");
+			password1 = "Atina@123";
 			break;
 		}
 

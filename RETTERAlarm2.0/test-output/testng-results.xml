@@ -1,35 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[Well come to RETTERAlarm Live branch-Andrew Department]]>
+      <![CDATA[Well come to RETTERAlarm Testing branch]]>
     </line>
     <line>
-      <![CDATA[Logged in user-bhupesh+live_bhdeptuser@atinatechnology.in]]>
-    </line>
-    <line>
-      <![CDATA[ ]]>
-    </line>
-    <line>
-      <![CDATA[The process of deactivating all active alarms has started.]]>
-    </line>
-    <line>
-      <![CDATA[The process of deactivating all active alarms is complete.]]>
-    </line>
-    <line>
-      <![CDATA[ ]]>
-    </line>
-    <line>
-      <![CDATA[ ]]>
-    </line>
-    <line>
-      <![CDATA[The process of deactivating Test alarms has started.]]>
-    </line>
-    <line>
-      <![CDATA[[32m✔ [0m[32m✔ [0mThe process of deactivating Test alarms is complete.]]>
-    </line>
-    <line>
-      <![CDATA[ ]]>
+      <![CDATA[Logged in user-bhupesh+test_deptuser@atinatechnology.in]]>
     </line>
     <line>
       <![CDATA[Logout sucessfully.]]>
@@ -50,92 +26,119 @@
       <![CDATA[Good to see you again.]]>
     </line>
   </reporter-output>
-  <suite started-at="2026-10-07T18:59:03 IST" name="delete" finished-at="2026-10-07T19:02:11 IST" duration-ms="187713">
+  <suite started-at="2026-10-27T13:37:46 IST" name="Suite" finished-at="2026-10-27T13:38:39 IST" duration-ms="53308">
     <groups>
     </groups>
-    <test started-at="2026-10-07T18:59:03 IST" name="Test" finished-at="2026-10-07T19:02:11 IST" duration-ms="187713">
-      <class name="function.A_testClassDelete">
-        <test-method is-config="true" signature="BeforeSuite()[pri:0, instance:function.A_testClassDelete@72d1ad2e]" started-at="2026-10-07T18:58:55 IST" name="BeforeSuite" finished-at="2026-10-07T18:59:03 IST" duration-ms="8163" status="PASS">
+    <test started-at="2026-10-27T13:37:46 IST" name="Test" finished-at="2026-10-27T13:38:39 IST" duration-ms="53308">
+      <class name="function.A_testClassCreate">
+        <test-method is-config="true" signature="BeforeSuite()[pri:0, instance:function.A_testClassCreate@1aafa419]" started-at="2026-10-27T13:37:37 IST" name="BeforeSuite" finished-at="2026-10-27T13:37:46 IST" duration-ms="8966" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[Well come to RETTERAlarm Live branch-Andrew Department]]>
+              <![CDATA[Well come to RETTERAlarm Testing branch]]>
             </line>
           </reporter-output>
         </test-method> <!-- BeforeSuite -->
-        <test-method is-config="true" signature="BeforeTest()[pri:0, instance:function.A_testClassDelete@72d1ad2e]" started-at="2026-10-07T18:59:03 IST" name="BeforeTest" finished-at="2026-10-07T18:59:10 IST" duration-ms="7264" status="PASS">
+        <test-method is-config="true" signature="BeforeTest()[pri:0, instance:function.A_testClassCreate@1aafa419]" started-at="2026-10-27T13:37:46 IST" name="BeforeTest" finished-at="2026-10-27T13:37:53 IST" duration-ms="7041" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[Logged in user-bhupesh+live_bhdeptuser@atinatechnology.in]]>
+              <![CDATA[Logged in user-bhupesh+test_deptuser@atinatechnology.in]]>
             </line>
           </reporter-output>
         </test-method> <!-- BeforeTest -->
-        <test-method is-config="true" signature="createObject()[pri:0, instance:function.A_testClassDelete@72d1ad2e]" started-at="2026-10-07T18:59:10 IST" name="createObject" finished-at="2026-10-07T18:59:10 IST" duration-ms="16" status="PASS">
+        <test-method is-config="true" signature="createObject()[pri:0, instance:function.A_testClassCreate@1aafa419]" started-at="2026-10-27T13:37:53 IST" name="createObject" finished-at="2026-10-27T13:37:53 IST" duration-ms="12" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createObject -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassDelete@72d1ad2e]" started-at="2026-10-07T18:59:10 IST" name="backToHomePage" finished-at="2026-10-07T18:59:15 IST" duration-ms="5258" status="PASS">
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@1aafa419]" started-at="2026-10-27T13:37:53 IST" name="backToHomePage" finished-at="2026-10-27T13:37:55 IST" duration-ms="1579" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backToHomePage -->
-        <test-method signature="deactiveAllActiveAlarms()[pri:0, instance:function.A_testClassDelete@72d1ad2e]" started-at="2026-10-07T18:59:15 IST" name="deactiveAllActiveAlarms" finished-at="2026-10-07T19:00:29 IST" duration-ms="74008" status="PASS">
+        <test-method signature="checkAlarmDisplayedOnMonitors()[pri:0, instance:function.A_testClassCreate@1aafa419]" started-at="2026-10-27T13:37:55 IST" name="checkAlarmDisplayedOnMonitors" finished-at="2026-10-27T13:38:24 IST" duration-ms="29359" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"(//span[@class="titletext ng-tns-c3911627336-0"])[1]"}
+  (Session info: chrome=155.0.8059.85)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.17.0', revision: 'e52b1be057*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.4.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ee2c9fa1d51a97e8939f15a6be8e1b02, findElement {using=xpath, value=(//span[@class="titletext ng-tns-c3911627336-0"])[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 155.0.8059.85, chrome: {chromedriverVersion: 155.0.8059.84 (5869fe313571..., userDataDir: C:\Users\Bhupesh\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56116}, goog:processID: 37064, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56116/devtoo..., se:cdpVersion: 155.0.8059.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ee2c9fa1d51a97e8939f15a6be8e1b02]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//span[@class="titletext ng-tns-c3911627336-0"])[1]"}
+  (Session info: chrome=155.0.8059.85)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.17.0', revision: 'e52b1be057*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.4.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ee2c9fa1d51a97e8939f15a6be8e1b02, findElement {using=xpath, value=(//span[@class="titletext ng-tns-c3911627336-0"])[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 155.0.8059.85, chrome: {chromedriverVersion: 155.0.8059.84 (5869fe313571..., userDataDir: C:\Users\Bhupesh\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56116}, goog:processID: 37064, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56116/devtoo..., se:cdpVersion: 155.0.8059.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ee2c9fa1d51a97e8939f15a6be8e1b02
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy22.getText(Unknown Source)
+at function.U_MonitorLogIn.checkAlarmDisplayedOnMonitors(U_MonitorLogIn.java:116)
+at function.A_testClassCreate.checkAlarmDisplayedOnMonitors(A_testClassCreate.java:240)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
-            <line>
-              <![CDATA[ ]]>
-            </line>
-            <line>
-              <![CDATA[The process of deactivating all active alarms has started.]]>
-            </line>
-            <line>
-              <![CDATA[The process of deactivating all active alarms is complete.]]>
-            </line>
-            <line>
-              <![CDATA[ ]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- deactiveAllActiveAlarms -->
-        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassDelete@72d1ad2e]" started-at="2026-10-07T19:00:29 IST" name="backToHomePage2" finished-at="2026-10-07T19:00:39 IST" duration-ms="9198" status="PASS">
+        </test-method> <!-- checkAlarmDisplayedOnMonitors -->
+        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassCreate@1aafa419]" started-at="2026-10-27T13:38:24 IST" name="backToHomePage2" finished-at="2026-10-27T13:38:35 IST" duration-ms="11457" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=deactiveAllActiveAlarms status=SUCCESS method=A_testClassDelete.deactiveAllActiveAlarms()[pri:0, instance:function.A_testClassDelete@72d1ad2e]]]]>
+                <![CDATA[[TestResult name=checkAlarmDisplayedOnMonitors status=FAILURE method=A_testClassCreate.checkAlarmDisplayedOnMonitors()[pri:0, instance:function.A_testClassCreate@1aafa419] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backToHomePage2 -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassDelete@72d1ad2e]" started-at="2026-10-07T19:00:39 IST" name="backToHomePage" finished-at="2026-10-07T19:00:44 IST" duration-ms="5055" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- backToHomePage -->
-        <test-method signature="deactiveBgTestActiveAlarmsFromPlaningList()[pri:0, instance:function.A_testClassDelete@72d1ad2e]" started-at="2026-10-07T19:00:44 IST" name="deactiveBgTestActiveAlarmsFromPlaningList" finished-at="2026-10-07T19:01:56 IST" duration-ms="72145" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[ ]]>
-            </line>
-            <line>
-              <![CDATA[The process of deactivating Test alarms has started.]]>
-            </line>
-            <line>
-              <![CDATA[[32m✔ [0m[32m✔ [0mThe process of deactivating Test alarms is complete.]]>
-            </line>
-            <line>
-              <![CDATA[ ]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- deactiveBgTestActiveAlarmsFromPlaningList -->
-        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassDelete@72d1ad2e]" started-at="2026-10-07T19:01:56 IST" name="backToHomePage2" finished-at="2026-10-07T19:02:05 IST" duration-ms="9475" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=deactiveBgTestActiveAlarmsFromPlaningList status=SUCCESS method=A_testClassDelete.deactiveBgTestActiveAlarmsFromPlaningList()[pri:0, instance:function.A_testClassDelete@72d1ad2e]]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- backToHomePage2 -->
-        <test-method is-config="true" signature="logOut()[pri:0, instance:function.A_testClassDelete@72d1ad2e]" started-at="2026-10-07T19:02:05 IST" name="logOut" finished-at="2026-10-07T19:02:10 IST" duration-ms="4716" status="PASS">
+        <test-method is-config="true" signature="logOut()[pri:0, instance:function.A_testClassCreate@1aafa419]" started-at="2026-10-27T13:38:35 IST" name="logOut" finished-at="2026-10-27T13:38:39 IST" duration-ms="3827" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Logout sucessfully.]]>
@@ -145,14 +148,14 @@
             </line>
           </reporter-output>
         </test-method> <!-- logOut -->
-        <test-method is-config="true" signature="AfterTest()[pri:0, instance:function.A_testClassDelete@72d1ad2e]" started-at="2026-10-07T19:02:10 IST" name="AfterTest" finished-at="2026-10-07T19:02:11 IST" duration-ms="536" status="PASS">
+        <test-method is-config="true" signature="AfterTest()[pri:0, instance:function.A_testClassCreate@1aafa419]" started-at="2026-10-27T13:38:39 IST" name="AfterTest" finished-at="2026-10-27T13:38:39 IST" duration-ms="0" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Refresh the URL before successfully closing the browser.]]>
             </line>
           </reporter-output>
         </test-method> <!-- AfterTest -->
-        <test-method is-config="true" signature="AfterSute()[pri:0, instance:function.A_testClassDelete@72d1ad2e]" started-at="2026-10-07T19:02:11 IST" name="AfterSute" finished-at="2026-10-07T19:02:11 IST" duration-ms="764" status="PASS">
+        <test-method is-config="true" signature="AfterSute()[pri:0, instance:function.A_testClassCreate@1aafa419]" started-at="2026-10-27T13:38:39 IST" name="AfterSute" finished-at="2026-10-27T13:38:40 IST" duration-ms="366" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Browser close sucessfully.]]>
@@ -165,7 +168,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- AfterSute -->
-      </class> <!-- function.A_testClassDelete -->
+      </class> <!-- function.A_testClassCreate -->
     </test> <!-- Test -->
-  </suite> <!-- delete -->
+  </suite> <!-- Suite -->
 </testng-results>

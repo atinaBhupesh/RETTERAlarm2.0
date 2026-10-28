@@ -186,12 +186,12 @@ public class b_baseClass {
 		switch (branchName) {
 		case "1": {
 
-			System.out.println("*****you have selected Live branch *****");
+			System.out.println("*****you have selected Live-2 branch *****");
 			break;
 		}
 		case "1.1": {
 
-			System.out.println("*****you have selected Live-2 branch *****");
+			System.out.println("*****you have selected Live branch *****");
 			break;
 		}
 
@@ -327,12 +327,12 @@ public class b_baseClass {
 
 		switch (branchName) {
 		case "1":
-			Reporter.log("Well come to RETTERAlarm Live branch-Andrew Department", true);
+			Reporter.log("Well come to RETTERAlarm Live branch-Bhupesh Department", true);
 			System.out.println("|*******************************************************|");
 
 			break;
 		case "1.1":
-			Reporter.log("Well come to RETTERAlarm Live branch-Bhupesh Department", true);
+			Reporter.log("Well come to RETTERAlarm Live branch-Andrew Department", true);
 			System.out.println("|*******************************************************|");
 
 			break;

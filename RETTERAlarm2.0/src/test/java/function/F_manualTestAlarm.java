@@ -4258,7 +4258,7 @@ public class F_manualTestAlarm extends b_baseClass {
 
 	}
 
-	public void manualAlarmByOldEsclationTemplateFromSt02ToSt01(WebDriver driver, String st2Esc1t1,
+	public void manualAlarmByOldEsclationTemplateFromSt02ToSt01(WebDriver driver, String st02EscSt01t1,
 			String TemplateAlarmTitle, String filePath) throws Throwable {
 
 		Actions act = new Actions(driver);
@@ -4270,7 +4270,7 @@ public class F_manualTestAlarm extends b_baseClass {
 		templateField.click();
 		Thread.sleep(2000);
 
-		act.sendKeys(st2Esc1t1).perform();
+		act.sendKeys(st02EscSt01t1).perform();
 		Thread.sleep(2000);
 
 		act.sendKeys(Keys.ENTER).perform();
