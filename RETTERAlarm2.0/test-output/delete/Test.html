@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>18/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>12/1/5</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Oct 24 17:44:45 IST 2026</td>
+<td>Started on:</td><td>Mon Nov 02 12:58:25 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>901 seconds (901699 ms)</td>
+<tr><td>Total time:</td><td>2208 seconds (2208180 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,239 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='function.A_testClassDelete.backToHomePage2()'><b>backToHomePage2</b><br>Test class: function.A_testClassDelete<br>Parameters: [TestResult name=deletedeleteEventCatogery status=FAILURE method=A_testClassDelete.deletedeleteEventCatogery()[pri:0, instance:function.A_testClassDelete@72d1ad2e]]</td>
+<td><div><pre>java.io.FileNotFoundException: E:\Automation _lapy\MasterAutomationWorkSpcae\screenshots\null_null_deletedeleteEventCatogery.jpg (The system cannot find the path specified)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:255)
+	at java.base/java.io.FileOutputStream.&lt;init&gt;(FileOutputStream.java:210)
+	at java.base/java.io.FileOutputStream.&lt;init&gt;(FileOutputStream.java:171)
+	at org.openqa.selenium.io.FileHandler.copyFile(FileHandler.java:131)
+	at org.openqa.selenium.io.FileHandler.copy(FileHandler.java:110)
+	at function.b_baseClass.takeScreenshot(b_baseClass.java:546)
+	at function.A_testClassDelete.backToHomePage2(A_testClassDelete.java:460)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace202160578", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace202160578'><pre>java.io.FileNotFoundException: E:\Automation _lapy\MasterAutomationWorkSpcae\screenshots\null_null_deletedeleteEventCatogery.jpg (The system cannot find the path specified)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:255)
+	at java.base/java.io.FileOutputStream.&lt;init&gt;(FileOutputStream.java:210)
+	at java.base/java.io.FileOutputStream.&lt;init&gt;(FileOutputStream.java:171)
+	at org.openqa.selenium.io.FileHandler.copyFile(FileHandler.java:131)
+	at org.openqa.selenium.io.FileHandler.copy(FileHandler.java:110)
+	at function.b_baseClass.takeScreenshot(b_baseClass.java:546)
+	at function.A_testClassDelete.backToHomePage2(A_testClassDelete.java:460)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>function.A_testClassDelete@72d1ad2e</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='function.A_testClassDelete.backToHomePage()'><b>backToHomePage</b><br>Test class: function.A_testClassDelete</td>
+<td></td>
+<td>0</td>
+<td>function.A_testClassDelete@72d1ad2e</td></tr>
+<tr>
+<td title='function.A_testClassDelete.AfterTest()'><b>AfterTest</b><br>Test class: function.A_testClassDelete</td>
+<td></td>
+<td>0</td>
+<td>function.A_testClassDelete@72d1ad2e</td></tr>
+<tr>
+<td title='function.A_testClassDelete.backToHomePage()'><b>backToHomePage</b><br>Test class: function.A_testClassDelete</td>
+<td></td>
+<td>0</td>
+<td>function.A_testClassDelete@72d1ad2e</td></tr>
+<tr>
+<td title='function.A_testClassDelete.backToHomePage()'><b>backToHomePage</b><br>Test class: function.A_testClassDelete</td>
+<td></td>
+<td>0</td>
+<td>function.A_testClassDelete@72d1ad2e</td></tr>
+<tr>
+<td title='function.A_testClassDelete.backToHomePage2()'><b>backToHomePage2</b><br>Test class: function.A_testClassDelete</td>
+<td></td>
+<td>0</td>
+<td>function.A_testClassDelete@72d1ad2e</td></tr>
+<tr>
+<td title='function.A_testClassDelete.backToHomePage2()'><b>backToHomePage2</b><br>Test class: function.A_testClassDelete</td>
+<td></td>
+<td>0</td>
+<td>function.A_testClassDelete@72d1ad2e</td></tr>
+<tr>
+<td title='function.A_testClassDelete.backToHomePage2()'><b>backToHomePage2</b><br>Test class: function.A_testClassDelete</td>
+<td></td>
+<td>0</td>
+<td>function.A_testClassDelete@72d1ad2e</td></tr>
+<tr>
+<td title='function.A_testClassDelete.backToHomePage()'><b>backToHomePage</b><br>Test class: function.A_testClassDelete</td>
+<td></td>
+<td>0</td>
+<td>function.A_testClassDelete@72d1ad2e</td></tr>
+<tr>
+<td title='function.A_testClassDelete.backToHomePage()'><b>backToHomePage</b><br>Test class: function.A_testClassDelete</td>
+<td></td>
+<td>0</td>
+<td>function.A_testClassDelete@72d1ad2e</td></tr>
+<tr>
+<td title='function.A_testClassDelete.logOut()'><b>logOut</b><br>Test class: function.A_testClassDelete</td>
+<td></td>
+<td>0</td>
+<td>function.A_testClassDelete@72d1ad2e</td></tr>
+<tr>
+<td title='function.A_testClassDelete.backToHomePage2()'><b>backToHomePage2</b><br>Test class: function.A_testClassDelete</td>
+<td></td>
+<td>0</td>
+<td>function.A_testClassDelete@72d1ad2e</td></tr>
+<tr>
+<td title='function.A_testClassDelete.backToHomePage2()'><b>backToHomePage2</b><br>Test class: function.A_testClassDelete</td>
+<td></td>
+<td>0</td>
+<td>function.A_testClassDelete@72d1ad2e</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='function.A_testClassDelete.deletedeleteEventCatogery()'><b>deletedeleteEventCatogery</b><br>Test class: function.A_testClassDelete<br/>
+<a href="#Output-544361505" onClick='toggleBox("Output-544361505", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-544361505" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-544361505">
+ <br/>
+The process of deleting the event category has started.<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=156.0.8078.79)
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.4.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6563c7948fc8b53eb660c7b0fa788798, clickElement {id=f.EE5F08207CA716F467E52567655562CD.d.2E72D5E298FC999D0A4B19F970D65B5A.e.247851}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 156.0.8078.79, chrome: {chromedriverVersion: 156.0.8078.80 (fb096c0011f9..., userDataDir: C:\Users\Bhupesh\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62264}, goog:processID: 34928, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62264/devtoo..., se:cdpVersion: 156.0.8078.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (6563c7948fc8b53eb660c7b0fa788798)] -&gt; xpath: //dx-button[contains(@class,&apos;delete-option&apos;)]]
+Session ID: 6563c7948fc8b53eb660c7b0fa788798
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy22.click(Unknown Source)
+	at function.K_calendar.deleteEventCatogery(K_calendar.java:704)
+	at function.A_testClassDelete.deletedeleteEventCatogery(A_testClassDelete.java:267)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace544361505", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace544361505'><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=156.0.8078.79)
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.4.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6563c7948fc8b53eb660c7b0fa788798, clickElement {id=f.EE5F08207CA716F467E52567655562CD.d.2E72D5E298FC999D0A4B19F970D65B5A.e.247851}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 156.0.8078.79, chrome: {chromedriverVersion: 156.0.8078.80 (fb096c0011f9..., userDataDir: C:\Users\Bhupesh\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62264}, goog:processID: 34928, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62264/devtoo..., se:cdpVersion: 156.0.8078.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (6563c7948fc8b53eb660c7b0fa788798)] -&gt; xpath: //dx-button[contains(@class,&apos;delete-option&apos;)]]
+Session ID: 6563c7948fc8b53eb660c7b0fa788798
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy22.click(Unknown Source)
+	at function.K_calendar.deleteEventCatogery(K_calendar.java:704)
+	at function.A_testClassDelete.deletedeleteEventCatogery(A_testClassDelete.java:267)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>42</td>
+<td>function.A_testClassDelete@72d1ad2e</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,26 +309,11 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='function.A_testClassDelete.deleteCalendarEvent()'><b>deleteCalendarEvent</b><br>Test class: function.A_testClassDelete<br/>
-<a href="#Output-158995547" onClick='toggleBox("Output-158995547", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-158995547" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-158995547">
- <br/>
-The process of deleting the calendar event has started.<br/>
-[32m✔ [0m[32m✔ [0mThe process of deleting the calendar event is complete.<br/>
- <br/>
-</div>
-</td>
-<td></td>
-<td>75</td>
-<td>function.A_testClassDelete@72d1ad2e</td></tr>
-<tr>
 <td title='function.A_testClassDelete.deleteResource()'><b>deleteResource</b><br>Test class: function.A_testClassDelete<br/>
-<a href="#Output-2027549979" onClick='toggleBox("Output-2027549979", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1060786847" onClick='toggleBox("Output-1060786847", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-2027549979" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2027549979">
+<a href="#Output-1060786847" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1060786847">
  <br/>
 The process of deleting the alarm resource has started.<br/>
 [32m✔ [0m[32m✔ [0mThe process of deleting the alarm resource is complete.<br/>
@@ -103,119 +321,14 @@ The process of deleting the alarm resource has started.<br/>
 </div>
 </td>
 <td></td>
-<td>37</td>
-<td>function.A_testClassDelete@72d1ad2e</td></tr>
-<tr>
-<td title='function.A_testClassDelete.deletedeleteEventCatogery()'><b>deletedeleteEventCatogery</b><br>Test class: function.A_testClassDelete<br/>
-<a href="#Output-1014435252" onClick='toggleBox("Output-1014435252", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1014435252" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1014435252">
- <br/>
-The process of deleting the event category has started.<br/>
-[32m✔ [0m[32m✔ [0mThe process of deleting the event category is complete.<br/>
- <br/>
-</div>
-</td>
-<td></td>
-<td>32</td>
-<td>function.A_testClassDelete@72d1ad2e</td></tr>
-<tr>
-<td title='function.A_testClassDelete.deleteStaions()'><b>deleteStaions</b><br>Test class: function.A_testClassDelete<br/>
-<a href="#Output-1539718688" onClick='toggleBox("Output-1539718688", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1539718688" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1539718688">
- <br/>
-The process of deleting stations has started.<br/>
-[32m✔ [0m[32m✔ [0mThe process of deleting stations is complete.<br/>
- <br/>
-</div>
-</td>
-<td></td>
-<td>27</td>
-<td>function.A_testClassDelete@72d1ad2e</td></tr>
-<tr>
-<td title='function.A_testClassDelete.deleteUsers()'><b>deleteUsers</b><br>Test class: function.A_testClassDelete<br/>
-<a href="#Output-1985280051" onClick='toggleBox("Output-1985280051", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1985280051" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1985280051">
- <br/>
-The process of deleting users has started.<br/>
-[32m✔ [0m[32m✔ [0mThe process of deleting users is complete.<br/>
- <br/>
-</div>
-</td>
-<td></td>
-<td>33</td>
-<td>function.A_testClassDelete@72d1ad2e</td></tr>
-<tr>
-<td title='function.A_testClassDelete.delete_infoEvent()'><b>delete_infoEvent</b><br>Test class: function.A_testClassDelete<br/>
-<a href="#Output-906927110" onClick='toggleBox("Output-906927110", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-906927110" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-906927110">
- <br/>
-The process of deleting information or events has started.<br/>
-[32m✔ [0m[32m✔ [0mThe process of deleting information or events is complete.<br/>
- <br/>
-</div>
-</td>
-<td></td>
-<td>40</td>
-<td>function.A_testClassDelete@72d1ad2e</td></tr>
-<tr>
-<td title='function.A_testClassDelete.deleteManualAlarm()'><b>deleteManualAlarm</b><br>Test class: function.A_testClassDelete<br/>
-<a href="#Output-2058569241" onClick='toggleBox("Output-2058569241", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-2058569241" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2058569241">
- <br/>
-The process of deleting alarms has started.<br/>
-[32m✔ [0m[32m✔ [0mThe process of deleting alarms is complete.<br/>
- <br/>
-</div>
-</td>
-<td></td>
 <td>56</td>
 <td>function.A_testClassDelete@72d1ad2e</td></tr>
 <tr>
-<td title='function.A_testClassDelete.deleteAvailabilityRequestFromHistory()'><b>deleteAvailabilityRequestFromHistory</b><br>Test class: function.A_testClassDelete<br/>
-<a href="#Output-999663323" onClick='toggleBox("Output-999663323", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-999663323" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-999663323">
- <br/>
-The process of deleting the Availability Request from History has started.<br/>
-[32m✔ [0m[32m✔ [0mThe process of deleting the Availability Request from History is complete.<br/>
- <br/>
-</div>
-</td>
-<td></td>
-<td>31</td>
-<td>function.A_testClassDelete@72d1ad2e</td></tr>
-<tr>
-<td title='function.A_testClassDelete.deleteAlarmTemplate()'><b>deleteAlarmTemplate</b><br>Test class: function.A_testClassDelete<br/>
-<a href="#Output-417160915" onClick='toggleBox("Output-417160915", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-417160915" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-417160915">
- <br/>
-The process of deleting the alarm template has started.<br/>
-[32m✔ [0m[32m✔ [0mThe process of deleting the alarm template is complete.<br/>
- <br/>
-</div>
-</td>
-<td></td>
-<td>38</td>
-<td>function.A_testClassDelete@72d1ad2e</td></tr>
-<tr>
 <td title='function.A_testClassDelete.deleteAlarmLoop()'><b>deleteAlarmLoop</b><br>Test class: function.A_testClassDelete<br/>
-<a href="#Output-162674722" onClick='toggleBox("Output-162674722", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-979865152" onClick='toggleBox("Output-979865152", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-162674722" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-162674722">
+<a href="#Output-979865152" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-979865152">
  <br/>
 The process of deleting the alarm loop has started.<br/>
 [32m✔ [0m[32m✔ [0mThe process of deleting the alarm loop is complete.<br/>
@@ -223,59 +336,14 @@ The process of deleting the alarm loop has started.<br/>
 </div>
 </td>
 <td></td>
-<td>39</td>
-<td>function.A_testClassDelete@72d1ad2e</td></tr>
-<tr>
-<td title='function.A_testClassDelete.cloesedAlarmFromMonitor()'><b>cloesedAlarmFromMonitor</b><br>Test class: function.A_testClassDelete<br/>
-<a href="#Output-156855528" onClick='toggleBox("Output-156855528", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-156855528" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-156855528">
- <br/>
-The process of closing the alarm has started.<br/>
-[32m✔ [0m[32m✔ [0mThe process of closing the alarm is complete.<br/>
- <br/>
-</div>
-</td>
-<td></td>
-<td>21</td>
-<td>function.A_testClassDelete@72d1ad2e</td></tr>
-<tr>
-<td title='function.A_testClassDelete.deleteTestAlarmFromPlaningList()'><b>deleteTestAlarmFromPlaningList</b><br>Test class: function.A_testClassDelete<br/>
-<a href="#Output-1929576211" onClick='toggleBox("Output-1929576211", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1929576211" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1929576211">
- <br/>
-The process of deleting Test alarms has started.<br/>
-[32m✔ [0m[32m✔ [0mThe process of deleting Test alarms is complete.<br/>
- <br/>
-</div>
-</td>
-<td></td>
-<td>52</td>
-<td>function.A_testClassDelete@72d1ad2e</td></tr>
-<tr>
-<td title='function.A_testClassDelete.deleteChatGroups()'><b>deleteChatGroups</b><br>Test class: function.A_testClassDelete<br/>
-<a href="#Output-504538534" onClick='toggleBox("Output-504538534", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-504538534" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-504538534">
- <br/>
-The process of deleting chat groups has started.<br/>
-[32m✔ [0m[32m✔ [0mThe process of deleting chat groups is complete.<br/>
- <br/>
-</div>
-</td>
-<td></td>
-<td>29</td>
+<td>55</td>
 <td>function.A_testClassDelete@72d1ad2e</td></tr>
 <tr>
 <td title='function.A_testClassDelete.deleteAlarmEscalation()'><b>deleteAlarmEscalation</b><br>Test class: function.A_testClassDelete<br/>
-<a href="#Output-1322341191" onClick='toggleBox("Output-1322341191", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1552840327" onClick='toggleBox("Output-1552840327", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1322341191" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1322341191">
+<a href="#Output-1552840327" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1552840327">
  <br/>
 The process of deleting Alarm Escalation has started.<br/>
 [32m✔ [0m[32m✔ [0mThe process of deleting Alarm Escalation is complete.<br/>
@@ -286,56 +354,56 @@ The process of deleting Alarm Escalation has started.<br/>
 <td>23</td>
 <td>function.A_testClassDelete@72d1ad2e</td></tr>
 <tr>
-<td title='function.A_testClassDelete.deleteMonitorUsers()'><b>deleteMonitorUsers</b><br>Test class: function.A_testClassDelete<br/>
-<a href="#Output-1487543666" onClick='toggleBox("Output-1487543666", this, "Show output", "Hide output");'>Show output</a>
+<td title='function.A_testClassDelete.deleteUsers()'><b>deleteUsers</b><br>Test class: function.A_testClassDelete<br/>
+<a href="#Output-236002428" onClick='toggleBox("Output-236002428", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1487543666" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1487543666">
+<a href="#Output-236002428" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-236002428">
  <br/>
-The process of deleting monitors has started.<br/>
-[32m✔ [0m[32m✔ [0mThe process of deleting monitors is complete.<br/>
+The process of deleting users has started.<br/>
+[32m✔ [0m[32m✔ [0mThe process of deleting users is complete.<br/>
  <br/>
 </div>
 </td>
 <td></td>
-<td>22</td>
+<td>140</td>
 <td>function.A_testClassDelete@72d1ad2e</td></tr>
 <tr>
-<td title='function.A_testClassDelete.deleteCheckList()'><b>deleteCheckList</b><br>Test class: function.A_testClassDelete<br/>
-<a href="#Output-2120344156" onClick='toggleBox("Output-2120344156", this, "Show output", "Hide output");'>Show output</a>
+<td title='function.A_testClassDelete.deleteCalendarEvent()'><b>deleteCalendarEvent</b><br>Test class: function.A_testClassDelete<br/>
+<a href="#Output-1467740330" onClick='toggleBox("Output-1467740330", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-2120344156" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2120344156">
+<a href="#Output-1467740330" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1467740330">
  <br/>
-The process of deleting the Check list has started.<br/>
-[32m✔ [0m[32m✔ [0mThe process of deleting the Check list is complete.<br/>
+The process of deleting the calendar event has started.<br/>
+[32m✔ [0m[32m✔ [0mThe process of deleting the calendar event is complete.<br/>
  <br/>
 </div>
 </td>
 <td></td>
-<td>20</td>
+<td>130</td>
 <td>function.A_testClassDelete@72d1ad2e</td></tr>
 <tr>
-<td title='function.A_testClassDelete.deleteVehicleUsers()'><b>deleteVehicleUsers</b><br>Test class: function.A_testClassDelete<br/>
-<a href="#Output-1674390738" onClick='toggleBox("Output-1674390738", this, "Show output", "Hide output");'>Show output</a>
+<td title='function.A_testClassDelete.deleteAlarmTemplate()'><b>deleteAlarmTemplate</b><br>Test class: function.A_testClassDelete<br/>
+<a href="#Output-816288886" onClick='toggleBox("Output-816288886", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1674390738" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1674390738">
+<a href="#Output-816288886" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-816288886">
  <br/>
-The process of deleting vehicle users has started.<br/>
-[32m✔ [0m[32m✔ [0mThe process of deleting vehicle users is complete.<br/>
+The process of deleting the alarm template has started.<br/>
+[32m✔ [0m[32m✔ [0mThe process of deleting the alarm template is complete.<br/>
  <br/>
 </div>
 </td>
 <td></td>
-<td>27</td>
+<td>52</td>
 <td>function.A_testClassDelete@72d1ad2e</td></tr>
 <tr>
 <td title='function.A_testClassDelete.deleteAvailabilityRequestFromList()'><b>deleteAvailabilityRequestFromList</b><br>Test class: function.A_testClassDelete<br/>
-<a href="#Output-693083472" onClick='toggleBox("Output-693083472", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-805744373" onClick='toggleBox("Output-805744373", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-693083472" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-693083472">
+<a href="#Output-805744373" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-805744373">
  <br/>
 The process of deleting the Availability Request from List has started.<br/>
 [32m✔ [0m[32m✔ [0mThe process of deleting the Availability Request from List is complete.<br/>
@@ -343,7 +411,371 @@ The process of deleting the Availability Request from List has started.<br/>
 </div>
 </td>
 <td></td>
-<td>22</td>
+<td>348</td>
+<td>function.A_testClassDelete@72d1ad2e</td></tr>
+<tr>
+<td title='function.A_testClassDelete.cloesedAlarmFromMonitor()'><b>cloesedAlarmFromMonitor</b><br>Test class: function.A_testClassDelete<br/>
+<a href="#Output-1987707214" onClick='toggleBox("Output-1987707214", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1987707214" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1987707214">
+ <br/>
+The process of closing the alarm has started.<br/>
+[32m✔ [0m[32m✔ [0mThe process of closing the alarm is complete.<br/>
+ <br/>
+</div>
+</td>
+<td></td>
+<td>21</td>
+<td>function.A_testClassDelete@72d1ad2e</td></tr>
+<tr>
+<td title='function.A_testClassDelete.deleteManualAlarm()'><b>deleteManualAlarm</b><br>Test class: function.A_testClassDelete<br/>
+<a href="#Output-1834755909" onClick='toggleBox("Output-1834755909", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1834755909" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1834755909">
+ <br/>
+The process of deleting alarms has started.<br/>
+[32m✔ [0m[32m✔ [0mThe process of deleting alarms is complete.<br/>
+ <br/>
+</div>
+</td>
+<td></td>
+<td>71</td>
+<td>function.A_testClassDelete@72d1ad2e</td></tr>
+<tr>
+<td title='function.A_testClassDelete.deleteVehicleUsers()'><b>deleteVehicleUsers</b><br>Test class: function.A_testClassDelete<br/>
+<a href="#Output-2036949810" onClick='toggleBox("Output-2036949810", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2036949810" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2036949810">
+ <br/>
+The process of deleting vehicle users has started.<br/>
+[32m✔ [0m[32m✔ [0mThe process of deleting vehicle users is complete.<br/>
+ <br/>
+</div>
+</td>
+<td></td>
+<td>43</td>
+<td>function.A_testClassDelete@72d1ad2e</td></tr>
+<tr>
+<td title='function.A_testClassDelete.deleteAvailabilityRequestFromHistory()'><b>deleteAvailabilityRequestFromHistory</b><br>Test class: function.A_testClassDelete<br/>
+<a href="#Output-1655182419" onClick='toggleBox("Output-1655182419", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1655182419" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1655182419">
+ <br/>
+The process of deleting the Availability Request from History has started.<br/>
+[32m✔ [0m[32m✔ [0mThe process of deleting the Availability Request from History is complete.<br/>
+ <br/>
+</div>
+</td>
+<td></td>
+<td>956</td>
+<td>function.A_testClassDelete@72d1ad2e</td></tr>
+<tr>
+<td title='function.A_testClassDelete.delete_infoEvent()'><b>delete_infoEvent</b><br>Test class: function.A_testClassDelete<br/>
+<a href="#Output-1582358318" onClick='toggleBox("Output-1582358318", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1582358318" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1582358318">
+ <br/>
+The process of deleting information or events has started.<br/>
+[32m✔ [0m[32m✔ [0mThe process of deleting information or events is complete.<br/>
+ <br/>
+</div>
+</td>
+<td></td>
+<td>75</td>
+<td>function.A_testClassDelete@72d1ad2e</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='function.A_testClassDelete.deleteChatGroups()'><b>deleteChatGroups</b><br>Test class: function.A_testClassDelete</td>
+<td><div><pre>java.io.FileNotFoundException: E:\Automation _lapy\MasterAutomationWorkSpcae\screenshots\null_null_deletedeleteEventCatogery.jpg (The system cannot find the path specified)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:255)
+	at java.base/java.io.FileOutputStream.&lt;init&gt;(FileOutputStream.java:210)
+	at java.base/java.io.FileOutputStream.&lt;init&gt;(FileOutputStream.java:171)
+	at org.openqa.selenium.io.FileHandler.copyFile(FileHandler.java:131)
+	at org.openqa.selenium.io.FileHandler.copy(FileHandler.java:110)
+	at function.b_baseClass.takeScreenshot(b_baseClass.java:546)
+	at function.A_testClassDelete.backToHomePage2(A_testClassDelete.java:460)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace789273977", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace789273977'><pre>java.io.FileNotFoundException: E:\Automation _lapy\MasterAutomationWorkSpcae\screenshots\null_null_deletedeleteEventCatogery.jpg (The system cannot find the path specified)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:255)
+	at java.base/java.io.FileOutputStream.&lt;init&gt;(FileOutputStream.java:210)
+	at java.base/java.io.FileOutputStream.&lt;init&gt;(FileOutputStream.java:171)
+	at org.openqa.selenium.io.FileHandler.copyFile(FileHandler.java:131)
+	at org.openqa.selenium.io.FileHandler.copy(FileHandler.java:110)
+	at function.b_baseClass.takeScreenshot(b_baseClass.java:546)
+	at function.A_testClassDelete.backToHomePage2(A_testClassDelete.java:460)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>function.A_testClassDelete@72d1ad2e</td></tr>
+<tr>
+<td title='function.A_testClassDelete.deleteTestAlarmFromPlaningList()'><b>deleteTestAlarmFromPlaningList</b><br>Test class: function.A_testClassDelete</td>
+<td><div><pre>java.io.FileNotFoundException: E:\Automation _lapy\MasterAutomationWorkSpcae\screenshots\null_null_deletedeleteEventCatogery.jpg (The system cannot find the path specified)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:255)
+	at java.base/java.io.FileOutputStream.&lt;init&gt;(FileOutputStream.java:210)
+	at java.base/java.io.FileOutputStream.&lt;init&gt;(FileOutputStream.java:171)
+	at org.openqa.selenium.io.FileHandler.copyFile(FileHandler.java:131)
+	at org.openqa.selenium.io.FileHandler.copy(FileHandler.java:110)
+	at function.b_baseClass.takeScreenshot(b_baseClass.java:546)
+	at function.A_testClassDelete.backToHomePage2(A_testClassDelete.java:460)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace251950704", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace251950704'><pre>java.io.FileNotFoundException: E:\Automation _lapy\MasterAutomationWorkSpcae\screenshots\null_null_deletedeleteEventCatogery.jpg (The system cannot find the path specified)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:255)
+	at java.base/java.io.FileOutputStream.&lt;init&gt;(FileOutputStream.java:210)
+	at java.base/java.io.FileOutputStream.&lt;init&gt;(FileOutputStream.java:171)
+	at org.openqa.selenium.io.FileHandler.copyFile(FileHandler.java:131)
+	at org.openqa.selenium.io.FileHandler.copy(FileHandler.java:110)
+	at function.b_baseClass.takeScreenshot(b_baseClass.java:546)
+	at function.A_testClassDelete.backToHomePage2(A_testClassDelete.java:460)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>function.A_testClassDelete@72d1ad2e</td></tr>
+<tr>
+<td title='function.A_testClassDelete.deleteCheckList()'><b>deleteCheckList</b><br>Test class: function.A_testClassDelete</td>
+<td><div><pre>java.io.FileNotFoundException: E:\Automation _lapy\MasterAutomationWorkSpcae\screenshots\null_null_deletedeleteEventCatogery.jpg (The system cannot find the path specified)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:255)
+	at java.base/java.io.FileOutputStream.&lt;init&gt;(FileOutputStream.java:210)
+	at java.base/java.io.FileOutputStream.&lt;init&gt;(FileOutputStream.java:171)
+	at org.openqa.selenium.io.FileHandler.copyFile(FileHandler.java:131)
+	at org.openqa.selenium.io.FileHandler.copy(FileHandler.java:110)
+	at function.b_baseClass.takeScreenshot(b_baseClass.java:546)
+	at function.A_testClassDelete.backToHomePage2(A_testClassDelete.java:460)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace406952631", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace406952631'><pre>java.io.FileNotFoundException: E:\Automation _lapy\MasterAutomationWorkSpcae\screenshots\null_null_deletedeleteEventCatogery.jpg (The system cannot find the path specified)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:255)
+	at java.base/java.io.FileOutputStream.&lt;init&gt;(FileOutputStream.java:210)
+	at java.base/java.io.FileOutputStream.&lt;init&gt;(FileOutputStream.java:171)
+	at org.openqa.selenium.io.FileHandler.copyFile(FileHandler.java:131)
+	at org.openqa.selenium.io.FileHandler.copy(FileHandler.java:110)
+	at function.b_baseClass.takeScreenshot(b_baseClass.java:546)
+	at function.A_testClassDelete.backToHomePage2(A_testClassDelete.java:460)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>function.A_testClassDelete@72d1ad2e</td></tr>
+<tr>
+<td title='function.A_testClassDelete.deleteStaions()'><b>deleteStaions</b><br>Test class: function.A_testClassDelete</td>
+<td><div><pre>java.io.FileNotFoundException: E:\Automation _lapy\MasterAutomationWorkSpcae\screenshots\null_null_deletedeleteEventCatogery.jpg (The system cannot find the path specified)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:255)
+	at java.base/java.io.FileOutputStream.&lt;init&gt;(FileOutputStream.java:210)
+	at java.base/java.io.FileOutputStream.&lt;init&gt;(FileOutputStream.java:171)
+	at org.openqa.selenium.io.FileHandler.copyFile(FileHandler.java:131)
+	at org.openqa.selenium.io.FileHandler.copy(FileHandler.java:110)
+	at function.b_baseClass.takeScreenshot(b_baseClass.java:546)
+	at function.A_testClassDelete.backToHomePage2(A_testClassDelete.java:460)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace608590206", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace608590206'><pre>java.io.FileNotFoundException: E:\Automation _lapy\MasterAutomationWorkSpcae\screenshots\null_null_deletedeleteEventCatogery.jpg (The system cannot find the path specified)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:255)
+	at java.base/java.io.FileOutputStream.&lt;init&gt;(FileOutputStream.java:210)
+	at java.base/java.io.FileOutputStream.&lt;init&gt;(FileOutputStream.java:171)
+	at org.openqa.selenium.io.FileHandler.copyFile(FileHandler.java:131)
+	at org.openqa.selenium.io.FileHandler.copy(FileHandler.java:110)
+	at function.b_baseClass.takeScreenshot(b_baseClass.java:546)
+	at function.A_testClassDelete.backToHomePage2(A_testClassDelete.java:460)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>function.A_testClassDelete@72d1ad2e</td></tr>
+<tr>
+<td title='function.A_testClassDelete.deleteMonitorUsers()'><b>deleteMonitorUsers</b><br>Test class: function.A_testClassDelete</td>
+<td><div><pre>java.io.FileNotFoundException: E:\Automation _lapy\MasterAutomationWorkSpcae\screenshots\null_null_deletedeleteEventCatogery.jpg (The system cannot find the path specified)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:255)
+	at java.base/java.io.FileOutputStream.&lt;init&gt;(FileOutputStream.java:210)
+	at java.base/java.io.FileOutputStream.&lt;init&gt;(FileOutputStream.java:171)
+	at org.openqa.selenium.io.FileHandler.copyFile(FileHandler.java:131)
+	at org.openqa.selenium.io.FileHandler.copy(FileHandler.java:110)
+	at function.b_baseClass.takeScreenshot(b_baseClass.java:546)
+	at function.A_testClassDelete.backToHomePage2(A_testClassDelete.java:460)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2144798813", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2144798813'><pre>java.io.FileNotFoundException: E:\Automation _lapy\MasterAutomationWorkSpcae\screenshots\null_null_deletedeleteEventCatogery.jpg (The system cannot find the path specified)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:255)
+	at java.base/java.io.FileOutputStream.&lt;init&gt;(FileOutputStream.java:210)
+	at java.base/java.io.FileOutputStream.&lt;init&gt;(FileOutputStream.java:171)
+	at org.openqa.selenium.io.FileHandler.copyFile(FileHandler.java:131)
+	at org.openqa.selenium.io.FileHandler.copy(FileHandler.java:110)
+	at function.b_baseClass.takeScreenshot(b_baseClass.java:546)
+	at function.A_testClassDelete.backToHomePage2(A_testClassDelete.java:460)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
 <td>function.A_testClassDelete@72d1ad2e</td></tr>
 </table><p>
 </body>

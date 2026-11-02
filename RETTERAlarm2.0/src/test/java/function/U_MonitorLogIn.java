@@ -22,11 +22,11 @@ public class U_MonitorLogIn extends b_baseClass {
 	private WebElement logInButton;
 	@FindBy(xpath = "//span[contains(@class,'titletext')]")
 	private List<WebElement> alarmTitle;
-	@FindBy(xpath = "(//i[@class=\"fa fa-times ng-tns-c3911627336-0\"])[1]")
+	@FindBy(xpath = "(//i[@class=\"fa fa-times ng-tns-c139150237-0\"])[1]")
 	private WebElement cloeseAlarm;
 	@FindBy(xpath = "//button[text()=\"Bestätigen\" or text()=\"Yes, close it!\"]")
 	private WebElement yesCloseAlarm;
-	@FindBy(xpath = "(//span[@class=\"titletext ng-tns-c3911627336-0\"])[1]")
+	@FindBy(xpath = "(//span[@class=\"titletext ng-tns-c139150237-0\"])[1]")
 	private WebElement alarmTitle1;;
 	// @FindBy(xpath="")private WebElement ;
 	// @FindBy(xpath="")private WebElement ;
@@ -106,12 +106,14 @@ public class U_MonitorLogIn extends b_baseClass {
 		Thread.sleep(2000);
 
 		System.out.println("Number of alarms displayed on monitor: " + alarmCount);
+		
 
 		// Create array according to alarm count
 		String[] actualTitles = new String[alarmCount];
 
 		// Store all alarm titles in array
 		for (int i = 0; i < alarmCount; i++) {
+		
 
 			actualTitles[i] = alarmTitle1.getText().trim();
 			Thread.sleep(1000);

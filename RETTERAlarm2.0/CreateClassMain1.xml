@@ -52,7 +52,7 @@
 
 				<include name="sendMessageToManualAlarmUser" />
 
-				<include name="CheckAlarmExtendFunctionality" />
+				<include name="CheckAlarmExtendFunctionalityNewApi" />
 				<include name="CheckApiAlarmEscalationFunctionality" />
 				<include name="CheckManualAlarmEscalationFunctionality" />
 				

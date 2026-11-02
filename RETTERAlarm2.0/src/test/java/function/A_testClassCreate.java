@@ -1679,7 +1679,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of checking extend alarm functionality  is started.", true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.CheckAlarmExtendFunctionalityNewApi(driver, AlarmNameForChatNewdApi, branchName);
+		ma.CheckAlarmExtendFunctionalityNewApi(driver,st01N, AlarmNameForChatNewdApi, branchName);
 		Reporter.log(GREEN + GREEN + "The process ofchecking extend alarm functionality is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);

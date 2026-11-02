@@ -2411,7 +2411,7 @@ public class F_manualTestAlarm extends b_baseClass {
 
 	}
 
-	public void CheckAlarmExtendFunctionalityNewApi(WebDriver driver, String newApiAlarmForMessage, String branchName)
+	public void CheckAlarmExtendFunctionalityNewApi(WebDriver driver,String st01N, String newApiAlarmForMessage, String branchName)
 			throws Throwable {
 		Actions act = new Actions(driver);
 
@@ -2431,20 +2431,18 @@ public class F_manualTestAlarm extends b_baseClass {
 		bgAlarm.click();
 		Thread.sleep(3000);
 
-		JavascriptExecutor js = (JavascriptExecutor) driver;
 
-		js.executeScript("arguments[0].scrollIntoView(true);", secondStataionTab);
-		Thread.sleep(3000);
-
-		secondStataionTab.click();
-		Thread.sleep(3000);
-
-		js.executeScript("arguments[0].scrollIntoView(true);", ffAtribute);
-		Thread.sleep(2000);
-
+		act.moveToElement(driver.findElement(By.xpath("(//span[text()='" + st01N + "'])[1]"))).click().build().perform();
+		Thread.sleep(1000);
+		
+		act.moveToElement(driver.findElement(By.xpath("(//div[text()=\"No Response\"])[last()]"))).click().build().perform();
+		Thread.sleep(1000);
+		
 		switch (branchName) {
 		case "1":
-			try {
+			try {	
+				
+			
 				if (jonas2.isDisplayed()) {
 					System.out.println(GREEN + "Extended user visible,Alarm Extended successfully.");
 				}
@@ -4509,21 +4507,21 @@ public class F_manualTestAlarm extends b_baseClass {
 
 		bgAlarm.click();
 		Thread.sleep(3000);
+		
+		
+		
 
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-
-		js.executeScript("arguments[0].scrollIntoView(true);", secondStataionTab);
-		Thread.sleep(3000);
-
-		secondStataionTab.click();
-		Thread.sleep(3000);
-
-		js.executeScript("arguments[0].scrollIntoView(true);", ffAtribute);
-		Thread.sleep(2000);
-
+		act.moveToElement(driver.findElement(By.xpath("(//span[text()='" + st01N + "'])[1]"))).click().build().perform();
+		Thread.sleep(1000);
+		
+		act.moveToElement(driver.findElement(By.xpath("(//div[text()=\"No Response\"])[last()]"))).click().build().perform();
+		Thread.sleep(1000);
+		
 		switch (branchName) {
 		case "1":
-			try {
+			try {	
+				
+			
 				if (jonas2.isDisplayed()) {
 					System.out.println(GREEN + "Extended user visible,Alarm Extended successfully.");
 				}
@@ -4555,7 +4553,6 @@ public class F_manualTestAlarm extends b_baseClass {
 		default:
 			System.out.println(RED + "Invalid branch");
 		}
-		
 		
 		
 		

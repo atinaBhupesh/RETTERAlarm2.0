@@ -7,11 +7,11 @@
         <methods>
           <include name="AfterTest"/>
           <include name="BeforeSuite"/>
+          <include name="CheckAlarmExtendFunctionalityNewApi"/>
           <include name="backToHomePage2"/>
           <include name="BeforeTest"/>
           <include name="backToHomePage"/>
           <include name="logOut"/>
-          <include name="checkAlarmDisplayedOnMonitors"/>
           <include name="AfterSute"/>
           <include name="createObject"/>
         </methods>

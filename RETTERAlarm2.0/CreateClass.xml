@@ -7,9 +7,8 @@
 
 			<methods>
 			
-					<include name="checkAlarmDisplayedOnMonitors" />
-
-				
+		<include name="manualaByAttributeExtend1To01StEscResourceFrom02" />
+			
 					
 			</methods>
 
