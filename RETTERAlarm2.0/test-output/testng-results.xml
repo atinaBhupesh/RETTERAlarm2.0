@@ -11,10 +11,10 @@
       <![CDATA[ ]]>
     </line>
     <line>
-      <![CDATA[The process of creating a manual alarm by attribute st2 and extend to st1 by resource is started.]]>
+      <![CDATA[The process of delete  Attribute has started.]]>
     </line>
     <line>
-      <![CDATA[[32m✔ [0m[32m✔ [0mThe process of creating a manual alarm by attribute st2 and extend to st1 by resource is complete.]]>
+      <![CDATA[The process of delete Attribute is complete.]]>
     </line>
     <line>
       <![CDATA[ ]]>
@@ -38,61 +38,61 @@
       <![CDATA[Good to see you again.]]>
     </line>
   </reporter-output>
-  <suite started-at="2026-11-02T17:53:05 IST" name="Suite" finished-at="2026-11-02T17:54:59 IST" duration-ms="113990">
+  <suite started-at="2026-11-17T11:10:33 IST" name="delete" finished-at="2026-11-17T11:11:40 IST" duration-ms="66610">
     <groups>
     </groups>
-    <test started-at="2026-11-02T17:53:05 IST" name="Test" finished-at="2026-11-02T17:54:59 IST" duration-ms="113990">
-      <class name="function.A_testClassCreate">
-        <test-method is-config="true" signature="BeforeSuite()[pri:0, instance:function.A_testClassCreate@1aafa419]" started-at="2026-11-02T17:52:58 IST" name="BeforeSuite" finished-at="2026-11-02T17:53:05 IST" duration-ms="6788" status="PASS">
+    <test started-at="2026-11-17T11:10:33 IST" name="Test" finished-at="2026-11-17T11:11:40 IST" duration-ms="66610">
+      <class name="function.A_testClassDelete">
+        <test-method is-config="true" signature="BeforeSuite()[pri:0, instance:function.A_testClassDelete@2d7275fc]" started-at="2026-11-17T11:10:27 IST" name="BeforeSuite" finished-at="2026-11-17T11:10:33 IST" duration-ms="6443" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Well come to RETTERAlarm Live branch-Bhupesh Department]]>
             </line>
           </reporter-output>
         </test-method> <!-- BeforeSuite -->
-        <test-method is-config="true" signature="BeforeTest()[pri:0, instance:function.A_testClassCreate@1aafa419]" started-at="2026-11-02T17:53:05 IST" name="BeforeTest" finished-at="2026-11-02T17:53:14 IST" duration-ms="9072" status="PASS">
+        <test-method is-config="true" signature="BeforeTest()[pri:0, instance:function.A_testClassDelete@2d7275fc]" started-at="2026-11-17T11:10:33 IST" name="BeforeTest" finished-at="2026-11-17T11:10:41 IST" duration-ms="7833" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Logged in user-bhupesh+live_bhdeptuser@atinatechnology.in]]>
             </line>
           </reporter-output>
         </test-method> <!-- BeforeTest -->
-        <test-method is-config="true" signature="createObject()[pri:0, instance:function.A_testClassCreate@1aafa419]" started-at="2026-11-02T17:53:14 IST" name="createObject" finished-at="2026-11-02T17:53:14 IST" duration-ms="10" status="PASS">
+        <test-method is-config="true" signature="createObject()[pri:0, instance:function.A_testClassDelete@2d7275fc]" started-at="2026-11-17T11:10:41 IST" name="createObject" finished-at="2026-11-17T11:10:41 IST" duration-ms="7" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createObject -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@1aafa419]" started-at="2026-11-02T17:53:14 IST" name="backToHomePage" finished-at="2026-11-02T17:53:16 IST" duration-ms="1708" status="PASS">
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassDelete@2d7275fc]" started-at="2026-11-17T11:10:41 IST" name="backToHomePage" finished-at="2026-11-17T11:10:46 IST" duration-ms="5202" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backToHomePage -->
-        <test-method signature="manualaByAttributeExtend1To01StEscResourceFrom02()[pri:0, instance:function.A_testClassCreate@1aafa419]" started-at="2026-11-02T17:53:16 IST" name="manualaByAttributeExtend1To01StEscResourceFrom02" finished-at="2026-11-02T17:54:43 IST" duration-ms="87278" status="PASS">
+        <test-method signature="deleteAttribute()[pri:0, instance:function.A_testClassDelete@2d7275fc]" started-at="2026-11-17T11:10:46 IST" name="deleteAttribute" finished-at="2026-11-17T11:11:26 IST" duration-ms="40049" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[ ]]>
             </line>
             <line>
-              <![CDATA[The process of creating a manual alarm by attribute st2 and extend to st1 by resource is started.]]>
+              <![CDATA[The process of delete  Attribute has started.]]>
             </line>
             <line>
-              <![CDATA[[32m✔ [0m[32m✔ [0mThe process of creating a manual alarm by attribute st2 and extend to st1 by resource is complete.]]>
+              <![CDATA[The process of delete Attribute is complete.]]>
             </line>
             <line>
               <![CDATA[ ]]>
             </line>
           </reporter-output>
-        </test-method> <!-- manualaByAttributeExtend1To01StEscResourceFrom02 -->
-        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassCreate@1aafa419]" started-at="2026-11-02T17:54:43 IST" name="backToHomePage2" finished-at="2026-11-02T17:54:55 IST" duration-ms="12004" status="PASS">
+        </test-method> <!-- deleteAttribute -->
+        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassDelete@2d7275fc]" started-at="2026-11-17T11:11:26 IST" name="backToHomePage2" finished-at="2026-11-17T11:11:36 IST" duration-ms="9180" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=manualaByAttributeExtend1To01StEscResourceFrom02 status=SUCCESS method=A_testClassCreate.manualaByAttributeExtend1To01StEscResourceFrom02()[pri:0, instance:function.A_testClassCreate@1aafa419]]]]>
+                <![CDATA[[TestResult name=deleteAttribute status=SUCCESS method=A_testClassDelete.deleteAttribute()[pri:0, instance:function.A_testClassDelete@2d7275fc]]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backToHomePage2 -->
-        <test-method is-config="true" signature="logOut()[pri:0, instance:function.A_testClassCreate@1aafa419]" started-at="2026-11-02T17:54:55 IST" name="logOut" finished-at="2026-11-02T17:54:59 IST" duration-ms="3882" status="PASS">
+        <test-method is-config="true" signature="logOut()[pri:0, instance:function.A_testClassDelete@2d7275fc]" started-at="2026-11-17T11:11:36 IST" name="logOut" finished-at="2026-11-17T11:11:40 IST" duration-ms="3974" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Logout sucessfully.]]>
@@ -102,14 +102,14 @@
             </line>
           </reporter-output>
         </test-method> <!-- logOut -->
-        <test-method is-config="true" signature="AfterTest()[pri:0, instance:function.A_testClassCreate@1aafa419]" started-at="2026-11-02T17:54:59 IST" name="AfterTest" finished-at="2026-11-02T17:54:59 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="AfterTest()[pri:0, instance:function.A_testClassDelete@2d7275fc]" started-at="2026-11-17T11:11:40 IST" name="AfterTest" finished-at="2026-11-17T11:11:40 IST" duration-ms="333" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Refresh the URL before successfully closing the browser.]]>
             </line>
           </reporter-output>
         </test-method> <!-- AfterTest -->
-        <test-method is-config="true" signature="AfterSute()[pri:0, instance:function.A_testClassCreate@1aafa419]" started-at="2026-11-02T17:54:59 IST" name="AfterSute" finished-at="2026-11-02T17:54:59 IST" duration-ms="301" status="PASS">
+        <test-method is-config="true" signature="AfterSute()[pri:0, instance:function.A_testClassDelete@2d7275fc]" started-at="2026-11-17T11:11:40 IST" name="AfterSute" finished-at="2026-11-17T11:11:40 IST" duration-ms="289" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Browser close sucessfully.]]>
@@ -122,7 +122,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- AfterSute -->
-      </class> <!-- function.A_testClassCreate -->
+      </class> <!-- function.A_testClassDelete -->
     </test> <!-- Test -->
-  </suite> <!-- Suite -->
+  </suite> <!-- delete -->
 </testng-results>

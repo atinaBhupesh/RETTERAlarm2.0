@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
@@ -11,6 +12,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import java.util.List;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.JavascriptExecutor;
 
 public class U_MonitorLogIn extends b_baseClass {
 
@@ -28,7 +35,9 @@ public class U_MonitorLogIn extends b_baseClass {
 	private WebElement yesCloseAlarm;
 	@FindBy(xpath = "(//span[@class=\"titletext ng-tns-c139150237-0\"])[1]")
 	private WebElement alarmTitle1;;
-	// @FindBy(xpath="")private WebElement ;
+	
+	
+	 @FindBy(xpath="//span[@class=\"titletext ng-tns-c139150237-3\"]")private WebElement activeAlarmTitle; ;
 	// @FindBy(xpath="")private WebElement ;
 	// @FindBy(xpath="")private WebElement ;
 	// @FindBy(xpath="")private WebElement ;
@@ -49,52 +58,117 @@ public class U_MonitorLogIn extends b_baseClass {
 		PageFactory.initElements(driver, this);
 	}
 
-	public void loginToMonitors(WebDriver driver, String branchName, String St01M1) throws Throwable {
-		String parentWindow = driver.getWindowHandle();
+	
+	
+	
+	public void verifedDetailsOfAlarmBewtenWebAndMonitor(
+	        WebDriver driver, String branchName, String St01M1, String filePath,
+	        String activeAlarmTitleText, String   activeAlarmDateText,
+	        String alarmTimeText, String activeAlarmAddressText,
+	        String activeAlarmEmergencyNumberText,String activeAlarmDetailsText,String activeAlarmAdditionalInformationText,String activeAlarmObjectText, String activeAlarmAnnotationText) throws Throwable {
 
-		Actions act = new Actions(driver);
-		driver.switchTo().newWindow(WindowType.TAB);
+	    String parentWindow = driver.getWindowHandle();
 
-		String password1 = null;
+	    try {
+	    	
+	   
+	    	
+	        loginToMonitors(driver, branchName, St01M1);
 
-		switch (branchName) {
-		case "1": {
-			driver.navigate().to("https://am2.retteralarm.de/");
-			password1 = "Atina@123";
-			break;
-		}
+	        Thread.sleep(3000);
 
-		case "1.1": {
-			driver.navigate().to("https://am2.retteralarm.de/");
-			password1 = "Atina@123";
-			break;
-		}
+	        JavascriptExecutor js = (JavascriptExecutor) driver;
+	        js.executeScript("document.body.style.zoom='60%'");
 
-		case "2": {
-			driver.navigate().to("https://am2.testing.retteralarm.de/monitor/dashboard");
-			password1 = "Qwerty@123";
+	        Thread.sleep(1000);
 
-			break;
-		}
+	        System.out.println("\n========== ALARM DETAILS VERIFICATION ==========");
 
-		case "3": {
-			driver.navigate().to("https://am2.testing.retteralarm.de/monitor/dashboard");
-			break;
-		}
+	        System.out.println("Alarm Title: " +
+	                (verifyTextPresentOnScreen(driver, activeAlarmTitleText) ? GREEN + "PASS - Present" : RED + "FAIL - Not Present"));
+	        
+	        
+	        System.out.println("Alarm Date: " +
+	                (verifyTextPresentOnScreen(driver, activeAlarmDateText) ? GREEN + "PASS - Present" : RED + "FAIL - Not Present"));
 
-		}
+	        System.out.println("Alarm Time: " +
+	                (verifyTextPresentOnScreen(driver, alarmTimeText) ? GREEN + "PASS - Present" : RED + "FAIL - Not Present"));
 
-		userName.click();
-		Thread.sleep(1000);
-		act.sendKeys(St01M1).perform();
+	        System.out.println("Alarm Address: " +
+	                (verifyTextPresentOnScreen(driver, activeAlarmAddressText) ? GREEN + "PASS - Present" : RED + "FAIL - Not Present"));
 
-		password.click();
+	        System.out.println("Emergency Number: " +
+	                (verifyTextPresentOnScreen(driver, activeAlarmEmergencyNumberText) ? GREEN + "PASS - Present" : RED + "FAIL - Not Present"));
 
-		act.sendKeys(password1).perform();
-		logInButton.click();
-		Thread.sleep(2000);
+	        System.out.println("Alarm Details: " +
+	                (verifyTextPresentOnScreen(driver, activeAlarmDetailsText) ? GREEN + "PASS - Present" : RED + "FAIL - Not Present"));
 
+	        System.out.println("Additional Information: " +
+	                (verifyTextPresentOnScreen(driver, activeAlarmAdditionalInformationText) ? GREEN + "PASS - Present" : RED + "FAIL - Not Present"));
+
+	        System.out.println("Alarm Object: " +
+	                (verifyTextPresentOnScreen(driver, activeAlarmObjectText) ? GREEN + "PASS - Present" : RED + "FAIL - Not Present"));
+
+	        System.out.println("Alarm Annotations: " +
+	                (verifyTextPresentOnScreen(driver, activeAlarmAnnotationText) ? GREEN + "PASS - Present" : RED + "FAIL - Not Present"));
+
+	        System.out.println("================================================");
+
+	    } finally {
+	        if (driver.getWindowHandles().size() > 1) {
+	            driver.close();
+	        }
+
+	        driver.switchTo().window(parentWindow);
+	    }
 	}
+	
+	
+
+	
+	public boolean verifyTextPresentOnScreen(WebDriver driver, String expectedText) {
+
+	    if (expectedText == null || expectedText.trim().isEmpty()) {
+	        return false;
+	    }
+
+	    try {
+	        List<WebElement> elements = driver.findElements(
+	                By.xpath("//*[contains(normalize-space(.), " +
+	                        xpathLiteral(expectedText.trim()) + ")]"));
+
+	        return elements.stream().anyMatch(element -> {
+	            try {
+	                return element.isDisplayed()
+	                        && element.getText().contains(expectedText.trim());
+	            } catch (StaleElementReferenceException e) {
+	                return false;
+	            }
+	        });
+
+	    } catch (Exception e) {
+	        return false;
+	    }
+	}
+
+	private String xpathLiteral(String value) {
+	    if (!value.contains("'")) {
+	        return "'" + value + "'";
+	    }
+
+	    if (!value.contains("\"")) {
+	        return "\"" + value + "\"";
+	    }
+
+	    String[] parts = value.split("'", -1);
+	    return "concat('" + String.join("',\"'\",'", parts) + "')";
+	}
+
+
+	
+
+
+
 
 	public void checkAlarmDisplayedOnMonitors(WebDriver driver, String branchName, String St01M1,
 			List<String> createdAlarmTitles) throws Throwable {
@@ -175,6 +249,54 @@ public class U_MonitorLogIn extends b_baseClass {
 		System.out.println(GREEN + "Total alarms closed from monitor: " + totalAlarms);
 		driver.close();
 		driver.switchTo().window(parentWindow);
+
+	}
+	
+	
+	public void loginToMonitors(WebDriver driver, String branchName, String St01M1) throws Throwable {
+		String parentWindow = driver.getWindowHandle();
+
+		Actions act = new Actions(driver);
+		driver.switchTo().newWindow(WindowType.TAB);
+
+		String password1 = null;
+
+		switch (branchName) {
+		case "1": {
+			driver.navigate().to("https://am2.retteralarm.de/");
+			password1 = "Atina@123";
+			break;
+		}
+
+		case "1.1": {
+			driver.navigate().to("https://am2.retteralarm.de/");
+			password1 = "Atina@123";
+			break;
+		}
+
+		case "2": {
+			driver.navigate().to("https://am2.testing.retteralarm.de/monitor/dashboard");
+			password1 = "Qwerty@123";
+
+			break;
+		}
+
+		case "3": {
+			driver.navigate().to("https://am2.testing.retteralarm.de/monitor/dashboard");
+			break;
+		}
+
+		}
+
+		userName.click();
+		Thread.sleep(1000);
+		act.sendKeys(St01M1).perform();
+
+		password.click();
+
+		act.sendKeys(password1).perform();
+		logInButton.click();
+		Thread.sleep(3000);
 
 	}
 

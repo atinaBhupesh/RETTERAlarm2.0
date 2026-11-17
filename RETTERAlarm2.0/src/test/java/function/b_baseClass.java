@@ -151,6 +151,18 @@ public class b_baseClass {
 	String manualAlarmByUersMs;
 	String manualAlarmByEscResourceSingleStation;
 	String manualAlarmByEscResourceMs;
+	
+	String activeAlarmTitleText;
+	String  activeAlarmDateText;
+	String alarmTimeText;
+	String activeAlarmAddressText;
+	String activeAlarmEmergencyNumberText;
+	String activeAlarmDetailsText;
+	String activeAlarmAdditionalInformationText;
+	String activeAlarmObjectText;
+	String activeAlarmAnnotationText;
+	String newAttribute;
+	
 
 	String infoDocxFile;
 	String infoPdfFile;
@@ -510,6 +522,20 @@ public class b_baseClass {
 		manualAlarmByUersMs = sheet.getRow(96).getCell(1).getStringCellValue();
 		manualAlarmByEscResourceSingleStation = sheet.getRow(97).getCell(1).getStringCellValue();
 		manualAlarmByEscResourceMs = sheet.getRow(98).getCell(1).getStringCellValue();
+		
+		activeAlarmTitleText = sheet.getRow(99).getCell(1).getStringCellValue();
+		
+		activeAlarmDateText = sheet.getRow(100).getCell(1).getStringCellValue();
+		alarmTimeText = sheet.getRow(101).getCell(1).getStringCellValue();
+		activeAlarmAddressText = sheet.getRow(102).getCell(1).getStringCellValue();
+		activeAlarmEmergencyNumberText = sheet.getRow(103).getCell(1).getStringCellValue();
+		activeAlarmDetailsText = sheet.getRow(104).getCell(1).getStringCellValue();
+		activeAlarmAdditionalInformationText = sheet.getRow(105).getCell(1).getStringCellValue();
+		activeAlarmObjectText = sheet.getRow(106).getCell(1).getStringCellValue();
+		activeAlarmAnnotationText = sheet.getRow(107).getCell(1).getStringCellValue();
+		newAttribute= sheet.getRow(108).getCell(1).getStringCellValue();
+		
+		
 
 	}
 

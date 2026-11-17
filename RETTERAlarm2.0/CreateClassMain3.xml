@@ -41,6 +41,9 @@
 				<include name="editStationMonitor" />
 				<include name="addOverviewMonitor" />
 				<include name="editOverviewMonitor" />
+				
+				<include name="addNewAttribute" />
+				<include name="updateAttribute" />
 					
 				
 				

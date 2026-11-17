@@ -30,7 +30,7 @@ public class A_testClassDelete extends b_baseClass {
 	N_users users;
 	O_stationModule stn;
 	P_monitors mo;
-	
+	Q_attribute attri;
 	U_MonitorLogIn mlogin;
 	
 	S_AvailabilityRequest arequest;
@@ -75,7 +75,7 @@ public class A_testClassDelete extends b_baseClass {
 		stn= new O_stationModule (driver);
 		mo = new P_monitors(driver);
 		arequest = new S_AvailabilityRequest(driver);
-		
+		attri=new Q_attribute (driver);
 		checkL = new T_checkList (driver);
 		mlogin = new U_MonitorLogIn(driver);
 		
@@ -94,6 +94,19 @@ public class A_testClassDelete extends b_baseClass {
 
 		hp.backToHomePage(driver, branchName);
 	}
+	
+	@Test
+	public void deleteAttribute() throws Throwable {
+		Reporter.log(" ", true);
+		
+		Reporter.log("The process of delete  Attribute has started.", true);
+		attri.commonAttribute( driver);
+		attri.deleteAttribute( driver );
+		Reporter.log(GREEN+GREEN+"The process of delete Attribute is complete.", true);
+
+		Reporter.log(" ", true);
+	}
+	
 	
 	
 	@Test

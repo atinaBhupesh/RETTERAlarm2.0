@@ -6,13 +6,14 @@
       <class name="function.A_testClassCreate">
         <methods>
           <include name="AfterTest"/>
+          <include name="verifyAllApiAlarmsCretaed"/>
           <include name="BeforeSuite"/>
-          <include name="CheckAlarmExtendFunctionalityNewApi"/>
           <include name="backToHomePage2"/>
           <include name="BeforeTest"/>
           <include name="backToHomePage"/>
           <include name="logOut"/>
           <include name="AfterSute"/>
+          <include name="nextStage"/>
           <include name="createObject"/>
         </methods>
       </class> <!-- function.A_testClassCreate -->

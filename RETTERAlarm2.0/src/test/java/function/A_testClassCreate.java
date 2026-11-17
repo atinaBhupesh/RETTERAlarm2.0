@@ -38,7 +38,7 @@ public class A_testClassCreate extends b_baseClass {
 	N_users users;
 	O_stationModule stn;
 	P_monitors mo;
-	Q_Attribute att;
+	Q_attribute attri;
 	R_FileSections fs;
 	S_AvailabilityRequest arequest;
 	T_checkList checkL;
@@ -131,8 +131,7 @@ public class A_testClassCreate extends b_baseClass {
 		users = new N_users(driver);
 		stn = new O_stationModule(driver);
 		ma = new F_manualTestAlarm(driver);
-		mo = new P_monitors(driver);
-		att = new Q_Attribute(driver);
+		attri=new Q_attribute (driver);
 		fs = new R_FileSections(driver);
 		arequest = new S_AvailabilityRequest(driver);
 		checkL = new T_checkList(driver);
@@ -211,16 +210,68 @@ public class A_testClassCreate extends b_baseClass {
 		getDetailsFromFiles();
 
 	}
-
+	
+	
 	@Test
-	public void Bhupes_addAttribute() throws Throwable {
+	public void updateAttribute() throws Throwable {
 		Reporter.log(" ", true);
-
-		att.commanAttribute(driver);
+		
+		Reporter.log("The process of updating  Attribute has started.", true);
+		attri.commonAttribute( driver);
+		attri.updateAttribute( driver,  newAttribute );
+		Reporter.log("The process of updating Attribute is complete.", true);
 
 		Reporter.log(" ", true);
 	}
+	
+	@Test
+	public void addNewAttribute() throws Throwable {
+		Reporter.log(" ", true);
+		
+		Reporter.log("The process of adding new Attribute has started.", true);
+		attri.commonAttribute( driver);
+		attri.addNewAttribute( driver, filePath,  deptN, todaysDateG,  timeHHMMSS);
+		Reporter.log("The process of adding new Attribute is complete.", true);
 
+		Reporter.log(" ", true);
+	}
+	
+	@Test
+	public void verifedDetailsOfAlarmBewtenWebAndMonitor() throws Throwable {
+
+		Reporter.log(" ", true);
+		Reporter.log("The process of verifing alarm details with monitor has started.", true);
+
+		mlogin.verifedDetailsOfAlarmBewtenWebAndMonitor(  driver,branchName,  St01M1,  filePath,  activeAlarmTitleText,   activeAlarmDateText,
+				alarmTimeText,  activeAlarmAddressText,
+				 activeAlarmEmergencyNumberText, activeAlarmDetailsText, activeAlarmAdditionalInformationText, activeAlarmObjectText, activeAlarmAnnotationText );
+		
+		
+		Reporter.log(GREEN + GREEN + "The process of verifing alarm details with monitor is complete.", true);
+		Reporter.log(" ", true);
+
+	}
+	
+	
+	@Test
+	public void getAlarmDetailsFromWeb() throws Throwable {
+
+		Reporter.log(" ", true);
+		Reporter.log("The process of get details of active alarm has started.", true);
+
+		ma.commonForManualAlarm(driver, deptN, branchName);
+		ma.getAlarmDetailsFromWeb( driver,   filePath);
+		
+		
+		Reporter.log(GREEN + GREEN + "The process of get details of active alarm has started. is complete.", true);
+		Reporter.log(" ", true);
+
+	}
+	
+	
+	
+
+	
 	@Test
 	public void checkAlarmDisplayedOnMonitors() throws Throwable {
 

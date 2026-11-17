@@ -9,7 +9,8 @@
 			<methods>
 			
 			
-				<include name="deleteChatGroups" />
+		
+				<include name="deleteAttribute" />
 		
 		
 			

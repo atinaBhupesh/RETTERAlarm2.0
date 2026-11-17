@@ -215,10 +215,12 @@ public class I_AlarmTemplate extends b_baseClass {
 	@FindBy(xpath = "//input[@name=\"keyword\"]")
 	private WebElement temAlarmTitle;
 
-	 @FindBy(xpath="//span[text()=\"Next\"]")private WebElement nextAddress;
-	 
-	 @FindBy(xpath="//span[text()=\"Object\"]")private WebElement objectLebal;
-	
+	@FindBy(xpath = "//span[text()=\"Next\"]")
+	private WebElement nextAddress;
+
+	@FindBy(xpath = "//span[text()=\"Object\"]")
+	private WebElement objectLebal;
+
 	// @FindBy(xpath="")private WebElement ;
 	// @FindBy(xpath="")private WebElement ;
 	// @FindBy(xpath="")private WebElement ;
@@ -239,8 +241,6 @@ public class I_AlarmTemplate extends b_baseClass {
 		PageFactory.initElements(driver, this);
 
 	}
-	
-	
 	
 	
 	
@@ -763,7 +763,7 @@ public class I_AlarmTemplate extends b_baseClass {
 		act.sendKeys(st01A1).perform();
 		Thread.sleep(1000);
 		act.sendKeys(Keys.ENTER).perform();
-		
+
 		act.sendKeys(Keys.HOME).perform();
 		for (int d = 0; d <= 15; d++) {
 			act.sendKeys(Keys.DELETE).perform();
@@ -779,7 +779,7 @@ public class I_AlarmTemplate extends b_baseClass {
 			act.sendKeys(Keys.DELETE).perform();
 
 		}
-		
+
 		act.sendKeys(Keys.TAB).perform();
 		Thread.sleep(1000);
 
@@ -806,24 +806,11 @@ public class I_AlarmTemplate extends b_baseClass {
 
 		out.close();
 		wb.close();
-		
-		
 
 		String expectedTitle = firstItemTitle.getText();
 		Assert.assertTrue(title.contains(expectedTitle), RED + "Template not added.");
-		
-		
-		
-		
-		
-		
-		
-		
 
 		System.out.println(GREEN + title);
-		
-		
-		
 
 	}
 
@@ -898,27 +885,20 @@ public class I_AlarmTemplate extends b_baseClass {
 		robot.mouseWheel(5);
 
 		act.sendKeys(Keys.ENTER).build().perform();
-		
 
 		robot.mouseWheel(5);
 		Thread.sleep(500);
-		
-		
-	
 
 		alarmAddress.click();
 		act.sendKeys("BAPS Swaminarayan mandir, Wathoda Layout, Nagpur, Maharashtra 440035").build().perform();
 		act.sendKeys(Keys.TAB).perform();
 		Thread.sleep(2000);
-		
-	
-		for (int i=0;i<=8;i++)
-		{
+
+		for (int i = 0; i <= 8; i++) {
 			act.sendKeys(Keys.TAB).perform();
 		}
 
 		act.moveToElement(additionalAddressInformation).click().perform();
-
 
 		alarmObject.click();
 		act.sendKeys("hospital").perform();
@@ -1030,19 +1010,17 @@ public class I_AlarmTemplate extends b_baseClass {
 		robot.mouseWheel(5);
 
 		act.sendKeys(Keys.ENTER).build().perform();
-		
+
 		robot.mouseWheel(5);
 		Thread.sleep(500);
 		alarmAddress.click();
 		act.sendKeys("BAPS Swaminarayan mandir, Wathoda Layout, Nagpur, Maharashtra 440035").build().perform();
 		act.sendKeys(Keys.TAB).perform();
 		Thread.sleep(2000);
-		
-		for (int i=0;i<=8;i++)
-		{
+
+		for (int i = 0; i <= 8; i++) {
 			act.sendKeys(Keys.TAB).perform();
 		}
-		
 
 		act.moveToElement(additionalAddressInformation).click().perform();
 		Thread.sleep(1000);
@@ -1057,11 +1035,10 @@ public class I_AlarmTemplate extends b_baseClass {
 		act.sendKeys("alarm annotation").perform();
 
 //		act.sendKeys(Keys.TAB).sendKeys(Keys.ENTER).build().perform();
-		
+
 		act.sendKeys(Keys.TAB).sendKeys(Keys.ENTER).build().perform();
 
 		Thread.sleep(2000);
-		
 
 		userTypeFirefighter.click();
 		Thread.sleep(1000);

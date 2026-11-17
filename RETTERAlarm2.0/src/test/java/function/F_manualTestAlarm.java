@@ -441,7 +441,43 @@ public class F_manualTestAlarm extends b_baseClass {
 
 	@FindBy(xpath = "(//span[@class=\"alarm-title-text\"])[1]")
 	private WebElement createdAlarmKeyword;
-	 @FindBy(xpath="//input[@placeholder=\"Alarm Search...\"]")private WebElement alarmSearchField;
+	@FindBy(xpath = "//input[@placeholder=\"Alarm Search...\"]")
+	private WebElement alarmSearchField;
+	@FindBy(xpath = "//span[@class=\"alarm-title-text\"]")
+	private WebElement firstActiveAlarm;
+
+	@FindBy(xpath = "(//h3[@_ngcontent-ng-c192576950])[1]")
+	private WebElement activeAlarmTitle;
+	@FindBy(xpath = "(//span[@_ngcontent-ng-c192576950])[1]")
+	private WebElement activeAlarmDateTime;
+	@FindBy(xpath = "(//span[@_ngcontent-ng-c192576950])[2]")
+	private WebElement activeAlarmAddress;
+	@FindBy(xpath = "(//span[@_ngcontent-ng-c192576950])[3]")
+	private WebElement activeAlarmEmergencyNumber;
+
+	@FindBy(xpath = "(//div[@class=\"dx-field-value\"])[2]")
+	private WebElement activeAlarmDetails;
+	@FindBy(xpath = "//ul[@class=\"infolist\"]")
+	private WebElement activeAlarmAdditionalInfornmation;
+	@FindBy(xpath = "(//div[@class=\"dx-field-value\"])[12]")
+	private WebElement activeAlarmObject;
+	@FindBy(xpath = "(//div[@class=\"dx-field-value\"])[13]")
+	private WebElement activeAlarmAnnotaion;
+	// @FindBy(xpath="")private WebElement ;
+	// @FindBy(xpath="")private WebElement ;
+	// @FindBy(xpath="")private WebElement ;
+	// @FindBy(xpath="")private WebElement ;
+
+	// @FindBy(xpath="")private WebElement ;
+	// @FindBy(xpath="")private WebElement ;
+	// @FindBy(xpath="")private WebElement ;
+	// @FindBy(xpath="")private WebElement ;
+	// @FindBy(xpath="")private WebElement ;
+	// @FindBy(xpath="")private WebElement ;
+	// @FindBy(xpath="")private WebElement ;
+
+	// @FindBy(xpath="")private WebElement ;
+	// @FindBy(xpath="")private WebElement ;
 	// @FindBy(xpath="")private WebElement ;
 	// @FindBy(xpath="")private WebElement ;
 	// @FindBy(xpath="")private WebElement ;
@@ -460,68 +496,80 @@ public class F_manualTestAlarm extends b_baseClass {
 		PageFactory.initElements(driver, this);
 	}
 
-//	public void verifyAllApiAlarmsCretaed(WebDriver driver, String gTodaysDate, String germanyTodaysDate1,
-//			String ApiAlarm01, String ApiAlarm02, String ApiAlarm03, String ApiAlarm04, String ApiAlarm05,
-//			String ApiAlarm06, String ApiAlarm07, String ApiAlarm08, String ApiAlarm09, String ApiAlarm10,
-//			String ApiAlarm11, String ApiAlarm12, String ApiAlarm13, String ApiAlarm14) throws Throwable {
-//
-//		Actions act = new Actions(driver);
-//
-//		String[] alarms = { ApiAlarm01, ApiAlarm02, ApiAlarm03, ApiAlarm04, ApiAlarm05, ApiAlarm06, ApiAlarm07,
-//				ApiAlarm08, ApiAlarm09, ApiAlarm10, ApiAlarm11, ApiAlarm12, ApiAlarm13, ApiAlarm14 };
-//
-//		for (int a = 0; a < alarms.length; a++) {
-//
-//			String title = alarms[a];
-//
-//			System.out.println("Searching alarm: " + title);
-//
-//			refreshFilter.click();
-//
-//			titleSearch.click();
-//			Thread.sleep(1000);
-//
-//			titleSearchField.click();
-//			Thread.sleep(500);
-//
-//			act.sendKeys(title).perform();
-////			System.out.println(title);
-//
-//			Thread.sleep(2000);
-//
-//			titleSearchFieldOk.click();
-//			Thread.sleep(2000);
-//			int count = getDate.size();
-////	        System.out.println(count);
-//
-//			Thread.sleep(2000);
-////	        System.out.println(gTodaysDate);
-//
-//			if (count == 0) {
-//				System.out.println(RED + "Alarm not available.");
-//
-//			}
-//
-//			else {
-//
-//				String alarmDate1 = getDate1.getText();
-//
-////				System.out.println(germanyTodaysDate3);
-////				System.out.println(alarmDate1);
-//
-//				if (gTodaysDate.equals(alarmDate1) || germanyTodaysDate1.equals(alarmDate1)) {
-//					System.out.println(GREEN + "Alarm " + title + " created successfully.");
-//
-//				}
-//
-//				else {
-//					System.out.println(RED + "Alarm " + title + " not created successfully.");
-//				}
-//
-//			}
-//
-//		}
-//	}
+	public void getAlarmDetailsFromWeb(WebDriver driver, String filePath) throws Throwable {
+
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+
+		alarmStatus.click();
+		Thread.sleep(1000);
+		alarmStatusActive.click();
+		Thread.sleep(1000);
+		alarmStatusOk.click();
+		Thread.sleep(2000);
+
+		if (firstActiveButton.isDisplayed()) {
+
+			firstActiveAlarm.click();
+			Thread.sleep(5000);
+
+			js.executeScript("document.body.style.zoom='60%'");
+			String activeAlarmTitleText = activeAlarmTitle.getText().trim();
+			String activeAlarmDateTimeText = activeAlarmDateTime.getText().trim();
+			String activeAlarmDateText = activeAlarmDateTimeText.split(" ")[0];
+			String alarmTimeTex = activeAlarmDateTimeText.split(" ")[1];
+
+			String activeAlarmAddressText = activeAlarmAddress.getText().trim();
+			String activeAlarmEmergencyNumberText = activeAlarmEmergencyNumber.getText().trim();
+			String activeAlarmDetailsText = activeAlarmDetails.getText().trim();
+			String activeAlarmAdditionalInformationText = activeAlarmAdditionalInfornmation.getText().trim();
+			String activeAlarmObjectText = activeAlarmObject.getText().trim();
+			String activeAlarmAnnotationText = activeAlarmAnnotaion.getText().trim();
+
+			// Print alarm details
+//			System.out.println("Alarm Title: " + activeAlarmTitleText);
+//			System.out.println("Alarm Date & Time: " + activeAlarmDateTimeText);
+//			System.out.println("Alarm Address: " + activeAlarmAddressText);
+//			System.out.println("Emergency Number: " + activeAlarmEmergencyNumberText);
+//			System.out.println("Alarm Details: " + activeAlarmDetailsText);
+//			System.out.println("Additional Information: " + activeAlarmAdditionalInformationText);
+//			System.out.println("Alarm Object: " + activeAlarmObjectText);
+//			System.out.println("Alarm Annotation: " + activeAlarmAnnotationText);
+
+			// Write data into Excel
+			try (FileInputStream in = new FileInputStream(filePath); XSSFWorkbook wb = new XSSFWorkbook(in)) {
+
+				XSSFSheet sheet = wb.getSheetAt(0);
+
+				String[] labels = { "activeAlarmTitleText", "activeAlarmDateText", "alarmTimeTex",
+						"activeAlarmAddressText", "activeAlarmEmergencyNumberText", "activeAlarmDetailsText",
+						"activeAlarmAdditionalInformationText", "activeAlarmObjectText", "activeAlarmAnnotationText" };
+
+				String[] values = { activeAlarmTitleText, activeAlarmDateText, alarmTimeTex, activeAlarmAddressText,
+						activeAlarmEmergencyNumberText, activeAlarmDetailsText, activeAlarmAdditionalInformationText,
+						activeAlarmObjectText, activeAlarmAnnotationText
+
+				};
+
+				int startRow = 99;
+
+				for (int i = 0; i < labels.length; i++) {
+					Row row = sheet.createRow(startRow + i);
+					row.createCell(0).setCellValue(labels[i]);
+					row.createCell(1).setCellValue(values[i]);
+				}
+
+				try (FileOutputStream out = new FileOutputStream(filePath)) {
+					wb.write(out);
+				}
+			}
+
+			js.executeScript("document.body.style.zoom='100%'");
+
+		} else {
+			System.out.println("No Active Alarm Found");
+		}
+
+	}
 
 	public void testAlarm_EscaltionCallSmsEmail(WebDriver driver, String st01N, String st02N, String gTodaysDate,
 			String germanyTimeAfter7MinHH, String germanyTimeAfter7MinMM, String st01EscalarionResourceCallSmsEmail)
@@ -2274,7 +2322,7 @@ public class F_manualTestAlarm extends b_baseClass {
 	}
 
 	public void CheckManualAlarmEscalationFunctionalityForMultuStation(WebDriver driver,
-			String manualAlarmNameForEsclationAlarm,String st01N, String branchName) throws Throwable {
+			String manualAlarmNameForEsclationAlarm, String st01N, String branchName) throws Throwable {
 		Actions act = new Actions(driver);
 
 		// Search alarm by title
@@ -2303,12 +2351,11 @@ public class F_manualTestAlarm extends b_baseClass {
 //
 //		js.executeScript("arguments[0].scrollIntoView(true);", ffAtribute);
 //		Thread.sleep(2000);
-		
-		WebElement st=driver.findElement(By.xpath("(//span[text()='" + st01N + "'])[1]")); 
-		
+
+		WebElement st = driver.findElement(By.xpath("(//span[text()='" + st01N + "'])[1]"));
+
 		act.moveToElement((st)).click().build().perform();
 		Thread.sleep(2000);
-		
 
 		switch (branchName) {
 		case "1":
@@ -2411,8 +2458,8 @@ public class F_manualTestAlarm extends b_baseClass {
 
 	}
 
-	public void CheckAlarmExtendFunctionalityNewApi(WebDriver driver,String st01N, String newApiAlarmForMessage, String branchName)
-			throws Throwable {
+	public void CheckAlarmExtendFunctionalityNewApi(WebDriver driver, String st01N, String newApiAlarmForMessage,
+			String branchName) throws Throwable {
 		Actions act = new Actions(driver);
 
 		// Search alarm by title
@@ -2431,18 +2478,18 @@ public class F_manualTestAlarm extends b_baseClass {
 		bgAlarm.click();
 		Thread.sleep(3000);
 
+		act.moveToElement(driver.findElement(By.xpath("(//span[text()='" + st01N + "'])[1]"))).click().build()
+				.perform();
+		Thread.sleep(1000);
 
-		act.moveToElement(driver.findElement(By.xpath("(//span[text()='" + st01N + "'])[1]"))).click().build().perform();
+		act.moveToElement(driver.findElement(By.xpath("(//div[text()=\"No Response\"])[last()]"))).click().build()
+				.perform();
 		Thread.sleep(1000);
-		
-		act.moveToElement(driver.findElement(By.xpath("(//div[text()=\"No Response\"])[last()]"))).click().build().perform();
-		Thread.sleep(1000);
-		
+
 		switch (branchName) {
 		case "1":
-			try {	
-				
-			
+			try {
+
 				if (jonas2.isDisplayed()) {
 					System.out.println(GREEN + "Extended user visible,Alarm Extended successfully.");
 				}
@@ -4293,10 +4340,8 @@ public class F_manualTestAlarm extends b_baseClass {
 //		System.out.println(expectedTitle);
 
 		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not created.");
-		
+
 		System.out.println(GREEN + title);
-	
-		
 
 	}
 
@@ -4321,10 +4366,10 @@ public class F_manualTestAlarm extends b_baseClass {
 		act.sendKeys(title).perform();
 
 		alarmImage.click();
-		act.sendKeys("Image-"+title).perform();
+		act.sendKeys("Image-" + title).perform();
 
 		descriptionField.click();
-		act.sendKeys("checking "+title).perform();
+		act.sendKeys("checking " + title).perform();
 
 		// Reporter details
 		reporter.click();
@@ -4507,21 +4552,19 @@ public class F_manualTestAlarm extends b_baseClass {
 
 		bgAlarm.click();
 		Thread.sleep(3000);
-		
-		
-		
 
-		act.moveToElement(driver.findElement(By.xpath("(//span[text()='" + st01N + "'])[1]"))).click().build().perform();
+		act.moveToElement(driver.findElement(By.xpath("(//span[text()='" + st01N + "'])[1]"))).click().build()
+				.perform();
 		Thread.sleep(1000);
-		
-		act.moveToElement(driver.findElement(By.xpath("(//div[text()=\"No Response\"])[last()]"))).click().build().perform();
+
+		act.moveToElement(driver.findElement(By.xpath("(//div[text()=\"No Response\"])[last()]"))).click().build()
+				.perform();
 		Thread.sleep(1000);
-		
+
 		switch (branchName) {
 		case "1":
-			try {	
-				
-			
+			try {
+
 				if (jonas2.isDisplayed()) {
 					System.out.println(GREEN + "Extended user visible,Alarm Extended successfully.");
 				}
@@ -4553,17 +4596,6 @@ public class F_manualTestAlarm extends b_baseClass {
 		default:
 			System.out.println(RED + "Invalid branch");
 		}
-		
-		
-		
-	
-
-	
-		
-		
-		
-		
-		
 
 	}
 
@@ -4745,7 +4777,7 @@ public class F_manualTestAlarm extends b_baseClass {
 		// Refresh
 		refreshFilter.click();
 		Thread.sleep(2000);
-		
+
 		FileInputStream in = new FileInputStream(filePath);
 
 		XSSFWorkbook wb = new XSSFWorkbook(in);
@@ -4763,9 +4795,6 @@ public class F_manualTestAlarm extends b_baseClass {
 
 		out.close();
 		wb.close();
-		
-		
-		
 
 	}
 
@@ -4791,10 +4820,10 @@ public class F_manualTestAlarm extends b_baseClass {
 		act.sendKeys(title).perform();
 
 		alarmImage.click();
-		act.sendKeys("Image-"+title).perform();
+		act.sendKeys("Image-" + title).perform();
 
 		descriptionField.click();
-		act.sendKeys("Checking "+title).perform();
+		act.sendKeys("Checking " + title).perform();
 
 		// Priority
 		priority.click();
@@ -4887,9 +4916,7 @@ public class F_manualTestAlarm extends b_baseClass {
 		title = title.replace("...", "").trim();
 
 		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not added.");
-		
-		
-		
+
 		FileInputStream in = new FileInputStream(filePath);
 
 		XSSFWorkbook wb = new XSSFWorkbook(in);
@@ -4936,10 +4963,10 @@ public class F_manualTestAlarm extends b_baseClass {
 		act.sendKeys(title).perform();
 
 		alarmImage.click();
-		act.sendKeys("Image-"+title).perform();
+		act.sendKeys("Image-" + title).perform();
 
 		descriptionField.click();
-		act.sendKeys("Checking "+title).perform();
+		act.sendKeys("Checking " + title).perform();
 
 		Thread.sleep(2000);
 
@@ -5032,7 +5059,7 @@ public class F_manualTestAlarm extends b_baseClass {
 		title = title.replace("...", "").trim();
 
 		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not added.");
-		
+
 		FileInputStream in = new FileInputStream(filePath);
 
 		XSSFWorkbook wb = new XSSFWorkbook(in);
@@ -5050,7 +5077,6 @@ public class F_manualTestAlarm extends b_baseClass {
 
 		out.close();
 		wb.close();
-		
 
 		System.out.println(GREEN + title);
 
@@ -5186,8 +5212,8 @@ public class F_manualTestAlarm extends b_baseClass {
 	}
 
 	public void manualaByAttributeMSLP(WebDriver driver, String st01N, String st02N, String gTodaysDate,
-			String gtimeHHMMSS, String st01V1, String st01V2, String st02V1, String st01A1, String st02A1, String filePath)
-			throws Throwable {
+			String gtimeHHMMSS, String st01V1, String st01V2, String st02V1, String st01A1, String st02A1,
+			String filePath) throws Throwable {
 
 		Actions act = new Actions(driver);
 
@@ -5214,10 +5240,10 @@ public class F_manualTestAlarm extends b_baseClass {
 		act.sendKeys(title).perform();
 
 		alarmImage.click();
-		act.sendKeys("Image-"+title).perform();
+		act.sendKeys("Image-" + title).perform();
 
 		descriptionField.click();
-		act.sendKeys("Checking "+title).perform();
+		act.sendKeys("Checking " + title).perform();
 
 		// Priority
 		priority.click();
@@ -5363,10 +5389,6 @@ public class F_manualTestAlarm extends b_baseClass {
 
 		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not added.");
 
-	
-		
-		
-		
 		FileInputStream in = new FileInputStream(filePath);
 
 		XSSFWorkbook wb = new XSSFWorkbook(in);
@@ -5384,10 +5406,8 @@ public class F_manualTestAlarm extends b_baseClass {
 
 		out.close();
 		wb.close();
-		
+
 		System.out.println(GREEN + title);
-		
-		
 
 	}
 
@@ -5541,9 +5561,7 @@ public class F_manualTestAlarm extends b_baseClass {
 		title = title.replace("...", "").trim();
 
 		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not added.");
-		
-		
-		
+
 		FileInputStream in = new FileInputStream(filePath);
 
 		XSSFWorkbook wb = new XSSFWorkbook(in);
@@ -5561,12 +5579,6 @@ public class F_manualTestAlarm extends b_baseClass {
 
 		out.close();
 		wb.close();
-		
-		
-		
-		
-		
-		
 
 		System.out.println(GREEN + title);
 
@@ -5601,10 +5613,10 @@ public class F_manualTestAlarm extends b_baseClass {
 		act.sendKeys(title).perform();
 
 		alarmImage.click();
-		act.sendKeys("Image-"+title).perform();
+		act.sendKeys("Image-" + title).perform();
 
 		descriptionField.click();
-		act.sendKeys("Checking "+title).perform();
+		act.sendKeys("Checking " + title).perform();
 
 		// Reporter details
 		reporter.click();
@@ -5695,8 +5707,7 @@ public class F_manualTestAlarm extends b_baseClass {
 		title = title.replace("...", "").trim();
 
 		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not added.");
-		
-		
+
 		FileInputStream in = new FileInputStream(filePath);
 
 		XSSFWorkbook wb = new XSSFWorkbook(in);
@@ -5714,18 +5725,13 @@ public class F_manualTestAlarm extends b_baseClass {
 
 		out.close();
 		wb.close();
-		
-		
-		
-		
-		
 
 		System.out.println(GREEN + title);
 
 	}
 
 	public void manualAlarmByResourceMsLP(WebDriver driver, String st01N, String st02N, String gTodaysDate,
-			String gtimeHHMMSS, String st01R1, String st01R2,String filePath) throws Throwable {
+			String gtimeHHMMSS, String st01R1, String st01R2, String filePath) throws Throwable {
 
 		Actions act = new Actions(driver);
 		Robot robot = new Robot();
@@ -5753,10 +5759,10 @@ public class F_manualTestAlarm extends b_baseClass {
 		act.sendKeys(title).perform();
 
 		alarmImage.click();
-		act.sendKeys("Image-"+title).perform();
+		act.sendKeys("Image-" + title).perform();
 
 		descriptionField.click();
-		act.sendKeys("Checking "+title).perform();
+		act.sendKeys("Checking " + title).perform();
 
 		setPriority.click();
 		Thread.sleep(500);
@@ -5854,7 +5860,7 @@ public class F_manualTestAlarm extends b_baseClass {
 		title = title.replace("...", "").trim();
 
 		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not added.");
-		
+
 		FileInputStream in = new FileInputStream(filePath);
 
 		XSSFWorkbook wb = new XSSFWorkbook(in);
@@ -5872,11 +5878,6 @@ public class F_manualTestAlarm extends b_baseClass {
 
 		out.close();
 		wb.close();
-		
-		
-		
-		
-		
 
 		System.out.println(GREEN + title);
 
@@ -5914,10 +5915,10 @@ public class F_manualTestAlarm extends b_baseClass {
 		act.sendKeys(title).perform();
 
 		alarmImage.click();
-		act.sendKeys("Image-"+title).perform();
+		act.sendKeys("Image-" + title).perform();
 
 		descriptionField.click();
-		act.sendKeys("Checking "+title).perform();
+		act.sendKeys("Checking " + title).perform();
 
 		// Reporter details
 		reporter.click();
@@ -6080,8 +6081,7 @@ public class F_manualTestAlarm extends b_baseClass {
 		title = title.replace("...", "").trim();
 
 		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not added.");
-		
-		
+
 		FileInputStream in = new FileInputStream(filePath);
 
 		XSSFWorkbook wb = new XSSFWorkbook(in);
@@ -6099,11 +6099,6 @@ public class F_manualTestAlarm extends b_baseClass {
 
 		out.close();
 		wb.close();
-		
-		
-		
-		
-		
 
 		System.out.println(GREEN + title);
 
@@ -8256,10 +8251,9 @@ public class F_manualTestAlarm extends b_baseClass {
 			alarmSearchField.click();
 			Thread.sleep(1000);
 			act.sendKeys(title).perform();
-			
+
 			Thread.sleep(5000);
-			
-			
+
 			int count = getDate.size();
 
 			if (count == 0) {
@@ -8276,54 +8270,53 @@ public class F_manualTestAlarm extends b_baseClass {
 
 					FileInputStream in = new FileInputStream(filePath);
 					int rowCount = 0;
-					
+
 					switch (title) {
 					case "BG-API A-v1 St 01 HP":
 						break;
 					case "BG-C A-v1 MS":
-						rowCount= 81;
+						rowCount = 81;
 						break;
-						
+
 					case "BG-NEW Api MS HP":
-						rowCount= 82;
+						rowCount = 82;
 						break;
 					case "BG-NEW API MS LP":
 						break;
 					case "BG-New APi Alarm Updated":
-						rowCount= 83;
+						rowCount = 83;
 						break;
 					case "BG-NEW Api Email to St 01 from St 02":
-						rowCount= 84;
+						rowCount = 84;
 						break;
-						
+
 					case "BG-NEW API Vehicle user":
-						rowCount= 85;
+						rowCount = 85;
 						break;
 					case "BG-C New APi st 01 esc":
-						rowCount= 86;
+						rowCount = 86;
 						break;
 					case "BG-New Api Esc 02 to 01 LP":
-						rowCount= 87;
+						rowCount = 87;
 						break;
 					case "BG-New APi ex st 01 from 02 HP":
-						rowCount= 88;
+						rowCount = 88;
 						break;
 					case "BG-C New APi ex st 01 from 02 LP":
-						rowCount= 89;
+						rowCount = 89;
 						break;
-						
+
 					case "New DME Alarm-New API HP":
-						rowCount= 90;
+						rowCount = 90;
 						break;
-						case "BG-DME Alarm-Old API HP":
-							break;
-						case "BG-DME Alarm-New API LP":
-							rowCount= 91;
-							break;
-						
+					case "BG-DME Alarm-Old API HP":
+						break;
+					case "BG-DME Alarm-New API LP":
+						rowCount = 91;
+						break;
 
 					}
-					
+
 					XSSFWorkbook wb = new XSSFWorkbook(in);
 					XSSFSheet sheet = wb.getSheetAt(0);
 
@@ -8335,8 +8328,6 @@ public class F_manualTestAlarm extends b_baseClass {
 
 					row.createCell(0).setCellValue(title);
 					row.createCell(1).setCellValue(createdAlarmKeyword.getText());
-					
-					
 
 					in.close();
 

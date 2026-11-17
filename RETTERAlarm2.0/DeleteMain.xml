@@ -28,6 +28,7 @@
 				<include name="deleteStaions" />
 				<include name="deleteMonitorUsers" />
 				<include name="deleteCheckList" />
+				<include name="deleteAttribute" />
 				
 				
 				
