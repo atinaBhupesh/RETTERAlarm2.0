@@ -97,7 +97,7 @@ public class b_baseClass {
 
 	String resourceNewUser;
 	String attributeNewUser;
-	
+
 	String newStationName;
 	String newStationMonitorName;
 
@@ -151,9 +151,9 @@ public class b_baseClass {
 	String manualAlarmByUersMs;
 	String manualAlarmByEscResourceSingleStation;
 	String manualAlarmByEscResourceMs;
-	
+
 	String activeAlarmTitleText;
-	String  activeAlarmDateText;
+	String activeAlarmDateText;
 	String alarmTimeText;
 	String activeAlarmAddressText;
 	String activeAlarmEmergencyNumberText;
@@ -162,10 +162,9 @@ public class b_baseClass {
 	String activeAlarmObjectText;
 	String activeAlarmAnnotationText;
 	String newAttribute;
-	
 
-	String infoDocxFile;
-	String infoPdfFile;
+	String infoDocx5MbFile;
+	String infoPdf5MbFile;
 	String infoPdf9MbFile;
 	String infoPdf9Mb2File;
 	String infoWord10MbFile;
@@ -183,7 +182,7 @@ public class b_baseClass {
 
 	String importUserFile;
 	String importEventFile;
-	String updateUserFilr;
+	String updateUserFile;
 
 	String proEnd = "|*******************************************************|";
 
@@ -298,16 +297,15 @@ public class b_baseClass {
 
 		switch (browserName) {
 		case "1": {
-			// Normal browser
+////   >>>>>Normal browser
 			driver = new ChromeDriver();
 
-//			For Headless browser 
+////	>>>>For Headless browser 
 //			WebDriverManager.chromedriver().setup();
 //			ChromeOptions chromeOptions = new ChromeOptions();
 //			chromeOptions.addArguments("--headless=new");
 //			chromeOptions.addArguments("--window-size=1920,1080");
 //			driver = new ChromeDriver(chromeOptions);
-//			
 
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 			break;
@@ -384,13 +382,13 @@ public class b_baseClass {
 			break;
 
 		case "1.1":
-			filePath = "D:\\Automation_2307\\SampleFilesNew\\Details Files\\DetailsFileLive.xlsx";
+			filePath = "D:\\Automation_2307\\SampleFilesNew\\Details Files\\DetailsFileLiveAndrew.xlsx";
 			password = "123456";
 
 			break;
 
 		case "2":
-			filePath = "D:\\Automation_2307\\SampleFilesNew\\Details Files\\DetailsFileTesting.xlsx";
+			filePath = "D:\\Automation_2307\\SampleFilesNew\\Details Files\\DetailsFileTestingMain.xlsx";
 
 			password = "Qwerty@123";
 			break;
@@ -513,8 +511,8 @@ public class b_baseClass {
 		BGNewAPiexst01from02HP = sheet.getRow(88).getCell(1).getStringCellValue();
 		BGCNewAPiexst01from02LP = sheet.getRow(89).getCell(1).getStringCellValue();
 		NewDMEAlarmNewAPIHP = sheet.getRow(90).getCell(1).getStringCellValue();
-		BGDMEAlarmNewAPILP=sheet.getRow(91).getCell(1).getStringCellValue();
-		 
+		BGDMEAlarmNewAPILP = sheet.getRow(91).getCell(1).getStringCellValue();
+
 		manualaByAttributeMSLP = sheet.getRow(92).getCell(1).getStringCellValue();
 		manualaByAttributeSingleStation = sheet.getRow(93).getCell(1).getStringCellValue();
 		manualAlarmByResourceMsHP = sheet.getRow(94).getCell(1).getStringCellValue();
@@ -522,9 +520,9 @@ public class b_baseClass {
 		manualAlarmByUersMs = sheet.getRow(96).getCell(1).getStringCellValue();
 		manualAlarmByEscResourceSingleStation = sheet.getRow(97).getCell(1).getStringCellValue();
 		manualAlarmByEscResourceMs = sheet.getRow(98).getCell(1).getStringCellValue();
-		
+
 		activeAlarmTitleText = sheet.getRow(99).getCell(1).getStringCellValue();
-		
+
 		activeAlarmDateText = sheet.getRow(100).getCell(1).getStringCellValue();
 		alarmTimeText = sheet.getRow(101).getCell(1).getStringCellValue();
 		activeAlarmAddressText = sheet.getRow(102).getCell(1).getStringCellValue();
@@ -533,9 +531,7 @@ public class b_baseClass {
 		activeAlarmAdditionalInformationText = sheet.getRow(105).getCell(1).getStringCellValue();
 		activeAlarmObjectText = sheet.getRow(106).getCell(1).getStringCellValue();
 		activeAlarmAnnotationText = sheet.getRow(107).getCell(1).getStringCellValue();
-		newAttribute= sheet.getRow(108).getCell(1).getStringCellValue();
-		
-		
+		newAttribute = sheet.getRow(108).getCell(1).getStringCellValue();
 
 	}
 
@@ -543,10 +539,10 @@ public class b_baseClass {
 
 		importUserFile = "D:\\Automation_2307\\SampleFilesNew\\Details Files\\User_Import.xlsx";
 		importEventFile = "D:\\Automation_2307\\SampleFilesNew\\Details Files\\event_import.xlsx";
-		updateUserFilr = "D:\\Automation_2307\\SampleFilesNew\\Details Files\\user_update.xlsx";
+		updateUserFile = "D:\\Automation_2307\\SampleFilesNew\\Details Files\\user_update.xlsx";
 
-		infoDocxFile = "D:\\Automation_2307\\SampleFilesNew\\docx_5mb.docx";
-		infoPdfFile = "D:\\Automation_2307\\SampleFilesNew\\pdf_5mb.pdf";
+		infoDocx5MbFile = "D:\\Automation_2307\\SampleFilesNew\\docx_5mb.docx";
+		infoPdf5MbFile = "D:\\Automation_2307\\SampleFilesNew\\pdf_5mb.pdf";
 		infoPdf9MbFile = "D:\\Automation_2307\\SampleFilesNew\\pdf_9mb.pdf";
 		infoPdf9Mb2File = "D:\\Automation_2307\\SampleFilesNew\\pdf_9mb2.pdf";
 		infoWord10MbFile = "D:\\Automation_2307\\SampleFilesNew\\word_10mb.docx";

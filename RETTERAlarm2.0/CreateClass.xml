@@ -7,10 +7,17 @@
 
 			<methods>
 			
-			<include name="addNewAttribute" />
-				<include name="updateAttribute" />
-					
 			
+
+<include name="sendMessageToApiEsclationAlarm" />
+
+				<include name="createMonitorInformationByAttributeWithAttachments" />
+
+				<include name="importUser" />
+				<include name="updateUser" />
+				 <include name="importEventWith1minReminder"/>
+
+				
 					
 			</methods>
 

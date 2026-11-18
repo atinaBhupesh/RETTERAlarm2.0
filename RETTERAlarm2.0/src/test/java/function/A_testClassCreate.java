@@ -131,7 +131,7 @@ public class A_testClassCreate extends b_baseClass {
 		users = new N_users(driver);
 		stn = new O_stationModule(driver);
 		ma = new F_manualTestAlarm(driver);
-		attri=new Q_attribute (driver);
+		attri = new Q_attribute(driver);
 		fs = new R_FileSections(driver);
 		arequest = new S_AvailabilityRequest(driver);
 		checkL = new T_checkList(driver);
@@ -210,49 +210,47 @@ public class A_testClassCreate extends b_baseClass {
 		getDetailsFromFiles();
 
 	}
-	
-	
+
 	@Test
 	public void updateAttribute() throws Throwable {
 		Reporter.log(" ", true);
-		
+
 		Reporter.log("The process of updating  Attribute has started.", true);
-		attri.commonAttribute( driver);
-		attri.updateAttribute( driver,  newAttribute );
+		attri.commonAttribute(driver);
+		attri.updateAttribute(driver, newAttribute);
 		Reporter.log("The process of updating Attribute is complete.", true);
 
 		Reporter.log(" ", true);
 	}
-	
+
 	@Test
 	public void addNewAttribute() throws Throwable {
 		Reporter.log(" ", true);
-		
+
 		Reporter.log("The process of adding new Attribute has started.", true);
-		attri.commonAttribute( driver);
-		attri.addNewAttribute( driver, filePath,  deptN, todaysDateG,  timeHHMMSS);
+		attri.commonAttribute(driver);
+		attri.addNewAttribute(driver, filePath, deptN, todaysDateG, timeHHMMSS);
 		Reporter.log("The process of adding new Attribute is complete.", true);
 
 		Reporter.log(" ", true);
 	}
-	
+
 	@Test
 	public void verifedDetailsOfAlarmBewtenWebAndMonitor() throws Throwable {
 
 		Reporter.log(" ", true);
 		Reporter.log("The process of verifing alarm details with monitor has started.", true);
 
-		mlogin.verifedDetailsOfAlarmBewtenWebAndMonitor(  driver,branchName,  St01M1,  filePath,  activeAlarmTitleText,   activeAlarmDateText,
-				alarmTimeText,  activeAlarmAddressText,
-				 activeAlarmEmergencyNumberText, activeAlarmDetailsText, activeAlarmAdditionalInformationText, activeAlarmObjectText, activeAlarmAnnotationText );
-		
-		
+		mlogin.verifedDetailsOfAlarmBewtenWebAndMonitor(driver, branchName, St01M1, filePath, activeAlarmTitleText,
+				activeAlarmDateText, alarmTimeText, activeAlarmAddressText, activeAlarmEmergencyNumberText,
+				activeAlarmDetailsText, activeAlarmAdditionalInformationText, activeAlarmObjectText,
+				activeAlarmAnnotationText);
+
 		Reporter.log(GREEN + GREEN + "The process of verifing alarm details with monitor is complete.", true);
 		Reporter.log(" ", true);
 
 	}
-	
-	
+
 	@Test
 	public void getAlarmDetailsFromWeb() throws Throwable {
 
@@ -260,18 +258,13 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log("The process of get details of active alarm has started.", true);
 
 		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.getAlarmDetailsFromWeb( driver,   filePath);
-		
-		
+		ma.getAlarmDetailsFromWeb(driver, filePath);
+
 		Reporter.log(GREEN + GREEN + "The process of get details of active alarm has started. is complete.", true);
 		Reporter.log(" ", true);
 
 	}
-	
-	
-	
 
-	
 	@Test
 	public void checkAlarmDisplayedOnMonitors() throws Throwable {
 
@@ -286,10 +279,8 @@ public class A_testClassCreate extends b_baseClass {
 		);
 
 //		mlogin.loginToMonitors(driver,  branchName,  St01M1);
-		
-		
-		mlogin.checkAlarmDisplayedOnMonitors( driver,  branchName,  St01M1,
-			createdAlarmTitles);
+
+		mlogin.checkAlarmDisplayedOnMonitors(driver, branchName, St01M1, createdAlarmTitles);
 
 		Reporter.log(GREEN + GREEN + "The process of monitor login is complete.", true);
 
@@ -317,8 +308,8 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of creating the Alarm check list has started.", true);
 
-		checkL.commanCheckList(driver,branchName, deptN, st01N, "AlarmChecklists", timeHHMMSSG);
-		
+		checkL.commanCheckList(driver, branchName, deptN, st01N, "AlarmChecklists", timeHHMMSSG);
+
 		Reporter.log(GREEN + GREEN + "The process of creating the Alarm check list is complete.", true);
 		Reporter.log(" ", true);
 	}
@@ -329,8 +320,8 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of creating the Normal check list has started.", true);
 
-		checkL.commanCheckList(driver,branchName, deptN, st01N, "NormalChecklists", timeHHMMSSG);
-		
+		checkL.commanCheckList(driver, branchName, deptN, st01N, "NormalChecklists", timeHHMMSSG);
+
 		Reporter.log(GREEN + GREEN + "The process of creating the Normal check list is complete.", true);
 		Reporter.log(" ", true);
 	}
@@ -637,7 +628,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of updating users has started.", true);
 		users.commonForUser(driver, branchName);
-		users.updateUser(driver, branchName, updateUserFilr, todaysDate, timeHHMMSS, st01N, st01R1);
+		users.updateUser(driver, branchName, updateUserFile, todaysDate, timeHHMMSS, st01N, st01R1);
 
 		Reporter.log(GREEN + GREEN + "The process of updating users is complete.", true);
 		Reporter.log(" ", true);
@@ -1551,15 +1542,18 @@ public class A_testClassCreate extends b_baseClass {
 		timeAfter5MinMM = tc.timeAfter5MinMM;
 		timeAfter20MinHH = tc.timeAfter20MinHH;
 		timeAfter20MinMM = tc.timeAfter20MinMM;
-
+		List<String> attachFiles = Arrays.asList(infoDocx5MbFile, infoPdf5MbFile, infoPdf9MbFile, infoPdf9Mb2File,
+				infoWord10MbFile);
 		Reporter.log(" ", true);
-//		Reporter.log("The process for creating a new monitor information using attributes has been initiated.", true);
+		Reporter.log("The process for creating a new monitor information using attributes has been initiated.", true);
 		info.common_information(driver, branchName);
 
 		info.createMonitorInformationByAttributeWithAttachments(driver, st01N, todaysDate, timeHHMMSS, st01A1, St01M1,
-				St01M2, timeAfter5MinHH, timeAfter5MinMM, timeAfter20MinHH, timeAfter20MinMM, infoDocxFile, infoPdfFile,
-				infoPdf9MbFile, infoPdf9Mb2File, infoWord10MbFile, branchName);
-//		Reporter.log(GREEN + GREEN+ "The process for creating a new monitor information using attributes has been completed successfully.",true);
+				St01M2, timeAfter5MinHH, timeAfter5MinMM, timeAfter20MinHH, timeAfter20MinMM, attachFiles, branchName);
+
+		Reporter.log(GREEN + GREEN
+				+ "The process for creating a new monitor information using attributes has been completed successfully.",
+				true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
 
@@ -1730,7 +1724,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of checking extend alarm functionality  is started.", true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.CheckAlarmExtendFunctionalityNewApi(driver,st01N, AlarmNameForChatNewdApi, branchName);
+		ma.CheckAlarmExtendFunctionalityNewApi(driver, st01N, AlarmNameForChatNewdApi, branchName);
 		Reporter.log(GREEN + GREEN + "The process ofchecking extend alarm functionality is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
@@ -1744,7 +1738,8 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log(" ", true);
 		Reporter.log("The process of checking escaltion for manual alarm is started.", true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.CheckManualAlarmEscalationFunctionalityForMultuStation(driver, manualAlarmNameForEsclationAlarm,st01N, branchName);
+		ma.CheckManualAlarmEscalationFunctionalityForMultuStation(driver, manualAlarmNameForEsclationAlarm, st01N,
+				branchName);
 		Reporter.log(GREEN + GREEN + "The process of checking escaltion for manual alarm is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);
@@ -1771,10 +1766,14 @@ public class A_testClassCreate extends b_baseClass {
 	{
 		Reporter.log(" ", true);
 		Reporter.log("The process of send message to escalation alarm user is started.", true);
+
+		List<String> attachFiles = Arrays.asList(chatJpgFile, chatPngFile, chatGifFile, chatWordFile, chatCsvFile,
+				chatPdfFile, chatTextFile, chatExcelFile, chatPptFile, chatMp4File, branchName);
+
+//		List<String> attachFiles = Arrays.asList(chatJpgFile, chatPngFile,branchName);
+
 		ma.commonForManualAlarm(driver, deptN, branchName);
-		ma.sendMessageToApiEsclationAlarm(driver, apiAlarmNameForEsclationAlarm, chatJpgFile, chatPngFile, chatGifFile,
-				chatWordFile, chatCsvFile, chatPdfFile, chatTextFile, chatExcelFile, chatPptFile, chatMp4File,
-				branchName);
+		ma.sendMessageToApiEsclationAlarm(driver, apiAlarmNameForEsclationAlarm, attachFiles);
 		Reporter.log(GREEN + GREEN + "The process of send message to escalation alarm user is complete.", true);
 		Reporter.log(" ", true);
 		Thread.sleep(3000);

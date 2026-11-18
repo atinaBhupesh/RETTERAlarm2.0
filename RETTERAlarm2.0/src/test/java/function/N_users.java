@@ -220,7 +220,8 @@ public class N_users extends b_baseClass {
 
 	@FindBy(xpath = "//span[text()=\"Close\"]")
 	private WebElement closePopUpImportUser;
-	 @FindBy(xpath="//span[text()=\" Success \"]") private WebElement successMessage ;
+	@FindBy(xpath = "//span[text()=\" Success \"]")
+	private WebElement successMessage;
 	// @FindBy(xpath="") private WebElement ;
 	// @FindBy(xpath="") private WebElement ;
 	// @FindBy(xpath="") private WebElement ;
@@ -246,27 +247,26 @@ public class N_users extends b_baseClass {
 	public N_users(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
-	
-	
-	public void updateUser (WebDriver driver, String branchName,String updateUserFilr, String gTodaysDate, String gtimeHHMMSS, String st01N, String st01R1) throws Throwable
-	{
-		
+
+	public void updateUser(WebDriver driver, String branchName, String updateUserFile, String gTodaysDate,
+			String gtimeHHMMSS, String st01N, String st01R1) throws Throwable {
+
 		Actions act = new Actions(driver);
 
-		filePAthImortUser = updateUserFilr;
-		
+		filePAthImortUser = updateUserFile;
+
 		FileInputStream in = new FileInputStream(filePAthImortUser);
 		XSSFWorkbook wb = new XSSFWorkbook(in);
 		XSSFSheet sheet = wb.getSheetAt(0);
-		
-		String firstName = "Bhupesh_"+ gTodaysDate +"_" + gtimeHHMMSS;
-		String lastName  = "User_"+ gTodaysDate +"_" + gtimeHHMMSS;
-		
+
+		String firstName = "Bhupesh_" + gTodaysDate + "_" + gtimeHHMMSS;
+		String lastName = "User_" + gTodaysDate + "_" + gtimeHHMMSS;
+
 		sheet.getRow(3).createCell(0).setCellValue(firstName);
 		sheet.getRow(3).createCell(1).setCellValue(lastName);
 		sheet.getRow(3).createCell(8).setCellValue(st01N);
 		sheet.getRow(3).createCell(9).setCellValue(st01R1);
-		
+
 		in.close();
 
 		// Write all values at once
@@ -274,69 +274,62 @@ public class N_users extends b_baseClass {
 		wb.write(out);
 		out.close();
 		wb.close();
-		
+
 		importIcon.click();
 		Thread.sleep(2000);
-		
-		selectFile.click();
-		Thread.sleep(2000);
-		
-		
-		StringSelection ss = new StringSelection(updateUserFilr);
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
 
-		Robot rc = new Robot();
-		Thread.sleep(2000);
-		rc.keyPress(KeyEvent.VK_CONTROL);
-		rc.keyPress(KeyEvent.VK_V);
-		Thread.sleep(2000);
-		rc.keyRelease(KeyEvent.VK_CONTROL);
-		rc.keyRelease(KeyEvent.VK_V);
-		Thread.sleep(2000);
-		rc.keyPress(KeyEvent.VK_ENTER);
-		rc.keyRelease(KeyEvent.VK_ENTER);
-		Thread.sleep(2000);
+//		selectFile.click();
+//		Thread.sleep(2000);
+//		
+
+//		StringSelection ss = new StringSelection(updateUserFile);
+//		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
+//
+//		Robot rc = new Robot();
+//		Thread.sleep(2000);
+//		rc.keyPress(KeyEvent.VK_CONTROL);
+//		rc.keyPress(KeyEvent.VK_V);
+//		Thread.sleep(2000);
+//		rc.keyRelease(KeyEvent.VK_CONTROL);
+//		rc.keyRelease(KeyEvent.VK_V);
+//		Thread.sleep(2000);
+//		rc.keyPress(KeyEvent.VK_ENTER);
+//		rc.keyRelease(KeyEvent.VK_ENTER);
+//		Thread.sleep(2000);
+
+		WebElement fileInput = driver.findElement(By.xpath("//input[@type='file']"));
+
+		fileInput.sendKeys(updateUserFile);
+
+		Thread.sleep(1000);
+
+		// Click Import button
 
 		Import.click();
 		Thread.sleep(4000);
-		
-		
-		String expectedFirstName = driver.findElement(By.xpath("//td[starts-with(text(),'" + firstName + "')]")).getText();
-		
-		String expectedLasttName = driver.findElement(By.xpath("//td[starts-with(text(),'" + lastName + "')]")).getText();
-		
-		
+
+		String expectedFirstName = driver.findElement(By.xpath("//td[starts-with(text(),'" + firstName + "')]"))
+				.getText();
+
+		String expectedLasttName = driver.findElement(By.xpath("//td[starts-with(text(),'" + lastName + "')]"))
+				.getText();
+
 //		System.out.println(expectedFirstName);
 //		System.out.println(expectedLasttName);
-		
+
 		Assert.assertTrue(expectedFirstName.contains(firstName), RED + "Station not found.");
 		Assert.assertTrue(expectedLasttName.contains(lastName), RED + "Station not found.");
-		
-		if (successMessage.isDisplayed())
-		{
-			System.out.println(GREEN+"user updated successfully. ");
+
+		if (successMessage.isDisplayed()) {
+			System.out.println(GREEN + "user updated successfully. ");
+		} else {
+			System.out.println(RED + "user not updated successfully. ");
 		}
-		else 
-		{
-			System.out.println(RED+"user not updated successfully. ");
-		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
 		Thread.sleep(2000);
 		act.moveToElement(closePopUpImportUser).click().build().perform();
 		Thread.sleep(1000);
 
-		
 	}
 
 	public void importUser(WebDriver driver, String branchName, String gTodaysDate, String gtimeHHMMSS, String st01N,
@@ -389,23 +382,32 @@ public class N_users extends b_baseClass {
 
 		importIcon.click();
 		Thread.sleep(2000);
-		selectFile.click();
-		Thread.sleep(2000);
 
-		StringSelection ss = new StringSelection(importUserFile);
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
+//		selectFile.click();
+//		Thread.sleep(2000);
+//
+//		StringSelection ss = new StringSelection(importUserFile);
+//		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
+//
+//		Robot rc = new Robot();
+//		Thread.sleep(2000);
+//		rc.keyPress(KeyEvent.VK_CONTROL);
+//		rc.keyPress(KeyEvent.VK_V);
+//		Thread.sleep(2000);
+//		rc.keyRelease(KeyEvent.VK_CONTROL);
+//		rc.keyRelease(KeyEvent.VK_V);
+//		Thread.sleep(2000);
+//		rc.keyPress(KeyEvent.VK_ENTER);
+//		rc.keyRelease(KeyEvent.VK_ENTER);
+//		Thread.sleep(2000);
 
-		Robot rc = new Robot();
-		Thread.sleep(2000);
-		rc.keyPress(KeyEvent.VK_CONTROL);
-		rc.keyPress(KeyEvent.VK_V);
-		Thread.sleep(2000);
-		rc.keyRelease(KeyEvent.VK_CONTROL);
-		rc.keyRelease(KeyEvent.VK_V);
-		Thread.sleep(2000);
-		rc.keyPress(KeyEvent.VK_ENTER);
-		rc.keyRelease(KeyEvent.VK_ENTER);
-		Thread.sleep(2000);
+		WebElement fileInput = driver.findElement(By.xpath("//input[@type='file']"));
+
+		fileInput.sendKeys(importUserFile);
+
+		Thread.sleep(1000);
+
+		// Click Import button
 
 		Import.click();
 		Thread.sleep(4000);
@@ -1036,7 +1038,7 @@ public class N_users extends b_baseClass {
 		act.sendKeys(Keys.ENTER).perform();
 		countryField.click();
 //		act.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).sendKeys(Keys.BACK_SPACE).build().perform();
-		
+
 		act.sendKeys(Keys.HOME).perform();
 		for (int d = 0; d <= 15; d++) {
 			act.sendKeys(Keys.DELETE).perform();
@@ -1106,7 +1108,7 @@ public class N_users extends b_baseClass {
 		wb.write(out);
 		out.close();
 		wb.close();
-		
+
 		if (firfighterRole.isDisplayed()) {
 
 			switch (role) {

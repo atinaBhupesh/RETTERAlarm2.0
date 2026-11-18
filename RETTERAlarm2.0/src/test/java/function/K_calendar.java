@@ -215,11 +215,16 @@ public class K_calendar extends b_baseClass {
 	private WebElement selectStationForImportEvent;
 	@FindBy(xpath = "//span[text()=\"Upload File\"]")
 	private WebElement uploadFile;
-	 @FindBy(xpath="//span[text()=\"Import\"]")private WebElement importEvent;
-	 @FindBy(xpath="(//span[@class=\"text-success\"])[1]")private WebElement isValid;
-	 @FindBy(xpath="(//span[@class=\"text-success\"])[2]")private WebElement errorMessage;
-	 @FindBy(xpath="//span[text()=\"Continue Import\"]")private WebElement continueImport;
-	@FindBy(xpath="//span[text()=\"Close\"]")private WebElement close;
+	@FindBy(xpath = "//span[text()=\"Import\"]")
+	private WebElement importEvent;
+	@FindBy(xpath = "(//span[@class=\"text-success\"])[1]")
+	private WebElement isValid;
+	@FindBy(xpath = "(//span[@class=\"text-success\"])[2]")
+	private WebElement errorMessage;
+	@FindBy(xpath = "//span[text()=\"Continue Import\"]")
+	private WebElement continueImport;
+	@FindBy(xpath = "//span[text()=\"Close\"]")
+	private WebElement close;
 	// @FindBy(xpath="")private WebElement ;
 	// @FindBy(xpath="")private WebElement ;
 	// @FindBy(xpath="")private WebElement ;
@@ -240,9 +245,9 @@ public class K_calendar extends b_baseClass {
 	public void importEventWith1minReminder(WebDriver driver, String importEventFile, String gTodaysDate,
 			String gtimeHHMMSS, String germanyTimeAfter5MinHH, String germanyTimeAfter5MinMM, String st01R1,
 			String st01N) throws Throwable {
-		
+
 		filePAthImortUser = importEventFile;
-		
+
 		FileInputStream in = new FileInputStream(filePAthImortUser);
 		XSSFWorkbook wb = new XSSFWorkbook(in);
 		XSSFSheet sheet = wb.getSheetAt(0);
@@ -258,8 +263,6 @@ public class K_calendar extends b_baseClass {
 		String eventStartTime = germanyTimeAfter5MinHH + ":" + germanyTimeAfter5MinMM;
 
 		String eventStartDate = gTodaysDate;
-		
-	
 
 		sheet.getRow(1).createCell(1).setCellValue(eventTitle);
 		sheet.getRow(1).createCell(2).setCellValue(eventDiscriptions);
@@ -271,21 +274,14 @@ public class K_calendar extends b_baseClass {
 		sheet.getRow(1).createCell(9).setCellValue("0");// reminderHrs
 		sheet.getRow(1).createCell(10).setCellValue("1");// ReminderMin
 		sheet.getRow(1).createCell(11).setCellValue(st01R1);// ReminderMin
-		
-		
-		
-		
-		
+
 		in.close();
-		
 
 		// Write all values at once
 		FileOutputStream out = new FileOutputStream(filePAthImortUser);
 		wb.write(out);
 		out.close();
 		wb.close();
-		
-	
 
 //		System.out.println("Event Title        : " + eventTitle);
 //		System.out.println("Event Description  : " + eventDiscriptions);
@@ -307,61 +303,62 @@ public class K_calendar extends b_baseClass {
 //		act.moveToElement(selectStationForImportEvent).click().build().perform();
 //		Thread.sleep(2000);
 
-		act.sendKeys(Keys.TAB,Keys.TAB,Keys.TAB).build().perform();
+		act.sendKeys(Keys.TAB, Keys.TAB, Keys.TAB).build().perform();
 		Thread.sleep(2000);
-		
+
 		act.sendKeys(st01N).perform();
 		Thread.sleep(2000);
 		act.sendKeys(Keys.ENTER).perform();
 		Thread.sleep(2000);
-		uploadFile.click();
 
-		Thread.sleep(2000);
-		
-		
-		
-		StringSelection ss = new StringSelection(importEventFile);
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
+//		uploadFile.click();
+//		Thread.sleep(2000);
+//		StringSelection ss = new StringSelection(importEventFile);
+//		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
+//
+//		Robot rc = new Robot();
+//		Thread.sleep(2000);
+//		rc.keyPress(KeyEvent.VK_CONTROL);
+//		rc.keyPress(KeyEvent.VK_V);
+//		Thread.sleep(2000);
+//		rc.keyRelease(KeyEvent.VK_CONTROL);
+//		rc.keyRelease(KeyEvent.VK_V);
+//		Thread.sleep(2000);
+//		rc.keyPress(KeyEvent.VK_ENTER);
+//		rc.keyRelease(KeyEvent.VK_ENTER);
+//		Thread.sleep(2000);
+//		
 
-		Robot rc = new Robot();
-		Thread.sleep(2000);
-		rc.keyPress(KeyEvent.VK_CONTROL);
-		rc.keyPress(KeyEvent.VK_V);
-		Thread.sleep(2000);
-		rc.keyRelease(KeyEvent.VK_CONTROL);
-		rc.keyRelease(KeyEvent.VK_V);
-		Thread.sleep(2000);
-		rc.keyPress(KeyEvent.VK_ENTER);
-		rc.keyRelease(KeyEvent.VK_ENTER);
-		Thread.sleep(2000);
-		
-		
+		WebElement fileInput = driver.findElement(By.xpath("//input[@type='file']"));
+
+		fileInput.sendKeys(importEventFile);
+
+		Thread.sleep(1000);
+
 		importEvent.click();
 		Thread.sleep(2000);
-		String actualValidText= "Yes";
-		String actualErrorMessage ="Ok";
-		
-		String isValidTex= isValid.getText();
-		String errorMessages= errorMessage.getText();
+		String actualValidText = "Yes";
+		String actualErrorMessage = "Ok";
+
+		String isValidTex = isValid.getText();
+		String errorMessages = errorMessage.getText();
 		Thread.sleep(2000);
-		
+
 		Assert.assertTrue(actualValidText.contains(isValidTex), RED + "valid message not proper.");
 		Assert.assertTrue(actualErrorMessage.contains(errorMessages), RED + "error message not proper.");
-		
-		
+
 		continueImport.click();
 		Thread.sleep(2000);
 		String importedMessage = " Imported successfully ";
-		
-		errorMessages= errorMessage.getText();
-		
+
+		errorMessages = errorMessage.getText();
+
 		Assert.assertTrue(importedMessage.contains(errorMessages), RED + "error message not proper.");
-		
+
 		close.click();
 		Thread.sleep(2000);
-		
-		System.out.println(GREEN+"Event impored successfully.");
-		
+
+		System.out.println(GREEN + "Event impored successfully.");
 
 	}
 
@@ -870,7 +867,6 @@ public class K_calendar extends b_baseClass {
 			act.sendKeys(Keys.DELETE).perform();
 
 		}
-		
 
 		Thread.sleep(500);
 		act.sendKeys(germanyTimeAfter5MinHH).perform();
@@ -1085,7 +1081,6 @@ public class K_calendar extends b_baseClass {
 			act.sendKeys(Keys.DELETE).perform();
 
 		}
-		
 
 		Thread.sleep(1000);
 		act.sendKeys(germanyTimeAfter5MinHH).perform();
@@ -1148,11 +1143,11 @@ public class K_calendar extends b_baseClass {
 		switch (branchName) {
 
 		case "1":
-		 	driver.navigate().to("https://admin.retteralarm.de/admin/event/calendar");
+			driver.navigate().to("https://admin.retteralarm.de/admin/event/calendar");
 
 			break;
 		case "1.1":
-		 	driver.navigate().to("https://admin.retteralarm.de/admin/event/calendar");
+			driver.navigate().to("https://admin.retteralarm.de/admin/event/calendar");
 
 			break;
 

@@ -39,9 +39,12 @@ public class Q_attribute extends b_baseClass {
 	private WebElement searchButton;
 	@FindBy(xpath = "//td[contains(text(),\"BG_Attribute\")]")
 	private List<WebElement> availableBGAttribute;
-	 @FindBy(xpath="//i[@class=\"fa fa-pencil-square-o\"]")private WebElement editAttribute;
-	@FindBy(xpath="(//i[@class=\"fa fa-trash-o\"])[1]")private WebElement deleteAttribute ;
-	@FindBy(xpath="//button[@type=\"submit\"]")private WebElement deleteYes;
+	@FindBy(xpath = "//i[@class=\"fa fa-pencil-square-o\"]")
+	private WebElement editAttribute;
+	@FindBy(xpath = "(//i[@class=\"fa fa-trash-o\"])[1]")
+	private WebElement deleteAttribute;
+	@FindBy(xpath = "//button[@type=\"submit\"]")
+	private WebElement deleteYes;
 	// @FindBy(xpath="")private WebElement ;
 	// @FindBy(xpath="")private WebElement ;
 	// @FindBy(xpath="")private WebElement ;
@@ -57,23 +60,21 @@ public class Q_attribute extends b_baseClass {
 		Thread.sleep(2000);
 
 	}
-	
-	
+
 	public void deleteAttribute(WebDriver driver) throws Throwable {
 		searchField.click();
 		Actions act = new Actions(driver);
-		int count =0;
+		int count = 0;
 
 		act.sendKeys("BG_Attribute").perform();
 		Thread.sleep(1000);
 		searchButton.click();
 		int availabeAttribute = availableBGAttribute.size();
-		System.out.println("Total Attribute availabe for Delete-"+availabeAttribute);
-		
-	driver.navigate().refresh();
-	Thread.sleep(2000);
-		for (int i=0; i<availabeAttribute;i++)
-		{
+		System.out.println("Total Attribute availabe for Delete-" + availabeAttribute);
+
+		driver.navigate().refresh();
+		Thread.sleep(2000);
+		for (int i = 0; i < availabeAttribute; i++) {
 			searchField.click();
 			act.sendKeys("BG_Attribute").perform();
 			Thread.sleep(1000);
@@ -81,16 +82,16 @@ public class Q_attribute extends b_baseClass {
 			Thread.sleep(4000);
 			deleteAttribute.click();
 			Thread.sleep(4000);
-			
+
 			deleteYes.click();
 			Thread.sleep(4000);
 			count++;
 		}
-		
-		System.out.println(GREEN+"Total deleted attribute-"+count);
+
+		System.out.println(GREEN + "Total deleted attribute-" + count);
 	}
 
-	public void updateAttribute(WebDriver driver, String newAttribute ) throws Throwable {
+	public void updateAttribute(WebDriver driver, String newAttribute) throws Throwable {
 		searchField.click();
 		Actions act = new Actions(driver);
 
@@ -102,17 +103,17 @@ public class Q_attribute extends b_baseClass {
 		Thread.sleep(2000);
 		atributTitle.clear();
 		atributTitle.click();
-		String title= newAttribute+"_updated";
+		String title = newAttribute + "_updated";
 		act.sendKeys(title).perform();
-		String attributeShortName= attributShorName.getDomProperty("value");
+		String attributeShortName = attributShorName.getDomProperty("value");
 		attributShorName.clear();
 		attributShorName.click();
-		act.sendKeys(attributeShortName+"_"+"updated").perform();
+		act.sendKeys(attributeShortName + "_" + "updated").perform();
 		Thread.sleep(3000);
-		
+
 		saveAttribute.click();
 		Thread.sleep(3000);
-		
+
 		String actualTite = firstTitle.getText();
 
 		Assert.assertTrue(actualTite.contains(title), RED + "Station not found.");
@@ -122,10 +123,12 @@ public class Q_attribute extends b_baseClass {
 
 	public void addNewAttribute(WebDriver driver, String filePath, String deptN, String todaysDateG, String timeHHMMSS)
 			throws Throwable {
+
 		createNew.click();
 		Thread.sleep(2000);
 		Select se = new Select(selectDepartment);
 		se.selectByVisibleText(deptN);
+
 		Thread.sleep(1000);
 		atributTitle.click();
 		Actions act = new Actions(driver);

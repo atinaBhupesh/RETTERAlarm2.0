@@ -12,6 +12,7 @@ import java.util.List;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -19,6 +20,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
@@ -241,11 +243,16 @@ public class L_Information extends b_baseClass {
 	private WebElement attachedFileName;
 	@FindBy(xpath = "//h4[text()=\"Users/Resources\"]")
 	private WebElement UsersResources;
-	@FindBy(xpath="//span[text()=\"Email\"]")private WebElement pushTypeEmail;
-	 @FindBy(xpath="//span[text()=\"SMS\"]")private WebElement pushTypeSms;
-	// @FindBy(xpath="")private WebElement ;
-	// @FindBy(xpath="")private WebElement ;
-	// @FindBy(xpath="")private WebElement ;
+	@FindBy(xpath = "//span[text()=\"Email\"]")
+	private WebElement pushTypeEmail;
+	@FindBy(xpath = "//span[text()=\"SMS\"]")
+	private WebElement pushTypeSms;
+	@FindBy(xpath = "(//i[@class=\"dx-icon dx-icon-close\"])[last()]")
+	private WebElement crossButtonForFile;
+	@FindBy(xpath = "(//div[@class=\"dx-fileuploader-file-name\"])[last()]")
+	private WebElement uploadedFile;
+	@FindBy(xpath = "(//input[@placeholder=\"Select...\"])[5]")
+	private WebElement attributeField;
 	// @FindBy(xpath="")private WebElement ;
 	// @FindBy(xpath="")private WebElement ;
 	// @FindBy(xpath="")private WebElement ;
@@ -296,8 +303,6 @@ public class L_Information extends b_baseClass {
 		//
 		// userTypeAttribute.click();
 
-		
-		
 		act.moveToElement(userTypeResource).click().build().perform();
 
 //		userTypeResource.click();
@@ -309,30 +314,25 @@ public class L_Information extends b_baseClass {
 
 		act.sendKeys(st01RCallSms).perform();
 		Thread.sleep(1000);
-		
 
 		act.sendKeys(Keys.ENTER).perform();
 		Thread.sleep(500);
-		
-		
+
 		act.sendKeys(Keys.HOME).perform();
 		Thread.sleep(500);
-	
-		for (int i=1;i<=20;i++)
-		{
+
+		for (int i = 1; i <= 20; i++) {
 			act.sendKeys(Keys.DELETE).perform();
 		}
-		
+
 		act.moveToElement(save).click().perform();
 		Thread.sleep(500);
-		
-		
+
 		pushTypeEmail.click();
 		Thread.sleep(1000);
 		pushTypeSms.click();
 		Thread.sleep(1000);
 
-	
 		act.moveToElement(save).click().build().perform();
 //		save.click();
 		Thread.sleep(5000);
@@ -340,8 +340,6 @@ public class L_Information extends b_baseClass {
 		String expectedTitle = firstInfoTitle.getText();
 
 		Assert.assertTrue(title.contains(expectedTitle), RED + "Info NOT added because title is not available");
-
-	
 
 	}
 
@@ -2124,8 +2122,196 @@ public class L_Information extends b_baseClass {
 	public void createMonitorInformationByAttributeWithAttachments(WebDriver driver, String st01N, String gTodaysDate,
 			String gtimeHHMMSS, String st01A1, String St01M1, String St01M2, String germanyTimeAfter5MinHH,
 			String germanyTimeAfter5MinMM, String germanyTimeAfter20MinHH, String germanyTimeAfter20MinMM,
-			String infoDocxFile, String infoPdfFile, String infoPdf9MbFile, String infoPdf9Mb2File,
-			String infoWord10MbFile, String branchName) throws Throwable {
+			List<String> attachFiles, String branchName) throws Throwable {
+
+		Actions act = new Actions(driver);
+
+		createNewButton.click();
+		Thread.sleep(2000);
+
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("document.body.style.zoom='70%'");
+
+		StationField.click();
+		act.sendKeys(st01N).perform();
+		Thread.sleep(2000);
+		act.sendKeys(Keys.ENTER).perform();
+		Thread.sleep(500);
+
+		selectType.click();
+		Thread.sleep(2000);
+
+		typeInformation.click();
+		Thread.sleep(500);
+		Description.click();
+		Thread.sleep(500);
+
+		infoTitle.click();
+		String title = "Bg_Monitor information by Attribute_" + gTodaysDate + "_" + gtimeHHMMSS;
+		act.sendKeys(title).perform();
+		Thread.sleep(500);
+
+		infoLocation.click();
+		Thread.sleep(1000);
+
+		act.sendKeys("Pune").perform();
+		Thread.sleep(500);
+
+		InfoDescriptions.click();
+		Thread.sleep(1000);
+
+		act.sendKeys("Checking Monitor information by Attribute on " + gTodaysDate + "_" + gtimeHHMMSS + " from -"
+				+ germanyTimeAfter5MinHH + ":" + germanyTimeAfter5MinMM + " To " + germanyTimeAfter20MinHH + ":"
+				+ germanyTimeAfter20MinMM).perform();
+		Thread.sleep(500);
+
+		for (String file : attachFiles) {
+
+			WebElement uploadFile = driver.findElement(By.xpath("//input[@type='file']"));
+
+			uploadFile.clear();
+
+			uploadFile.sendKeys(file);
+
+			Thread.sleep(1000);
+
+			String actualName = uploadedFile.getText();
+//			
+
+			String uploadedJpgFileName = file.substring(file.lastIndexOf("\\") + 1);
+
+			if (actualName.contains(uploadedJpgFileName)) {
+
+				System.out.println(GREEN + uploadedJpgFileName + " file added successfully");
+
+			} else {
+
+				System.out.println(RED + uploadedJpgFileName + " file not added.");
+			}
+			Thread.sleep(2000);
+		}
+
+		userTypeAttribute.click();
+		Thread.sleep(1000);
+
+		attributeField.click();
+		Thread.sleep(500);
+		act.sendKeys(st01A1).perform();
+		Thread.sleep(1000);
+
+		act.sendKeys(Keys.ENTER).perform();
+		Thread.sleep(500);
+		act.sendKeys(Keys.HOME).perform();
+
+		for (int d = 0; d <= 30; d++) {
+			act.sendKeys(Keys.DELETE).perform();
+
+		}
+		Thread.sleep(500);
+
+		act.sendKeys(Keys.TAB).perform();
+		Thread.sleep(500);
+		act.sendKeys(Keys.SPACE).perform();// active monitor options
+
+		Thread.sleep(2000);
+
+		monitorFields.click();
+		Thread.sleep(2000);
+
+		act.sendKeys(St01M1).perform();
+		Thread.sleep(1000);
+		act.sendKeys(Keys.ENTER).perform();
+		Thread.sleep(500);
+		act.sendKeys(Keys.HOME).perform();
+
+		for (int d = 0; d <= 30; d++) {
+			act.sendKeys(Keys.DELETE).perform();
+
+		}
+		Thread.sleep(500);
+		act.sendKeys(Keys.HOME).perform();
+		for (int d = 0; d <= 30; d++) {
+			act.sendKeys(Keys.DELETE).perform();
+
+		}
+
+		act.sendKeys(St01M2).perform();
+		Thread.sleep(1000);
+		act.sendKeys(Keys.ENTER).perform();
+		Thread.sleep(500);
+
+		act.sendKeys(Keys.TAB).perform();
+		Thread.sleep(500);
+		act.moveToElement(startDate).perform();
+		Thread.sleep(500);
+		startDate.click();
+		Thread.sleep(1000);
+		today1.click();
+		Thread.sleep(500);
+		startDateHours.click();
+		Thread.sleep(500);
+		act.sendKeys(Keys.HOME).perform();
+
+		for (int d = 0; d <= 30; d++) {
+			act.sendKeys(Keys.DELETE).perform();
+
+		}
+		Thread.sleep(1000);
+		act.sendKeys(germanyTimeAfter5MinHH).perform();
+		Thread.sleep(200);
+		act.keyDown(Keys.TAB).perform();
+		Thread.sleep(200);
+		act.sendKeys(germanyTimeAfter5MinMM).perform();
+		Thread.sleep(200);
+		startTimeOk.click();
+		Thread.sleep(1000);
+
+		endDate.click();
+		Thread.sleep(500);
+		today2.click();
+		Thread.sleep(500);
+		endDateHours.click();
+		Thread.sleep(500);
+		act.sendKeys(Keys.HOME).perform();
+
+		for (int d = 0; d <= 30; d++) {
+			act.sendKeys(Keys.DELETE).perform();
+
+		}
+		Thread.sleep(500);
+		act.sendKeys(germanyTimeAfter20MinHH).perform();
+		Thread.sleep(500);
+		act.keyDown(Keys.TAB).perform();
+		Thread.sleep(500);
+		act.sendKeys(germanyTimeAfter20MinMM).perform();
+		Thread.sleep(500);
+		endDateTimeOk.click();
+		Thread.sleep(1000);
+		act.sendKeys(Keys.TAB).perform();
+
+		act.moveToElement(save).build().perform();
+		Thread.sleep(1000);
+		save.click();
+		Thread.sleep(5000);
+
+		js.executeScript("document.body.style.zoom='100%'");
+
+		String expectedTitle = firstInfoTitle.getText();
+
+//		System.out.println(expectedTitle);
+
+		Assert.assertTrue(title.contains(expectedTitle), RED + "Info NOT added because title is not available");
+
+		System.out.println(GREEN + title + " from -" + germanyTimeAfter5MinHH + ":" + germanyTimeAfter5MinMM + " To "
+				+ germanyTimeAfter20MinHH + ":" + germanyTimeAfter20MinMM);
+
+	}
+
+	public void createMonitorInformationByAttributeWithAttachmentsOld(WebDriver driver, String st01N,
+			String gTodaysDate, String gtimeHHMMSS, String st01A1, String St01M1, String St01M2,
+			String germanyTimeAfter5MinHH, String germanyTimeAfter5MinMM, String germanyTimeAfter20MinHH,
+			String germanyTimeAfter20MinMM, String infoDocxFile, String infoPdfFile, String infoPdf9MbFile,
+			String infoPdf9Mb2File, String infoWord10MbFile, String branchName) throws Throwable {
 		Actions act = new Actions(driver);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 

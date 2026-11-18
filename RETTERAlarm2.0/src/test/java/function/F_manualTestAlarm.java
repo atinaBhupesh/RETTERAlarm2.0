@@ -463,7 +463,8 @@ public class F_manualTestAlarm extends b_baseClass {
 	private WebElement activeAlarmObject;
 	@FindBy(xpath = "(//div[@class=\"dx-field-value\"])[13]")
 	private WebElement activeAlarmAnnotaion;
-	// @FindBy(xpath="")private WebElement ;
+	@FindBy(xpath = "//div[text()=\"All files attached successfully.\"]")
+	private WebElement finalMessage;
 	// @FindBy(xpath="")private WebElement ;
 	// @FindBy(xpath="")private WebElement ;
 	// @FindBy(xpath="")private WebElement ;
@@ -3513,7 +3514,7 @@ public class F_manualTestAlarm extends b_baseClass {
 
 	}
 
-	public void sendMessageToApiEsclationAlarm(WebDriver driver, String apiAlarmNameForEsclationAlarm,
+	public void sendMessageToApiEsclationAlarmOld(WebDriver driver, String apiAlarmNameForEsclationAlarm,
 			String chatJpgFile, String chatPngFile, String chatGifFile, String chatWordFile, String chatCsvFile,
 			String chatPdfFile, String chatTextFile, String chatExcelFile, String chatPptFile, String chatMp4File,
 			String branchName) throws Throwable {
@@ -3990,6 +3991,139 @@ public class F_manualTestAlarm extends b_baseClass {
 			refreshFilter.click();
 			System.out.println(RED + "chat option not found.");
 		}
+
+	}
+
+	public void sendMessageToApiEsclationAlarm(WebDriver driver, String apiAlarmNameForEsclationAlarm,
+			List<String> attachFiles) throws Throwable {
+		Actions act = new Actions(driver);
+		titleSearch.click();
+		Thread.sleep(500);
+
+		titleSearchField.click();
+		Thread.sleep(500);
+
+		act.sendKeys(apiAlarmNameForEsclationAlarm).perform();
+		Thread.sleep(1000);
+
+		titleSearchFieldOk.click();
+		Thread.sleep(5000);
+
+		act.moveToElement(action).click().perform();
+
+		// Open action menu
+//		action.click();
+		Thread.sleep(1000);
+
+		int z = buttonCount.size();
+
+		if (z == 6) {
+
+			alarmChat.click();
+			Thread.sleep(2000);
+
+			textarea.click();
+			Thread.sleep(1000);
+			String messageText = "Text message sent to the new API alarm user.";
+			act.sendKeys(messageText).perform();
+			Thread.sleep(1000);
+			sendButton.click();
+			Thread.sleep(1000);
+			String expTextmessage = textMessage.getText();
+
+			Assert.assertTrue(messageText.contains(expTextmessage), RED + "Message not sent.");
+
+			System.out.println(GREEN + messageText + " sent successfuly ");
+			Thread.sleep(1000);
+
+			int fileCount = attachFiles.size();
+
+//			System.out.println("TOTAL FILES: " + fileCount);
+
+			for (int i = 0; i < fileCount - 1; i++) {
+
+//			    System.out.println("STARTING FILE: " + (i + 1));
+
+				String file = attachFiles.get(i);
+
+				try {
+
+					// 1. Validate file path
+					File selectedFile = new File(file);
+
+					if (!selectedFile.exists() || !selectedFile.isFile()) {
+
+//			            System.out.println(RED + "Invalid file path: " + file);
+						continue;
+					}
+
+//			        System.out.println("FILE PATH: " + file);
+
+					// 2. Find file input
+					WebElement uploadFile = driver.findElement(By.xpath("//input[@type='file']"));
+
+					// 3. Upload file directly
+					uploadFile.sendKeys(selectedFile.getAbsolutePath());
+
+					// 4. Wait for attachment cross button
+					WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+
+					wait.until(ExpectedConditions.visibilityOf(crossButtonForFile));
+
+					// 5. Click Send button
+					sendButton.click();
+
+					// 6. Wait for upload processing
+					Thread.sleep(2000);
+
+					// 7. Verify uploaded filename
+					String uploadedJpgFileName = uploadedFile.getText();
+
+					String actualName = selectedFile.getName();
+
+					if (uploadedJpgFileName.contains(actualName)) {
+
+						System.out.println(GREEN + uploadedJpgFileName + " file added successfully");
+
+					} else {
+
+						System.out.println(RED + uploadedJpgFileName + " file not added.");
+					}
+
+					Thread.sleep(1000);
+
+				} catch (Exception e) {
+
+					e.printStackTrace();
+
+					throw new RuntimeException("Attachment upload failed: " + file, e);
+				}
+			}
+
+			// Code after all attachments are processed
+
+			textarea.click();
+			Thread.sleep(1000);
+			messageText = "All files attached successfully.";
+			act.sendKeys(messageText).perform();
+			Thread.sleep(1000);
+			sendButton.click();
+			Thread.sleep(1000);
+			expTextmessage = finalMessage.getText();
+
+			Assert.assertTrue(messageText.contains(expTextmessage), RED + "Message not sent.");
+
+			System.out.println(GREEN + messageText + " sent successfuly ");
+			Thread.sleep(1000);
+
+		}
+
+		else {
+			refreshFilter.click();
+			System.out.println(RED + "chat option not found.");
+		}
+
+		Thread.sleep(2000);
 
 	}
 
@@ -8348,5 +8482,4 @@ public class F_manualTestAlarm extends b_baseClass {
 			}
 		}
 	}
-
 }
