@@ -130,6 +130,7 @@ public class A_testClassCreate extends b_baseClass {
 		chatGroups = new M_conversations(driver);
 		users = new N_users(driver);
 		stn = new O_stationModule(driver);
+		mo =new P_monitors (driver);
 		ma = new F_manualTestAlarm(driver);
 		attri = new Q_attribute(driver);
 		fs = new R_FileSections(driver);

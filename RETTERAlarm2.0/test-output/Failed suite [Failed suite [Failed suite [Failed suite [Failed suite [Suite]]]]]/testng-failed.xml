@@ -5,14 +5,17 @@
     <classes>
       <class name="function.A_testClassCreate">
         <methods>
+          <include name="editOverviewMonitor"/>
           <include name="AfterTest"/>
+          <include name="editStationMonitor"/>
           <include name="BeforeSuite"/>
           <include name="backToHomePage2"/>
           <include name="BeforeTest"/>
-          <include name="logOut"/>
           <include name="backToHomePage"/>
-          <include name="manualAlarmByUersMs"/>
+          <include name="logOut"/>
+          <include name="addOverviewMonitor"/>
           <include name="AfterSute"/>
+          <include name="addStationMonitor"/>
           <include name="createObject"/>
         </methods>
       </class> <!-- function.A_testClassCreate -->

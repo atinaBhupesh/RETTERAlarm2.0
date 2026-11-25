@@ -792,7 +792,11 @@ public class F_manualTestAlarm extends b_baseClass {
 		firtsTestAlarm1 = firtsTestAlarm1.replace("...", "").trim();
 		title = title.replace("...", "").trim();
 
-		Assert.assertTrue(title.contains(firtsTestAlarm1), RED + "Alarm not added.");
+//		Assert.assertTrue(title.contains(firtsTestAlarm1), RED + "Alarm not added.");
+		if (!title.contains(firtsTestAlarm1)) {
+
+			Assert.fail(RED + title);
+		}
 
 		System.out.println(GREEN + title);
 	}
@@ -1053,7 +1057,11 @@ public class F_manualTestAlarm extends b_baseClass {
 		firtsTestAlarm1 = firtsTestAlarm1.replace("...", "").trim();
 		title = title.replace("...", "").trim();
 
-		Assert.assertTrue(title.contains(firtsTestAlarm1), RED + "Alarm not added.");
+//		Assert.assertTrue(title.contains(firtsTestAlarm1), RED + "Alarm not added.");
+		if (!title.contains(firtsTestAlarm1)) {
+
+			Assert.fail(RED + title);
+		}
 
 		System.out.println(GREEN + title);
 		FileInputStream in = new FileInputStream(filePath);
@@ -1333,7 +1341,11 @@ public class F_manualTestAlarm extends b_baseClass {
 		firtsTestAlarm1 = firtsTestAlarm1.replace("...", "").trim();
 		title = title.replace("...", "").trim();
 
-		Assert.assertTrue(title.contains(firtsTestAlarm1), RED + "Alarm not added.");
+//		Assert.assertTrue(title.contains(firtsTestAlarm1), RED + "Alarm not added.");
+		if (!title.contains(firtsTestAlarm1)) {
+
+			Assert.fail(RED + title);
+		}
 
 		System.out.println(GREEN + title);
 
@@ -1647,7 +1659,12 @@ public class F_manualTestAlarm extends b_baseClass {
 		firtsTestAlarm1 = firtsTestAlarm1.replace("...", "").trim();
 		title = title.replace("...", "").trim();
 
-		Assert.assertTrue(title.contains(firtsTestAlarm1), RED + "Alarm not added.");
+//		Assert.assertTrue(title.contains(firtsTestAlarm1), RED + "Alarm not added.");
+		
+		if (!title.contains(firtsTestAlarm1)) {
+
+			Assert.fail(RED + title);
+		}
 
 		System.out.println(GREEN + title);
 
@@ -1886,7 +1903,14 @@ public class F_manualTestAlarm extends b_baseClass {
 		firtsTestAlarm1 = firtsTestAlarm1.replace("...", "").trim();
 		title = title.replace("...", "").trim();
 
-		Assert.assertTrue(title.contains(firtsTestAlarm1), RED + "Alarm not added.");
+//		Assert.assertTrue(title.contains(firtsTestAlarm1), RED + "Alarm not added.");
+		
+		if (!title.contains(firtsTestAlarm1)) {
+
+			Assert.fail(RED + title);
+		}
+		
+		
 
 		System.out.println(GREEN + title);
 
@@ -2095,7 +2119,11 @@ public class F_manualTestAlarm extends b_baseClass {
 		firtsTestAlarm1 = firtsTestAlarm1.replace("...", "").trim();
 		title = title.replace("...", "").trim();
 
-		Assert.assertTrue(title.contains(firtsTestAlarm1), RED + "Alarm not added.");
+//		Assert.assertTrue(title.contains(firtsTestAlarm1), RED + "Alarm not added.");
+		if (!title.contains(firtsTestAlarm1)) {
+
+			Assert.fail(RED + title);
+		}
 
 		System.out.println(GREEN + title);
 
@@ -2298,7 +2326,13 @@ public class F_manualTestAlarm extends b_baseClass {
 		firtsTestAlarm1 = firtsTestAlarm1.replace("...", "").trim();
 		title = title.replace("...", "").trim();
 
-		Assert.assertTrue(title.contains(firtsTestAlarm1), RED + "Alarm not added.");
+//		Assert.assertTrue(title.contains(firtsTestAlarm1), RED + "Alarm not added.");
+		
+		if (!title.contains(firtsTestAlarm1)) {
+
+			Assert.fail(RED + title);
+		}
+		
 
 		System.out.println(GREEN + title);
 
@@ -2814,6 +2848,11 @@ public class F_manualTestAlarm extends b_baseClass {
 		title = title.replace("...", "").trim();
 
 		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not added.");
+		
+		if (!title.contains(expectedTitle)) {
+
+			Assert.fail(RED + title);
+		}
 
 		System.out.println(GREEN + title);
 
@@ -2996,7 +3035,12 @@ public class F_manualTestAlarm extends b_baseClass {
 		expectedTitle = expectedTitle.replace("...", "").trim();
 		title = title.replace("...", "").trim();
 
-		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not added.");
+//		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not added.");
+		
+		if (!title.contains(expectedTitle)) {
+
+			Assert.fail(RED + title);
+		}
 
 		System.out.println(GREEN + title + GREEN);
 
@@ -3123,7 +3167,13 @@ public class F_manualTestAlarm extends b_baseClass {
 		expectedTitle = expectedTitle.replace("...", "").trim();
 		title = title.replace("...", "").trim();
 
-		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not added.");
+//		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not added.");
+		
+		if (!title.contains(expectedTitle)) {
+
+			Assert.fail(RED + title);
+		}
+
 
 		System.out.println(GREEN + title);
 
@@ -3169,7 +3219,13 @@ public class F_manualTestAlarm extends b_baseClass {
 			Thread.sleep(1000);
 			String expTextmessage = textMessageMA.getText();
 
-			Assert.assertTrue(messageText.contains(expTextmessage), RED + "Message not sent.");
+//			Assert.assertTrue(messageText.contains(expTextmessage), RED + "Message not sent.");
+			
+			if (!messageText.contains(expTextmessage)) {
+
+				Assert.fail(RED + messageText);
+			}
+
 
 			System.out.println(GREEN + messageText + " sent successfuly ");
 			Thread.sleep(1000);
@@ -3557,6 +3613,12 @@ public class F_manualTestAlarm extends b_baseClass {
 			String expTextmessage = textMessage.getText();
 
 			Assert.assertTrue(messageText.contains(expTextmessage), RED + "Message not sent.");
+			
+			if (!messageText.contains(expTextmessage)) {
+
+				Assert.fail(RED + messageText);
+			}
+
 
 			System.out.println(GREEN + messageText + " sent successfuly ");
 			Thread.sleep(1000);
@@ -4031,7 +4093,12 @@ public class F_manualTestAlarm extends b_baseClass {
 			Thread.sleep(1000);
 			String expTextmessage = textMessage.getText();
 
-			Assert.assertTrue(messageText.contains(expTextmessage), RED + "Message not sent.");
+//			Assert.assertTrue(messageText.contains(expTextmessage), RED + "Message not sent.");
+
+			if (!messageText.contains(expTextmessage)) {
+
+				Assert.fail(RED + "Message not sent.");
+			}
 
 			System.out.println(GREEN + messageText + " sent successfuly ");
 			Thread.sleep(1000);
@@ -4111,7 +4178,12 @@ public class F_manualTestAlarm extends b_baseClass {
 			Thread.sleep(1000);
 			expTextmessage = finalMessage.getText();
 
-			Assert.assertTrue(messageText.contains(expTextmessage), RED + "Message not sent.");
+//			Assert.assertTrue(messageText.contains(expTextmessage), RED + "Message not sent.");
+			
+			if (!messageText.contains(expTextmessage)) {
+
+				Assert.fail(RED + "Message not sent.");
+			}
 
 			System.out.println(GREEN + messageText + " sent successfuly ");
 			Thread.sleep(1000);
@@ -4284,7 +4356,12 @@ public class F_manualTestAlarm extends b_baseClass {
 			Thread.sleep(1000);
 			String expTextmessage = textMessage.getText();
 
-			Assert.assertTrue(messageText.contains(expTextmessage), RED + "Message not sent.");
+//			Assert.assertTrue(messageText.contains(expTextmessage), RED + "Message not sent.");
+			
+			if (!messageText.contains(expTextmessage)) {
+
+				Assert.fail(RED + "Message not sent.");
+			}
 
 			System.out.println(GREEN + messageText + " sent successfuly ");
 			Thread.sleep(1000);
@@ -4473,7 +4550,12 @@ public class F_manualTestAlarm extends b_baseClass {
 //		System.out.println(title);
 //		System.out.println(expectedTitle);
 
-		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not created.");
+//		Assert.assertTrue(title.contains(expectedTitle),RED + "Alarm not created." );
+		
+		if (!title.contains(expectedTitle)) {
+
+			Assert.fail(RED + "Alarm not created.");
+		}
 
 		System.out.println(GREEN + title);
 
@@ -4597,7 +4679,12 @@ public class F_manualTestAlarm extends b_baseClass {
 		expectedTitle = expectedTitle.replace("...", "").trim();
 		title = title.replace("...", "").trim();
 
-		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not added.");
+//		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not added.");
+		
+		if (!title.contains(expectedTitle)) {
+
+			Assert.fail(RED + "Alarm not added.");
+		}
 
 		System.out.println(GREEN + "Alarm created.");
 
@@ -4853,7 +4940,12 @@ public class F_manualTestAlarm extends b_baseClass {
 //		System.out.println(title);
 //		System.out.println(expectedTitle);
 
-		Assert.assertTrue(title.contains(expectedTitle.replace("...", "")), "Alarm not added.");
+//		Assert.assertTrue(title.contains(expectedTitle.replace("...", "")), "Alarm not added.");
+		
+		if (!title.contains(expectedTitle)) {
+
+			Assert.fail(RED + "Alarm not added.");
+		}
 
 		System.out.println(GREEN + "Alarm created.");
 
@@ -5049,7 +5141,12 @@ public class F_manualTestAlarm extends b_baseClass {
 		expectedTitle = expectedTitle.replace("...", "").trim();
 		title = title.replace("...", "").trim();
 
-		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not added.");
+//		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not added.");
+		
+		if (!title.contains(expectedTitle)) {
+
+			Assert.fail(RED + title);
+		}
 
 		FileInputStream in = new FileInputStream(filePath);
 
@@ -5192,7 +5289,12 @@ public class F_manualTestAlarm extends b_baseClass {
 		expectedTitle = expectedTitle.replace("...", "").trim();
 		title = title.replace("...", "").trim();
 
-		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not added.");
+//		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not added.");
+		
+		if (!title.contains(expectedTitle)) {
+
+			Assert.fail(RED + title);
+		}
 
 		FileInputStream in = new FileInputStream(filePath);
 
@@ -5339,7 +5441,11 @@ public class F_manualTestAlarm extends b_baseClass {
 		expectedTitle = expectedTitle.replace("...", "").trim();
 		title = title.replace("...", "").trim();
 
-		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not added.");
+//		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not added.");
+		if (!title.contains(expectedTitle)) {
+
+			Assert.fail(RED + title);
+		}
 
 		System.out.println(GREEN + title);
 
@@ -5521,7 +5627,11 @@ public class F_manualTestAlarm extends b_baseClass {
 		expectedTitle = expectedTitle.replace("...", "").trim();
 		title = title.replace("...", "").trim();
 
-		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not added.");
+//		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not added.");
+		if (!title.contains(expectedTitle)) {
+
+			Assert.fail(RED + title);
+		}
 
 		FileInputStream in = new FileInputStream(filePath);
 
@@ -5694,7 +5804,12 @@ public class F_manualTestAlarm extends b_baseClass {
 		expectedTitle = expectedTitle.replace("...", "").trim();
 		title = title.replace("...", "").trim();
 
-		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not added.");
+//		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not added.");
+		
+		if (!title.contains(expectedTitle)) {
+
+			Assert.fail(RED + title);
+		}
 
 		FileInputStream in = new FileInputStream(filePath);
 
@@ -5840,7 +5955,12 @@ public class F_manualTestAlarm extends b_baseClass {
 		expectedTitle = expectedTitle.replace("...", "").trim();
 		title = title.replace("...", "").trim();
 
-		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not added.");
+//		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not added.");
+		
+		if (!title.contains(expectedTitle)) {
+
+			Assert.fail(RED + title);
+		}
 
 		FileInputStream in = new FileInputStream(filePath);
 
@@ -5993,7 +6113,12 @@ public class F_manualTestAlarm extends b_baseClass {
 		expectedTitle = expectedTitle.replace("...", "").trim();
 		title = title.replace("...", "").trim();
 
-		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not added.");
+//		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not added.");
+		
+		if (!title.contains(expectedTitle)) {
+
+			Assert.fail(RED + title);
+		}
 
 		FileInputStream in = new FileInputStream(filePath);
 
@@ -6214,7 +6339,12 @@ public class F_manualTestAlarm extends b_baseClass {
 		expectedTitle = expectedTitle.replace("...", "").trim();
 		title = title.replace("...", "").trim();
 
-		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not added.");
+//		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not added.");
+		
+		if (!title.contains(expectedTitle)) {
+
+			Assert.fail(RED + title);
+		}
 
 		FileInputStream in = new FileInputStream(filePath);
 
@@ -6436,7 +6566,11 @@ public class F_manualTestAlarm extends b_baseClass {
 		expectedTitle = expectedTitle.replace("...", "").trim();
 		title = title.replace("...", "").trim();
 
-		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not added.");
+//		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not added.");
+		if (!title.contains(expectedTitle)) {
+
+			Assert.fail(RED + title);
+		}
 
 		System.out.println(GREEN + title);
 
@@ -7009,7 +7143,12 @@ public class F_manualTestAlarm extends b_baseClass {
 //		System.out.println(title);
 //		System.out.println(firtsTestAlarm1);
 
-		Assert.assertTrue(title.contains(firtsTestAlarm1), RED + "Alarm not added.");
+//		Assert.assertTrue(title.contains(firtsTestAlarm1), RED + "Alarm not added.");
+		
+		if (!title.contains(firtsTestAlarm1)) {
+
+			Assert.fail(RED + title);
+		}
 
 		System.out.println(GREEN + title);
 
@@ -7424,7 +7563,13 @@ public class F_manualTestAlarm extends b_baseClass {
 //		System.out.println(title);
 //		System.out.println(firtsTestAlarm1);
 
-		Assert.assertTrue(title.contains(firtsTestAlarm1), RED + "Alarm not added.");
+//		Assert.assertTrue(title.contains(firtsTestAlarm1), RED + "Alarm not added.");
+		if (!title.contains(firtsTestAlarm1)) {
+
+			Assert.fail(RED + title);
+		}
+		
+		
 
 		System.out.println(GREEN + title);
 
@@ -7835,7 +7980,12 @@ public class F_manualTestAlarm extends b_baseClass {
 		firtsTestAlarm1 = firtsTestAlarm1.replace("...", "").trim();
 		title = title.replace("...", "").trim();
 
-		Assert.assertTrue(title.contains(firtsTestAlarm1), RED + "Alarm not added.");
+//		Assert.assertTrue(title.contains(firtsTestAlarm1), RED + "Alarm not added.");
+		
+		if (!title.contains(firtsTestAlarm1)) {
+
+			Assert.fail(RED + title);
+		}
 
 		System.out.println(GREEN + title);
 	}
@@ -8247,6 +8397,12 @@ public class F_manualTestAlarm extends b_baseClass {
 		title = title.replace("...", "").trim();
 
 		Assert.assertTrue(title.contains(firtsTestAlarm1), RED + "Alarm not added.");
+		
+		
+		if (!title.contains(firtsTestAlarm1)) {
+
+			Assert.fail(RED + title);
+		}
 
 		System.out.println(GREEN + title);
 

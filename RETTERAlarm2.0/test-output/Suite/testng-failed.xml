@@ -5,7 +5,7 @@
     <classes>
       <class name="function.A_testClassCreate">
         <methods>
-          <include name="createMonitorInformationByAttributeWithAttachments"/>
+          <include name="testAlarm_recursiv_weekly_users"/>
           <include name="AfterTest"/>
           <include name="BeforeSuite"/>
           <include name="backToHomePage2"/>
@@ -13,7 +13,6 @@
           <include name="backToHomePage"/>
           <include name="logOut"/>
           <include name="AfterSute"/>
-          <include name="importEventWith1minReminder"/>
           <include name="createObject"/>
         </methods>
       </class> <!-- function.A_testClassCreate -->

@@ -339,7 +339,14 @@ public class L_Information extends b_baseClass {
 
 		String expectedTitle = firstInfoTitle.getText();
 
-		Assert.assertTrue(title.contains(expectedTitle), RED + "Info NOT added because title is not available");
+//		Assert.assertTrue(title.contains(expectedTitle), RED + "Info NOT added because title is not available");
+		if (!title.contains(expectedTitle)) {
+
+			Assert.fail(RED + title);
+		}
+		
+		
+		System.out.println(GREEN+title);
 
 	}
 
@@ -509,7 +516,12 @@ public class L_Information extends b_baseClass {
 
 		String expectedTitle = firstInfoTitle.getText();
 
-		Assert.assertTrue(title.contains(expectedTitle), RED + "Info NOT added because title is not available");
+//		Assert.assertTrue(title.contains(expectedTitle), RED + "Info NOT added because title is not available");
+		
+		if (!title.contains(expectedTitle)) {
+
+			Assert.fail(RED + title);
+		}
 
 		System.out.println(GREEN + title + GREEN);
 
@@ -814,7 +826,12 @@ public class L_Information extends b_baseClass {
 		Thread.sleep(5000);
 		String expectedTitle = firstInfoTitle.getText();
 
-		Assert.assertTrue(title.contains(expectedTitle), RED + "Info NOT added because title is not available");
+//		Assert.assertTrue(title.contains(expectedTitle), RED + "Info NOT added because title is not available");
+		
+		if (!title.contains(expectedTitle)) {
+
+			Assert.fail(RED + title);
+		}
 
 		System.out.println(GREEN + title + GREEN);
 
@@ -844,7 +861,12 @@ public class L_Information extends b_baseClass {
 		Thread.sleep(1000);
 		String expTextmessage = textMessage.getText();
 
-		Assert.assertTrue(messageText.contains(expTextmessage), RED + "Message not sent.");
+//		Assert.assertTrue(messageText.contains(expTextmessage), RED + "Message not sent.");
+		
+		if (!messageText.contains(expTextmessage)) {
+
+			Assert.fail(RED + messageText);
+		}
 
 		System.out.println(GREEN + messageText + " sent successfuly ");
 		Thread.sleep(1000);
@@ -939,7 +961,12 @@ public class L_Information extends b_baseClass {
 		Thread.sleep(5000);
 		String expectedTitle = firstInfoTitle.getText();
 
-		Assert.assertTrue(title.contains(expectedTitle), RED + "Info NOT added because title is not available");
+//		Assert.assertTrue(title.contains(expectedTitle), RED + "Info NOT added because title is not available");
+		
+		if (!title.contains(expectedTitle)) {
+
+			Assert.fail(RED + title);
+		}
 
 		System.out.println(GREEN + title);
 	}
@@ -1128,7 +1155,12 @@ public class L_Information extends b_baseClass {
 		Thread.sleep(5000);
 		String expectedTitle = firstInfoTitle.getText();
 
-		Assert.assertTrue(title.contains(expectedTitle), RED + "Info NOT added because title is not available");
+//		Assert.assertTrue(title.contains(expectedTitle), RED + "Info NOT added because title is not available");
+		
+		if (!title.contains(expectedTitle)) {
+
+			Assert.fail(RED + title);
+		}
 
 		System.out.println(GREEN + title);
 
@@ -1286,7 +1318,12 @@ public class L_Information extends b_baseClass {
 		Thread.sleep(5000);
 		String expectedTitle = firstInfoTitle.getText();
 
-		Assert.assertTrue(title.contains(expectedTitle), RED + "Info NOT added because title is not available");
+//		Assert.assertTrue(title.contains(expectedTitle), RED + "Info NOT added because title is not available");
+		
+		if (!title.contains(expectedTitle)) {
+
+			Assert.fail(RED + title);
+		}
 
 		System.out.println(GREEN + title);
 
@@ -1447,7 +1484,11 @@ public class L_Information extends b_baseClass {
 		Thread.sleep(5000);
 		String expectedTitle = firstInfoTitle.getText();
 
-		Assert.assertTrue(title.contains(expectedTitle), RED + "Info NOT added because title is not available");
+//		Assert.assertTrue(title.contains(expectedTitle), RED + "Info NOT added because title is not available");
+		if (!title.contains(expectedTitle)) {
+
+			Assert.fail(RED + title);
+		}
 
 		System.out.println(GREEN + title);
 
@@ -1633,7 +1674,11 @@ public class L_Information extends b_baseClass {
 
 		String expectedTitle = firstInfoTitle.getText();
 
-		Assert.assertTrue(title.contains(expectedTitle), RED + "Info NOT added because title is not available");
+//		Assert.assertTrue(title.contains(expectedTitle), RED + "Info NOT added because title is not available");
+		if (!title.contains(expectedTitle)) {
+
+			Assert.fail(RED + title);
+		}
 
 		System.out.println(GREEN + title + " from -" + germanyTimeAfter5MinHH + ":" + germanyTimeAfter5MinMM + " To "
 				+ germanyTimeAfter20MinHH + ":" + germanyTimeAfter20MinMM);
@@ -1784,7 +1829,12 @@ public class L_Information extends b_baseClass {
 
 		String expectedTitle = firstInfoTitle.getText();
 
-		Assert.assertTrue(title.contains(expectedTitle), RED + "Info NOT added because title is not available");
+//		Assert.assertTrue(title.contains(expectedTitle), RED + "Info NOT added because title is not available");
+		
+		if (!title.contains(expectedTitle)) {
+
+			Assert.fail(RED + title);
+		}
 
 		System.out.println(GREEN + title + " from -" + germanyTimeAfter5MinHH + ":" + germanyTimeAfter5MinMM + " To "
 				+ germanyTimeAfter20MinHH + ":" + germanyTimeAfter20MinMM);
@@ -1947,7 +1997,13 @@ public class L_Information extends b_baseClass {
 
 		String expectedTitle = firstInfoTitle.getText();
 
-		Assert.assertTrue(title.contains(expectedTitle), RED + "Info NOT added because title is not available");
+//		Assert.assertTrue(title.contains(expectedTitle), RED + "Info NOT added because title is not available");
+		
+		if (!title.contains(expectedTitle)) {
+
+			Assert.fail(RED + title);
+		}
+		
 
 		System.out.println(GREEN + title + " from -" + germanyTimeAfter5MinHH + ":" + germanyTimeAfter5MinMM + " To "
 				+ germanyTimeAfter20MinHH + ":" + germanyTimeAfter20MinMM);
@@ -2112,7 +2168,12 @@ public class L_Information extends b_baseClass {
 
 		String expectedTitle = firstInfoTitle.getText();
 
-		Assert.assertTrue(title.contains(expectedTitle), RED + "Info NOT added because title is not available");
+//		Assert.assertTrue(title.contains(expectedTitle), RED + "Info NOT added because title is not available");
+		
+		if (!title.contains(expectedTitle)) {
+
+			Assert.fail(RED + title);
+		}
 
 		System.out.println(GREEN + title + " from -" + germanyTimeAfter5MinHH + ":" + germanyTimeAfter5MinMM + " To "
 				+ germanyTimeAfter20MinHH + ":" + germanyTimeAfter20MinMM);
@@ -2292,16 +2353,28 @@ public class L_Information extends b_baseClass {
 		act.moveToElement(save).build().perform();
 		Thread.sleep(1000);
 		save.click();
-		Thread.sleep(5000);
+		Thread.sleep(2000);
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
+		if (wait.until(ExpectedConditions.or(ExpectedConditions.visibilityOf(createNewButton),
+				ExpectedConditions.invisibilityOf(createNewButton))) != null
+				&& createNewButton.isDisplayed()) {
+		}
+
+		Thread.sleep(2000);
 		js.executeScript("document.body.style.zoom='100%'");
 
 		String expectedTitle = firstInfoTitle.getText();
 
 //		System.out.println(expectedTitle);
 
-		Assert.assertTrue(title.contains(expectedTitle), RED + "Info NOT added because title is not available");
+//		Assert.assertTrue(title.contains(expectedTitle), RED + "Info NOT added because title is not available");
 
+		if (!title.contains(expectedTitle)) {
+
+			Assert.fail(RED + title);
+		}
 		System.out.println(GREEN + title + " from -" + germanyTimeAfter5MinHH + ":" + germanyTimeAfter5MinMM + " To "
 				+ germanyTimeAfter20MinHH + ":" + germanyTimeAfter20MinMM);
 
@@ -2610,7 +2683,12 @@ public class L_Information extends b_baseClass {
 
 //		System.out.println(expectedTitle);
 
-		Assert.assertTrue(title.contains(expectedTitle), RED + "Info NOT added because title is not available");
+//		Assert.assertTrue(title.contains(expectedTitle), RED + "Info NOT added because title is not available");
+		
+		if (!title.contains(expectedTitle)) {
+
+			Assert.fail(RED + title);
+		}
 
 		System.out.println(GREEN + title + " from -" + germanyTimeAfter5MinHH + ":" + germanyTimeAfter5MinMM + " To "
 				+ germanyTimeAfter20MinHH + ":" + germanyTimeAfter20MinMM);

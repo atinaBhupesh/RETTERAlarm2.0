@@ -316,15 +316,34 @@ public class N_users extends b_baseClass {
 
 //		System.out.println(expectedFirstName);
 //		System.out.println(expectedLasttName);
+//
+//		Assert.assertTrue(expectedFirstName.contains(firstName), RED + "Station not found.");
+		if (!expectedFirstName.contains(firstName)) {
 
-		Assert.assertTrue(expectedFirstName.contains(firstName), RED + "Station not found.");
+			Assert.fail(RED + "First name not match");
+		}
+		
+		
+		
+		
 		Assert.assertTrue(expectedLasttName.contains(lastName), RED + "Station not found.");
+		
+		if (!expectedLasttName.contains(lastName)) {
+
+			Assert.fail(RED + "Last name not match");
+		}
+		
 
 		if (successMessage.isDisplayed()) {
 			System.out.println(GREEN + "user updated successfully. ");
 		} else {
 			System.out.println(RED + "user not updated successfully. ");
 		}
+		
+		
+		
+		
+		
 
 		Thread.sleep(2000);
 		act.moveToElement(closePopUpImportUser).click().build().perform();
@@ -922,13 +941,29 @@ public class N_users extends b_baseClass {
 		String AtualgetAttributeName = getAttributeName.getText();
 //		System.out.println(AtualgetAttributeName);
 //		System.out.println(attributeNewUser);
-		Assert.assertTrue(attributeNewUser.contains(AtualgetAttributeName), RED + "Attribute  not found");
+//		Assert.assertTrue(attributeNewUser.contains(AtualgetAttributeName), RED + "Attribute  not found");
+		if (!attributeNewUser.contains(AtualgetAttributeName)) {
+
+			Assert.fail(RED + "Attribute  not found");
+		}
+		
+		
+		
 		System.out.println(GREEN + "Attribute added successfully.");
 
 		String atualgetResourceName = getResourceName.getText();
 //		System.out.println(atualgetResourceName);
 //		System.out.println(st01R1);
-		Assert.assertTrue(resourceNewUser.contains(atualgetResourceName), RED + "Attribute  not found");
+//		Assert.assertTrue(resourceNewUser.contains(atualgetResourceName), RED + "Attribute  not found");
+		if (!resourceNewUser.contains(atualgetResourceName)) {
+
+			Assert.fail(RED + "Attribute  not found");
+		}
+		
+		
+	
+		
+		
 		System.out.println(GREEN + "Resource added successfully.");
 
 		act.moveToElement(next).click().build().perform();
@@ -955,13 +990,24 @@ public class N_users extends b_baseClass {
 		String actualFirstName_FF = getFirstLatName.getText();
 //		System.out.println(actualFirstName_FF);
 //		System.out.println(lastName_FF);
-		Assert.assertTrue(actualFirstName_FF.contains(lastName_FF), RED + " Last Name not found ");
+//		Assert.assertTrue(actualFirstName_FF.contains(lastName_FF), RED + " Last Name not found ");
+		
+		
+		if (!actualFirstName_FF.contains(lastName_FF)) {
+
+			Assert.fail(RED + " Last Name not found ");
+		}
 		System.out.println(GREEN + " First and Last Name added correctly.");
 
 		String actualEmail = getAddedUserEmail.getText();
 //		System.out.println(actualEmail);
 //		System.out.println(email_FF);
-		Assert.assertTrue(email_FF.contains(actualEmail), RED + "Email not found.");
+//		Assert.assertTrue(email_FF.contains(actualEmail), RED + "Email not found.");
+		
+		if (!email_FF.contains(actualEmail)) {
+
+			Assert.fail(RED + "Email not found.");
+		}
 		System.out.println(GREEN + "email Added correctly.");
 
 		Thread.sleep(2000);

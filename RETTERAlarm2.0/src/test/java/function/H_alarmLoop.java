@@ -342,7 +342,13 @@ public class H_alarmLoop extends b_baseClass {
 
 		String expectedTitle = firstItemTitle.getText();
 
-		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm loop not added.");
+//		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm loop not added.");
+		
+		if (!title.contains(expectedTitle)) {
+
+			Assert.fail(RED + title);
+		}
+
 
 		System.out.println(GREEN + title + GREEN);
 
@@ -402,7 +408,12 @@ public class H_alarmLoop extends b_baseClass {
 
 		String expectedTitle = firstItemTitle.getText();
 
-		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm loop not added.");
+//		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm loop not added.");
+		if (!title.contains(expectedTitle)) {
+
+			Assert.fail(RED + title);
+		}
+
 
 		System.out.println(GREEN + title);
 

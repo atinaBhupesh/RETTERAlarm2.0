@@ -43,8 +43,7 @@
 				<include name="createCalendarEventByFireFughterMS" />
 				<include name="createCalendarEventByStationsMS" />
 
-				<include name="verifyingAllTestAlarmAfterCronRun" />
-				<include name="verifyAvailabilityRequestCreatedAfterCronExecution" />
+			
 				
 				<include name="nextStage" />
 

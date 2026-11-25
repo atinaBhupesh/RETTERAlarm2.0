@@ -204,7 +204,11 @@ public class J_alarmEscalation extends b_baseClass {
 
 		String expectedTitle = firstItemTitle.getText();
 
-		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm loop not added.");
+//		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm loop not added.");
+		if (!title.contains(expectedTitle)) {
+
+			Assert.fail(RED + title);
+		}
 
 		System.out.println(GREEN + title);
 

@@ -119,7 +119,13 @@ public class T_checkList extends b_baseClass {
 			
 			String actualTite = firstTitle.getText();
 
-			Assert.assertTrue(actualTite.contains(title), RED + "Station not found.");
+//			Assert.assertTrue(actualTite.contains(title), RED + "Station not found.");
+			if (!actualTite.contains(title)) {
+
+				Assert.fail(RED + checkListType + " not added .");
+			}
+			
+			
 
 			System.out.println(GREEN + checkListType + " added successfully.");
 			

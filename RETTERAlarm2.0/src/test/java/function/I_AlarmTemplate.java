@@ -546,7 +546,13 @@ public class I_AlarmTemplate extends b_baseClass {
 		wb.close();
 
 		String expectedTitle = firstItemTitle.getText();
-		Assert.assertTrue(title.contains(expectedTitle), RED + "Template not added.");
+//		Assert.assertTrue(title.contains(expectedTitle), RED + "Template not added.");
+		
+		if (!title.contains(expectedTitle)) {
+
+			Assert.fail(RED + title);
+		}
+
 
 		System.out.println(GREEN + title);
 
@@ -628,8 +634,11 @@ public class I_AlarmTemplate extends b_baseClass {
 
 		String expectedTitle = firstItemTitle.getText();
 
-		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not added.");
+//		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not added.");
+		if (!title.contains(expectedTitle)) {
 
+			Assert.fail(RED + title);
+		}
 		System.out.println(GREEN + title);
 
 	}
@@ -808,7 +817,11 @@ public class I_AlarmTemplate extends b_baseClass {
 		wb.close();
 
 		String expectedTitle = firstItemTitle.getText();
-		Assert.assertTrue(title.contains(expectedTitle), RED + "Template not added.");
+//		Assert.assertTrue(title.contains(expectedTitle), RED + "Template not added.");
+		if (!title.contains(expectedTitle)) {
+
+			Assert.fail(RED + title);
+		}
 
 		System.out.println(GREEN + title);
 
@@ -943,8 +956,12 @@ public class I_AlarmTemplate extends b_baseClass {
 
 		String expectedTitle = firstItemTitle.getText();
 
-		Assert.assertTrue(title.contains(expectedTitle), RED + "Template not added.");
+//		Assert.assertTrue(title.contains(expectedTitle), RED + "Template not added.");
 
+		if (!title.contains(expectedTitle)) {
+
+			Assert.fail(RED + title);
+		}
 		System.out.println(GREEN + title);
 
 	}
@@ -1091,7 +1108,11 @@ public class I_AlarmTemplate extends b_baseClass {
 		Thread.sleep(5000);
 
 		String expectedTitle = firstItemTitle.getText();
-		Assert.assertTrue(title.contains(expectedTitle), RED + "Template not added.");
+//		Assert.assertTrue(title.contains(expectedTitle), RED + "Template not added.");
+		if (!title.contains(expectedTitle)) {
+
+			Assert.fail(RED + title);
+		}
 
 		System.out.println(GREEN + title);
 

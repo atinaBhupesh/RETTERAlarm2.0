@@ -344,8 +344,18 @@ public class K_calendar extends b_baseClass {
 		String errorMessages = errorMessage.getText();
 		Thread.sleep(2000);
 
-		Assert.assertTrue(actualValidText.contains(isValidTex), RED + "valid message not proper.");
-		Assert.assertTrue(actualErrorMessage.contains(errorMessages), RED + "error message not proper.");
+//		Assert.assertTrue(actualValidText.contains(isValidTex), RED + "valid message not proper.");
+		
+		if (!actualValidText.contains(isValidTex)) {
+
+			Assert.fail(RED + actualValidText);
+		}
+//		Assert.assertTrue(actualErrorMessage.contains(errorMessages), RED + "error message not proper.");
+		
+		if (!actualErrorMessage.contains(errorMessages)) {
+
+			Assert.fail(RED + actualErrorMessage);
+		}
 
 		continueImport.click();
 		Thread.sleep(2000);
@@ -353,7 +363,12 @@ public class K_calendar extends b_baseClass {
 
 		errorMessages = errorMessage.getText();
 
-		Assert.assertTrue(importedMessage.contains(errorMessages), RED + "error message not proper.");
+//		Assert.assertTrue(importedMessage.contains(errorMessages), RED + "error message not proper.");
+		
+		if (!importedMessage.contains(errorMessages)) {
+
+			Assert.fail(RED + importedMessage);
+		}
 
 		close.click();
 		Thread.sleep(2000);
@@ -665,7 +680,12 @@ public class K_calendar extends b_baseClass {
 //		System.out.println(expectedTitle);
 //		System.out.println(title1);
 
-		Assert.assertTrue(title1.contains(expectedTitle), RED + "Alarm not added.");
+//		Assert.assertTrue(title1.contains(expectedTitle), RED + "Alarm not added.");
+		
+		if (!title.contains(expectedTitle)) {
+
+			Assert.fail(RED + title);
+		}
 
 		System.out.println(GREEN + title1);
 

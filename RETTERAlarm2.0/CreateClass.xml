@@ -8,14 +8,10 @@
 			<methods>
 			
 			
+	<include name="testAlarm_recursiv_daily_Resource" />
+				<include name="testAlarm_recursiv_weekly_users" />
 
-<include name="sendMessageToApiEsclationAlarm" />
-
-				<include name="createMonitorInformationByAttributeWithAttachments" />
-
-				<include name="importUser" />
-				<include name="updateUser" />
-				 <include name="importEventWith1minReminder"/>
+				
 
 				
 					

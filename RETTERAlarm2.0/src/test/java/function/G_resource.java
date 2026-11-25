@@ -232,7 +232,13 @@ public class G_resource extends b_baseClass {
 
 		String expectedTitle = firstItemTitle.getText();
 
-		Assert.assertTrue(title.contains(expectedTitle), RED + " Ne Resource not added.");
+//		Assert.assertTrue(title.contains(expectedTitle), RED + " Ne Resource not added.");
+		if (!title.contains(expectedTitle)) {
+
+			Assert.fail(RED + title);
+		}
+
+		
 
 		System.out.println(GREEN + title + GREEN);
 
@@ -340,7 +346,13 @@ public class G_resource extends b_baseClass {
 
 		String expectedTitle = firstItemTitle.getText();
 
-		Assert.assertTrue(title.contains(expectedTitle), RED + " New Escalation Resource not added.");
+//		Assert.assertTrue(title.contains(expectedTitle), RED + " New Escalation Resource not added.");
+		
+		if (!title.contains(expectedTitle)) {
+
+			Assert.fail(RED + title);
+		}
+
 
 		System.out.println(GREEN + title);
 
@@ -450,7 +462,12 @@ public class G_resource extends b_baseClass {
 
 		String expectedTitle = firstItemTitle.getText();
 
-		Assert.assertTrue(title.contains(expectedTitle), RED + " Ne Resource not added.");
+//		Assert.assertTrue(title.contains(expectedTitle), RED + " Ne Resource not added.");
+		if (!title.contains(expectedTitle)) {
+
+			Assert.fail(RED + title);
+		}
+
 
 		System.out.println(GREEN + title);
 

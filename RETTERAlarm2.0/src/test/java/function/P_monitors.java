@@ -125,7 +125,11 @@ public class P_monitors extends b_baseClass {
 
 		String actualTite = firstTitle.getText();
 
-		Assert.assertTrue(actualTite.contains(title), RED + "Station not found.");
+//		Assert.assertTrue(actualTite.contains(title), RED + "Station not found.");
+		if (!actualTite.contains(title)) {
+
+			Assert.fail(RED +  "New overview monitor not edited .");
+		}
 
 		System.out.println(GREEN + "New overview monitor edited successfully.");
 		
@@ -136,6 +140,8 @@ public class P_monitors extends b_baseClass {
 	
 	public void addOverviewMonitor (WebDriver driver,String branchName, String deptN, String gtimeHHMMSS, String filePath) throws Throwable
 	{
+		
+		System.out.println("Hello ");
 		Actions act = new Actions (driver);
 		manageMonitors.click();
 		Thread.sleep(2000);
@@ -206,7 +212,13 @@ public class P_monitors extends b_baseClass {
 //		System.out.println(title);
 //		System.out.println(actualTite);
 
-		Assert.assertTrue(actualTite.contains(title), RED + "Station not found.");
+//		Assert.assertTrue(actualTite.contains(title), RED + "Station not found.");
+		
+		if (!actualTite.contains(title)) {
+
+			Assert.fail(RED + "New overview monitor not added.");
+		}
+		
 
 		System.out.println(GREEN + "New overview monitor added successfully.");
 		
@@ -274,7 +286,12 @@ public class P_monitors extends b_baseClass {
 		Thread.sleep(2000);
 		String actualTite = firstTitle.getText();
 
-		Assert.assertTrue(actualTite.contains(newName), RED + "Station not found.");
+//		Assert.assertTrue(actualTite.contains(newName), RED + "Station not found.");
+		
+		if (!actualTite.contains(newName)) {
+
+			Assert.fail(RED + "New station monitor not edited.");
+		}
 
 		System.out.println(GREEN + "New station monitor edited successfully.");
 		
@@ -346,8 +363,12 @@ public class P_monitors extends b_baseClass {
 
 		String actualTite = firstTitle.getText();
 
-		Assert.assertTrue(actualTite.contains(title), RED + "Station not found.");
+//		Assert.assertTrue(actualTite.contains(title), RED + "Station not found.");
+		if (!actualTite.contains(title)) {
 
+			Assert.fail(RED + "New station monitor not added.");
+		}
+		
 		System.out.println(GREEN + "New station monitor added successfully.");
 		
 		

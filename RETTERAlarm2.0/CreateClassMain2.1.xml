@@ -10,6 +10,9 @@
 					<include name="verifyAllApiAlarmsCretaed" />
 				
 				<include name="checkAlarmDisplayedOnMonitors" />
+				
+				<include name="verifyingAllTestAlarmAfterCronRun" />
+				<include name="verifyAvailabilityRequestCreatedAfterCronExecution" />
 			
 
 				<include name="nextStage" />

@@ -299,6 +299,7 @@ public class b_baseClass {
 		case "1": {
 ////   >>>>>Normal browser
 			driver = new ChromeDriver();
+			System.out.println("Selected Normal browser");
 
 ////	>>>>For Headless browser 
 //			WebDriverManager.chromedriver().setup();
@@ -306,6 +307,7 @@ public class b_baseClass {
 //			chromeOptions.addArguments("--headless=new");
 //			chromeOptions.addArguments("--window-size=1920,1080");
 //			driver = new ChromeDriver(chromeOptions);
+//			System.out.println("Selected Head less browser");
 
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 			break;

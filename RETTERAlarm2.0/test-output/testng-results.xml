@@ -1,32 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[Well come to RETTERAlarm Live branch-Bhupesh Department]]>
+      <![CDATA[Well come to RETTERAlarm Testing branch]]>
     </line>
     <line>
-      <![CDATA[Logged in user-bhupesh+live_bhdeptuser@atinatechnology.in]]>
-    </line>
-    <line>
-      <![CDATA[ ]]>
-    </line>
-    <line>
-      <![CDATA[The process for creating a new monitor information using attributes has been initiated.]]>
-    </line>
-    <line>
-      <![CDATA[[32m✔ [0m[32m✔ [0mThe process for creating a new monitor information using attributes has been completed successfully.]]>
+      <![CDATA[Logged in user-bhupesh+test_deptuser@atinatechnology.in]]>
     </line>
     <line>
       <![CDATA[ ]]>
     </line>
     <line>
+      <![CDATA[The process of verifying all API alarms created has started.]]>
+    </line>
+    <line>
+      <![CDATA[[32m✔ [0m[32m✔ [0mThe process of verifying all API alarms created is complete.]]>
+    </line>
+    <line>
       <![CDATA[ ]]>
     </line>
     <line>
-      <![CDATA[The process of importing event with 1 minute reminder has started.]]>
+      <![CDATA[[32m✔ [0m[32m✔ [0mThe process of monitor login is complete.]]>
     </line>
     <line>
-      <![CDATA[[32m✔ [0m[32m✔ [0mThe process of importing event with 1 minute reminder is complete.]]>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[The process of verifying all test alarms created after cron run has started.]]>
+    </line>
+    <line>
+      <![CDATA[[32m✔ [0m[32m✔ [0mThe process of verifying all test alarms created after cron run is complete.]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[ ]]>
+    </line>
+    <line>
+      <![CDATA[The process of verifying availability request created after cron execution has started.]]>
+    </line>
+    <line>
+      <![CDATA[[32m✔ [0m[32m✔ [0mThe process of verifying availability request created after cron execution is complete.]]>
     </line>
     <line>
       <![CDATA[ ]]>
@@ -50,92 +65,164 @@
       <![CDATA[Good to see you again.]]>
     </line>
   </reporter-output>
-  <suite started-at="2026-11-18T15:39:11 IST" name="Failed suite [Failed suite [Suite]]" finished-at="2026-11-18T15:41:36 IST" duration-ms="145620">
+  <suite started-at="2026-11-25T12:45:06 IST" name="Suite" finished-at="2026-11-25T12:54:42 IST" duration-ms="575856">
     <groups>
     </groups>
-    <test started-at="2026-11-18T15:39:11 IST" name="Test(failed)(failed)" finished-at="2026-11-18T15:41:36 IST" duration-ms="145620">
+    <test started-at="2026-11-25T12:45:06 IST" name="Test" finished-at="2026-11-25T12:54:42 IST" duration-ms="575856">
       <class name="function.A_testClassCreate">
-        <test-method is-config="true" signature="BeforeSuite()[pri:0, instance:function.A_testClassCreate@55182842]" started-at="2026-11-18T15:39:04 IST" name="BeforeSuite" finished-at="2026-11-18T15:39:11 IST" duration-ms="6052" status="PASS">
+        <test-method is-config="true" signature="BeforeSuite()[pri:0, instance:function.A_testClassCreate@55182842]" started-at="2026-11-25T12:45:00 IST" name="BeforeSuite" finished-at="2026-11-25T12:45:06 IST" duration-ms="6137" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[Well come to RETTERAlarm Live branch-Bhupesh Department]]>
+              <![CDATA[Well come to RETTERAlarm Testing branch]]>
             </line>
           </reporter-output>
         </test-method> <!-- BeforeSuite -->
-        <test-method is-config="true" signature="BeforeTest()[pri:0, instance:function.A_testClassCreate@55182842]" started-at="2026-11-18T15:39:11 IST" name="BeforeTest" finished-at="2026-11-18T15:39:20 IST" duration-ms="8985" status="PASS">
+        <test-method is-config="true" signature="BeforeTest()[pri:0, instance:function.A_testClassCreate@55182842]" started-at="2026-11-25T12:45:06 IST" name="BeforeTest" finished-at="2026-11-25T12:45:13 IST" duration-ms="7680" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[Logged in user-bhupesh+live_bhdeptuser@atinatechnology.in]]>
+              <![CDATA[Logged in user-bhupesh+test_deptuser@atinatechnology.in]]>
             </line>
           </reporter-output>
         </test-method> <!-- BeforeTest -->
-        <test-method is-config="true" signature="createObject()[pri:0, instance:function.A_testClassCreate@55182842]" started-at="2026-11-18T15:39:20 IST" name="createObject" finished-at="2026-11-18T15:39:20 IST" duration-ms="12" status="PASS">
+        <test-method is-config="true" signature="createObject()[pri:0, instance:function.A_testClassCreate@55182842]" started-at="2026-11-25T12:45:13 IST" name="createObject" finished-at="2026-11-25T12:45:13 IST" duration-ms="10" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createObject -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@55182842]" started-at="2026-11-18T15:39:20 IST" name="backToHomePage" finished-at="2026-11-18T15:39:21 IST" duration-ms="1692" status="PASS">
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@55182842]" started-at="2026-11-25T12:45:13 IST" name="backToHomePage" finished-at="2026-11-25T12:45:15 IST" duration-ms="1767" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backToHomePage -->
-        <test-method signature="createMonitorInformationByAttributeWithAttachments()[pri:0, instance:function.A_testClassCreate@55182842]" started-at="2026-11-18T15:39:21 IST" name="createMonitorInformationByAttributeWithAttachments" finished-at="2026-11-18T15:40:38 IST" duration-ms="77032" status="PASS">
+        <test-method signature="verifyAllApiAlarmsCretaed()[pri:0, instance:function.A_testClassCreate@55182842]" started-at="2026-11-25T12:45:15 IST" name="verifyAllApiAlarmsCretaed" finished-at="2026-11-25T12:47:12 IST" duration-ms="116730" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[ ]]>
             </line>
             <line>
-              <![CDATA[The process for creating a new monitor information using attributes has been initiated.]]>
+              <![CDATA[The process of verifying all API alarms created has started.]]>
             </line>
             <line>
-              <![CDATA[[32m✔ [0m[32m✔ [0mThe process for creating a new monitor information using attributes has been completed successfully.]]>
+              <![CDATA[[32m✔ [0m[32m✔ [0mThe process of verifying all API alarms created is complete.]]>
             </line>
             <line>
               <![CDATA[ ]]>
             </line>
           </reporter-output>
-        </test-method> <!-- createMonitorInformationByAttributeWithAttachments -->
-        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassCreate@55182842]" started-at="2026-11-18T15:40:38 IST" name="backToHomePage2" finished-at="2026-11-18T15:40:50 IST" duration-ms="12140" status="PASS">
+        </test-method> <!-- verifyAllApiAlarmsCretaed -->
+        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassCreate@55182842]" started-at="2026-11-25T12:47:12 IST" name="backToHomePage2" finished-at="2026-11-25T12:47:24 IST" duration-ms="12058" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=createMonitorInformationByAttributeWithAttachments status=SUCCESS method=A_testClassCreate.createMonitorInformationByAttributeWithAttachments()[pri:0, instance:function.A_testClassCreate@55182842]]]]>
+                <![CDATA[[TestResult name=verifyAllApiAlarmsCretaed status=SUCCESS method=A_testClassCreate.verifyAllApiAlarmsCretaed()[pri:0, instance:function.A_testClassCreate@55182842]]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backToHomePage2 -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@55182842]" started-at="2026-11-18T15:40:50 IST" name="backToHomePage" finished-at="2026-11-18T15:40:53 IST" duration-ms="2751" status="PASS">
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@55182842]" started-at="2026-11-25T12:47:24 IST" name="backToHomePage" finished-at="2026-11-25T12:47:26 IST" duration-ms="1680" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backToHomePage -->
-        <test-method signature="importEventWith1minReminder()[pri:0, instance:function.A_testClassCreate@55182842]" started-at="2026-11-18T15:40:53 IST" name="importEventWith1minReminder" finished-at="2026-11-18T15:41:21 IST" duration-ms="28133" status="PASS">
+        <test-method signature="checkAlarmDisplayedOnMonitors()[pri:0, instance:function.A_testClassCreate@55182842]" started-at="2026-11-25T12:47:26 IST" name="checkAlarmDisplayedOnMonitors" finished-at="2026-11-25T12:52:19 IST" duration-ms="293684" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[ ]]>
-            </line>
-            <line>
-              <![CDATA[The process of importing event with 1 minute reminder has started.]]>
-            </line>
-            <line>
-              <![CDATA[[32m✔ [0m[32m✔ [0mThe process of importing event with 1 minute reminder is complete.]]>
-            </line>
-            <line>
-              <![CDATA[ ]]>
+              <![CDATA[[32m✔ [0m[32m✔ [0mThe process of monitor login is complete.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- importEventWith1minReminder -->
-        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassCreate@55182842]" started-at="2026-11-18T15:41:21 IST" name="backToHomePage2" finished-at="2026-11-18T15:41:32 IST" duration-ms="11088" status="PASS">
+        </test-method> <!-- checkAlarmDisplayedOnMonitors -->
+        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassCreate@55182842]" started-at="2026-11-25T12:52:19 IST" name="backToHomePage2" finished-at="2026-11-25T12:52:32 IST" duration-ms="12142" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=importEventWith1minReminder status=SUCCESS method=A_testClassCreate.importEventWith1minReminder()[pri:0, instance:function.A_testClassCreate@55182842]]]]>
+                <![CDATA[[TestResult name=checkAlarmDisplayedOnMonitors status=SUCCESS method=A_testClassCreate.checkAlarmDisplayedOnMonitors()[pri:0, instance:function.A_testClassCreate@55182842] output=[32m✔ [0m[32m✔ [0mThe process of monitor login is complete.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backToHomePage2 -->
-        <test-method is-config="true" signature="logOut()[pri:0, instance:function.A_testClassCreate@55182842]" started-at="2026-11-18T15:41:32 IST" name="logOut" finished-at="2026-11-18T15:41:36 IST" duration-ms="3751" status="PASS">
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@55182842]" started-at="2026-11-25T12:52:32 IST" name="backToHomePage" finished-at="2026-11-25T12:52:33 IST" duration-ms="1566" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- backToHomePage -->
+        <test-method signature="verifyingAllTestAlarmAfterCronRun()[pri:0, instance:function.A_testClassCreate@55182842]" started-at="2026-11-25T12:52:33 IST" name="verifyingAllTestAlarmAfterCronRun" finished-at="2026-11-25T12:53:24 IST" duration-ms="50711" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+            <line>
+              <![CDATA[The process of verifying all test alarms created after cron run has started.]]>
+            </line>
+            <line>
+              <![CDATA[[32m✔ [0m[32m✔ [0mThe process of verifying all test alarms created after cron run is complete.]]>
+            </line>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyingAllTestAlarmAfterCronRun -->
+        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassCreate@55182842]" started-at="2026-11-25T12:53:24 IST" name="backToHomePage2" finished-at="2026-11-25T12:53:35 IST" duration-ms="11423" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyingAllTestAlarmAfterCronRun status=SUCCESS method=A_testClassCreate.verifyingAllTestAlarmAfterCronRun()[pri:0, instance:function.A_testClassCreate@55182842]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- backToHomePage2 -->
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@55182842]" started-at="2026-11-25T12:53:35 IST" name="backToHomePage" finished-at="2026-11-25T12:53:37 IST" duration-ms="1698" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- backToHomePage -->
+        <test-method signature="verifyAvailabilityRequestCreatedAfterCronExecution()[pri:0, instance:function.A_testClassCreate@55182842]" started-at="2026-11-25T12:53:37 IST" name="verifyAvailabilityRequestCreatedAfterCronExecution" finished-at="2026-11-25T12:54:14 IST" duration-ms="36562" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+            <line>
+              <![CDATA[The process of verifying availability request created after cron execution has started.]]>
+            </line>
+            <line>
+              <![CDATA[[32m✔ [0m[32m✔ [0mThe process of verifying availability request created after cron execution is complete.]]>
+            </line>
+            <line>
+              <![CDATA[ ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyAvailabilityRequestCreatedAfterCronExecution -->
+        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassCreate@55182842]" started-at="2026-11-25T12:54:14 IST" name="backToHomePage2" finished-at="2026-11-25T12:54:25 IST" duration-ms="11337" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyAvailabilityRequestCreatedAfterCronExecution status=SUCCESS method=A_testClassCreate.verifyAvailabilityRequestCreatedAfterCronExecution()[pri:0, instance:function.A_testClassCreate@55182842]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- backToHomePage2 -->
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@55182842]" started-at="2026-11-25T12:54:25 IST" name="backToHomePage" finished-at="2026-11-25T12:54:26 IST" duration-ms="1601" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- backToHomePage -->
+        <test-method signature="nextStage()[pri:0, instance:function.A_testClassCreate@55182842]" started-at="2026-11-25T12:54:26 IST" name="nextStage" finished-at="2026-11-25T12:54:26 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nextStage -->
+        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassCreate@55182842]" started-at="2026-11-25T12:54:26 IST" name="backToHomePage2" finished-at="2026-11-25T12:54:38 IST" duration-ms="11443" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=nextStage status=SUCCESS method=A_testClassCreate.nextStage()[pri:0, instance:function.A_testClassCreate@55182842] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- backToHomePage2 -->
+        <test-method is-config="true" signature="logOut()[pri:0, instance:function.A_testClassCreate@55182842]" started-at="2026-11-25T12:54:38 IST" name="logOut" finished-at="2026-11-25T12:54:42 IST" duration-ms="3713" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Logout sucessfully.]]>
@@ -145,14 +232,14 @@
             </line>
           </reporter-output>
         </test-method> <!-- logOut -->
-        <test-method is-config="true" signature="AfterTest()[pri:0, instance:function.A_testClassCreate@55182842]" started-at="2026-11-18T15:41:36 IST" name="AfterTest" finished-at="2026-11-18T15:41:36 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="AfterTest()[pri:0, instance:function.A_testClassCreate@55182842]" started-at="2026-11-25T12:54:42 IST" name="AfterTest" finished-at="2026-11-25T12:54:42 IST" duration-ms="0" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Refresh the URL before successfully closing the browser.]]>
             </line>
           </reporter-output>
         </test-method> <!-- AfterTest -->
-        <test-method is-config="true" signature="AfterSute()[pri:0, instance:function.A_testClassCreate@55182842]" started-at="2026-11-18T15:41:36 IST" name="AfterSute" finished-at="2026-11-18T15:41:36 IST" duration-ms="275" status="PASS">
+        <test-method is-config="true" signature="AfterSute()[pri:0, instance:function.A_testClassCreate@55182842]" started-at="2026-11-25T12:54:42 IST" name="AfterSute" finished-at="2026-11-25T12:54:42 IST" duration-ms="418" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Browser close sucessfully.]]>
@@ -166,6 +253,6 @@
           </reporter-output>
         </test-method> <!-- AfterSute -->
       </class> <!-- function.A_testClassCreate -->
-    </test> <!-- Test(failed)(failed) -->
-  </suite> <!-- Failed suite [Failed suite [Suite]] -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

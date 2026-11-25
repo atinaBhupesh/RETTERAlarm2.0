@@ -549,7 +549,13 @@ public class S_AvailabilityRequest extends b_baseClass {
 
 		String actualTite = firstTitle.getText();
 
-		Assert.assertTrue(actualTite.contains(title), RED + "Station not found.");
+//		Assert.assertTrue(actualTite.contains(title), RED + "Station not found.");
+		
+		if (!actualTite.contains(title)) {
+
+			Assert.fail(RED + requestType + " Not added .");
+		}
+		
 
 		System.out.println(GREEN + requestType + " added successfully.");
 

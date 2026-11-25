@@ -116,7 +116,13 @@ public class Q_attribute extends b_baseClass {
 
 		String actualTite = firstTitle.getText();
 
-		Assert.assertTrue(actualTite.contains(title), RED + "Station not found.");
+//		Assert.assertTrue(actualTite.contains(title), RED + "Station not found.");
+		
+		if (!actualTite.contains(title)) {
+
+			Assert.fail(RED + " Attribute-" + title + " not added.");
+		}
+		
 
 		System.out.println(GREEN + " Attribute-" + title + " successfully.");
 	}
@@ -143,7 +149,13 @@ public class Q_attribute extends b_baseClass {
 
 		String actualTite = firstTitle.getText();
 
-		Assert.assertTrue(actualTite.contains(title), RED + "Station not found.");
+//		Assert.assertTrue(actualTite.contains(title), RED + "Station not found.");
+		
+		if (!actualTite.contains(title)) {
+
+			Assert.fail(RED + "New Attribute-" + title + " not created.");
+		}
+		
 
 		FileInputStream in = new FileInputStream(filePath);
 

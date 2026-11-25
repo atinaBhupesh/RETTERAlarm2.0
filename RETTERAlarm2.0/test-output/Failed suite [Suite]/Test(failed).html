@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test(failed)</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/3/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Nov 18 15:36:48 IST 2026</td>
+<td>Started on:</td><td>Wed Nov 25 11:04:34 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>101 seconds (101480 ms)</td>
+<tr><td>Total time:</td><td>82 seconds (82015 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,60 +76,24 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='function.A_testClassCreate.createMonitorInformationByAttributeWithAttachments()'><b>createMonitorInformationByAttributeWithAttachments</b><br>Test class: function.A_testClassCreate<br/>
-<a href="#Output-1457352442" onClick='toggleBox("Output-1457352442", this, "Show output", "Hide output");'>Show output</a>
+<td title='function.A_testClassCreate.createEventCategory()'><b>createEventCategory</b><br>Test class: function.A_testClassCreate<br/>
+<a href="#Output-318555935" onClick='toggleBox("Output-318555935", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1457352442" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1457352442">
+<a href="#Output-318555935" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-318555935">
  <br/>
-The process for creating a new monitor information using attributes has been initiated.<br/>
+The process for creating event category  has been initiated..<br/>
 </div>
 </td>
-<td><div><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=157.0.8103.79)
-Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.4.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [5758a4119e4f3cfaf1334f86def375b7, clearElement {id=f.EF67BD08ED532129AE9C5FE0FF1559E2.d.7654A42AF47D800961CB80E37F14FADE.e.736}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 157.0.8103.79, chrome: {chromedriverVersion: 157.0.8103.78 (4b3d0dabb825..., userDataDir: C:\Users\Bhupesh\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50059}, goog:processID: 15604, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50059/devtoo..., se:cdpVersion: 157.0.8103.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10...., webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (5758a4119e4f3cfaf1334f86def375b7)] -&gt; xpath: //input[@type=&apos;file&apos;]]
-Session ID: 5758a4119e4f3cfaf1334f86def375b7
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:129)
-	at function.L_Information.createMonitorInformationByAttributeWithAttachments(L_Information.java:2172)
-	at function.A_testClassCreate.createMonitorInformationByAttributeWithAttachments(A_testClassCreate.java:1551)
+<td><div><pre>java.lang.AssertionError: [31m✖ [0mBG_EventCatogery_25.11.2026_110441
+	at function.K_calendar.createEventCategory(K_calendar.java:687)
+	at function.A_testClassCreate.createEventCategory(A_testClassCreate.java:1207)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1457352442", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1457352442'><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=157.0.8103.79)
-Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.4.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [5758a4119e4f3cfaf1334f86def375b7, clearElement {id=f.EF67BD08ED532129AE9C5FE0FF1559E2.d.7654A42AF47D800961CB80E37F14FADE.e.736}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 157.0.8103.79, chrome: {chromedriverVersion: 157.0.8103.78 (4b3d0dabb825..., userDataDir: C:\Users\Bhupesh\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50059}, goog:processID: 15604, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50059/devtoo..., se:cdpVersion: 157.0.8103.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10...., webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (5758a4119e4f3cfaf1334f86def375b7)] -&gt; xpath: //input[@type=&apos;file&apos;]]
-Session ID: 5758a4119e4f3cfaf1334f86def375b7
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:129)
-	at function.L_Information.createMonitorInformationByAttributeWithAttachments(L_Information.java:2172)
-	at function.A_testClassCreate.createMonitorInformationByAttributeWithAttachments(A_testClassCreate.java:1551)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace318555935", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace318555935'><pre>java.lang.AssertionError: [31m✖ [0mBG_EventCatogery_25.11.2026_110441
+	at org.testng.Assert.fail(Assert.java:111)
+	at function.K_calendar.createEventCategory(K_calendar.java:687)
+	at function.A_testClassCreate.createEventCategory(A_testClassCreate.java:1207)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -157,69 +121,26 @@ Session ID: 5758a4119e4f3cfaf1334f86def375b7
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>33</td>
+<td>16</td>
 <td>function.A_testClassCreate@55182842</td></tr>
 <tr>
-<td title='function.A_testClassCreate.importEventWith1minReminder()'><b>importEventWith1minReminder</b><br>Test class: function.A_testClassCreate<br/>
-<a href="#Output-1552445522" onClick='toggleBox("Output-1552445522", this, "Show output", "Hide output");'>Show output</a>
+<td title='function.A_testClassCreate.sendMessageToChatGroupCreatedByResource()'><b>sendMessageToChatGroupCreatedByResource</b><br>Test class: function.A_testClassCreate<br/>
+<a href="#Output-1304065853" onClick='toggleBox("Output-1304065853", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1552445522" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1552445522">
+<a href="#Output-1304065853" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1304065853">
  <br/>
-The process of importing event with 1 minute reminder has started.<br/>
+The process of sending message to chat group by resource has started.<br/>
 </div>
 </td>
-<td><div><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=157.0.8103.79)
-Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.4.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [5758a4119e4f3cfaf1334f86def375b7, clickElement {id=f.EF67BD08ED532129AE9C5FE0FF1559E2.d.0B5CD0341FC3DF8EC630C4F09615101F.e.1210}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 157.0.8103.79, chrome: {chromedriverVersion: 157.0.8103.78 (4b3d0dabb825..., userDataDir: C:\Users\Bhupesh\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50059}, goog:processID: 15604, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50059/devtoo..., se:cdpVersion: 157.0.8103.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10...., webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (5758a4119e4f3cfaf1334f86def375b7)] -&gt; xpath: //span[text()=&quot;Close&quot;]]
-Session ID: 5758a4119e4f3cfaf1334f86def375b7
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy22.click(Unknown Source)
-	at function.K_calendar.importEventWith1minReminder(K_calendar.java:358)
-	at function.A_testClassCreate.importEventWith1minReminder(A_testClassCreate.java:650)
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;String.contains(java.lang.CharSequence)&quot; because &quot;this.ChatGroupByAlarmLoopMS&quot; is null
+	at function.M_conversations.sendMessageToChatGroupCreatedByResource(M_conversations.java:207)
+	at function.A_testClassCreate.sendMessageToChatGroupCreatedByResource(A_testClassCreate.java:987)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1552445522", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1552445522'><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=157.0.8103.79)
-Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.4.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [5758a4119e4f3cfaf1334f86def375b7, clickElement {id=f.EF67BD08ED532129AE9C5FE0FF1559E2.d.0B5CD0341FC3DF8EC630C4F09615101F.e.1210}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 157.0.8103.79, chrome: {chromedriverVersion: 157.0.8103.78 (4b3d0dabb825..., userDataDir: C:\Users\Bhupesh\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50059}, goog:processID: 15604, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50059/devtoo..., se:cdpVersion: 157.0.8103.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10...., webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (5758a4119e4f3cfaf1334f86def375b7)] -&gt; xpath: //span[text()=&quot;Close&quot;]]
-Session ID: 5758a4119e4f3cfaf1334f86def375b7
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy22.click(Unknown Source)
-	at function.K_calendar.importEventWith1minReminder(K_calendar.java:358)
-	at function.A_testClassCreate.importEventWith1minReminder(A_testClassCreate.java:650)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1304065853", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1304065853'><pre>java.lang.NullPointerException: Cannot invoke &quot;String.contains(java.lang.CharSequence)&quot; because &quot;this.ChatGroupByAlarmLoopMS&quot; is null
+	at function.M_conversations.sendMessageToChatGroupCreatedByResource(M_conversations.java:207)
+	at function.A_testClassCreate.sendMessageToChatGroupCreatedByResource(A_testClassCreate.java:987)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -247,7 +168,54 @@ Session ID: 5758a4119e4f3cfaf1334f86def375b7
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>32</td>
+<td>7</td>
+<td>function.A_testClassCreate@55182842</td></tr>
+<tr>
+<td title='function.A_testClassCreate.sendMessageToChatGroupCreatedByAttribute()'><b>sendMessageToChatGroupCreatedByAttribute</b><br>Test class: function.A_testClassCreate<br/>
+<a href="#Output-2045143855" onClick='toggleBox("Output-2045143855", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2045143855" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2045143855">
+ <br/>
+The process of sending message to chat group by attribute has started.<br/>
+</div>
+</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;String.contains(java.lang.CharSequence)&quot; because &quot;this.ChatGroupByAlarmLoopMS&quot; is null
+	at function.M_conversations.sendMessageToChatGroupCreatedByAttribute(M_conversations.java:255)
+	at function.A_testClassCreate.sendMessageToChatGroupCreatedByAttribute(A_testClassCreate.java:1001)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2045143855", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2045143855'><pre>java.lang.NullPointerException: Cannot invoke &quot;String.contains(java.lang.CharSequence)&quot; because &quot;this.ChatGroupByAlarmLoopMS&quot; is null
+	at function.M_conversations.sendMessageToChatGroupCreatedByAttribute(M_conversations.java:255)
+	at function.A_testClassCreate.sendMessageToChatGroupCreatedByAttribute(A_testClassCreate.java:1001)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>6</td>
 <td>function.A_testClassCreate@55182842</td></tr>
 </table><p>
 </body>

@@ -107,7 +107,12 @@ public class M_conversations extends b_baseClass {
 //		System.out.println(expChatGroupName);
 //		System.out.println(ChatGroupByFireFighterMS);
 
-		Assert.assertTrue(ChatGroupByFireFighterMS.contains(expChatGroupName), RED + "Message not sent.");
+//		Assert.assertTrue(ChatGroupByFireFighterMS.contains(expChatGroupName), RED + "Message not sent.");
+		if (!ChatGroupByFireFighterMS.contains(expChatGroupName)) {
+
+			Assert.fail(RED + ChatGroupByFireFighterMS);
+		}
+		
 		System.out.println(GREEN + expChatGroupName + " chat group open correctly.");
 		Thread.sleep(1000);
 
@@ -122,7 +127,12 @@ public class M_conversations extends b_baseClass {
 		Thread.sleep(1000);
 		String expTextmessage = textMessage.getText();
 
-		Assert.assertTrue(messageText.contains(expTextmessage), RED + "Message not sent.");
+//		Assert.assertTrue(messageText.contains(expTextmessage), RED + "Message not sent.");
+		
+		if (!messageText.contains(expTextmessage)) {
+
+			Assert.fail(RED + messageText);
+		}
 
 		System.out.println(GREEN + messageText + " sent successfuly ");
 		Thread.sleep(1000);
@@ -145,7 +155,12 @@ public class M_conversations extends b_baseClass {
 
 		// check group is open correctly or not
 		String expChatGroupName = chatGroupTitle.getText();
-		Assert.assertTrue(ChatGroupByAlarmLoopMS.contains(expChatGroupName), RED + "Message not sent.");
+//		Assert.assertTrue(ChatGroupByAlarmLoopMS.contains(expChatGroupName), RED + "Message not sent.");
+		
+		if (!ChatGroupByAlarmLoopMS.contains(expChatGroupName)) {
+
+			Assert.fail(RED + ChatGroupByAlarmLoopMS);
+		}
 		System.out.println(GREEN + expChatGroupName + " chat group open correctly.");
 		Thread.sleep(1000);
 
@@ -162,7 +177,11 @@ public class M_conversations extends b_baseClass {
 		Thread.sleep(1000);
 		String expTextmessage = textMessage.getText();
 
-		Assert.assertTrue(messageText.contains(expTextmessage), RED + "Message not sent.");
+//		Assert.assertTrue(messageText.contains(expTextmessage), RED + "Message not sent.");
+		if (!ChatGroupByAlarmLoopMS.contains(expChatGroupName)) {
+
+			Assert.fail(RED + ChatGroupByAlarmLoopMS);
+		}
 
 		System.out.println(GREEN + messageText + " sent successfuly ");
 		Thread.sleep(1000);
@@ -184,7 +203,11 @@ public class M_conversations extends b_baseClass {
 
 		// check group is open correctly or not
 		String expChatGroupName = chatGroupTitle.getText();
-		Assert.assertTrue(ChatGroupByResourceMS.contains(expChatGroupName), RED + "Message not sent.");
+//		Assert.assertTrue(ChatGroupByResourceMS.contains(expChatGroupName), RED + "Message not sent.");
+		if (!ChatGroupByAlarmLoopMS.contains(expChatGroupName)) {
+
+			Assert.fail(RED + ChatGroupByAlarmLoopMS);
+		}
 		System.out.println(GREEN + expChatGroupName + " chat group open correctly.");
 		Thread.sleep(1000);
 
@@ -200,7 +223,11 @@ public class M_conversations extends b_baseClass {
 		Thread.sleep(1000);
 		String expTextmessage = textMessage.getText();
 
-		Assert.assertTrue(messageText.contains(expTextmessage), RED + "Message not sent.");
+//		Assert.assertTrue(messageText.contains(expTextmessage), RED + "Message not sent.");
+		if (!ChatGroupByAlarmLoopMS.contains(expChatGroupName)) {
+
+			Assert.fail(RED + ChatGroupByAlarmLoopMS);
+		}
 
 		System.out.println(GREEN + messageText + " sent successfuly ");
 		Thread.sleep(1000);
@@ -224,7 +251,11 @@ public class M_conversations extends b_baseClass {
 		// check group is open correctly or not
 		String expChatGroupName = chatGroupTitle.getText();
 
-		Assert.assertTrue(ChatGroupByAttributeMS.contains(expChatGroupName), RED + "Message not sent.");
+//		Assert.assertTrue(ChatGroupByAttributeMS.contains(expChatGroupName), RED + "Message not sent.");
+		if (!ChatGroupByAlarmLoopMS.contains(expChatGroupName)) {
+
+			Assert.fail(RED + ChatGroupByAlarmLoopMS);
+		}
 		System.out.println(GREEN + expChatGroupName + " chat group open correctly.");
 		Thread.sleep(1000);
 
@@ -242,7 +273,11 @@ public class M_conversations extends b_baseClass {
 		Thread.sleep(1000);
 		String expTextmessage = textMessage.getText();
 
-		Assert.assertTrue(messageText.contains(expTextmessage), RED + "Message not sent.");
+//		Assert.assertTrue(messageText.contains(expTextmessage), RED + "Message not sent.");
+		if (!ChatGroupByAlarmLoopMS.contains(expChatGroupName)) {
+
+			Assert.fail(RED + ChatGroupByAlarmLoopMS);
+		}
 
 		System.out.println(GREEN + messageText + " sent successfuly ");
 		Thread.sleep(1000);
@@ -315,7 +350,11 @@ public class M_conversations extends b_baseClass {
 
 		String expectedTitle = firstItemTitle.getText();
 
-		Assert.assertTrue(title.contains(expectedTitle), RED + "Chat group not added.");
+//		Assert.assertTrue(title.contains(expectedTitle), RED + "Chat group not added.");
+		if (!title.contains(expectedTitle)) {
+
+			Assert.fail(RED + title);
+		}
 
 		System.out.println(GREEN + title);
 
@@ -388,7 +427,12 @@ public class M_conversations extends b_baseClass {
 
 		String expectedTitle = firstItemTitle.getText();
 
-		Assert.assertTrue(title.contains(expectedTitle), RED + "Chat group not added.");
+//		Assert.assertTrue(title.contains(expectedTitle), RED + "Chat group not added.");
+		
+		if (!title.contains(expectedTitle)) {
+
+			Assert.fail(RED + title);
+		}
 
 		System.out.println(GREEN + title);
 
@@ -462,6 +506,11 @@ public class M_conversations extends b_baseClass {
 		String expectedTitle = firstItemTitle.getText();
 
 		Assert.assertTrue(title.contains(expectedTitle), RED + "Chat group not added.");
+		
+		if (!title.contains(expectedTitle)) {
+
+			Assert.fail(RED + title);
+		}
 
 		System.out.println(GREEN + title);
 
@@ -540,6 +589,11 @@ public class M_conversations extends b_baseClass {
 		String expectedTitle = firstItemTitle.getText();
 
 		Assert.assertTrue(title.contains(expectedTitle), RED + "Chat group not added.");
+		
+		if (!title.contains(expectedTitle)) {
+
+			Assert.fail(RED + title);
+		}
 
 		System.out.println(GREEN + title);
 
