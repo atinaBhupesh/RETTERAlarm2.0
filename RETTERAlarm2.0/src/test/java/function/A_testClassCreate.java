@@ -1751,7 +1751,7 @@ public class A_testClassCreate extends b_baseClass {
 	public void CheckApiAlarmEscalationFunctionality() throws Throwable
 
 	{
-		Reporter.log(" ", true);
+  		Reporter.log(" ", true);
 		Reporter.log("The process of checking escaltion for api alarm is started.", true);
 		ma.commonForManualAlarm(driver, deptN, branchName);
 		ma.CheckApiAlarmEscalationFunctionality(driver, apiAlarmNameForEsclationAlarm, branchName);

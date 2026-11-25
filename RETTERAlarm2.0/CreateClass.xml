@@ -8,8 +8,7 @@
 			<methods>
 			
 			
-	<include name="testAlarm_recursiv_daily_Resource" />
-				<include name="testAlarm_recursiv_weekly_users" />
+	<include name="CheckManualAlarmEscalationFunctionality" />
 
 				
 

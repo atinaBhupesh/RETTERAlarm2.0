@@ -6,12 +6,14 @@
       <class name="function.A_testClassCreate">
         <methods>
           <include name="AfterTest"/>
-          <include name="sendMessageToApiEsclationAlarm"/>
+          <include name="createEventCategory"/>
           <include name="BeforeSuite"/>
+          <include name="sendMessageToChatGroupCreatedByResource"/>
           <include name="backToHomePage2"/>
           <include name="BeforeTest"/>
           <include name="backToHomePage"/>
           <include name="logOut"/>
+          <include name="sendMessageToChatGroupCreatedByAttribute"/>
           <include name="AfterSute"/>
           <include name="createObject"/>
         </methods>

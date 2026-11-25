@@ -2395,30 +2395,39 @@ public class F_manualTestAlarm extends b_baseClass {
 		switch (branchName) {
 		case "1":
 			try {
+				act.moveToElement((jonas2)).click().build().perform();
+				Thread.sleep(2000);
 				if (jonas2.isDisplayed()) {
 					System.out.println(GREEN + "Extended user visible,Alarm Extended successfully.");
 				}
 			} catch (Exception e) {
 				System.out.println(RED + "User not found means alarm not extended.");
+				
+				
 			}
 			break;
 		case "1.1":
 			try {
+				act.moveToElement((jonas2)).click().build().perform();
+				Thread.sleep(2000);
 				if (jonas2.isDisplayed()) {
 					System.out.println(GREEN + "Extended user visible,Alarm Extended successfully.");
 				}
 			} catch (Exception e) {
 				System.out.println(RED + "User not found means alarm not extended.");
+				
 			}
 			break;
 
 		case "2":
 			try {
+				act.moveToElement((bhupeshTest)).click().build().perform();
+				Thread.sleep(2000);
 				if (bhupeshTest.isDisplayed()) {
 					System.out.println(GREEN + "Extended user visible,Alarm Extended successfully.");
 				}
 			} catch (Exception e) {
-				System.out.println(RED + "User not found means alarm not extended.");
+	 			System.out.println(RED + "User not found means alarm not extended.");
 			}
 			break;
 
