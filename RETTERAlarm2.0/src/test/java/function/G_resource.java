@@ -102,7 +102,8 @@ public class G_resource extends b_baseClass {
 		if (createNewButton.isDisplayed()) {
 			System.out.println(GREEN + "Create New button for resource is visible");
 		} else {
-			Assert.fail(RED + "Create New button is NOT displayed");
+			System.out.println(RED + "Create New button is NOT displayed");
+			Assert.fail();
 		}
 
 	}
@@ -234,8 +235,10 @@ public class G_resource extends b_baseClass {
 
 //		Assert.assertTrue(title.contains(expectedTitle), RED + " Ne Resource not added.");
 		if (!title.contains(expectedTitle)) {
-
-			Assert.fail(RED + title);
+			
+			System.out.println(RED + title);
+			Assert.fail();
+		
 		}
 
 		
@@ -350,7 +353,8 @@ public class G_resource extends b_baseClass {
 		
 		if (!title.contains(expectedTitle)) {
 
-			Assert.fail(RED + title);
+			System.out.println(RED + title);
+			Assert.fail();
 		}
 
 
@@ -465,7 +469,8 @@ public class G_resource extends b_baseClass {
 //		Assert.assertTrue(title.contains(expectedTitle), RED + " Ne Resource not added.");
 		if (!title.contains(expectedTitle)) {
 
-			Assert.fail(RED + title);
+			System.out.println(RED + title);
+			Assert.fail();
 		}
 
 

@@ -11,10 +11,10 @@
       <![CDATA[ ]]>
     </line>
     <line>
-      <![CDATA[The process of checking escaltion for manual alarm is started.]]>
+      <![CDATA[The process of sending message to chat group by resource has started.]]>
     </line>
     <line>
-      <![CDATA[[32m✔ [0m[32m✔ [0mThe process of checking escaltion for manual alarm is complete.]]>
+      <![CDATA[[32m✔ [0m[32m✔ [0mThe process of sending message to chat group by resource is complete.]]>
     </line>
     <line>
       <![CDATA[ ]]>
@@ -38,61 +38,61 @@
       <![CDATA[Good to see you again.]]>
     </line>
   </reporter-output>
-  <suite started-at="2026-11-25T16:40:39 IST" name="Suite" finished-at="2026-11-25T16:41:40 IST" duration-ms="61505">
+  <suite started-at="2026-11-26T13:46:56 IST" name="Failed suite [Failed suite [Failed suite [Failed suite [Failed suite [Failed suite [Failed suite [Failed suite [Failed suite [Suite]]]]]]]]]" finished-at="2026-11-26T13:47:39 IST" duration-ms="43058">
     <groups>
     </groups>
-    <test started-at="2026-11-25T16:40:39 IST" name="Test" finished-at="2026-11-25T16:41:40 IST" duration-ms="61505">
+    <test started-at="2026-11-26T13:46:56 IST" name="Test(failed)(failed)(failed)(failed)(failed)(failed)(failed)(failed)(failed)" finished-at="2026-11-26T13:47:39 IST" duration-ms="43058">
       <class name="function.A_testClassCreate">
-        <test-method is-config="true" signature="BeforeSuite()[pri:0, instance:function.A_testClassCreate@55182842]" started-at="2026-11-25T16:40:32 IST" name="BeforeSuite" finished-at="2026-11-25T16:40:39 IST" duration-ms="7037" status="PASS">
+        <test-method is-config="true" signature="BeforeSuite()[pri:0, instance:function.A_testClassCreate@55182842]" started-at="2026-11-26T13:46:50 IST" name="BeforeSuite" finished-at="2026-11-26T13:46:56 IST" duration-ms="6070" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Well come to RETTERAlarm Live branch-Bhupesh Department]]>
             </line>
           </reporter-output>
         </test-method> <!-- BeforeSuite -->
-        <test-method is-config="true" signature="BeforeTest()[pri:0, instance:function.A_testClassCreate@55182842]" started-at="2026-11-25T16:40:39 IST" name="BeforeTest" finished-at="2026-11-25T16:40:46 IST" duration-ms="7311" status="PASS">
+        <test-method is-config="true" signature="BeforeTest()[pri:0, instance:function.A_testClassCreate@55182842]" started-at="2026-11-26T13:46:56 IST" name="BeforeTest" finished-at="2026-11-26T13:47:03 IST" duration-ms="6957" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Logged in user-bhupesh+live_bhdeptuser@atinatechnology.in]]>
             </line>
           </reporter-output>
         </test-method> <!-- BeforeTest -->
-        <test-method is-config="true" signature="createObject()[pri:0, instance:function.A_testClassCreate@55182842]" started-at="2026-11-25T16:40:46 IST" name="createObject" finished-at="2026-11-25T16:40:46 IST" duration-ms="12" status="PASS">
+        <test-method is-config="true" signature="createObject()[pri:0, instance:function.A_testClassCreate@55182842]" started-at="2026-11-26T13:47:03 IST" name="createObject" finished-at="2026-11-26T13:47:03 IST" duration-ms="7" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createObject -->
-        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@55182842]" started-at="2026-11-25T16:40:46 IST" name="backToHomePage" finished-at="2026-11-25T16:40:48 IST" duration-ms="1872" status="PASS">
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:function.A_testClassCreate@55182842]" started-at="2026-11-26T13:47:03 IST" name="backToHomePage" finished-at="2026-11-26T13:47:05 IST" duration-ms="1753" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backToHomePage -->
-        <test-method signature="CheckManualAlarmEscalationFunctionality()[pri:0, instance:function.A_testClassCreate@55182842]" started-at="2026-11-25T16:40:48 IST" name="CheckManualAlarmEscalationFunctionality" finished-at="2026-11-25T16:41:25 IST" duration-ms="37089" status="PASS">
+        <test-method signature="sendMessageToChatGroupCreatedByResource()[pri:0, instance:function.A_testClassCreate@55182842]" started-at="2026-11-26T13:47:05 IST" name="sendMessageToChatGroupCreatedByResource" finished-at="2026-11-26T13:47:24 IST" duration-ms="19120" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[ ]]>
             </line>
             <line>
-              <![CDATA[The process of checking escaltion for manual alarm is started.]]>
+              <![CDATA[The process of sending message to chat group by resource has started.]]>
             </line>
             <line>
-              <![CDATA[[32m✔ [0m[32m✔ [0mThe process of checking escaltion for manual alarm is complete.]]>
+              <![CDATA[[32m✔ [0m[32m✔ [0mThe process of sending message to chat group by resource is complete.]]>
             </line>
             <line>
               <![CDATA[ ]]>
             </line>
           </reporter-output>
-        </test-method> <!-- CheckManualAlarmEscalationFunctionality -->
-        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassCreate@55182842]" started-at="2026-11-25T16:41:25 IST" name="backToHomePage2" finished-at="2026-11-25T16:41:37 IST" duration-ms="11398" status="PASS">
+        </test-method> <!-- sendMessageToChatGroupCreatedByResource -->
+        <test-method is-config="true" signature="backToHomePage2(org.testng.ITestResult)[pri:0, instance:function.A_testClassCreate@55182842]" started-at="2026-11-26T13:47:24 IST" name="backToHomePage2" finished-at="2026-11-26T13:47:36 IST" duration-ms="11259" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=CheckManualAlarmEscalationFunctionality status=SUCCESS method=A_testClassCreate.CheckManualAlarmEscalationFunctionality()[pri:0, instance:function.A_testClassCreate@55182842]]]]>
+                <![CDATA[[TestResult name=sendMessageToChatGroupCreatedByResource status=SUCCESS method=A_testClassCreate.sendMessageToChatGroupCreatedByResource()[pri:0, instance:function.A_testClassCreate@55182842]]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backToHomePage2 -->
-        <test-method is-config="true" signature="logOut()[pri:0, instance:function.A_testClassCreate@55182842]" started-at="2026-11-25T16:41:37 IST" name="logOut" finished-at="2026-11-25T16:41:40 IST" duration-ms="3796" status="PASS">
+        <test-method is-config="true" signature="logOut()[pri:0, instance:function.A_testClassCreate@55182842]" started-at="2026-11-26T13:47:36 IST" name="logOut" finished-at="2026-11-26T13:47:39 IST" duration-ms="3935" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Logout sucessfully.]]>
@@ -102,14 +102,14 @@
             </line>
           </reporter-output>
         </test-method> <!-- logOut -->
-        <test-method is-config="true" signature="AfterTest()[pri:0, instance:function.A_testClassCreate@55182842]" started-at="2026-11-25T16:41:40 IST" name="AfterTest" finished-at="2026-11-25T16:41:40 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="AfterTest()[pri:0, instance:function.A_testClassCreate@55182842]" started-at="2026-11-26T13:47:39 IST" name="AfterTest" finished-at="2026-11-26T13:47:39 IST" duration-ms="0" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Refresh the URL before successfully closing the browser.]]>
             </line>
           </reporter-output>
         </test-method> <!-- AfterTest -->
-        <test-method is-config="true" signature="AfterSute()[pri:0, instance:function.A_testClassCreate@55182842]" started-at="2026-11-25T16:41:40 IST" name="AfterSute" finished-at="2026-11-25T16:41:41 IST" duration-ms="254" status="PASS">
+        <test-method is-config="true" signature="AfterSute()[pri:0, instance:function.A_testClassCreate@55182842]" started-at="2026-11-26T13:47:40 IST" name="AfterSute" finished-at="2026-11-26T13:47:40 IST" duration-ms="235" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Browser close sucessfully.]]>
@@ -123,6 +123,6 @@
           </reporter-output>
         </test-method> <!-- AfterSute -->
       </class> <!-- function.A_testClassCreate -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Test(failed)(failed)(failed)(failed)(failed)(failed)(failed)(failed)(failed) -->
+  </suite> <!-- Failed suite [Failed suite [Failed suite [Failed suite [Failed suite [Failed suite [Failed suite [Failed suite [Failed suite [Suite]]]]]]]]] -->
 </testng-results>

@@ -6,9 +6,7 @@
       <class name="function.A_testClassCreate">
         <methods>
           <include name="AfterTest"/>
-          <include name="createEventCategory"/>
           <include name="BeforeSuite"/>
-          <include name="sendMessageToChatGroupCreatedByResource"/>
           <include name="backToHomePage2"/>
           <include name="BeforeTest"/>
           <include name="backToHomePage"/>

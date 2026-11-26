@@ -5,25 +5,14 @@
     <classes>
       <class name="function.A_testClassCreate">
         <methods>
-          <include name="logOut"/>
-          <include name="AfterSute"/>
-          <include name="manualaByAttributeExtend1To01StEscResourceFrom02"/>
-          <include name="createAlarmByNewlyAddedTemplateFromTemplateModule"/>
-          <include name="manualAlarmByOldEsclationTemplateFromSt02ToSt01"/>
           <include name="AfterTest"/>
-          <include name="manualAlarmByResourceMsLP"/>
-          <include name="CheckManualAlarmEscalationFunctionality"/>
-          <include name="createNewResource"/>
           <include name="BeforeSuite"/>
-          <include name="manualaByAttributeSingleStation"/>
+          <include name="sendMessageToChatGroupCreatedByResource"/>
           <include name="backToHomePage2"/>
-          <include name="CheckApiAlarmEscalationFunctionality"/>
           <include name="BeforeTest"/>
           <include name="backToHomePage"/>
-          <include name="manualAlarmByNewEscResource"/>
-          <include name="manualAlarmByUersMs"/>
-          <include name="sendMessageToManualAlarmUser"/>
-          <include name="nextStage"/>
+          <include name="logOut"/>
+          <include name="AfterSute"/>
           <include name="createObject"/>
         </methods>
       </class> <!-- function.A_testClassCreate -->

@@ -7,11 +7,12 @@
         <methods>
           <include name="AfterTest"/>
           <include name="BeforeSuite"/>
+          <include name="sendMessageToChatGroupCreatedByResource"/>
           <include name="backToHomePage2"/>
           <include name="BeforeTest"/>
-          <include name="logOut"/>
           <include name="backToHomePage"/>
-          <include name="manualAlarmByUersMs"/>
+          <include name="logOut"/>
+          <include name="sendMessageToChatGroupCreatedByAttribute"/>
           <include name="AfterSute"/>
           <include name="createObject"/>
         </methods>

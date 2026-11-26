@@ -128,7 +128,8 @@ public class P_monitors extends b_baseClass {
 //		Assert.assertTrue(actualTite.contains(title), RED + "Station not found.");
 		if (!actualTite.contains(title)) {
 
-			Assert.fail(RED +  "New overview monitor not edited .");
+			System.out.println(RED + "New overview monitor not edited .");
+			Assert.fail();
 		}
 
 		System.out.println(GREEN + "New overview monitor edited successfully.");
@@ -216,7 +217,8 @@ public class P_monitors extends b_baseClass {
 		
 		if (!actualTite.contains(title)) {
 
-			Assert.fail(RED + "New overview monitor not added.");
+			System.out.println(RED + "New overview monitor not added.");
+			Assert.fail();
 		}
 		
 
@@ -290,7 +292,8 @@ public class P_monitors extends b_baseClass {
 		
 		if (!actualTite.contains(newName)) {
 
-			Assert.fail(RED + "New station monitor not edited.");
+			System.out.println(RED + "New station monitor not edited.");
+			Assert.fail();
 		}
 
 		System.out.println(GREEN + "New station monitor edited successfully.");
@@ -366,7 +369,8 @@ public class P_monitors extends b_baseClass {
 //		Assert.assertTrue(actualTite.contains(title), RED + "Station not found.");
 		if (!actualTite.contains(title)) {
 
-			Assert.fail(RED + "New station monitor not added.");
+			System.out.println(RED + "New station monitor not added.");
+			Assert.fail();
 		}
 		
 		System.out.println(GREEN + "New station monitor added successfully.");

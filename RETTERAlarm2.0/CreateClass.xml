@@ -8,7 +8,7 @@
 			<methods>
 			
 			
-	<include name="CheckManualAlarmEscalationFunctionality" />
+	<include name="sendMessageToChatGroupCreatedByAttribute" />
 
 				
 

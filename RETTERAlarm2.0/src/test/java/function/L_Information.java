@@ -342,7 +342,8 @@ public class L_Information extends b_baseClass {
 //		Assert.assertTrue(title.contains(expectedTitle), RED + "Info NOT added because title is not available");
 		if (!title.contains(expectedTitle)) {
 
-			Assert.fail(RED + title);
+			System.out.println(RED + title);
+			Assert.fail();
 		}
 		
 		
@@ -520,7 +521,8 @@ public class L_Information extends b_baseClass {
 		
 		if (!title.contains(expectedTitle)) {
 
-			Assert.fail(RED + title);
+			System.out.println(RED + title);
+			Assert.fail();
 		}
 
 		System.out.println(GREEN + title + GREEN);
@@ -531,7 +533,8 @@ public class L_Information extends b_baseClass {
 		if (createNewButton.isDisplayed()) {
 			System.out.println(GREEN + "Create New button for information is visible");
 		} else {
-			Assert.fail(RED + "Create New button is NOT displayed");
+			System.out.println(RED + "Create New button is NOT displayed");
+			Assert.fail();
 		}
 
 	}
@@ -830,7 +833,8 @@ public class L_Information extends b_baseClass {
 		
 		if (!title.contains(expectedTitle)) {
 
-			Assert.fail(RED + title);
+			System.out.println(RED + title);
+			Assert.fail();
 		}
 
 		System.out.println(GREEN + title + GREEN);
@@ -865,7 +869,8 @@ public class L_Information extends b_baseClass {
 		
 		if (!messageText.contains(expTextmessage)) {
 
-			Assert.fail(RED + messageText);
+			System.out.println(RED + messageText);
+			Assert.fail();
 		}
 
 		System.out.println(GREEN + messageText + " sent successfuly ");
@@ -965,7 +970,8 @@ public class L_Information extends b_baseClass {
 		
 		if (!title.contains(expectedTitle)) {
 
-			Assert.fail(RED + title);
+			System.out.println(RED + title);
+			Assert.fail();
 		}
 
 		System.out.println(GREEN + title);
@@ -1159,7 +1165,8 @@ public class L_Information extends b_baseClass {
 		
 		if (!title.contains(expectedTitle)) {
 
-			Assert.fail(RED + title);
+			System.out.println(RED + title);
+			Assert.fail();
 		}
 
 		System.out.println(GREEN + title);
@@ -1322,7 +1329,8 @@ public class L_Information extends b_baseClass {
 		
 		if (!title.contains(expectedTitle)) {
 
-			Assert.fail(RED + title);
+			System.out.println(RED + title);
+			Assert.fail();
 		}
 
 		System.out.println(GREEN + title);
@@ -1487,7 +1495,8 @@ public class L_Information extends b_baseClass {
 //		Assert.assertTrue(title.contains(expectedTitle), RED + "Info NOT added because title is not available");
 		if (!title.contains(expectedTitle)) {
 
-			Assert.fail(RED + title);
+			System.out.println(RED + title);
+			Assert.fail();
 		}
 
 		System.out.println(GREEN + title);
@@ -1677,7 +1686,8 @@ public class L_Information extends b_baseClass {
 //		Assert.assertTrue(title.contains(expectedTitle), RED + "Info NOT added because title is not available");
 		if (!title.contains(expectedTitle)) {
 
-			Assert.fail(RED + title);
+			System.out.println(RED + title);
+			Assert.fail();
 		}
 
 		System.out.println(GREEN + title + " from -" + germanyTimeAfter5MinHH + ":" + germanyTimeAfter5MinMM + " To "
@@ -1833,7 +1843,8 @@ public class L_Information extends b_baseClass {
 		
 		if (!title.contains(expectedTitle)) {
 
-			Assert.fail(RED + title);
+			System.out.println(RED + title);
+			Assert.fail();
 		}
 
 		System.out.println(GREEN + title + " from -" + germanyTimeAfter5MinHH + ":" + germanyTimeAfter5MinMM + " To "
@@ -2001,7 +2012,8 @@ public class L_Information extends b_baseClass {
 		
 		if (!title.contains(expectedTitle)) {
 
-			Assert.fail(RED + title);
+			System.out.println(RED + title);
+			Assert.fail();
 		}
 		
 
@@ -2172,7 +2184,8 @@ public class L_Information extends b_baseClass {
 		
 		if (!title.contains(expectedTitle)) {
 
-			Assert.fail(RED + title);
+			System.out.println(RED + title);
+			Assert.fail();
 		}
 
 		System.out.println(GREEN + title + " from -" + germanyTimeAfter5MinHH + ":" + germanyTimeAfter5MinMM + " To "
@@ -2191,7 +2204,7 @@ public class L_Information extends b_baseClass {
 		Thread.sleep(2000);
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("document.body.style.zoom='70%'");
+		
 
 		StationField.click();
 		act.sendKeys(st01N).perform();
@@ -2220,11 +2233,15 @@ public class L_Information extends b_baseClass {
 
 		InfoDescriptions.click();
 		Thread.sleep(1000);
+		
+	
 
 		act.sendKeys("Checking Monitor information by Attribute on " + gTodaysDate + "_" + gtimeHHMMSS + " from -"
 				+ germanyTimeAfter5MinHH + ":" + germanyTimeAfter5MinMM + " To " + germanyTimeAfter20MinHH + ":"
 				+ germanyTimeAfter20MinMM).perform();
 		Thread.sleep(500);
+		
+		act.moveToElement((userTypeAttribute)).build().perform();
 
 		for (String file : attachFiles) {
 
@@ -2363,7 +2380,7 @@ public class L_Information extends b_baseClass {
 		}
 
 		Thread.sleep(2000);
-		js.executeScript("document.body.style.zoom='100%'");
+	
 
 		String expectedTitle = firstInfoTitle.getText();
 
@@ -2373,7 +2390,8 @@ public class L_Information extends b_baseClass {
 
 		if (!title.contains(expectedTitle)) {
 
-			Assert.fail(RED + title);
+			System.out.println(RED + title);
+			Assert.fail();
 		}
 		System.out.println(GREEN + title + " from -" + germanyTimeAfter5MinHH + ":" + germanyTimeAfter5MinMM + " To "
 				+ germanyTimeAfter20MinHH + ":" + germanyTimeAfter20MinMM);
@@ -2687,8 +2705,9 @@ public class L_Information extends b_baseClass {
 		
 		if (!title.contains(expectedTitle)) {
 
-			Assert.fail(RED + title);
-		}
+			System.out.println(RED + title);
+			Assert.fail();
+			}
 
 		System.out.println(GREEN + title + " from -" + germanyTimeAfter5MinHH + ":" + germanyTimeAfter5MinMM + " To "
 				+ germanyTimeAfter20MinHH + ":" + germanyTimeAfter20MinMM);

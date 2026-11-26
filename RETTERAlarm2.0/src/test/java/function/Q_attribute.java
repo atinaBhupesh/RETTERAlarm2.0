@@ -120,7 +120,9 @@ public class Q_attribute extends b_baseClass {
 		
 		if (!actualTite.contains(title)) {
 
-			Assert.fail(RED + " Attribute-" + title + " not added.");
+			
+			System.out.println(RED + " Attribute-" + title + " not added.");
+			Assert.fail();
 		}
 		
 
@@ -153,7 +155,8 @@ public class Q_attribute extends b_baseClass {
 		
 		if (!actualTite.contains(title)) {
 
-			Assert.fail(RED + "New Attribute-" + title + " not created.");
+			System.out.println(RED + "New Attribute-" + title + " not created.");
+			Assert.fail();
 		}
 		
 

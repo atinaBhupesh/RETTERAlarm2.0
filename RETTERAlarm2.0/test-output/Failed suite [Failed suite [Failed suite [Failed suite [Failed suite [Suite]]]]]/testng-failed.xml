@@ -5,17 +5,16 @@
     <classes>
       <class name="function.A_testClassCreate">
         <methods>
-          <include name="editOverviewMonitor"/>
           <include name="AfterTest"/>
-          <include name="editStationMonitor"/>
+          <include name="createEventCategory"/>
           <include name="BeforeSuite"/>
+          <include name="sendMessageToChatGroupCreatedByResource"/>
           <include name="backToHomePage2"/>
           <include name="BeforeTest"/>
           <include name="backToHomePage"/>
           <include name="logOut"/>
-          <include name="addOverviewMonitor"/>
+          <include name="sendMessageToChatGroupCreatedByAttribute"/>
           <include name="AfterSute"/>
-          <include name="addStationMonitor"/>
           <include name="createObject"/>
         </methods>
       </class> <!-- function.A_testClassCreate -->

@@ -130,7 +130,8 @@ public class O_stationModule extends b_baseClass {
 //		Assert.assertTrue(actualTite.contains(title), RED + "Station not found.");
 		if (!actualTite.contains(title)) {
 
-			Assert.fail(RED + "Station not found.");
+			System.out.println(RED + "Station not found.");
+			Assert.fail();
 		}
  
 		System.out.println(GREEN + "New station added successfully.");
@@ -190,7 +191,8 @@ public class O_stationModule extends b_baseClass {
 		
 		if (!actualTite.contains(title)) {
 
-			Assert.fail(RED + "Station not found.");
+			System.out.println(RED + "Station not found.");
+			Assert.fail();
 		}
 
 		System.out.println(GREEN + "station updated successfully.");

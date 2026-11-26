@@ -320,7 +320,8 @@ public class N_users extends b_baseClass {
 //		Assert.assertTrue(expectedFirstName.contains(firstName), RED + "Station not found.");
 		if (!expectedFirstName.contains(firstName)) {
 
-			Assert.fail(RED + "First name not match");
+			System.out.println(RED + "First name not match");
+			Assert.fail();
 		}
 		
 		
@@ -330,7 +331,8 @@ public class N_users extends b_baseClass {
 		
 		if (!expectedLasttName.contains(lastName)) {
 
-			Assert.fail(RED + "Last name not match");
+			System.out.println(RED + "Last name not match");
+			Assert.fail();
 		}
 		
 
@@ -944,7 +946,8 @@ public class N_users extends b_baseClass {
 //		Assert.assertTrue(attributeNewUser.contains(AtualgetAttributeName), RED + "Attribute  not found");
 		if (!attributeNewUser.contains(AtualgetAttributeName)) {
 
-			Assert.fail(RED + "Attribute  not found");
+			System.out.println(RED + "Attribute  not found");
+			Assert.fail();
 		}
 		
 		
@@ -957,7 +960,8 @@ public class N_users extends b_baseClass {
 //		Assert.assertTrue(resourceNewUser.contains(atualgetResourceName), RED + "Attribute  not found");
 		if (!resourceNewUser.contains(atualgetResourceName)) {
 
-			Assert.fail(RED + "Attribute  not found");
+			System.out.println(RED + "Attribute  not found");
+			Assert.fail();
 		}
 		
 		
@@ -995,7 +999,8 @@ public class N_users extends b_baseClass {
 		
 		if (!actualFirstName_FF.contains(lastName_FF)) {
 
-			Assert.fail(RED + " Last Name not found ");
+			System.out.println(RED + " Last Name not found ");
+			Assert.fail();
 		}
 		System.out.println(GREEN + " First and Last Name added correctly.");
 
@@ -1006,7 +1011,8 @@ public class N_users extends b_baseClass {
 		
 		if (!email_FF.contains(actualEmail)) {
 
-			Assert.fail(RED + "Email not found.");
+			System.out.println(RED + "Email not found.");
+			Assert.fail();
 		}
 		System.out.println(GREEN + "email Added correctly.");
 

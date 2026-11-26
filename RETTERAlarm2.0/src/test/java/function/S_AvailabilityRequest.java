@@ -553,7 +553,8 @@ public class S_AvailabilityRequest extends b_baseClass {
 		
 		if (!actualTite.contains(title)) {
 
-			Assert.fail(RED + requestType + " Not added .");
+			System.out.println(RED + requestType + " Not added .");
+			Assert.fail();
 		}
 		
 

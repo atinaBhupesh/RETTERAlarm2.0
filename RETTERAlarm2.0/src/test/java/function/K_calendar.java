@@ -348,13 +348,16 @@ public class K_calendar extends b_baseClass {
 		
 		if (!actualValidText.contains(isValidTex)) {
 
-			Assert.fail(RED + actualValidText);
+			System.out.println(RED + actualValidText);
+			Assert.fail();
 		}
 //		Assert.assertTrue(actualErrorMessage.contains(errorMessages), RED + "error message not proper.");
 		
 		if (!actualErrorMessage.contains(errorMessages)) {
 
-			Assert.fail(RED + actualErrorMessage);
+			System.out.println(RED + actualErrorMessage);
+			Assert.fail();
+			
 		}
 
 		continueImport.click();
@@ -366,8 +369,9 @@ public class K_calendar extends b_baseClass {
 //		Assert.assertTrue(importedMessage.contains(errorMessages), RED + "error message not proper.");
 		
 		if (!importedMessage.contains(errorMessages)) {
+			System.out.println(RED + importedMessage);
+			Assert.fail();
 
-			Assert.fail(RED + importedMessage);
 		}
 
 		close.click();
@@ -646,7 +650,8 @@ public class K_calendar extends b_baseClass {
 		if (createNewButton.isDisplayed()) {
 			System.out.println(GREEN + "Create New button for calendar is visible");
 		} else {
-			Assert.fail(RED + "Create New button is NOT displayed");
+			System.out.println(RED + "Create New button is NOT displayed");
+			Assert.fail();
 		}
 
 	}
@@ -657,7 +662,8 @@ public class K_calendar extends b_baseClass {
 		if (createNew1.isDisplayed()) {
 			System.out.println(GREEN + "Create New button for event category is visible");
 		} else {
-			Assert.fail(RED + "Create New button is NOT displayed");
+			System.out.println(RED + "Create New button is NOT displayed");
+			Assert.fail();
 		}
 
 	}
@@ -682,9 +688,12 @@ public class K_calendar extends b_baseClass {
 
 //		Assert.assertTrue(title1.contains(expectedTitle), RED + "Alarm not added.");
 		
-		if (!title.contains(expectedTitle)) {
+		if (!title1.contains(expectedTitle)) {
 
-			Assert.fail(RED + title);
+			System.out.println(RED+title1);
+			Assert.fail();
+			
+			
 		}
 
 		System.out.println(GREEN + title1);

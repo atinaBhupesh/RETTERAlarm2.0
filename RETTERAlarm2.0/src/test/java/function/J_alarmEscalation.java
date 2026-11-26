@@ -100,7 +100,8 @@ public class J_alarmEscalation extends b_baseClass {
 		if (createNewButton.isDisplayed()) {
 			System.out.println(GREEN + "Create New button for escalation is visible");
 		} else {
-			Assert.fail(RED + "Create New button is NOT displayed");
+			System.out.println(RED + "Create New button is NOT displayed");
+			Assert.fail();
 		}
 
 	}
@@ -207,7 +208,8 @@ public class J_alarmEscalation extends b_baseClass {
 //		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm loop not added.");
 		if (!title.contains(expectedTitle)) {
 
-			Assert.fail(RED + title);
+			System.out.println(RED + title);
+			Assert.fail();
 		}
 
 		System.out.println(GREEN + title);

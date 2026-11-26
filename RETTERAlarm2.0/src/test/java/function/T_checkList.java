@@ -122,7 +122,8 @@ public class T_checkList extends b_baseClass {
 //			Assert.assertTrue(actualTite.contains(title), RED + "Station not found.");
 			if (!actualTite.contains(title)) {
 
-				Assert.fail(RED + checkListType + " not added .");
+				System.out.println(RED +  checkListType + " not added .");
+				Assert.fail();
 			}
 			
 			
