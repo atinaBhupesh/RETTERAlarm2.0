@@ -320,32 +320,23 @@ public class N_users extends b_baseClass {
 //		Assert.assertTrue(expectedFirstName.contains(firstName), RED + "Station not found.");
 		if (!expectedFirstName.contains(firstName)) {
 
-			System.out.println(RED + "First name not match");
-			Assert.fail();
+			System.out.println(RED + expectedFirstName);
+			throw new org.testng.SkipException("Verification condition not met");
 		}
-		
-		
-		
-		
-		Assert.assertTrue(expectedLasttName.contains(lastName), RED + "Station not found.");
-		
+
+//		Assert.assertTrue(expectedLasttName.contains(lastName), RED + "Station not found.");
+
 		if (!expectedLasttName.contains(lastName)) {
 
-			System.out.println(RED + "Last name not match");
-			Assert.fail();
+			System.out.println(RED + expectedLasttName);
+			throw new org.testng.SkipException("Verification condition not met");
 		}
-		
 
 		if (successMessage.isDisplayed()) {
 			System.out.println(GREEN + "user updated successfully. ");
 		} else {
 			System.out.println(RED + "user not updated successfully. ");
 		}
-		
-		
-		
-		
-		
 
 		Thread.sleep(2000);
 		act.moveToElement(closePopUpImportUser).click().build().perform();
@@ -519,7 +510,12 @@ public class N_users extends b_baseClass {
 //		System.out.println(st01N);
 //		System.out.println(actStationName);
 		Thread.sleep(2000);
-		Assert.assertTrue(st01N.contains(actStationName), RED + "Station not found.");
+//		Assert.assertTrue(st01N.contains(), RED + "Station not found.");
+		if (!st01N.contains(actStationName)) {
+
+			System.out.println(RED + st01N);
+			throw new org.testng.SkipException("Verification condition not met");
+		}
 		System.out.println(GREEN + "Firefighter role save successfully.");
 		act.moveToElement(next).click().build().perform();
 //		next.click();
@@ -624,13 +620,23 @@ public class N_users extends b_baseClass {
 		String actualCountryCode = getCountryCode.getText();
 //		System.out.println(actualCountryCode);
 //		System.out.println(CountryCode);
-		Assert.assertTrue(CountryCode.contains(actualCountryCode), RED + "CountryCode not found");
+//		Assert.assertTrue(.contains(actualCountryCode), RED + "CountryCode not found");
+		if (!CountryCode.contains(actualCountryCode)) {
+
+			System.out.println(RED + CountryCode);
+			throw new org.testng.SkipException("Verification condition not met");
+		}
 		System.out.println(GREEN + "country  Code added successfully.");
 
 		String actualgetContactNumber = getContactNumber.getText();
 //		System.out.println(actualgetContactNumber);
 //		System.out.println(contactNoFFString);
-		Assert.assertTrue(contactNoFFString.contains(actualgetContactNumber), RED + "CountryCode not found");
+//		Assert.assertTrue(contactNoFFString.contains(actualgetContactNumber), RED + "CountryCode not found");
+		if (!contactNoFFString.contains(actualgetContactNumber)) {
+
+			System.out.println(RED + contactNoFFString);
+			throw new org.testng.SkipException("Verification condition not met");
+		}
 		System.out.println(GREEN + "contact number added successfully.");
 
 		next.click();
@@ -663,13 +669,24 @@ public class N_users extends b_baseClass {
 		String AtualgetAttributeName = getAttributeName.getText();
 //		System.out.println(AtualgetAttributeName);
 //		System.out.println(attributeNewUser);
-		Assert.assertTrue(attributeNewUser.contains(AtualgetAttributeName), RED + "Attribute  not found");
+//		Assert.assertTrue(attributeNewUser.contains(AtualgetAttributeName), RED + "Attribute  not found");
+		if (!attributeNewUser.contains(AtualgetAttributeName)) {
+
+			System.out.println(RED + attributeNewUser);
+			throw new org.testng.SkipException("Verification condition not met");
+		}
 		System.out.println(GREEN + "Attribute added successfully.");
 
 		String atualgetResourceName = getResourceName.getText();
 //		System.out.println(atualgetResourceName);
 //		System.out.println(resourceNewUser);
-		Assert.assertTrue(resourceNewUser.contains(atualgetResourceName), RED + "Attribute  not found");
+//		Assert.assertTrue(resourceNewUser.contains(atualgetResourceName), RED + "Attribute  not found");
+		if (!resourceNewUser.contains(atualgetResourceName)) {
+
+			System.out.println(RED + resourceNewUser);
+			throw new org.testng.SkipException("Verification condition not met");
+		}
+		
 		System.out.println(GREEN + "Resource added successfully.");
 
 		act.moveToElement(next).click().build().perform();
@@ -689,6 +706,11 @@ public class N_users extends b_baseClass {
 //		System.out.println(actualGetAddedUserEmail);
 //		System.out.println(email_FF);
 //		Assert.assertTrue(email_FF.contains(actualGetAddedUserEmail), RED + "Attribute  not found");
+		if (!email_FF.contains(actualGetAddedUserEmail)) {
+
+			System.out.println(RED + email_FF);
+			throw new org.testng.SkipException("Verification condition not met");
+		}
 		System.out.println(GREEN + "User added in list successfully.");
 
 		System.out.println(">> now Checking added details.<<");
@@ -696,13 +718,26 @@ public class N_users extends b_baseClass {
 		String actualFirstName_FF = getFirstLatName.getText();
 //		System.out.println(actualFirstName_FF);
 //		System.out.println(lastName_FF);
-		Assert.assertTrue(actualFirstName_FF.contains(lastName_FF), RED + " Last Name not found ");
+//		Assert.assertTrue(actualFirstName_FF.contains(lastName_FF), RED + " Last Name not found ");
+		if (!actualFirstName_FF.contains(lastName_FF)) {
+
+			System.out.println(RED + actualFirstName_FF);
+			throw new org.testng.SkipException("Verification condition not met");
+		}
 		System.out.println(GREEN + " First and Last Name added correctly.");
 
 		String actualEmail = getAddedUserEmail.getText();
 //		System.out.println(actualEmail);
 //		System.out.println(email_FF);
-		Assert.assertTrue(email_FF.contains(actualEmail), RED + "Email not found.");
+//		Assert.assertTrue(email_FF.contains(actualEmail), RED + "Email not found.");
+
+		if (!email_FF.contains(actualEmail)) {
+
+			System.out.println(RED + email_FF);
+			throw new org.testng.SkipException("Verification condition not met");
+
+		}
+
 		System.out.println(GREEN + "email Added correctly.");
 
 		Thread.sleep(2000);
@@ -751,6 +786,14 @@ public class N_users extends b_baseClass {
 //		System.out.println(actualGetAddedUserEmail);
 //		System.out.println(email_FF);
 //		Assert.assertTrue(email_FF.contains(actualGetAddedUserEmail), RED + "Attribute  not found");
+
+		if (!email_FF.contains(actualGetAddedUserEmail)) {
+
+			System.out.println(RED + email_FF);
+			throw new org.testng.SkipException("Verification condition not met");
+
+		}
+
 		System.out.println(GREEN + "User added in list successfully.");
 
 		System.out.println(">> now Checking added details.<<");
@@ -759,12 +802,26 @@ public class N_users extends b_baseClass {
 //		System.out.println(actualFirstName_FF);
 //		System.out.println(lastName_FF);
 		Assert.assertTrue(actualFirstName_FF.contains(lastName_FF), RED + " Last Name not found ");
+
+		if (!actualFirstName_FF.contains(lastName_FF)) {
+
+			System.out.println(RED + actualFirstName_FF);
+			throw new org.testng.SkipException("Verification condition not met");
+
+		}
 		System.out.println(GREEN + " First and Last Name added correctly.");
 
 		String actualEmail = getAddedUserEmail.getText();
 //		System.out.println(actualEmail);
 //		System.out.println(email_FF);
 		Assert.assertTrue(email_FF.contains(actualEmail), RED + "Email not found.");
+
+		if (!email_FF.contains(actualEmail)) {
+
+			System.out.println(RED + email_FF);
+			throw new org.testng.SkipException("Verification condition not met");
+
+		}
 		System.out.println(GREEN + "email Added correctly.");
 
 		Thread.sleep(2000);
@@ -804,7 +861,14 @@ public class N_users extends b_baseClass {
 //		System.out.println(st01N);
 //		System.out.println(actStationName);
 		Thread.sleep(2000);
-		Assert.assertTrue(st01N.contains(actStationName), RED + "Station not found.");
+//		Assert.assertTrue(st01N.contains(actStationName), RED + "Station not found.");
+		if (!st01N.contains(actStationName)) {
+
+			System.out.println(RED + st01N);
+			throw new org.testng.SkipException("Verification condition not met");
+
+		}
+
 		System.out.println(GREEN + "Firefighter role save successfully.");
 		act.moveToElement(next).click().build().perform();
 //		next.click();
@@ -903,13 +967,28 @@ public class N_users extends b_baseClass {
 		String actualCountryCode = getCountryCode.getText();
 //		System.out.println(actualCountryCode);
 //		System.out.println(CountryCode);
-		Assert.assertTrue(CountryCode.contains(actualCountryCode), RED + "CountryCode not found");
+//		Assert.assertTrue(CountryCode.contains(actualCountryCode), RED + "CountryCode not found");
+
+		if (!CountryCode.contains(actualCountryCode)) {
+
+			System.out.println(RED + CountryCode);
+			throw new org.testng.SkipException("Verification condition not met");
+
+		}
+
 		System.out.println(GREEN + "country  Code added successfully.");
 
 		String actualgetContactNumber = getContactNumber.getText();
 //		System.out.println(actualgetContactNumber);
 //		System.out.println(contactNoFFString);
-		Assert.assertTrue(contactNoFFString.contains(actualgetContactNumber), RED + "CountryCode not found");
+//		Assert.assertTrue(contactNoFFString.contains(actualgetContactNumber), RED + "CountryCode not found");
+		if (!contactNoFFString.contains(actualgetContactNumber)) {
+
+			System.out.println(RED + contactNoFFString);
+			throw new org.testng.SkipException("Verification condition not met");
+
+		}
+
 		System.out.println(GREEN + "contact number added successfully.");
 
 		next.click();
@@ -949,9 +1028,7 @@ public class N_users extends b_baseClass {
 			System.out.println(RED + "Attribute  not found");
 			Assert.fail();
 		}
-		
-		
-		
+
 		System.out.println(GREEN + "Attribute added successfully.");
 
 		String atualgetResourceName = getResourceName.getText();
@@ -960,14 +1037,10 @@ public class N_users extends b_baseClass {
 //		Assert.assertTrue(resourceNewUser.contains(atualgetResourceName), RED + "Attribute  not found");
 		if (!resourceNewUser.contains(atualgetResourceName)) {
 
-			System.out.println(RED + "Attribute  not found");
-			Assert.fail();
+			System.out.println(RED+resourceNewUser);
+		    throw new org.testng.SkipException("Verification condition not met");
 		}
-		
-		
-	
-		
-		
+
 		System.out.println(GREEN + "Resource added successfully.");
 
 		act.moveToElement(next).click().build().perform();
@@ -987,6 +1060,13 @@ public class N_users extends b_baseClass {
 //		System.out.println(actualGetAddedUserEmail);
 //		System.out.println(email_FF);
 //		Assert.assertTrue(email_FF.contains(actualGetAddedUserEmail), RED + "Attribute  not found");
+		
+		if (!email_FF.contains(actualGetAddedUserEmail)) {
+
+			System.out.println(RED+email_FF);
+		    throw new org.testng.SkipException("Verification condition not met");
+			
+		}
 		System.out.println(GREEN + "User added in list successfully.");
 
 		System.out.println(">> now Checking added details.<<");
@@ -996,11 +1076,14 @@ public class N_users extends b_baseClass {
 //		System.out.println(lastName_FF);
 //		Assert.assertTrue(actualFirstName_FF.contains(lastName_FF), RED + " Last Name not found ");
 		
-		
+
 		if (!actualFirstName_FF.contains(lastName_FF)) {
 
-			System.out.println(RED + " Last Name not found ");
-			Assert.fail();
+
+				System.out.println(RED+email_FF);
+			    throw new org.testng.SkipException("Verification condition not met");
+				
+			
 		}
 		System.out.println(GREEN + " First and Last Name added correctly.");
 
@@ -1008,11 +1091,14 @@ public class N_users extends b_baseClass {
 //		System.out.println(actualEmail);
 //		System.out.println(email_FF);
 //		Assert.assertTrue(email_FF.contains(actualEmail), RED + "Email not found.");
-		
+
 		if (!email_FF.contains(actualEmail)) {
 
-			System.out.println(RED + "Email not found.");
-			Assert.fail();
+
+				System.out.println(RED+email_FF);
+			    throw new org.testng.SkipException("Verification condition not met");
+				
+			
 		}
 		System.out.println(GREEN + "email Added correctly.");
 

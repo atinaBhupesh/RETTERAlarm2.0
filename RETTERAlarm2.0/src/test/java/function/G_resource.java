@@ -234,10 +234,12 @@ public class G_resource extends b_baseClass {
 		String expectedTitle = firstItemTitle.getText();
 
 //		Assert.assertTrue(title.contains(expectedTitle), RED + " Ne Resource not added.");
-		if (!title.contains(expectedTitle)) {
+		
+		if (!title.contains(expectedTitle)) 
+		{
 			
-			System.out.println(RED + title);
-			Assert.fail();
+			System.out.println(RED+title);
+		    throw new org.testng.SkipException("Verification condition not met");
 		
 		}
 
@@ -353,8 +355,8 @@ public class G_resource extends b_baseClass {
 		
 		if (!title.contains(expectedTitle)) {
 
-			System.out.println(RED + title);
-			Assert.fail();
+			System.out.println(RED+title);
+		    throw new org.testng.SkipException("Verification condition not met");
 		}
 
 

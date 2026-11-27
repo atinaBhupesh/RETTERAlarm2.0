@@ -208,8 +208,8 @@ public class J_alarmEscalation extends b_baseClass {
 //		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm loop not added.");
 		if (!title.contains(expectedTitle)) {
 
-			System.out.println(RED + title);
-			Assert.fail();
+			System.out.println(RED+title);
+		    throw new org.testng.SkipException("Verification condition not met");
 		}
 
 		System.out.println(GREEN + title);

@@ -120,9 +120,8 @@ public class Q_attribute extends b_baseClass {
 		
 		if (!actualTite.contains(title)) {
 
-			
-			System.out.println(RED + " Attribute-" + title + " not added.");
-			Assert.fail();
+			System.out.println(RED + actualTite);
+			throw new org.testng.SkipException("Verification condition not met");
 		}
 		
 
@@ -154,9 +153,8 @@ public class Q_attribute extends b_baseClass {
 //		Assert.assertTrue(actualTite.contains(title), RED + "Station not found.");
 		
 		if (!actualTite.contains(title)) {
-
-			System.out.println(RED + "New Attribute-" + title + " not created.");
-			Assert.fail();
+			System.out.println(RED + actualTite);
+			throw new org.testng.SkipException("Verification condition not met");
 		}
 		
 

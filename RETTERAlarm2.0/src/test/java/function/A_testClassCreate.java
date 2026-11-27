@@ -2367,24 +2367,24 @@ public class A_testClassCreate extends b_baseClass {
 
 	}
 
-	@AfterMethod
+	@AfterMethod(alwaysRun = true)
 	public void backToHomePage2(ITestResult result) throws Throwable {
 
 		Thread.sleep(2000);
 
 //		System.out.println("method end");
 
-//		if (result.getStatus() == ITestResult.FAILURE) {
-//			takeScreenshot(driver, todaysDate + "_" + timeHHMMSS + "_" + result.getName());
-//			System.out.println(RED + RED + "Test Failed");
+		if (result.getStatus() == ITestResult.FAILURE) {
+			takeScreenshot(driver, todaysDate + "_" + timeHHMMSS + "_" + result.getName());
+			System.out.println(RED + RED + "Test Failed");
+
+		}
+
+//		System.out.println(">>> " + result.getName());
 //
-//		}
-
-		System.out.println(">>> " + result.getName());
-
-		Thread.sleep(4000);
-
-		hp.backToHomePage(driver, branchName);
+//		Thread.sleep(4000);
+//
+//		hp.backToHomePage(driver, branchName);
 
 	}
 

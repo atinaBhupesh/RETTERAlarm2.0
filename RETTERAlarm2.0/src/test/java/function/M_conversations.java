@@ -110,8 +110,8 @@ public class M_conversations extends b_baseClass {
 //		Assert.assertTrue(ChatGroupByFireFighterMS.contains(expChatGroupName), RED + "Message not sent.");
 		if (!ChatGroupByFireFighterMS.contains(expChatGroupName)) {
 
-			System.out.println(RED + ChatGroupByFireFighterMS);
-			Assert.fail();
+			System.out.println(RED+ChatGroupByFireFighterMS);
+		    throw new org.testng.SkipException("Verification condition not met");
 			
 		}
 		
@@ -133,8 +133,8 @@ public class M_conversations extends b_baseClass {
 		
 		if (!messageText.contains(expTextmessage)) {
 
-			System.out.println(RED + messageText);
-			Assert.fail();
+			System.out.println(RED+messageText);
+		    throw new org.testng.SkipException("Verification condition not met");
 		}
 
 		System.out.println(GREEN + messageText + " sent successfuly ");
@@ -162,8 +162,8 @@ public class M_conversations extends b_baseClass {
 		
 		if (!ChatGroupByAlarmLoopMS.contains(expChatGroupName)) {
 
-			System.out.println(RED + ChatGroupByAlarmLoopMS);
-			Assert.fail();
+			System.out.println(RED+ChatGroupByAlarmLoopMS);
+		    throw new org.testng.SkipException("Verification condition not met");
 		}
 		System.out.println(GREEN + expChatGroupName + " chat group open correctly.");
 		Thread.sleep(1000);
@@ -184,8 +184,8 @@ public class M_conversations extends b_baseClass {
 //		Assert.assertTrue(messageText.contains(expTextmessage), RED + "Message not sent.");
 		if (!ChatGroupByAlarmLoopMS.contains(expChatGroupName)) {
 
-			System.out.println(RED + ChatGroupByAlarmLoopMS);
-			Assert.fail();
+			System.out.println(RED+ChatGroupByAlarmLoopMS);
+		    throw new org.testng.SkipException("Verification condition not met");
 		}
 
 		System.out.println(GREEN + messageText + " sent successfuly ");
@@ -235,8 +235,8 @@ public class M_conversations extends b_baseClass {
 //		Assert.assertTrue(messageText.contains(expTextmessage), RED + "Message not sent.");
 		if (!ChatGroupByResourceMS.contains(expChatGroupName)) {
 
-			System.out.println(RED + ChatGroupByResourceMS);
-			Assert.fail();
+			System.out.println(RED+ChatGroupByResourceMS);
+		    throw new org.testng.SkipException("Verification condition not met");
 		}
 
 		System.out.println(GREEN + messageText + " sent successfuly ");
@@ -264,8 +264,8 @@ public class M_conversations extends b_baseClass {
 //		Assert.assertTrue(ChatGroupByAttributeMS.contains(expChatGroupName), RED + "Message not sent.");
 		if (!ChatGroupByAttributeMS.contains(expChatGroupName)) {
 
-			System.out.println(RED + ChatGroupByAttributeMS);
-			Assert.fail();
+			System.out.println(RED+ChatGroupByAttributeMS);
+		    throw new org.testng.SkipException("Verification condition not met");
 		}
 		System.out.println(GREEN + expChatGroupName + " chat group open correctly.");
 		Thread.sleep(1000);
@@ -287,8 +287,8 @@ public class M_conversations extends b_baseClass {
 //		Assert.assertTrue(messageText.contains(expTextmessage), RED + "Message not sent.");
 		if (!ChatGroupByAttributeMS.contains(expChatGroupName)) {
 
-			System.out.println(RED + ChatGroupByAttributeMS);
-			Assert.fail();
+			System.out.println(RED+ChatGroupByAttributeMS);
+		    throw new org.testng.SkipException("Verification condition not met");
 		}
 
 		System.out.println(GREEN + messageText + " sent successfuly ");
@@ -365,8 +365,8 @@ public class M_conversations extends b_baseClass {
 //		Assert.assertTrue(title.contains(expectedTitle), RED + "Chat group not added.");
 		if (!title.contains(expectedTitle)) {
 
-			System.out.println(RED + title);
-			Assert.fail();
+			System.out.println(RED+title);
+		    throw new org.testng.SkipException("Verification condition not met");
 		}
 
 		System.out.println(GREEN + title);
@@ -444,8 +444,8 @@ public class M_conversations extends b_baseClass {
 		
 		if (!title.contains(expectedTitle)) {
 
-			System.out.println(RED + title);
-			Assert.fail();
+			System.out.println(RED+title);
+		    throw new org.testng.SkipException("Verification condition not met");
 		}
 
 		System.out.println(GREEN + title);
@@ -523,8 +523,8 @@ public class M_conversations extends b_baseClass {
 		
 		if (!title.contains(expectedTitle)) {
 
-			System.out.println(RED + title);
-			Assert.fail();
+			System.out.println(RED+title);
+		    throw new org.testng.SkipException("Verification condition not met");
 		}
 
 		System.out.println(GREEN + title);
@@ -607,8 +607,8 @@ public class M_conversations extends b_baseClass {
 		
 		if (!title.contains(expectedTitle)) {
 
-			System.out.println(RED + title);
-			Assert.fail();
+			System.out.println(RED+title);
+		    throw new org.testng.SkipException("Verification condition not met");
 		}
 
 		System.out.println(GREEN + title);

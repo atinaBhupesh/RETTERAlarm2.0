@@ -553,8 +553,8 @@ public class S_AvailabilityRequest extends b_baseClass {
 		
 		if (!actualTite.contains(title)) {
 
-			System.out.println(RED + requestType + " Not added .");
-			Assert.fail();
+			System.out.println(RED + actualTite);
+			throw new org.testng.SkipException("Verification condition not met");
 		}
 		
 

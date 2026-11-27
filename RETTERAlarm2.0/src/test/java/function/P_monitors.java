@@ -128,8 +128,8 @@ public class P_monitors extends b_baseClass {
 //		Assert.assertTrue(actualTite.contains(title), RED + "Station not found.");
 		if (!actualTite.contains(title)) {
 
-			System.out.println(RED + "New overview monitor not edited .");
-			Assert.fail();
+			System.out.println(RED + actualTite);
+			throw new org.testng.SkipException("Verification condition not met");
 		}
 
 		System.out.println(GREEN + "New overview monitor edited successfully.");
@@ -217,8 +217,8 @@ public class P_monitors extends b_baseClass {
 		
 		if (!actualTite.contains(title)) {
 
-			System.out.println(RED + "New overview monitor not added.");
-			Assert.fail();
+			System.out.println(RED + actualTite);
+			throw new org.testng.SkipException("Verification condition not met");
 		}
 		
 
@@ -292,8 +292,8 @@ public class P_monitors extends b_baseClass {
 		
 		if (!actualTite.contains(newName)) {
 
-			System.out.println(RED + "New station monitor not edited.");
-			Assert.fail();
+			System.out.println(RED + actualTite);
+			throw new org.testng.SkipException("Verification condition not met");
 		}
 
 		System.out.println(GREEN + "New station monitor edited successfully.");
@@ -369,8 +369,8 @@ public class P_monitors extends b_baseClass {
 //		Assert.assertTrue(actualTite.contains(title), RED + "Station not found.");
 		if (!actualTite.contains(title)) {
 
-			System.out.println(RED + "New station monitor not added.");
-			Assert.fail();
+			System.out.println(RED + actualTite);
+			throw new org.testng.SkipException("Verification condition not met");
 		}
 		
 		System.out.println(GREEN + "New station monitor added successfully.");

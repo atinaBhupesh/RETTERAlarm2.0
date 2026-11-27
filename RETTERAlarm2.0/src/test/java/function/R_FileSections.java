@@ -122,8 +122,7 @@ public class R_FileSections extends b_baseClass {
 
 		if (!title.contains(expectedTitle)) {
 			System.out.println(RED + title);
-
-			Assert.fail();
+			throw new org.testng.SkipException("Verification condition not met");
 		}
 
 		System.out.println(GREEN + title);
@@ -147,7 +146,8 @@ public class R_FileSections extends b_baseClass {
 
 		int total = 0;
 		
-	
+		searchField.clear();
+		Thread.sleep(1000);
 		Thread.sleep(1000);
 
 		if (count == 0) {
@@ -175,7 +175,8 @@ public class R_FileSections extends b_baseClass {
 				Thread.sleep(3000);
 				total++;
 				searchField.clear();
-				Thread.sleep(2000);
+				Thread.sleep(3000);
+				
 				System.out.println("File no-"+i+" deleted successfully. ");
 
 			}

@@ -6,9 +6,11 @@
 			<class name="function.A_testClassCreate" />
 
 			<methods>
+					<include name="sendMessageToApiEsclationAlarm" />
 
 
-				<include name="addNewFile" />
+				<include name="sendMessageToNewApiAlarmUser" />
+				<include name="sendMessageToOldApiAlarmUser" />
 
 
 			</methods>

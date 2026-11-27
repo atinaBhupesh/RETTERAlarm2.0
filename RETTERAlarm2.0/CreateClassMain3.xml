@@ -46,7 +46,7 @@
 				<include name="addNewAttribute" />
 				<include name="updateAttribute" />
 					
-				
+				<include name="addNewFile" />
 				
 
 

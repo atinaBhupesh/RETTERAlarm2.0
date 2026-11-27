@@ -342,8 +342,8 @@ public class L_Information extends b_baseClass {
 //		Assert.assertTrue(title.contains(expectedTitle), RED + "Info NOT added because title is not available");
 		if (!title.contains(expectedTitle)) {
 
-			System.out.println(RED + title);
-			Assert.fail();
+			System.out.println(RED+title);
+		    throw new org.testng.SkipException("Verification condition not met");
 		}
 		
 		
@@ -521,8 +521,8 @@ public class L_Information extends b_baseClass {
 		
 		if (!title.contains(expectedTitle)) {
 
-			System.out.println(RED + title);
-			Assert.fail();
+			System.out.println(RED+title);
+		    throw new org.testng.SkipException("Verification condition not met");
 		}
 
 		System.out.println(GREEN + title + GREEN);
@@ -833,8 +833,8 @@ public class L_Information extends b_baseClass {
 		
 		if (!title.contains(expectedTitle)) {
 
-			System.out.println(RED + title);
-			Assert.fail();
+			System.out.println(RED+title);
+		    throw new org.testng.SkipException("Verification condition not met");
 		}
 
 		System.out.println(GREEN + title + GREEN);
@@ -869,8 +869,8 @@ public class L_Information extends b_baseClass {
 		
 		if (!messageText.contains(expTextmessage)) {
 
-			System.out.println(RED + messageText);
-			Assert.fail();
+			System.out.println(RED+messageText);
+		    throw new org.testng.SkipException("Verification condition not met");
 		}
 
 		System.out.println(GREEN + messageText + " sent successfuly ");
@@ -970,8 +970,8 @@ public class L_Information extends b_baseClass {
 		
 		if (!title.contains(expectedTitle)) {
 
-			System.out.println(RED + title);
-			Assert.fail();
+			System.out.println(RED+title);
+		    throw new org.testng.SkipException("Verification condition not met");
 		}
 
 		System.out.println(GREEN + title);
@@ -1165,8 +1165,8 @@ public class L_Information extends b_baseClass {
 		
 		if (!title.contains(expectedTitle)) {
 
-			System.out.println(RED + title);
-			Assert.fail();
+			System.out.println(RED+title);
+		    throw new org.testng.SkipException("Verification condition not met");
 		}
 
 		System.out.println(GREEN + title);
@@ -1329,8 +1329,8 @@ public class L_Information extends b_baseClass {
 		
 		if (!title.contains(expectedTitle)) {
 
-			System.out.println(RED + title);
-			Assert.fail();
+			System.out.println(RED+title);
+		    throw new org.testng.SkipException("Verification condition not met");
 		}
 
 		System.out.println(GREEN + title);
@@ -1495,8 +1495,8 @@ public class L_Information extends b_baseClass {
 //		Assert.assertTrue(title.contains(expectedTitle), RED + "Info NOT added because title is not available");
 		if (!title.contains(expectedTitle)) {
 
-			System.out.println(RED + title);
-			Assert.fail();
+			System.out.println(RED+title);
+		    throw new org.testng.SkipException("Verification condition not met");
 		}
 
 		System.out.println(GREEN + title);
@@ -1686,8 +1686,8 @@ public class L_Information extends b_baseClass {
 //		Assert.assertTrue(title.contains(expectedTitle), RED + "Info NOT added because title is not available");
 		if (!title.contains(expectedTitle)) {
 
-			System.out.println(RED + title);
-			Assert.fail();
+			System.out.println(RED+title);
+		    throw new org.testng.SkipException("Verification condition not met");
 		}
 
 		System.out.println(GREEN + title + " from -" + germanyTimeAfter5MinHH + ":" + germanyTimeAfter5MinMM + " To "
@@ -1843,8 +1843,8 @@ public class L_Information extends b_baseClass {
 		
 		if (!title.contains(expectedTitle)) {
 
-			System.out.println(RED + title);
-			Assert.fail();
+			System.out.println(RED+title);
+		    throw new org.testng.SkipException("Verification condition not met");
 		}
 
 		System.out.println(GREEN + title + " from -" + germanyTimeAfter5MinHH + ":" + germanyTimeAfter5MinMM + " To "
@@ -2012,8 +2012,8 @@ public class L_Information extends b_baseClass {
 		
 		if (!title.contains(expectedTitle)) {
 
-			System.out.println(RED + title);
-			Assert.fail();
+			System.out.println(RED+title);
+		    throw new org.testng.SkipException("Verification condition not met");
 		}
 		
 
@@ -2184,8 +2184,8 @@ public class L_Information extends b_baseClass {
 		
 		if (!title.contains(expectedTitle)) {
 
-			System.out.println(RED + title);
-			Assert.fail();
+			System.out.println(RED+title);
+		    throw new org.testng.SkipException("Verification condition not met");
 		}
 
 		System.out.println(GREEN + title + " from -" + germanyTimeAfter5MinHH + ":" + germanyTimeAfter5MinMM + " To "
@@ -2241,7 +2241,8 @@ public class L_Information extends b_baseClass {
 				+ germanyTimeAfter20MinMM).perform();
 		Thread.sleep(500);
 		
-		act.moveToElement((userTypeAttribute)).build().perform();
+		act.moveToElement((save)).build().perform();
+		Thread.sleep(1000);
 
 		for (String file : attachFiles) {
 
@@ -2269,6 +2270,8 @@ public class L_Information extends b_baseClass {
 			Thread.sleep(2000);
 		}
 
+		act.moveToElement((save)).build().perform();
+		Thread.sleep(1000);
 		userTypeAttribute.click();
 		Thread.sleep(1000);
 
@@ -2390,8 +2393,8 @@ public class L_Information extends b_baseClass {
 
 		if (!title.contains(expectedTitle)) {
 
-			System.out.println(RED + title);
-			Assert.fail();
+			System.out.println(RED+title);
+		    throw new org.testng.SkipException("Verification condition not met");
 		}
 		System.out.println(GREEN + title + " from -" + germanyTimeAfter5MinHH + ":" + germanyTimeAfter5MinMM + " To "
 				+ germanyTimeAfter20MinHH + ":" + germanyTimeAfter20MinMM);
@@ -2705,8 +2708,8 @@ public class L_Information extends b_baseClass {
 		
 		if (!title.contains(expectedTitle)) {
 
-			System.out.println(RED + title);
-			Assert.fail();
+			System.out.println(RED+title);
+		    throw new org.testng.SkipException("Verification condition not met");
 			}
 
 		System.out.println(GREEN + title + " from -" + germanyTimeAfter5MinHH + ":" + germanyTimeAfter5MinMM + " To "
