@@ -117,6 +117,7 @@
 
 				<include name="createAlarmChecklists" />
 				<include name="createNormalCheckList" />
+				<include name="addNewFile" />
 
 				<include name="addNewStation" />
 				<include name="editStation" />

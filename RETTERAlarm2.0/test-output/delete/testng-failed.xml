@@ -5,11 +5,11 @@
     <classes>
       <class name="function.A_testClassDelete">
         <methods>
+          <include name="deleteFiles"/>
           <include name="BeforeSuite"/>
-          <include name="deactiveBgTestActiveAlarmsFromPlaningList"/>
           <include name="backToHomePage"/>
-          <include name="AfterSute"/>
           <include name="backToHomePage2"/>
+          <include name="AfterSute"/>
           <include name="BeforeTest"/>
           <include name="logOut"/>
           <include name="createObject"/>

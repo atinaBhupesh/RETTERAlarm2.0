@@ -6,20 +6,16 @@
 			<class name="function.A_testClassCreate" />
 
 			<methods>
-			
-			
-	<include name="sendMessageToChatGroupCreatedByAttribute" />
 
-				
 
-				
-					
+				<include name="addNewFile" />
+
+
 			</methods>
 
 		</classes>
-	
-	
-	
+
+
 	</test> <!--
 	Test -->
 </suite> <!--

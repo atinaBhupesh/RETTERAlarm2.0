@@ -26,7 +26,7 @@
 				<include name="deleteCalendarEventAll" />
 				<include name="deleteStaions" />
 				<include name="deleteAttribute" />
-
+				<include name="deleteFiles" />
 
 			</methods>
 

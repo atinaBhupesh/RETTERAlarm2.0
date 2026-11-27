@@ -29,7 +29,7 @@
 				<include name="deleteMonitorUsers" />
 				<include name="deleteCheckList" />
 				<include name="deleteAttribute" />
-				
+				<include name="deleteFiles" />
 				
 				
 

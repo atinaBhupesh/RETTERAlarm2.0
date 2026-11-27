@@ -533,7 +533,7 @@ public class A_testClassCreate extends b_baseClass {
 		Reporter.log("The process of adding a new file has started.", true);
 
 		fs.commanForDocumentation(driver);
-		fs.addNewFile(driver, branchName, deptN, st01N, timeHHMMSS);
+		fs.addNewFile(driver, branchName, deptN, st01N, timeHHMMSS, infoDocx5MbFile, infoPdf5MbFile);
 
 		Reporter.log(GREEN + GREEN + "The process of adding a new file is complete.", true);
 		Reporter.log(" ", true);

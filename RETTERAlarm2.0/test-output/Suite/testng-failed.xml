@@ -8,10 +8,10 @@
           <include name="AfterTest"/>
           <include name="BeforeSuite"/>
           <include name="backToHomePage2"/>
+          <include name="addNewFile"/>
           <include name="BeforeTest"/>
           <include name="backToHomePage"/>
           <include name="logOut"/>
-          <include name="sendMessageToChatGroupCreatedByAttribute"/>
           <include name="AfterSute"/>
           <include name="createObject"/>
         </methods>

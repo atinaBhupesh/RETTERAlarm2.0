@@ -624,7 +624,6 @@ public class S_AvailabilityRequest extends b_baseClass {
 
 				searchField.click();
 
-				act.sendKeys("BG-AR").perform();
 				Thread.sleep(5000);
 
 				String id = deleteId.getText();

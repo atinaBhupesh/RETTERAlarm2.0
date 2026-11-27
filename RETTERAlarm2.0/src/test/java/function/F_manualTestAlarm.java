@@ -4561,8 +4561,10 @@ public class F_manualTestAlarm extends b_baseClass {
 //		Assert.assertTrue(title.contains(expectedTitle),RED + "Alarm not created." );
 
 		if (!title.contains(expectedTitle)) {
+			System.out.println(RED + title);
 
-			Assert.fail(RED + "Alarm not created.");
+			Assert.fail();
+
 		}
 
 		System.out.println(GREEN + title);
@@ -4690,8 +4692,9 @@ public class F_manualTestAlarm extends b_baseClass {
 //		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not added.");
 
 		if (!title.contains(expectedTitle)) {
+			System.out.println(RED + "Alarm not added.");
 
-			Assert.fail(RED + "Alarm not added.");
+			Assert.fail();
 		}
 
 		System.out.println(GREEN + "Alarm created.");
@@ -4952,7 +4955,9 @@ public class F_manualTestAlarm extends b_baseClass {
 
 		if (!title.contains(expectedTitle)) {
 
-			Assert.fail(RED + "Alarm not added.");
+			System.out.println(RED + "Alarm not added.");
+
+			Assert.fail();
 		}
 
 		System.out.println(GREEN + "Alarm created.");
@@ -5154,6 +5159,8 @@ public class F_manualTestAlarm extends b_baseClass {
 		if (!title.contains(expectedTitle)) {
 
 			System.out.println(RED + title);
+
+			Assert.fail();
 		}
 
 		FileInputStream in = new FileInputStream(filePath);
@@ -5302,6 +5309,8 @@ public class F_manualTestAlarm extends b_baseClass {
 		if (!title.contains(expectedTitle)) {
 
 			System.out.println(RED + title);
+
+			Assert.fail();
 		}
 
 		FileInputStream in = new FileInputStream(filePath);
@@ -5453,6 +5462,8 @@ public class F_manualTestAlarm extends b_baseClass {
 		if (!title.contains(expectedTitle)) {
 
 			System.out.println(RED + title);
+
+			Assert.fail();
 		}
 
 		System.out.println(GREEN + title);
@@ -5637,8 +5648,9 @@ public class F_manualTestAlarm extends b_baseClass {
 
 //		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not added.");
 		if (!title.contains(expectedTitle)) {
-
 			System.out.println(RED + title);
+
+			Assert.fail();
 		}
 
 		FileInputStream in = new FileInputStream(filePath);
@@ -5815,8 +5827,9 @@ public class F_manualTestAlarm extends b_baseClass {
 //		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not added.");
 
 		if (!title.contains(expectedTitle)) {
-
 			System.out.println(RED + title);
+
+			Assert.fail();
 		}
 
 		FileInputStream in = new FileInputStream(filePath);
@@ -5966,8 +5979,9 @@ public class F_manualTestAlarm extends b_baseClass {
 //		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not added.");
 
 		if (!title.contains(expectedTitle)) {
-
 			System.out.println(RED + title);
+
+			Assert.fail();
 		}
 
 		FileInputStream in = new FileInputStream(filePath);
@@ -6126,6 +6140,8 @@ public class F_manualTestAlarm extends b_baseClass {
 		if (!title.contains(expectedTitle)) {
 
 			System.out.println(RED + title);
+
+			Assert.fail();
 		}
 
 		FileInputStream in = new FileInputStream(filePath);
@@ -6350,8 +6366,9 @@ public class F_manualTestAlarm extends b_baseClass {
 //		Assert.assertTrue(title.contains(expectedTitle), RED + "Alarm not added.");
 
 		if (!title.contains(expectedTitle)) {
-
 			System.out.println(RED + title);
+
+			Assert.fail();
 		}
 
 		FileInputStream in = new FileInputStream(filePath);
@@ -6578,6 +6595,8 @@ public class F_manualTestAlarm extends b_baseClass {
 		if (!title.contains(expectedTitle)) {
 
 			System.out.println(RED + title);
+
+			Assert.fail();
 		}
 
 		System.out.println(GREEN + title);
@@ -7156,6 +7175,8 @@ public class F_manualTestAlarm extends b_baseClass {
 		if (!title.contains(firtsTestAlarm1)) {
 
 			System.out.println(RED + title);
+
+			Assert.fail();
 		}
 
 		System.out.println(GREEN + title);
@@ -7575,6 +7596,8 @@ public class F_manualTestAlarm extends b_baseClass {
 		if (!title.contains(firtsTestAlarm1)) {
 
 			System.out.println(RED + title);
+
+			Assert.fail();
 		}
 
 		System.out.println(GREEN + title);
@@ -7991,6 +8014,8 @@ public class F_manualTestAlarm extends b_baseClass {
 		if (!title.contains(firtsTestAlarm1)) {
 
 			System.out.println(RED + title);
+
+			Assert.fail();
 		}
 
 		System.out.println(GREEN + title);

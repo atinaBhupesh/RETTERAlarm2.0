@@ -31,6 +31,7 @@ public class A_testClassDelete extends b_baseClass {
 	O_stationModule stn;
 	P_monitors mo;
 	Q_attribute attri;
+	R_FileSections fs;
 	U_MonitorLogIn mlogin;
 	
 	S_AvailabilityRequest arequest;
@@ -73,9 +74,10 @@ public class A_testClassDelete extends b_baseClass {
 		chatGroups = new M_conversations(driver);
 		users = new N_users(driver);
 		stn= new O_stationModule (driver);
-		mo = new P_monitors(driver);
+	 	mo = new P_monitors(driver);
 		arequest = new S_AvailabilityRequest(driver);
 		attri=new Q_attribute (driver);
+		fs = new R_FileSections(driver);
 		checkL = new T_checkList (driver);
 		mlogin = new U_MonitorLogIn(driver);
 		
@@ -93,6 +95,20 @@ public class A_testClassDelete extends b_baseClass {
 	public void backToHomePage() throws Throwable {
 
 		hp.backToHomePage(driver, branchName);
+	}
+	
+	
+	
+	@Test
+	public void deleteFiles() throws Throwable {
+		Reporter.log(" ", true);
+		
+		Reporter.log("The process of delete Files has started.", true);
+		fs.commanForDocumentation(driver);
+		fs.deleteFiles(driver);
+		Reporter.log(GREEN+GREEN+"The process of delete Files is complete.", true);
+
+		Reporter.log(" ", true);
 	}
 	
 	@Test
